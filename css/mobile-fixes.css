@@ -1,0 +1,84 @@
+/* モバイル表示の修正用CSS */
+
+/* スマートフォン向け共通修正 */
+@media (max-width: 767px) {
+  /* 見出しの文字重なり防止 */
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.4;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  /* 電子入札のよくあるトラブルと主要自治体の入札制度 - タイトル修正 */
+  .content-card h2 {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* ICカードエラーメッセージの表示修正 */
+  .alert-list li {
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  .alert-list i {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+  
+  /* チェックリストボタンと見出しの重なり防止 */
+  .checklist-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .checklist-header h3 {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  .checklist-reset {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  /* 入札ノウハウページの自治体情報セクション修正 */
+  .municipality-section h2 {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  /* フォントサイズ全体調整 */
+  .content-card p,
+  .content-card li,
+  .glossary-list dd,
+  .checklist-item label {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+/* 特に小さい画面向け追加修正 */
+@media (max-width: 480px) {
+  /* さらに小さいフォントサイズ */
+  .content-card h2 {
+    font-size: 1.3rem;
+  }
+  
+  .content-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  /* ボタンのサイズ調整 */
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+  
+  /* チェックリストの余白調整 */
+  .checklist-card {
+    padding: 20px 15px;
+  }
+}
