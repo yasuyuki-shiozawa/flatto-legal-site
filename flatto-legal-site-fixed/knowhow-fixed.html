@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>入札ノウハウ | ふらっと法務事務所</title>
+    <meta name="description" content="入札の基礎知識から実践的なテクニック、よくある失敗と対策、電子入札ガイド、自治体別の注意点まで。初めての方でも安心して入札に参加できるノウハウを解説します。">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile-fixes-updated.css">
+    
+    <!-- Organization構造化データ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LegalService",
+      "name": "ふらっと法務事務所",
+      "legalName": "行政書士法人ふらっと法務事務所",
+      "url": "https://www.example.com/",
+      "logo": "https://www.example.com/images/logo.png",
+      "description": "入札サポートを専門とする行政書士法人です。入札参加資格取得から落札までをトータルサポートします。",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "○○区△△町X-X-X",
+        "addressLocality": "横浜市",
+        "addressRegion": "神奈川県",
+        "postalCode": "XXX-XXXX",
+        "addressCountry": "JP"
+      },
+      "telephone": "045-XXX-XXXX",
+      "openingHours": "Mo,Tu,We,Th,Fr 09:00-18:00"
+    }
+    </script>
+    
+    <!-- FAQPage構造化データ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "入札参加資格を取得するにはどうすればいいですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "入札参加資格を取得するには、各自治体や発注機関ごとに定められた申請書類を提出する必要があります。必要書類は、会社の登記簿謄本、納税証明書、財務諸表、技術者の資格証明書などです。申請時期も自治体によって異なりますので、事前に確認が必要です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "初めての入札でも落札できる可能性はありますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい、可能性はあります。入札は基本的に価格競争ですので、適切な価格設定と必要書類の正確な準備ができれば、初めての方でも落札できるチャンスがあります。ただし、実績や技術力も評価される総合評価方式の場合は、初参加ではやや不利になることもあります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "入札情報はどこで入手できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "入札情報は、各自治体や発注機関のホームページ、官報、入札情報サービス（NJSS）などで公開されています。また、有料の入札情報サービスを利用すると、条件に合った案件を効率的に探すことができます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "電子入札と紙入札の違いは何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "電子入札は、インターネットを通じて入札手続きを行う方式で、ICカードによる電子認証が必要です。紙入札は従来通り紙の書類で入札を行う方式です。現在は電子入札が主流となっていますが、自治体によっては併用している場合もあります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "最低制限価格とは何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "最低制限価格とは、発注者が設定する下限価格のことで、これを下回る入札は失格となります。過度な価格競争による品質低下を防ぐために設けられています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "入札書類の作成で注意すべき点は何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "入札書類は正確に記入し、押印漏れや記載ミスがないよう注意が必要です。特に入札金額は税込・税抜の区別、桁数などを確認し、訂正は認められないケースが多いので慎重に作成しましょう。"
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <!-- HowTo構造化データ（電子入札ガイド） -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "電子入札の始め方",
+      "description": "電子入札システムを利用して入札に参加する方法を解説します。",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "電子証明書の取得",
+          "text": "認証局から電子証明書（ICカード）を購入します。取得には1〜2週間程度かかります。",
+          "image": "https://www.example.com/images/ic-card.jpg"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "利用者登録",
+          "text": "各電子入札システムに利用者登録を行います。",
+          "image": "https://www.example.com/images/user-registration.jpg"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "案件検索・入札情報の確認",
+          "text": "電子入札システム上で案件を検索し、入札情報を確認します。",
+          "image": "https://www.example.com/images/search-bid.jpg"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "入札書類のダウンロードと作成",
+          "text": "必要な入札書類をダウンロードし、内容を確認して作成します。",
+          "image": "https://www.example.com/images/download-documents.jpg"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "入札書類の提出",
+          "text": "作成した入札書類を電子入札システム上で提出します。締切時間に注意してください。",
+          "image": "https://www.example.com/images/submit-documents.jpg"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "開札結果の確認",
+          "text": "開札日時に電子入札システム上で結果を確認します。",
+          "image": "https://www.example.com/images/check-results.jpg"
+        }
+      ],
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "電子証明書（ICカード）"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "ICカードリーダー"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "対応パソコン"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "インターネット環境"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" alt="ふらっと法務事務所" class="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">ホーム</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="service.html">サービス</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="flow.html">支援の流れ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cases.html">成功事例</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="knowhow.html">入札ノウハウ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">ブログ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">会社案内</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link contact-btn" href="contact.html">お問い合わせ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main>
+        <!-- ページタイトルセクション -->
+        <section class="page-title-section">
+            <div class="container">
+                <h1 class="page-title">入札ノウハウ</h1>
+                <p class="page-subtitle">初めての方でも安心。入札の基礎から実践的なテクニックまで</p>
+            </div>
+        </section>
+
+        <!-- はじめての入札セクション -->
+        <section class="section-padding">
+            <div class="container">
+                <h2 class="section-title">はじめての入札</h2>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="content-card">
+                            <h3>入札とは何か</h3>
+                            <p>入札とは、公共機関や民間企業が商品やサービスを調達する際に、複数の業者から見積もりを集め、最も条件の良い業者を選定する方法です。公共事業の場合、「公共工事の入札及び契約の適正化の促進に関する法律」などに基づき、公正かつ透明性の高い方法で業者が選定されます。</p>
+                            <img src="images/bid-illustration.jpg" alt="入札のイメージ" class="img-fluid rounded mb-3">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="content-card">
+                            <h3>入札の種類</h3>
+                            <ul class="feature-list">
+                                <li>
+                                    <span class="feature-icon"><i class="fas fa-users"></i></span>
+                                    <div class="feature-text">
+                                        <h4>一般競争入札</h4>
+                                        <p>参加資格を満たす全ての業者が参加できる入札方式</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-icon"><i class="fas fa-user-check"></i></span>
+                                    <div class="feature-text">
+                                        <h4>指名競争入札</h4>
+                                        <p>発注者が指名した業者のみが参加できる入札方式</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-icon"><i class="fas fa-handshake"></i></span>
+                                    <div class="feature-text">
+                                        <h4>随意契約</h4>
+                                        <p>競争入札によらず、発注者が任意に契約の相手方を選ぶ方式</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-icon"><i class="fas fa-balance-scale"></i></span>
+                                    <div class="feature-text">
+                                        <h4>総合評価方式</h4>
+                                        <p>価格だけでなく、技術力や実績なども評価する方式</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <div class="content-card">
+                            <h3>入札参加に必要なもの</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="check-list">
+                                        <li>
+                                            <i class="fas fa-check-circle"></i>
+                                            <span><strong>入札参加資格</strong>：各自治体や発注機関ごとに定められた資格</span>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-check-circle"></i>
+                                            <span><strong>経営事項審査（経審）</strong>：建設業の場合に必要な審査結果</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="check-list">
+                                        <li>
+                                            <i class="fas fa-check-circle"></i>
+                                            <span><strong>各種許認可</strong>：業種に応じた許可（建設業許可など）</span>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-check-circle"></i>
+                                            <span><strong>実績・技術者</strong>：案件によっては過去の実績や有資格技術者が必要</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- よくある質問（FAQ）セクション -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title">よくある質問（FAQ）</h2>
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Q1: 入札参加資格を取得するにはどうすればいいですか？
+                            </button>
+                        </h3>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>入札参加資格を取得するには、各自治体や発注機関ごとに定められた申請書類を提出する必要があります。必要書類は、会社の登記簿謄本、納税証明書、財務諸表、技術者の資格証明書などです。申請時期も自治体によって異なりますので、事前に確認が必要です。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Q2: 初めての入札でも落札できる可能性はありますか？
+                            </button>
+                        </h3>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>はい、可能性はあります。入札は基本的に価格競争ですので、適切な価格設定と必要書類の正確な準備ができれば、初めての方でも落札できるチャンスがあります。ただし、実績や技術力も評価される総合評価方式の場合は、初参加ではやや不利になることもあります。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Q3: 入札情報はどこで入手できますか？
+                            </button>
+                        </h3>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>入札情報は、各自治体や発注機関のホームページ、官報、入札情報サービス（NJSS）などで公開されています。また、有料の入札情報サービスを利用すると、条件に合った案件を効率的に探すことができます。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Q4: 電子入札と紙入札の違いは何ですか？
+                            </button>
+                        </h3>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>電子入札は、インターネットを通じて入札手続きを行う方式で、ICカードによる電子認証が必要です。紙入札は従来通り紙の書類で入札を行う方式です。現在は電子入札が主流となっていますが、自治体によっては併用している場合もあります。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                Q5: 最低制限価格とは何ですか？
+                            </button>
+                        </h3>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>最低制限価格とは、発注者が設定する下限価格のことで、これを下回る入札は失格となります。過度な価格競争による品質低下を防ぐために設けられています。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                Q6: 入札書類の作成で注意すべき点は何ですか？
+                            </button>
+                        </h3>
+                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>入札書類は正確に記入し、押印漏れや記載ミスがないよう注意が必要です。特に入札金額は税込・税抜の区別、桁数などを確認し、訂正は認められないケースが多いので慎重に作成しましょう。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 入札用語集セクション -->
+        <section class="section-padding">
+            <div class="container">
+                <h2 class="section-title">入札用語集</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="glossary-card">
+                            <h3 class="glossary-title">あ行</h3>
+                            <dl class="glossary-list">
+                                <dt>一般競争入札</dt>
+                                <dd>参加資格を満たす全ての業者が参加できる入札方式</dd>
+                                <dt>入札参加資格</dt>
+                                <dd>入札に参加するために必要な資格</dd>
+                            </dl>
+                        </div>
+                        <div class="glossary-card">
+                            <h3 class="glossary-title">か行</h3>
+                            <dl class="glossary-list">
+                                <dt>競争入札</dt>
+                                <dd>複数の業者が価格などを競い合う入札方式</dd>
+                                <dt>経営事項審査（経審）</dt>
+                                <dd>建設業者の経営状況などを評価する制度</dd>
+                            </dl>
+                        </div>
+                        <div class="glossary-card">
+                            <h3 class="glossary-title">さ行</h3>
+                            <dl class="glossary-list">
+                                <dt>指名競争入札</dt>
+                                <dd>発注者が指名した業者のみが参加できる入札方式</dd>
+                                <dt>随意契約</dt>
+                                <dd>競争入札によらず、発注者が任意に契約の相手方を選ぶ方式</dd>
+                            </dl>
+                        </div>
+                        <div class="glossary-card">
+                            <h3 class="glossary-title">た行</h3>
+                            <dl class="glossary-list">
+                                <dt>低入札価格調査</dt>
+                                <dd>著しく低い価格の入札に対して行われる調査</dd>
+                                <dt>電子入札</dt>
+                                <dd>インターネットを通じて行う入札方式</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="glossary-card">
+                            <h3 class="glossary-title">な行</h3>
+                            <dl class="glossary-list">
+                                <dt>入札公告</dt>
+                                <dd>入札の実施について公に告知すること</dd>
+                                <dt>入札説明書</dt>
+                                <dd>入札の条件や手続きを説明した書類</dd>
+                            </dl>
+                        </div>
+                        <div class="glossary-card">
+                            <h3 class="glossary-title">は行</h3>
+                            <dl class="glossary-list">
+                                <dt>発注者</dt>
+                                <dd>工事やサービスを発注する側（官公庁や企業など）</dd>
+                                <dt>不調</dt>
+                                <dd>入札で落札者が決まらないこと</dd>
+                            </dl>
+                        </div>
+                        <div class="glossary-card">
+                            <h3 class="glossary-title">ま行</h3>
+                            <dl class="glossary-list">
+                                <dt>見積書</dt>
+                                <dd>商品やサービスの価格を示した書類</dd>
+                                <dt>最低制限価格</dt>
+                                <dd>これを下回る入札は失格となる下限価格</dd>
+                            </dl>
+                        </div>
+                        <div class="glossary-card">
+                            <h3 class="glossary-title">や・ら行</h3>
+                            <dl class="glossary-list">
+                                <dt>予定価格</dt>
+                                <dd>発注者が事前に設定する契約上限価格</dd>
+                                <dt>落札</dt>
+                                <dd>入札で契約の相手方として選定されること</dd>
+                                <dt>履行保証</dt>
+                                <dd>契約の履行を保証するための制度</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- よくある失敗と対策セクション -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title">よくある失敗と対策</h2>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="failure-card">
+                            <div class="failure-header">
+                                <div class="failure-icon">
+                                    <i class="fas fa-calendar-times"></i>
+                                </div>
+                                <h3>失敗1: 入札参加資格の期限切れ</h3>
+                            </div>
+                            <div class="failure-content">
+                                <p><strong>失敗例</strong>：更新時期を忘れていて、参加したい案件の入札に間に合わなかった。</p>
+                                <p><strong>対策</strong>：参加資格の有効期限をカレンダーに登録し、更新時期の3ヶ月前からは準備を始めましょう。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="failure-card">
+                            <div class="failure-header">
+                                <div class="failure-icon">
+                                    <i class="fas fa-calculator"></i>
+                                </div>
+                                <h3>失敗2: 入札金額の記載ミス</h3>
+                            </div>
+                            <div class="failure-content">
+                                <p><strong>失敗例</strong>：桁数を間違えたり、税込・税抜の区別を誤って記入してしまった。</p>
+                                <p><strong>対策</strong>：入札金額は複数人でダブルチェックし、特に税率計算は電卓で確認しましょう。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-lg-6">
+                        <div class="failure-card">
+                            <div class="failure-header">
+                                <div class="failure-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <h3>失敗3: 提出期限の勘違い</h3>
+                            </div>
+                            <div class="failure-content">
+                                <p><strong>失敗例</strong>：提出期限を勘違いして、締切に間に合わなかった。</p>
+                                <p><strong>対策</strong>：入札スケジュールを一覧表にし、締切日の1週間前には書類を準備完了させましょう。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="failure-card">
+                            <div class="failure-header">
+                                <div class="failure-icon">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <h3>失敗4: 必要書類の不備</h3>
+                            </div>
+                            <div class="failure-content">
+                                <p><strong>失敗例</strong>：必要書類の一部が不足していて、入札参加資格がなくなってしまった。</p>
+                                <p><strong>対策</strong>：入札説明書の必要書類リストをチェックシート化し、漏れがないか確認しましょう。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 電子入札ガイドセクション -->
+        <section class="section-padding">
+            <div class="container">
+                <h2 class="section-title">電子入札ガイド</h2>
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="content-card">
+                            <h3>電子入札に必要なもの</h3>
+                            <ul class="check-list">
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span><strong>電子証明書（ICカード）</strong>：認証局から購入（約15,000円〜）</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span><strong>ICカードリーダー</strong>：ICカードを読み取る機器（約3,000円〜）</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span><strong>対応パソコン</strong>：各システムの動作環境を確認</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span><strong>インターネット環境</strong>：安定した接続環境が必要</span>
+                                </li>
+                            </ul>
+                            <div class="mt-4">
+                                <img src="images/ic-card.jpg" alt="ICカードとリーダー" class="img-fluid rounded">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="content-card">
+                            <h3>電子入札の流れ</h3>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-marker">1</div>
+                                    <div class="timeline-content">
+                                        <h4>電子証明書の取得</h4>
+                                        <p>認証局から電子証明書（ICカード）を購入します（取得には1〜2週間程度）</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-marker">2</div>
+                                    <div class="timeline-content">
+                                        <h4>利用者登録</h4>
+                                        <p>各電子入札システムに利用者登録を行います</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-marker">3</div>
+                                    <div class="timeline-content">
+                                        <h4>案件検索・入札情報の確認</h4>
+                                        <p>電子入札システム上で案件を検索し、入札情報を確認します</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-marker">4</div>
+                                    <div class="timeline-content">
+                                        <h4>入札書類のダウンロードと作成</h4>
+                                        <p>必要な入札書類をダウンロードし、内容を確認して作成します</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-marker">5</div>
+                                    <div class="timeline-content">
+                                        <h4>入札書類の提出</h4>
+                                        <p>作成した入札書類を電子入札システム上で提出します（締切時間に注意）</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-marker">6</div>
+                                    <div class="timeline-content">
+                                        <h4>開札結果の確認</h4>
+                                        <p>開札日時に電子入札システム上で結果を確認します</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-card mt-4">
+                            <h3>電子入札のよくあるトラブルと対処法</h3>
+                            <ul class="alert-list">
+                                <li>
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <span><strong>ICカードが認識されない</strong>：ドライバーの再インストールや別のUSBポートを試す</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <span><strong>システムにログインできない</strong>：ブラウザの設定やJavaのバージョンを確認</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <span><strong>提出締切に間に合わない</strong>：余裕をもって提出し、通信環境を確認する</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 自治体別の注意点セクション -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title">主要自治体の入札制度</h2>
+                <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="municipality-card">
+                            <div class="municipality-header">
+                                <img src="images/kanagawa.jpg" alt="神奈川県" class="img-fluid rounded">
+                                <h3>神奈川県</h3>
+                            </div>
+                            <div class="municipality-content">
+                                <p><strong>参加資格申請時期</strong>：原則として2年に1度（偶数年度の1〜2月頃）</p>
+                                <p><strong>特徴</strong>：電子入札が主流、総合評価方式の採用が増加</p>
+                                <p><strong>注意点</strong>：県内業者優遇制度あり、地域貢献度が評価される</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="municipality-card">
+                            <div class="municipality-header">
+                                <img src="images/tokyo.jpg" alt="東京都" class="img-fluid rounded">
+                                <h3>東京都</h3>
+                            </div>
+                            <div class="municipality-content">
+                                <p><strong>参加資格申請時期</strong>：原則として2年に1度（奇数年度の12月〜翌1月頃）</p>
+                                <p><strong>特徴</strong>：案件数が多く、競争が激しい</p>
+                                <p><strong>注意点</strong>：多摩地域と23区で発注機関が異なる場合あり</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="municipality-card">
+                            <div class="municipality-header">
+                                <img src="images/yokohama.jpg" alt="横浜市" class="img-fluid rounded">
+                                <h3>横浜市</h3>
+                            </div>
+                            <div class="municipality-content">
+                                <p><strong>参加資格申請時期</strong>：原則として2年に1度（偶数年度の11〜12月頃）</p>
+                                <p><strong>特徴</strong>：市内事業者優先発注の方針あり</p>
+                                <p><strong>注意点</strong>：工事と物品・委託で申請窓口が異なる</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="municipality-card">
+                            <div class="municipality-header">
+                                <img src="images/kawasaki.jpg" alt="川崎市" class="img-fluid rounded">
+                                <h3>川崎市</h3>
+                            </div>
+                            <div class="municipality-content">
+                                <p><strong>参加資格申請時期</strong>：原則として2年に1度（奇数年度の1〜2月頃）</p>
+                                <p><strong>特徴</strong>：市内中小企業者優先発注の方針あり</p>
+                                <p><strong>注意点</strong>：業種によって必要な資格や実績が異なる</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 入札成功のためのチェックリストセクション -->
+        <section class="section-padding">
+            <div class="container">
+                <h2 class="section-title">入札参加前のチェックリスト</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="checklist-card">
+                            <div class="checklist-header">
+                                <h3><i class="fas fa-id-card"></i> 参加資格関連</h3>
+                            </div>
+                            <div class="checklist">
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="check1" class="form-check-input">
+                                    <label for="check1">入札参加資格は有効期限内か</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="check2" class="form-check-input">
+                                    <label for="check2">必要な許認可（建設業許可など）は取得済みか</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="check3" class="form-check-input">
+                                    <label for="check3">経営事項審査（経審）の有効期限は確認したか</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="check4" class="form-check-input">
+                                    <label for="check4">指名停止措置を受けていないか</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checklist-card">
+                            <div class="checklist-header">
+                                <h3><i class="fas fa-clipboard-list"></i> 案件関連</h3>
+                            </div>
+                            <div class="checklist">
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="check5" class="form-check-input">
+                                    <label for="check5">入札公告・入札説明書を熟読したか</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="check6" class="form-check-input">
+                                    <label for="check6">現場説明会の日程は確認したか</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="check7" class="form-check-input">
+                                    <label for="check7">質問受付期間・方法を確認したか</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="check8" class="form-check-input">
+                                    <label for="check8">提出書類の一覧を作成したか</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="checklist-card">
+                            <div class="checklist-header">
+                                <h3><i class="fas fa-yen-sign"></i> 価格関連</h3>
+                            </div>
+                            <div class="checklist">
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="check9" class="form-check-input">
+                                    <label for="check9">適正な見積りを行ったか</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="check10" class="form-check-input">
+                                    <label for="check10">最低制限価格の有無を確認したか</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="check11" class="form-check-input">
+                                    <label for="check11">利益率は確保できているか</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="check12" class="form-check-input">
+                                    <label for="check12">入札書の金額は税込・税抜どちらか確認したか</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checklist-card">
+                            <div class="checklist-header">
+                                <h3><i class="fas fa-paper-plane"></i> 提出関連</h3>
+                            </div>
+                            <div class="checklist">
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="check13" class="form-check-input">
+                                    <label for="check13">提出期限・場所を確認したか</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="check14" class="form-check-input">
+                                    <label for="check14">必要書類はすべて揃っているか</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="check15" class="form-check-input">
+                                    <label for="check15">押印は漏れていないか</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="check16" class="form-check-input">
+                                    <label for="check16">提出部数は正しいか</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="#" class="btn btn-primary" onclick="resetCheckboxes()">チェックリストをリセット</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTAセクション -->
+        <section class="cta-section section-padding">
+            <div class="container">
+                <div class="cta-box">
+                    <h2 class="cta-title">専門家に相談する</h2>
+                    <p class="cta-text">入札に関するご不明点や具体的なサポートが必要な場合は、ぜひ専門家にご相談ください。<br>ふらっと法務事務所では、初めての方でも安心して入札に参加できるよう、丁寧にサポートいたします。</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary btn-lg">無料相談のお申し込み</a>
+                        <a href="service.html" class="btn btn-outline-primary">サービス詳細はこちら</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-info">
+                        <img src="images/logo-white.png" alt="ふらっと法務事務所" class="footer-logo">
+                        <p>〒XXX-XXXX<br>神奈川県横浜市○○区△△町X-X-X</p>
+                        <p>TEL: 045-XXX-XXXX</p>
+                        <p>営業時間: 平日9:00〜18:00</p>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="footer-links">
+                                <h3>サイトマップ</h3>
+                                <ul>
+                                    <li><a href="index.html">ホーム</a></li>
+                                    <li><a href="service.html">サービス紹介</a></li>
+                                    <li><a href="flow.html">支援の流れ</a></li>
+                                    <li><a href="cases.html">成功事例</a></li>
+                                    <li><a href="knowhow.html">入札ノウハウ</a></li>
+                                    <li><a href="blog.html">ブログ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="footer-links">
+                                <h3>会社情報</h3>
+                                <ul>
+                                    <li><a href="about.html">会社概要</a></li>
+                                    <li><a href="about.html#staff">スタッフ紹介</a></li>
+                                    <li><a href="about.html#access">アクセス</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="footer-links">
+                                <h3>お問い合わせ</h3>
+                                <ul>
+                                    <li><a href="contact.html">無料相談</a></li>
+                                    <li><a href="contact.html#document">資料請求</a></li>
+                                    <li><a href="knowhow.html#faq">よくある質問</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="footer-copyright">© 2025 ふらっと法務事務所 All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer-policy-links">
+                            <a href="privacy.html">プライバシーポリシー</a>
+                            <span class="separator">|</span>
+                            <a href="terms.html">特定商取引法に基づく表記</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        function resetCheckboxes() {
+            const checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = false;
+            });
+        }
+    </script>
+</body>
+</html>
