@@ -1,0 +1,153 @@
+/* モバイル表示の修正用CSS */
+
+/* スマートフォン向け共通修正 */
+@media (max-width: 767px) {
+  /* 見出しの文字重なり防止 */
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.4;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  /* 電子入札のよくあるトラブルと主要自治体の入札制度 - タイトル修正 */
+  .content-card h2 {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* セクションタイトルの調整 */
+  .section-title {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+    word-break: break-word;
+  }
+  
+  /* ICカードエラーメッセージの表示修正 */
+  .alert-list li {
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  .alert-list i {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+  
+  /* チェックリストボタンと見出しの重なり防止 */
+  .checklist-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .checklist-header h3 {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  .checklist-reset {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  /* 入札ノウハウページの自治体情報セクション修正 */
+  .municipality-section h2 {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  /* フォントサイズ全体調整 */
+  .content-card p,
+  .content-card li,
+  .glossary-list dd,
+  .checklist-item label {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  /* チェックリストカードの調整 */
+  .checklist-card {
+    margin-bottom: 20px;
+  }
+  
+  .checklist-card h3 {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .checklist-card h3 i {
+    margin-right: 8px;
+    flex-shrink: 0;
+  }
+  
+  /* 提出関連セクションの特別調整 */
+  .checklist-card h3:contains("提出関連") {
+    font-size: 1.1rem;
+  }
+  
+  /* チェックリストリセットボタンの配置調整 */
+  .text-center.mt-4 {
+    margin-top: 2rem !important;
+  }
+  
+  /* 電子入札のよくあるトラブルセクションの調整 */
+  .content-card h3 {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+  }
+  
+  /* 主要自治体の入札制度セクションの調整 */
+  section.section-padding h2.section-title {
+    font-size: 1.6rem;
+    line-height: 1.4;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+/* 特に小さい画面向け追加修正 */
+@media (max-width: 480px) {
+  /* さらに小さいフォントサイズ */
+  .content-card h2 {
+    font-size: 1.3rem;
+  }
+  
+  .content-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  /* セクションタイトルのさらなる調整 */
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  /* ボタンのサイズ調整 */
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+  
+  /* チェックリストの余白調整 */
+  .checklist-card {
+    padding: 20px 15px;
+  }
+  
+  /* 提出関連セクションのさらなる調整 */
+  .checklist-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  /* アラートリストのさらなる調整 */
+  .alert-list li span {
+    display: block;
+    padding-left: 0;
+    margin-top: 5px;
+  }
+}
