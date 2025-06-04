@@ -1,153 +1,319 @@
-/* モバイル表示の修正用CSS */
+/* モバイル最適化のためのCSS */
 
-/* スマートフォン向け共通修正 */
+/* 全体の調整 */
 @media (max-width: 767px) {
-  /* 見出しの文字重なり防止 */
-  h1, h2, h3, h4, h5, h6 {
-    line-height: 1.4;
-    word-break: break-word;
-    overflow-wrap: break-word;
-  }
-  
-  /* 電子入札のよくあるトラブルと主要自治体の入札制度 - タイトル修正 */
-  .content-card h2 {
-    font-size: 1.5rem;
-    line-height: 1.5;
-    margin-bottom: 1.5rem;
-  }
-  
-  /* セクションタイトルの調整 */
-  .section-title {
-    font-size: 1.8rem;
-    line-height: 1.4;
-    margin-bottom: 1.5rem;
-    word-break: break-word;
-  }
-  
-  /* ICカードエラーメッセージの表示修正 */
-  .alert-list li {
-    display: block;
-    margin-bottom: 20px;
-  }
-  
-  .alert-list i {
-    display: inline-block;
-    margin-bottom: 5px;
-  }
-  
-  /* チェックリストボタンと見出しの重なり防止 */
-  .checklist-header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .checklist-header h3 {
-    margin-bottom: 15px;
-    width: 100%;
-  }
-  
-  .checklist-reset {
-    margin-bottom: 15px;
-    width: 100%;
-  }
-  
-  /* 入札ノウハウページの自治体情報セクション修正 */
-  .municipality-section h2 {
-    font-size: 1.5rem;
-    line-height: 1.5;
-  }
-  
-  /* フォントサイズ全体調整 */
-  .content-card p,
-  .content-card li,
-  .glossary-list dd,
-  .checklist-item label {
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-  
-  /* チェックリストカードの調整 */
-  .checklist-card {
-    margin-bottom: 20px;
-  }
-  
-  .checklist-card h3 {
-    font-size: 1.2rem;
-    line-height: 1.4;
-    margin-bottom: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  
-  .checklist-card h3 i {
-    margin-right: 8px;
-    flex-shrink: 0;
-  }
-  
-  /* 提出関連セクションの特別調整 */
-  .checklist-card h3:contains("提出関連") {
-    font-size: 1.1rem;
-  }
-  
-  /* チェックリストリセットボタンの配置調整 */
-  .text-center.mt-4 {
-    margin-top: 2rem !important;
-  }
-  
-  /* 電子入札のよくあるトラブルセクションの調整 */
-  .content-card h3 {
-    font-size: 1.3rem;
-    line-height: 1.4;
-    margin-bottom: 15px;
-  }
-  
-  /* 主要自治体の入札制度セクションの調整 */
-  section.section-padding h2.section-title {
-    font-size: 1.6rem;
-    line-height: 1.4;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-  }
+    body {
+        font-size: 15px;
+    }
+    
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .section-padding {
+        padding: 40px 0;
+    }
+    
+    .page-title {
+        font-size: 24px;
+    }
+    
+    .page-subtitle {
+        font-size: 16px;
+    }
+    
+    .section-title {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
 }
 
-/* 特に小さい画面向け追加修正 */
-@media (max-width: 480px) {
-  /* さらに小さいフォントサイズ */
-  .content-card h2 {
-    font-size: 1.3rem;
-  }
-  
-  .content-card h3 {
-    font-size: 1.2rem;
-  }
-  
-  /* セクションタイトルのさらなる調整 */
-  .section-title {
-    font-size: 1.5rem;
-  }
-  
-  /* ボタンのサイズ調整 */
-  .btn {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-  }
-  
-  /* チェックリストの余白調整 */
-  .checklist-card {
-    padding: 20px 15px;
-  }
-  
-  /* 提出関連セクションのさらなる調整 */
-  .checklist-card h3 {
-    font-size: 1.1rem;
-  }
-  
-  /* アラートリストのさらなる調整 */
-  .alert-list li span {
-    display: block;
-    padding-left: 0;
-    margin-top: 5px;
-  }
+/* ヘッダーとナビゲーション */
+@media (max-width: 767px) {
+    .navbar-brand img.logo {
+        max-height: 40px;
+    }
+    
+    .navbar-toggler {
+        padding: 4px 8px;
+        font-size: 18px;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 10px 15px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .navbar-collapse {
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+    
+    .contact-btn {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/* 目次セクション */
+@media (max-width: 767px) {
+    .toc-container {
+        padding: 15px;
+    }
+    
+    .toc-title {
+        font-size: 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .btn-toggle-toc {
+        background: none;
+        border: none;
+        color: #1a3c6c;
+        font-size: 16px;
+    }
+    
+    .toc-content {
+        display: none;
+        margin-top: 10px;
+    }
+    
+    .toc-list {
+        padding-left: 15px;
+    }
+    
+    .toc-link {
+        padding: 8px 0;
+        display: block;
+    }
+}
+
+/* 案件紹介ページ */
+@media (max-width: 767px) {
+    /* 検索フィルター */
+    .filter-group {
+        margin-bottom: 20px;
+    }
+    
+    .filter-title {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .filter-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .filter-btn {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+    
+    /* 案件カード */
+    .project-card {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .project-title {
+        font-size: 18px;
+    }
+    
+    .project-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .project-dates {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    /* 案件リスト */
+    .project-item {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .project-date {
+        margin-bottom: 10px;
+        align-self: flex-start;
+    }
+    
+    .project-content {
+        width: 100%;
+    }
+    
+    .project-meta {
+        flex-wrap: wrap;
+    }
+}
+
+/* 入札用語集ページ */
+@media (max-width: 767px) {
+    /* 50音インデックス */
+    .kana-index {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 10px;
+    }
+    
+    .kana-row {
+        display: inline-flex;
+        margin-right: 10px;
+    }
+    
+    .kana-btn {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+    
+    /* カテゴリーボタン */
+    .category-btn {
+        height: auto;
+        padding: 15px 10px;
+    }
+    
+    .category-icon {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+    
+    /* 用語アイテム */
+    .term-item {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .term-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .term-badge {
+        margin-top: 5px;
+        margin-left: 0;
+    }
+    
+    .term-example, .related-terms {
+        padding: 10px;
+    }
+    
+    .related-terms-buttons {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    /* 索引詳細 */
+    .index-items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+/* CTA */
+@media (max-width: 767px) {
+    .cta-container {
+        padding: 20px;
+    }
+    
+    .cta-container h2 {
+        font-size: 20px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .floating-cta {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        padding: 10px;
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+    
+    .floating-cta .btn {
+        border-radius: 30px;
+        padding: 10px 20px;
+        font-weight: bold;
+    }
+}
+
+/* フッター */
+@media (max-width: 767px) {
+    .footer {
+        padding: 40px 0 80px; /* 下部にfloating-ctaがあるためパディングを追加 */
+    }
+    
+    .footer-info {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .footer-logo img {
+        max-width: 200px;
+        margin: 0 auto 15px;
+    }
+    
+    .footer-nav-column {
+        margin-bottom: 20px;
+    }
+    
+    .footer-nav-column h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .copyright {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 12px;
+    }
+}
+
+/* アクセシビリティ向上 */
+@media (max-width: 767px) {
+    /* タップ領域の拡大 */
+    .nav-link, .btn, .filter-btn, .kana-btn, .category-btn, .index-item, .btn-detail {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* フォームコントロール */
+    input, select, textarea {
+        font-size: 16px; /* iOSでズームインを防止 */
+        padding: 10px;
+    }
+    
+    /* スクロールトップボタン */
+    .scroll-top {
+        position: fixed;
+        bottom: 70px; /* floating-ctaの上に配置 */
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        background: rgba(26, 60, 108, 0.8);
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
 }
