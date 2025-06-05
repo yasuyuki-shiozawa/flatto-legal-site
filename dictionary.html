@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>入札用語集 | ふらっと法務事務所 - 入札サポート専門サイト</title>
-    <meta name="description" content="ふらっと法務事務所の入札用語集ページです。入札に関する専門用語をわかりやすく解説しています。">
+    <meta name="description" content="ふらっと法務事務所の入札��語集ページです。入札に関する専門用語をわかりやすく解説しています。">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/soft-theme-minimal.css">
     <link rel="stylesheet" href="css/mobile-fixes.css">
@@ -52,31 +52,6 @@
         display: block;
     }
     </style>
-    <!-- Schema.org構造化データ -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "入札とは何ですか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "入札は、公共機関や民間企業が商品やサービスを調達する際に、複数の業者から見積もりを集め、最も条件の良い業者を選定する方法です。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "一般競争入札とは何ですか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "一般競争入札は、入札参加資格を持つすべての業者が参加できる入札方式です。公告によって広く参加者を募り、競争性と透明性が高いのが特徴です。"
-          }
-        }
-      ]
-    }
-    </script>
 </head>
 <body>
     <!-- ヘッダー -->
@@ -84,7 +59,7 @@
         <div class="header-container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/logo.png" alt="ふらっと法務事務所ロゴ">
+                    <img src="images/flatto-logo-color.png" alt="ふらっと法務事務所ロゴ">
                 </a>
             </div>
             <nav class="pc-nav">
@@ -144,85 +119,97 @@
             </div>
         </section>
 
-        <!-- 検索・フィルターセクション -->
+        <!-- カテゴリフィルターセクション -->
         <section class="section-padding bg-light">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8 mb-4">
-                        <div class="search-box">
-                            <input type="text" class="form-control" placeholder="用語を検索">
-                            <button class="btn btn-primary">検索</button>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="filter-box">
-                            <select class="form-select">
-                                <option selected>カテゴリで絞り込む</option>
-                                <option value="basic">基本用語</option>
-                                <option value="procedure">手続き関連</option>
-                                <option value="document">書類関連</option>
-                                <option value="evaluation">評価関連</option>
-                                <option value="contract">契約関連</option>
-                            </select>
+                    <div class="col-md-12">
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" data-filter="all">カテゴリで絞り込む</button>
+                            <button class="filter-btn" data-filter="basic">基本用語</button>
+                            <button class="filter-btn" data-filter="procedure">手続き関連</button>
+                            <button class="filter-btn" data-filter="document">書類関連</button>
+                            <button class="filter-btn" data-filter="evaluation">評価関連</button>
+                            <button class="filter-btn" data-filter="contract">契約関連</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 50音順ナビゲーション -->
+        <!-- 50音順フィルターセクション -->
         <section class="section-padding">
             <div class="container">
                 <h2 class="section-title">50音順</h2>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="kana-nav">
-                            <a href="#a" class="kana-btn">あ</a>
-                            <a href="#ka" class="kana-btn">か</a>
-                            <a href="#sa" class="kana-btn">さ</a>
-                            <a href="#ta" class="kana-btn">た</a>
-                            <a href="#na" class="kana-btn">な</a>
-                            <a href="#ha" class="kana-btn">は</a>
-                            <a href="#ma" class="kana-btn">ま</a>
-                            <a href="#ya" class="kana-btn">や</a>
-                            <a href="#ra" class="kana-btn">ら</a>
-                            <a href="#wa" class="kana-btn">わ</a>
+                        <div class="kana-filter">
+                            <button class="kana-btn" data-kana="あ">あ</button>
+                            <button class="kana-btn" data-kana="か">か</button>
+                            <button class="kana-btn" data-kana="さ">さ</button>
+                            <button class="kana-btn" data-kana="た">た</button>
+                            <button class="kana-btn" data-kana="な">な</button>
+                            <button class="kana-btn" data-kana="は">は</button>
+                            <button class="kana-btn" data-kana="ま">ま</button>
+                            <button class="kana-btn" data-kana="や">や</button>
+                            <button class="kana-btn" data-kana="ら">ら</button>
+                            <button class="kana-btn" data-kana="わ">わ</button>
                         </div>
-                        <div class="alphabet-nav mt-3">
-                            <a href="#A" class="kana-btn">A</a>
-                            <a href="#B" class="kana-btn">B</a>
-                            <a href="#C" class="kana-btn">C</a>
-                            <a href="#D" class="kana-btn">D</a>
-                            <a href="#E" class="kana-btn">E</a>
-                            <a href="#F" class="kana-btn">F</a>
-                            <a href="#G" class="kana-btn">G</a>
-                            <a href="#H" class="kana-btn">H</a>
-                            <a href="#I" class="kana-btn">I</a>
+                        <div class="alphabet-filter">
+                            <button class="kana-btn" data-kana="A">A</button>
+                            <button class="kana-btn" data-kana="B">B</button>
+                            <button class="kana-btn" data-kana="C">C</button>
+                            <button class="kana-btn" data-kana="D">D</button>
+                            <button class="kana-btn" data-kana="E">E</button>
+                            <button class="kana-btn" data-kana="F">F</button>
+                            <button class="kana-btn" data-kana="G">G</button>
+                            <button class="kana-btn" data-kana="H">H</button>
+                            <button class="kana-btn" data-kana="I">I</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- カテゴリナビゲーション -->
+        <!-- カテゴリ別セクション -->
         <section class="section-padding bg-light">
             <div class="container">
                 <h2 class="section-title">カテゴリ別</h2>
                 <div class="row">
                     <div class="col-md-4 col-6 mb-4">
-                        <a href="#basic" class="category-btn">基本用語</a>
+                        <a href="#basic" class="category-card">
+                            <div class="category-card-inner">
+                                <h3>基本用語</h3>
+                            </div>
+                        </a>
                     </div>
                     <div class="col-md-4 col-6 mb-4">
-                        <a href="#procedure" class="category-btn">手続き関連</a>
+                        <a href="#procedure" class="category-card">
+                            <div class="category-card-inner">
+                                <h3>手続き関連</h3>
+                            </div>
+                        </a>
                     </div>
                     <div class="col-md-4 col-6 mb-4">
-                        <a href="#document" class="category-btn">書類関連</a>
+                        <a href="#document" class="category-card">
+                            <div class="category-card-inner">
+                                <h3>書類関連</h3>
+                            </div>
+                        </a>
                     </div>
                     <div class="col-md-4 col-6 mb-4">
-                        <a href="#evaluation" class="category-btn">評価関連</a>
+                        <a href="#evaluation" class="category-card">
+                            <div class="category-card-inner">
+                                <h3>評価関連</h3>
+                            </div>
+                        </a>
                     </div>
                     <div class="col-md-4 col-6 mb-4">
-                        <a href="#contract" class="category-btn">契約関連</a>
+                        <a href="#contract" class="category-card">
+                            <div class="category-card-inner">
+                                <h3>契約関連</h3>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -231,82 +218,71 @@
         <!-- 基本用語セクション -->
         <section id="basic" class="section-padding">
             <div class="container">
+                <h2 class="section-title"> 基本用語</h2>
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="glossary-card">
-                            <h2 class="glossary-title">
-                                <img src="images/icons/basic.png" alt="基本" class="glossary-icon">
-                                基本用語
-                            </h2>
-                            
-                            <div class="term-item" id="nyusatsu">
-                                <h3 class="term-title">
-                                    <span class="badge bg-primary">基本用語</span>
-                                    <span class="badge bg-danger">重要</span>
-                                    入札（にゅうさつ）
-                                </h3>
-                                <div class="term-content">
-                                    <p>公共機関や民間企業が商品やサービスを調達する際に、複数の業者から見積もりを集め、最も条件の良い業者を選定する方法。</p>
-                                    
-                                    <div class="term-detail mt-3">
-                                        <h4>詳細説明</h4>
-                                        <p>入札は、公平性と透明性を確保しながら、最も有利な条件で契約相手を決定するための制度です。入札参加者は自社の提案価格や条件を記載した入札書を提出し、発注者はあらかじめ定められた基準に従って落札者を決定します。</p>
-                                        <p>主に「一般競争入札」「指名競争入札」「随意契約」などの方式があります。</p>
-                                    </div>
-                                    
-                                    <div class="term-example mt-3">
-                                        <h4>例</h4>
-                                        <ul>
-                                            <li>「市役所の清掃業務委託の入札に参加する」</li>
-                                            <li>「入札公告を確認して、参加資格を確認した」</li>
-                                        </ul>
-                                    </div>
+                    <!-- 用語アイテム1 -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="term-card">
+                            <div class="term-header">
+                                <h3 class="term-title">入札（にゅうさつ）</h3>
+                                <span class="term-badge important">重要</span>
+                                <span class="term-category">基本用語</span>
+                            </div>
+                            <div class="term-content">
+                                <p>公共機関や民間企業が商品やサービスを調達する際に、複数の業者から見積もりを集め、最も条件の良い業者を選定する方法。</p>
+                                <div class="term-details">
+                                    <h4>詳細説明</h4>
+                                    <p>入札は、公平性と透明性を確保しながら、最も有利な条件で契約相手を決定するための制度です。入札参加者は自社の提案価格や条件を記載した入札書を提出し、発注者はあらかじめ定められた基準に従って落札者を決定します。</p>
+                                    <p>主に「一般競争入札」「指名競争入札」「随意契約」などの方式があります。</p>
+                                    <h4>例</h4>
+                                    <ul>
+                                        <li>「市役所の清掃業務委託の入札に参加する」</li>
+                                        <li>「入札公告を確認して、参加資格を確認した」</li>
+                                    </ul>
                                 </div>
                             </div>
-                            
-                            <div class="term-item mt-5" id="ippan">
-                                <h3 class="term-title">
-                                    <span class="badge bg-primary">基本用語</span>
-                                    一般競争入札（いっぱんきょうそうにゅうさつ）
-                                </h3>
-                                <div class="term-content">
-                                    <p>入札参加資格を持つすべての業者が参加できる入札方式。公告によって広く参加者を募り、競争性と透明性が高いのが特徴。</p>
-                                    
-                                    <div class="term-detail mt-3">
-                                        <h4>詳細説明</h4>
-                                        <p>一般競争入札は、地方自治法や会計法で原則的な入札方式として位置づけられています。参加資格を満たす業者であれば誰でも参加できるため、競争原理が働き、経済性の確保が期待できます。</p>
-                                        <p>ただし、不適格な業者の参入リスクもあるため、参加資格要件を設定して一定の制限を設けることが一般的です。</p>
-                                    </div>
-                                    
-                                    <div class="term-example mt-3">
-                                        <h4>例</h4>
-                                        <ul>
-                                            <li>「市の大規模工事は一般競争入札で発注された」</li>
-                                        </ul>
-                                    </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 用語アイテム2 -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="term-card">
+                            <div class="term-header">
+                                <h3 class="term-title">一般競争入札（いっぱんきょうそうにゅうさつ）</h3>
+                                <span class="term-category">基本用語</span>
+                            </div>
+                            <div class="term-content">
+                                <p>入札参加資格を持つすべての業者が参加できる入札方式。公告によって広く参加者を募り、競争性と透明性が高いのが特徴。</p>
+                                <div class="term-details">
+                                    <h4>詳細説明</h4>
+                                    <p>一般競争入札は、地方自治法や会計法で原則的な入札方式として位置づけられています。参加資格を満たす業者であれば誰でも参加できるため、競争原理が働き、経済性の確保が期待できます。</p>
+                                    <p>ただし、不適格な業者の参入リスクもあるため、参加資格要件を設定して一定の制限を設けることが一般的です。</p>
+                                    <h4>例</h4>
+                                    <ul>
+                                        <li>「市の大規模工事は一般競争入札で発注された」</li>
+                                    </ul>
                                 </div>
                             </div>
-                            
-                            <div class="term-item mt-5" id="shimei">
-                                <h3 class="term-title">
-                                    <span class="badge bg-primary">基本用語</span>
-                                    指名競争入札（しめいきょうそうにゅうさつ）
-                                </h3>
-                                <div class="term-content">
-                                    <p>発注者が特定の業者を指名して入札参加を求める方式。技術力や実績などを考慮して参加者を限定する。</p>
-                                    
-                                    <div class="term-detail mt-3">
-                                        <h4>詳細説明</h4>
-                                        <p>指名競争入札は、発注者が適格と認める特定の業者のみを指名して行う入札方式です。専門性の高い業務や緊急性のある案件などに用いられることが多く、一般競争入札に比べて手続きが簡略化されています。</p>
-                                        <p>ただし、指名業者の選定過程の透明性確保が課題となることもあります。</p>
-                                    </div>
-                                    
-                                    <div class="term-example mt-3">
-                                        <h4>例</h4>
-                                        <ul>
-                                            <li>「専門性の高いシステム開発は指名競争入札で発注された」</li>
-                                        </ul>
-                                    </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 用語アイテム3 -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="term-card">
+                            <div class="term-header">
+                                <h3 class="term-title">指名競争入札（しめいきょうそうにゅうさつ）</h3>
+                                <span class="term-category">基本用語</span>
+                            </div>
+                            <div class="term-content">
+                                <p>発注者が特定の業者を指名して入札参加を求める方式。技術力や実績などを考慮して参加者を限定する。</p>
+                                <div class="term-details">
+                                    <h4>詳細説明</h4>
+                                    <p>指名競争入札は、発注者が適格と認める特定の業者のみを指名して行う入札方式です。専門性の高い業務や緊急性のある案件などに用いられることが多く、一般競争入札に比べて手続きが簡略化されています。</p>
+                                    <p>ただし、指名業者の選定過程の透明性確保が課題となることもあります。</p>
+                                    <h4>例</h4>
+                                    <ul>
+                                        <li>「専門性の高いシステム開発は指名競争入札で発注された」</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -318,60 +294,22 @@
         <!-- 手続き関連セクション -->
         <section id="procedure" class="section-padding bg-light">
             <div class="container">
+                <h2 class="section-title"> 手続き関連</h2>
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="glossary-card">
-                            <h2 class="glossary-title">
-                                <img src="images/icons/procedure.png" alt="手続き" class="glossary-icon">
-                                手続き関連
-                            </h2>
-                            
-                            <div class="term-item" id="kokoku">
-                                <h3 class="term-title">
-                                    <span class="badge bg-success">手続き関連</span>
-                                    <span class="badge bg-danger">重要</span>
-                                    入札公告（にゅうさつこうこく）
-                                </h3>
-                                <div class="term-content">
-                                    <p>入札の実施を広く知らせるための公式な告知。案件の概要、参加資格、日程などの重要情報が記載される。</p>
-                                    
-                                    <div class="term-detail mt-3">
-                                        <h4>詳細説明</h4>
-                                        <p>入札公告は、一般競争入札において入札の実施を広く周知するために行われる公式な告知です。官報、自治体の広報、ウェブサイトなどで公表されます。</p>
-                                        <p>公告には、案件名、業務内容、予定価格（または予算額）、入札参加資格、入札・開札の日時と場所、担当部署の連絡先などが記載されています。</p>
-                                    </div>
-                                    
-                                    <div class="term-example mt-3">
-                                        <h4>例</h4>
-                                        <ul>
-                                            <li>「市のホームページで入札公告を確認した」</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                    <!-- 用語アイテム1 -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="term-card">
+                            <div class="term-header">
+                                <h3 class="term-title">入札公告（にゅうさつこうこく）</h3>
+                                <span class="term-badge important">重要</span>
+                                <span class="term-category">手続き関連</span>
                             </div>
-                            
-                            <div class="term-item mt-5" id="shikaku">
-                                <h3 class="term-title">
-                                    <span class="badge bg-success">手続き関連</span>
-                                    <span class="badge bg-danger">重要</span>
-                                    入札参加資格（にゅうさつさんかしかく）
-                                </h3>
-                                <div class="term-content">
-                                    <p>入札に参加するために必要な資格や条件。業者の適格性を判断するための基準となる。</p>
-                                    
-                                    <div class="term-detail mt-3">
-                                        <h4>詳細説明</h4>
-                                        <p>入札参加資格は、入札に参加できる業者の条件を定めたものです。一般的には、法人格の有無、業種の登録、財務状況、技術者の保有状況、過去の実績、所在地などが要件として設定されます。</p>
-                                        <p>多くの自治体や官公庁では、あらかじめ「入札参加資格審査」を行い、資格者名簿に登録された業者のみが入札に参加できる仕組みになっています。</p>
-                                    </div>
-                                    
-                                    <div class="term-example mt-3">
-                                        <h4>例</h4>
-                                        <ul>
-                                            <li>「入札参加資格を取得するために必要書類を揃えた」</li>
-                                            <li>「参加資格の有効期間は2年間である」</li>
-                                        </ul>
-                                    </div>
+                            <div class="term-content">
+                                <p>入札の実施を広く公示するための公文書。案件の概要、参加資格、入札日時、場所などが記載されている。</p>
+                                <div class="term-details">
+                                    <h4>詳細説明</h4>
+                                    <p>入札公告は、一般競争入札を実施する際に、広く参加者を募るために公示される文書です。官報や自治体のホームページ、入札情報サービスなどで公開されます。</p>
+                                    <p>入札に参加するためには、この公告内容を確認し、参加資格や条件を満たしているかを確認することが第一歩となります。</p>
                                 </div>
                             </div>
                         </div>
@@ -386,7 +324,7 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <h2 class="section-title text-center">入札でお困りですか？</h2>
-                        <p>ふらっと法務事務所では、入札書類の作成から提出までトータルサポートいたします。<br>初めての方でも安心してご相談ください。</p>
+                        <p>ふらっと法務事務所では、入札に関する専門知識を活かして、あなたの疑問にお答えします。<br>初めての方でも安心してご相談ください。</p>
                         <div class="mt-4">
                             <a href="contact.html" class="btn btn-primary me-3">無料相談する</a>
                             <a href="service.html" class="btn btn-outline-primary">サービス内容を見る</a>
@@ -403,9 +341,9 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
                     <div class="footer-info">
-                        <img src="images/logo-white.png" alt="ふらっと法務事務所" class="footer-logo">
-                        <p>〒100-0001<br>東京都千代田区千代田1-1-1<br>千代田ビル5階</p>
-                        <p>TEL: 03-1234-5678<br>FAX: 03-1234-5679<br>Email: info@flatto-legal.co.jp</p>
+                        <img src="images/flatto-logo-color.png" alt="ふらっと法務事務所" class="footer-logo">
+                        <p>〒242-0006<br>神奈川県大和市南林間6丁目4番26号</p>
+                        <p>TEL: 046-272-3357<br>Email: mail@flat-legal.com</p>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
@@ -434,19 +372,19 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-links">
-                        <h3>最新情報</h3>
+                        <h3>営業時間</h3>
                         <ul>
-                            <li><a href="#">入札制度の最新動向</a></li>
-                            <li><a href="#">官公庁入札情報まとめ</a></li>
-                            <li><a href="#">入札参加資格申請のポイント</a></li>
-                            <li><a href="#">自治体別入札情報リンク集</a></li>
+                            <li>電話受付: 平日9時～17時</li>
+                            <li>メール: 24時間受付</li>
+                            <li>ご来所・訪問: 予約制</li>
+                            <li>（お客様のご都合に合わせ、曜日・時間応相談）</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="row footer-bottom">
                 <div class="col-md-6">
-                    <p class="footer-copyright">© 2025 ふらっと法務事務所 All Rights Reserved.</p>
+                    <p class="footer-copyright">© 2025 行政書士法人ふらっと法務事務所 All Rights Reserved.</p>
                 </div>
                 <div class="col-md-6">
                     <div class="footer-policy-links">
