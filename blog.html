@@ -6,11 +6,8 @@
     <title>案件紹介 | ふらっと法務事務所 - 入札サポート専門サイト</title>
     <meta name="description" content="ふらっと法務事務所の入札案件紹介ページです。最新の入札案件情報を業種別、地域別、予算規模別にご紹介しています。">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/mobile-fixes.css">
-    <!-- 強制適用版ヘッダー修正用CSS -->
-    <link rel="stylesheet" href="css/header-fix-important.css">
-    <!-- 最小限の柔らかいデザイン用のCSS -->
     <link rel="stylesheet" href="css/soft-theme-minimal.css">
+    <link rel="stylesheet" href="css/mobile-fixes.css">
     <!-- Schema.org構造化データ -->
     <script type="application/ld+json">
     {
@@ -28,6 +25,50 @@
       }
     }
     </script>
+    <style>
+    /* インラインでヘッダー修正用のスタイルを追加 */
+    header .logo img {
+        max-height: 60px !important;
+        width: auto !important;
+    }
+    
+    header .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+    
+    /* ナビゲーションメニューのスタイル修正 */
+    header .pc-nav {
+        display: none;
+    }
+    
+    @media (min-width: 992px) {
+        header .pc-nav {
+            display: block;
+        }
+        
+        header .menu-btn {
+            display: none;
+        }
+    }
+    
+    @media (max-width: 991px) {
+        header .sp-nav {
+            display: none;
+        }
+        
+        header .menu-btn {
+            display: block;
+        }
+    }
+    
+    /* メニューボタンが押された時のスタイル */
+    header .sp-nav.active {
+        display: block;
+    }
+    </style>
 </head>
 <body>
     <!-- ヘッダー -->
@@ -303,5 +344,14 @@
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+    // ハンバーガーメニューの動作を修正
+    $(document).ready(function() {
+        $('.menu-btn').on('click', function() {
+            $(this).toggleClass('active');
+            $('.sp-nav').toggleClass('active');
+        });
+    });
+    </script>
 </body>
 </html>
