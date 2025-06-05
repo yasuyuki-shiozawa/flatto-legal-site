@@ -1,84 +1,413 @@
-/* モバイル表示の修正用CSS */
+/* ふらっと法務事務所 入札サポート専門サイト モバイル最適化用スタイルシート */
 
-/* スマートフォン向け共通修正 */
-@media (max-width: 767px) {
-  /* 見出しの文字重なり防止 */
-  h1, h2, h3, h4, h5, h6 {
-    line-height: 1.4;
-    word-break: break-word;
-    overflow-wrap: break-word;
-  }
-  
-  /* 電子入札のよくあるトラブルと主要自治体の入札制度 - タイトル修正 */
-  .content-card h2 {
-    font-size: 1.5rem;
-    line-height: 1.5;
-    margin-bottom: 1.5rem;
-  }
-  
-  /* ICカードエラーメッセージの表示修正 */
-  .alert-list li {
-    display: block;
-    margin-bottom: 20px;
-  }
-  
-  .alert-list i {
-    display: inline-block;
-    margin-bottom: 5px;
-  }
-  
-  /* チェックリストボタンと見出しの重なり防止 */
-  .checklist-header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .checklist-header h3 {
-    margin-bottom: 15px;
-    width: 100%;
-  }
-  
-  .checklist-reset {
-    margin-bottom: 15px;
-    width: 100%;
-  }
-  
-  /* 入札ノウハウページの自治体情報セクション修正 */
-  .municipality-section h2 {
-    font-size: 1.5rem;
-    line-height: 1.5;
-  }
-  
-  /* フォントサイズ全体調整 */
-  .content-card p,
-  .content-card li,
-  .glossary-list dd,
-  .checklist-item label {
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
+/* ===== モバイル最適化の基本設定 ===== */
+:root {
+    /* タッチターゲットサイズ */
+    --touch-target-size: 44px;
+    --touch-target-spacing: 8px;
 }
 
-/* 特に小さい画面向け追加修正 */
-@media (max-width: 480px) {
-  /* さらに小さいフォントサイズ */
-  .content-card h2 {
-    font-size: 1.3rem;
-  }
-  
-  .content-card h3 {
-    font-size: 1.2rem;
-  }
-  
-  /* ボタンのサイズ調整 */
-  .btn {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-  }
-  
-  /* チェックリストの余白調整 */
-  .checklist-card {
-    padding: 20px 15px;
-  }
+/* ===== 全体のモバイル調整 ===== */
+@media (max-width: 768px) {
+    html {
+        font-size: 15px; /* ベースフォントサイズを少し小さく */
+    }
+    
+    body {
+        padding-bottom: 60px; /* 固定CTAの高さ分の余白 */
+    }
+    
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* ===== ヘッダーとナビゲーション ===== */
+@media (max-width: 992px) {
+    .header-container {
+        padding: 10px 15px;
+    }
+    
+    .logo img {
+        max-height: 40px;
+    }
+    
+    .menu-btn {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 1000;
+    }
+    
+    .menu-btn span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: var(--primary-color);
+        margin: 3px 0;
+        transition: all 0.3s ease;
+    }
+    
+    .menu-btn.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-btn.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+    
+    .pc-nav {
+        display: none;
+    }
+    
+    .mobile-nav {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background-color: white;
+        z-index: 999;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        overflow-y: auto;
+    }
+    
+    .mobile-nav.active {
+        transform: translateX(0);
+    }
+    
+    .mobile-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .mobile-nav ul li a {
+        display: block;
+        padding: 15px 20px;
+        border-bottom: 1px solid #eee;
+        color: var(--dark-color);
+        font-size: 1.1rem;
+    }
+    
+    .mobile-nav ul li a.current {
+        background-color: var(--primary-color);
+        color: white;
+    }
+}
+
+/* ===== タッチ操作の最適化 ===== */
+@media (max-width: 768px) {
+    /* すべてのクリック可能な要素に適切なサイズを確保 */
+    a, button, input[type="button"], input[type="submit"], .btn-primary, .btn-secondary, .btn-detail, .btn-more, .filter-btn, .index-btn, .index-item {
+        min-height: var(--touch-target-size);
+        min-width: var(--touch-target-size);
+        padding: 12px 20px;
+        margin: var(--touch-target-spacing) 0;
+    }
+    
+    /* フォーム要素の最適化 */
+    input, select, textarea {
+        font-size: 16px; /* iOSでズームインを防止 */
+        min-height: var(--touch-target-size);
+        padding: 10px 15px;
+    }
+    
+    /* 検索ボックスの調整 */
+    .keyword-search, .search-box {
+        flex-direction: column;
+    }
+    
+    .keyword-search input, .search-box input {
+        width: 100%;
+        border-radius: var(--soft-radius-sm);
+        margin-bottom: 10px;
+    }
+    
+    .search-btn {
+        width: 100%;
+        border-radius: var(--soft-radius-sm);
+        padding: 12px 0;
+    }
+    
+    /* フィルターボタンの調整 */
+    .filter-buttons {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 10px;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .filter-btn {
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    
+    /* 目次アイテムの調整 */
+    .toc-items {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 10px;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .toc-item {
+        min-width: 150px;
+        flex-shrink: 0;
+    }
+}
+
+/* ===== セクションのモバイル調整 ===== */
+@media (max-width: 768px) {
+    .soft-section, .dictionary-section, .latest-projects, .featured-projects, .beginner-projects {
+        padding: 40px 0;
+    }
+    
+    .soft-gradient {
+        padding: 40px 0;
+    }
+    
+    .page-header {
+        text-align: center;
+    }
+    
+    .lead-text {
+        font-size: 1.1rem;
+    }
+    
+    /* カードレイアウトの調整 */
+    .project-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .project-card {
+        padding: 20px;
+    }
+    
+    /* リストレイアウトの調整 */
+    .project-item {
+        flex-direction: column;
+    }
+    
+    .project-date {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .project-content {
+        padding: 15px;
+    }
+    
+    /* 用語集の調整 */
+    .term-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .term-tags {
+        margin-top: 10px;
+    }
+    
+    .term-content {
+        padding: 20px;
+    }
+    
+    /* 索引の調整 */
+    .index-nav {
+        flex-direction: column;
+    }
+    
+    .kana-index, .abc-index {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .index-items {
+        justify-content: center;
+    }
+}
+
+/* ===== CTAとフッターのモバイル調整 ===== */
+@media (max-width: 768px) {
+    .cta-section {
+        padding: 40px 0;
+        text-align: center;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-buttons a {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-info, .footer-nav-column {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .footer-logo {
+        display: flex;
+        justify-content: center;
+    }
+    
+    /* 固定CTAの調整 */
+    .floating-cta {
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+    
+    .floating-btn {
+        border-radius: 0;
+        justify-content: center;
+        padding: 15px 0;
+    }
+}
+
+/* ===== スクロールとタッチ操作の改善 ===== */
+@media (max-width: 768px) {
+    /* スクロール可能な要素の改善 */
+    .filter-buttons, .toc-items, .index-nav {
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Firefox */
+    }
+    
+    .filter-buttons::-webkit-scrollbar, .toc-items::-webkit-scrollbar, .index-nav::-webkit-scrollbar {
+        display: none; /* Chrome, Safari */
+    }
+    
+    /* タップ時のハイライト抑制 */
+    a, button, input, select, textarea {
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+    }
+    
+    /* タップフィードバック */
+    a:active, button:active, .btn-primary:active, .btn-secondary:active, .btn-detail:active, .filter-btn:active, .index-btn:active, .index-item:active {
+        opacity: 0.7;
+    }
+}
+
+/* ===== 画像とメディアの最適化 ===== */
+@media (max-width: 768px) {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .term-illustration img {
+        max-width: 90%;
+    }
+    
+    .guide-image img {
+        max-width: 90%;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+/* ===== ページネーションのモバイル調整 ===== */
+@media (max-width: 576px) {
+    .pagination {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .pagination a {
+        margin: 5px;
+    }
+}
+
+/* ===== 初心者向けガイドのモバイル調整 ===== */
+@media (max-width: 768px) {
+    .guide-content {
+        flex-direction: column;
+    }
+    
+    .guide-image {
+        order: -1;
+        margin-bottom: 20px;
+    }
+    
+    .step-item {
+        flex-direction: column;
+    }
+    
+    .step-number {
+        margin-bottom: 10px;
+    }
+}
+
+/* ===== ポイントリストのモバイル調整 ===== */
+@media (max-width: 576px) {
+    .point-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .point-number {
+        margin-bottom: 10px;
+    }
+}
+
+/* ===== スクロールアップボタン ===== */
+.scroll-top {
+    position: fixed;
+    bottom: 80px; /* 固定CTAの上 */
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--soft-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 99;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-top.visible {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .scroll-top {
+        bottom: 70px;
+        right: 15px;
+    }
 }
