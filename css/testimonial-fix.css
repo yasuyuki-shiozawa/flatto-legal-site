@@ -1,0 +1,79 @@
+/* お客様の声テキストボックスのはみ出し修正用CSS */
+
+/* テスティモニアルカードの修正 */
+.testimonial-card {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    padding: 30px;
+    height: auto; /* 高さを自動調整に変更 */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    overflow: hidden; /* はみ出し防止 */
+    width: 100%; /* 幅を100%に設定 */
+    max-width: 100%; /* 最大幅を制限 */
+    box-sizing: border-box; /* ボックスサイズの計算方法を変更 */
+}
+
+/* テスティモニアルコンテンツの修正 */
+.testimonial-content {
+    font-style: italic;
+    margin-bottom: 20px;
+    position: relative;
+    padding: 0 20px;
+    word-wrap: break-word; /* 長い単語の折り返し */
+    overflow-wrap: break-word; /* 長い単語の折り返し（モダンブラウザ用） */
+}
+
+/* 引用符の位置調整 */
+.testimonial-content:before,
+.testimonial-content:after {
+    content: '"';
+    font-size: 2rem;
+    color: var(--secondary-color);
+    position: absolute;
+    line-height: 1;
+}
+
+.testimonial-content:before {
+    left: 0;
+    top: -10px;
+}
+
+.testimonial-content:after {
+    right: 0;
+    bottom: -20px;
+}
+
+/* 著者情報の修正 */
+.testimonial-author {
+    display: flex;
+    flex-direction: column; /* スマホ表示時は縦並びに */
+    align-items: flex-start;
+}
+
+.author-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.author-company {
+    color: var(--gray-color);
+    font-size: 0.9rem;
+}
+
+/* モバイル対応 */
+@media (max-width: 767px) {
+    .testimonial-card {
+        padding: 20px;
+    }
+    
+    .testimonial-content {
+        padding: 0 15px;
+        font-size: 0.95rem;
+    }
+    
+    .testimonial-content:before,
+    .testimonial-content:after {
+        font-size: 1.5rem;
+    }
+}

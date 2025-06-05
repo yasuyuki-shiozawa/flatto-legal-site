@@ -1,0 +1,77 @@
+# フッター分析結果（修正後）
+
+## index.html
+存在: True
+クラス: ['footer']
+
+## service.html
+存在: True
+クラス: ['footer']
+
+## contact.html
+存在: True
+クラス: ['footer']
+
+## flow.html
+存在: True
+クラス: ['footer']
+
+## cases.html
+存在: True
+クラス: ['footer']
+
+## knowhow.html
+存在: True
+クラス: ['footer']
+
+## about.html
+存在: True
+クラス: ['footer']
+
+## blog.html
+存在: True
+クラス: ['footer']
+
+## blog-post1.html
+存在: True
+クラス: ['footer']
+
+## flow-fixed.html
+存在: True
+クラス: ['footer']
+
+## index-fixed.html
+存在: True
+クラス: ['footer', 'bg-dark', 'text-white']
+
+## knowhow-fixed.html
+存在: True
+クラス: ['footer']
+
+## knowhow-test-sections.html
+存在: False
+
+## knowhow-enhanced.html
+存在: True
+クラス: ['footer']
+
+## cases-enhanced.html
+存在: True
+クラス: ['footer']
+
+## projects.html
+存在: True
+クラス: ['footer']
+
+## dictionary.html
+存在: True
+クラス: ['footer']
+
+## links.html
+存在: True
+クラス: ['footer']
+
+## links-fixed.html
+存在: True
+クラス: ['footer', 'bg-dark', 'text-white', 'py-5', 'mt-5']
+

@@ -1,0 +1,139 @@
+# ロゴ分析結果
+
+## index.html
+ロゴ画像数: 1
+画像 1:
+  ソース: images/logo-white.png
+  幅: 
+  高さ: 
+  スタイル: 
+
+## service.html
+ロゴ画像数: 1
+画像 1:
+  ソース: images/logo-white.png
+  幅: 
+  高さ: 
+  スタイル: 
+
+## contact.html
+ロゴ画像数: 1
+画像 1:
+  ソース: images/logo-white.png
+  幅: 
+  高さ: 
+  スタイル: 
+
+## flow.html
+ロゴ画像数: 1
+画像 1:
+  ソース: images/logo-white.png
+  幅: 
+  高さ: 
+  スタイル: 
+
+## cases.html
+ロゴ画像数: 1
+画像 1:
+  ソース: images/logo-white.png
+  幅: 
+  高さ: 
+  スタイル: 
+
+## knowhow.html
+ロゴ画像数: 1
+画像 1:
+  ソース: images/logo-white.png
+  幅: 
+  高さ: 
+  スタイル: 
+
+## about.html
+ロゴ画像数: 1
+画像 1:
+  ソース: images/logo-white.png
+  幅: 
+  高さ: 
+  スタイル: 
+
+## blog.html
+ロゴ画像数: 1
+画像 1:
+  ソース: images/logo.png
+  幅: 
+  高さ: 
+  スタイル: 
+
+## blog-post1.html
+ロゴ画像数: 1
+画像 1:
+  ソース: images/logo-white.png
+  幅: 
+  高さ: 
+  スタイル: 
+
+## flow-fixed.html
+ロゴ画像数: 1
+画像 1:
+  ソース: images/logo-white.png
+  幅: 
+  高さ: 
+  スタイル: 
+
+## index-fixed.html
+ロゴ画像数: 1
+画像 1:
+  ソース: images/logo-white.png
+  幅: 
+  高さ: 
+  スタイル: 
+
+## knowhow-fixed.html
+ロゴ画像数: 1
+画像 1:
+  ソース: images/logo-white.png
+  幅: 
+  高さ: 
+  スタイル: 
+
+## knowhow-test-sections.html
+ロゴ画像数: 0
+
+## knowhow-enhanced.html
+ロゴ画像数: 1
+画像 1:
+  ソース: images/logo-white.png
+  幅: 
+  高さ: 
+  スタイル: 
+
+## cases-enhanced.html
+ロゴ画像数: 1
+画像 1:
+  ソース: images/logo-white.png
+  幅: 
+  高さ: 
+  スタイル: 
+
+## projects.html
+ロゴ画像数: 1
+画像 1:
+  ソース: images/logo-white.png
+  幅: 
+  高さ: 
+  スタイル: 
+
+## dictionary.html
+ロゴ画像数: 1
+画像 1:
+  ソース: images/logo.png
+  幅: 
+  高さ: 
+  スタイル: 
+
+## links.html
+ロゴ画像数: 0
+
+## links-fixed.html
+ロゴ画像数: 0
+

@@ -1,0 +1,420 @@
+# フッター分析結果
+
+## index.html
+存在: True
+クラス: ['footer']
+サンプル: <footer class="footer">
+<div class="container">
+<div class="row">
+<div class="col-lg-4">
+<div class="footer-info">
+<img alt="ふらっと法務事務所" class="footer-logo" src="images/logo-white.png"/>
+<p>〒XXX-XXXX<br/>神奈川県横浜市○○区△△町X-X-X</p>
+<p>TEL: 045-XXX-XXXX</p>
+<p>営業時間: 平日9:00〜18:00</p>
+</div>
+</div>
+<div class="col-lg-8">
+<div class="row">
+<div class="col-md-4">
+<div class="footer-links">
+<h3>サイトマップ</h3>
+<ul>
+<li><a href="index.html">ホーム</a></li>
+<li><a href="service.html">サービス紹介</a></li>
+<li><a href="flo...
+
+## service.html
+存在: True
+クラス: ['footer']
+サンプル: <footer class="footer">
+<div class="container">
+<div class="row">
+<div class="col-lg-4">
+<div class="footer-info">
+<img alt="ふらっと法務事務所" class="footer-logo" src="images/logo-white.png"/>
+<p>〒XXX-XXXX<br/>神奈川県横浜市○○区△△町X-X-X</p>
+<p>TEL: 045-XXX-XXXX</p>
+<p>営業時間: 平日9:00〜18:00</p>
+</div>
+</div>
+<div class="col-lg-8">
+<div class="row">
+<div class="col-md-4">
+<div class="footer-links">
+<h3>サイトマップ</h3>
+<ul>
+<li><a href="index.html">ホーム</a></li>
+<li><a href="service.html">サービス紹介</a></li>
+<li><a href="flo...
+
+## contact.html
+存在: True
+クラス: ['footer']
+サンプル: <footer class="footer">
+<div class="container">
+<div class="row">
+<div class="col-lg-4">
+<div class="footer-info">
+<img alt="ふらっと法務事務所" class="footer-logo" src="images/logo-white.png"/>
+<p>〒XXX-XXXX<br/>神奈川県横浜市○○区△△町X-X-X</p>
+<p>TEL: 045-XXX-XXXX</p>
+<p>営業時間: 平日9:00〜18:00</p>
+</div>
+</div>
+<div class="col-lg-8">
+<div class="row">
+<div class="col-md-4">
+<h4 class="footer-title">サイトマップ</h4>
+<ul class="footer-links">
+<li><a href="index.html">ホーム</a></li>
+<li><a href="service.html">サービス紹介</a></li>
+<...
+
+## flow.html
+存在: True
+クラス: ['footer']
+サンプル: <footer class="footer">
+<div class="container">
+<div class="row">
+<div class="col-lg-4">
+<div class="footer-info">
+<img alt="ふらっと法務事務所" class="footer-logo" src="images/logo-white.png"/>
+<p>〒XXX-XXXX<br/>神奈川県横浜市○○区△△町X-X-X</p>
+<p>TEL: 045-XXX-XXXX</p>
+<p>営業時間: 平日9:00〜18:00</p>
+</div>
+</div>
+<div class="col-lg-8">
+<div class="row">
+<div class="col-md-4">
+<div class="footer-links">
+<h3>サイトマップ</h3>
+<ul>
+<li><a href="index.html">ホーム</a></li>
+<li><a href="service.html">サービス紹介</a></li>
+<li><a href="flo...
+
+## cases.html
+存在: True
+クラス: ['footer']
+サンプル: <footer class="footer">
+<div class="container">
+<div class="row">
+<div class="col-lg-4">
+<div class="footer-info">
+<img alt="ふらっと法務事務所" class="footer-logo" src="images/logo-white.png"/>
+<p>〒XXX-XXXX<br/>神奈川県横浜市○○区△△町X-X-X</p>
+<p>TEL: 045-XXX-XXXX</p>
+<p>営業時間: 平日9:00〜18:00</p>
+</div>
+</div>
+<div class="col-lg-8">
+<div class="row">
+<div class="col-md-4">
+<div class="footer-links">
+<h3>サイトマップ</h3>
+<ul>
+<li><a href="index.html">ホーム</a></li>
+<li><a href="service.html">サービス紹介</a></li>
+<li><a href="flo...
+
+## knowhow.html
+存在: True
+クラス: ['footer']
+サンプル: <footer class="footer">
+<div class="container">
+<div class="row">
+<div class="col-lg-4">
+<div class="footer-info">
+<img alt="ふらっと法務事務所" class="footer-logo" src="images/logo-white.png"/>
+<p>〒XXX-XXXX<br/>神奈川県横浜市○○区△△町X-X-X</p>
+<p>TEL: 045-XXX-XXXX</p>
+<p>営業時間: 平日9:00〜18:00</p>
+</div>
+</div>
+<div class="col-lg-8">
+<div class="row">
+<div class="col-md-4">
+<div class="footer-links">
+<h3>サイトマップ</h3>
+<ul>
+<li><a href="index.html">ホーム</a></li>
+<li><a href="service.html">サービス紹介</a></li>
+<li><a href="flo...
+
+## about.html
+存在: True
+クラス: ['footer']
+サンプル: <footer class="footer">
+<div class="container">
+<div class="row">
+<div class="col-lg-4">
+<div class="footer-info">
+<img alt="ふらっと法務事務所" class="footer-logo" src="images/logo-white.png"/>
+<p>〒XXX-XXXX<br/>神奈川県横浜市○○区△△町X-X-X</p>
+<p>TEL: 045-XXX-XXXX</p>
+<p>営業時間: 平日9:00〜18:00</p>
+</div>
+</div>
+<div class="col-lg-8">
+<div class="row">
+<div class="col-md-4">
+<div class="footer-links">
+<h3>サイトマップ</h3>
+<ul>
+<li><a href="index.html">ホーム</a></li>
+<li><a href="service.html">サービス紹介</a></li>
+<li><a href="flo...
+
+## blog.html
+存在: True
+クラス: ['footer']
+サンプル: <footer class="footer">
+<div class="container">
+<div class="row">
+<div class="col-lg-4">
+<div class="footer-info">
+<div class="footer-logo">
+<img alt="ふらっと法務事務所ロゴ" src="images/logo.png"/>
+</div>
+<div class="footer-contact">
+<p><i class="fas fa-map-marker-alt"></i> 〒123-4567<br/>東京都千代田区○○町1-2-3</p>
+<p><i class="fas fa-phone"></i> TEL: 03-1234-5678<br/><i class="far fa-clock"></i> 営業時間: 平日 9:00〜18:00</p>
+</div>
+</div>
+</div>
+<div class="col-lg-8">
+<div class="row">
+<div class="col-md-4">
+<div clas...
+
+## blog-post1.html
+存在: True
+クラス: ['footer']
+サンプル: <footer class="footer">
+<div class="container">
+<div class="row">
+<div class="col-lg-4">
+<div class="footer-info">
+<img alt="ふらっと法務事務所" class="footer-logo" src="images/logo-white.png"/>
+<p>〒XXX-XXXX<br/>神奈川県横浜市○○区△△町X-X-X</p>
+<p>TEL: 045-XXX-XXXX</p>
+<p>営業時間: 平日9:00〜18:00</p>
+</div>
+</div>
+<div class="col-lg-8">
+<div class="row">
+<div class="col-md-4">
+<div class="footer-links">
+<h3>サイトマップ</h3>
+<ul>
+<li><a href="index.html">ホーム</a></li>
+<li><a href="service.html">サービス紹介</a></li>
+<li><a href="flo...
+
+## flow-fixed.html
+存在: True
+クラス: ['footer']
+サンプル: <footer class="footer">
+<div class="container">
+<div class="row">
+<div class="col-lg-4">
+<div class="footer-info">
+<img alt="ふらっと法務事務所" class="footer-logo" src="images/logo-white.png"/>
+<p>〒XXX-XXXX<br/>神奈川県横浜市○○区△△町X-X-X</p>
+<p>TEL: 045-XXX-XXXX</p>
+<p>営業時間: 平日9:00〜18:00</p>
+</div>
+</div>
+<div class="col-lg-8">
+<div class="row">
+<div class="col-md-4">
+<div class="footer-links">
+<h3>サイトマップ</h3>
+<ul>
+<li><a href="index.html">ホーム</a></li>
+<li><a href="service.html">サービス紹介</a></li>
+<li><a href="flo...
+
+## index-fixed.html
+存在: True
+クラス: ['footer', 'bg-dark', 'text-white']
+サンプル: <footer class="footer bg-dark text-white">
+<div class="container">
+<div class="footer-top py-5">
+<div class="row">
+<div class="col-md-4">
+<div class="footer-info">
+<img alt="ふらっと法務事務所" class="footer-logo mb-3" src="images/logo-white.png"/>
+<p>入札サポートを専門とする行政書士法人です。入札参加資格取得から落札までをトータルサポートします。</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="footer-links">
+<h3 class="footer-heading">サイトマップ</h3>
+<ul class="footer-nav">
+<li><a href="index.html">ホーム</a></li>
+<li><a href="service.html">サービス</a></li...
+
+## knowhow-fixed.html
+存在: True
+クラス: ['footer']
+サンプル: <footer class="footer">
+<div class="container">
+<div class="row">
+<div class="col-lg-4">
+<div class="footer-info">
+<img alt="ふらっと法務事務所" class="footer-logo" src="images/logo-white.png"/>
+<p>〒XXX-XXXX<br/>神奈川県横浜市○○区△△町X-X-X</p>
+<p>TEL: 045-XXX-XXXX</p>
+<p>営業時間: 平日9:00〜18:00</p>
+</div>
+</div>
+<div class="col-lg-8">
+<div class="row">
+<div class="col-md-4">
+<div class="footer-links">
+<h3>サイトマップ</h3>
+<ul>
+<li><a href="index.html">ホーム</a></li>
+<li><a href="service.html">サービス紹介</a></li>
+<li><a href="flo...
+
+## knowhow-test-sections.html
+存在: False
+
+## knowhow-enhanced.html
+存在: True
+クラス: ['footer']
+サンプル: <footer class="footer">
+<div class="container">
+<div class="row">
+<div class="col-lg-4">
+<div class="footer-info">
+<img alt="ふらっと法務事務所" class="footer-logo" src="images/logo-white.png"/>
+<p>〒XXX-XXXX<br/>神奈川県横浜市○○区△△町X-X-X</p>
+<p>TEL: 045-XXX-XXXX</p>
+<p>営業時間: 平日9:00〜18:00</p>
+</div>
+</div>
+<div class="col-lg-8">
+<div class="row">
+<div class="col-md-4">
+<div class="footer-links">
+<h3>サイトマップ</h3>
+<ul>
+<li><a href="index.html">ホーム</a></li>
+<li><a href="service.html">サービス紹介</a></li>
+<li><a href="flo...
+
+## cases-enhanced.html
+存在: True
+クラス: ['footer']
+サンプル: <footer class="footer">
+<div class="container">
+<div class="row">
+<div class="col-lg-4">
+<div class="footer-info">
+<img alt="ふらっと法務事務所" class="footer-logo" src="images/logo-white.png"/>
+<p>〒XXX-XXXX<br/>神奈川県横浜市○○区△△町X-X-X</p>
+<p>TEL: 045-XXX-XXXX</p>
+<p>営業時間: 平日9:00〜18:00</p>
+</div>
+</div>
+<div class="col-lg-8">
+<div class="row">
+<div class="col-md-4">
+<div class="footer-links">
+<h3>サイトマップ</h3>
+<ul>
+<li><a href="index.html">ホーム</a></li>
+<li><a href="service.html">サービス紹介</a></li>
+<li><a href="flo...
+
+## projects.html
+存在: True
+クラス: ['footer']
+サンプル: <footer class="footer">
+<div class="container">
+<div class="row">
+<div class="col-lg-4">
+<div class="footer-info">
+<img alt="ふらっと法務事務所" class="footer-logo" src="images/logo-white.png"/>
+<p>〒XXX-XXXX<br/>神奈川県横浜市○○区△△町X-X-X</p>
+<p>TEL: 045-XXX-XXXX</p>
+<p>営業時間: 平日9:00〜18:00</p>
+</div>
+</div>
+<div class="col-lg-8">
+<div class="row">
+<div class="col-md-4">
+<div class="footer-links">
+<h3>サイトマップ</h3>
+<ul>
+<li><a href="index.html">ホーム</a></li>
+<li><a href="service.html">サービス紹介</a></li>
+<li><a href="flo...
+
+## dictionary.html
+存在: True
+クラス: ['footer']
+サンプル: <footer class="footer">
+<div class="container">
+<div class="row">
+<div class="col-lg-4">
+<div class="footer-info">
+<div class="footer-logo">
+<img alt="ふらっと法務事務所ロゴ" src="images/logo.png"/>
+</div>
+<div class="footer-contact">
+<p><i class="fas fa-map-marker-alt"></i> 〒123-4567<br/>東京都千代田区○○町1-2-3</p>
+<p><i class="fas fa-phone"></i> TEL: 03-1234-5678<br/><i class="far fa-clock"></i> 営業時間: 平日 9:00〜18:00</p>
+</div>
+</div>
+</div>
+<div class="col-lg-8">
+<div class="row">
+<div class="col-md-4">
+<div clas...
+
+## links.html
+存在: True
+クラス: ['footer', 'bg-dark', 'text-white', 'py-5', 'mt-5']
+サンプル: <footer class="footer bg-dark text-white py-5 mt-5">
+<div class="container">
+<div class="row">
+<div class="col-md-4 mb-4 mb-md-0">
+<h5>ふらっと法務事務所</h5>
+<p>入札サポートを専門とする行政書士法人です。<br/>入札参加資格取得から落札までをトータルサポートします。</p>
+<p>
+<i class="fas fa-map-marker-alt me-2"></i>横浜市○○区△△町X-X-X<br/>
+<i class="fas fa-phone me-2"></i>045-XXX-XXXX<br/>
+<i class="fas fa-envelope me-2"></i>info@example.com
+                    </p>
+</div>
+<div class="col-md-4 mb-4 mb-md-0">
+<h5>サイトマップ</h5>
+<ul class="list-unstyled">
+<li><a c...
+
+## links-fixed.html
+存在: True
+クラス: ['footer', 'bg-dark', 'text-white', 'py-5', 'mt-5']
+サンプル: <footer class="footer bg-dark text-white py-5 mt-5">
+<div class="container">
+<div class="row">
+<div class="col-md-4 mb-4 mb-md-0">
+<h5>ふらっと法務事務所</h5>
+<p>入札サポートを専門とする行政書士法人です。<br/>入札参加資格取得から落札までをトータルサポートします。</p>
+<p>
+<i class="fas fa-map-marker-alt me-2"></i>横浜市○○区△△町X-X-X<br/>
+<i class="fas fa-phone me-2"></i>045-XXX-XXXX<br/>
+<i class="fas fa-envelope me-2"></i>info@example.com
+                    </p>
+</div>
+<div class="col-md-4 mb-4 mb-md-0">
+<h5>サイトマップ</h5>
+<ul class="list-unstyled">
+<li><a c...
+
