@@ -6,11 +6,52 @@
     <title>入札用語集 | ふらっと法務事務所 - 入札サポート専門サイト</title>
     <meta name="description" content="ふらっと法務事務所の入札用語集ページです。入札に関する専門用語をわかりやすく解説しています。">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/mobile-fixes.css">
-    <!-- 強制適用版ヘッダー修正用CSS -->
-    <link rel="stylesheet" href="css/header-fix-important.css">
-    <!-- 最小限の柔らかいデザイン用のCSS -->
     <link rel="stylesheet" href="css/soft-theme-minimal.css">
+    <link rel="stylesheet" href="css/mobile-fixes.css">
+    <style>
+    /* インラインでヘッダー修正用のスタイルを追加 */
+    header .logo img {
+        max-height: 60px !important;
+        width: auto !important;
+    }
+    
+    header .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+    
+    /* ナビゲーションメニューのスタイル修正 */
+    header .pc-nav {
+        display: none;
+    }
+    
+    @media (min-width: 992px) {
+        header .pc-nav {
+            display: block;
+        }
+        
+        header .menu-btn {
+            display: none;
+        }
+    }
+    
+    @media (max-width: 991px) {
+        header .sp-nav {
+            display: none;
+        }
+        
+        header .menu-btn {
+            display: block;
+        }
+    }
+    
+    /* メニューボタンが押された時のスタイル */
+    header .sp-nav.active {
+        display: block;
+    }
+    </style>
     <!-- Schema.org構造化データ -->
     <script type="application/ld+json">
     {
@@ -339,72 +380,16 @@
             </div>
         </section>
 
-        <!-- 初心者向けガイドセクション -->
-        <section class="section-padding">
-            <div class="container">
-                <h2 class="section-title">入札初心者のための基礎知識</h2>
-                <p class="mb-4">入札の基本的な流れと押さえておくべきポイントをご紹介します</p>
-                
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="beginner-guide">
-                            <div class="step-item">
-                                <div class="step-header">
-                                    <span class="step-number">STEP 1</span>
-                                    <h3>入札参加資格の取得</h3>
-                                </div>
-                                <div class="step-content">
-                                    <p>まずは自治体や官公庁の入札に参加するための資格を取得しましょう。多くの場合、定期受付と随時受付があります。</p>
-                                    <ul>
-                                        <li>必要書類：登記簿謄本、納税証明書、財務諸表、技術者証明など</li>
-                                        <li>申請先：参加したい自治体や官公庁の契約担当部署</li>
-                                        <li>有効期間：通常2〜3年間（自治体により異なる）</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <div class="step-item mt-4">
-                                <div class="step-header">
-                                    <span class="step-number">STEP 2</span>
-                                    <h3>入札情報の収集</h3>
-                                </div>
-                                <div class="step-content">
-                                    <p>各自治体や官公庁のウェブサイト、官報、入札情報サービスなどから、入札情報を定期的にチェックします。</p>
-                                    <ul>
-                                        <li>チェックポイント：案件内容、予定価格、参加資格要件、入札方式、提出書類、締切日</li>
-                                        <li>情報源：自治体ホームページ、官公庁調達サイト、入札情報サービス</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <div class="step-item mt-4">
-                                <div class="step-header">
-                                    <span class="step-number">STEP 3</span>
-                                    <h3>入札書類の作成・提出</h3>
-                                </div>
-                                <div class="step-content">
-                                    <p>入札公告や仕様書をよく読み、必要な書類を作成して提出します。</p>
-                                    <ul>
-                                        <li>主な書類：入札書、委任状、誓約書、提案書、工程表、見積内訳書など</li>
-                                        <li>注意点：提出期限の厳守、書類の不備・記載漏れの防止、押印の確認</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- CTAセクション -->
-        <section class="section-padding bg-light">
+        <section class="section-padding">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <h2 class="section-title text-center">入札でお困りですか？</h2>
                         <p>ふらっと法務事務所では、入札書類の作成から提出までトータルサポートいたします。<br>初めての方でも安心してご相談ください。</p>
                         <div class="mt-4">
-                            <a href="contact.html" class="btn btn-primary">無料相談する</a>
+                            <a href="contact.html" class="btn btn-primary me-3">無料相談する</a>
+                            <a href="service.html" class="btn btn-outline-primary">サービス内容を見る</a>
                         </div>
                     </div>
                 </div>
@@ -478,5 +463,14 @@
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+    // ハンバーガーメニューの動作を修正
+    $(document).ready(function() {
+        $('.menu-btn').on('click', function() {
+            $(this).toggleClass('active');
+            $('.sp-nav').toggleClass('active');
+        });
+    });
+    </script>
 </body>
 </html>
