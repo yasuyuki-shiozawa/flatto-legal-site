@@ -1,0 +1,28 @@
+/* アイコン表示修正用CSS */
+
+/* リンク集ページのアイコン表示を修正 */
+.links-section .link-item .img-fluid {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    max-width: 80px !important;
+    width: 80px !important;
+    height: auto !important;
+    z-index: 1 !important;
+    position: relative !important;
+}
+
+/* アイコンの親要素の表示を確保 */
+.links-section .link-item .col-md-2 {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    min-height: 80px !important;
+}
+
+/* 画像の背景を明確に */
+.links-section .link-item img {
+    background-color: transparent !important;
+    padding: 5px !important;
+    border-radius: 5px !important;
+}
