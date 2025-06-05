@@ -1,0 +1,10 @@
+/* プライバシーマーク用スタイル */
+.privacy-mark-container {
+    margin-top: 15px;
+}
+
+.privacy-mark {
+    max-width: 80px;
+    height: auto;
+    display: block;
+}
