@@ -1,0 +1,45 @@
+/* 画像表示修正用CSS */
+
+/* ロゴ画像のサイズ修正 */
+header .logo img {
+    max-height: 60px !important;
+    width: auto !important;
+}
+
+/* フッターロゴのサイズ修正 */
+.footer-logo {
+    max-height: 50px !important;
+    width: auto !important;
+    display: block !important;
+}
+
+/* 画像の表示を強制 */
+img {
+    display: inline-block !important;
+    max-width: 100% !important;
+}
+
+/* 案件カード内の画像表示修正 */
+.project-card img, 
+.case-card img, 
+.testimonial-card img {
+    display: block !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin-bottom: 15px !important;
+}
+
+/* ヒーロー画像の表示修正 */
+.hero-image img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+}
+
+/* アイコン画像の表示修正 */
+.feature-icon img,
+.service-icon img {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    display: inline-block !important;
+}
