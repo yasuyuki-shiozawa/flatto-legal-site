@@ -1,45 +1,121 @@
 /* 画像表示修正用CSS */
-
-/* ロゴ画像のサイズ修正 */
-header .logo img {
-    max-height: 60px !important;
-    width: auto !important;
-}
-
-/* フッターロゴのサイズ修正 */
-.footer-logo {
-    max-height: 50px !important;
-    width: auto !important;
-    display: block !important;
-}
-
-/* 画像の表示を強制 */
-img {
-    display: inline-block !important;
-    max-width: 100% !important;
-}
-
-/* 案件カード内の画像表示修正 */
-.project-card img, 
-.case-card img, 
-.testimonial-card img {
-    display: block !important;
-    max-width: 100% !important;
-    height: auto !important;
-    margin-bottom: 15px !important;
-}
-
-/* ヒーロー画像の表示修正 */
-.hero-image img {
-    width: 100% !important;
-    height: auto !important;
-    display: block !important;
-}
-
-/* アイコン画像の表示修正 */
 .feature-icon img,
-.service-icon img {
-    max-width: 100% !important;
-    max-height: 100% !important;
-    display: inline-block !important;
+.service-icon img,
+.step-icon img,
+.industry-icon img,
+.knowhow-icon img,
+.case-image img,
+.staff-image img,
+.blog-card-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* セクション間の余白を統一 */
+.section {
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  margin-bottom: 2rem;
+}
+
+/* 見出しと本文の間隔を統一 */
+h2, h3, h4, h5, h6 {
+  margin-bottom: 1.5rem;
+}
+
+/* リストアイテムのインデントを統一 */
+ul, ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* カード間の余白を統一 */
+.card {
+  margin-bottom: 2rem;
+}
+
+/* テーブルのレイアウトを修正 */
+table {
+  width: 100%;
+  margin-bottom: 2rem;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.75rem;
+  border: 1px solid #dee2e6;
+}
+
+/* モバイル表示時のレスポンシブ対応強化 */
+@media (max-width: 768px) {
+  .row {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  
+  [class*="col-"] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .step-content {
+    margin-top: 1rem;
+  }
+}
+
+/* FAQアコーディオンの修正 */
+.accordion-header {
+  position: relative;
+  padding-right: 2rem;
+}
+
+.accordion-header::after {
+  content: '+';
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.accordion-header.active::after {
+  content: '-';
+}
+
+/* 索引ナビゲーションのレスポンシブ対応 */
+.dictionary-index {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.dictionary-index a {
+  margin: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+}
+
+/* 用語と説明文の間隔を調整 */
+.term {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.definition {
+  margin-bottom: 1.5rem;
 }
