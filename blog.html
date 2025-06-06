@@ -3,12 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ふらっと法務事務所 - 入札サポート専門サイト</title>
-    <meta name="description" content="ふらっと法務事務所の入札サポート専門サイトです。入札参加資格の取得から書類作成、価格設定まで、トータルサポートいたします。">
+    <title>案件紹介 | ふらっと法務事務所 - 入札サポート専門サイト</title>
+    <meta name="description" content="ふらっと法務事務所の入札案件紹介ページです。最新の入札案件情報を業種別、地域別、予算規模別にご紹介しています。">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/soft-theme-minimal.css">
     <link rel="stylesheet" href="css/mobile-fixes.css">
     <link rel="stylesheet" href="css/image-fix.css">
+    <!-- Schema.org構造化データ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "headline": "入札案件紹介ブログ",
+      "description": "最新の入札案件情報を業種別、地域別、予算規模別にご紹介しています。",
+      "publisher": {
+        "@type": "Organization",
+        "name": "ふらっと法務事務所",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://yasuyuki-shiozawa.github.io/flatto-legal-site/images/logo.png"
+        }
+      }
+    }
+    </script>
 </head>
 <body>
     <!-- ヘッダー -->
@@ -50,7 +67,220 @@
     </header>
 
     <!-- メインコンテンツ -->
+    <main>
+        <!-- ヒーローセクション -->
+        <section class="page-header soft-gradient">
+            <div class="container">
+                <h1>案件紹介</h1>
+                <p class="lead-text">最新の入札案件情報をご紹介します</p>
+                <div class="page-intro">
+                    <p>官公庁の入札案件を探すのは大変な作業です。ふらっと法務事務所では、<span class="highlight">あなたの会社に合った案件</span>を厳選してご紹介します。</p>
+                </div>
+            </div>
+        </section>
 
+        <!-- 目次セクション（モバイルでも見やすい） -->
+        <section class="toc-section">
+            <div class="container">
+                <div class="toc-container">
+                    <h2 class="toc-title">このページの目次</h2>
+                    <div class="toc-items">
+                        <a href="#search" class="toc-item">
+                            <div class="toc-icon"><img src="images/icon-search.png" alt="検索"></div>
+                            <span>案件を探す</span>
+                        </a>
+                        <a href="#featured" class="toc-item">
+                            <div class="toc-icon"><img src="images/icon-star.png" alt="注目"></div>
+                            <span>注目の案件</span>
+                        </a>
+                        <a href="#latest" class="toc-item">
+                            <div class="toc-icon"><img src="images/icon-list.png" alt="一覧"></div>
+                            <span>最新の案件一覧</span>
+                        </a>
+                        <a href="#beginner" class="toc-item">
+                            <div class="toc-icon"><img src="images/icon-beginner.png" alt="初心者"></div>
+                            <span>初めての方向け</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 案件検索セクション -->
+        <section id="search" class="blog-search soft-section">
+            <div class="container">
+                <h2 class="section-title with-icon">
+                    <img src="images/icon-search.png" alt="検索" class="section-icon">
+                    案件を探す
+                </h2>
+                <div class="search-filters">
+                    <div class="filter-group">
+                        <h3 class="filter-title">業種別</h3>
+                        <ul class="filter-buttons">
+                            <li><a href="#" class="filter-btn">建設業</a></li>
+                            <li><a href="#" class="filter-btn">IT・情報通信</a></li>
+                            <li><a href="#" class="filter-btn">物品・備品</a></li>
+                            <li><a href="#" class="filter-btn">サービス</a></li>
+                            <li><a href="#" class="filter-btn">その他</a></li>
+                        </ul>
+                    </div>
+                    <div class="filter-group">
+                        <h3 class="filter-title">地域別</h3>
+                        <ul class="filter-buttons">
+                            <li><a href="#" class="filter-btn">北海道・東北</a></li>
+                            <li><a href="#" class="filter-btn">関東</a></li>
+                            <li><a href="#" class="filter-btn">中部</a></li>
+                            <li><a href="#" class="filter-btn">近畿</a></li>
+                            <li><a href="#" class="filter-btn">中国・四国</a></li>
+                            <li><a href="#" class="filter-btn">九州・沖縄</a></li>
+                        </ul>
+                    </div>
+                    <div class="filter-group">
+                        <h3 class="filter-title">予算規模</h3>
+                        <ul class="filter-buttons">
+                            <li><a href="#" class="filter-btn">100万円未満</a></li>
+                            <li><a href="#" class="filter-btn">100万円〜500万円</a></li>
+                            <li><a href="#" class="filter-btn">500万円〜1,000万円</a></li>
+                            <li><a href="#" class="filter-btn">1,000万円以上</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="keyword-search">
+                    <input type="text" placeholder="キーワードを入力">
+                    <button type="button" class="search-btn">検索</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 注目の案件セクション -->
+        <section id="featured" class="featured-projects">
+            <div class="container">
+                <h2 class="section-title with-icon">
+                    <img src="images/icon-star.png" alt="注目" class="section-icon">
+                    注目の案件
+                </h2>
+                <div class="project-cards">
+                    <!-- 案件カード1 -->
+                    <div class="project-card">
+                        <div class="project-category">建設業</div>
+                        <h3>市立図書館改修工事</h3>
+                        <div class="project-meta">
+                            <span class="location"><i class="icon-location"></i>東京都</span>
+                            <span class="budget"><i class="icon-money"></i>予算: 約2,500万円</span>
+                        </div>
+                        <p>市立中央図書館の内装改修および設備更新工事。バリアフリー対応と省エネ設備の導入が主な目的です。</p>
+                        <div class="project-dates">
+                            <span><i class="icon-calendar"></i>公示日: 2025/06/01</span>
+                            <span><i class="icon-clock"></i>締切日: 2025/06/15</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn-detail">詳細を見る</a>
+                        </div>
+                    </div>
+                    
+                    <!-- 案件カード2 -->
+                    <div class="project-card">
+                        <div class="project-category">IT・情報通信</div>
+                        <h3>自治体向けDX推進支援業務</h3>
+                        <div class="project-meta">
+                            <span class="location"><i class="icon-location"></i>大阪府</span>
+                            <span class="budget"><i class="icon-money"></i>予算: 約1,800万円</span>
+                        </div>
+                        <p>自治体業務のデジタル化推進に関するコンサルティングおよびシステム導入支援業務。住民サービスの向上を目指します。</p>
+                        <div class="project-dates">
+                            <span><i class="icon-calendar"></i>公示日: 2025/05/28</span>
+                            <span><i class="icon-clock"></i>締切日: 2025/06/18</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn-detail">詳細を見る</a>
+                        </div>
+                    </div>
+                    
+                    <!-- 案件カード3 -->
+                    <div class="project-card">
+                        <div class="project-category">物品・備品</div>
+                        <h3>小学校教育用タブレット端末調達</h3>
+                        <div class="project-meta">
+                            <span class="location"><i class="icon-location"></i>福岡県</span>
+                            <span class="budget"><i class="icon-money"></i>予算: 約1,200万円</span>
+                        </div>
+                        <p>市内小学校向け教育用タブレット端末300台の調達および初期設定業務。GIGAスクール構想に基づく整備事業です。</p>
+                        <div class="project-dates">
+                            <span><i class="icon-calendar"></i>公示日: 2025/05/30</span>
+                            <span><i class="icon-clock"></i>締切日: 2025/06/20</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn-detail">詳細を見る</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 初めての方向けセクション -->
+        <section id="beginner" class="beginner-projects">
+            <div class="container">
+                <h2 class="section-title with-icon">
+                    <img src="images/icon-beginner.png" alt="初心者" class="section-icon">
+                    初めての方におすすめの案件
+                </h2>
+                <div class="section-intro-box">
+                    <p class="section-intro">入札初心者の方でも参加しやすい案件をピックアップしています。比較的参入障壁が低く、経験を積むのに適した案件です。</p>
+                </div>
+                <div class="project-cards">
+                    <!-- 初心者向け案件1 -->
+                    <div class="project-card beginner">
+                        <div class="beginner-badge">初心者向け</div>
+                        <div class="project-category">物品・備品</div>
+                        <h3>事務用品一式納入</h3>
+                        <div class="project-meta">
+                            <span class="location"><i class="icon-location"></i>埼玉県</span>
+                            <span class="budget"><i class="icon-money"></i>予算: 約150万円</span>
+                        </div>
+                        <p>市役所で使用する事務用品（文具、用紙類等）の納入業務。年間契約の可能性あり。</p>
+                        <div class="project-dates">
+                            <span><i class="icon-calendar"></i>公示日: 2025/06/01</span>
+                            <span><i class="icon-clock"></i>締切日: 2025/06/15</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn-detail">詳細を見る</a>
+                        </div>
+                    </div>
+                    
+                    <!-- 初心者向け案件2 -->
+                    <div class="project-card beginner">
+                        <div class="beginner-badge">初心者向け</div>
+                        <div class="project-category">サービス</div>
+                        <h3>公園清掃業務委託</h3>
+                        <div class="project-meta">
+                            <span class="location"><i class="icon-location"></i>千葉県</span>
+                            <span class="budget"><i class="icon-money"></i>予算: 約300万円/年</span>
+                        </div>
+                        <p>市内公園5箇所の定期清掃および管理業務。特殊な資格や機材を必要としない基本的な業務です。</p>
+                        <div class="project-dates">
+                            <span><i class="icon-calendar"></i>公示日: 2025/05/29</span>
+                            <span><i class="icon-clock"></i>締切日: 2025/06/19</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn-detail">詳細を見る</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section soft-gradient">
+            <div class="container">
+                <h2>入札でお困りですか？</h2>
+                <p>ふらっと法務事務所では、入札書類の作成から提出までトータルサポートいたします。<br>
+                初めての方でも安心してご相談ください。</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-primary">無料相談する</a>
+                    <a href="service.html" class="btn-secondary">サービス内容を見る</a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- フッター -->
