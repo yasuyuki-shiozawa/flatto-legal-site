@@ -3,12 +3,445 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ふらっと法務事務所 - 入札サポート専門サイト</title>
-    <meta name="description" content="ふらっと法務事務所の入札サポート専門サイトです。入札参加資格の取得から書類作成、価格設定まで、トータルサポートいたします。">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/soft-theme-minimal.css">
-    <link rel="stylesheet" href="css/mobile-fixes.css">
+    <title>成功事例 | ふらっと法務事務所 入札サポート専門サイト</title>
+    <meta name="description" content="ふらっと法務事務所が支援した入札の成功事例をご紹介。初めての入札参加から大型案件の落札まで、様々な業種・規模の事例を通して入札成功のポイントを解説します。">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/image-fix.css">
+    <style>
+        /* 基本スタイル */
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* ヘッダースタイル */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo img {
+            height: 50px;
+        }
+        
+        .pc-nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .pc-nav li {
+            margin-left: 20px;
+        }
+        
+        .pc-nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        
+        .pc-nav a:hover::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #4A90E2;
+            bottom: 0;
+            left: 0;
+        }
+        
+        /* メインコンテンツスタイル */
+        main {
+            margin-top: 80px;
+            padding-bottom: 50px;
+        }
+        
+        .page-title-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .page-subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+        }
+        
+        .section-padding {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .case-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 30px;
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .case-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .case-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .case-icon {
+            background-color: #e3f2fd;
+            color: #1976d2;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .case-title {
+            font-size: 1.5rem;
+            color: #3498db;
+            margin-bottom: 5px;
+        }
+        
+        .case-subtitle {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+        
+        .case-content {
+            margin-bottom: 20px;
+        }
+        
+        .case-point {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        
+        .case-point h4 {
+            font-size: 1.1rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .case-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        
+        .case-tag {
+            display: inline-block;
+            background-color: #e3f2fd;
+            color: #1976d2;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .bg-light {
+            background-color: #f8f9fa;
+        }
+        
+        /* フィルターセクション */
+        .filter-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        
+        .filter-title {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .filter-group {
+            margin-bottom: 15px;
+        }
+        
+        .filter-label {
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .filter-option {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 20px;
+            padding: 5px 15px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .filter-option:hover, .filter-option.active {
+            background-color: #e3f2fd;
+            border-color: #1976d2;
+            color: #1976d2;
+        }
+        
+        /* CTAセクション */
+        .cta-section {
+            background-color: #f8f9fa;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .cta-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .cta-text {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        /* フッタースタイル */
+        .footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-logo {
+            height: 40px;
+            margin-bottom: 15px;
+        }
+        
+        .footer-info p {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #3498db;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links a:hover {
+            color: #3498db;
+        }
+        
+        .footer-bottom {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .footer-copyright {
+            font-size: 0.8rem;
+        }
+        
+        .footer-policy-links {
+            text-align: right;
+        }
+        
+        .footer-policy-links a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 0.8rem;
+        }
+        
+        .separator {
+            margin: 0 10px;
+        }
+        
+        /* モバイル対応 */
+        .menu-btn {
+            display: none;
+            width: 30px;
+            height: 20px;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .menu-btn span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #333;
+            position: absolute;
+            transition: all 0.3s;
+        }
+        
+        .menu-btn span:nth-child(1) {
+            top: 0;
+        }
+        
+        .menu-btn span:nth-child(2) {
+            top: 9px;
+        }
+        
+        .menu-btn span:nth-child(3) {
+            bottom: 0;
+        }
+        
+        .sp-nav {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 80px);
+            background-color: rgba(255,255,255,0.95);
+            z-index: 999;
+            overflow-y: auto;
+        }
+        
+        .sp-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .sp-nav li {
+            border-bottom: 1px solid #eee;
+        }
+        
+        .sp-nav a {
+            display: block;
+            padding: 15px 30px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 991px) {
+            .pc-nav {
+                display: none;
+            }
+            
+            .menu-btn {
+                display: block;
+            }
+            
+            .menu-btn.active span:nth-child(1) {
+                transform: rotate(45deg);
+                top: 9px;
+            }
+            
+            .menu-btn.active span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .menu-btn.active span:nth-child(3) {
+                transform: rotate(-45deg);
+                bottom: 9px;
+            }
+            
+            .sp-nav.active {
+                display: block;
+            }
+            
+            .header-container {
+                padding: 15px 20px;
+            }
+            
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .footer-policy-links {
+                text-align: left;
+                margin-top: 15px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- ヘッダー -->
@@ -36,35 +469,314 @@
                 <span></span>
             </div>
         </div>
-        <nav class="sp-nav">
-            <ul>
-                <li><a href="index.html">ホーム</a></li>
-                <li><a href="service.html">サービス</a></li>
-                <li><a href="flow.html">ご利用の流れ</a></li>
-                <li><a href="knowhow.html">入札ノウハウ</a></li>
-                <li><a href="cases.html">成功事例</a></li>
-                <li><a href="blog.html">案件紹介</a></li>
-                <li><a href="contact.html">お問い合わせ</a></li>
-            </ul>
-        </nav>
     </header>
+    
+    <!-- モバイルナビゲーション -->
+    <nav class="sp-nav">
+        <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="service.html">サービス</a></li>
+            <li><a href="flow.html">ご利用の流れ</a></li>
+            <li><a href="knowhow.html">入札ノウハウ</a></li>
+            <li><a href="cases.html">成功事例</a></li>
+            <li><a href="blog.html">案件紹介</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+    </nav>
 
     <!-- メインコンテンツ -->
+    <main>
+        <!-- ページタイトルセクション -->
+        <section class="page-title-section">
+            <div class="container">
+                <h1 class="page-title">成功事例</h1>
+                <p class="page-subtitle">様々な業種・規模の入札成功事例をご紹介</p>
+            </div>
+        </section>
 
+        <!-- フィルターセクション -->
+        <section class="section-padding pt-4 pb-2">
+            <div class="container">
+                <div class="filter-section">
+                    <h2 class="filter-title">事例を絞り込む</h2>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="filter-group">
+                                <span class="filter-label">業種</span>
+                                <div class="filter-options">
+                                    <span class="filter-option active">すべて</span>
+                                    <span class="filter-option">建設業</span>
+                                    <span class="filter-option">製造業</span>
+                                    <span class="filter-option">IT・通信</span>
+                                    <span class="filter-option">サービス業</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="filter-group">
+                                <span class="filter-label">規模</span>
+                                <div class="filter-options">
+                                    <span class="filter-option active">すべて</span>
+                                    <span class="filter-option">小規模案件</span>
+                                    <span class="filter-option">中規模案件</span>
+                                    <span class="filter-option">大規模案件</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="filter-group">
+                                <span class="filter-label">発注元</span>
+                                <div class="filter-options">
+                                    <span class="filter-option active">すべて</span>
+                                    <span class="filter-option">国</span>
+                                    <span class="filter-option">地方自治体</span>
+                                    <span class="filter-option">独立行政法人</span>
+                                    <span class="filter-option">民間企業</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 成功事例セクション -->
+        <section class="section-padding pt-2">
+            <div class="container">
+                <div class="row">
+                    <!-- 事例1 -->
+                    <div class="col-lg-6">
+                        <div class="case-card">
+                            <div class="case-header">
+                                <div class="case-icon">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <div>
+                                    <h3 class="case-title">初めての入札で落札成功</h3>
+                                    <p class="case-subtitle">建設業 / 小規模案件 / 地方自治体</p>
+                                </div>
+                            </div>
+                            <div class="case-content">
+                                <p>創業3年目の建設会社様。これまで下請け工事が中心でしたが、自社での元請け工事を増やすため、初めて公共入札に挑戦されました。入札参加資格の取得から書類作成、価格設定まで全面的にサポートし、初めての入札で見事落札に成功されました。</p>
+                                <div class="case-point">
+                                    <h4>成功のポイント</h4>
+                                    <ul>
+                                        <li>入札参加資格の早期取得支援</li>
+                                        <li>過去の落札事例分析による適切な価格設定</li>
+                                        <li>提出書類の徹底したチェック体制</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="case-meta">
+                                <div>
+                                    <span class="case-tag">初めての入札</span>
+                                    <span class="case-tag">建設業</span>
+                                </div>
+                                <div>2024年3月</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 事例2 -->
+                    <div class="col-lg-6">
+                        <div class="case-card">
+                            <div class="case-header">
+                                <div class="case-icon">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <div>
+                                    <h3 class="case-title">総合評価方式で高得点獲得</h3>
+                                    <p class="case-subtitle">IT業 / 中規模案件 / 国</p>
+                                </div>
+                            </div>
+                            <div class="case-content">
+                                <p>システム開発会社様。総合評価方式の入札において、技術提案書の作成に苦戦されていました。当事務所が提案書の構成から内容の充実化まで支援し、技術点で高得点を獲得。結果、価格点との合計で1位となり落札されました。</p>
+                                <div class="case-point">
+                                    <h4>成功のポイント</h4>
+                                    <ul>
+                                        <li>発注者ニーズの徹底分析</li>
+                                        <li>自社の強みを活かした提案書作成</li>
+                                        <li>過去の評価項目分析による的確な対応</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="case-meta">
+                                <div>
+                                    <span class="case-tag">総合評価方式</span>
+                                    <span class="case-tag">IT業</span>
+                                </div>
+                                <div>2023年11月</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 事例3 -->
+                    <div class="col-lg-6">
+                        <div class="case-card">
+                            <div class="case-header">
+                                <div class="case-icon">
+                                    <i class="fas fa-industry"></i>
+                                </div>
+                                <div>
+                                    <h3 class="case-title">大型案件の落札に成功</h3>
+                                    <p class="case-subtitle">製造業 / 大規模案件 / 独立行政法人</p>
+                                </div>
+                            </div>
+                            <div class="case-content">
+                                <p>精密機器製造会社様。これまで中小規模の案件は受注していましたが、大型案件への挑戦を検討されていました。JV（共同企業体）の組成から入札戦略の立案まで支援し、初めての大型案件落札に成功されました。</p>
+                                <div class="case-point">
+                                    <h4>成功のポイント</h4>
+                                    <ul>
+                                        <li>最適なJVパートナー選定支援</li>
+                                        <li>JV協定書作成と役割分担の明確化</li>
+                                        <li>大型案件特有のリスク分析と対策</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="case-meta">
+                                <div>
+                                    <span class="case-tag">大型案件</span>
+                                    <span class="case-tag">JV</span>
+                                    <span class="case-tag">製造業</span>
+                                </div>
+                                <div>2023年8月</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 事例4 -->
+                    <div class="col-lg-6">
+                        <div class="case-card">
+                            <div class="case-header">
+                                <div class="case-icon">
+                                    <i class="fas fa-broom"></i>
+                                </div>
+                                <div>
+                                    <h3 class="case-title">電子入札で連続受注</h3>
+                                    <p class="case-subtitle">サービス業 / 小規模案件 / 地方自治体</p>
+                                </div>
+                            </div>
+                            <div class="case-content">
+                                <p>清掃会社様。電子入札システムの操作に不安があり、参加を躊躇されていました。電子証明書の取得から実際の入札操作まで丁寧にサポートし、3件連続で受注に成功されました。</p>
+                                <div class="case-point">
+                                    <h4>成功のポイント</h4>
+                                    <ul>
+                                        <li>電子入札システムの操作トレーニング</li>
+                                        <li>入札スケジュール管理の徹底</li>
+                                        <li>地域要件を活かした案件選定</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="case-meta">
+                                <div>
+                                    <span class="case-tag">電子入札</span>
+                                    <span class="case-tag">サービス業</span>
+                                </div>
+                                <div>2024年1月</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 事例5 -->
+                    <div class="col-lg-6">
+                        <div class="case-card">
+                            <div class="case-header">
+                                <div class="case-icon">
+                                    <i class="fas fa-truck"></i>
+                                </div>
+                                <div>
+                                    <h3 class="case-title">失格から学び再挑戦で成功</h3>
+                                    <p class="case-subtitle">運送業 / 中規模案件 / 地方自治体</p>
+                                </div>
+                            </div>
+                            <div class="case-content">
+                                <p>運送会社様。初回の入札では書類不備で失格となりましたが、原因分析と対策を行い、再挑戦で見事落札されました。失敗を教訓に、チェック体制を強化し、その後も安定して受注を重ねています。</p>
+                                <div class="case-point">
+                                    <h4>成功のポイント</h4>
+                                    <ul>
+                                        <li>失格原因の徹底分析</li>
+                                        <li>書類提出前の複数人チェック体制構築</li>
+                                        <li>入札実施手順の標準化</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="case-meta">
+                                <div>
+                                    <span class="case-tag">再挑戦</span>
+                                    <span class="case-tag">運送業</span>
+                                </div>
+                                <div>2023年10月</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 事例6 -->
+                    <div class="col-lg-6">
+                        <div class="case-card">
+                            <div class="case-header">
+                                <div class="case-icon">
+                                    <i class="fas fa-desktop"></i>
+                                </div>
+                                <div>
+                                    <h3 class="case-title">プロポーザル方式で逆転勝利</h3>
+                                    <p class="case-subtitle">IT業 / 中規模案件 / 地方自治体</p>
+                                </div>
+                            </div>
+                            <div class="case-content">
+                                <p>Webデザイン会社様。プロポーザル方式の入札で、大手企業との競争となりました。当事務所が提案書作成とプレゼンテーション対策を支援し、地域密着型の強みを活かした提案で大手を抑えて選定されました。</p>
+                                <div class="case-point">
+                                    <h4>成功のポイント</h4>
+                                    <ul>
+                                        <li>地域特性を活かした独自提案</li>
+                                        <li>プレゼンテーション技術の向上</li>
+                                        <li>質疑応答の徹底準備</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="case-meta">
+                                <div>
+                                    <span class="case-tag">プロポーザル</span>
+                                    <span class="case-tag">IT業</span>
+                                </div>
+                                <div>2023年12月</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- もっと見るボタン -->
+                <div class="text-center mt-4">
+                    <button class="btn btn-outline-primary">もっと見る</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTAセクション -->
+        <section class="cta-section">
+            <div class="container">
+                <h2 class="cta-title">あなたの入札も成功させませんか？</h2>
+                <p class="cta-text">入札参加資格の取得から落札までをトータルサポート。<br>初めての方でも安心してご相談いただけます。</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-lg">無料相談はこちら</a>
+                    <a href="service.html" class="btn btn-outline-primary btn-lg">サービス詳細を見る</a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- フッター -->
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <div class="col-lg-4">
+                    <img src="images/logo-white.png" alt="ふらっと法務事務所ロゴ" class="footer-logo">
                     <div class="footer-info">
-                        <img src="images/logo-white.png" alt="ふらっと法務事務所" class="footer-logo">
                         <p>〒242-0006<br>神奈川県大和市南林間6丁目4番26号</p>
-                        <p>TEL: 046-272-3357<br>Email: mail@flat-legal.com</p>
+                        <p>TEL: 046-272-3357</p>
+                        <p>Email: mail@flat-legal.com</p>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                <div class="col-lg-4">
                     <div class="footer-links">
                         <h3>主要ページ</h3>
                         <ul>
@@ -74,28 +786,17 @@
                             <li><a href="knowhow.html">入札ノウハウ</a></li>
                             <li><a href="cases.html">成功事例</a></li>
                             <li><a href="blog.html">案件紹介</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-                    <div class="footer-links">
-                        <h3>サポートページ</h3>
-                        <ul>
-                            <li><a href="dictionary.html">用語集</a></li>
-                            <li><a href="links.html">リンク集</a></li>
-                            <li><a href="about.html">事務所概要</a></li>
                             <li><a href="contact.html">お問い合わせ</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4">
                     <div class="footer-links">
-                        <h3>最新情報</h3>
+                        <h3>関連情報</h3>
                         <ul>
-                            <li><a href="#">入札制度の最新動向</a></li>
-                            <li><a href="#">官公庁入札情報まとめ</a></li>
-                            <li><a href="#">入札参加資格申請のポイント</a></li>
-                            <li><a href="#">自治体別入札情報リンク集</a></li>
+                            <li><a href="dictionary.html">入札用語集</a></li>
+                            <li><a href="links.html">リンク集</a></li>
+                            <li><a href="about.html">会社案内</a></li>
                         </ul>
                     </div>
                 </div>
@@ -104,29 +805,40 @@
                 <div class="col-md-6">
                     <p class="footer-copyright">© 2025 行政書士法人ふらっと法務事務所 All Rights Reserved.</p>
                 </div>
-                <div class="col-md-6">
-                    <div class="footer-policy-links">
-                        <a href="privacy.html">プライバシーポリシー</a>
-                        <span class="separator">|</span>
-                        <a href="terms.html">利用規約</a>
-                    </div>
+                <div class="col-md-6 footer-policy-links">
+                    <a href="#">プライバシーポリシー</a>
+                    <span class="separator">|</span>
+                    <a href="#">特定商取引法に基づく表記</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- JavaScript -->
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-    // ハンバーガーメニューの動作
-    $(document).ready(function() {
-        $(".menu-btn").on("click", function() {
-            $(this).toggleClass("active");
-            $(".sp-nav").toggleClass("active");
+        // モバイルメニューの開閉
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.menu-btn');
+            const spNav = document.querySelector('.sp-nav');
+            
+            menuBtn.addEventListener('click', function() {
+                this.classList.toggle('active');
+                spNav.classList.toggle('active');
+            });
+            
+            // フィルターオプションの切り替え
+            const filterOptions = document.querySelectorAll('.filter-option');
+            filterOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    const parent = this.parentElement;
+                    parent.querySelectorAll('.filter-option').forEach(opt => {
+                        opt.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                });
+            });
         });
-    });
     </script>
 </body>
 </html>

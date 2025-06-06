@@ -3,12 +3,401 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ふらっと法務事務所 - 入札サポート専門サイト</title>
-    <meta name="description" content="ふらっと法務事務所の入札サポート専門サイトです。入札参加資格の取得から書類作成、価格設定まで、トータルサポートいたします。">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/soft-theme-minimal.css">
-    <link rel="stylesheet" href="css/mobile-fixes.css">
+    <title>入札ノウハウ | ふらっと法務事務所 入札サポート専門サイト</title>
+    <meta name="description" content="入札の基礎知識から実践的なテクニック、よくある失敗と対策、電子入札ガイド、自治体別の注意点まで。初めての方でも安心して入札に参加できるノウハウを解説します。">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/image-fix.css">
+    <style>
+        /* 基本スタイル */
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* ヘッダースタイル */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo img {
+            height: 50px;
+        }
+        
+        .pc-nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .pc-nav li {
+            margin-left: 20px;
+        }
+        
+        .pc-nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        
+        .pc-nav a:hover::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #4A90E2;
+            bottom: 0;
+            left: 0;
+        }
+        
+        /* メインコンテンツスタイル */
+        main {
+            margin-top: 80px;
+            padding-bottom: 50px;
+        }
+        
+        .page-title-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .page-subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+        }
+        
+        .section-padding {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .content-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 20px;
+            height: 100%;
+        }
+        
+        .content-card h3 {
+            font-size: 1.5rem;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .feature-icon {
+            background-color: #e3f2fd;
+            color: #1976d2;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .feature-text {
+            flex-grow: 1;
+        }
+        
+        .feature-text h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .check-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .check-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+        
+        .check-list i {
+            color: #4caf50;
+            margin-right: 10px;
+            margin-top: 4px;
+        }
+        
+        .bg-light {
+            background-color: #f8f9fa;
+        }
+        
+        /* FAQ アコーディオン */
+        .accordion-item {
+            border: none;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .accordion-button {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            padding: 15px 20px;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .accordion-body {
+            padding: 20px;
+            background-color: #fff;
+        }
+        
+        /* 用語集 */
+        .glossary-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .glossary-title {
+            font-size: 1.5rem;
+            color: #3498db;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e3f2fd;
+        }
+        
+        .glossary-list dt {
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+        
+        .glossary-list dd {
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #e3f2fd;
+        }
+        
+        /* フッタースタイル */
+        .footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-logo {
+            height: 40px;
+            margin-bottom: 15px;
+        }
+        
+        .footer-info p {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #3498db;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links a:hover {
+            color: #3498db;
+        }
+        
+        .footer-bottom {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .footer-copyright {
+            font-size: 0.8rem;
+        }
+        
+        .footer-policy-links {
+            text-align: right;
+        }
+        
+        .footer-policy-links a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 0.8rem;
+        }
+        
+        .separator {
+            margin: 0 10px;
+        }
+        
+        /* モバイル対応 */
+        .menu-btn {
+            display: none;
+            width: 30px;
+            height: 20px;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .menu-btn span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #333;
+            position: absolute;
+            transition: all 0.3s;
+        }
+        
+        .menu-btn span:nth-child(1) {
+            top: 0;
+        }
+        
+        .menu-btn span:nth-child(2) {
+            top: 9px;
+        }
+        
+        .menu-btn span:nth-child(3) {
+            bottom: 0;
+        }
+        
+        .sp-nav {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 80px);
+            background-color: rgba(255,255,255,0.95);
+            z-index: 999;
+            overflow-y: auto;
+        }
+        
+        .sp-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .sp-nav li {
+            border-bottom: 1px solid #eee;
+        }
+        
+        .sp-nav a {
+            display: block;
+            padding: 15px 30px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 991px) {
+            .pc-nav {
+                display: none;
+            }
+            
+            .menu-btn {
+                display: block;
+            }
+            
+            .menu-btn.active span:nth-child(1) {
+                transform: rotate(45deg);
+                top: 9px;
+            }
+            
+            .menu-btn.active span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .menu-btn.active span:nth-child(3) {
+                transform: rotate(-45deg);
+                bottom: 9px;
+            }
+            
+            .sp-nav.active {
+                display: block;
+            }
+            
+            .header-container {
+                padding: 15px 20px;
+            }
+            
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .footer-policy-links {
+                text-align: left;
+                margin-top: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- ヘッダー -->
@@ -36,35 +425,484 @@
                 <span></span>
             </div>
         </div>
-        <nav class="sp-nav">
-            <ul>
-                <li><a href="index.html">ホーム</a></li>
-                <li><a href="service.html">サービス</a></li>
-                <li><a href="flow.html">ご利用の流れ</a></li>
-                <li><a href="knowhow.html">入札ノウハウ</a></li>
-                <li><a href="cases.html">成功事例</a></li>
-                <li><a href="blog.html">案件紹介</a></li>
-                <li><a href="contact.html">お問い合わせ</a></li>
-            </ul>
-        </nav>
     </header>
+    
+    <!-- モバイルナビゲーション -->
+    <nav class="sp-nav">
+        <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="service.html">サービス</a></li>
+            <li><a href="flow.html">ご利用の流れ</a></li>
+            <li><a href="knowhow.html">入札ノウハウ</a></li>
+            <li><a href="cases.html">成功事例</a></li>
+            <li><a href="blog.html">案件紹介</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+    </nav>
 
     <!-- メインコンテンツ -->
+    <main>
+        <!-- ページタイトルセクション -->
+        <section class="page-title-section">
+            <div class="container">
+                <h1 class="page-title">入札ノウハウ</h1>
+                <p class="page-subtitle">初めての方でも安心。入札の基礎から実践的なテクニックまで</p>
+            </div>
+        </section>
 
+        <!-- はじめての入札セクション -->
+        <section class="section-padding">
+            <div class="container">
+                <h2 class="section-title">はじめての入札</h2>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="content-card">
+                            <h3>入札とは何か</h3>
+                            <p>入札とは、公共機関や民間企業が商品やサービスを調達する際に、複数の業者から見積もりを集め、最も条件の良い業者を選定する方法です。公共事業の場合、「公共工事の入札及び契約の適正化の促進に関する法律」などに基づき、公正かつ透明性の高い方法で業者が選定されます。</p>
+                            <img alt="入札のイメージ" class="img-fluid rounded mb-3" src="images/bid-illustration.jpg"/>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="content-card">
+                            <h3>入札の種類</h3>
+                            <ul class="feature-list">
+                                <li>
+                                    <span class="feature-icon"><i class="fas fa-users"></i></span>
+                                    <div class="feature-text">
+                                        <h4>一般競争入札</h4>
+                                        <p>参加資格を満たす全ての業者が参加できる入札方式</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-icon"><i class="fas fa-user-check"></i></span>
+                                    <div class="feature-text">
+                                        <h4>指名競争入札</h4>
+                                        <p>発注者が指名した業者のみが参加できる入札方式</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-icon"><i class="fas fa-handshake"></i></span>
+                                    <div class="feature-text">
+                                        <h4>随意契約</h4>
+                                        <p>競争入札によらず、発注者が任意に契約の相手方を選ぶ方式</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-icon"><i class="fas fa-balance-scale"></i></span>
+                                    <div class="feature-text">
+                                        <h4>総合評価方式</h4>
+                                        <p>価格だけでなく、技術力や実績なども評価する方式</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <div class="content-card">
+                            <h3>入札参加に必要なもの</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="check-list">
+                                        <li>
+                                            <i class="fas fa-check-circle"></i>
+                                            <span><strong>入札参加資格</strong>：各自治体や発注機関ごとに定められた資格</span>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-check-circle"></i>
+                                            <span><strong>経営事項審査（経審）</strong>：建設業の場合に必要な審査結果</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="check-list">
+                                        <li>
+                                            <i class="fas fa-check-circle"></i>
+                                            <span><strong>各種許認可</strong>：業種に応じた許可（建設業許可など）</span>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-check-circle"></i>
+                                            <span><strong>実績・技術者</strong>：案件によっては過去の実績や有資格技術者が必要</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 実践テクニックセクション -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title">実践テクニック</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="content-card">
+                            <h3>情報収集のコツ</h3>
+                            <p>入札情報は様々な媒体で公開されています。官報、自治体のホームページ、入札情報サービス（NJSS）、電子調達システム（GEPS）などを定期的にチェックしましょう。</p>
+                            <p>また、過去の落札情報を分析することで、相場観を養うことができます。</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="content-card">
+                            <h3>価格設定の考え方</h3>
+                            <p>最低制限価格や調査基準価格を考慮した価格設定が重要です。過度な低価格入札は失格となる可能性があります。</p>
+                            <p>また、総合評価方式の場合は、価格点と技術点のバランスを考慮した戦略が必要です。</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="content-card">
+                            <h3>提案書作成のポイント</h3>
+                            <p>総合評価方式では、提案書の質が重要です。発注者のニーズを的確に捉え、具体的かつ実現可能な提案を心がけましょう。</p>
+                            <p>また、自社の強みを活かした差別化ポイントを明確にすることが大切です。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- よくある失敗と対策セクション -->
+        <section class="section-padding">
+            <div class="container">
+                <h2 class="section-title">よくある失敗と対策</h2>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="content-card">
+                            <h3>書類不備による失格</h3>
+                            <p>入札書類の不備は失格の最も多い原因です。チェックリストを作成し、複数人での確認を徹底しましょう。特に押印漏れや記載ミスに注意が必要です。</p>
+                            <ul class="check-list">
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>提出前の複数人によるダブルチェック</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>書類ごとのチェックリスト作成</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>余裕を持ったスケジュール管理</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="content-card">
+                            <h3>価格設定ミス</h3>
+                            <p>コスト計算の誤りや市場相場の把握不足による価格設定ミスは、落札できても利益が出ない事態を招きます。</p>
+                            <ul class="check-list">
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>過去の落札事例の分析</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>コスト計算の精緻化</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>最低制限価格の推定</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 電子入札ガイドセクション -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title">電子入札ガイド</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="content-card">
+                            <h3>電子入札とは</h3>
+                            <p>電子入札は、インターネットを通じて入札手続きを行うシステムです。紙の入札書類を提出する従来の方法と比べ、移動時間の削減や入札参加機会の拡大などのメリットがあります。</p>
+                            <p>主な電子入札システムには、各省庁の電子調達システム（GEPS）や地方自治体の電子入札システムなどがあります。</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="content-card">
+                            <h3>電子入札の準備</h3>
+                            <ul class="check-list">
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>電子証明書（ICカード）の取得</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>ICカードリーダーの準備</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>各システム用のクライアントソフトのインストール</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>動作環境の確認（対応ブラウザ、Java等）</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <div class="content-card">
+                            <h3>電子入札の注意点</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="check-list">
+                                        <li>
+                                            <i class="fas fa-exclamation-triangle text-warning"></i>
+                                            <span>締切時間に余裕を持って操作を完了する</span>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-exclamation-triangle text-warning"></i>
+                                            <span>通信環境の安定した場所で操作する</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="check-list">
+                                        <li>
+                                            <i class="fas fa-exclamation-triangle text-warning"></i>
+                                            <span>電子証明書の有効期限を確認する</span>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-exclamation-triangle text-warning"></i>
+                                            <span>システムの動作確認を事前に行う</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 自治体別の注意点セクション -->
+        <section class="section-padding">
+            <div class="container">
+                <h2 class="section-title">自治体別の注意点</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="content-card">
+                            <h3>国（中央省庁）</h3>
+                            <p>各省庁の入札は、統一資格審査を受けることで参加資格を得られます。電子調達システム（GEPS）を利用した電子入札が主流です。</p>
+                            <p>総合評価方式が多く採用されており、技術提案の質が重要になります。</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="content-card">
+                            <h3>都道府県・政令市</h3>
+                            <p>独自の入札参加資格審査があり、自治体ごとに申請が必要です。電子入札システムも自治体ごとに異なる場合があります。</p>
+                            <p>地域要件が設定されていることが多く、地元企業が優遇される傾向があります。</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="content-card">
+                            <h3>市区町村</h3>
+                            <p>小規模な自治体では紙入札が残っていることもあります。地域密着型の案件が多く、地元企業や地域貢献度が重視されます。</p>
+                            <p>入札情報の公開方法が限定的な場合があるため、情報収集が重要です。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- よくある質問（FAQ）セクション -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title">よくある質問（FAQ）</h2>
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                初めて入札に参加する場合、何から始めればよいですか？
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>まずは参加したい自治体や機関の入札参加資格を取得することから始めましょう。資格申請は年に1〜2回の受付期間が設けられていることが多いため、スケジュールを確認することが重要です。</p>
+                                <p>また、入札情報の収集方法を確認し、過去の入札案件や落札結果を調査して相場観を養うことも大切です。初めての場合は、専門家のサポートを受けることをお勧めします。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                入札参加資格はどのように取得するのですか？
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>入札参加資格の取得方法は発注機関によって異なります。</p>
+                                <ul>
+                                    <li><strong>国（中央省庁）</strong>：全省庁統一資格を取得します。申請は年に1回程度、インターネット申請が基本です。</li>
+                                    <li><strong>都道府県・市区町村</strong>：各自治体ごとに資格審査申請を行います。多くの自治体では2年に1回の定期受付があります。</li>
+                                </ul>
+                                <p>申請には、財務諸表、納税証明書、登記簿謄本、許可証の写しなど多くの書類が必要です。また、建設業の場合は経営事項審査（経審）の結果も必要となります。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                電子入札に必要な準備は何ですか？
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>電子入札に参加するためには、以下の準備が必要です：</p>
+                                <ol>
+                                    <li><strong>電子証明書（ICカード）</strong>：認定認証局から取得します。有効期間は通常1〜3年です。</li>
+                                    <li><strong>ICカードリーダー</strong>：電子証明書を読み取るための機器です。</li>
+                                    <li><strong>パソコン環境</strong>：各電子入札システムの動作環境に適合したパソコンとインターネット環境が必要です。</li>
+                                    <li><strong>クライアントソフト</strong>：各電子入札システム用のソフトウェアをインストールします。</li>
+                                </ol>
+                                <p>また、事前に利用者登録を行い、テスト環境で操作方法を確認しておくことをお勧めします。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                入札で失格になる主な理由は何ですか？
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>入札で失格になる主な理由には以下のようなものがあります：</p>
+                                <ul>
+                                    <li><strong>書類の不備</strong>：必要書類の不足、記載ミス、押印漏れなど</li>
+                                    <li><strong>資格要件の不足</strong>：必要な許認可や資格者の不在</li>
+                                    <li><strong>最低制限価格を下回る入札</strong>：過度な低価格入札</li>
+                                    <li><strong>予定価格を上回る入札</strong>：高すぎる価格設定</li>
+                                    <li><strong>提出期限の遅延</strong>：締切時間に間に合わない提出</li>
+                                    <li><strong>仕様不適合</strong>：要求仕様を満たしていない提案内容</li>
+                                </ul>
+                                <p>これらを防ぐためには、入札説明書や仕様書を熟読し、チェックリストを作成して複数人で確認することが重要です。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                入札情報はどこで入手できますか？
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>入札情報は以下のような場所で入手できます：</p>
+                                <ul>
+                                    <li><strong>官報</strong>：国の機関の入札公告が掲載されます</li>
+                                    <li><strong>各発注機関のホームページ</strong>：入札情報のページで公開されています</li>
+                                    <li><strong>電子調達システム（GEPS）</strong>：中央省庁の入札情報が一元的に公開されています</li>
+                                    <li><strong>入札情報サービス（NJSS）</strong>：国土交通省の入札情報が公開されています</li>
+                                    <li><strong>各自治体の電子入札システム</strong>：地方自治体の入札情報が公開されています</li>
+                                    <li><strong>入札情報提供サービス（民間）</strong>：有料で全国の入札情報を収集・提供するサービスもあります</li>
+                                </ul>
+                                <p>効率的に情報収集するためには、ターゲットとする発注機関の情報源を特定し、定期的にチェックする習慣をつけることが大切です。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 入札用語集セクション -->
+        <section class="section-padding">
+            <div class="container">
+                <h2 class="section-title">入札用語集</h2>
+                <div class="glossary-card">
+                    <h3 class="glossary-title">基本用語</h3>
+                    <dl class="glossary-list">
+                        <dt>予定価格</dt>
+                        <dd>発注者が設定する契約上限価格。これを超える入札は無効となります。</dd>
+                        
+                        <dt>最低制限価格</dt>
+                        <dd>品質確保のために設定される下限価格。これを下回る入札は失格となります。</dd>
+                        
+                        <dt>調査基準価格</dt>
+                        <dd>低入札価格調査制度において、調査の対象となる基準となる価格。</dd>
+                        
+                        <dt>入札参加資格</dt>
+                        <dd>入札に参加するために必要な資格。各発注機関ごとに審査・認定されます。</dd>
+                        
+                        <dt>経営事項審査（経審）</dt>
+                        <dd>建設業者の経営状況や技術力などを評価する制度。公共工事の入札参加に必要です。</dd>
+                    </dl>
+                </div>
+                <div class="glossary-card">
+                    <h3 class="glossary-title">入札方式</h3>
+                    <dl class="glossary-list">
+                        <dt>一般競争入札</dt>
+                        <dd>参加資格を満たす全ての業者が参加できる入札方式。</dd>
+                        
+                        <dt>指名競争入札</dt>
+                        <dd>発注者が指名した業者のみが参加できる入札方式。</dd>
+                        
+                        <dt>随意契約</dt>
+                        <dd>競争入札によらず、発注者が任意に契約の相手方を選ぶ方式。</dd>
+                        
+                        <dt>総合評価方式</dt>
+                        <dd>価格だけでなく、技術力や実績なども評価する方式。価格点と技術点の合計で評価されます。</dd>
+                        
+                        <dt>プロポーザル方式</dt>
+                        <dd>技術提案書を提出し、最も優れた提案を行った者と契約する方式。</dd>
+                    </dl>
+                </div>
+                <div class="glossary-card">
+                    <h3 class="glossary-title">電子入札関連</h3>
+                    <dl class="glossary-list">
+                        <dt>電子証明書</dt>
+                        <dd>電子入札システムにログインするために必要なICカード。認定認証局から発行されます。</dd>
+                        
+                        <dt>GEPS</dt>
+                        <dd>Government Electronic Procurement System（政府電子調達システム）の略。中央省庁の電子調達システム。</dd>
+                        
+                        <dt>NJSS</dt>
+                        <dd>National CALS/EC Jigyo Support System（入札情報サービス）の略。国土交通省の入札情報を提供するシステム。</dd>
+                        
+                        <dt>JV（ジョイントベンチャー）</dt>
+                        <dd>複数の企業が共同で入札・契約を行うための事業体。特定建設工事共同企業体とも呼ばれます。</dd>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <!-- お問い合わせセクション -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title">入札でお困りですか？</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-8 text-center">
+                        <p class="mb-4">入札参加資格の取得から落札までをトータルサポート。初めての方でも安心してご相談いただけます。</p>
+                        <a href="contact.html" class="btn btn-primary btn-lg">無料相談はこちら</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- フッター -->
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <div class="col-lg-4">
+                    <img src="images/logo-white.png" alt="ふらっと法務事務所ロゴ" class="footer-logo">
                     <div class="footer-info">
-                        <img src="images/logo-white.png" alt="ふらっと法務事務所" class="footer-logo">
                         <p>〒242-0006<br>神奈川県大和市南林間6丁目4番26号</p>
-                        <p>TEL: 046-272-3357<br>Email: mail@flat-legal.com</p>
+                        <p>TEL: 046-272-3357</p>
+                        <p>Email: mail@flat-legal.com</p>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                <div class="col-lg-4">
                     <div class="footer-links">
                         <h3>主要ページ</h3>
                         <ul>
@@ -74,28 +912,17 @@
                             <li><a href="knowhow.html">入札ノウハウ</a></li>
                             <li><a href="cases.html">成功事例</a></li>
                             <li><a href="blog.html">案件紹介</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-                    <div class="footer-links">
-                        <h3>サポートページ</h3>
-                        <ul>
-                            <li><a href="dictionary.html">用語集</a></li>
-                            <li><a href="links.html">リンク集</a></li>
-                            <li><a href="about.html">事務所概要</a></li>
                             <li><a href="contact.html">お問い合わせ</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4">
                     <div class="footer-links">
-                        <h3>最新情報</h3>
+                        <h3>関連情報</h3>
                         <ul>
-                            <li><a href="#">入札制度の最新動向</a></li>
-                            <li><a href="#">官公庁入札情報まとめ</a></li>
-                            <li><a href="#">入札参加資格申請のポイント</a></li>
-                            <li><a href="#">自治体別入札情報リンク集</a></li>
+                            <li><a href="dictionary.html">入札用語集</a></li>
+                            <li><a href="links.html">リンク集</a></li>
+                            <li><a href="about.html">会社案内</a></li>
                         </ul>
                     </div>
                 </div>
@@ -104,29 +931,28 @@
                 <div class="col-md-6">
                     <p class="footer-copyright">© 2025 行政書士法人ふらっと法務事務所 All Rights Reserved.</p>
                 </div>
-                <div class="col-md-6">
-                    <div class="footer-policy-links">
-                        <a href="privacy.html">プライバシーポリシー</a>
-                        <span class="separator">|</span>
-                        <a href="terms.html">利用規約</a>
-                    </div>
+                <div class="col-md-6 footer-policy-links">
+                    <a href="#">プライバシーポリシー</a>
+                    <span class="separator">|</span>
+                    <a href="#">特定商取引法に基づく表記</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- JavaScript -->
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-    // ハンバーガーメニューの動作
-    $(document).ready(function() {
-        $(".menu-btn").on("click", function() {
-            $(this).toggleClass("active");
-            $(".sp-nav").toggleClass("active");
+        // モバイルメニューの開閉
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.menu-btn');
+            const spNav = document.querySelector('.sp-nav');
+            
+            menuBtn.addEventListener('click', function() {
+                this.classList.toggle('active');
+                spNav.classList.toggle('active');
+            });
         });
-    });
     </script>
 </body>
 </html>

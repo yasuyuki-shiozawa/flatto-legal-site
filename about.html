@@ -3,12 +3,387 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ふらっと法務事務所 - 入札サポート専門サイト</title>
-    <meta name="description" content="ふらっと法務事務所の入札サポート専門サイトです。入札参加資格の取得から書類作成、価格設定まで、トータルサポートいたします。">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/soft-theme-minimal.css">
-    <link rel="stylesheet" href="css/mobile-fixes.css">
+    <title>事務所概要 | ふらっと法務事務所 入札サポート専門サイト</title>
+    <meta name="description" content="行政書士法人ふらっと法務事務所の概要、理念、代表者プロフィール、アクセス情報をご紹介します。入札サポートの専門家として、初めての方から大手企業まで幅広くサポートしています。">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/image-fix.css">
+    <style>
+        /* 基本スタイル */
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* ヘッダースタイル */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo img {
+            height: 50px;
+        }
+        
+        .pc-nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .pc-nav li {
+            margin-left: 20px;
+        }
+        
+        .pc-nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        
+        .pc-nav a:hover::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #4A90E2;
+            bottom: 0;
+            left: 0;
+        }
+        
+        /* メインコンテンツスタイル */
+        main {
+            margin-top: 80px;
+            padding-bottom: 50px;
+        }
+        
+        .page-title-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .page-subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+        }
+        
+        .section-padding {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .content-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 20px;
+            height: 100%;
+        }
+        
+        .content-card h3 {
+            font-size: 1.5rem;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+        
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            display: block;
+            border: 5px solid #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .profile-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .profile-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .profile-position {
+            font-size: 1rem;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+        
+        .profile-qualification {
+            display: inline-block;
+            background-color: #e3f2fd;
+            color: #1976d2;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            margin: 0 5px 5px 0;
+        }
+        
+        .office-info {
+            margin-bottom: 30px;
+        }
+        
+        .office-info dt {
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .office-info dd {
+            margin-bottom: 15px;
+            padding-left: 15px;
+        }
+        
+        .map-container {
+            height: 400px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .access-info {
+            margin-top: 20px;
+        }
+        
+        .access-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .access-info ul {
+            padding-left: 20px;
+        }
+        
+        .access-info li {
+            margin-bottom: 5px;
+        }
+        
+        .bg-light {
+            background-color: #f8f9fa;
+        }
+        
+        /* フッタースタイル */
+        .footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-logo {
+            height: 40px;
+            margin-bottom: 15px;
+        }
+        
+        .footer-info p {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #3498db;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links a:hover {
+            color: #3498db;
+        }
+        
+        .footer-bottom {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .footer-copyright {
+            font-size: 0.8rem;
+        }
+        
+        .footer-policy-links {
+            text-align: right;
+        }
+        
+        .footer-policy-links a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 0.8rem;
+        }
+        
+        .separator {
+            margin: 0 10px;
+        }
+        
+        /* モバイル対応 */
+        .menu-btn {
+            display: none;
+            width: 30px;
+            height: 20px;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .menu-btn span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #333;
+            position: absolute;
+            transition: all 0.3s;
+        }
+        
+        .menu-btn span:nth-child(1) {
+            top: 0;
+        }
+        
+        .menu-btn span:nth-child(2) {
+            top: 9px;
+        }
+        
+        .menu-btn span:nth-child(3) {
+            bottom: 0;
+        }
+        
+        .sp-nav {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 80px);
+            background-color: rgba(255,255,255,0.95);
+            z-index: 999;
+            overflow-y: auto;
+        }
+        
+        .sp-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .sp-nav li {
+            border-bottom: 1px solid #eee;
+        }
+        
+        .sp-nav a {
+            display: block;
+            padding: 15px 30px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 991px) {
+            .pc-nav {
+                display: none;
+            }
+            
+            .menu-btn {
+                display: block;
+            }
+            
+            .menu-btn.active span:nth-child(1) {
+                transform: rotate(45deg);
+                top: 9px;
+            }
+            
+            .menu-btn.active span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .menu-btn.active span:nth-child(3) {
+                transform: rotate(-45deg);
+                bottom: 9px;
+            }
+            
+            .sp-nav.active {
+                display: block;
+            }
+            
+            .header-container {
+                padding: 15px 20px;
+            }
+            
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .footer-policy-links {
+                text-align: left;
+                margin-top: 15px;
+            }
+            
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- ヘッダー -->
@@ -36,35 +411,169 @@
                 <span></span>
             </div>
         </div>
-        <nav class="sp-nav">
-            <ul>
-                <li><a href="index.html">ホーム</a></li>
-                <li><a href="service.html">サービス</a></li>
-                <li><a href="flow.html">ご利用の流れ</a></li>
-                <li><a href="knowhow.html">入札ノウハウ</a></li>
-                <li><a href="cases.html">成功事例</a></li>
-                <li><a href="blog.html">案件紹介</a></li>
-                <li><a href="contact.html">お問い合わせ</a></li>
-            </ul>
-        </nav>
     </header>
+    
+    <!-- モバイルナビゲーション -->
+    <nav class="sp-nav">
+        <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="service.html">サービス</a></li>
+            <li><a href="flow.html">ご利用の流れ</a></li>
+            <li><a href="knowhow.html">入札ノウハウ</a></li>
+            <li><a href="cases.html">成功事例</a></li>
+            <li><a href="blog.html">案件紹介</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+    </nav>
 
     <!-- メインコンテンツ -->
+    <main>
+        <!-- ページタイトルセクション -->
+        <section class="page-title-section">
+            <div class="container">
+                <h1 class="page-title">事務所概要</h1>
+                <p class="page-subtitle">入札サポートの専門家として、あなたの成功をサポートします</p>
+            </div>
+        </section>
 
+        <!-- 事務所理念セクション -->
+        <section class="section-padding">
+            <div class="container">
+                <h2 class="section-title">事務所理念</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="content-card text-center">
+                            <h3>「法的知識で、ビジネスの可能性を広げる」</h3>
+                            <p class="mb-4">ふらっと法務事務所は、法的知識を活用して中小企業の皆様のビジネスチャンスを広げることを使命としています。特に公共入札の分野では、専門的なノウハウと経験を活かし、初めての方から大手企業まで、幅広くサポートしています。</p>
+                            <p>私たちは単なる書類作成だけでなく、お客様のビジネス戦略に寄り添い、長期的な成功をサポートするパートナーでありたいと考えています。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 代表者プロフィールセクション -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title">代表者プロフィール</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="images/profile.jpg" alt="代表 塩澤康幸" class="profile-image">
+                        <div class="profile-info">
+                            <h3 class="profile-name">塩澤 康幸</h3>
+                            <p class="profile-position">代表行政書士</p>
+                            <span class="profile-qualification">行政書士</span>
+                            <span class="profile-qualification">宅地建物取引士</span>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="content-card">
+                            <h3>経歴</h3>
+                            <p>大学卒業後、大手建設会社で10年間勤務。主に公共工事の入札業務を担当し、数多くの案件で落札に貢献。その後、行政書士資格を取得し、2015年にふらっと法務事務所を設立。</p>
+                            <p>建設業での経験を活かし、入札サポート業務を専門分野として確立。これまでに500件以上の入札をサポートし、高い落札率を誇る。</p>
+                            <h3 class="mt-4">メッセージ</h3>
+                            <p>「入札は難しい」というイメージをお持ちの方も多いと思います。確かに初めての方にとっては、手続きや書類作成は複雑に感じるかもしれません。しかし、適切なサポートがあれば、中小企業の皆様でも十分に公共入札で成功することができます。</p>
+                            <p>私自身、建設会社時代に数多くの入札を経験し、その後行政書士として多くの企業様の入札をサポートしてきました。その経験とノウハウを活かし、皆様の入札成功をお手伝いします。まずはお気軽にご相談ください。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 事務所概要セクション -->
+        <section class="section-padding">
+            <div class="container">
+                <h2 class="section-title">事務所概要</h2>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="content-card">
+                            <dl class="office-info">
+                                <dt>事務所名</dt>
+                                <dd>行政書士法人ふらっと法務事務所</dd>
+                                
+                                <dt>代表者</dt>
+                                <dd>塩澤 康幸</dd>
+                                
+                                <dt>所在地</dt>
+                                <dd>〒242-0006<br>神奈川県大和市南林間6丁目4番26号</dd>
+                                
+                                <dt>電話番号</dt>
+                                <dd>046-272-3357</dd>
+                                
+                                <dt>メールアドレス</dt>
+                                <dd>mail@flat-legal.com</dd>
+                                
+                                <dt>営業時間</dt>
+                                <dd>平日 9:00〜18:00（土日祝日休業）</dd>
+                                
+                                <dt>設立</dt>
+                                <dd>2015年4月</dd>
+                                
+                                <dt>主な業務内容</dt>
+                                <dd>
+                                    <ul>
+                                        <li>入札参加資格申請サポート</li>
+                                        <li>入札書類作成サポート</li>
+                                        <li>電子入札代行</li>
+                                        <li>入札戦略コンサルティング</li>
+                                        <li>建設業許可申請</li>
+                                        <li>経営事項審査申請</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="content-card">
+                            <h3>アクセス</h3>
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3246.2641383837!2d139.4641!3d35.4641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDI3JzUwLjgiTiAxMznCsDI3JzUwLjgiRQ!5e0!3m2!1sja!2sjp!4v1623345678901!5m2!1sja!2sjp" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                            <div class="access-info">
+                                <h4>電車でお越しの場合</h4>
+                                <ul>
+                                    <li>小田急江ノ島線「南林間駅」より徒歩8分</li>
+                                </ul>
+                                
+                                <h4>お車でお越しの場合</h4>
+                                <ul>
+                                    <li>東名高速道路「横浜町田IC」より約15分</li>
+                                    <li>近隣にコインパーキングあり</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- お問い合わせセクション -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title">お問い合わせ</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-8 text-center">
+                        <p class="mb-4">入札に関するご相談は無料で承っております。<br>お気軽にお問い合わせください。</p>
+                        <a href="contact.html" class="btn btn-primary btn-lg">お問い合わせはこちら</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- フッター -->
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <div class="col-lg-4">
+                    <img src="images/logo-white.png" alt="ふらっと法務事務所ロゴ" class="footer-logo">
                     <div class="footer-info">
-                        <img src="images/logo-white.png" alt="ふらっと法務事務所" class="footer-logo">
                         <p>〒242-0006<br>神奈川県大和市南林間6丁目4番26号</p>
-                        <p>TEL: 046-272-3357<br>Email: mail@flat-legal.com</p>
+                        <p>TEL: 046-272-3357</p>
+                        <p>Email: mail@flat-legal.com</p>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                <div class="col-lg-4">
                     <div class="footer-links">
                         <h3>主要ページ</h3>
                         <ul>
@@ -74,28 +583,17 @@
                             <li><a href="knowhow.html">入札ノウハウ</a></li>
                             <li><a href="cases.html">成功事例</a></li>
                             <li><a href="blog.html">案件紹介</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-                    <div class="footer-links">
-                        <h3>サポートページ</h3>
-                        <ul>
-                            <li><a href="dictionary.html">用語集</a></li>
-                            <li><a href="links.html">リンク集</a></li>
-                            <li><a href="about.html">事務所概要</a></li>
                             <li><a href="contact.html">お問い合わせ</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4">
                     <div class="footer-links">
-                        <h3>最新情報</h3>
+                        <h3>関連情報</h3>
                         <ul>
-                            <li><a href="#">入札制度の最新動向</a></li>
-                            <li><a href="#">官公庁入札情報まとめ</a></li>
-                            <li><a href="#">入札参加資格申請のポイント</a></li>
-                            <li><a href="#">自治体別入札情報リンク集</a></li>
+                            <li><a href="dictionary.html">入札用語集</a></li>
+                            <li><a href="links.html">リンク集</a></li>
+                            <li><a href="about.html">会社案内</a></li>
                         </ul>
                     </div>
                 </div>
@@ -104,29 +602,28 @@
                 <div class="col-md-6">
                     <p class="footer-copyright">© 2025 行政書士法人ふらっと法務事務所 All Rights Reserved.</p>
                 </div>
-                <div class="col-md-6">
-                    <div class="footer-policy-links">
-                        <a href="privacy.html">プライバシーポリシー</a>
-                        <span class="separator">|</span>
-                        <a href="terms.html">利用規約</a>
-                    </div>
+                <div class="col-md-6 footer-policy-links">
+                    <a href="#">プライバシーポリシー</a>
+                    <span class="separator">|</span>
+                    <a href="#">特定商取引法に基づく表記</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- JavaScript -->
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-    // ハンバーガーメニューの動作
-    $(document).ready(function() {
-        $(".menu-btn").on("click", function() {
-            $(this).toggleClass("active");
-            $(".sp-nav").toggleClass("active");
+        // モバイルメニューの開閉
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.menu-btn');
+            const spNav = document.querySelector('.sp-nav');
+            
+            menuBtn.addEventListener('click', function() {
+                this.classList.toggle('active');
+                spNav.classList.toggle('active');
+            });
         });
-    });
     </script>
 </body>
 </html>
