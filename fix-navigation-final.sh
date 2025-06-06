@@ -1,4 +1,25 @@
-<!DOCTYPE html>
+#!/bin/bash
+
+# ナビゲーション修正スクリプト（最終版）
+# 重複したヘッダー・フッターの完全除去と統一テンプレートの再適用
+
+# 対象のHTMLファイル
+HTML_FILES=("index.html" "blog.html" "dictionary.html" "service.html" "flow.html" "about.html" "cases.html" "contact.html" "knowhow.html" "links.html")
+
+echo "ナビゲーション修正を開始します..."
+
+for file in "${HTML_FILES[@]}"; do
+    if [ -f "$file" ]; then
+        echo "処理中: $file"
+        
+        # ファイルのバックアップを作成
+        cp "$file" "${file}.bak"
+        
+        # HTMLファイルからヘッダー・フッター以外のコンテンツ部分を抽出
+        content=$(sed -n '/<main>/,/<\/main>/p' "$file")
+        
+        # ヘッダー部分（<body>タグから<main>タグの前まで）を作成
+        header='<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
@@ -49,9 +70,10 @@
         </nav>
     </header>
 
-    <!-- メインコンテンツ -->
-
-    </main>
+    <!-- メインコンテンツ -->'
+        
+        # フッター部分（</main>タグから</body>タグまで）を作成
+        footer='    </main>
 
     <!-- フッター -->
     <footer class="footer">
@@ -129,4 +151,33 @@
     });
     </script>
 </body>
-</html>
+</html>'
+        
+        # ファイルのタイトルを抽出して保持
+        title=$(grep -o '<title>.*</title>' "$file" | head -1)
+        if [ -z "$title" ]; then
+            title='<title>ふらっと法務事務所 - 入札サポート専門サイト</title>'
+        fi
+        
+        # メタディスクリプションを抽出して保持
+        description=$(grep -o '<meta name="description" content=".*">' "$file" | head -1)
+        if [ -z "$description" ]; then
+            description='<meta name="description" content="ふらっと法務事務所の入札サポート専門サイトです。入札参加資格の取得から書類作成、価格設定まで、トータルサポートいたします。">'
+        fi
+        
+        # ヘッダーにタイトルとメタディスクリプションを適用
+        header=$(echo "$header" | sed "s|<title>ふらっと法務事務所 - 入札サポート専門サイト</title>|$title|")
+        header=$(echo "$header" | sed "s|<meta name=\"description\" content=\"ふらっと法務事務所の入札サポート専門サイトです。入札参加資格の取得から書類作成、価格設定まで、トータルサポートいたします。\">|$description|")
+        
+        # 新しいHTMLファイルを作成
+        echo "$header" > "$file"
+        echo "$content" >> "$file"
+        echo "$footer" >> "$file"
+        
+        echo "$file の修正が完了しました"
+    else
+        echo "警告: $file が見つかりません"
+    fi
+done
+
+echo "すべてのファイルの修正が完了しました"
