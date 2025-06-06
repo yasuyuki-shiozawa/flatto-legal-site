@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>入札ノウハウ | ふらっと法務事務所 入札サポート専門サイト</title>
-    <meta name="description" content="入札の基礎知識から実践的なテクニック、よくある失敗と対策、電子入札ガイド、自治体別の注意点まで。初めての方でも安心して入札に参加できるノウハウを解説します。">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="入札の基礎知識から実践的なテクニック、よくある失敗と対策まで。初めての方でも安心して入札に参加できるノウハウを解説します。">
     <style>
+        /* ベーススタイル */
         body {
             font-family: 'Noto Sans JP', sans-serif;
             color: #333;
             line-height: 1.6;
+            margin: 0;
+            padding: 0;
         }
+        
+        /* ヘッダー */
         header {
             background-color: #fff;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -45,12 +48,18 @@
             text-decoration: none;
             color: #333;
             font-weight: 500;
-            position: relative;
             padding-bottom: 5px;
         }
+        
+        /* メインコンテンツ */
         main {
             margin-top: 80px;
             padding-bottom: 50px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
         }
         .page-title-section {
             background-color: #f8f9fa;
@@ -78,6 +87,25 @@
             margin-bottom: 30px;
             text-align: center;
         }
+        
+        /* カードスタイル */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+        .col-6 {
+            width: 50%;
+            padding: 0 15px;
+        }
+        .col-4 {
+            width: 33.333%;
+            padding: 0 15px;
+        }
+        .col-12 {
+            width: 100%;
+            padding: 0 15px;
+        }
         .content-card {
             background-color: #fff;
             border-radius: 8px;
@@ -91,6 +119,8 @@
             color: #3498db;
             margin-bottom: 15px;
         }
+        
+        /* リストスタイル */
         .feature-list {
             list-style: none;
             padding: 0;
@@ -132,9 +162,13 @@
             margin-right: 10px;
             margin-top: 4px;
         }
+        
+        /* 背景色 */
         .bg-light {
             background-color: #f8f9fa;
         }
+        
+        /* フッター */
         .footer {
             background-color: #2c3e50;
             color: #ecf0f1;
@@ -185,11 +219,21 @@
         .separator {
             margin: 0 10px;
         }
-        img.img-fluid {
+        
+        /* 画像 */
+        .img-fluid {
             max-width: 100%;
             height: auto;
             display: block;
         }
+        .rounded {
+            border-radius: 8px;
+        }
+        .mb-3 {
+            margin-bottom: 15px;
+        }
+        
+        /* レスポンシブ */
         @media (max-width: 991px) {
             .pc-nav {
                 display: none;
@@ -202,6 +246,9 @@
             }
             .section-title {
                 font-size: 1.8rem;
+            }
+            .col-6, .col-4 {
+                width: 100%;
             }
             .footer-policy-links {
                 text-align: left;
@@ -248,40 +295,40 @@
             <div class="container">
                 <h2 class="section-title">はじめての入札</h2>
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-6">
                         <div class="content-card">
                             <h3>入札とは何か</h3>
                             <p>入札とは、公共機関や民間企業が商品やサービスを調達する際に、複数の業者から見積もりを集め、最も条件の良い業者を選定する方法です。公共事業の場合、「公共工事の入札及び契約の適正化の促進に関する法律」などに基づき、公正かつ透明性の高い方法で業者が選定されます。</p>
                             <img alt="入札のイメージ" class="img-fluid rounded mb-3" src="images/bid-illustration.jpg"/>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-6">
                         <div class="content-card">
                             <h3>入札の種類</h3>
                             <ul class="feature-list">
                                 <li>
-                                    <span class="feature-icon"><i class="fas fa-users"></i></span>
+                                    <span class="feature-icon">●</span>
                                     <div class="feature-text">
                                         <h4>一般競争入札</h4>
                                         <p>参加資格を満たす全ての業者が参加できる入札方式</p>
                                     </div>
                                 </li>
                                 <li>
-                                    <span class="feature-icon"><i class="fas fa-user-check"></i></span>
+                                    <span class="feature-icon">●</span>
                                     <div class="feature-text">
                                         <h4>指名競争入札</h4>
                                         <p>発注者が指名した業者のみが参加できる入札方式</p>
                                     </div>
                                 </li>
                                 <li>
-                                    <span class="feature-icon"><i class="fas fa-handshake"></i></span>
+                                    <span class="feature-icon">●</span>
                                     <div class="feature-text">
                                         <h4>随意契約</h4>
                                         <p>競争入札によらず、発注者が任意に契約の相手方を選ぶ方式</p>
                                     </div>
                                 </li>
                                 <li>
-                                    <span class="feature-icon"><i class="fas fa-balance-scale"></i></span>
+                                    <span class="feature-icon">●</span>
                                     <div class="feature-text">
                                         <h4>総合評価方式</h4>
                                         <p>価格だけでなく、技術力や実績なども評価する方式</p>
@@ -291,31 +338,31 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mt-4">
+                <div class="row">
                     <div class="col-12">
                         <div class="content-card">
                             <h3>入札参加に必要なもの</h3>
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-6">
                                     <ul class="check-list">
                                         <li>
-                                            <i class="fas fa-check-circle"></i>
+                                            <span>✓</span>
                                             <span><strong>入札参加資格</strong>：各自治体や発注機関ごとに定められた資格</span>
                                         </li>
                                         <li>
-                                            <i class="fas fa-check-circle"></i>
+                                            <span>✓</span>
                                             <span><strong>経営事項審査（経審）</strong>：建設業の場合に必要な審査結果</span>
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-6">
                                     <ul class="check-list">
                                         <li>
-                                            <i class="fas fa-check-circle"></i>
+                                            <span>✓</span>
                                             <span><strong>各種許認可</strong>：業種に応じた許可（建設業許可など）</span>
                                         </li>
                                         <li>
-                                            <i class="fas fa-check-circle"></i>
+                                            <span>✓</span>
                                             <span><strong>実績・技術者</strong>：案件によっては過去の実績や有資格技術者が必要</span>
                                         </li>
                                     </ul>
@@ -332,70 +379,70 @@
             <div class="container">
                 <h2 class="section-title">実践テクニック</h2>
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-4">
                         <div class="content-card">
                             <h3>情報収集のコツ</h3>
                             <ul class="check-list">
                                 <li>
-                                    <i class="fas fa-check-circle"></i>
+                                    <span>✓</span>
                                     <span>発注見通しを定期的にチェック</span>
                                 </li>
                                 <li>
-                                    <i class="fas fa-check-circle"></i>
+                                    <span>✓</span>
                                     <span>過去の類似案件の落札情報を分析</span>
                                 </li>
                                 <li>
-                                    <i class="fas fa-check-circle"></i>
+                                    <span>✓</span>
                                     <span>発注者の予算状況を把握</span>
                                 </li>
                                 <li>
-                                    <i class="fas fa-check-circle"></i>
+                                    <span>✓</span>
                                     <span>競合他社の動向をリサーチ</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-4">
                         <div class="content-card">
                             <h3>価格設定の戦略</h3>
                             <ul class="check-list">
                                 <li>
-                                    <i class="fas fa-check-circle"></i>
+                                    <span>✓</span>
                                     <span>予定価格の推測方法を習得</span>
                                 </li>
                                 <li>
-                                    <i class="fas fa-check-circle"></i>
+                                    <span>✓</span>
                                     <span>最低制限価格を考慮した設定</span>
                                 </li>
                                 <li>
-                                    <i class="fas fa-check-circle"></i>
+                                    <span>✓</span>
                                     <span>自社の利益確保と競争力のバランス</span>
                                 </li>
                                 <li>
-                                    <i class="fas fa-check-circle"></i>
+                                    <span>✓</span>
                                     <span>案件ごとの戦略的価格設定</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-4">
                         <div class="content-card">
                             <h3>提案書作成のポイント</h3>
                             <ul class="check-list">
                                 <li>
-                                    <i class="fas fa-check-circle"></i>
+                                    <span>✓</span>
                                     <span>発注者ニーズの徹底分析</span>
                                 </li>
                                 <li>
-                                    <i class="fas fa-check-circle"></i>
+                                    <span>✓</span>
                                     <span>自社の強みを明確に表現</span>
                                 </li>
                                 <li>
-                                    <i class="fas fa-check-circle"></i>
+                                    <span>✓</span>
                                     <span>具体的な実施方法の提示</span>
                                 </li>
                                 <li>
-                                    <i class="fas fa-check-circle"></i>
+                                    <span>✓</span>
                                     <span>視覚的資料の効果的活用</span>
                                 </li>
                             </ul>
@@ -410,43 +457,43 @@
             <div class="container">
                 <h2 class="section-title">よくある失敗と対策</h2>
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-6">
                         <div class="content-card">
                             <h3>書類不備による失格</h3>
                             <p>入札書類の不備や記載ミスによる失格は最も多い失敗例です。特に初めての入札では、細かい規定や様式に不慣れなため発生しやすくなっています。</p>
                             <h4>対策</h4>
                             <ul class="check-list">
                                 <li>
-                                    <i class="fas fa-check-circle"></i>
+                                    <span>✓</span>
                                     <span>提出前の複数人によるチェック体制</span>
                                 </li>
                                 <li>
-                                    <i class="fas fa-check-circle"></i>
+                                    <span>✓</span>
                                     <span>チェックリストの作成と活用</span>
                                 </li>
                                 <li>
-                                    <i class="fas fa-check-circle"></i>
+                                    <span>✓</span>
                                     <span>余裕を持ったスケジュール管理</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-6">
                         <div class="content-card">
                             <h3>価格設定ミス</h3>
                             <p>最低制限価格を下回る、または予定価格を上回る価格設定により、技術的には適格でも失格となるケースが少なくありません。</p>
                             <h4>対策</h4>
                             <ul class="check-list">
                                 <li>
-                                    <i class="fas fa-check-circle"></i>
+                                    <span>✓</span>
                                     <span>過去の類似案件の落札率分析</span>
                                 </li>
                                 <li>
-                                    <i class="fas fa-check-circle"></i>
+                                    <span>✓</span>
                                     <span>最低制限価格の算出方法の理解</span>
                                 </li>
                                 <li>
-                                    <i class="fas fa-check-circle"></i>
+                                    <span>✓</span>
                                     <span>価格設定の根拠を明確化</span>
                                 </li>
                             </ul>
@@ -460,11 +507,9 @@
         <section class="section-padding bg-light">
             <div class="container">
                 <h2 class="section-title">お問い合わせ</h2>
-                <div class="row justify-content-center">
-                    <div class="col-md-8 text-center">
-                        <p class="mb-4">入札に関するご相談は無料で承っております。<br>お気軽にお問い合わせください。</p>
-                        <a href="contact.html" class="btn btn-primary btn-lg">お問い合わせはこちら</a>
-                    </div>
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <p>入札に関するご相談は無料で承っております。<br>お気軽にお問い合わせください。</p>
+                    <a href="contact.html" style="display: inline-block; background-color: #3498db; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">お問い合わせはこちら</a>
                 </div>
             </div>
         </section>
@@ -474,7 +519,7 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-4">
                     <img src="images/logo-white.png" alt="ふらっと法務事務所ロゴ" class="footer-logo">
                     <div class="footer-info">
                         <p>〒242-0006<br>神奈川県大和市南林間6丁目4番26号</p>
@@ -482,7 +527,7 @@
                         <p>Email: mail@flat-legal.com</p>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-4">
                     <div class="footer-links">
                         <h3>主要ページ</h3>
                         <ul>
@@ -496,7 +541,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-4">
                     <div class="footer-links">
                         <h3>関連情報</h3>
                         <ul>
@@ -507,20 +552,19 @@
                     </div>
                 </div>
             </div>
-            <div class="row footer-bottom">
-                <div class="col-md-6">
-                    <p class="footer-copyright">© 2025 行政書士法人ふらっと法務事務所 All Rights Reserved.</p>
-                </div>
-                <div class="col-md-6 footer-policy-links">
-                    <a href="#">プライバシーポリシー</a>
-                    <span class="separator">|</span>
-                    <a href="#">特定商取引法に基づく表記</a>
+            <div class="footer-bottom">
+                <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+                    <div>
+                        <p class="footer-copyright">© 2025 行政書士法人ふらっと法務事務所 All Rights Reserved.</p>
+                    </div>
+                    <div class="footer-policy-links">
+                        <a href="#">プライバシーポリシー</a>
+                        <span class="separator">|</span>
+                        <a href="#">特定商取引法に基づく表記</a>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
-
-    <!-- JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
