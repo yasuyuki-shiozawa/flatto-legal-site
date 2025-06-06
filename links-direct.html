@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>リンク集 | ふらっと法務事務所 入札サポート専門サイト</title>
+    <meta name="description" content="入札に関する役立つリンク集。官公庁・自治体の入札情報サイト、電子入札システム、入札関連法令など、入札に役立つ情報源をまとめています。">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 基本スタイル */
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* ヘッダースタイル */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo img {
+            height: 50px;
+        }
+        
+        .pc-nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .pc-nav li {
+            margin-left: 20px;
+        }
+        
+        .pc-nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        
+        .pc-nav a:hover::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #4A90E2;
+            bottom: 0;
+            left: 0;
+        }
+        
+        /* メインコンテンツスタイル */
+        main {
+            margin-top: 80px;
+            padding-bottom: 50px;
+        }
+        
+        .page-title-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .page-subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+        }
+        
+        .section-padding {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .content-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 20px;
+            height: 100%;
+        }
+        
+        .content-card h3 {
+            font-size: 1.5rem;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+        
+        .link-category {
+            margin-bottom: 40px;
+        }
+        
+        .link-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .link-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .link-item:last-child {
+            border-bottom: none;
+        }
+        
+        .link-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+        
+        .link-url {
+            display: block;
+            color: #3498db;
+            margin-bottom: 5px;
+            word-break: break-all;
+        }
+        
+        .link-description {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+        
+        .link-tag {
+            display: inline-block;
+            background-color: #e3f2fd;
+            color: #1976d2;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            margin-top: 5px;
+        }
+        
+        .bg-light {
+            background-color: #f8f9fa;
+        }
+        
+        /* フッタースタイル */
+        .footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-logo {
+            height: 40px;
+            margin-bottom: 15px;
+        }
+        
+        .footer-info p {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #3498db;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links a:hover {
+            color: #3498db;
+        }
+        
+        .footer-bottom {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .footer-copyright {
+            font-size: 0.8rem;
+        }
+        
+        .footer-policy-links {
+            text-align: right;
+        }
+        
+        .footer-policy-links a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 0.8rem;
+        }
+        
+        .separator {
+            margin: 0 10px;
+        }
+        
+        /* モバイル対応 */
+        .menu-btn {
+            display: none;
+            width: 30px;
+            height: 20px;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .menu-btn span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #333;
+            position: absolute;
+            transition: all 0.3s;
+        }
+        
+        .menu-btn span:nth-child(1) {
+            top: 0;
+        }
+        
+        .menu-btn span:nth-child(2) {
+            top: 9px;
+        }
+        
+        .menu-btn span:nth-child(3) {
+            bottom: 0;
+        }
+        
+        .sp-nav {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 80px);
+            background-color: rgba(255,255,255,0.95);
+            z-index: 999;
+            overflow-y: auto;
+        }
+        
+        .sp-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .sp-nav li {
+            border-bottom: 1px solid #eee;
+        }
+        
+        .sp-nav a {
+            display: block;
+            padding: 15px 30px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 991px) {
+            .pc-nav {
+                display: none;
+            }
+            
+            .menu-btn {
+                display: block;
+            }
+            
+            .menu-btn.active span:nth-child(1) {
+                transform: rotate(45deg);
+                top: 9px;
+            }
+            
+            .menu-btn.active span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .menu-btn.active span:nth-child(3) {
+                transform: rotate(-45deg);
+                bottom: 9px;
+            }
+            
+            .sp-nav.active {
+                display: block;
+            }
+            
+            .header-container {
+                padding: 15px 20px;
+            }
+            
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .footer-policy-links {
+                text-align: left;
+                margin-top: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="ふらっと法務事務所ロゴ">
+                </a>
+            </div>
+            <nav class="pc-nav">
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="service.html">サービス</a></li>
+                    <li><a href="flow.html">ご利用の流れ</a></li>
+                    <li><a href="knowhow.html">入札ノウハウ</a></li>
+                    <li><a href="cases.html">成功事例</a></li>
+                    <li><a href="blog.html">案件紹介</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <div class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    
+    <!-- モバイルナビゲーション -->
+    <nav class="sp-nav">
+        <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="service.html">サービス</a></li>
+            <li><a href="flow.html">ご利用の流れ</a></li>
+            <li><a href="knowhow.html">入札ノウハウ</a></li>
+            <li><a href="cases.html">成功事例</a></li>
+            <li><a href="blog.html">案件紹介</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+    </nav>
+
+    <!-- メインコンテンツ -->
+    <main>
+        <!-- ページタイトルセクション -->
+        <section class="page-title-section">
+            <div class="container">
+                <h1 class="page-title">リンク集</h1>
+                <p class="page-subtitle">入札に関する役立つ情報源をまとめました</p>
+            </div>
+        </section>
+
+        <!-- リンク集セクション -->
+        <section class="section-padding">
+            <div class="container">
+                <!-- 官公庁・自治体の入札情報 -->
+                <div class="link-category">
+                    <h2 class="section-title">官公庁・自治体の入札情報</h2>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="content-card">
+                                <h3>中央省庁</h3>
+                                <ul class="link-list">
+                                    <li class="link-item">
+                                        <div class="link-title">官公庁電子調達総合窓口</div>
+                                        <a href="https://www.geps.go.jp/" target="_blank" class="link-url">https://www.geps.go.jp/</a>
+                                        <div class="link-description">政府電子調達システム（GEPS）の総合窓口。各省庁の入札情報を一括検索できます。</div>
+                                        <div>
+                                            <span class="link-tag">中央省庁</span>
+                                            <span class="link-tag">電子入札</span>
+                                        </div>
+                                    </li>
+                                    <li class="link-item">
+                                        <div class="link-title">財務省</div>
+                                        <a href="https://www.mof.go.jp/procurement/index.html" target="_blank" class="link-url">https://www.mof.go.jp/procurement/index.html</a>
+                                        <div class="link-description">財務省の調達情報ページ。入札公告、落札結果などを掲載しています。</div>
+                                        <div>
+                                            <span class="link-tag">中央省庁</span>
+                                        </div>
+                                    </li>
+                                    <li class="link-item">
+                                        <div class="link-title">経済産業省</div>
+                                        <a href="https://www.meti.go.jp/information/publicoffer/index.html" target="_blank" class="link-url">https://www.meti.go.jp/information/publicoffer/index.html</a>
+                                        <div class="link-description">経済産業省の公募・調達情報ページ。各種入札案件を掲載しています。</div>
+                                        <div>
+                                            <span class="link-tag">中央省庁</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="content-card">
+                                <h3>地方自治体</h3>
+                                <ul class="link-list">
+                                    <li class="link-item">
+                                        <div class="link-title">東京都入札情報サービス</div>
+                                        <a href="https://www.e-nyusatsu.metro.tokyo.jp/" target="_blank" class="link-url">https://www.e-nyusatsu.metro.tokyo.jp/</a>
+                                        <div class="link-description">東京都の入札情報を提供するサイト。電子入札案件の検索や参加が可能です。</div>
+                                        <div>
+                                            <span class="link-tag">地方自治体</span>
+                                            <span class="link-tag">電子入札</span>
+                                        </div>
+                                    </li>
+                                    <li class="link-item">
+                                        <div class="link-title">神奈川県入札情報</div>
+                                        <a href="https://nyusatsu.e-kanagawa.lg.jp/" target="_blank" class="link-url">https://nyusatsu.e-kanagawa.lg.jp/</a>
+                                        <div class="link-description">神奈川県の入札情報を提供するサイト。電子入札システムへのリンクもあります。</div>
+                                        <div>
+                                            <span class="link-tag">地方自治体</span>
+                                            <span class="link-tag">電子入札</span>
+                                        </div>
+                                    </li>
+                                    <li class="link-item">
+                                        <div class="link-title">大阪府電子調達システム</div>
+                                        <a href="https://www.nyusatsu.pref.osaka.jp/" target="_blank" class="link-url">https://www.nyusatsu.pref.osaka.jp/</a>
+                                        <div class="link-description">大阪府の電子調達システム。入札案件の検索や参加が可能です。</div>
+                                        <div>
+                                            <span class="link-tag">地方自治体</span>
+                                            <span class="link-tag">電子入札</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 電子入札システム -->
+                <div class="link-category">
+                    <h2 class="section-title">電子入札システム</h2>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="content-card">
+                                <h3>全国共通システム</h3>
+                                <ul class="link-list">
+                                    <li class="link-item">
+                                        <div class="link-title">電子入札コアシステム</div>
+                                        <a href="https://www.cals.jacic.or.jp/coreconso/" target="_blank" class="link-url">https://www.cals.jacic.or.jp/coreconso/</a>
+                                        <div class="link-description">多くの自治体で採用されている電子入札の標準システム。導入自治体一覧や操作方法などを掲載しています。</div>
+                                        <div>
+                                            <span class="link-tag">電子入札</span>
+                                            <span class="link-tag">システム情報</span>
+                                        </div>
+                                    </li>
+                                    <li class="link-item">
+                                        <div class="link-title">電子入札システム操作マニュアル</div>
+                                        <a href="https://www.geps.go.jp/manual/index.html" target="_blank" class="link-url">https://www.geps.go.jp/manual/index.html</a>
+                                        <div class="link-description">政府電子調達システム（GEPS）の操作マニュアル。初めての方でもわかりやすく解説しています。</div>
+                                        <div>
+                                            <span class="link-tag">電子入札</span>
+                                            <span class="link-tag">マニュアル</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="content-card">
+                                <h3>電子証明書関連</h3>
+                                <ul class="link-list">
+                                    <li class="link-item">
+                                        <div class="link-title">公的個人認証サービス</div>
+                                        <a href="https://www.jpki.go.jp/" target="_blank" class="link-url">https://www.jpki.go.jp/</a>
+                                        <div class="link-description">マイナンバーカードを利用した電子証明書サービス。一部の入札システムで利用可能です。</div>
+                                        <div>
+                                            <span class="link-tag">電子証明書</span>
+                                        </div>
+                                    </li>
+                                    <li class="link-item">
+                                        <div class="link-title">商業登記電子証明書</div>
+                                        <a href="https://www.moj.go.jp/MINJI/minji06_00028.html" target="_blank" class="link-url">https://www.moj.go.jp/MINJI/minji06_00028.html</a>
+                                        <div class="link-description">法務省が発行する電子証明書。多くの電子入札システムで必要となります。</div>
+                                        <div>
+                                            <span class="link-tag">電子証明書</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 入札関連法令・制度 -->
+                <div class="link-category">
+                    <h2 class="section-title">入札関連法令・制度</h2>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="content-card">
+                                <h3>法令・ガイドライン</h3>
+                                <ul class="link-list">
+                                    <li class="link-item">
+                                        <div class="link-title">会計法</div>
+                                        <a href="https://elaws.e-gov.go.jp/search/elawsSearch/elaws_search/lsg0500/detail?lawId=322AC0000000035" target="_blank" class="link-url">https://elaws.e-gov.go.jp/search/elawsSearch/elaws_search/lsg0500/detail?lawId=322AC0000000035</a>
+                                        <div class="link-description">国の契約・入札の基本となる法律です。</div>
+                                        <div>
+                                            <span class="link-tag">法令</span>
+                                        </div>
+                                    </li>
+                                    <li class="link-item">
+                                        <div class="link-title">地方自治法</div>
+                                        <a href="https://elaws.e-gov.go.jp/search/elawsSearch/elaws_search/lsg0500/detail?lawId=322AC0000000067" target="_blank" class="link-url">https://elaws.e-gov.go.jp/search/elawsSearch/elaws_search/lsg0500/detail?lawId=322AC0000000067</a>
+                                        <div class="link-description">地方自治体の契約・入札の基本となる法律です。</div>
+                                        <div>
+                                            <span class="link-tag">法令</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="content-card">
+                                <h3>入札制度解説</h3>
+                                <ul class="link-list">
+                                    <li class="link-item">
+                                        <div class="link-title">公共調達の適正化について</div>
+                                        <a href="https://www.mof.go.jp/procurement/policy/index.html" target="_blank" class="link-url">https://www.mof.go.jp/procurement/policy/index.html</a>
+                                        <div class="link-description">財務省による公共調達の適正化に関する情報。入札制度の基本的な考え方が解説されています。</div>
+                                        <div>
+                                            <span class="link-tag">制度解説</span>
+                                        </div>
+                                    </li>
+                                    <li class="link-item">
+                                        <div class="link-title">総合評価落札方式の解説</div>
+                                        <a href="https://www.mlit.go.jp/tec/nyuusatu/keiyaku/index.html" target="_blank" class="link-url">https://www.mlit.go.jp/tec/nyuusatu/keiyaku/index.html</a>
+                                        <div class="link-description">国土交通省による総合評価落札方式の解説。評価基準や配点の考え方などが掲載されています。</div>
+                                        <div>
+                                            <span class="link-tag">制度解説</span>
+                                            <span class="link-tag">総合評価</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 入札情報サービス -->
+                <div class="link-category">
+                    <h2 class="section-title">入札情報サービス</h2>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="content-card">
+                                <h3>民間入札情報サービス</h3>
+                                <ul class="link-list">
+                                    <li class="link-item">
+                                        <div class="link-title">日本入札情報サービス</div>
+                                        <a href="https://www.njss.info/" target="_blank" class="link-url">https://www.njss.info/</a>
+                                        <div class="link-description">全国の官公庁・自治体の入札情報を横断的に検索できるサービス。有料会員制です。</div>
+                                        <div>
+                                            <span class="link-tag">情報サービス</span>
+                                            <span class="link-tag">有料</span>
+                                        </div>
+                                    </li>
+                                    <li class="link-item">
+                                        <div class="link-title">官公需情報ポータルサイト</div>
+                                        <a href="https://www.chusho.meti.go.jp/keiei/torihiki/kankoju_portal.htm" target="_blank" class="link-url">https://www.chusho.meti.go.jp/keiei/torihiki/kankoju_portal.htm</a>
+                                        <div class="link-description">中小企業庁が運営する官公需（官公庁の発注）情報を提供するサイト。無料で利用できます。</div>
+                                        <div>
+                                            <span class="link-tag">情報サービス</span>
+                                            <span class="link-tag">無料</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="content-card">
+                                <h3>入札支援ツール</h3>
+                                <ul class="link-list">
+                                    <li class="link-item">
+                                        <div class="link-title">入札価格シミュレーター</div>
+                                        <a href="https://www.nyusatsu-support.jp/simulator/" target="_blank" class="link-url">https://www.nyusatsu-support.jp/simulator/</a>
+                                        <div class="link-description">過去の落札データをもとに、最適な入札価格をシミュレーションできるツール。有料サービスです。</div>
+                                        <div>
+                                            <span class="link-tag">ツール</span>
+                                            <span class="link-tag">有料</span>
+                                        </div>
+                                    </li>
+                                    <li class="link-item">
+                                        <div class="link-title">入札参加資格チェックツール</div>
+                                        <a href="https://www.bid-check.jp/" target="_blank" class="link-url">https://www.bid-check.jp/</a>
+                                        <div class="link-description">自社の情報を入力すると、参加可能な入札案件を診断してくれるツール。一部機能は無料で利用可能です。</div>
+                                        <div>
+                                            <span class="link-tag">ツール</span>
+                                            <span class="link-tag">一部無料</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTAセクション -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="content-card text-center">
+                            <h2>入札でお悩みですか？</h2>
+                            <p class="mb-4">入札参加資格の取得から落札までをトータルサポート。<br>初めての方でも安心してご相談いただけます。</p>
+                            <div class="d-flex justify-content-center gap-3">
+                                <a href="contact.html" class="btn btn-primary">無料相談のお申し込み</a>
+                                <a href="service.html" class="btn btn-outline-primary">サービス詳細を見る</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <div class="footer-info">
+                        <img src="images/logo-white.png" alt="ふらっと法務事務所" class="footer-logo">
+                        <p>〒242-0006<br>神奈川県大和市南林間6丁目4番26号</p>
+                        <p>TEL: 046-272-3357<br>Email: mail@flat-legal.com</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <div class="footer-links">
+                        <h3>主要ページ</h3>
+                        <ul>
+                            <li><a href="index.html">ホーム</a></li>
+                            <li><a href="service.html">サービス</a></li>
+                            <li><a href="flow.html">ご利用の流れ</a></li>
+                            <li><a href="knowhow.html">入札ノウハウ</a></li>
+                            <li><a href="cases.html">成功事例</a></li>
+                            <li><a href="blog.html">案件紹介</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <div class="footer-links">
+                        <h3>サポートページ</h3>
+                        <ul>
+                            <li><a href="dictionary.html">用語集</a></li>
+                            <li><a href="links.html">リンク集</a></li>
+                            <li><a href="about.html">事務所概要</a></li>
+                            <li><a href="contact.html">お問い合わせ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-links">
+                        <h3>最新情報</h3>
+                        <ul>
+                            <li><a href="#">入札制度の最新動向</a></li>
+                            <li><a href="#">官公庁入札情報まとめ</a></li>
+                            <li><a href="#">入札参加資格申請のポイント</a></li>
+                            <li><a href="#">自治体別入札情報リンク集</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row footer-bottom">
+                <div class="col-md-6">
+                    <p class="footer-copyright">© 2025 行政書士法人ふらっと法務事務所 All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="footer-policy-links">
+                        <a href="privacy.html">プライバシーポリシー</a>
+                        <span class="separator">|</span>
+                        <a href="terms.html">利用規約</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // ハンバーガーメニューの動作
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.menu-btn');
+            const spNav = document.querySelector('.sp-nav');
+            
+            menuBtn.addEventListener('click', function() {
+                this.classList.toggle('active');
+                spNav.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
