@@ -441,6 +441,9 @@
             }
         }
     </style>
+<link rel="stylesheet" href="css/image-fix.css">
+<link rel="stylesheet" href="css/image-fallback.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- ヘッダー -->
@@ -448,7 +451,7 @@
         <div class="header-container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/logo.png" alt="ふらっと法務事務所ロゴ">
+                    <img src="images/logo.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="ふらっと法務事務所ロゴ">
                 </a>
             </div>
             <nav class="pc-nav">
@@ -498,6 +501,7 @@
             <div class="container">
                 <div class="filter-section">
                     <h2 class="filter-title">事例を絞り込む</h2>
+
                     <div class="row">
                         <div class="col-md-4">
                             <div class="filter-group">
@@ -552,6 +556,7 @@
                                 </div>
                                 <div>
                                     <h3 class="case-title">初めての入札で落札成功</h3>
+
                                     <p class="case-subtitle">建設業 / 小規模案件 / 地方自治体</p>
                                 </div>
                             </div>
@@ -559,6 +564,7 @@
                                 <p>創業3年目の建設会社様。これまで下請け工事が中心でしたが、自社での元請け工事を増やすため、初めて公共入札に挑戦されました。入札参加資格の取得から書類作成、価格設定まで全面的にサポートし、初めての入札で見事落札に成功されました。</p>
                                 <div class="case-point">
                                     <h4>成功のポイント</h4>
+
                                     <p>初めての入札でも、過去の類似案件の落札価格を徹底分析し、適切な価格設定を行ったことが成功の鍵となりました。また、提出書類の完成度を高めるため、何度も確認と修正を重ねました。</p>
                                 </div>
                             </div>
@@ -581,6 +587,7 @@
                                 </div>
                                 <div>
                                     <h3 class="case-title">システム開発案件の総合評価方式で高評価</h3>
+
                                     <p class="case-subtitle">IT・通信 / 中規模案件 / 独立行政法人</p>
                                 </div>
                             </div>
@@ -588,6 +595,7 @@
                                 <p>独立行政法人が発注するシステム開発案件に挑戦されたIT企業様。総合評価方式の入札で、技術提案書の作成に苦戦されていました。当事務所が提案書の構成から内容の充実化まで支援し、技術点で高評価を獲得。価格点と合わせて総合1位で落札されました。</p>
                                 <div class="case-point">
                                     <h4>成功のポイント</h4>
+
                                     <p>発注者のニーズを深く理解し、それに応える提案内容を明確に伝えることに注力しました。特に、過去の実績を効果的にアピールする資料作りと、具体的な実施方法の提案が評価されました。</p>
                                 </div>
                             </div>
@@ -610,6 +618,7 @@
                                 </div>
                                 <div>
                                     <h3 class="case-title">大型製造設備の入札で競合に勝利</h3>
+
                                     <p class="case-subtitle">製造業 / 大規模案件 / 国</p>
                                 </div>
                             </div>
@@ -617,6 +626,7 @@
                                 <p>国の研究機関向けの大型製造設備納入案件に挑戦された製造業者様。大手競合が多数参加する中、仕様書の読み込みと質問の活用、適切な価格設定により落札に成功されました。</p>
                                 <div class="case-point">
                                     <h4>成功のポイント</h4>
+
                                     <p>仕様書の細部まで徹底的に分析し、不明点は質問制度を活用して明確化。また、過去の類似案件の落札率を分析し、競合他社の動向も考慮した戦略的な価格設定を行いました。</p>
                                 </div>
                             </div>
@@ -639,6 +649,7 @@
                                 </div>
                                 <div>
                                     <h3 class="case-title">継続的な業務委託契約の獲得</h3>
+
                                     <p class="case-subtitle">サービス業 / 中規模案件 / 地方自治体</p>
                                 </div>
                             </div>
@@ -646,6 +657,7 @@
                                 <p>地方自治体の施設管理業務の入札に参加されたサービス業者様。これまで民間施設の管理が中心でしたが、公共施設の管理業務に挑戦。入札参加資格の取得から提案書作成まで支援し、3年間の継続契約を獲得されました。</p>
                                 <div class="case-point">
                                     <h4>成功のポイント</h4>
+
                                     <p>公共施設管理の特性を理解し、民間での実績を公共向けにアピールする提案書を作成。特に、コスト削減と利用者満足度向上の両立を具体的な数値と事例で示したことが評価されました。</p>
                                 </div>
                             </div>
@@ -671,6 +683,7 @@
         <section class="section-padding bg-light">
             <div class="container">
                 <h2 class="section-title">お客様の声</h2>
+
                 <div class="row">
                     <div class="col-md-6">
                         <div class="case-card">
@@ -702,6 +715,7 @@
         <section class="cta-section">
             <div class="container">
                 <h2 class="cta-title">あなたの入札も成功させませんか？</h2>
+
                 <p class="cta-text">入札参加資格の取得から落札までをトータルサポート。<br>初めての方でも安心してご相談いただけます。</p>
                 <div class="cta-buttons">
                     <a href="contact.html" class="btn btn-primary">無料相談のお申し込み</a>
@@ -717,7 +731,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
                     <div class="footer-info">
-                        <img src="images/logo-white.png" alt="ふらっと法務事務所" class="footer-logo">
+                        <img src="images/logo-white.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="ふらっと法務事務所" class="footer-logo">
                         <p>〒242-0006<br>神奈川県大和市南林間6丁目4番26号</p>
                         <p>TEL: 046-272-3357<br>Email: mail@flat-legal.com</p>
                     </div>
@@ -725,6 +739,7 @@
                 <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
                     <div class="footer-links">
                         <h3>主要ページ</h3>
+
                         <ul>
                             <li><a href="index.html">ホーム</a></li>
                             <li><a href="service.html">サービス</a></li>
@@ -738,6 +753,7 @@
                 <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
                     <div class="footer-links">
                         <h3>サポートページ</h3>
+
                         <ul>
                             <li><a href="dictionary.html">用語集</a></li>
                             <li><a href="links.html">リンク集</a></li>
@@ -749,6 +765,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-links">
                         <h3>最新情報</h3>
+
                         <ul>
                             <li><a href="#">入札制度の最新動向</a></li>
                             <li><a href="#">官公庁入札情報まとめ</a></li>

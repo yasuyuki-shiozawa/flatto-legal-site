@@ -52,6 +52,9 @@
         display: block;
     }
     </style>
+<link rel="stylesheet" href="css/image-fix.css">
+<link rel="stylesheet" href="css/image-fallback.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- ヘッダー -->
@@ -59,7 +62,7 @@
         <div class="header-container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/flatto-logo-color.png" alt="ふらっと法務事務所ロゴ">
+                    <img src="images/flatto-logo-color.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="ふらっと法務事務所ロゴ">
                 </a>
             </div>
             <nav class="pc-nav">
@@ -141,6 +144,7 @@
         <section class="section-padding">
             <div class="container">
                 <h2 class="section-title">50音順</h2>
+
                 <div class="row">
                     <div class="col-md-12">
                         <div class="kana-filter">
@@ -175,11 +179,13 @@
         <section class="section-padding bg-light">
             <div class="container">
                 <h2 class="section-title">カテゴリ別</h2>
+
                 <div class="row">
                     <div class="col-md-4 col-6 mb-4">
                         <a href="#basic" class="category-card">
                             <div class="category-card-inner">
                                 <h3>基本用語</h3>
+
                             </div>
                         </a>
                     </div>
@@ -187,6 +193,7 @@
                         <a href="#procedure" class="category-card">
                             <div class="category-card-inner">
                                 <h3>手続き関連</h3>
+
                             </div>
                         </a>
                     </div>
@@ -194,6 +201,7 @@
                         <a href="#document" class="category-card">
                             <div class="category-card-inner">
                                 <h3>書類関連</h3>
+
                             </div>
                         </a>
                     </div>
@@ -201,6 +209,7 @@
                         <a href="#evaluation" class="category-card">
                             <div class="category-card-inner">
                                 <h3>評価関連</h3>
+
                             </div>
                         </a>
                     </div>
@@ -208,6 +217,7 @@
                         <a href="#contract" class="category-card">
                             <div class="category-card-inner">
                                 <h3>契約関連</h3>
+
                             </div>
                         </a>
                     </div>
@@ -219,12 +229,14 @@
         <section id="basic" class="section-padding">
             <div class="container">
                 <h2 class="section-title"> 基本用語</h2>
+
                 <div class="row">
                     <!-- 用語アイテム1 -->
                     <div class="col-lg-6 mb-4">
                         <div class="term-card">
                             <div class="term-header">
                                 <h3 class="term-title">入札（にゅうさつ）</h3>
+
                                 <span class="term-badge important">重要</span>
                                 <span class="term-category">基本用語</span>
                             </div>
@@ -232,9 +244,11 @@
                                 <p>公共機関や民間企業が商品やサービスを調達する際に、複数の業者から見積もりを集め、最も条件の良い業者を選定する方法。</p>
                                 <div class="term-details">
                                     <h4>詳細説明</h4>
+
                                     <p>入札は、公平性と透明性を確保しながら、最も有利な条件で契約相手を決定するための制度です。入札参加者は自社の提案価格や条件を記載した入札書を提出し、発注者はあらかじめ定められた基準に従って落札者を決定します。</p>
                                     <p>主に「一般競争入札」「指名競争入札」「随意契約」などの方式があります。</p>
                                     <h4>例</h4>
+
                                     <ul>
                                         <li>「市役所の清掃業務委託の入札に参加する」</li>
                                         <li>「入札公告を確認して、参加資格を確認した」</li>
@@ -249,15 +263,18 @@
                         <div class="term-card">
                             <div class="term-header">
                                 <h3 class="term-title">一般競争入札（いっぱんきょうそうにゅうさつ）</h3>
+
                                 <span class="term-category">基本用語</span>
                             </div>
                             <div class="term-content">
                                 <p>入札参加資格を持つすべての業者が参加できる入札方式。公告によって広く参加者を募り、競争性と透明性が高いのが特徴。</p>
                                 <div class="term-details">
                                     <h4>詳細説明</h4>
+
                                     <p>一般競争入札は、地方自治法や会計法で原則的な入札方式として位置づけられています。参加資格を満たす業者であれば誰でも参加できるため、競争原理が働き、経済性の確保が期待できます。</p>
                                     <p>ただし、不適格な業者の参入リスクもあるため、参加資格要件を設定して一定の制限を設けることが一般的です。</p>
                                     <h4>例</h4>
+
                                     <ul>
                                         <li>「市の大規模工事は一般競争入札で発注された」</li>
                                     </ul>
@@ -271,15 +288,18 @@
                         <div class="term-card">
                             <div class="term-header">
                                 <h3 class="term-title">指名競争入札（しめいきょうそうにゅうさつ）</h3>
+
                                 <span class="term-category">基本用語</span>
                             </div>
                             <div class="term-content">
                                 <p>発注者が特定の業者を指名して入札参加を求める方式。技術力や実績などを考慮して参加者を限定する。</p>
                                 <div class="term-details">
                                     <h4>詳細説明</h4>
+
                                     <p>指名競争入札は、発注者が適格と認める特定の業者のみを指名して行う入札方式です。専門性の高い業務や緊急性のある案件などに用いられることが多く、一般競争入札に比べて手続きが簡略化されています。</p>
                                     <p>ただし、指名業者の選定過程の透明性確保が課題となることもあります。</p>
                                     <h4>例</h4>
+
                                     <ul>
                                         <li>「専門性の高いシステム開発は指名競争入札で発注された」</li>
                                     </ul>
@@ -295,12 +315,14 @@
         <section id="procedure" class="section-padding bg-light">
             <div class="container">
                 <h2 class="section-title"> 手続き関連</h2>
+
                 <div class="row">
                     <!-- 用語アイテム1 -->
                     <div class="col-lg-6 mb-4">
                         <div class="term-card">
                             <div class="term-header">
                                 <h3 class="term-title">入札公告（にゅうさつこうこく）</h3>
+
                                 <span class="term-badge important">重要</span>
                                 <span class="term-category">手続き関連</span>
                             </div>
@@ -308,6 +330,7 @@
                                 <p>入札の実施を広く公示するための公文書。案件の概要、参加資格、入札日時、場所などが記載されている。</p>
                                 <div class="term-details">
                                     <h4>詳細説明</h4>
+
                                     <p>入札公告は、一般競争入札を実施する際に、広く参加者を募るために公示される文書です。官報や自治体のホームページ、入札情報サービスなどで公開されます。</p>
                                     <p>入札に参加するためには、この公告内容を確認し、参加資格や条件を満たしているかを確認することが第一歩となります。</p>
                                 </div>
@@ -324,6 +347,7 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <h2 class="section-title text-center">入札でお困りですか？</h2>
+
                         <p>ふらっと法務事務所では、入札に関する専門知識を活かして、あなたの疑問にお答えします。<br>初めての方でも安心してご相談ください。</p>
                         <div class="mt-4">
                             <a href="contact.html" class="btn btn-primary me-3">無料相談する</a>
@@ -341,7 +365,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
                     <div class="footer-info">
-                        <img src="images/flatto-logo-color.png" alt="ふらっと法務事務所" class="footer-logo">
+                        <img src="images/flatto-logo-color.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="ふらっと法務事務所" class="footer-logo">
                         <p>〒242-0006<br>神奈川県大和市南林間6丁目4番26号</p>
                         <p>TEL: 046-272-3357<br>Email: mail@flat-legal.com</p>
                     </div>
@@ -349,6 +373,7 @@
                 <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
                     <div class="footer-links">
                         <h3>サイトマップ</h3>
+
                         <ul>
                             <li><a href="index.html">ホーム</a></li>
                             <li><a href="service.html">サービス</a></li>
@@ -361,6 +386,7 @@
                 <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
                     <div class="footer-links">
                         <h3>コンテンツ</h3>
+
                         <ul>
                             <li><a href="blog.html">案件紹介</a></li>
                             <li><a href="dictionary.html">用語集</a></li>
@@ -373,6 +399,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-links">
                         <h3>営業時間</h3>
+
                         <ul>
                             <li>電話受付: 平日9時～17時</li>
                             <li>メール: 24時間受付</li>

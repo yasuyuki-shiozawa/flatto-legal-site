@@ -1,0 +1,64 @@
+<!-- ふらっと法務事務所 - 統一ヘッダーテンプレート -->
+<!-- 作成日: 2025年6月6日 -->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{PAGE_TITLE}} | ふらっと法務事務所 入札サポート専門サイト</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/unified-layout.css">
+    {{ADDITIONAL_CSS}}
+<link rel="stylesheet" href="css/image-fix.css">
+<link rel="stylesheet" href="css/image-fallback.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-container">
+                <!-- ロゴとサイトタイトル -->
+                <a href="index.html" class="site-logo">
+                    <img src="images/logo.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="ふらっと法務事務所ロゴ">
+                    <div>
+                        <h1 class="site-title">ふらっと法務事務所</h1>
+                        <p class="site-subtitle">入札サポート専門サイト</p>
+                    </div>
+                </a>
+                
+                <!-- モバイルメニューボタン -->
+                <button class="mobile-nav-toggle" aria-label="メニュー">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <!-- ナビゲーションメニュー -->
+                <nav class="main-nav">
+                    <ul class="nav-list" id="main-menu">
+                        <li class="nav-item"><a href="index.html" class="nav-link {{ACTIVE_HOME}}">ホーム</a></li>
+                        <li class="nav-item"><a href="service.html" class="nav-link {{ACTIVE_SERVICE}}">サービス</a></li>
+                        <li class="nav-item"><a href="flow.html" class="nav-link {{ACTIVE_FLOW}}">ご利用の流れ</a></li>
+                        <li class="nav-item"><a href="knowhow.html" class="nav-link {{ACTIVE_KNOWHOW}}">入札ノウハウ</a></li>
+                        <li class="nav-item"><a href="cases.html" class="nav-link {{ACTIVE_CASES}}">成功事例</a></li>
+                        <li class="nav-item"><a href="blog.html" class="nav-link {{ACTIVE_BLOG}}">案件紹介</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link {{ACTIVE_ABOUT}}">会社案内</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link {{ACTIVE_CONTACT}}">お問い合わせ</a></li>
+                        <li class="nav-item"><a href="contact.html#free-consultation" class="nav-link nav-cta">無料相談</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <!-- ページヘッダー -->
+    <div class="page-header section-dark">
+        <div class="container">
+            <h1>{{PAGE_HEADING}}</h1>
+            <p>{{PAGE_DESCRIPTION}}</p>
+        </div>
+    </div>
+    
+    <!-- メインコンテンツ -->
+    <main>

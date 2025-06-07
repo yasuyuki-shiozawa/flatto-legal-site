@@ -69,6 +69,9 @@
         display: block;
     }
     </style>
+<link rel="stylesheet" href="css/image-fix.css">
+<link rel="stylesheet" href="css/image-fallback.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- ヘッダー -->
@@ -76,7 +79,7 @@
         <div class="header-container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/logo.png" alt="ふらっと法務事務所ロゴ">
+                    <img src="images/logo.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="ふらっと法務事務所ロゴ">
                 </a>
             </div>
             <nav class="pc-nav">
@@ -140,6 +143,7 @@
         <section class="section-padding bg-light">
             <div class="container">
                 <h2 class="section-title">このページの目次</h2>
+
                 <div class="row">
                     <div class="col-md-3 col-6 mb-4">
                         <a href="#search" class="btn-detail w-100">案件を探す</a>
@@ -161,12 +165,14 @@
         <section id="featured" class="section-padding">
             <div class="container">
                 <h2 class="section-title">注目の案件</h2>
+
                 <div class="row">
                     <!-- 案件カード1 -->
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="project-card">
                             <span class="project-category">建設業</span>
                             <h3>市立図書館改修工事</h3>
+
                             <p><strong>東京都</strong> 予算: 約2,500万円</p>
                             <p>市立中央図書館の内装改修および設備更新工事。バリアフリー対応と省エネ設備の導入が主な目的です。</p>
                             <div class="d-flex justify-content-between mt-3">
@@ -184,6 +190,7 @@
                         <div class="project-card">
                             <span class="project-category">IT・情報通信</span>
                             <h3>自治体向けDX推進支援業務</h3>
+
                             <p><strong>大阪府</strong> 予算: 約1,800万円</p>
                             <p>自治体業務のデジタル化推進に関するコンサルティングおよびシステム導入支援業務。住民サービスの向上を目指します。</p>
                             <div class="d-flex justify-content-between mt-3">
@@ -201,6 +208,7 @@
                         <div class="project-card">
                             <span class="project-category">物品・備品</span>
                             <h3>小学校教育用タブレット端末調達</h3>
+
                             <p><strong>福岡県</strong> 予算: 約1,200万円</p>
                             <p>市内小学校向け教育用タブレット端末300台の調達および初期設定業務。GIGAスクール構想に基づく整備事業です。</p>
                             <div class="d-flex justify-content-between mt-3">
@@ -220,6 +228,7 @@
         <section id="beginner" class="section-padding bg-light">
             <div class="container">
                 <h2 class="section-title">初めての方におすすめの案件</h2>
+
                 <p>入札初心者の方でも参加しやすい案件をピックアップしています。比較的参入障壁が低く、経験を積むのに適した案件です。</p>
                 <div class="row">
                     <!-- 初心者向け案件1 -->
@@ -228,6 +237,7 @@
                             <span class="beginner-badge">初心者向け</span>
                             <span class="project-category">物品・備品</span>
                             <h3>事務用品一式納入</h3>
+
                             <p><strong>埼玉県</strong> 予算: 約150万円</p>
                             <p>市役所で使用する事務用品（文具、用紙類等）の納入業務。年間契約の可能性あり。</p>
                             <div class="d-flex justify-content-between mt-3">
@@ -246,6 +256,7 @@
                             <span class="beginner-badge">初心者向け</span>
                             <span class="project-category">サービス</span>
                             <h3>公園清掃業務委託</h3>
+
                             <p><strong>千葉県</strong> 予算: 約300万円/年</p>
                             <p>市内公園5箇所の定期清掃および管理業務。特殊な資格や機材を必要としない基本的な業務です。</p>
                             <div class="d-flex justify-content-between mt-3">
@@ -267,6 +278,7 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <h2 class="section-title text-center">入札でお困りですか？</h2>
+
                         <p>ふらっと法務事務所では、入札書類の作成から提出までトータルサポートいたします。<br>初めての方でも安心してご相談ください。</p>
                         <div class="mt-4">
                             <a href="contact.html" class="btn btn-primary me-3">無料相談する</a>
@@ -284,7 +296,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
                     <div class="footer-info">
-                        <img src="images/logo-white.png" alt="ふらっと法務事務所" class="footer-logo">
+                        <img src="images/logo-white.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="ふらっと法務事務所" class="footer-logo">
                         <p>〒100-0001<br>東京都千代田区千代田1-1-1<br>千代田ビル5階</p>
                         <p>TEL: 03-1234-5678<br>FAX: 03-1234-5679<br>Email: info@flatto-legal.co.jp</p>
                     </div>
@@ -292,6 +304,7 @@
                 <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
                     <div class="footer-links">
                         <h3>サイトマップ</h3>
+
                         <ul>
                             <li><a href="index.html">ホーム</a></li>
                             <li><a href="service.html">サービス</a></li>
@@ -304,6 +317,7 @@
                 <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
                     <div class="footer-links">
                         <h3>コンテンツ</h3>
+
                         <ul>
                             <li><a href="blog.html">案件紹介</a></li>
                             <li><a href="dictionary.html">用語集</a></li>
@@ -316,6 +330,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-links">
                         <h3>最新情報</h3>
+
                         <ul>
                             <li><a href="#">入札制度の最新動向</a></li>
                             <li><a href="#">官公庁入札情報まとめ</a></li>

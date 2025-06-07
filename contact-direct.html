@@ -389,6 +389,9 @@
             }
         }
     </style>
+<link rel="stylesheet" href="css/image-fix.css">
+<link rel="stylesheet" href="css/image-fallback.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- ヘッダー -->
@@ -396,7 +399,7 @@
         <div class="header-container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/logo.png" alt="ふらっと法務事務所ロゴ">
+                    <img src="images/logo.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="ふらっと法務事務所ロゴ">
                 </a>
             </div>
             <nav class="pc-nav">
@@ -448,6 +451,7 @@
                     <div class="col-lg-5 mb-4 mb-lg-0">
                         <div class="content-card">
                             <h3>お問い合わせ方法</h3>
+
                             <div class="contact-info">
                                 <div class="contact-info-item">
                                     <div class="contact-icon">
@@ -455,6 +459,7 @@
                                     </div>
                                     <div class="contact-text">
                                         <h4>お電話でのお問い合わせ</h4>
+
                                         <p>046-272-3357</p>
                                         <p>受付時間：平日 9:00〜18:00</p>
                                     </div>
@@ -465,6 +470,7 @@
                                     </div>
                                     <div class="contact-text">
                                         <h4>メールでのお問い合わせ</h4>
+
                                         <p>mail@flat-legal.com</p>
                                         <p>24時間受付・翌営業日以内に返信</p>
                                     </div>
@@ -475,6 +481,7 @@
                                     </div>
                                     <div class="contact-text">
                                         <h4>事務所所在地</h4>
+
                                         <p>〒242-0006<br>神奈川県大和市南林間6丁目4番26号</p>
                                     </div>
                                 </div>
@@ -487,6 +494,7 @@
                     <div class="col-lg-7">
                         <div class="content-card">
                             <h3>お問い合わせフォーム</h3>
+
                             <form id="contactForm">
                                 <div class="mb-3">
                                     <label for="companyName" class="form-label">会社名</label>
@@ -522,6 +530,7 @@
                                 </div>
                                 <div class="privacy-policy">
                                     <h4>個人情報の取り扱いについて</h4>
+
                                     <p>当事務所では、お問い合わせフォームでご提供いただいた個人情報を、お問い合わせへの対応のためにのみ利用し、それ以外の目的では利用いたしません。また、法令に基づく場合を除き、ご本人の同意なく第三者に提供することはありません。</p>
                                 </div>
                                 <div class="privacy-check mb-4">
@@ -544,28 +553,33 @@
         <section class="section-padding bg-light">
             <div class="container">
                 <h2 class="section-title">よくあるご質問</h2>
+
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="content-card">
                             <h3>Q. 初めての入札でも対応していただけますか？</h3>
+
                             <p>A. はい、もちろん対応しております。初めての入札でも安心してご相談ください。入札参加資格の取得から書類作成、入札戦略まで、初めての方にもわかりやすくサポートいたします。</p>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="content-card">
                             <h3>Q. 相談は無料ですか？</h3>
+
                             <p>A. はい、初回相談は無料です。お電話、メール、対面のいずれの方法でも無料でご相談いただけます。具体的なサービス提供の際には、事前にお見積りをご提示いたします。</p>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="content-card">
                             <h3>Q. 対応エリアはどこまでですか？</h3>
+
                             <p>A. 全国対応しております。電子入札の普及により、遠方のお客様でもサポート可能です。書類のやり取りはメールや郵送で行い、打ち合わせはオンラインでも対応しております。</p>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="content-card">
                             <h3>Q. 料金体系はどのようになっていますか？</h3>
+
                             <p>A. サービス内容によって料金が異なります。入札参加資格申請サポートは3万円〜、入札書類作成サポートは5万円〜、電子入札代行は2万円〜となっております。詳細はお問い合わせください。</p>
                         </div>
                     </div>
@@ -580,7 +594,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
                     <div class="footer-info">
-                        <img src="images/logo-white.png" alt="ふらっと法務事務所" class="footer-logo">
+                        <img src="images/logo-white.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="ふらっと法務事務所" class="footer-logo">
                         <p>〒242-0006<br>神奈川県大和市南林間6丁目4番26号</p>
                         <p>TEL: 046-272-3357<br>Email: mail@flat-legal.com</p>
                     </div>
@@ -588,6 +602,7 @@
                 <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
                     <div class="footer-links">
                         <h3>主要ページ</h3>
+
                         <ul>
                             <li><a href="index.html">ホーム</a></li>
                             <li><a href="service.html">サービス</a></li>
@@ -601,6 +616,7 @@
                 <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
                     <div class="footer-links">
                         <h3>サポートページ</h3>
+
                         <ul>
                             <li><a href="dictionary.html">用語集</a></li>
                             <li><a href="links.html">リンク集</a></li>
@@ -612,6 +628,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-links">
                         <h3>最新情報</h3>
+
                         <ul>
                             <li><a href="#">入札制度の最新動向</a></li>
                             <li><a href="#">官公庁入札情報まとめ</a></li>

@@ -59,14 +59,17 @@
       }
     }
     </script>
-<link href="css/privacy-mark.css" rel="stylesheet"/></head>
+<link href="css/privacy-mark.css" rel="stylesheet"/><link rel="stylesheet" href="css/image-fix.css">
+<link rel="stylesheet" href="css/image-fallback.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
 <body>
 <!-- ヘッダー -->
 <header class="header">
 <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
 <div class="container">
 <a class="navbar-brand" href="index.html">
-<img alt="ふらっと法務事務所" class="logo" src="images/flatto-logo-color.png"/>
+<img alt="ふらっと法務事務所" class="logo" src="images/flatto-logo-color.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)"/>
 </a>
 <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
 <span class="navbar-toggler-icon"></span>
@@ -118,7 +121,7 @@
 </div>
 <div class="col-lg-6">
 <div class="hero-image">
-<img alt="入札サポート" class="img-fluid" src="images/hero-image.jpg"/>
+<img alt="入札サポート" class="img-fluid" src="images/hero-image.jpg?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)"/>
 </div>
 </div>
 </div>
@@ -129,6 +132,7 @@
 <div class="container">
 <div class="section-header text-center">
 <h2 class="section-title">入札とは</h2>
+
 </div>
 <div class="row">
 <div class="col-lg-8 mx-auto">
@@ -146,6 +150,7 @@
 <div class="container">
 <div class="section-header text-center">
 <h2 class="section-title">当事務所の特徴</h2>
+
 </div>
 <div class="row">
 <div class="col-md-4">
@@ -154,6 +159,7 @@
 <i class="fas fa-balance-scale"></i>
 </div>
 <h3 class="feature-title">専門知識</h3>
+
 <p class="feature-text">行政書士として培った専門知識で、入札に関する複雑な手続きや書類作成を的確にサポートします。</p>
 </div>
 </div>
@@ -163,6 +169,7 @@
 <i class="fas fa-hands-helping"></i>
 </div>
 <h3 class="feature-title">丁寧なサポート</h3>
+
 <p class="feature-text">初めての方にもわかりやすく、一つひとつ丁寧に説明。不安や疑問を解消しながら進めます。</p>
 </div>
 </div>
@@ -172,6 +179,7 @@
 <i class="fas fa-trophy"></i>
 </div>
 <h3 class="feature-title">実績多数</h3>
+
 <p class="feature-text">これまで多くの中小企業の入札成功をサポート。その経験とノウハウを活かし、あなたの成功をバックアップします。</p>
 </div>
 </div>
@@ -183,12 +191,14 @@
 <div class="container">
 <div class="section-header text-center">
 <h2 class="section-title">3ステップで入札をサポート</h2>
+
 </div>
 <div class="row">
 <div class="col-md-4">
 <div class="step-item animate-on-scroll">
 <div class="step-number">STEP 1</div>
 <h3 class="step-title">ヒアリング・課題整理</h3>
+
 <p class="step-text">お客様の事業内容や強み、目標をしっかりとヒアリング。入札参加に向けた課題を整理し、最適なプランをご提案します。</p>
 </div>
 </div>
@@ -196,6 +206,7 @@
 <div class="step-item animate-on-scroll">
 <div class="step-number">STEP 2</div>
 <h3 class="step-title">入札準備・書類作成</h3>
+
 <p class="step-text">入札参加資格の取得から、必要書類の準備、申請書類の作成まで、煩雑な手続きを専門家がサポートします。</p>
 </div>
 </div>
@@ -203,6 +214,7 @@
 <div class="step-item animate-on-scroll">
 <div class="step-number">STEP 3</div>
 <h3 class="step-title">入札実施・フォローアップ</h3>
+
 <p class="step-text">実際の入札への参加から、落札後の契約手続き、さらには業務開始後のフォローアップまで一貫してサポートします。</p>
 </div>
 </div>
@@ -217,6 +229,7 @@
 <div class="container">
 <div class="section-header text-center">
 <h2 class="section-title">対象業種</h2>
+
 </div>
 <div class="row">
 <div class="col-6 col-md-3">
@@ -225,6 +238,7 @@
 <i class="fas fa-hard-hat"></i>
 </div>
 <h3 class="industry-name">建設業</h3>
+
 </div>
 </div>
 <div class="col-6 col-md-3">
@@ -233,6 +247,7 @@
 <i class="fas fa-industry"></i>
 </div>
 <h3 class="industry-name">製造業</h3>
+
 </div>
 </div>
 <div class="col-6 col-md-3">
@@ -241,6 +256,7 @@
 <i class="fas fa-laptop-code"></i>
 </div>
 <h3 class="industry-name">IT業界</h3>
+
 </div>
 </div>
 <div class="col-6 col-md-3">
@@ -249,6 +265,7 @@
 <i class="fas fa-concierge-bell"></i>
 </div>
 <h3 class="industry-name">サービス業</h3>
+
 </div>
 </div>
 <div class="col-6 col-md-3">
@@ -257,6 +274,7 @@
 <i class="fas fa-truck"></i>
 </div>
 <h3 class="industry-name">運送業</h3>
+
 </div>
 </div>
 <div class="col-6 col-md-3">
@@ -265,6 +283,7 @@
 <i class="fas fa-store"></i>
 </div>
 <h3 class="industry-name">小売業</h3>
+
 </div>
 </div>
 <div class="col-6 col-md-3">
@@ -273,6 +292,7 @@
 <i class="fas fa-utensils"></i>
 </div>
 <h3 class="industry-name">飲食業</h3>
+
 </div>
 </div>
 <div class="col-6 col-md-3">
@@ -281,6 +301,7 @@
 <i class="fas fa-ellipsis-h"></i>
 </div>
 <h3 class="industry-name">その他</h3>
+
 </div>
 </div>
 </div>
@@ -291,6 +312,7 @@
 <div class="container">
 <div class="section-header text-center">
 <h2 class="section-title">サービス対応範囲</h2>
+
 </div>
 <div class="row">
 <div class="col-lg-8 mx-auto">
@@ -310,6 +332,7 @@
 <div class="container">
 <div class="section-header text-center">
 <h2 class="section-title">お客様の声</h2>
+
 </div>
 <div class="row">
 <div class="col-md-6">
@@ -318,6 +341,7 @@
 <p class="testimonial-text">一年を通して売り上げが安定。閑散期の不安から解放されました。</p>
 <div class="testimonial-author">
 <h4 class="author-name">清掃関係業代表 A様</h4>
+
 </div>
 </div>
 </div>
@@ -328,6 +352,7 @@
 <p class="testimonial-text">安心してスタッフを雇えるようになり、受注も増えました。</p>
 <div class="testimonial-author">
 <h4 class="author-name">Webデザイン会社代表 Y様</h4>
+
 </div>
 </div>
 </div>
@@ -344,6 +369,7 @@
 <div class="row align-items-center">
 <div class="col-lg-8 mx-auto text-center">
 <h2 class="cta-title">まずは無料相談から</h2>
+
 <p class="cta-text">入札参加をお考えの方、お気軽にご相談ください。<br/>専門スタッフが丁寧にご対応いたします。</p>
 <a class="btn btn-light btn-lg" href="contact.html">無料相談のお申し込み</a>
 </div>
@@ -357,13 +383,14 @@
 <div class="row">
 <div class="col-md-4">
 <div class="footer-info">
-<img alt="ふらっと法務事務所" class="footer-logo mb-3" src="images/logo-white.png"/>
+<img alt="ふらっと法務事務所" class="footer-logo mb-3" src="images/logo-white.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)"/>
 <p>入札サポートを専門とする行政書士法人です。入札参加資格取得から落札までをトータルサポートします。</p>
-<div class="privacy-mark-container"><img alt="プライバシーマーク" class="privacy-mark" src="images/privacy-mark.png"/></div></div>
+<div class="privacy-mark-container"><img alt="プライバシーマーク" class="privacy-mark" src="images/privacy-mark.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)"/></div></div>
 </div>
 <div class="col-md-4">
 <div class="footer-links">
 <h3 class="footer-heading">サイトマップ</h3>
+
 <ul class="footer-nav">
 <li><a href="index.html">ホーム</a></li>
 <li><a href="service.html">サービス</a></li>
@@ -379,6 +406,7 @@
 <div class="col-md-4">
 <div class="footer-contact">
 <h3 class="footer-heading">お問い合わせ</h3>
+
 <p><i class="fas fa-map-marker-alt"></i> 〒XXX-XXXX<br/>神奈川県横浜市○○区△△町X-X-X</p>
 <p><i class="fas fa-phone"></i> TEL: 045-XXX-XXXX</p>
 <p><i class="fas fa-clock"></i> 営業時間: 平日9:00～18:00</p>

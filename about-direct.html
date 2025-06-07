@@ -383,6 +383,9 @@
             }
         }
     </style>
+<link rel="stylesheet" href="css/image-fix.css">
+<link rel="stylesheet" href="css/image-fallback.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- ヘッダー -->
@@ -390,7 +393,7 @@
         <div class="header-container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/logo.png" alt="ふらっと法務事務所ロゴ">
+                    <img src="images/logo.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="ふらっと法務事務所ロゴ">
                 </a>
             </div>
             <nav class="pc-nav">
@@ -439,10 +442,12 @@
         <section class="section-padding">
             <div class="container">
                 <h2 class="section-title">事務所理念</h2>
+
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <div class="content-card text-center">
                             <h3>「法的知識で、ビジネスの可能性を広げる」</h3>
+
                             <p class="mb-4">ふらっと法務事務所は、法的知識を活用して中小企業の皆様のビジネスチャンスを広げることを使命としています。特に公共入札の分野では、専門的なノウハウと経験を活かし、初めての方から大手企業まで、幅広くサポートしています。</p>
                             <p>私たちは単なる書類作成だけでなく、お客様のビジネス戦略に寄り添い、長期的な成功をサポートするパートナーでありたいと考えています。</p>
                         </div>
@@ -455,11 +460,13 @@
         <section class="section-padding bg-light">
             <div class="container">
                 <h2 class="section-title">代表者プロフィール</h2>
+
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="images/profile.jpg" alt="代表 塩澤康幸" class="profile-image">
+                        <img src="images/profile.jpg?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="代表 塩澤康幸" class="profile-image">
                         <div class="profile-info">
                             <h3 class="profile-name">塩澤 康幸</h3>
+
                             <p class="profile-position">代表行政書士</p>
                             <span class="profile-qualification">行政書士</span>
                             <span class="profile-qualification">宅地建物取引士</span>
@@ -468,9 +475,11 @@
                     <div class="col-md-8">
                         <div class="content-card">
                             <h3>経歴</h3>
+
                             <p>大学卒業後、大手建設会社で10年間勤務。主に公共工事の入札業務を担当し、数多くの案件で落札に貢献。その後、行政書士資格を取得し、2015年にふらっと法務事務所を設立。</p>
                             <p>建設業での経験を活かし、入札サポート業務を専門分野として確立。これまでに500件以上の入札をサポートし、高い落札率を誇る。</p>
                             <h3 class="mt-4">メッセージ</h3>
+
                             <p>「入札は難しい」というイメージをお持ちの方も多いと思います。確かに初めての方にとっては、手続きや書類作成は複雑に感じるかもしれません。しかし、適切なサポートがあれば、中小企業の皆様でも十分に公共入札で成功することができます。</p>
                             <p>私自身、建設会社時代に数多くの入札を経験し、その後行政書士として多くの企業様の入札をサポートしてきました。その経験とノウハウを活かし、皆様の入札成功をお手伝いします。まずはお気軽にご相談ください。</p>
                         </div>
@@ -483,6 +492,7 @@
         <section class="section-padding">
             <div class="container">
                 <h2 class="section-title">事務所概要</h2>
+
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="content-card">
@@ -525,16 +535,19 @@
                     <div class="col-lg-6">
                         <div class="content-card">
                             <h3>アクセス</h3>
+
                             <div class="map-container">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3246.2641383837!2d139.4641!3d35.4641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDI3JzUwLjgiTiAxMznCsDI3JzUwLjgiRQ!5e0!3m2!1sja!2sjp!4v1623345678901!5m2!1sja!2sjp" allowfullscreen="" loading="lazy"></iframe>
                             </div>
                             <div class="access-info">
                                 <h4>電車でお越しの場合</h4>
+
                                 <ul>
                                     <li>小田急江ノ島線「南林間駅」より徒歩8分</li>
                                 </ul>
                                 
                                 <h4>お車でお越しの場合</h4>
+
                                 <ul>
                                     <li>東名高速道路「横浜町田IC」より約15分</li>
                                     <li>事務所前に駐車場あり（要予約）</li>
@@ -553,6 +566,7 @@
                     <div class="col-lg-8">
                         <div class="content-card text-center">
                             <h2>入札でお悩みですか？</h2>
+
                             <p class="mb-4">入札参加資格の取得から落札までをトータルサポート。<br>初めての方でも安心してご相談いただけます。</p>
                             <div class="d-flex justify-content-center gap-3">
                                 <a href="contact.html" class="btn btn-primary">無料相談のお申し込み</a>
@@ -571,7 +585,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
                     <div class="footer-info">
-                        <img src="images/logo-white.png" alt="ふらっと法務事務所" class="footer-logo">
+                        <img src="images/logo-white.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="ふらっと法務事務所" class="footer-logo">
                         <p>〒242-0006<br>神奈川県大和市南林間6丁目4番26号</p>
                         <p>TEL: 046-272-3357<br>Email: mail@flat-legal.com</p>
                     </div>
@@ -579,6 +593,7 @@
                 <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
                     <div class="footer-links">
                         <h3>主要ページ</h3>
+
                         <ul>
                             <li><a href="index.html">ホーム</a></li>
                             <li><a href="service.html">サービス</a></li>
@@ -592,6 +607,7 @@
                 <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
                     <div class="footer-links">
                         <h3>サポートページ</h3>
+
                         <ul>
                             <li><a href="dictionary.html">用語集</a></li>
                             <li><a href="links.html">リンク集</a></li>
@@ -603,6 +619,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-links">
                         <h3>最新情報</h3>
+
                         <ul>
                             <li><a href="#">入札制度の最新動向</a></li>
                             <li><a href="#">官公庁入札情報まとめ</a></li>

@@ -345,6 +345,9 @@
             }
         }
     </style>
+<link rel="stylesheet" href="css/image-fix.css">
+<link rel="stylesheet" href="css/image-fallback.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- ヘッダー -->
@@ -352,7 +355,7 @@
         <div class="header-container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/logo.png" alt="ふらっと法務事務所ロゴ">
+                    <img src="images/logo.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="ふらっと法務事務所ロゴ">
                 </a>
             </div>
             <nav class="pc-nav">
@@ -403,10 +406,12 @@
                 <!-- 官公庁・自治体の入札情報 -->
                 <div class="link-category">
                     <h2 class="section-title">官公庁・自治体の入札情報</h2>
+
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="content-card">
                                 <h3>中央省庁</h3>
+
                                 <ul class="link-list">
                                     <li class="link-item">
                                         <div class="link-title">官公庁電子調達総合窓口</div>
@@ -439,6 +444,7 @@
                         <div class="col-lg-6">
                             <div class="content-card">
                                 <h3>地方自治体</h3>
+
                                 <ul class="link-list">
                                     <li class="link-item">
                                         <div class="link-title">東京都入札情報サービス</div>
@@ -476,10 +482,12 @@
                 <!-- 電子入札システム -->
                 <div class="link-category">
                     <h2 class="section-title">電子入札システム</h2>
+
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="content-card">
                                 <h3>全国共通システム</h3>
+
                                 <ul class="link-list">
                                     <li class="link-item">
                                         <div class="link-title">電子入札コアシステム</div>
@@ -505,6 +513,7 @@
                         <div class="col-lg-6">
                             <div class="content-card">
                                 <h3>電子証明書関連</h3>
+
                                 <ul class="link-list">
                                     <li class="link-item">
                                         <div class="link-title">公的個人認証サービス</div>
@@ -531,10 +540,12 @@
                 <!-- 入札関連法令・制度 -->
                 <div class="link-category">
                     <h2 class="section-title">入札関連法令・制度</h2>
+
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="content-card">
                                 <h3>法令・ガイドライン</h3>
+
                                 <ul class="link-list">
                                     <li class="link-item">
                                         <div class="link-title">会計法</div>
@@ -558,6 +569,7 @@
                         <div class="col-lg-6">
                             <div class="content-card">
                                 <h3>入札制度解説</h3>
+
                                 <ul class="link-list">
                                     <li class="link-item">
                                         <div class="link-title">公共調達の適正化について</div>
@@ -585,10 +597,12 @@
                 <!-- 入札情報サービス -->
                 <div class="link-category">
                     <h2 class="section-title">入札情報サービス</h2>
+
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="content-card">
                                 <h3>民間入札情報サービス</h3>
+
                                 <ul class="link-list">
                                     <li class="link-item">
                                         <div class="link-title">日本入札情報サービス</div>
@@ -614,6 +628,7 @@
                         <div class="col-lg-6">
                             <div class="content-card">
                                 <h3>入札支援ツール</h3>
+
                                 <ul class="link-list">
                                     <li class="link-item">
                                         <div class="link-title">入札価格シミュレーター</div>
@@ -648,6 +663,7 @@
                     <div class="col-lg-8">
                         <div class="content-card text-center">
                             <h2>入札でお悩みですか？</h2>
+
                             <p class="mb-4">入札参加資格の取得から落札までをトータルサポート。<br>初めての方でも安心してご相談いただけます。</p>
                             <div class="d-flex justify-content-center gap-3">
                                 <a href="contact.html" class="btn btn-primary">無料相談のお申し込み</a>
@@ -666,7 +682,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
                     <div class="footer-info">
-                        <img src="images/logo-white.png" alt="ふらっと法務事務所" class="footer-logo">
+                        <img src="images/logo-white.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="ふらっと法務事務所" class="footer-logo">
                         <p>〒242-0006<br>神奈川県大和市南林間6丁目4番26号</p>
                         <p>TEL: 046-272-3357<br>Email: mail@flat-legal.com</p>
                     </div>
@@ -674,6 +690,7 @@
                 <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
                     <div class="footer-links">
                         <h3>主要ページ</h3>
+
                         <ul>
                             <li><a href="index.html">ホーム</a></li>
                             <li><a href="service.html">サービス</a></li>
@@ -687,6 +704,7 @@
                 <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
                     <div class="footer-links">
                         <h3>サポートページ</h3>
+
                         <ul>
                             <li><a href="dictionary.html">用語集</a></li>
                             <li><a href="links.html">リンク集</a></li>
@@ -698,6 +716,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-links">
                         <h3>最新情報</h3>
+
                         <ul>
                             <li><a href="#">入札制度の最新動向</a></li>
                             <li><a href="#">官公庁入札情報まとめ</a></li>

@@ -60,14 +60,17 @@
       }
     }
     </script>
-<link href="css/privacy-mark.css" rel="stylesheet"/></head>
+<link href="css/privacy-mark.css" rel="stylesheet"/><link rel="stylesheet" href="css/image-fix.css">
+<link rel="stylesheet" href="css/image-fallback.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
 <body>
 <!-- ヘッダー -->
 <header class="header">
 <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
 <div class="container">
 <a class="navbar-brand" href="index.html">
-<img alt="ふらっと法務事務所" class="logo" src="images/flatto-logo-color.png"/>
+<img alt="ふらっと法務事務所" class="logo" src="images/flatto-logo-color.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)"/>
 </a>
 <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
 <span class="navbar-toggler-icon"></span>
@@ -123,15 +126,18 @@
 </div>
 <!-- アイキャッチ画像 -->
 <div class="blog-post-image">
-<img alt="2025年度 入札参加資格申請の変更点まとめ" class="img-fluid rounded" src="images/blog/blog-post1.jpg"/>
+<img alt="2025年度 入札参加資格申請の変更点まとめ" class="img-fluid rounded" src="images/blog/blog-post1.jpg?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)"/>
 </div>
 <!-- 記事本文 -->
 <div class="blog-post-content">
 <h2>はじめに</h2>
+
 <p>2025年度の入札参加資格申請の受付が各自治体で始まっています。今回の申請では、デジタル化の推進や行政手続きの効率化に伴い、いくつかの重要な変更点があります。この記事では、主な変更点と申請時の注意点をまとめました。</p>
 <h2>1. 電子申請の拡大</h2>
+
 <p>2025年度から、多くの自治体で電子申請が原則となりました。従来の紙ベースでの申請は一部の例外を除き廃止され、各自治体の電子申請システムを利用することが必須となっています。</p>
 <h3>主な変更点</h3>
+
 <ul>
 <li>全国の都道府県および政令指定都市では、電子申請が原則化</li>
 <li>中核市でも約80%が電子申請に移行</li>
@@ -139,11 +145,14 @@
 </ul>
 <div class="blog-post-notice">
 <h4><i class="fas fa-exclamation-circle"></i> 注意点</h4>
+
 <p>電子証明書の取得には1〜2週間程度かかります。申請期限に余裕をもって準備を始めましょう。</p>
 </div>
 <h2>2. 共通申請システムの導入</h2>
+
 <p>国土交通省が主導する「統一資格審査申請・調達情報検索サイト」が拡充され、多くの自治体がこのシステムに参加するようになりました。これにより、複数の自治体に対する申請手続きが効率化されています。</p>
 <h3>参加自治体</h3>
+
 <p>2025年5月現在、以下の自治体が共通申請システムに参加しています。</p>
 <ul>
 <li>関東地方：東京都、神奈川県、埼玉県、千葉県など</li>
@@ -151,11 +160,13 @@
 <li>その他地域：順次拡大中</li>
 </ul>
 <div class="blog-post-image">
-<img alt="共通申請システムのイメージ" class="img-fluid rounded" src="images/blog/common-application-system.jpg"/>
+<img alt="共通申請システムのイメージ" class="img-fluid rounded" src="images/blog/common-application-system.jpg?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)"/>
 <p class="image-caption">共通申請システムの画面イメージ</p>
 </div>
 <h2>3. 必要書類の変更</h2>
+
 <p>電子申請の拡大に伴い、提出書類にも変更があります。主な変更点は以下の通りです。</p>
+<div class="table-responsive">
 <div class="table-responsive">
 <table class="table table-bordered">
 <thead>
@@ -184,9 +195,12 @@
 </tbody>
 </table>
 </div>
+</div>
 <h2>4. 評価基準の見直し</h2>
+
 <p>多くの自治体で、入札参加資格の評価基準が見直されています。特に以下の点に注目が集まっています。</p>
 <h3>主な変更点</h3>
+
 <ul>
 <li><strong>SDGs対応</strong>：環境配慮や社会貢献活動の評価が強化</li>
 <li><strong>DX推進</strong>：デジタル技術の活用度合いが評価対象に</li>
@@ -200,7 +214,9 @@
 </blockquote>
 </div>
 <h2>5. 申請スケジュールの変更</h2>
+
 <p>多くの自治体で申請受付期間が変更されています。主要自治体の申請スケジュールは以下の通りです。</p>
+<div class="table-responsive">
 <div class="table-responsive">
 <table class="table table-bordered">
 <thead>
@@ -234,11 +250,14 @@
 </tbody>
 </table>
 </div>
+</div>
 <div class="blog-post-notice">
 <h4><i class="fas fa-exclamation-circle"></i> 重要</h4>
+
 <p>申請期間は自治体によって異なります。複数の自治体に申請する場合は、それぞれの期間を確認し、計画的に準備を進めましょう。</p>
 </div>
 <h2>まとめ：申請成功のためのポイント</h2>
+
 <ol>
 <li><strong>早めの準備</strong>：電子証明書の取得や必要書類の準備は早めに</li>
 <li><strong>システム環境の確認</strong>：電子申請に対応したPC環境を整える</li>
@@ -268,10 +287,11 @@
 <!-- 著者情報 -->
 <div class="blog-post-author-box">
 <div class="author-image">
-<img alt="山田 太郎" class="img-fluid rounded-circle" src="images/staff-1.jpg"/>
+<img alt="山田 太郎" class="img-fluid rounded-circle" src="images/staff-1.jpg?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)"/>
 </div>
 <div class="author-info">
 <h3 class="author-name">山田 太郎</h3>
+
 <p class="author-bio">ふらっと法務事務所代表。行政書士。入札参加資格申請や経営事項審査を専門とし、これまで多くの企業の公共事業参入をサポート。最新の制度変更にも精通している。</p>
 </div>
 </div>
@@ -296,16 +316,18 @@
 <!-- 関連記事 -->
 <div class="related-posts">
 <h3 class="related-posts-title">関連記事</h3>
+
 <div class="row">
 <div class="col-md-6">
 <div class="related-post-card">
 <div class="related-post-image">
 <a href="#">
-<img alt="入札参加資格申請書類の書き方完全ガイド" class="img-fluid rounded" src="images/blog/blog-post7-thumb.jpg"/>
+<img alt="入札参加資格申請書類の書き方完全ガイド" class="img-fluid rounded" src="images/blog/blog-post7-thumb.jpg?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)"/>
 </a>
 </div>
 <div class="related-post-content">
 <h4><a href="#">入札参加資格申請書類の書き方完全ガイド</a></h4>
+
 <span class="post-date">2025年3月15日</span>
 </div>
 </div>
@@ -314,11 +336,12 @@
 <div class="related-post-card">
 <div class="related-post-image">
 <a href="#">
-<img alt="自治体別 入札参加資格申請の違いと対策" class="img-fluid rounded" src="images/blog/blog-post8-thumb.jpg"/>
+<img alt="自治体別 入札参加資格申請の違いと対策" class="img-fluid rounded" src="images/blog/blog-post8-thumb.jpg?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)"/>
 </a>
 </div>
 <div class="related-post-content">
 <h4><a href="#">自治体別 入札参加資格申請の違いと対策</a></h4>
+
 <span class="post-date">2025年2月20日</span>
 </div>
 </div>
@@ -328,15 +351,17 @@
 <!-- コメントセクション -->
 <div class="blog-comments">
 <h3 class="comments-title">コメント <span class="comment-count">(2)</span></h3>
+
 <!-- コメントリスト -->
 <div class="comment-list">
 <div class="comment">
 <div class="comment-avatar">
-<img alt="鈴木 一郎" class="img-fluid rounded-circle" src="images/avatar-1.jpg"/>
+<img alt="鈴木 一郎" class="img-fluid rounded-circle" src="images/avatar-1.jpg?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)"/>
 </div>
 <div class="comment-content">
 <div class="comment-meta">
 <h4 class="comment-author">鈴木 一郎</h4>
+
 <span class="comment-date">2025年5月26日 10:15</span>
 </div>
 <div class="comment-text">
@@ -349,11 +374,12 @@
 </div>
 <div class="comment">
 <div class="comment-avatar">
-<img alt="田中 花子" class="img-fluid rounded-circle" src="images/avatar-2.jpg"/>
+<img alt="田中 花子" class="img-fluid rounded-circle" src="images/avatar-2.jpg?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)"/>
 </div>
 <div class="comment-content">
 <div class="comment-meta">
 <h4 class="comment-author">田中 花子</h4>
+
 <span class="comment-date">2025年5月27日 15:30</span>
 </div>
 <div class="comment-text">
@@ -368,6 +394,7 @@
 <!-- コメントフォーム -->
 <div class="comment-form">
 <h3 class="form-title">コメントを残す</h3>
+
 <form action="#" method="post">
 <div class="row">
 <div class="col-md-6">
@@ -412,6 +439,7 @@
 <!-- カテゴリー -->
 <div class="sidebar-widget">
 <h3 class="widget-title">カテゴリー</h3>
+
 <ul class="category-list">
 <li><a href="#">入札情報 <span class="count">(8)</span></a></li>
 <li><a href="#">電子入札 <span class="count">(5)</span></a></li>
@@ -424,37 +452,41 @@
 <!-- 人気記事 -->
 <div class="sidebar-widget">
 <h3 class="widget-title">人気記事</h3>
+
 <div class="popular-posts">
 <div class="popular-post">
 <div class="popular-post-image">
 <a href="blog-post2.html">
-<img alt="初めての電子入札で失敗しないためのポイント5選" class="img-fluid" src="images/blog/blog-post2-thumb.jpg"/>
+<img alt="初めての電子入札で失敗しないためのポイント5選" class="img-fluid" src="images/blog/blog-post2-thumb.jpg?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)"/>
 </a>
 </div>
 <div class="popular-post-content">
 <h4><a href="blog-post2.html">初めての電子入札で失敗しないためのポイント5選</a></h4>
+
 <span class="post-date">2025年5月18日</span>
 </div>
 </div>
 <div class="popular-post">
 <div class="popular-post-image">
 <a href="blog-post5.html">
-<img alt="入札価格の決め方 - 最低制限価格と予定価格の関係" class="img-fluid" src="images/blog/blog-post5-thumb.jpg"/>
+<img alt="入札価格の決め方 - 最低制限価格と予定価格の関係" class="img-fluid" src="images/blog/blog-post5-thumb.jpg?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)"/>
 </a>
 </div>
 <div class="popular-post-content">
 <h4><a href="blog-post5.html">入札価格の決め方 - 最低制限価格と予定価格の関係</a></h4>
+
 <span class="post-date">2025年4月25日</span>
 </div>
 </div>
 <div class="popular-post">
 <div class="popular-post-image">
 <a href="blog-post4.html">
-<img alt="【事例紹介】IT企業が初めての入札で成功した秘訣" class="img-fluid" src="images/blog/blog-post4-thumb.jpg"/>
+<img alt="【事例紹介】IT企業が初めての入札で成功した秘訣" class="img-fluid" src="images/blog/blog-post4-thumb.jpg?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)"/>
 </a>
 </div>
 <div class="popular-post-content">
 <h4><a href="blog-post4.html">【事例紹介】IT企業が初めての入札で成功した秘訣</a></h4>
+
 <span class="post-date">2025年5月3日</span>
 </div>
 </div>
@@ -463,6 +495,7 @@
 <!-- アーカイブ -->
 <div class="sidebar-widget">
 <h3 class="widget-title">アーカイブ</h3>
+
 <ul class="archive-list">
 <li><a href="#">2025年5月 <span class="count">(4)</span></a></li>
 <li><a href="#">2025年4月 <span class="count">(5)</span></a></li>
@@ -474,6 +507,7 @@
 <!-- タグクラウド -->
 <div class="sidebar-widget">
 <h3 class="widget-title">タグクラウド</h3>
+
 <div class="tag-cloud">
 <a class="tag" href="#">入札参加資格</a>
 <a class="tag" href="#">電子入札</a>
@@ -493,6 +527,7 @@
 <div class="sidebar-widget">
 <div class="sidebar-cta">
 <h3>入札サポートサービス</h3>
+
 <p>入札参加資格申請でお困りですか？専門スタッフがサポートします。</p>
 <a class="btn btn-primary btn-block" href="contact.html">無料相談はこちら</a>
 </div>
@@ -506,6 +541,7 @@
 <div class="container">
 <div class="cta-box">
 <h2 class="cta-title">無料相談のご案内</h2>
+
 <p class="cta-text">入札に関するお悩みやご質問は、無料相談をご利用ください。<br/>経験豊富な専門スタッフが丁寧にサポートいたします。</p>
 <div class="cta-buttons">
 <a class="btn btn-primary btn-lg" href="contact.html">無料相談のお申し込み</a>
@@ -520,17 +556,18 @@
 <div class="row">
 <div class="col-lg-4">
 <div class="footer-info">
-<img alt="ふらっと法務事務所" class="footer-logo" src="images/logo-white.png"/>
+<img alt="ふらっと法務事務所" class="footer-logo" src="images/logo-white.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)"/>
 <p>〒XXX-XXXX<br/>神奈川県横浜市○○区△△町X-X-X</p>
 <p>TEL: 045-XXX-XXXX</p>
 <p>営業時間: 平日9:00〜18:00</p>
-<div class="privacy-mark-container"><img alt="プライバシーマーク" class="privacy-mark" src="images/privacy-mark.png"/></div></div>
+<div class="privacy-mark-container"><img alt="プライバシーマーク" class="privacy-mark" src="images/privacy-mark.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)"/></div></div>
 </div>
 <div class="col-lg-8">
 <div class="row">
 <div class="col-md-4">
 <div class="footer-links">
 <h3>サイトマップ</h3>
+
 <ul>
 <li><a href="index.html">ホーム</a></li>
 <li><a href="service.html">サービス紹介</a></li>
@@ -544,6 +581,7 @@
 <div class="col-md-4">
 <div class="footer-links">
 <h3>会社情報</h3>
+
 <ul>
 <li><a href="about.html">会社概要</a></li>
 <li><a href="about.html#staff">スタッフ紹介</a></li>
@@ -554,6 +592,7 @@
 <div class="col-md-4">
 <div class="footer-links">
 <h3>お問い合わせ</h3>
+
 <ul>
 <li><a href="contact.html">無料相談</a></li>
 <li><a href="contact.html#document">資料請求</a></li>

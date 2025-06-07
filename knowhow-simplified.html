@@ -209,6 +209,9 @@
             }
         }
     </style>
+<link rel="stylesheet" href="css/image-fix.css">
+<link rel="stylesheet" href="css/image-fallback.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- ヘッダー -->
@@ -216,7 +219,7 @@
         <div class="header-container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/logo.png" alt="ふらっと法務事務所ロゴ">
+                    <img src="images/logo.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="ふらっと法務事務所ロゴ">
                 </a>
             </div>
             <nav class="pc-nav">
@@ -247,22 +250,26 @@
         <section class="section-padding">
             <div class="container">
                 <h2 class="section-title">はじめての入札</h2>
+
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="content-card">
                             <h3>入札とは何か</h3>
+
                             <p>入札とは、公共機関や民間企業が商品やサービスを調達する際に、複数の業者から見積もりを集め、最も条件の良い業者を選定する方法です。公共事業の場合、「公共工事の入札及び契約の適正化の促進に関する法律」などに基づき、公正かつ透明性の高い方法で業者が選定されます。</p>
-                            <img alt="入札のイメージ" class="img-fluid rounded mb-3" src="images/bid-illustration.jpg"/>
+                            <img alt="入札のイメージ" class="img-fluid rounded mb-3" src="images/bid-illustration.jpg?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)"/>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="content-card">
                             <h3>入札の種類</h3>
+
                             <ul class="feature-list">
                                 <li>
                                     <span class="feature-icon"><i class="fas fa-users"></i></span>
                                     <div class="feature-text">
                                         <h4>一般競争入札</h4>
+
                                         <p>参加資格を満たす全ての業者が参加できる入札方式</p>
                                     </div>
                                 </li>
@@ -270,6 +277,7 @@
                                     <span class="feature-icon"><i class="fas fa-user-check"></i></span>
                                     <div class="feature-text">
                                         <h4>指名競争入札</h4>
+
                                         <p>発注者が指名した業者のみが参加できる入札方式</p>
                                     </div>
                                 </li>
@@ -277,6 +285,7 @@
                                     <span class="feature-icon"><i class="fas fa-handshake"></i></span>
                                     <div class="feature-text">
                                         <h4>随意契約</h4>
+
                                         <p>競争入札によらず、発注者が任意に契約の相手方を選ぶ方式</p>
                                     </div>
                                 </li>
@@ -284,6 +293,7 @@
                                     <span class="feature-icon"><i class="fas fa-balance-scale"></i></span>
                                     <div class="feature-text">
                                         <h4>総合評価方式</h4>
+
                                         <p>価格だけでなく、技術力や実績なども評価する方式</p>
                                     </div>
                                 </li>
@@ -295,6 +305,7 @@
                     <div class="col-12">
                         <div class="content-card">
                             <h3>入札参加に必要なもの</h3>
+
                             <div class="row">
                                 <div class="col-md-6">
                                     <ul class="check-list">
@@ -331,10 +342,12 @@
         <section class="section-padding bg-light">
             <div class="container">
                 <h2 class="section-title">実践テクニック</h2>
+
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="content-card">
                             <h3>情報収集のコツ</h3>
+
                             <ul class="check-list">
                                 <li>
                                     <i class="fas fa-check-circle"></i>
@@ -358,6 +371,7 @@
                     <div class="col-lg-4">
                         <div class="content-card">
                             <h3>価格設定の戦略</h3>
+
                             <ul class="check-list">
                                 <li>
                                     <i class="fas fa-check-circle"></i>
@@ -381,6 +395,7 @@
                     <div class="col-lg-4">
                         <div class="content-card">
                             <h3>提案書作成のポイント</h3>
+
                             <ul class="check-list">
                                 <li>
                                     <i class="fas fa-check-circle"></i>
@@ -409,12 +424,15 @@
         <section class="section-padding">
             <div class="container">
                 <h2 class="section-title">よくある失敗と対策</h2>
+
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="content-card">
                             <h3>書類不備による失格</h3>
+
                             <p>入札書類の不備や記載ミスによる失格は最も多い失敗例です。特に初めての入札では、細かい規定や様式に不慣れなため発生しやすくなっています。</p>
                             <h4>対策</h4>
+
                             <ul class="check-list">
                                 <li>
                                     <i class="fas fa-check-circle"></i>
@@ -434,8 +452,10 @@
                     <div class="col-lg-6">
                         <div class="content-card">
                             <h3>価格設定ミス</h3>
+
                             <p>最低制限価格を下回る、または予定価格を上回る価格設定により、技術的には適格でも失格となるケースが少なくありません。</p>
                             <h4>対策</h4>
+
                             <ul class="check-list">
                                 <li>
                                     <i class="fas fa-check-circle"></i>
@@ -460,6 +480,7 @@
         <section class="section-padding bg-light">
             <div class="container">
                 <h2 class="section-title">お問い合わせ</h2>
+
                 <div class="row justify-content-center">
                     <div class="col-md-8 text-center">
                         <p class="mb-4">入札に関するご相談は無料で承っております。<br>お気軽にお問い合わせください。</p>
@@ -475,7 +496,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
-                    <img src="images/logo-white.png" alt="ふらっと法務事務所ロゴ" class="footer-logo">
+                    <img src="images/logo-white.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="ふらっと法務事務所ロゴ" class="footer-logo">
                     <div class="footer-info">
                         <p>〒242-0006<br>神奈川県大和市南林間6丁目4番26号</p>
                         <p>TEL: 046-272-3357</p>
@@ -485,6 +506,7 @@
                 <div class="col-lg-4">
                     <div class="footer-links">
                         <h3>主要ページ</h3>
+
                         <ul>
                             <li><a href="index.html">ホーム</a></li>
                             <li><a href="service.html">サービス</a></li>
@@ -499,6 +521,7 @@
                 <div class="col-lg-4">
                     <div class="footer-links">
                         <h3>関連情報</h3>
+
                         <ul>
                             <li><a href="dictionary.html">入札用語集</a></li>
                             <li><a href="links.html">リンク集</a></li>

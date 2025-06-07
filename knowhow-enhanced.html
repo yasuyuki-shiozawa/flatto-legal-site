@@ -183,6 +183,9 @@
     }
     </script>
 <<<<<<< HEAD
+<link rel="stylesheet" href="css/image-fix.css">
+<link rel="stylesheet" href="css/image-fallback.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- ヘッダー -->
@@ -190,7 +193,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
-                    <img src="images/logo.png" alt="ふらっと法務事務所" class="logo">
+                    <img src="images/logo.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="ふらっと法務事務所" class="logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -241,22 +244,26 @@
         <section class="section-padding">
             <div class="container">
                 <h2 class="section-title">はじめての入札</h2>
+
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="content-card">
                             <h3>入札とは何か</h3>
+
                             <p>入札とは、公共機関や民間企業が商品やサービスを調達する際に、複数の業者から見積もりを集め、最も条件の良い業者を選定する方法です。公共事業の場合、「公共工事の入札及び契約の適正化の促進に関する法律」などに基づき、公正かつ透明性の高い方法で業者が選定されます。</p>
-                            <img src="images/bid-illustration.jpg" alt="入札のイメージ" class="img-fluid rounded mb-3">
+                            <img src="images/bid-illustration.jpg?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="入札のイメージ" class="img-fluid rounded mb-3">
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="content-card">
                             <h3>入札の種類</h3>
+
                             <ul class="feature-list">
                                 <li>
                                     <span class="feature-icon"><i class="fas fa-users"></i></span>
                                     <div class="feature-text">
                                         <h4>一般競争入札</h4>
+
                                         <p>参加資格を満たす全ての業者が参加できる入札方式</p>
                                     </div>
                                 </li>
@@ -264,6 +271,7 @@
                                     <span class="feature-icon"><i class="fas fa-user-check"></i></span>
                                     <div class="feature-text">
                                         <h4>指名競争入札</h4>
+
                                         <p>発注者が指名した業者のみが参加できる入札方式</p>
                                     </div>
                                 </li>
@@ -271,6 +279,7 @@
                                     <span class="feature-icon"><i class="fas fa-handshake"></i></span>
                                     <div class="feature-text">
                                         <h4>随意契約</h4>
+
                                         <p>競争入札によらず、発注者が任意に契約の相手方を選ぶ方式</p>
                                     </div>
                                 </li>
@@ -278,6 +287,7 @@
                                     <span class="feature-icon"><i class="fas fa-balance-scale"></i></span>
                                     <div class="feature-text">
                                         <h4>総合評価方式</h4>
+
                                         <p>価格だけでなく、技術力や実績なども評価する方式</p>
                                     </div>
                                 </li>
@@ -289,6 +299,7 @@
                     <div class="col-12">
                         <div class="content-card">
                             <h3>入札参加に必要なもの</h3>
+
                             <div class="row">
                                 <div class="col-md-6">
                                     <ul class="check-list">
@@ -325,19 +336,22 @@
         <section class="section-padding bg-light">
             <div class="container">
                 <h2 class="section-title">高度な入札戦略（テスト）</h2>
+
                 <div class="row">
                     <div class="col-md-6">
                         <div class="content-card">
                             <h3>戦略的価格設定（テスト）</h3>
+
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                            <img src="images/bid-illustration.jpg" alt="戦略的価格設定イメージ（テスト）" class="img-fluid rounded mb-3">
+                            <img src="images/bid-illustration.jpg?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="戦略的価格設定イメージ（テスト）" class="img-fluid rounded mb-3">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="content-card">
                             <h3>競合分析と対策（テスト）</h3>
+
                             <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris.</p>
-                            <img src="images/bid-illustration.jpg" alt="競合分析イメージ（テスト）" class="img-fluid rounded mb-3">
+                            <img src="images/bid-illustration.jpg?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="競合分析イメージ（テスト）" class="img-fluid rounded mb-3">
                         </div>
                     </div>
                 </div>
@@ -348,6 +362,7 @@
         <section class="section-padding">
             <div class="container">
                 <h2 class="section-title">よくある質問（FAQ）</h2>
+
                 <div class="accordion" id="faqAccordion">
                     <div class="accordion-item">
                         <h3 class="accordion-header" id="headingOne">
@@ -429,8 +444,10 @@
         <section class="section-padding bg-light">
             <div class="container">
                 <h2 class="section-title">入札書類の分析（テスト）</h2>
+
                 <div class="content-card">
                     <h3>仕様書の読み解き方（テスト）</h3>
+
                     <p>Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi.</p>
                     <ul class="check-list">
                         <li><i class="fas fa-check-circle"></i> <span>テスト項目1: Lorem ipsum dolor sit amet.</span></li>
@@ -445,10 +462,12 @@
         <section class="section-padding">
             <div class="container">
                 <h2 class="section-title">入札用語集</h2>
+
                 <div class="row">
                     <div class="col-md-6">
                         <div class="glossary-card">
                             <h3 class="glossary-title">あ行</h3>
+
                             <dl class="glossary-list">
                                 <dt>一般競争入札</dt>
                                 <dd>参加資格を満たす全ての業者が参加できる入札方式</dd>
@@ -458,6 +477,7 @@
                         </div>
                         <div class="glossary-card">
                             <h3 class="glossary-title">か行</h3>
+
                             <dl class="glossary-list">
                                 <dt>競争入札</dt>
                                 <dd>複数の業者が価格などを競い合う入札方式</dd>
@@ -469,6 +489,7 @@
                     <div class="col-md-6">
                         <div class="glossary-card">
                             <h3 class="glossary-title">さ行</h3>
+
                             <dl class="glossary-list">
                                 <dt>最低制限価格</dt>
                                 <dd>これを下回る入札は失格となる下限価格</dd>
@@ -478,6 +499,7 @@
                         </div>
                         <div class="glossary-card">
                             <h3 class="glossary-title">た行</h3>
+
                             <dl class="glossary-list">
                                 <dt>低入札価格調査制度</dt>
                                 <dd>極端に低い価格の入札に対して調査を行う制度</dd>
@@ -494,10 +516,12 @@
         <section class="section-padding bg-light">
             <div class="container">
                 <h2 class="section-title">ミニケーススタディ（テスト）</h2>
+
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="case-study-card-mini">
                             <h4>ケース1：小規模工事の落札（テスト）</h4>
+
                             <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet...</p>
                             <a href="#" class="btn btn-outline-primary btn-sm">詳細（テスト）</a>
                         </div>
@@ -505,6 +529,7 @@
                     <div class="col-lg-4">
                         <div class="case-study-card-mini">
                             <h4>ケース2：物品納入の成功（テスト）</h4>
+
                             <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum...</p>
                             <a href="#" class="btn btn-outline-primary btn-sm">詳細（テスト）</a>
                         </div>
@@ -512,6 +537,7 @@
                     <div class="col-lg-4">
                         <div class="case-study-card-mini">
                             <h4>ケース3：長期契約の獲得（テスト）</h4>
+
                             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
                             <a href="#" class="btn btn-outline-primary btn-sm">詳細（テスト）</a>
                         </div>
@@ -525,6 +551,7 @@
             <div class="container">
                 <div class="cta-box">
                     <h2 class="cta-title">専門家に相談する</h2>
+
                     <p class="cta-text">入札に関するご不明点や具体的なサポートが必要な場合は、ぜひ専門家にご相談ください。<br>ふらっと法務事務所では、初めての方でも安心して入札に参加できるよう、丁寧にサポートいたします。</p>
                     <div class="cta-buttons">
                         <a href="contact.html" class="btn btn-primary btn-lg">無料相談のお申し込み</a>
@@ -541,7 +568,7 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="footer-info">
-                        <img src="images/logo-white.png" alt="ふらっと法務事務所" class="footer-logo">
+                        <img src="images/logo-white.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="ふらっと法務事務所" class="footer-logo">
                         <p>〒XXX-XXXX<br>神奈川県横浜市○○区△△町X-X-X</p>
                         <p>TEL: 045-XXX-XXXX</p>
                         <p>営業時間: 平日9:00〜18:00</p>
@@ -552,6 +579,7 @@
                         <div class="col-md-4">
                             <div class="footer-links">
                                 <h3>サイトマップ</h3>
+
                                 <ul>
                                     <li><a href="index.html">ホーム</a></li>
                                     <li><a href="service.html">サービス紹介</a></li>
@@ -565,6 +593,7 @@
                         <div class="col-md-4">
                             <div class="footer-links">
                                 <h3>会社情報</h3>
+
                                 <ul>
                                     <li><a href="about.html">会社概要</a></li>
                                     <li><a href="about.html#staff">スタッフ紹介</a></li>
@@ -575,6 +604,7 @@
                         <div class="col-md-4">
                             <div class="footer-links">
                                 <h3>お問い合わせ</h3>
+
                                 <ul>
                                     <li><a href="contact.html">無料相談</a></li>
                                     <li><a href="contact.html#document">資料請求</a></li>
@@ -607,14 +637,17 @@
     <script src="js/script.js"></script>
     <script>
 =======
-<link href="css/privacy-mark.css" rel="stylesheet"/></head>
+<link href="css/privacy-mark.css" rel="stylesheet"/><link rel="stylesheet" href="css/image-fix.css">
+<link rel="stylesheet" href="css/image-fallback.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
 <body>
 <!-- ヘッダー -->
 <header class="header">
 <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
 <div class="container">
 <a class="navbar-brand" href="index.html">
-<img alt="ふらっと法務事務所" class="logo" src="images/flatto-logo-color.png"/>
+<img alt="ふらっと法務事務所" class="logo" src="images/flatto-logo-color.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)"/>
 </a>
 <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
 <span class="navbar-toggler-icon"></span>
@@ -663,22 +696,26 @@
 <section class="section-padding">
 <div class="container">
 <h2 class="section-title">はじめての入札</h2>
+
 <div class="row">
 <div class="col-lg-6">
 <div class="content-card">
 <h3>入札とは何か</h3>
+
 <p>入札とは、公共機関や民間企業が商品やサービスを調達する際に、複数の業者から見積もりを集め、最も条件の良い業者を選定する方法です。公共事業の場合、「公共工事の入札及び契約の適正化の促進に関する法律」などに基づき、公正かつ透明性の高い方法で業者が選定されます。</p>
-<img alt="入札のイメージ" class="img-fluid rounded mb-3" src="images/bid-illustration.jpg"/>
+<img alt="入札のイメージ" class="img-fluid rounded mb-3" src="images/bid-illustration.jpg?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)"/>
 </div>
 </div>
 <div class="col-lg-6">
 <div class="content-card">
 <h3>入札の種類</h3>
+
 <ul class="feature-list">
 <li>
 <span class="feature-icon"><i class="fas fa-users"></i></span>
 <div class="feature-text">
 <h4>一般競争入札</h4>
+
 <p>参加資格を満たす全ての業者が参加できる入札方式</p>
 </div>
 </li>
@@ -686,6 +723,7 @@
 <span class="feature-icon"><i class="fas fa-user-check"></i></span>
 <div class="feature-text">
 <h4>指名競争入札</h4>
+
 <p>発注者が指名した業者のみが参加できる入札方式</p>
 </div>
 </li>
@@ -693,6 +731,7 @@
 <span class="feature-icon"><i class="fas fa-handshake"></i></span>
 <div class="feature-text">
 <h4>随意契約</h4>
+
 <p>競争入札によらず、発注者が任意に契約の相手方を選ぶ方式</p>
 </div>
 </li>
@@ -700,6 +739,7 @@
 <span class="feature-icon"><i class="fas fa-balance-scale"></i></span>
 <div class="feature-text">
 <h4>総合評価方式</h4>
+
 <p>価格だけでなく、技術力や実績なども評価する方式</p>
 </div>
 </li>
@@ -711,6 +751,7 @@
 <div class="col-12">
 <div class="content-card">
 <h3>入札参加に必要なもの</h3>
+
 <div class="row">
 <div class="col-md-6">
 <ul class="check-list">
@@ -746,19 +787,22 @@
 <section class="section-padding bg-light">
 <div class="container">
 <h2 class="section-title">高度な入札戦略（テスト）</h2>
+
 <div class="row">
 <div class="col-md-6">
 <div class="content-card">
 <h3>戦略的価格設定（テスト）</h3>
+
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-<img alt="戦略的価格設定イメージ（テスト）" class="img-fluid rounded mb-3" src="images/bid-illustration.jpg"/>
+<img alt="戦略的価格設定イメージ（テスト）" class="img-fluid rounded mb-3" src="images/bid-illustration.jpg?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)"/>
 </div>
 </div>
 <div class="col-md-6">
 <div class="content-card">
 <h3>競合分析と対策（テスト）</h3>
+
 <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris.</p>
-<img alt="競合分析イメージ（テスト）" class="img-fluid rounded mb-3" src="images/bid-illustration.jpg"/>
+<img alt="競合分析イメージ（テスト）" class="img-fluid rounded mb-3" src="images/bid-illustration.jpg?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)"/>
 </div>
 </div>
 </div>
@@ -768,6 +812,7 @@
 <section class="section-padding">
 <div class="container">
 <h2 class="section-title">よくある質問（FAQ）</h2>
+
 <div class="accordion" id="faqAccordion">
 <div class="accordion-item">
 <h3 class="accordion-header" id="headingOne">
@@ -848,8 +893,10 @@
 <section class="section-padding bg-light">
 <div class="container">
 <h2 class="section-title">入札書類の分析（テスト）</h2>
+
 <div class="content-card">
 <h3>仕様書の読み解き方（テスト）</h3>
+
 <p>Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi.</p>
 <ul class="check-list">
 <li><i class="fas fa-check-circle"></i> <span>テスト項目1: Lorem ipsum dolor sit amet.</span></li>
@@ -863,10 +910,12 @@
 <section class="section-padding">
 <div class="container">
 <h2 class="section-title">入札用語集</h2>
+
 <div class="row">
 <div class="col-md-6">
 <div class="glossary-card">
 <h3 class="glossary-title">あ行</h3>
+
 <dl class="glossary-list">
 <dt>一般競争入札</dt>
 <dd>参加資格を満たす全ての業者が参加できる入札方式</dd>
@@ -876,6 +925,7 @@
 </div>
 <div class="glossary-card">
 <h3 class="glossary-title">か行</h3>
+
 <dl class="glossary-list">
 <dt>競争入札</dt>
 <dd>複数の業者が価格などを競い合う入札方式</dd>
@@ -887,6 +937,7 @@
 <div class="col-md-6">
 <div class="glossary-card">
 <h3 class="glossary-title">さ行</h3>
+
 <dl class="glossary-list">
 <dt>最低制限価格</dt>
 <dd>これを下回る入札は失格となる下限価格</dd>
@@ -896,6 +947,7 @@
 </div>
 <div class="glossary-card">
 <h3 class="glossary-title">た行</h3>
+
 <dl class="glossary-list">
 <dt>低入札価格調査制度</dt>
 <dd>極端に低い価格の入札に対して調査を行う制度</dd>
@@ -911,10 +963,12 @@
 <section class="section-padding bg-light">
 <div class="container">
 <h2 class="section-title">ミニケーススタディ（テスト）</h2>
+
 <div class="row">
 <div class="col-lg-4">
 <div class="case-study-card-mini">
 <h4>ケース1：小規模工事の落札（テスト）</h4>
+
 <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet...</p>
 <a class="btn btn-outline-primary btn-sm" href="#">詳細（テスト）</a>
 </div>
@@ -922,6 +976,7 @@
 <div class="col-lg-4">
 <div class="case-study-card-mini">
 <h4>ケース2：物品納入の成功（テスト）</h4>
+
 <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum...</p>
 <a class="btn btn-outline-primary btn-sm" href="#">詳細（テスト）</a>
 </div>
@@ -929,6 +984,7 @@
 <div class="col-lg-4">
 <div class="case-study-card-mini">
 <h4>ケース3：長期契約の獲得（テスト）</h4>
+
 <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
 <a class="btn btn-outline-primary btn-sm" href="#">詳細（テスト）</a>
 </div>
@@ -941,6 +997,7 @@
 <div class="container">
 <div class="cta-box">
 <h2 class="cta-title">専門家に相談する</h2>
+
 <p class="cta-text">入札に関するご不明点や具体的なサポートが必要な場合は、ぜひ専門家にご相談ください。<br/>ふらっと法務事務所では、初めての方でも安心して入札に参加できるよう、丁寧にサポートいたします。</p>
 <div class="cta-buttons">
 <a class="btn btn-primary btn-lg" href="contact.html">無料相談のお申し込み</a>
@@ -956,17 +1013,18 @@
 <div class="row">
 <div class="col-lg-4">
 <div class="footer-info">
-<img alt="ふらっと法務事務所" class="footer-logo" src="images/logo-white.png"/>
+<img alt="ふらっと法務事務所" class="footer-logo" src="images/logo-white.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)"/>
 <p>〒XXX-XXXX<br/>神奈川県横浜市○○区△△町X-X-X</p>
 <p>TEL: 045-XXX-XXXX</p>
 <p>営業時間: 平日9:00〜18:00</p>
-<div class="privacy-mark-container"><img alt="プライバシーマーク" class="privacy-mark" src="images/privacy-mark.png"/></div></div>
+<div class="privacy-mark-container"><img alt="プライバシーマーク" class="privacy-mark" src="images/privacy-mark.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)"/></div></div>
 </div>
 <div class="col-lg-8">
 <div class="row">
 <div class="col-md-4">
 <div class="footer-links">
 <h3>サイトマップ</h3>
+
 <ul>
 <li><a href="index.html">ホーム</a></li>
 <li><a href="service.html">サービス紹介</a></li>
@@ -980,6 +1038,7 @@
 <div class="col-md-4">
 <div class="footer-links">
 <h3>会社情報</h3>
+
 <ul>
 <li><a href="about.html">会社概要</a></li>
 <li><a href="about.html#staff">スタッフ紹介</a></li>
@@ -990,6 +1049,7 @@
 <div class="col-md-4">
 <div class="footer-links">
 <h3>お問い合わせ</h3>
+
 <ul>
 <li><a href="contact.html">無料相談</a></li>
 <li><a href="contact.html#document">資料請求</a></li>

@@ -6,6 +6,9 @@
   <title>ふらっと法務事務所 | 入札サポート専門サイト</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="css/new-style.css">
+<link rel="stylesheet" href="css/image-fix.css">
+<link rel="stylesheet" href="css/image-fallback.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
   <!-- ヘッダー -->
@@ -13,7 +16,7 @@
     <div class="container header-container">
       <div class="logo">
         <a href="index.html">
-          <img src="images/logo.png" alt="ふらっと法務事務所ロゴ">
+          <img src="images/logo.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="ふらっと法務事務所ロゴ">
           <div class="logo-text">
             ふらっと法務事務所
             <span>入札サポート専門サイト</span>
@@ -63,6 +66,7 @@
   <section class="section">
     <div class="container">
       <h2 class="section-title text-center">入札とは</h2>
+
       <div class="row">
         <div class="col-8 offset-2">
           <p>入札とは、公共機関や民間企業が商品やサービスを調達する際に、複数の業者から見積もりを集め、最も条件の良い業者を選定する方法です。</p>
@@ -77,31 +81,35 @@
   <section class="section bg-light">
     <div class="container">
       <h2 class="section-title text-center">当事務所の特徴</h2>
+
       <div class="row">
         <div class="col-4">
           <div class="card h-100">
             <div class="card-icon text-center">
-              <img src="images/icon-knowledge.png" alt="専門知識アイコン">
+              <img src="images/icon-knowledge.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="専門知識アイコン">
             </div>
             <h3 class="card-title text-center">専門知識</h3>
+
             <p>行政書士として培った専門知識で、入札に関する複雑な手続きや書類作成を的確にサポートします。</p>
           </div>
         </div>
         <div class="col-4">
           <div class="card h-100">
             <div class="card-icon text-center">
-              <img src="images/icon-support.png" alt="丁寧なサポートアイコン">
+              <img src="images/icon-support.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="丁寧なサポートアイコン">
             </div>
             <h3 class="card-title text-center">丁寧なサポート</h3>
+
             <p>初めての方にもわかりやすく、一つひとつ丁寧に説明。不安や疑問を解消しながら進めます。</p>
           </div>
         </div>
         <div class="col-4">
           <div class="card h-100">
             <div class="card-icon text-center">
-              <img src="images/icon-achievement.png" alt="実績多数アイコン">
+              <img src="images/icon-achievement.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="実績多数アイコン">
             </div>
             <h3 class="card-title text-center">実績多数</h3>
+
             <p>これまで多くの中小企業の入札成功をサポート。その経験とノウハウを活かし、あなたの成功をバックアップします。</p>
           </div>
         </div>
@@ -113,6 +121,7 @@
   <section class="section">
     <div class="container">
       <h2 class="section-title text-center">3ステップで入札をサポート</h2>
+
       <div class="row mb-4">
         <div class="col-4">
           <div class="card">
@@ -120,6 +129,7 @@
               <div class="step-number">STEP 1</div>
             </div>
             <h3 class="card-title text-center">ヒアリング・課題整理</h3>
+
             <p>お客様の事業内容や強み、目標をしっかりとヒアリング。入札参加に向けた課題を整理し、最適なプランをご提案します。</p>
           </div>
         </div>
@@ -129,6 +139,7 @@
               <div class="step-number">STEP 2</div>
             </div>
             <h3 class="card-title text-center">入札準備・書類作成</h3>
+
             <p>入札参加資格の取得から、必要書類の準備、申請書類の作成まで、煩雑な手続きを専門家がサポートします。</p>
           </div>
         </div>
@@ -138,6 +149,7 @@
               <div class="step-number">STEP 3</div>
             </div>
             <h3 class="card-title text-center">入札実施・フォローアップ</h3>
+
             <p>実際の入札への参加から、落札後の契約手続き、さらには業務開始後のフォローアップまで一貫してサポートします。</p>
           </div>
         </div>
@@ -152,55 +164,64 @@
   <section class="section bg-light">
     <div class="container">
       <h2 class="section-title text-center">対象業種</h2>
+
       <div class="row">
         <div class="col-3">
           <div class="industry-item text-center">
-            <img src="images/industry-construction.png" alt="建設業アイコン">
+            <img src="images/industry-construction.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="建設業アイコン">
             <h4>建設業</h4>
+
           </div>
         </div>
         <div class="col-3">
           <div class="industry-item text-center">
-            <img src="images/industry-manufacturing.png" alt="製造業アイコン">
+            <img src="images/industry-manufacturing.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="製造業アイコン">
             <h4>製造業</h4>
+
           </div>
         </div>
         <div class="col-3">
           <div class="industry-item text-center">
-            <img src="images/industry-it.png" alt="IT業界アイコン">
+            <img src="images/industry-it.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="IT業界アイコン">
             <h4>IT業界</h4>
+
           </div>
         </div>
         <div class="col-3">
           <div class="industry-item text-center">
-            <img src="images/industry-service.png" alt="サービス業アイコン">
+            <img src="images/industry-service.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="サービス業アイコン">
             <h4>サービス業</h4>
+
           </div>
         </div>
       </div>
       <div class="row mt-4">
         <div class="col-3">
           <div class="industry-item text-center">
-            <img src="images/industry-transport.png" alt="運送業アイコン">
+            <img src="images/industry-transport.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="運送業アイコン">
             <h4>運送業</h4>
+
           </div>
         </div>
         <div class="col-3">
           <div class="industry-item text-center">
-            <img src="images/industry-retail.png" alt="小売業アイコン">
+            <img src="images/industry-retail.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="小売業アイコン">
             <h4>小売業</h4>
+
           </div>
         </div>
         <div class="col-3">
           <div class="industry-item text-center">
-            <img src="images/industry-food.png" alt="飲食業アイコン">
+            <img src="images/industry-food.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="飲食業アイコン">
             <h4>飲食業</h4>
+
           </div>
         </div>
         <div class="col-3">
           <div class="industry-item text-center">
-            <img src="images/industry-other.png" alt="その他アイコン">
+            <img src="images/industry-other.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="その他アイコン">
             <h4>その他</h4>
+
           </div>
         </div>
       </div>
@@ -211,6 +232,7 @@
   <section class="section">
     <div class="container">
       <h2 class="section-title text-center">サービス対応範囲</h2>
+
       <div class="row">
         <div class="col-8 offset-2 text-center">
           <p class="mb-4">全国対応可能（オンライン相談実施中）</p>
@@ -227,6 +249,7 @@
   <section class="section bg-light">
     <div class="container">
       <h2 class="section-title text-center">お客様の声</h2>
+
       <div class="row">
         <div class="col-6">
           <div class="testimonial-card">
@@ -258,7 +281,7 @@
       <div class="row">
         <div class="col-4">
           <div class="footer-logo">
-            <img src="images/logo-white.png" alt="ふらっと法務事務所ロゴ">
+            <img src="images/logo-white.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="ふらっと法務事務所ロゴ">
           </div>
           <div class="footer-contact">
             <p>行政書士法人ふらっと法務事務所</p>
@@ -269,6 +292,7 @@
         </div>
         <div class="col-4">
           <h4 class="text-light">サイトマップ</h4>
+
           <ul class="footer-menu">
             <li><a href="index.html">ホーム</a></li>
             <li><a href="service.html">サービス</a></li>
@@ -281,6 +305,7 @@
         </div>
         <div class="col-4">
           <h4 class="text-light">関連リンク</h4>
+
           <ul class="footer-menu">
             <li><a href="https://flat-legal.com" target="_blank">ふらっと法務事務所 本体サイト</a></li>
             <li><a href="links.html">入札関連リンク集</a></li>

@@ -6,6 +6,9 @@
   <title>会社案内 | ふらっと法務事務所 入札サポート専門サイト</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="css/new-style.css">
+<link rel="stylesheet" href="css/image-fix.css">
+<link rel="stylesheet" href="css/image-fallback.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
   <!-- ヘッダー -->
@@ -13,7 +16,7 @@
     <div class="container header-container">
       <div class="logo">
         <a href="index.html">
-          <img src="images/logo.png" alt="ふらっと法務事務所ロゴ">
+          <img src="images/logo.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="ふらっと法務事務所ロゴ">
           <div class="logo-text">
             ふらっと法務事務所
             <span>入札サポート専門サイト</span>
@@ -58,10 +61,12 @@
   <section class="section">
     <div class="container">
       <h2 class="section-title text-center">会社概要</h2>
+
       <div class="row">
         <div class="col-10 offset-1">
           <div class="company-info">
-            <table class="info-table">
+            <div class="table-responsive">
+<table class="info-table">
               <tr>
                 <th>名称</th>
                 <td>行政書士法人ふらっと法務事務所</td>
@@ -104,6 +109,7 @@
                 </td>
               </tr>
             </table>
+</div>
           </div>
         </div>
       </div>
@@ -114,10 +120,11 @@
   <section class="section bg-light">
     <div class="container">
       <h2 class="section-title text-center">事務所紹介</h2>
+
       <div class="row">
         <div class="col-5">
           <div class="office-image">
-            <img src="images/office.jpg" alt="ふらっと法務事務所外観">
+            <img src="images/office.jpg?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="ふらっと法務事務所外観">
           </div>
         </div>
         <div class="col-7">
@@ -136,10 +143,11 @@
   <section class="section">
     <div class="container">
       <h2 class="section-title text-center">代表者メッセージ</h2>
+
       <div class="row">
         <div class="col-4">
           <div class="representative-image">
-            <img src="images/representative.jpg" alt="代表 塩澤康幸">
+            <img src="images/representative.jpg?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="代表 塩澤康幸">
             <p class="text-center mt-2">代表 塩澤 康幸</p>
           </div>
         </div>
@@ -161,14 +169,16 @@
   <section class="section bg-light">
     <div class="container">
       <h2 class="section-title text-center">スタッフ紹介</h2>
+
       <div class="row">
         <div class="col-4">
           <div class="staff-card">
             <div class="staff-image">
-              <img src="images/staff-1.jpg" alt="スタッフ写真">
+              <img src="images/staff-1.jpg?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="スタッフ写真">
             </div>
             <div class="staff-info">
               <h3>山田 健太</h3>
+
               <p class="staff-position">行政書士</p>
               <p class="staff-description">建設業許可申請のスペシャリスト。建設業界での実務経験を活かし、建設関連の入札サポートを担当。</p>
             </div>
@@ -177,10 +187,11 @@
         <div class="col-4">
           <div class="staff-card">
             <div class="staff-image">
-              <img src="images/staff-2.jpg" alt="スタッフ写真">
+              <img src="images/staff-2.jpg?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="スタッフ写真">
             </div>
             <div class="staff-info">
               <h3>佐藤 美咲</h3>
+
               <p class="staff-position">行政書士</p>
               <p class="staff-description">IT業界出身。システム関連の入札や総合評価方式の提案書作成を得意としています。</p>
             </div>
@@ -189,10 +200,11 @@
         <div class="col-4">
           <div class="staff-card">
             <div class="staff-image">
-              <img src="images/staff-3.jpg" alt="スタッフ写真">
+              <img src="images/staff-3.jpg?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="スタッフ写真">
             </div>
             <div class="staff-info">
               <h3>鈴木 大輔</h3>
+
               <p class="staff-position">入札アドバイザー</p>
               <p class="staff-description">元自治体職員。公共調達の内部事情に精通し、戦略立案と価格設定のアドバイスを担当。</p>
             </div>
@@ -206,6 +218,7 @@
   <section class="section">
     <div class="container">
       <h2 class="section-title text-center">アクセス</h2>
+
       <div class="row">
         <div class="col-6">
           <div class="access-map">
@@ -215,9 +228,11 @@
         <div class="col-6">
           <div class="access-info">
             <h3>所在地</h3>
+
             <p>〒242-0006<br>神奈川県大和市南林間6丁目4番26号</p>
             
             <h3>アクセス方法</h3>
+
             <p><strong>電車でお越しの場合</strong></p>
             <ul>
               <li>小田急江ノ島線「南林間駅」より徒歩8分</li>
@@ -231,6 +246,7 @@
             </ul>
             
             <h3>営業時間</h3>
+
             <p>平日 9:00〜18:00（土日祝日休業）<br>※事前予約で時間外・休日対応可能</p>
           </div>
         </div>
@@ -244,6 +260,7 @@
       <div class="row">
         <div class="col-8 offset-2 text-center">
           <h2 class="text-light">入札でお悩みですか？</h2>
+
           <p class="text-light mb-4">ふらっと法務事務所の専門家が、あなたの入札成功をサポートします。まずは無料相談からお気軽にどうぞ。</p>
           <a href="contact.html" class="btn btn-accent btn-large">無料相談のお申し込み</a>
         </div>
@@ -257,7 +274,7 @@
       <div class="row">
         <div class="col-4">
           <div class="footer-logo">
-            <img src="images/logo-white.png" alt="ふらっと法務事務所ロゴ">
+            <img src="images/logo-white.png?v=1749198216" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="ふらっと法務事務所ロゴ">
           </div>
           <div class="footer-contact">
             <p>行政書士法人ふらっと法務事務所</p>
@@ -268,6 +285,7 @@
         </div>
         <div class="col-4">
           <h4 class="text-light">サイトマップ</h4>
+
           <ul class="footer-menu">
             <li><a href="index.html">ホーム</a></li>
             <li><a href="service.html">サービス</a></li>
@@ -281,6 +299,7 @@
         </div>
         <div class="col-4">
           <h4 class="text-light">関連リンク</h4>
+
           <ul class="footer-menu">
             <li><a href="https://flat-legal.com" target="_blank">ふらっと法務事務所 本体サイト</a></li>
             <li><a href="links.html">入札関連リンク集</a></li>

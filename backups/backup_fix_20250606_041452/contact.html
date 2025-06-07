@@ -1,0 +1,433 @@
+<!-- ふらっと法務事務所 - 統一ヘッダーテンプレート -->
+<!-- 作成日: 2025年6月6日 -->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ | ふらっと法務事務所 入札サポート専門サイト</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/unified-layout.css">
+    <link rel="stylesheet" href="css/new-style.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-container">
+                <!-- ロゴとサイトタイトル -->
+                <a href="index.html" class="site-logo">
+                    <img src="images/logo.png" alt="ふらっと法務事務所ロゴ">
+                    <div>
+                        <h1 class="site-title">ふらっと法務事務所</h1>
+                        <p class="site-subtitle">入札サポート専門サイト</p>
+                    </div>
+                </a>
+                
+                <!-- モバイルメニューボタン -->
+                <button class="mobile-nav-toggle" aria-label="メニュー">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <!-- ナビゲーションメニュー -->
+                <nav class="main-nav">
+                    <ul class="nav-list" id="main-menu">
+                        <li class="nav-item"><a href="index.html" class="nav-link ">ホーム</a></li>
+                        <li class="nav-item"><a href="service.html" class="nav-link ">サービス</a></li>
+                        <li class="nav-item"><a href="flow.html" class="nav-link ">ご利用の流れ</a></li>
+                        <li class="nav-item"><a href="knowhow.html" class="nav-link ">入札ノウハウ</a></li>
+                        <li class="nav-item"><a href="cases.html" class="nav-link ">成功事例</a></li>
+                        <li class="nav-item"><a href="blog.html" class="nav-link ">案件紹介</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link ">会社案内</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link active">お問い合わせ</a></li>
+                        <li class="nav-item"><a href="contact.html#free-consultation" class="nav-link nav-cta">無料相談</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <!-- ページヘッダー -->
+    <div class="page-header section-dark">
+        <div class="container">
+            <h1>お問い合わせ</h1>
+            <p>入札に関するご相談・お問い合わせはこちらから</p>
+        </div>
+    </div>
+    
+    <!-- メインコンテンツ -->
+    <main>
+
+    <div class="container section">
+        <!-- ページヘッダー -->
+  <section class="page-header bg-main">
+    <div class="container">
+      <h1 class="text-light">お問い合わせ</h1>
+      <p class="text-light">入札に関するご相談・お問い合わせはこちらから</p>
+    </div>
+  </section>
+
+  <!-- お問い合わせ概要 -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title text-center">お問い合わせ方法</h2>
+      <div class="row">
+        <div class="col-8 offset-2">
+          <p class="text-center">入札参加に関するご相談やお問い合わせは、以下のフォームまたはお電話・メールにてお気軽にご連絡ください。初回相談は無料です。</p>
+          <div class="contact-methods">
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i class="icon-phone"></i>
+              </div>
+              <div class="contact-info">
+                <h3>お電話でのお問い合わせ</h3>
+                <p class="contact-value">046-272-3357</p>
+                <p class="contact-note">受付時間：平日9:00〜18:00</p>
+              </div>
+            </div>
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i class="icon-mail"></i>
+              </div>
+              <div class="contact-info">
+                <h3>メールでのお問い合わせ</h3>
+                <p class="contact-value">mail@flat-legal.com</p>
+                <p class="contact-note">24時間受付・通常1営業日以内に返信</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- お問い合わせフォーム -->
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="section-title text-center">お問い合わせフォーム</h2>
+      <div class="row">
+        <div class="col-8 offset-2">
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <label for="name">お名前 <span class="required">必須</span></label>
+              <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="company">会社名 <span class="required">必須</span></label>
+              <input type="text" id="company" name="company" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">メールアドレス <span class="required">必須</span></label>
+              <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">電話番号</label>
+              <input type="tel" id="phone" name="phone" class="form-control">
+            </div>
+            
+            <div class="form-group">
+              <label for="inquiry-type">お問い合わせ内容 <span class="required">必須</span></label>
+              <select id="inquiry-type" name="inquiry-type" class="form-control" required>
+                <option value="">選択してください</option>
+                <option value="入札参加資格取得について">入札参加資格取得について</option>
+                <option value="入札書類作成について">入札書類作成について</option>
+                <option value="入札情報収集・分析について">入札情報収集・分析について</option>
+                <option value="入札戦略立案について">入札戦略立案について</option>
+                <option value="料金について">料金について</option>
+                <option value="その他">その他</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">お問い合わせ詳細 <span class="required">必須</span></label>
+              <textarea id="message" name="message" class="form-control" rows="6" required></textarea>
+            </div>
+            
+            <div class="form-group privacy-policy">
+              <input type="checkbox" id="privacy" name="privacy" required>
+              <label for="privacy">個人情報保護方針に同意する <span class="required">必須</span></label>
+              <p><a href="#privacy-modal" data-toggle="modal">個人情報保護方針を読む</a></p>
+            </div>
+            
+            <div class="form-submit text-center">
+              <button type="submit" class="btn btn-primary btn-large">送信する</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- よくある質問 -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title text-center">よくある質問</h2>
+      <div class="row">
+        <div class="col-10 offset-1">
+          <div class="faq-list">
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>初めて入札に参加したいのですが、何から始めればよいですか？</h3>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>まずは入札参加資格の取得から始める必要があります。自治体や官公庁ごとに申請方法や必要書類が異なりますので、当事務所では、ご希望の発注機関に合わせた資格取得をサポートいたします。まずはお気軽にご相談ください。</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>入札サポートの費用はどのくらいかかりますか？</h3>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>入札サポートの費用は、サポート内容や案件の規模によって異なります。入札参加資格取得のみのサポートから、情報収集・分析、書類作成、戦略立案まで含めたフルサポートまで、お客様のニーズに合わせたプランをご用意しています。詳細な料金については、お問い合わせいただければ、具体的なお見積りをご提示いたします。</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>地方在住ですが、サポートは可能ですか？</h3>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>はい、可能です。当事務所では、オンラインでの打ち合わせやメール・電話でのやり取りを活用し、全国のお客様をサポートしています。書類のやり取りも電子メールやクラウドストレージを活用して行いますので、地理的な制約なくサービスをご利用いただけます。</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>入札に参加するための条件はありますか？</h3>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>入札参加には、一般的に以下の条件があります：<br>
+                1. 入札参加資格の取得（各発注機関ごとに申請が必要）<br>
+                2. 業種ごとに必要な許認可の取得（建設業許可など）<br>
+                3. 一定期間の事業実績（案件によって異なる）<br>
+                4. 財務状況の健全性<br>
+                具体的な条件は案件によって異なりますので、ご興味のある分野についてご相談いただければ、詳細をご案内いたします。</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>入札の成功率はどのくらいですか？</h3>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>当事務所がサポートした入札案件の平均成功率は約75〜85%です（業種によって異なります）。特に、入札情報の徹底分析と戦略的な価格設定、質の高い提案書作成により、高い成功率を実現しています。ただし、入札は競争性のある制度ですので、100%の保証はできない点をご了承ください。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section bg-main">
+    <div class="container">
+      <div class="row">
+        <div class="col-8 offset-2 text-center">
+          <h2 class="text-light">まずは無料相談から</h2>
+          <p class="text-light mb-4">ふらっと法務事務所の専門家が、あなたの入札成功をサポートします。お気軽にご相談ください。</p>
+          <div class="cta-buttons">
+            <a href="tel:046-272-3357" class="btn btn-light btn-large mr-3">電話で相談する</a>
+            <a href="#contact-form" class="btn btn-accent btn-large">フォームで相談する</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+    </div>
+    </main>
+    
+    <!-- フッター -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-container">
+                <!-- 会社情報 -->
+                <div class="footer-section">
+                    <h3 class="footer-title">ふらっと法務事務所</h3>
+                    <div class="footer-contact">
+                        <p>〒242-0006<br>神奈川県大和市南林間6丁目4番26号</p>
+                        <p>TEL: 046-272-3357</p>
+                        <p>Email: mail@flat-legal.com</p>
+                        <p>営業時間: 平日 9:00〜18:00</p>
+                    </div>
+                </div>
+                
+                <!-- サービスメニュー -->
+                <div class="footer-section">
+                    <h3 class="footer-title">サービス</h3>
+                    <ul class="footer-nav">
+                        <li><a href="service.html#qualification">入札参加資格取得支援</a></li>
+                        <li><a href="service.html#document">入札書類作成支援</a></li>
+                        <li><a href="service.html#strategy">入札戦略立案</a></li>
+                        <li><a href="service.html#information">入札情報収集・分析</a></li>
+                        <li><a href="service.html#permit">各種許認可申請</a></li>
+                    </ul>
+                </div>
+                
+                <!-- サイトマップ -->
+                <div class="footer-section">
+                    <h3 class="footer-title">サイトマップ</h3>
+                    <ul class="footer-nav">
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="service.html">サービス</a></li>
+                        <li><a href="flow.html">ご利用の流れ</a></li>
+                        <li><a href="knowhow.html">入札ノウハウ</a></li>
+                        <li><a href="cases.html">成功事例</a></li>
+                        <li><a href="blog.html">案件紹介</a></li>
+                        <li><a href="about.html">会社案内</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 関連情報 -->
+                <div class="footer-section">
+                    <h3 class="footer-title">関連情報</h3>
+                    <ul class="footer-nav">
+                        <li><a href="links.html">リンク集</a></li>
+                        <li><a href="dictionary.html">入札用語集</a></li>
+                        <li><a href="contact.html#faq">よくある質問</a></li>
+                        <li><a href="contact.html#privacy-policy">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- コピーライト -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 行政書士法人ふらっと法務事務所 All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script>
+        // モバイルメニュートグル
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileToggle = document.querySelector('.mobile-nav-toggle');
+            const mainMenu = document.getElementById('main-menu');
+            
+            if (mobileToggle && mainMenu) {
+                mobileToggle.addEventListener('click', function() {
+                    mainMenu.classList.toggle('active');
+                    const isExpanded = mainMenu.classList.contains('active');
+                    mobileToggle.setAttribute('aria-expanded', isExpanded);
+                });
+            }
+            
+            // アコーディオン機能
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    const accordionBody = this.nextElementSibling;
+                    if (accordionBody) {
+                        accordionBody.classList.toggle('active');
+                    }
+                });
+            });
+            
+            // タブ機能
+            const tabLinks = document.querySelectorAll('.tab-nav-link');
+            tabLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // すべてのタブとコンテンツを非アクティブにする
+                    document.querySelectorAll('.tab-nav-link').forEach(el => {
+                        el.classList.remove('active');
+                    });
+                    document.querySelectorAll('.tab-pane').forEach(el => {
+                        el.classList.remove('active');
+                    });
+                    
+                    // クリックされたタブとそれに対応するコンテンツをアクティブにする
+                    this.classList.add('active');
+                    const target = this.getAttribute('href');
+                    if (target) {
+                        const targetContent = document.querySelector(target);
+                        if (targetContent) {
+                            targetContent.classList.add('active');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // モバイルメニュートグル
+      const menuToggle = document.getElementById('menu-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      
+      if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function() {
+          navMenu.classList.toggle('active');
+          menuToggle.classList.toggle('active');
+        });
+      }
+      
+      // FAQトグル
+      const faqItems = document.querySelectorAll('.faq-question');
+      
+      faqItems.forEach(item => {
+        item.addEventListener('click', function() {
+          const parent = this.parentElement;
+          parent.classList.toggle('active');
+          
+          const toggle = this.querySelector('.faq-toggle');
+          if (toggle) {
+            toggle.textContent = parent.classList.contains('active') ? '-' : '+';
+          }
+        });
+      });
+      
+      // モーダル
+      const modal = document.getElementById('privacy-modal');
+      const modalLinks = document.querySelectorAll('a[href="#privacy-modal"]');
+      const closeModal = document.querySelector('.close-modal');
+      
+      modalLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          modal.style.display = 'block';
+        });
+      });
+      
+      if (closeModal) {
+        closeModal.addEventListener('click', function() {
+          modal.style.display = 'none';
+        });
+      }
+      
+      window.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+      
+      // フォーム送信
+      const contactForm = document.getElementById('contact-form');
+      
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          alert('お問い合わせありがとうございます。内容を確認の上、担当者より連絡いたします。');
+          contactForm.reset();
+        });
+      }
+    });
+  </script>
+</body>
+</html>
