@@ -1,0 +1,11 @@
+<!-- CTAコンポーネント -->
+<div class="cta-container {% if include.style %}{{ include.style }}{% endif %}">
+  <h2>{{ include.title }}</h2>
+  <p>{{ include.description }}</p>
+  <div class="cta-buttons">
+    <a href="/flatto-legal-site{{ include.button_url }}" class="btn btn-primary">{{ include.button_text }}</a>
+    {% if include.secondary_button_text and include.secondary_button_url %}
+    <a href="/flatto-legal-site{{ include.secondary_button_url }}" class="btn btn-secondary">{{ include.secondary_button_text }}</a>
+    {% endif %}
+  </div>
+</div>

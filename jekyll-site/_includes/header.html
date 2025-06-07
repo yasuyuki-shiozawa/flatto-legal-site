@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/header-footer-enhanced.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/page-layout-enhanced.css' | relative_url }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="{{ '/assets/images/icons/favicon.png' | relative_url }}" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  {% seo %}
+</head>
+<body class="{% if page.layout %}layout-{{ page.layout }}{% endif %} {% if page.page_class %}{{ page.page_class }}{% endif %}">
+  
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <a href="{{ '/' | relative_url }}">
+            <img src="{{ '/assets/images/logos/flatto_legal_logo.png' | relative_url }}" alt="{{ site.title }}" width="200" height="60">
+          </a>
+        </div>
+        <nav class="main-nav">
+          <button class="menu-toggle" aria-expanded="false">
+            <span class="sr-only">メニュー</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <ul class="nav-menu">
+            <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}><i class="fas fa-home fa-fw"></i> ホーム</a></li>
+            <li><a href="{{ '/service' | relative_url }}" {% if page.url contains '/service' %}class="active"{% endif %}><i class="fas fa-briefcase fa-fw"></i> サービス紹介</a></li>
+            <li><a href="{{ '/flow' | relative_url }}" {% if page.url contains '/flow' %}class="active"{% endif %}><i class="fas fa-stream fa-fw"></i> ご利用の流れ</a></li>
+            <li><a href="{{ '/knowhow' | relative_url }}" {% if page.url contains '/knowhow' %}class="active"{% endif %}><i class="fas fa-lightbulb fa-fw"></i> 入札ノウハウ</a></li>
+            <li><a href="{{ '/cases' | relative_url }}" {% if page.url contains '/cases' %}class="active"{% endif %}><i class="fas fa-trophy fa-fw"></i> 成功事例</a></li>
+            <li><a href="{{ '/blog' | relative_url }}" {% if page.url contains '/blog' %}class="active"{% endif %}><i class="fas fa-newspaper fa-fw"></i> 案件紹介</a></li>
+            <li><a href="{{ '/about' | relative_url }}" {% if page.url contains '/about' %}class="active"{% endif %}><i class="fas fa-building fa-fw"></i> 会社案内</a></li>
+            <li><a href="{{ '/contact' | relative_url }}" {% if page.url contains '/contact' %}class="active"{% endif %}><i class="fas fa-envelope fa-fw"></i> お問い合わせ</a></li>
+            <li><a href="{{ '/links' | relative_url }}" {% if page.url contains '/links' %}class="active"{% endif %}><i class="fas fa-link fa-fw"></i> リンク集</a></li>
+            <li><a href="{{ '/dictionary' | relative_url }}" {% if page.url contains '/dictionary' %}class="active"{% endif %}><i class="fas fa-book fa-fw"></i> 用語集</a></li>
+          </ul>
+          <div class="contact-button">
+            <a href="{{ '/contact' | relative_url }}"><i class="fas fa-headset"></i> 無料相談</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>

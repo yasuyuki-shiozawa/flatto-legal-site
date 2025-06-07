@@ -1,0 +1,54 @@
+---
+layout: default
+---
+<div class="service-item">
+  <div class="container">
+    <div class="service-header">
+      <h1>{{ page.title }}</h1>
+      {% if page.description %}
+        <p class="service-description">{{ page.description }}</p>
+      {% endif %}
+    </div>
+    
+    <div class="service-content">
+      {{ content }}
+    </div>
+    
+    {% if page.features %}
+      <div class="service-features">
+        <h2>サービスの特徴</h2>
+        <div class="feature-grid">
+          {% for feature in page.features %}
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-{{ feature.icon }}"></i>
+              </div>
+              <h3>{{ feature.title }}</h3>
+              <p>{{ feature.description }}</p>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+    
+    {% if page.pricing %}
+      <div class="service-pricing">
+        <h2>料金プラン</h2>
+        <div class="pricing-table">
+          {% for plan in page.pricing %}
+            <div class="pricing-plan">
+              <h3>{{ plan.name }}</h3>
+              <div class="plan-price">{{ plan.price }}</div>
+              <ul class="plan-features">
+                {% for feature in plan.features %}
+                  <li>{{ feature }}</li>
+                {% endfor %}
+              </ul>
+              <a href="{{ plan.button_url | relative_url }}" class="btn btn-primary">{{ plan.button_text }}</a>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>

@@ -1,0 +1,21 @@
+source "https://rubygems.org"
+
+gem "jekyll", "~> 4.4.1"
+
+# プラグイン
+group :jekyll_plugins do
+  gem "jekyll-seo-tag"
+  gem "jekyll-sitemap"
+end
+
+# Windows と JRuby は tzinfo-data gem が必要
+platforms :mingw, :x64_mingw, :mswin, :jruby do
+  gem "tzinfo", ">= 1"
+  gem "tzinfo-data"
+end
+
+# Windows では wdm gem が必要
+gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
+
+# ロックファイルの互換性
+gem "webrick", "~> 1.7"

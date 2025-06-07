@@ -1,0 +1,2 @@
+document.addEventListener('DOMContentLoaded', function() { var images = document.querySelectorAll('img'); images.forEach(function(img) { img.onerror = function() { this.classList.add('error'); var src = this.getAttribute('src'); var filename = src.substring(src.lastIndexOf('/') + 1); if (filename.includes('icon-') || filename.includes('industry-')) { var nextElement = this.nextElementSibling; if (nextElement && nextElement.classList.contains('image-fallback')) { nextElement.style.display = 'inline-block'; } this.style.display = 'none'; } }; });
+});

@@ -1,0 +1,12 @@
+# 最小構成テスト用設定
+title: テストサイト
+baseurl: ""
+url: ""
+
+# ビルド設定
+markdown: kramdown
+permalink: pretty
+
+# インクルードディレクトリ
+include:
+  - _pages
