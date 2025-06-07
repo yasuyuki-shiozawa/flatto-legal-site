@@ -1,4 +1,4 @@
-/* Font Awesomeフォールバック */
+/* Font Awesomeフォールバック強化 */
 .image-fallback {
     display: inline-block;
     text-align: center;
@@ -10,6 +10,7 @@
     background-color: #f8f9fa;
     border-radius: 50%;
     margin-bottom: 1rem;
+    border: 1px solid #dee2e6;
 }
 
 /* 特定のアイコンのフォールバック */
@@ -80,11 +81,42 @@
     font-weight: 900;
 }
 
-/* 画像読み込みエラー時のフォールバック表示 */
+/* 画像読み込みエラー時のフォールバック表示 - 強化版 */
 img.error + .image-fallback {
-    display: inline-block;
+    display: inline-block !important;
 }
 
 img:not(.error) + .image-fallback {
-    display: none;
+    display: none !important;
+}
+
+/* アイコンプレースホルダーのスタイル */
+.icon-placeholder {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    background-color: #f8f9fa;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 64px;
+    color: #1a4b84;
+    font-weight: bold;
+    border: 1px solid #dee2e6;
+    margin-bottom: 1rem;
+}
+
+/* 特徴セクションのアイコン強制表示 */
+.feature-icon {
+    display: block !important;
+    margin: 0 auto 1rem auto;
+    width: 64px;
+    height: 64px;
+}
+
+/* 業種アイコンの強制表示 */
+.industry-icon {
+    display: block !important;
+    margin: 0 auto 1rem auto;
+    width: 64px;
+    height: 64px;
 }
