@@ -2,56 +2,53 @@
 <!-- 作成日: 2025年6月6日 -->
 
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-    <meta>
-    <meta>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>入札ノウハウ | ふらっと法務事務所 入札サポート専門サイト</title>
-    <link>
-    <link>
-    <link>
-    <link>
-<link>
-<link>
-<link>
-<link>
-    <link>
-    <link>
-    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/unified-layout.css">
+    <link rel="stylesheet" href="css/new-style.css">
+<link rel="stylesheet" href="css/image-fix.css">
+<link rel="stylesheet" href="css/image-fallback.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/font-awesome-fallback.css">
     <link rel="stylesheet" href="css/inline-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></head>
+    </head>
 <body>
     <!-- ヘッダー -->
-    <header>
-        <div>
-            <div>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-container">
                 <!-- ロゴとサイトタイトル -->
-                <a>
-                    <img>
+                <a href="index.html" class="site-logo">
+                    <img src="https://yasuyuki-shiozawa.github.io/flatto-legal-site/images/logo.png?v=1749255136" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="ふらっと法務事務所ロゴ">
                     <div>
-                        <h>ふらっと法務事務所</h1>
-                        <p>入札サポート専門サイト</p>
+                        <h1 class="site-title">ふらっと法務事務所</h1>
+                        <p class="site-subtitle">入札サポート専門サイト</p>
                     </div>
                 </a>
                 
                 <!-- モバイルメニューボタン -->
-                <button>
-                    <i></i>
+                <button class="mobile-nav-toggle" aria-label="メニュー">
+                    <i class="fas fa-bars"></i>
                 </button>
                 
                 <!-- ナビゲーションメニュー -->
-                <nav>
-                    <ul>
-                        <li><a>ホーム</a></li>
-                        <li><a>サービス</a></li>
-                        <li><a>ご利用の流れ</a></li>
-                        <li><a>入札ノウハウ</a></li>
-                        <li><a>成功事例</a></li>
-                        <li><a>案件紹介</a></li>
-                        <li><a>会社案内</a></li>
-                        <li><a>お問い合わせ</a></li>
-                        <li><a>無料相談</a></li>
+                <nav class="main-nav">
+                    <ul class="nav-list" id="main-menu">
+                        <li class="nav-item"><a href="index.html" class="nav-link ">ホーム</a></li>
+                        <li class="nav-item"><a href="service.html" class="nav-link ">サービス</a></li>
+                        <li class="nav-item"><a href="flow.html" class="nav-link ">ご利用の流れ</a></li>
+                        <li class="nav-item"><a href="knowhow.html" class="nav-link active">入札ノウハウ</a></li>
+                        <li class="nav-item"><a href="cases.html" class="nav-link ">成功事例</a></li>
+                        <li class="nav-item"><a href="blog.html" class="nav-link ">案件紹介</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link ">会社案内</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link ">お問い合わせ</a></li>
+                        <li class="nav-item"><a href="contact.html#free-consultation" class="nav-link nav-cta">無料相談</a></li>
                     </ul>
                 </nav>
             </div>
@@ -59,9 +56,9 @@
     </header>
     
     <!-- ページヘッダー -->
-    <div>
-        <div>
-            <h>入札ノウハウ</h1>
+    <div class="page-header section-dark">
+        <div class="container">
+            <h1>入札ノウハウ</h1>
             <p>入札成功のための専門知識と実践テクニック</p>
         </div>
     </div>
@@ -69,22 +66,22 @@
     <!-- メインコンテンツ -->
     <main>
 
-    <div>
+    <div class="container section">
         <!-- ページヘッダー -->
-  <section>
-    <div>
-      <h>入札ノウハウ</h1>
-      <p>入札成功のためのポイントやコツをご紹介します</p>
+  <section class="page-header bg-main">
+    <div class="container">
+      <h1 class="text-light">入札ノウハウ</h1>
+      <p class="text-light">入札成功のためのポイントやコツをご紹介します</p>
     </div>
   </section>
 
   <!-- ノウハウ概要 -->
-  <section>
-    <div>
-      <h>入札成功のためのノウハウ</h2>
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title text-center">入札成功のためのノウハウ</h2>
 
-      <div>
-        <div>
+      <div class="row">
+        <div class="col-8 offset-2">
           <p>入札は単に価格だけで勝負するものではありません。様々な要素が落札の可否を左右します。ここでは、ふらっと法務事務所が長年の経験で培った入札成功のためのノウハウをご紹介します。</p>
           <p>これらのポイントを押さえることで、入札参加の成功率を高めることができます。</p>
         </div>
@@ -93,19 +90,19 @@
   </section>
 
   <!-- ノウハウ詳細 -->
-  <section>
-    <div>
-      <div>
-        <div>
-          <div>
-            <div>
-              <img>
+  <section class="section bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <div class="knowhow-item">
+            <div class="knowhow-icon">
+              <img src="https://yasuyuki-shiozawa.github.io/flatto-legal-site/images/icon-research.png?v=1749255136" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="事前調査アイコン">
             </div>
-            <h>徹底した事前調査</h3>
+            <h3 class="knowhow-title">徹底した事前調査</h3>
 
-            <div>
+            <div class="knowhow-content">
               <p>入札に参加する前に、発注者の過去の入札傾向や予算規模、求められる品質レベルなどを徹底的に調査することが重要です。</p>
-              <h>ポイント</h4>
+              <h4>ポイント</h4>
 
               <ul>
                 <li>過去の落札事例の分析</li>
@@ -117,16 +114,16 @@
             </div>
           </div>
         </div>
-        <div>
-          <div>
-            <div>
-              <img>
+        <div class="col-4">
+          <div class="knowhow-item">
+            <div class="knowhow-icon">
+              <img src="https://yasuyuki-shiozawa.github.io/flatto-legal-site/images/icon-document.png?v=1749255136" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="書類作成アイコン">
             </div>
-            <h>効果的な提案書作成</h3>
+            <h3 class="knowhow-title">効果的な提案書作成</h3>
 
-            <div>
+            <div class="knowhow-content">
               <p>入札書類は単なる事務手続きではなく、あなたの会社の強みをアピールする重要なツールです。審査員の目に留まる効果的な提案書を作成しましょう。</p>
-              <h>ポイント</h4>
+              <h4>ポイント</h4>
 
               <ul>
                 <li>発注者の課題に対する具体的な解決策の提示</li>
@@ -138,16 +135,16 @@
             </div>
           </div>
         </div>
-        <div>
-          <div>
-            <div>
-              <img>
+        <div class="col-4">
+          <div class="knowhow-item">
+            <div class="knowhow-icon">
+              <img src="https://yasuyuki-shiozawa.github.io/flatto-legal-site/images/icon-price.png?v=1749255136" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="価格戦略アイコン">
             </div>
-            <h>戦略的な価格設定</h3>
+            <h3 class="knowhow-title">戦略的な価格設定</h3>
 
-            <div>
+            <div class="knowhow-content">
               <p>入札では価格が重要な要素ですが、単に安ければ良いわけではありません。適正な利益を確保しながら競争力のある価格を設定することが重要です。</p>
-              <h>ポイント</h4>
+              <h4>ポイント</h4>
 
               <ul>
                 <li>過去の落札価格の分析</li>
@@ -160,17 +157,17 @@
           </div>
         </div>
       </div>
-      <div>
-        <div>
-          <div>
-            <div>
-              <img>
+      <div class="row mt-5">
+        <div class="col-4">
+          <div class="knowhow-item">
+            <div class="knowhow-icon">
+              <img src="https://yasuyuki-shiozawa.github.io/flatto-legal-site/images/icon-qualification.png?v=1749255136" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="資格取得アイコン">
             </div>
-            <h>必要な資格・実績の準備</h3>
+            <h3 class="knowhow-title">必要な資格・実績の準備</h3>
 
-            <div>
+            <div class="knowhow-content">
               <p>入札参加には様々な資格や実績が求められます。事前に必要な要件を把握し、計画的に準備することが重要です。</p>
-              <h>ポイント</h4>
+              <h4>ポイント</h4>
 
               <ul>
                 <li>入札参加資格の取得</li>
@@ -182,16 +179,16 @@
             </div>
           </div>
         </div>
-        <div>
-          <div>
-            <div>
-              <img>
+        <div class="col-4">
+          <div class="knowhow-item">
+            <div class="knowhow-icon">
+              <img src="https://yasuyuki-shiozawa.github.io/flatto-legal-site/images/icon-network.png?v=1749255136" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="ネットワーク構築アイコン">
             </div>
-            <h>協力体制の構築</h3>
+            <h3 class="knowhow-title">協力体制の構築</h3>
 
-            <div>
+            <div class="knowhow-content">
               <p>自社だけでは対応が難しい案件でも、協力会社とのネットワークを構築することで参加の幅が広がります。</p>
-              <h>ポイント</h4>
+              <h4>ポイント</h4>
 
               <ul>
                 <li>協力会社とのJV（共同企業体）の形成</li>
@@ -203,16 +200,16 @@
             </div>
           </div>
         </div>
-        <div>
-          <div>
-            <div>
-              <img>
+        <div class="col-4">
+          <div class="knowhow-item">
+            <div class="knowhow-icon">
+              <img src="https://yasuyuki-shiozawa.github.io/flatto-legal-site/images/icon-follow.png?v=1749255136" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="フォローアップアイコン">
             </div>
-            <h>落札後のフォローアップ</h3>
+            <h3 class="knowhow-title">落札後のフォローアップ</h3>
 
-            <div>
+            <div class="knowhow-content">
               <p>入札は落札して終わりではありません。契約後の業務遂行と次回入札に向けた信頼関係の構築が重要です。</p>
-              <h>ポイント</h4>
+              <h4>ポイント</h4>
 
               <ul>
                 <li>契約内容の確実な履行</li>
@@ -229,15 +226,15 @@
   </section>
 
   <!-- 入札の種類 -->
-  <section>
-    <div>
-      <h>入札の種類と特徴</h2>
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title text-center">入札の種類と特徴</h2>
 
-      <div>
-        <div>
-          <div>
-            <div>
-<table>
+      <div class="row">
+        <div class="col-10 offset-1">
+          <div class="table-responsive">
+            <div class="table-responsive">
+<table class="table table-bordered">
               <thead>
                 <tr>
                   <th>入札方式</th>
@@ -341,62 +338,62 @@
   </section>
 
   <!-- 入札成功事例 -->
-  <section>
-    <div>
-      <h>入札成功事例</h2>
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="section-title text-center">入札成功事例</h2>
 
-      <div>
-        <div>
-          <div>
-            <div>
-              <h>清掃業者A社の事例</h3>
+      <div class="row">
+        <div class="col-4">
+          <div class="case-card">
+            <div class="case-header">
+              <h3>清掃業者A社の事例</h3>
 
-              <span>一般競争入札</span>
+              <span class="case-tag">一般競争入札</span>
             </div>
-            <div>
+            <div class="case-body">
               <p><strong>課題：</strong>初めての公共入札参加で、書類作成や価格設定に不安があった。</p>
               <p><strong>支援内容：</strong>入札参加資格の取得から書類作成、価格戦略の立案まで一貫してサポート。</p>
               <p><strong>結果：</strong>市役所の清掃業務を落札し、安定した収益源を確保。その後も複数の公共施設の清掃業務を継続的に受注している。</p>
               <p><strong>成功のポイント：</strong>徹底したコスト分析と効率的な業務体制の提案により、競争力のある価格設定を実現。</p>
             </div>
-            <div>
-              <a>詳細を見る</a>
+            <div class="case-footer">
+              <a href="cases.html" class="btn btn-secondary">詳細を見る</a>
             </div>
           </div>
         </div>
-        <div>
-          <div>
-            <div>
-              <h>システム開発会社B社の事例</h3>
+        <div class="col-4">
+          <div class="case-card">
+            <div class="case-header">
+              <h3>システム開発会社B社の事例</h3>
 
-              <span>総合評価方式</span>
+              <span class="case-tag">総合評価方式</span>
             </div>
-            <div>
+            <div class="case-body">
               <p><strong>課題：</strong>技術力はあるが、提案書作成のノウハウがなく、過去の入札では不採用が続いていた。</p>
               <p><strong>支援内容：</strong>発注者のニーズを徹底分析し、B社の強みを活かした技術提案書の作成をサポート。</p>
               <p><strong>結果：</strong>自治体の基幹システム更新プロジェクトを落札。3年間の長期契約を獲得。</p>
               <p><strong>成功のポイント：</strong>発注者の課題を的確に捉え、具体的な解決策と独自技術のメリットを明確に提示。</p>
             </div>
-            <div>
-              <a>詳細を見る</a>
+            <div class="case-footer">
+              <a href="cases.html" class="btn btn-secondary">詳細を見る</a>
             </div>
           </div>
         </div>
-        <div>
-          <div>
-            <div>
-              <h>建設会社C社の事例</h3>
+        <div class="col-4">
+          <div class="case-card">
+            <div class="case-header">
+              <h3>建設会社C社の事例</h3>
 
-              <span>指名競争入札</span>
+              <span class="case-tag">指名競争入札</span>
             </div>
-            <div>
+            <div class="case-body">
               <p><strong>課題：</strong>地元での実績はあるが、隣接市町村での入札参加経験がなく、新規エリア開拓を目指していた。</p>
               <p><strong>支援内容：</strong>新規エリアでの入札参加資格取得と、地域特性を踏まえた戦略立案をサポート。</p>
               <p><strong>結果：</strong>隣接3市町村での道路維持管理業務を落札し、事業エリアの拡大に成功。</p>
               <p><strong>成功のポイント：</strong>地域の特性や課題を徹底研究し、地元企業とのJV（共同企業体）形成による信頼性の向上。</p>
             </div>
-            <div>
-              <a>詳細を見る</a>
+            <div class="case-footer">
+              <a href="cases.html" class="btn btn-secondary">詳細を見る</a>
             </div>
           </div>
         </div>
@@ -405,48 +402,48 @@
   </section>
 
   <!-- 入札失敗の原因 -->
-  <section>
-    <div>
-      <h>入札失敗の主な原因と対策</h2>
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title text-center">入札失敗の主な原因と対策</h2>
 
-      <div>
-        <div>
-          <div>
-            <h>1. 事前調査不足</h3>
+      <div class="row">
+        <div class="col-8 offset-2">
+          <div class="failure-item">
+            <h3 class="failure-title">1. 事前調査不足</h3>
 
-            <div>
+            <div class="failure-content">
               <p><strong>原因：</strong>発注者のニーズや過去の落札傾向、競合状況などの調査が不十分なまま入札に参加してしまう。</p>
               <p><strong>対策：</strong>入札参加を決める前に、発注者の過去の入札傾向、予算規模、求められる品質レベルなどを徹底的に調査する。また、可能であれば発注担当者に質問するなどして情報収集を行う。</p>
             </div>
           </div>
-          <div>
-            <h>2. 価格設定の誤り</h3>
+          <div class="failure-item">
+            <h3 class="failure-title">2. 価格設定の誤り</h3>
 
-            <div>
+            <div class="failure-content">
               <p><strong>原因：</strong>コスト計算の誤りや競合状況の見誤りにより、高すぎる価格設定や、採算の取れない低価格設定をしてしまう。</p>
               <p><strong>対策：</strong>過去の落札価格の分析、正確なコスト計算、競合他社の動向分析などを行い、競争力があり且つ適正な利益を確保できる価格設定を行う。</p>
             </div>
           </div>
-          <div>
-            <h>3. 提案内容の不足</h3>
+          <div class="failure-item">
+            <h3 class="failure-title">3. 提案内容の不足</h3>
 
-            <div>
+            <div class="failure-content">
               <p><strong>原因：</strong>発注者の課題やニーズに対する具体的な解決策の提示が不足している。または、自社の強みや実績のアピールが不十分。</p>
               <p><strong>対策：</strong>発注者の立場に立って、具体的な課題解決策を提示する。また、自社の強みや実績を効果的にアピールし、他社との差別化を図る。</p>
             </div>
           </div>
-          <div>
-            <h>4. 書類の不備・ミス</h3>
+          <div class="failure-item">
+            <h3 class="failure-title">4. 書類の不備・ミス</h3>
 
-            <div>
+            <div class="failure-content">
               <p><strong>原因：</strong>入札書類の記載ミスや必要書類の不足、提出期限の遅延など、基本的なミスにより失格となる。</p>
               <p><strong>対策：</strong>チェックリストを作成し、複数人での確認を徹底する。また、提出期限に余裕を持ったスケジュール管理を行う。</p>
             </div>
           </div>
-          <div>
-            <h>5. 資格・実績の不足</h3>
+          <div class="failure-item">
+            <h3 class="failure-title">5. 資格・実績の不足</h3>
 
-            <div>
+            <div class="failure-content">
               <p><strong>原因：</strong>入札参加に必要な資格や実績が不足しているにもかかわらず、参加してしまう。</p>
               <p><strong>対策：</strong>入札案件の参加資格要件を事前に確認し、必要な資格の取得や実績の蓄積を計画的に行う。また、自社だけでは不足する場合は、JV（共同企業体）の形成も検討する。</p>
             </div>
@@ -457,14 +454,14 @@
   </section>
 
   <!-- CTA -->
-  <section>
-    <div>
-      <div>
-        <div>
-          <h>入札でお悩みですか？</h2>
+  <section class="section bg-main">
+    <div class="container">
+      <div class="row">
+        <div class="col-8 offset-2 text-center">
+          <h2 class="text-light">入札でお悩みですか？</h2>
 
-          <p>ふらっと法務事務所の専門家が、あなたの入札成功をサポートします。</p>
-          <a>無料相談のお申し込み</a>
+          <p class="text-light mb-4">ふらっと法務事務所の専門家が、あなたの入札成功をサポートします。</p>
+          <a href="contact.html" class="btn btn-accent btn-large">無料相談のお申し込み</a>
         </div>
       </div>
     </div>
@@ -475,14 +472,14 @@
     </main>
     
     <!-- フッター -->
-    <footer>
-        <div>
-            <div>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-container">
                 <!-- 会社情報 -->
-                <div>
-                    <h>ふらっと法務事務所</h3>
+                <div class="footer-section">
+                    <h3 class="footer-title">ふらっと法務事務所</h3>
 
-                    <div>
+                    <div class="footer-contact">
                         <p>〒242-0006<br>神奈川県大和市南林間6丁目4番26号</p>
                         <p>TEL: 046-272-3357</p>
                         <p>Email: mail@flat-legal.com</p>
@@ -491,49 +488,49 @@
                 </div>
                 
                 <!-- サービスメニュー -->
-                <div>
-                    <h>サービス</h3>
+                <div class="footer-section">
+                    <h3 class="footer-title">サービス</h3>
 
-                    <ul>
-                        <li><a>入札参加資格取得支援</a></li>
-                        <li><a>入札書類作成支援</a></li>
-                        <li><a>入札戦略立案</a></li>
-                        <li><a>入札情報収集・分析</a></li>
-                        <li><a>各種許認可申請</a></li>
+                    <ul class="footer-nav">
+                        <li><a href="service.html#qualification">入札参加資格取得支援</a></li>
+                        <li><a href="service.html#document">入札書類作成支援</a></li>
+                        <li><a href="service.html#strategy">入札戦略立案</a></li>
+                        <li><a href="service.html#information">入札情報収集・分析</a></li>
+                        <li><a href="service.html#permit">各種許認可申請</a></li>
                     </ul>
                 </div>
                 
                 <!-- サイトマップ -->
-                <div>
-                    <h>サイトマップ</h3>
+                <div class="footer-section">
+                    <h3 class="footer-title">サイトマップ</h3>
 
-                    <ul>
-                        <li><a>ホーム</a></li>
-                        <li><a>サービス</a></li>
-                        <li><a>ご利用の流れ</a></li>
-                        <li><a>入札ノウハウ</a></li>
-                        <li><a>成功事例</a></li>
-                        <li><a>案件紹介</a></li>
-                        <li><a>会社案内</a></li>
-                        <li><a>お問い合わせ</a></li>
+                    <ul class="footer-nav">
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="service.html">サービス</a></li>
+                        <li><a href="flow.html">ご利用の流れ</a></li>
+                        <li><a href="knowhow.html">入札ノウハウ</a></li>
+                        <li><a href="cases.html">成功事例</a></li>
+                        <li><a href="blog.html">案件紹介</a></li>
+                        <li><a href="about.html">会社案内</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
                     </ul>
                 </div>
                 
                 <!-- 関連情報 -->
-                <div>
-                    <h>関連情報</h3>
+                <div class="footer-section">
+                    <h3 class="footer-title">関連情報</h3>
 
-                    <ul>
-                        <li><a>リンク集</a></li>
-                        <li><a>入札用語集</a></li>
-                        <li><a>よくある質問</a></li>
-                        <li><a>プライバシーポリシー</a></li>
+                    <ul class="footer-nav">
+                        <li><a href="links.html">リンク集</a></li>
+                        <li><a href="dictionary.html">入札用語集</a></li>
+                        <li><a href="contact.html#faq">よくある質問</a></li>
+                        <li><a href="contact.html#privacy-policy">プライバシーポリシー</a></li>
                     </ul>
                 </div>
             </div>
             
             <!-- コピーライト -->
-            <div>
+            <div class="footer-bottom">
                 <p>&copy; 2025 行政書士法人ふらっと法務事務所 All Rights Reserved.</p>
             </div>
         </div>
@@ -607,7 +604,6 @@
       }
     });
   </script>
-<script></script>
-    <script src="js/image-fallback.js"></script>
+<script src="js/image-fallback.js"></script>
   </body>
 </html>

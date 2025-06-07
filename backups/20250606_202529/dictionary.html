@@ -2,56 +2,53 @@
 <!-- 作成日: 2025年6月6日 -->
 
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-    <meta>
-    <meta>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>入札用語集 | ふらっと法務事務所 入札サポート専門サイト</title>
-    <link>
-    <link>
-    <link>
-    <link>
-    <link>
-<link>
-<link>
-<link>
-    <link>
-    <link>
-    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/unified-layout.css">
+    <link rel="stylesheet" href="css/new-style.css">
+    <link rel="stylesheet" href="css/image-fix.css">
+<link rel="stylesheet" href="css/image-fallback.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/font-awesome-fallback.css">
     <link rel="stylesheet" href="css/inline-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></head>
+    </head>
 <body>
     <!-- ヘッダー -->
-    <header>
-        <div>
-            <div>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-container">
                 <!-- ロゴとサイトタイトル -->
-                <a>
-                    <img>
+                <a href="index.html" class="site-logo">
+                    <img src="https://yasuyuki-shiozawa.github.io/flatto-legal-site/images/logo.png?v=1749255136" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="ふらっと法務事務所ロゴ">
                     <div>
-                        <h>ふらっと法務事務所</h1>
-                        <p>入札サポート専門サイト</p>
+                        <h1 class="site-title">ふらっと法務事務所</h1>
+                        <p class="site-subtitle">入札サポート専門サイト</p>
                     </div>
                 </a>
                 
                 <!-- モバイルメニューボタン -->
-                <button>
-                    <i></i>
+                <button class="mobile-nav-toggle" aria-label="メニュー">
+                    <i class="fas fa-bars"></i>
                 </button>
                 
                 <!-- ナビゲーションメニュー -->
-                <nav>
-                    <ul>
-                        <li><a>ホーム</a></li>
-                        <li><a>サービス</a></li>
-                        <li><a>ご利用の流れ</a></li>
-                        <li><a>入札ノウハウ</a></li>
-                        <li><a>成功事例</a></li>
-                        <li><a>案件紹介</a></li>
-                        <li><a>会社案内</a></li>
-                        <li><a>お問い合わせ</a></li>
-                        <li><a>無料相談</a></li>
+                <nav class="main-nav">
+                    <ul class="nav-list" id="main-menu">
+                        <li class="nav-item"><a href="index.html" class="nav-link ">ホーム</a></li>
+                        <li class="nav-item"><a href="service.html" class="nav-link ">サービス</a></li>
+                        <li class="nav-item"><a href="flow.html" class="nav-link ">ご利用の流れ</a></li>
+                        <li class="nav-item"><a href="knowhow.html" class="nav-link ">入札ノウハウ</a></li>
+                        <li class="nav-item"><a href="cases.html" class="nav-link ">成功事例</a></li>
+                        <li class="nav-item"><a href="blog.html" class="nav-link ">案件紹介</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link ">会社案内</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link ">お問い合わせ</a></li>
+                        <li class="nav-item"><a href="contact.html#free-consultation" class="nav-link nav-cta">無料相談</a></li>
                     </ul>
                 </nav>
             </div>
@@ -59,9 +56,9 @@
     </header>
     
     <!-- ページヘッダー -->
-    <div>
-        <div>
-            <h>入札用語集</h1>
+    <div class="page-header section-dark">
+        <div class="container">
+            <h1>入札用語集</h1>
             <p>入札に関する専門用語をわかりやすく解説</p>
         </div>
     </div>
@@ -69,36 +66,36 @@
     <!-- メインコンテンツ -->
     <main>
 
-    <div>
+    <div class="container section">
         <!-- ページヘッダー -->
-  <section>
-    <div>
-      <h>入札用語集</h1>
-      <p>入札に関する専門用語をわかりやすく解説</p>
+  <section class="page-header bg-main">
+    <div class="container">
+      <h1 class="text-light">入札用語集</h1>
+      <p class="text-light">入札に関する専門用語をわかりやすく解説</p>
     </div>
   </section>
 
   <!-- 用語集説明 -->
-  <section>
-    <div>
-      <div>
-        <div>
-          <div>
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-10 offset-1">
+          <div class="dictionary-intro">
             <p>入札に関する専門用語をわかりやすく解説しています。初めて入札に参加する方や、専門用語の意味を確認したい方は、ぜひご活用ください。</p>
-            <div>
-              <h>索引</h3>
+            <div class="dictionary-index">
+              <h3>索引</h3>
 
-              <div>
-                <a>あ行</a>
-                <a>か行</a>
-                <a>さ行</a>
-                <a>た行</a>
-                <a>な行</a>
-                <a>は行</a>
-                <a>ま行</a>
-                <a>や行</a>
-                <a>ら行</a>
-                <a>わ行</a>
+              <div class="index-list">
+                <a href="#a" class="index-item">あ行</a>
+                <a href="#ka" class="index-item">か行</a>
+                <a href="#sa" class="index-item">さ行</a>
+                <a href="#ta" class="index-item">た行</a>
+                <a href="#na" class="index-item">な行</a>
+                <a href="#ha" class="index-item">は行</a>
+                <a href="#ma" class="index-item">ま行</a>
+                <a href="#ya" class="index-item">や行</a>
+                <a href="#ra" class="index-item">ら行</a>
+                <a href="#wa" class="index-item">わ行</a>
               </div>
             </div>
           </div>
@@ -108,233 +105,233 @@
   </section>
 
   <!-- 用語集本体 -->
-  <section>
-    <div>
-      <div>
-        <div>
+  <section class="section bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-10 offset-1">
           <!-- あ行 -->
-          <div>
-            <h>あ行</h2>
+          <div class="dictionary-section" id="a">
+            <h2 class="dictionary-heading">あ行</h2>
 
             
-            <div>
-              <h>一般競争入札</h3>
+            <div class="dictionary-item">
+              <h3 class="term">一般競争入札</h3>
 
-              <div>
+              <div class="definition">
                 <p>入札参加資格を持つ者であれば誰でも参加できる入札方式。公告によって広く参加者を募り、最も有利な条件（通常は最低価格）を提示した者と契約を結びます。透明性・競争性が高い反面、不良・不適格業者の参入リスクがあります。</p>
               </div>
             </div>
             
-            <div>
-              <h>入札参加資格</h3>
+            <div class="dictionary-item">
+              <h3 class="term">入札参加資格</h3>
 
-              <div>
+              <div class="definition">
                 <p>公共入札に参加するために必要な資格。各発注機関（国・都道府県・市区町村など）ごとに申請・取得する必要があります。一般的に、営業年数、財務状況、技術者数、過去の実績などが審査されます。</p>
               </div>
             </div>
             
-            <div>
-              <h>入札公告</h3>
+            <div class="dictionary-item">
+              <h3 class="term">入札公告</h3>
 
-              <div>
+              <div class="definition">
                 <p>入札の実施を広く知らせるための公示。発注内容、参加資格、入札日時・場所、入札方法などが記載されています。一般競争入札では官報や自治体のウェブサイトなどで公告されます。</p>
               </div>
             </div>
           </div>
           
           <!-- か行 -->
-          <div>
-            <h>か行</h2>
+          <div class="dictionary-section" id="ka">
+            <h2 class="dictionary-heading">か行</h2>
 
             
-            <div>
-              <h>競争入札参加資格審査申請</h3>
+            <div class="dictionary-item">
+              <h3 class="term">競争入札参加資格審査申請</h3>
 
-              <div>
+              <div class="definition">
                 <p>公共入札に参加するための資格を取得するための申請手続き。定期受付（例：2年に1回）と随時受付がありますが、発注機関によって異なります。申請には財務諸表、登記簿謄本、納税証明書などの書類が必要です。</p>
               </div>
             </div>
             
-            <div>
-              <h>業者格付け</h3>
+            <div class="dictionary-item">
+              <h3 class="term">業者格付け</h3>
 
-              <div>
+              <div class="definition">
                 <p>入札参加資格審査の結果に基づき、業者をランク分けすること。通常A〜Dなどのランクに分けられ、発注案件の規模によって参加できる業者のランクが制限されます。資本金、技術者数、過去の工事実績などが評価対象となります。</p>
               </div>
             </div>
             
-            <div>
-              <h>共同企業体（JV）</h3>
+            <div class="dictionary-item">
+              <h3 class="term">共同企業体（JV）</h3>
 
-              <div>
+              <div class="definition">
                 <p>複数の企業が共同で工事や業務を受注・遂行するために結成する一時的な事業体。大規模工事や特殊技術を要する案件で活用されます。「特定JV」（特定の工事のみ）と「経常JV」（継続的な協業関係）があります。</p>
               </div>
             </div>
           </div>
           
           <!-- さ行 -->
-          <div>
-            <h>さ行</h2>
+          <div class="dictionary-section" id="sa">
+            <h2 class="dictionary-heading">さ行</h2>
 
             
-            <div>
-              <h>指名競争入札</h3>
+            <div class="dictionary-item">
+              <h3 class="term">指名競争入札</h3>
 
-              <div>
+              <div class="definition">
                 <p>発注者が適格と認めた特定の業者のみを指名して行う入札方式。一般競争入札に比べて参加者が限定されるため、不良業者の排除や入札事務の効率化が図れますが、透明性は低下します。</p>
               </div>
             </div>
             
-            <div>
-              <h>最低制限価格</h3>
+            <div class="dictionary-item">
+              <h3 class="term">最低制限価格</h3>
 
-              <div>
+              <div class="definition">
                 <p>入札において、これを下回る価格での入札を無効とする下限価格。ダンピング（不当に低い価格での入札）を防止し、適正な品質を確保するために設定されます。予定価格の7〜9割程度に設定されることが多いです。</p>
               </div>
             </div>
             
-            <div>
-              <h>総合評価方式</h3>
+            <div class="dictionary-item">
+              <h3 class="term">総合評価方式</h3>
 
-              <div>
+              <div class="definition">
                 <p>価格だけでなく、技術力や社会貢献度などを総合的に評価して落札者を決定する方式。「価格点」と「技術点」の合計点で評価され、必ずしも最低価格の入札者が落札するとは限りません。提案書の作成が必要になることが多いです。</p>
               </div>
             </div>
           </div>
           
           <!-- た行 -->
-          <div>
-            <h>た行</h2>
+          <div class="dictionary-section" id="ta">
+            <h2 class="dictionary-heading">た行</h2>
 
             
-            <div>
-              <h>低入札価格調査制度</h3>
+            <div class="dictionary-item">
+              <h3 class="term">低入札価格調査制度</h3>
 
-              <div>
+              <div class="definition">
                 <p>著しく低い価格での入札があった場合に、その価格で適正な履行が可能かどうかを調査する制度。調査の結果、適正な履行が可能と判断された場合のみ契約締結が可能となります。</p>
               </div>
             </div>
             
-            <div>
-              <h>電子入札</h3>
+            <div class="dictionary-item">
+              <h3 class="term">電子入札</h3>
 
-              <div>
+              <div class="definition">
                 <p>インターネットを通じて入札手続きを行うシステム。従来の紙による入札に比べ、移動コストの削減や入札事務の効率化が図れます。利用には電子証明書（ICカード）が必要です。</p>
               </div>
             </div>
           </div>
           
           <!-- な行 -->
-          <div>
-            <h>な行</h2>
+          <div class="dictionary-section" id="na">
+            <h2 class="dictionary-heading">な行</h2>
 
             
-            <div>
-              <h>入札説明書</h3>
+            <div class="dictionary-item">
+              <h3 class="term">入札説明書</h3>
 
-              <div>
+              <div class="definition">
                 <p>入札の詳細な条件や手続きを記載した書類。入札公告よりも詳細な情報が記載されており、入札参加者は必ず確認する必要があります。入札方法、提出書類、契約条件などが記載されています。</p>
               </div>
             </div>
             
-            <div>
-              <h>入札書</h3>
+            <div class="dictionary-item">
+              <h3 class="term">入札書</h3>
 
-              <div>
+              <div class="definition">
                 <p>入札金額を記載して提出する書類。記載方法や押印の有無は発注機関によって異なります。電子入札の場合は、システム上で金額を入力します。</p>
               </div>
             </div>
           </div>
           
           <!-- は行 -->
-          <div>
-            <h>は行</h2>
+          <div class="dictionary-section" id="ha">
+            <h2 class="dictionary-heading">は行</h2>
 
             
-            <div>
-              <h>発注見通し</h3>
+            <div class="dictionary-item">
+              <h3 class="term">発注見通し</h3>
 
-              <div>
+              <div class="definition">
                 <p>各発注機関が年度当初などに公表する、その年度に発注予定の工事や業務の一覧。案件名、場所、期間、概算金額などが記載されており、入札参加の計画を立てる際の参考になります。</p>
               </div>
             </div>
             
-            <div>
-              <h>プロポーザル方式</h3>
+            <div class="dictionary-item">
+              <h3 class="term">プロポーザル方式</h3>
 
-              <div>
+              <div class="definition">
                 <p>技術提案書（プロポーザル）の内容を評価して契約相手を選定する方式。価格だけでなく、業務実施方針や技術提案内容などが重視されます。コンサルティング業務や設計業務などで多く採用されています。</p>
               </div>
             </div>
             
-            <div>
-              <h>変動型最低制限価格制度</h3>
+            <div class="dictionary-item">
+              <h3 class="term">変動型最低制限価格制度</h3>
 
-              <div>
+              <div class="definition">
                 <p>最低制限価格を入札結果に応じて変動させる制度。例えば、有効な入札価格の平均値の一定割合を最低制限価格とするなどの方法があります。予測困難なため、適正価格での入札を促す効果があります。</p>
               </div>
             </div>
           </div>
           
           <!-- ま行 -->
-          <div>
-            <h>ま行</h2>
+          <div class="dictionary-section" id="ma">
+            <h2 class="dictionary-heading">ま行</h2>
 
             
-            <div>
-              <h>見積期間</h3>
+            <div class="dictionary-item">
+              <h3 class="term">見積期間</h3>
 
-              <div>
+              <div class="definition">
                 <p>入札公告から入札書提出までの期間。案件の規模や複雑さによって異なりますが、法令で最低期間が定められています。この期間中に現場確認や質問、見積作成などを行います。</p>
               </div>
             </div>
           </div>
           
           <!-- や行 -->
-          <div>
-            <h>や行</h2>
+          <div class="dictionary-section" id="ya">
+            <h2 class="dictionary-heading">や行</h2>
 
             
-            <div>
-              <h>予定価格</h3>
+            <div class="dictionary-item">
+              <h3 class="term">予定価格</h3>
 
-              <div>
+              <div class="definition">
                 <p>発注者が契約締結の限度として設定する価格。通常は非公開で、これを超える入札は無効となります。発注者が積算した設計金額をもとに決定されます。</p>
               </div>
             </div>
           </div>
           
           <!-- ら行 -->
-          <div>
-            <h>ら行</h2>
+          <div class="dictionary-section" id="ra">
+            <h2 class="dictionary-heading">ら行</h2>
 
             
-            <div>
-              <h>落札</h3>
+            <div class="dictionary-item">
+              <h3 class="term">落札</h3>
 
-              <div>
+              <div class="definition">
                 <p>入札において、発注者が契約の相手方として決定すること。一般的には最低価格（総合評価方式の場合は最高評価点）の入札者が落札者となります。</p>
               </div>
             </div>
             
-            <div>
-              <h>履行保証</h3>
+            <div class="dictionary-item">
+              <h3 class="term">履行保証</h3>
 
-              <div>
+              <div class="definition">
                 <p>契約の履行を保証するための制度。契約金額の10%程度の保証金の納付や、金融機関・保証事業会社による保証などの方法があります。</p>
               </div>
             </div>
           </div>
           
           <!-- わ行 -->
-          <div>
-            <h>わ行</h2>
+          <div class="dictionary-section" id="wa">
+            <h2 class="dictionary-heading">わ行</h2>
 
             
-            <div>
-              <h>WTO政府調達協定</h3>
+            <div class="dictionary-item">
+              <h3 class="term">WTO政府調達協定</h3>
 
-              <div>
+              <div class="definition">
                 <p>政府調達の手続きを国際的に開放・透明化するための協定。一定金額以上の案件は、国際入札として外国企業にも開放する必要があります。</p>
               </div>
             </div>
@@ -345,30 +342,30 @@
   </section>
 
   <!-- 関連コンテンツ -->
-  <section>
-    <div>
-      <h>関連コンテンツ</h2>
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title text-center">関連コンテンツ</h2>
 
-      <div>
-        <div>
-          <div>
-            <div>
-              <div>
-                <i></i>
+      <div class="row">
+        <div class="col-10 offset-1">
+          <div class="related-content">
+            <div class="related-item">
+              <div class="related-icon">
+                <i class="icon-knowhow"></i>
               </div>
-              <div>
-                <h><a>入札ノウハウ</a></h3>
+              <div class="related-info">
+                <h3><a href="knowhow.html">入札ノウハウ</a></h3>
 
                 <p>入札成功のためのノウハウや戦略をご紹介しています。実践的なアドバイスが満載です。</p>
               </div>
             </div>
             
-            <div>
-              <div>
-                <i></i>
+            <div class="related-item">
+              <div class="related-icon">
+                <i class="icon-links"></i>
               </div>
-              <div>
-                <h><a>入札関連リンク集</a></h3>
+              <div class="related-info">
+                <h3><a href="links.html">入札関連リンク集</a></h3>
 
                 <p>官公庁・自治体の入札情報サイトや関連団体へのリンク集です。情報収集にお役立てください。</p>
               </div>
@@ -380,15 +377,15 @@
   </section>
 
   <!-- CTA -->
-  <section>
-    <div>
-      <div>
-        <div>
-          <h>入札でお悩みですか？</h2>
+  <section class="section bg-main">
+    <div class="container">
+      <div class="row">
+        <div class="col-8 offset-2 text-center">
+          <h2 class="text-light">入札でお悩みですか？</h2>
 
-          <p>ふらっと法務事務所の専門家が、あなたの入札成功をサポートします。まずは無料相談からお気軽にどうぞ。</p>
-          <div>
-            <a>無料相談のお申し込み</a>
+          <p class="text-light mb-4">ふらっと法務事務所の専門家が、あなたの入札成功をサポートします。まずは無料相談からお気軽にどうぞ。</p>
+          <div class="cta-buttons">
+            <a href="contact.html" class="btn btn-light btn-large">無料相談のお申し込み</a>
           </div>
         </div>
       </div>
@@ -400,14 +397,14 @@
     </main>
     
     <!-- フッター -->
-    <footer>
-        <div>
-            <div>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-container">
                 <!-- 会社情報 -->
-                <div>
-                    <h>ふらっと法務事務所</h3>
+                <div class="footer-section">
+                    <h3 class="footer-title">ふらっと法務事務所</h3>
 
-                    <div>
+                    <div class="footer-contact">
                         <p>〒242-0006<br>神奈川県大和市南林間6丁目4番26号</p>
                         <p>TEL: 046-272-3357</p>
                         <p>Email: mail@flat-legal.com</p>
@@ -416,49 +413,49 @@
                 </div>
                 
                 <!-- サービスメニュー -->
-                <div>
-                    <h>サービス</h3>
+                <div class="footer-section">
+                    <h3 class="footer-title">サービス</h3>
 
-                    <ul>
-                        <li><a>入札参加資格取得支援</a></li>
-                        <li><a>入札書類作成支援</a></li>
-                        <li><a>入札戦略立案</a></li>
-                        <li><a>入札情報収集・分析</a></li>
-                        <li><a>各種許認可申請</a></li>
+                    <ul class="footer-nav">
+                        <li><a href="service.html#qualification">入札参加資格取得支援</a></li>
+                        <li><a href="service.html#document">入札書類作成支援</a></li>
+                        <li><a href="service.html#strategy">入札戦略立案</a></li>
+                        <li><a href="service.html#information">入札情報収集・分析</a></li>
+                        <li><a href="service.html#permit">各種許認可申請</a></li>
                     </ul>
                 </div>
                 
                 <!-- サイトマップ -->
-                <div>
-                    <h>サイトマップ</h3>
+                <div class="footer-section">
+                    <h3 class="footer-title">サイトマップ</h3>
 
-                    <ul>
-                        <li><a>ホーム</a></li>
-                        <li><a>サービス</a></li>
-                        <li><a>ご利用の流れ</a></li>
-                        <li><a>入札ノウハウ</a></li>
-                        <li><a>成功事例</a></li>
-                        <li><a>案件紹介</a></li>
-                        <li><a>会社案内</a></li>
-                        <li><a>お問い合わせ</a></li>
+                    <ul class="footer-nav">
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="service.html">サービス</a></li>
+                        <li><a href="flow.html">ご利用の流れ</a></li>
+                        <li><a href="knowhow.html">入札ノウハウ</a></li>
+                        <li><a href="cases.html">成功事例</a></li>
+                        <li><a href="blog.html">案件紹介</a></li>
+                        <li><a href="about.html">会社案内</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
                     </ul>
                 </div>
                 
                 <!-- 関連情報 -->
-                <div>
-                    <h>関連情報</h3>
+                <div class="footer-section">
+                    <h3 class="footer-title">関連情報</h3>
 
-                    <ul>
-                        <li><a>リンク集</a></li>
-                        <li><a>入札用語集</a></li>
-                        <li><a>よくある質問</a></li>
-                        <li><a>プライバシーポリシー</a></li>
+                    <ul class="footer-nav">
+                        <li><a href="links.html">リンク集</a></li>
+                        <li><a href="dictionary.html">入札用語集</a></li>
+                        <li><a href="contact.html#faq">よくある質問</a></li>
+                        <li><a href="contact.html#privacy-policy">プライバシーポリシー</a></li>
                     </ul>
                 </div>
             </div>
             
             <!-- コピーライト -->
-            <div>
+            <div class="footer-bottom">
                 <p>&copy; 2025 行政書士法人ふらっと法務事務所 All Rights Reserved.</p>
             </div>
         </div>
@@ -550,7 +547,6 @@
       });
     });
   </script>
-<script></script>
-    <script src="js/image-fallback.js"></script>
+<script src="js/image-fallback.js"></script>
   </body>
 </html>

@@ -2,56 +2,53 @@
 <!-- 作成日: 2025年6月6日 -->
 
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-    <meta>
-    <meta>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>会社案内 | ふらっと法務事務所 入札サポート専門サイト</title>
-    <link>
-    <link>
-    <link>
-    <link>
-<link>
-<link>
-<link>
-<link>
-    <link>
-    <link>
-    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/unified-layout.css">
+    <link rel="stylesheet" href="css/new-style.css">
+<link rel="stylesheet" href="css/image-fix.css">
+<link rel="stylesheet" href="css/image-fallback.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/font-awesome-fallback.css">
     <link rel="stylesheet" href="css/inline-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></head>
+    </head>
 <body>
     <!-- ヘッダー -->
-    <header>
-        <div>
-            <div>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-container">
                 <!-- ロゴとサイトタイトル -->
-                <a>
-                    <img>
+                <a href="index.html" class="site-logo">
+                    <img src="https://yasuyuki-shiozawa.github.io/flatto-legal-site/images/logo.png?v=1749255136" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="ふらっと法務事務所ロゴ">
                     <div>
-                        <h>ふらっと法務事務所</h1>
-                        <p>入札サポート専門サイト</p>
+                        <h1 class="site-title">ふらっと法務事務所</h1>
+                        <p class="site-subtitle">入札サポート専門サイト</p>
                     </div>
                 </a>
                 
                 <!-- モバイルメニューボタン -->
-                <button>
-                    <i></i>
+                <button class="mobile-nav-toggle" aria-label="メニュー">
+                    <i class="fas fa-bars"></i>
                 </button>
                 
                 <!-- ナビゲーションメニュー -->
-                <nav>
-                    <ul>
-                        <li><a>ホーム</a></li>
-                        <li><a>サービス</a></li>
-                        <li><a>ご利用の流れ</a></li>
-                        <li><a>入札ノウハウ</a></li>
-                        <li><a>成功事例</a></li>
-                        <li><a>案件紹介</a></li>
-                        <li><a>会社案内</a></li>
-                        <li><a>お問い合わせ</a></li>
-                        <li><a>無料相談</a></li>
+                <nav class="main-nav">
+                    <ul class="nav-list" id="main-menu">
+                        <li class="nav-item"><a href="index.html" class="nav-link ">ホーム</a></li>
+                        <li class="nav-item"><a href="service.html" class="nav-link ">サービス</a></li>
+                        <li class="nav-item"><a href="flow.html" class="nav-link ">ご利用の流れ</a></li>
+                        <li class="nav-item"><a href="knowhow.html" class="nav-link ">入札ノウハウ</a></li>
+                        <li class="nav-item"><a href="cases.html" class="nav-link ">成功事例</a></li>
+                        <li class="nav-item"><a href="blog.html" class="nav-link ">案件紹介</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link active">会社案内</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link ">お問い合わせ</a></li>
+                        <li class="nav-item"><a href="contact.html#free-consultation" class="nav-link nav-cta">無料相談</a></li>
                     </ul>
                 </nav>
             </div>
@@ -59,9 +56,9 @@
     </header>
     
     <!-- ページヘッダー -->
-    <div>
-        <div>
-            <h>会社案内</h1>
+    <div class="page-header section-dark">
+        <div class="container">
+            <h1>会社案内</h1>
             <p>ふらっと法務事務所の概要と入札サポートへの取り組み</p>
         </div>
     </div>
@@ -69,25 +66,25 @@
     <!-- メインコンテンツ -->
     <main>
 
-    <div>
+    <div class="container section">
         <!-- ページヘッダー -->
-  <section>
-    <div>
-      <h>会社案内</h1>
-      <p>ふらっと法務事務所の概要と入札サポートへの取り組み</p>
+  <section class="page-header bg-main">
+    <div class="container">
+      <h1 class="text-light">会社案内</h1>
+      <p class="text-light">ふらっと法務事務所の概要と入札サポートへの取り組み</p>
     </div>
   </section>
 
   <!-- 会社概要 -->
-  <section>
-    <div>
-      <h>会社概要</h2>
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title text-center">会社概要</h2>
 
-      <div>
-        <div>
-          <div>
-            <div>
-<table>
+      <div class="row">
+        <div class="col-10 offset-1">
+          <div class="company-info">
+            <div class="table-responsive">
+<table class="info-table">
               <tr>
                 <th>名称</th>
                 <td>行政書士法人ふらっと法務事務所</td>
@@ -138,18 +135,18 @@
   </section>
 
   <!-- 事務所紹介 -->
-  <section>
-    <div>
-      <h>事務所紹介</h2>
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="section-title text-center">事務所紹介</h2>
 
-      <div>
-        <div>
-          <div>
-            <img>
+      <div class="row">
+        <div class="col-5">
+          <div class="office-image">
+            <img src="https://yasuyuki-shiozawa.github.io/flatto-legal-site/images/office.jpg?v=1749255136" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="ふらっと法務事務所外観">
           </div>
         </div>
-        <div>
-          <div>
+        <div class="col-7">
+          <div class="office-content">
             <p>行政書士法人ふらっと法務事務所は、2015年の設立以来、「中小企業の公共入札参加をサポートする」という理念のもと、多くの企業様の入札成功をサポートしてきました。</p>
             <p>当事務所の特徴は、単なる書類作成だけでなく、入札情報の収集・分析から戦略立案、価格設定のアドバイスまで、入札成功に必要なすべてのプロセスをトータルでサポートすることにあります。</p>
             <p>特に、初めて入札に参加する企業様や、過去に不採用が続いている企業様に対して、きめ細かなサポートを提供し、高い成功率を実現しています。</p>
@@ -161,19 +158,19 @@
   </section>
 
   <!-- 代表者メッセージ -->
-  <section>
-    <div>
-      <h>代表者メッセージ</h2>
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title text-center">代表者メッセージ</h2>
 
-      <div>
-        <div>
-          <div>
-            <img>
-            <p>代表 塩澤 康幸</p>
+      <div class="row">
+        <div class="col-4">
+          <div class="representative-image">
+            <img src="https://yasuyuki-shiozawa.github.io/flatto-legal-site/images/representative.jpg?v=1749255136" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="代表 塩澤康幸">
+            <p class="text-center mt-2">代表 塩澤 康幸</p>
           </div>
         </div>
-        <div>
-          <div>
+        <div class="col-8">
+          <div class="message-content">
             <p>はじめまして。行政書士法人ふらっと法務事務所代表の塩澤康幸です。</p>
             <p>私は行政書士として活動する前、建設会社で入札業務を担当していました。その経験から、多くの中小企業が「入札参加の方法がわからない」「書類作成のノウハウがない」「価格設定に不安がある」といった理由で、公共入札というビジネスチャンスを逃していることに気づきました。</p>
             <p>そこで、「中小企業の公共入札参加をサポートし、ビジネスチャンスを広げる」という使命を持って、ふらっと法務事務所を設立しました。</p>
@@ -187,47 +184,47 @@
   </section>
 
   <!-- スタッフ紹介 -->
-  <section>
-    <div>
-      <h>スタッフ紹介</h2>
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="section-title text-center">スタッフ紹介</h2>
 
-      <div>
-        <div>
-          <div>
-            <div>
-              <img>
+      <div class="row">
+        <div class="col-4">
+          <div class="staff-card">
+            <div class="staff-image">
+              <img src="https://yasuyuki-shiozawa.github.io/flatto-legal-site/images/staff-1.jpg?v=1749255136" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="スタッフ写真">
             </div>
-            <div>
-              <h>山田 健太</h3>
+            <div class="staff-info">
+              <h3>山田 健太</h3>
 
-              <p>行政書士</p>
-              <p>建設業許可申請のスペシャリスト。建設業界での実務経験を活かし、建設関連の入札サポートを担当。</p>
+              <p class="staff-position">行政書士</p>
+              <p class="staff-description">建設業許可申請のスペシャリスト。建設業界での実務経験を活かし、建設関連の入札サポートを担当。</p>
             </div>
           </div>
         </div>
-        <div>
-          <div>
-            <div>
-              <img>
+        <div class="col-4">
+          <div class="staff-card">
+            <div class="staff-image">
+              <img src="https://yasuyuki-shiozawa.github.io/flatto-legal-site/images/staff-2.jpg?v=1749255136" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="スタッフ写真">
             </div>
-            <div>
-              <h>佐藤 美咲</h3>
+            <div class="staff-info">
+              <h3>佐藤 美咲</h3>
 
-              <p>行政書士</p>
-              <p>IT業界出身。システム関連の入札や総合評価方式の提案書作成を得意としています。</p>
+              <p class="staff-position">行政書士</p>
+              <p class="staff-description">IT業界出身。システム関連の入札や総合評価方式の提案書作成を得意としています。</p>
             </div>
           </div>
         </div>
-        <div>
-          <div>
-            <div>
-              <img>
+        <div class="col-4">
+          <div class="staff-card">
+            <div class="staff-image">
+              <img src="https://yasuyuki-shiozawa.github.io/flatto-legal-site/images/staff-3.jpg?v=1749255136" onload="this.classList.add(\'loaded\')" onerror="this.classList.add(\'error\'); console.error(\'Image failed to load: \' + this.src)" alt="スタッフ写真">
             </div>
-            <div>
-              <h>鈴木 大輔</h3>
+            <div class="staff-info">
+              <h3>鈴木 大輔</h3>
 
-              <p>入札アドバイザー</p>
-              <p>元自治体職員。公共調達の内部事情に精通し、戦略立案と価格設定のアドバイスを担当。</p>
+              <p class="staff-position">入札アドバイザー</p>
+              <p class="staff-description">元自治体職員。公共調達の内部事情に精通し、戦略立案と価格設定のアドバイスを担当。</p>
             </div>
           </div>
         </div>
@@ -236,23 +233,23 @@
   </section>
 
   <!-- アクセス -->
-  <section>
-    <div>
-      <h>アクセス</h2>
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title text-center">アクセス</h2>
 
-      <div>
-        <div>
-          <div>
-            <iframe></iframe>
+      <div class="row">
+        <div class="col-6">
+          <div class="access-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3246.2641383837!2d139.4625!3d35.4875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDI5JzE1LjAiTiAxMznCsDI3JzQ1LjAiRQ!5e0!3m2!1sja!2sjp!4v1622000000000!5m2!1sja!2sjp" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
           </div>
         </div>
-        <div>
-          <div>
-            <h>所在地</h3>
+        <div class="col-6">
+          <div class="access-info">
+            <h3>所在地</h3>
 
             <p>〒242-0006<br>神奈川県大和市南林間6丁目4番26号</p>
             
-            <h>アクセス方法</h3>
+            <h3>アクセス方法</h3>
 
             <p><strong>電車でお越しの場合</strong></p>
             <ul>
@@ -266,7 +263,7 @@
               <li>駐車場あり（要予約）</li>
             </ul>
             
-            <h>営業時間</h3>
+            <h3>営業時間</h3>
 
             <p>平日 9:00〜18:00（土日祝日休業）<br>※事前予約で時間外・休日対応可能</p>
           </div>
@@ -276,14 +273,14 @@
   </section>
 
   <!-- CTA -->
-  <section>
-    <div>
-      <div>
-        <div>
-          <h>入札でお悩みですか？</h2>
+  <section class="section bg-main">
+    <div class="container">
+      <div class="row">
+        <div class="col-8 offset-2 text-center">
+          <h2 class="text-light">入札でお悩みですか？</h2>
 
-          <p>ふらっと法務事務所の専門家が、あなたの入札成功をサポートします。まずは無料相談からお気軽にどうぞ。</p>
-          <a>無料相談のお申し込み</a>
+          <p class="text-light mb-4">ふらっと法務事務所の専門家が、あなたの入札成功をサポートします。まずは無料相談からお気軽にどうぞ。</p>
+          <a href="contact.html" class="btn btn-accent btn-large">無料相談のお申し込み</a>
         </div>
       </div>
     </div>
@@ -294,14 +291,14 @@
     </main>
     
     <!-- フッター -->
-    <footer>
-        <div>
-            <div>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-container">
                 <!-- 会社情報 -->
-                <div>
-                    <h>ふらっと法務事務所</h3>
+                <div class="footer-section">
+                    <h3 class="footer-title">ふらっと法務事務所</h3>
 
-                    <div>
+                    <div class="footer-contact">
                         <p>〒242-0006<br>神奈川県大和市南林間6丁目4番26号</p>
                         <p>TEL: 046-272-3357</p>
                         <p>Email: mail@flat-legal.com</p>
@@ -310,49 +307,49 @@
                 </div>
                 
                 <!-- サービスメニュー -->
-                <div>
-                    <h>サービス</h3>
+                <div class="footer-section">
+                    <h3 class="footer-title">サービス</h3>
 
-                    <ul>
-                        <li><a>入札参加資格取得支援</a></li>
-                        <li><a>入札書類作成支援</a></li>
-                        <li><a>入札戦略立案</a></li>
-                        <li><a>入札情報収集・分析</a></li>
-                        <li><a>各種許認可申請</a></li>
+                    <ul class="footer-nav">
+                        <li><a href="service.html#qualification">入札参加資格取得支援</a></li>
+                        <li><a href="service.html#document">入札書類作成支援</a></li>
+                        <li><a href="service.html#strategy">入札戦略立案</a></li>
+                        <li><a href="service.html#information">入札情報収集・分析</a></li>
+                        <li><a href="service.html#permit">各種許認可申請</a></li>
                     </ul>
                 </div>
                 
                 <!-- サイトマップ -->
-                <div>
-                    <h>サイトマップ</h3>
+                <div class="footer-section">
+                    <h3 class="footer-title">サイトマップ</h3>
 
-                    <ul>
-                        <li><a>ホーム</a></li>
-                        <li><a>サービス</a></li>
-                        <li><a>ご利用の流れ</a></li>
-                        <li><a>入札ノウハウ</a></li>
-                        <li><a>成功事例</a></li>
-                        <li><a>案件紹介</a></li>
-                        <li><a>会社案内</a></li>
-                        <li><a>お問い合わせ</a></li>
+                    <ul class="footer-nav">
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="service.html">サービス</a></li>
+                        <li><a href="flow.html">ご利用の流れ</a></li>
+                        <li><a href="knowhow.html">入札ノウハウ</a></li>
+                        <li><a href="cases.html">成功事例</a></li>
+                        <li><a href="blog.html">案件紹介</a></li>
+                        <li><a href="about.html">会社案内</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
                     </ul>
                 </div>
                 
                 <!-- 関連情報 -->
-                <div>
-                    <h>関連情報</h3>
+                <div class="footer-section">
+                    <h3 class="footer-title">関連情報</h3>
 
-                    <ul>
-                        <li><a>リンク集</a></li>
-                        <li><a>入札用語集</a></li>
-                        <li><a>よくある質問</a></li>
-                        <li><a>プライバシーポリシー</a></li>
+                    <ul class="footer-nav">
+                        <li><a href="links.html">リンク集</a></li>
+                        <li><a href="dictionary.html">入札用語集</a></li>
+                        <li><a href="contact.html#faq">よくある質問</a></li>
+                        <li><a href="contact.html#privacy-policy">プライバシーポリシー</a></li>
                     </ul>
                 </div>
             </div>
             
             <!-- コピーライト -->
-            <div>
+            <div class="footer-bottom">
                 <p>&copy; 2025 行政書士法人ふらっと法務事務所 All Rights Reserved.</p>
             </div>
         </div>
@@ -426,7 +423,6 @@
       }
     });
   </script>
-<script></script>
-    <script src="js/image-fallback.js"></script>
+<script src="js/image-fallback.js"></script>
   </body>
 </html>
