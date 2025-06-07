@@ -1,0 +1,90 @@
+/* Font Awesomeフォールバック */
+.image-fallback {
+    display: inline-block;
+    text-align: center;
+    font-size: 2rem;
+    width: 64px;
+    height: 64px;
+    line-height: 64px;
+    color: #1a4b84;
+    background-color: #f8f9fa;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+/* 特定のアイコンのフォールバック */
+.icon-knowledge-fallback::before {
+    content: "\f02d"; /* 本のアイコン */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.icon-support-fallback::before {
+    content: "\f4c4"; /* サポートアイコン */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.icon-achievement-fallback::before {
+    content: "\f091"; /* トロフィーアイコン */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+/* 業種アイコンのフォールバック */
+.industry-construction-fallback::before {
+    content: "\f1ad"; /* 建物アイコン */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.industry-manufacturing-fallback::before {
+    content: "\f0e7"; /* 工場アイコン */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.industry-it-fallback::before {
+    content: "\f109"; /* パソコンアイコン */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.industry-service-fallback::before {
+    content: "\f2b5"; /* サービスアイコン */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.industry-transport-fallback::before {
+    content: "\f207"; /* トラックアイコン */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.industry-retail-fallback::before {
+    content: "\f290"; /* ショッピングバッグアイコン */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.industry-food-fallback::before {
+    content: "\f2e7"; /* 食事アイコン */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.industry-other-fallback::before {
+    content: "\f0c8"; /* その他アイコン */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+/* 画像読み込みエラー時のフォールバック表示 */
+img.error + .image-fallback {
+    display: inline-block;
+}
+
+img:not(.error) + .image-fallback {
+    display: none;
+}
