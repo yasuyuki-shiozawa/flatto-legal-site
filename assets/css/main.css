@@ -13,10 +13,11 @@ html {
 
 body {
   font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.8;
   color: #1f2937;
   background-color: #ffffff;
+  letter-spacing: 0.02em;
 }
 
 /* ===== コンテナ ===== */
@@ -783,5 +784,409 @@ body {
     .privacy-mark {
         justify-content: center;
     }
+}
+
+
+/* ===== タイポグラフィ最適化 ===== */
+
+/* 見出しの階層とスペーシング */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+  margin-top: 2.5rem;
+  letter-spacing: 0.01em;
+}
+
+h1:first-child, h2:first-child, h3:first-child {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #1f2937;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.75rem;
+  color: #374151;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #4b5563;
+}
+
+h4 {
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+  color: #6b7280;
+}
+
+h5 {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+h6 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* 段落とテキストのスペーシング */
+p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  color: #374151;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* リストのスペーシング */
+ul, ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+/* セクション間のスペーシング */
+section {
+  margin-bottom: 4rem;
+  padding: 2rem 0;
+}
+
+section:last-child {
+  margin-bottom: 0;
+}
+
+/* 強調テキスト */
+strong, b {
+  font-weight: 700;
+  color: #1f2937;
+}
+
+em, i {
+  font-style: italic;
+  color: #4b5563;
+}
+
+/* 引用 */
+blockquote {
+  border-left: 4px solid #3b82f6;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: #6b7280;
+  background-color: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+/* テーブルのスペーシング */
+table {
+  margin-bottom: 2rem;
+  border-spacing: 0;
+  width: 100%;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+  line-height: 1.6;
+}
+
+th {
+  font-weight: 600;
+  background-color: #f9fafb;
+  color: #374151;
+}
+
+/* レスポンシブタイポグラフィ */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  h3 {
+    font-size: 1.375rem;
+    margin-bottom: 1rem;
+  }
+  
+  section {
+    margin-bottom: 3rem;
+    padding: 1.5rem 0;
+  }
+  
+  p {
+    margin-bottom: 1.25rem;
+  }
+}
+
+/* 読みやすさの向上 */
+.text-large {
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.text-small {
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: #6b7280;
+}
+
+.text-primary {
+  color: #3b82f6;
+}
+
+.text-secondary {
+  color: #fed7aa;
+}
+
+
+/* ===== レイアウト・スペーシング最適化 ===== */
+
+/* セクション共通スタイル */
+.section-spacing {
+  padding: 4rem 0;
+  margin-bottom: 2rem;
+}
+
+.section-header {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* コンテンツブロックのスペーシング */
+.content-spacing {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-text-block {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #f8fafc;
+  border-radius: 12px;
+  border-left: 4px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.about-text-block:hover {
+  background-color: #f1f5f9;
+  border-left-color: #3b82f6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-block {
+  background-color: #eff6ff;
+  border-left-color: #3b82f6;
+  position: relative;
+}
+
+.highlight-block::before {
+  content: "💡";
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.about-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #374151;
+  margin: 0;
+}
+
+/* カード系レイアウト */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-color: #3b82f6;
+}
+
+/* ステップ系レイアウト */
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.step {
+  text-align: center;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.step-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.step-description {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+/* リスト系の改善 */
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.feature-list li:hover {
+  background: #f1f5f9;
+}
+
+.feature-list li::before {
+  content: "✓";
+  color: #10b981;
+  font-weight: bold;
+  margin-right: 0.75rem;
+  margin-top: 0.125rem;
+  flex-shrink: 0;
+}
+
+/* レスポンシブ調整 */
+@media (max-width: 768px) {
+  .section-spacing {
+    padding: 3rem 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .section-header {
+    margin-bottom: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.875rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+  }
+  
+  .about-text-block {
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .steps-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .step {
+    padding: 1.5rem;
+  }
 }
 

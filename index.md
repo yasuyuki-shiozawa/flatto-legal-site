@@ -35,19 +35,35 @@ description: ふらっと法務事務所の入札サポート専門サイトで�
 </section>
 
 <!-- 入札とは -->
-<section class="about-bidding">
+<section class="about-bidding section-spacing">
     <div class="container">
-        <h2 class="section-title">入札とは</h2>
-        <div class="about-content">
-            <p class="about-text">
-                入札とは、公共機関や民間企業が商品やサービスを調達する際に、複数の業者から見積もりを集め、最も条件の良い業者を選定する方法です。
+        <div class="section-header text-center">
+            <h2 class="section-title">入札とは</h2>
+            <p class="section-subtitle text-muted">
+                公共事業参入への第一歩を、わかりやすくご説明します
             </p>
-            <p class="about-text">
-                多くの中小企業にとって、公共事業の受注は安定した収益源となりますが、複雑な手続きや専門知識が必要なため、参入のハードルが高いと感じられがちです。
-            </p>
-            <p class="about-text">
-                ふらっと法務事務所では、そんな入札の壁を取り払い、あなたのビジネスチャンスを広げるサポートをいたします。
-            </p>
+        </div>
+        <div class="about-content content-spacing">
+            <div class="about-text-block">
+                <p class="about-text">
+                    入札とは、公共機関や民間企業が商品やサービスを調達する際に、複数の業者から見積もりを集め、最も条件の良い業者を選定する方法です。
+                </p>
+            </div>
+            
+            <div class="about-text-block">
+                <p class="about-text">
+                    多くの中小企業にとって、公共事業の受注は安定した収益源となりますが、複雑な手続きや専門知識が必要なため、参入のハードルが高いと感じられがちです。
+                </p>
+            </div>
+            
+            <div class="about-text-block highlight-block">
+                <p class="about-text">
+                    <strong>ふらっと法務事務所では、そんな入札の壁を取り払い、あなたのビジネスチャンスを広げるサポートをいたします。</strong>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
         </div>
     </div>
 </section>
