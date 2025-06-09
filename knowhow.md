@@ -45,7 +45,7 @@ description: 入札から落札まで、初心者でも分かりやすい5ステ
         <div class="dialogue-content">
             <div class="question-box">
                 <div class="character client">
-                    <div class="character-avatar">👤</div>
+                    <img src="/assets/images/saori_character.jpeg" alt="さおりさん" class="character-avatar-img">
                     <div class="speech-bubble">
                         「入札に参加したいのですが、何から始めればよいでしょうか？手続きが複雑で不安です...」
                     </div>
@@ -53,7 +53,7 @@ description: 入札から落札まで、初心者でも分かりやすい5ステ
             </div>
             <div class="answer-box">
                 <div class="character expert">
-                    <div class="character-avatar">👨‍💼</div>
+                    <img src="/assets/images/shiozawa_character.jpeg" alt="塩澤康幸" class="character-avatar-img">
                     <div class="speech-bubble">
                         「ご安心ください！入札は正しい手順を踏めば決して難しくありません。まずは基本から一緒に学んでいきましょう。」
                     </div>
@@ -193,6 +193,30 @@ description: 入札から落札まで、初心者でも分かりやすい5ステ
 - **新分野への参入**：これまで手がけていなかった分野への挑戦機会
 
 ## 入札の種類 {#bid-types}
+
+<!-- 入札の種類 対話セクション -->
+<div class="dialogue-section">
+    <div class="container">
+        <div class="dialogue-content">
+            <div class="question-box">
+                <div class="character client">
+                    <img src="/assets/images/saori_character.jpeg" alt="さおりさん" class="character-avatar-img">
+                    <div class="speech-bubble">
+                        「入札にはいろいろな種類があるって聞いたのですが、どんな違いがあるんですか？」
+                    </div>
+                </div>
+            </div>
+            <div class="answer-box">
+                <div class="character expert">
+                    <img src="/assets/images/shiozawa_character.jpeg" alt="塩澤康幸" class="character-avatar-img">
+                    <div class="speech-bubble">
+                        「主に3つの種類があります。一般競争入札、指名競争入札、企画競争入札ですね。それぞれ特徴が違うので、詳しく説明しますね。」
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 ### 一般競争入札
 
