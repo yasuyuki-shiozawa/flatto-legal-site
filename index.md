@@ -191,7 +191,7 @@ description: 入札・公共調達の基本から実践まで、体系的に学�
         <div class="expert-comment">
             <img src="/assets/images/imai_character.jpeg" alt="いまいさん" class="comment-avatar">
             <div class="comment-bubble">
-                公共調達の規模や参加機会について、基本的なデータをご紹介します。
+                公共調達の規模や参加機会について、内閣府や国土交通省の公式データに基づく正確な情報をご紹介します。
             </div>
         </div>
         
@@ -200,18 +200,18 @@ description: 入札・公共調達の基本から実践まで、体系的に学�
                 <div class="stat-icon">
                     <i class="fas fa-yen-sign"></i>
                 </div>
-                <div class="stat-number">約15兆円</div>
+                <div class="stat-number">約21兆円</div>
                 <div class="stat-label">年間公共調達額</div>
-                <div class="stat-description">国・地方自治体の年間調達規模</div>
+                <div class="stat-description">国約8兆円・地方約13兆円の合計（内閣府調査）</div>
             </div>
             
             <div class="stat-card">
                 <div class="stat-icon">
                     <i class="fas fa-building"></i>
                 </div>
-                <div class="stat-number">約50万社</div>
+                <div class="stat-number">約7万社</div>
                 <div class="stat-label">参加可能事業者数</div>
-                <div class="stat-description">全国で入札参加資格を持つ事業者数</div>
+                <div class="stat-description">全省庁統一資格保有企業数（2024年4月）</div>
             </div>
             
             <div class="stat-card">
@@ -227,15 +227,16 @@ description: 入札・公共調達の基本から実践まで、体系的に学�
                 <div class="stat-icon">
                     <i class="fas fa-calendar-alt"></i>
                 </div>
-                <div class="stat-number">年2回</div>
+                <div class="stat-number">2年に1回</div>
                 <div class="stat-label">資格審査頻度</div>
-                <div class="stat-description">多くの自治体での入札参加資格審査の実施頻度</div>
+                <div class="stat-description">地方自治体の定期審査実施頻度（国土交通省）</div>
             </div>
         </div>
         
         <!-- 業種別参加状況 -->
         <div class="industry-stats">
             <h3 class="industry-stats-title">業種別入札参加状況</h3>
+            <p class="industry-stats-note">※以下は一般的な傾向を示すものです。正確な統計は各発注機関にお問い合わせください。</p>
             <div class="industry-stats-grid">
                 <div class="industry-stat">
                     <div class="industry-stat-icon">
@@ -243,8 +244,8 @@ description: 入札・公共調達の基本から実践まで、体系的に学�
                     </div>
                     <div class="industry-stat-content">
                         <h4 class="industry-stat-name">建設業</h4>
-                        <div class="industry-stat-number">約40%</div>
-                        <div class="industry-stat-rate">全体に占める割合</div>
+                        <div class="industry-stat-number">最大</div>
+                        <div class="industry-stat-rate">公共工事の主要分野</div>
                     </div>
                 </div>
                 
@@ -254,8 +255,8 @@ description: 入札・公共調達の基本から実践まで、体系的に学�
                     </div>
                     <div class="industry-stat-content">
                         <h4 class="industry-stat-name">IT・システム</h4>
-                        <div class="industry-stat-number">約25%</div>
-                        <div class="industry-stat-rate">全体に占める割合</div>
+                        <div class="industry-stat-number">増加傾向</div>
+                        <div class="industry-stat-rate">デジタル化推進により拡大</div>
                     </div>
                 </div>
                 
@@ -265,8 +266,8 @@ description: 入札・公共調達の基本から実践まで、体系的に学�
                     </div>
                     <div class="industry-stat-content">
                         <h4 class="industry-stat-name">コンサルティング</h4>
-                        <div class="industry-stat-number">約15%</div>
-                        <div class="industry-stat-rate">全体に占める割合</div>
+                        <div class="industry-stat-number">専門分野</div>
+                        <div class="industry-stat-rate">企画競争入札が中心</div>
                     </div>
                 </div>
                 
@@ -276,8 +277,8 @@ description: 入札・公共調達の基本から実践まで、体系的に学�
                     </div>
                     <div class="industry-stat-content">
                         <h4 class="industry-stat-name">製造業</h4>
-                        <div class="industry-stat-number">約10%</div>
-                        <div class="industry-stat-rate">全体に占める割合</div>
+                        <div class="industry-stat-number">物品調達</div>
+                        <div class="industry-stat-rate">設備・機器等の調達</div>
                     </div>
                 </div>
                 
@@ -287,8 +288,8 @@ description: 入札・公共調達の基本から実践まで、体系的に学�
                     </div>
                     <div class="industry-stat-content">
                         <h4 class="industry-stat-name">その他</h4>
-                        <div class="industry-stat-number">約10%</div>
-                        <div class="industry-stat-rate">全体に占める割合</div>
+                        <div class="industry-stat-number">多様</div>
+                        <div class="industry-stat-rate">清掃・警備・運送等</div>
                     </div>
                 </div>
             </div>
