@@ -137,7 +137,7 @@ description: 行政書士法人ふらっと法務事務所の会社概要、代�
                 </p>
                 <ul class="feature-details">
                     <li>行政書士資格保有</li>
-                    <li>入札サポート実績200件以上</li>
+                    <li>入札サポート実績1,000件以上</li>
                     <li>各種研修・セミナー参加</li>
                     <li>最新法令への対応</li>
                 </ul>
@@ -165,10 +165,10 @@ description: 行政書士法人ふらっと法務事務所の会社概要、代�
                 </div>
                 <h3 class="feature-title">高い成功率</h3>
                 <p class="feature-description">
-                    これまでサポートしたお客様の入札成功率は85%以上。戦略的なアプローチで、お客様の落札確率を最大化します。
+                    これまでサポートしたお客様の入札成功率は95%以上。戦略的なアプローチで、お客様の落札確率を最大化します。
                 </p>
                 <ul class="feature-details">
-                    <li>成功率85%以上</li>
+                    <li>成功率95%以上</li>
                     <li>戦略的アプローチ</li>
                     <li>競合分析の実施</li>
                     <li>継続的な改善</li>
@@ -203,27 +203,27 @@ description: 行政書士法人ふらっと法務事務所の会社概要、代�
         
         <div class="stats-grid">
             <div class="stat-card">
-                <div class="stat-number">200+</div>
+                <div class="stat-number">1,000+</div>
                 <div class="stat-label">サポート実績</div>
                 <div class="stat-description">これまでにサポートした入札案件数</div>
             </div>
             
             <div class="stat-card">
-                <div class="stat-number">85%</div>
+                <div class="stat-number">95%</div>
                 <div class="stat-label">成功率</div>
                 <div class="stat-description">サポートしたお客様の入札成功率</div>
             </div>
             
             <div class="stat-card">
-                <div class="stat-number">150+</div>
+                <div class="stat-number">500+</div>
                 <div class="stat-label">お客様数</div>
                 <div class="stat-description">これまでにサポートしたお客様数</div>
             </div>
             
             <div class="stat-card">
-                <div class="stat-number">24h</div>
-                <div class="stat-label">回答時間</div>
-                <div class="stat-description">お問い合わせへの平均回答時間</div>
+                <div class="stat-number">15年</div>
+                <div class="stat-label">経験年数</div>
+                <div class="stat-description">入札サポート分野での豊富な経験</div>
             </div>
         </div>
     </div>

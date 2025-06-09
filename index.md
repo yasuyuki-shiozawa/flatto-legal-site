@@ -152,6 +152,9 @@ description: 行政書士法人ふらっと法務事務所の入札サポート�
     </div>
 </section>
 
+<!-- 実績・統計 -->
+{% include achievements-section.html %}
+
 <!-- 対象業種 -->
 <section class="industries">
     <div class="container">
