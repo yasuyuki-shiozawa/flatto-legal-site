@@ -3052,3 +3052,330 @@ html {
   }
 }
 
+
+/* ===== ポータルサイト統一デザイン =====*/
+
+/* カラーパレット統一 */
+:root {
+    --portal-orange: #ff9800;
+    --portal-orange-light: #ffb74d;
+    --portal-orange-dark: #f57c00;
+    --portal-blue: #2196f3;
+    --portal-yellow: #ffeb3b;
+    --portal-purple: #9c27b0;
+    --portal-green: #4caf50;
+    --portal-pink: #e91e63;
+    --portal-background: #f5f5f5;
+}
+
+/* ヒーローセクション強化 */
+.hero-section-enhanced {
+    background: linear-gradient(135deg, var(--portal-orange) 0%, var(--portal-orange-light) 50%, #fff3e0 100%);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section-enhanced::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
+    pointer-events: none;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--portal-orange-dark);
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.hero-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-title .highlight {
+    color: #fff3e0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.hero-stats {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    min-width: 120px;
+}
+
+.stat-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 5px;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    min-width: 200px;
+}
+
+.cta-button.primary {
+    background: white;
+    color: var(--portal-orange);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.cta-button.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.cta-button.secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.cta-button.secondary:hover {
+    background: white;
+    color: var(--portal-orange);
+}
+
+/* 対話セクション */
+.dialogue-intro {
+    background: var(--portal-background);
+    padding: 60px 0;
+}
+
+.dialogue-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.question-box, .answer-box {
+    margin-bottom: 30px;
+}
+
+.character {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.character.client {
+    justify-content: flex-start;
+}
+
+.character.expert {
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+}
+
+.character-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--portal-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.speech-bubble {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: relative;
+    max-width: 70%;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.character.client .speech-bubble {
+    border-left: 4px solid var(--portal-blue);
+}
+
+.character.expert .speech-bubble {
+    border-left: 4px solid var(--portal-orange);
+    background: linear-gradient(135deg, #fff3e0 0%, white 100%);
+}
+
+.speech-bubble::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+}
+
+.character.client .speech-bubble::before {
+    left: -20px;
+    border-right-color: white;
+}
+
+.character.expert .speech-bubble::before {
+    right: -20px;
+    border-left-color: #fff3e0;
+}
+
+/* ポータル風目次 */
+.table-of-contents {
+    background: white;
+    padding: 60px 0;
+}
+
+.portal-toc {
+    background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+    border: 3px solid var(--portal-orange);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 0 auto;
+    max-width: 800px;
+    box-shadow: 0 4px 15px rgba(255, 152, 0, 0.2);
+}
+
+.toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.toc-section h3 {
+    color: var(--portal-orange-dark);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.toc-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.toc-section li {
+    margin-bottom: 8px;
+}
+
+.toc-section a {
+    color: #333;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: block;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.toc-section a:hover {
+    background: rgba(255, 152, 0, 0.1);
+    border-left-color: var(--portal-orange);
+    transform: translateX(5px);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-stats {
+        gap: 20px;
+    }
+    
+    .stat-item {
+        min-width: 100px;
+        padding: 15px;
+    }
+    
+    .cta-button {
+        min-width: 150px;
+        padding: 12px 25px;
+    }
+    
+    .character-avatar {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    .speech-bubble {
+        max-width: 85%;
+        font-size: 1rem;
+        padding: 15px;
+    }
+    
+    .toc-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+

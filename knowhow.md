@@ -6,23 +6,57 @@ description: 入札から落札まで、初心者でも分かりやすい5ステ
 
 # 入札ノウハウ - 成功への5ステップガイド
 
-<div class="hero-section">
+<div class="hero-section-enhanced">
     <div class="container">
         <div class="hero-content">
-            <h1 class="hero-title">入札成功への道筋を<br>5つのステップで完全解説</h1>
+            <div class="hero-badge">
+                <span>🏆 入札支援専門</span>
+            </div>
+            <h1 class="hero-title">入札成功への道筋を<br><span class="highlight">5つのステップ</span>で完全解説</h1>
             <p class="hero-subtitle">初心者から経験者まで、確実に成果を上げるための実践的ノウハウ</p>
             <div class="hero-stats">
                 <div class="stat-item">
+                    <div class="stat-icon">📊</div>
                     <span class="stat-number">1,000+</span>
                     <span class="stat-label">支援実績</span>
                 </div>
                 <div class="stat-item">
+                    <div class="stat-icon">🎯</div>
                     <span class="stat-number">95%</span>
                     <span class="stat-label">成功率</span>
                 </div>
                 <div class="stat-item">
+                    <div class="stat-icon">⭐</div>
                     <span class="stat-number">15年</span>
                     <span class="stat-label">の経験</span>
+                </div>
+            </div>
+            <div class="hero-cta">
+                <a href="#step1" class="cta-button primary">5ステップガイドを見る</a>
+                <a href="/contact/" class="cta-button secondary">無料相談を申し込む</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 対話型導入セクション -->
+<div class="dialogue-intro">
+    <div class="container">
+        <div class="dialogue-content">
+            <div class="question-box">
+                <div class="character client">
+                    <div class="character-avatar">👤</div>
+                    <div class="speech-bubble">
+                        「入札に参加したいのですが、何から始めればよいでしょうか？手続きが複雑で不安です...」
+                    </div>
+                </div>
+            </div>
+            <div class="answer-box">
+                <div class="character expert">
+                    <div class="character-avatar">👨‍💼</div>
+                    <div class="speech-bubble">
+                        「ご安心ください！入札は正しい手順を踏めば決して難しくありません。まずは基本から一緒に学んでいきましょう。」
+                    </div>
                 </div>
             </div>
         </div>
@@ -32,33 +66,35 @@ description: 入札から落札まで、初心者でも分かりやすい5ステ
 <!-- 目次 -->
 <div class="table-of-contents">
     <div class="container">
-        <h2>📋 この記事の目次</h2>
-        <div class="toc-grid">
-            <div class="toc-section">
-                <h3>🎯 入札の基本</h3>
-                <ul>
-                    <li><a href="#what-is-bid">入札とは何か</a></li>
-                    <li><a href="#bid-benefits">入札参加のメリット</a></li>
-                    <li><a href="#bid-types">入札の種類</a></li>
-                </ul>
-            </div>
-            <div class="toc-section">
-                <h3>📝 5ステップガイド</h3>
-                <ul>
-                    <li><a href="#step1">STEP1: 入札参加資格の取得</a></li>
-                    <li><a href="#step2">STEP2: 入札案件の探索</a></li>
-                    <li><a href="#step3">STEP3: 仕様書取得・説明会参加</a></li>
-                    <li><a href="#step4">STEP4: 入札書の作成・提出</a></li>
-                    <li><a href="#step5">STEP5: 開札・落札・契約</a></li>
-                </ul>
-            </div>
-            <div class="toc-section">
-                <h3>💡 成功のコツ</h3>
-                <ul>
-                    <li><a href="#success-tips">落札のポイント</a></li>
-                    <li><a href="#common-mistakes">よくある失敗</a></li>
-                    <li><a href="#expert-advice">専門家のアドバイス</a></li>
-                </ul>
+        <div class="portal-toc">
+            <h2>📋 目次</h2>
+            <div class="toc-grid">
+                <div class="toc-section">
+                    <h3>🔵 入札の基本</h3>
+                    <ul>
+                        <li><a href="#what-is-bid">入札案件とは？</a></li>
+                        <li><a href="#bid-benefits">入札参加のメリット</a></li>
+                        <li><a href="#bid-types">入札の種類</a></li>
+                    </ul>
+                </div>
+                <div class="toc-section">
+                    <h3>🟡 5ステップガイド</h3>
+                    <ul>
+                        <li><a href="#step1">STEP1: 入札参加資格の取得</a></li>
+                        <li><a href="#step2">STEP2: 入札案件の探索</a></li>
+                        <li><a href="#step3">STEP3: 仕様書取得・説明会参加</a></li>
+                        <li><a href="#step4">STEP4: 入札書の作成・提出</a></li>
+                        <li><a href="#step5">STEP5: 開札・落札・契約</a></li>
+                    </ul>
+                </div>
+                <div class="toc-section">
+                    <h3>🟢 成功のコツ</h3>
+                    <ul>
+                        <li><a href="#success-tips">落札のポイント</a></li>
+                        <li><a href="#common-mistakes">よくある失敗</a></li>
+                        <li><a href="#expert-advice">専門家のアドバイス</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
