@@ -561,3 +561,463 @@ window.addEventListener('resize', function() {
     }, 250);
 });
 
+
+// ===== フェーズ2: ナビゲーション改善機能 =====
+
+// サイト内検索機能
+class SiteSearch {
+    constructor() {
+        this.searchData = [];
+        this.init();
+    }
+
+    init() {
+        this.createSearchInterface();
+        this.loadSearchData();
+        this.bindEvents();
+    }
+
+    createSearchInterface() {
+        const searchHTML = `
+            <div class="site-search">
+                <div class="search-icon">🔍</div>
+                <input type="text" class="search-input" placeholder="サイト内を検索..." autocomplete="off">
+                <div class="search-results"></div>
+            </div>
+        `;
+        
+        // ヘッダーに検索機能を追加
+        const header = document.querySelector('.header');
+        if (header) {
+            const searchContainer = document.createElement('div');
+            searchContainer.innerHTML = searchHTML;
+            header.appendChild(searchContainer.firstElementChild);
+        }
+    }
+
+    loadSearchData() {
+        // サイト内のページデータを定義
+        this.searchData = [
+            {
+                title: 'ホーム',
+                url: '/',
+                excerpt: '行政書士法人ふらっと法務事務所の入札サポート専門サイト',
+                keywords: ['ホーム', 'トップ', '入札', 'サポート', '行政書士']
+            },
+            {
+                title: 'サービス紹介',
+                url: '/services/',
+                excerpt: '入札参加資格取得から落札まで、トータルサポートサービス',
+                keywords: ['サービス', '入札参加資格', '落札', 'サポート', '支援']
+            },
+            {
+                title: 'ご利用の流れ',
+                url: '/flow/',
+                excerpt: '無料相談から契約完了まで、5つのステップで安心サポート',
+                keywords: ['流れ', 'ステップ', '無料相談', '契約', '手順']
+            },
+            {
+                title: '入札ノウハウ',
+                url: '/knowhow/',
+                excerpt: '入札成功への5ステップガイド。1,000+支援実績、95%成功率',
+                keywords: ['ノウハウ', '5ステップ', '成功', '実績', 'ガイド', '入札参加資格', '案件探索']
+            },
+            {
+                title: '成功事例',
+                url: '/cases/',
+                excerpt: '実際の成功事例をご紹介。様々な業種での落札実績',
+                keywords: ['成功事例', '実績', '落札', '事例', '業種']
+            },
+            {
+                title: '会社案内',
+                url: '/about/',
+                excerpt: '塩澤康幸代表の紹介と事務所概要。15年の経験と豊富な実績',
+                keywords: ['会社案内', '塩澤康幸', '代表', '事務所', '経験', '実績']
+            },
+            {
+                title: 'お問い合わせ',
+                url: '/contact/',
+                excerpt: '無料相談受付中。電話・メールでお気軽にご相談ください',
+                keywords: ['お問い合わせ', '無料相談', '電話', 'メール', '相談']
+            },
+            {
+                title: 'よくある質問（FAQ）',
+                url: '/faq/',
+                excerpt: '入札に関するよくある質問と回答。6つのカテゴリで30の質問',
+                keywords: ['FAQ', 'よくある質問', '質問', '回答', '入札参加資格', '案件探索', '電子入札']
+            },
+            {
+                title: '用語集',
+                url: '/glossary/',
+                excerpt: '入札・調達関連用語の詳細解説',
+                keywords: ['用語集', '用語', '解説', '入札', '調達']
+            },
+            {
+                title: 'リンク集',
+                url: '/links/',
+                excerpt: '入札・調達関連の公的機関リンク集。30サイトを厳選',
+                keywords: ['リンク集', '公的機関', '入札', '調達', '政府', '自治体']
+            }
+        ];
+    }
+
+    bindEvents() {
+        const searchInput = document.querySelector('.search-input');
+        const searchResults = document.querySelector('.search-results');
+
+        if (!searchInput || !searchResults) return;
+
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.trim();
+            if (query.length < 2) {
+                searchResults.classList.remove('active');
+                return;
+            }
+
+            const results = this.search(query);
+            this.displayResults(results, searchResults);
+        });
+
+        // 検索結果外をクリックで閉じる
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.site-search')) {
+                searchResults.classList.remove('active');
+            }
+        });
+    }
+
+    search(query) {
+        const lowerQuery = query.toLowerCase();
+        return this.searchData.filter(item => {
+            return item.title.toLowerCase().includes(lowerQuery) ||
+                   item.excerpt.toLowerCase().includes(lowerQuery) ||
+                   item.keywords.some(keyword => keyword.toLowerCase().includes(lowerQuery));
+        }).slice(0, 5); // 最大5件まで表示
+    }
+
+    displayResults(results, container) {
+        if (results.length === 0) {
+            container.innerHTML = '<div class="search-result-item">該当する結果が見つかりませんでした</div>';
+        } else {
+            container.innerHTML = results.map(result => `
+                <div class="search-result-item" onclick="window.location.href='${result.url}'">
+                    <div class="search-result-title">${result.title}</div>
+                    <div class="search-result-excerpt">${result.excerpt}</div>
+                </div>
+            `).join('');
+        }
+        container.classList.add('active');
+    }
+}
+
+// 目次自動生成機能
+class TableOfContents {
+    constructor() {
+        this.init();
+    }
+
+    init() {
+        const content = document.querySelector('.content, main, article');
+        if (!content) return;
+
+        const headings = content.querySelectorAll('h2, h3, h4');
+        if (headings.length < 3) return; // 見出しが少ない場合は目次を作らない
+
+        this.generateTOC(headings);
+        this.addSmoothScrolling();
+    }
+
+    generateTOC(headings) {
+        const tocContainer = document.createElement('div');
+        tocContainer.className = 'table-of-contents';
+        
+        const tocTitle = document.createElement('h3');
+        tocTitle.textContent = 'この記事の目次';
+        
+        const tocList = document.createElement('ul');
+        tocList.className = 'toc-list';
+
+        headings.forEach((heading, index) => {
+            // アンカーIDを設定
+            const id = `heading-${index}`;
+            heading.id = id;
+            heading.classList.add('anchor-offset');
+
+            // 目次項目を作成
+            const listItem = document.createElement('li');
+            const link = document.createElement('a');
+            link.href = `#${id}`;
+            link.textContent = heading.textContent;
+            link.className = `toc-level-${heading.tagName.toLowerCase().replace('h', '')}`;
+            
+            listItem.appendChild(link);
+            tocList.appendChild(listItem);
+        });
+
+        tocContainer.appendChild(tocTitle);
+        tocContainer.appendChild(tocList);
+
+        // 最初の見出しの前に挿入
+        const firstHeading = headings[0];
+        firstHeading.parentNode.insertBefore(tocContainer, firstHeading);
+    }
+
+    addSmoothScrolling() {
+        document.querySelectorAll('.toc-list a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    }
+}
+
+// ページナビゲーション機能
+class PageNavigation {
+    constructor() {
+        this.init();
+    }
+
+    init() {
+        this.createPageNav();
+        this.highlightCurrentSection();
+    }
+
+    createPageNav() {
+        const headings = document.querySelectorAll('h2[id], h3[id]');
+        if (headings.length < 3) return;
+
+        const navContainer = document.createElement('div');
+        navContainer.className = 'page-navigation';
+        
+        const navTitle = document.createElement('h4');
+        navTitle.textContent = 'ページ内ナビ';
+        
+        const navList = document.createElement('ul');
+        navList.className = 'page-nav-list';
+
+        headings.forEach(heading => {
+            const listItem = document.createElement('li');
+            const link = document.createElement('a');
+            link.href = `#${heading.id}`;
+            link.textContent = heading.textContent;
+            link.dataset.target = heading.id;
+            
+            listItem.appendChild(link);
+            navList.appendChild(listItem);
+        });
+
+        navContainer.appendChild(navTitle);
+        navContainer.appendChild(navList);
+
+        // サイドバーまたは適切な位置に配置
+        const sidebar = document.querySelector('.sidebar');
+        const content = document.querySelector('.content, main');
+        
+        if (sidebar) {
+            sidebar.appendChild(navContainer);
+        } else if (content) {
+            content.appendChild(navContainer);
+        }
+    }
+
+    highlightCurrentSection() {
+        const navLinks = document.querySelectorAll('.page-nav-list a');
+        const headings = document.querySelectorAll('h2[id], h3[id]');
+
+        if (navLinks.length === 0 || headings.length === 0) return;
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    const activeLink = document.querySelector(`[data-target="${entry.target.id}"]`);
+                    if (activeLink) {
+                        activeLink.classList.add('active');
+                    }
+                }
+            });
+        }, {
+            rootMargin: '-20% 0px -70% 0px'
+        });
+
+        headings.forEach(heading => observer.observe(heading));
+    }
+}
+
+// パンくずナビゲーション
+class Breadcrumb {
+    constructor() {
+        this.init();
+    }
+
+    init() {
+        this.createBreadcrumb();
+    }
+
+    createBreadcrumb() {
+        const path = window.location.pathname;
+        const breadcrumbData = this.getBreadcrumbData(path);
+        
+        if (breadcrumbData.length <= 1) return; // ホームページのみの場合は表示しない
+
+        const breadcrumbContainer = document.createElement('nav');
+        breadcrumbContainer.className = 'breadcrumb';
+        breadcrumbContainer.setAttribute('aria-label', 'パンくずナビゲーション');
+        
+        const breadcrumbList = document.createElement('ul');
+        breadcrumbList.className = 'breadcrumb-list';
+
+        breadcrumbData.forEach((item, index) => {
+            const listItem = document.createElement('li');
+            
+            if (index === breadcrumbData.length - 1) {
+                // 現在のページ
+                const span = document.createElement('span');
+                span.className = 'current';
+                span.textContent = item.title;
+                listItem.appendChild(span);
+            } else {
+                // リンク
+                const link = document.createElement('a');
+                link.href = item.url;
+                link.textContent = item.title;
+                listItem.appendChild(link);
+            }
+            
+            breadcrumbList.appendChild(listItem);
+        });
+
+        breadcrumbContainer.appendChild(breadcrumbList);
+
+        // ヘッダーの下に挿入
+        const header = document.querySelector('.header');
+        const main = document.querySelector('main, .content');
+        
+        if (header && main) {
+            header.parentNode.insertBefore(breadcrumbContainer, main);
+        }
+    }
+
+    getBreadcrumbData(path) {
+        const pathMap = {
+            '/': { title: 'ホーム', url: '/' },
+            '/services/': { title: 'サービス紹介', url: '/services/' },
+            '/flow/': { title: 'ご利用の流れ', url: '/flow/' },
+            '/knowhow/': { title: '入札ノウハウ', url: '/knowhow/' },
+            '/cases/': { title: '成功事例', url: '/cases/' },
+            '/about/': { title: '会社案内', url: '/about/' },
+            '/contact/': { title: 'お問い合わせ', url: '/contact/' },
+            '/faq/': { title: 'よくある質問', url: '/faq/' },
+            '/glossary/': { title: '用語集', url: '/glossary/' },
+            '/links/': { title: 'リンク集', url: '/links/' }
+        };
+
+        const breadcrumb = [{ title: 'ホーム', url: '/' }];
+        
+        if (path !== '/' && pathMap[path]) {
+            breadcrumb.push(pathMap[path]);
+        }
+
+        return breadcrumb;
+    }
+}
+
+// 関連ページ誘導機能
+class RelatedPages {
+    constructor() {
+        this.init();
+    }
+
+    init() {
+        this.addRelatedPages();
+    }
+
+    addRelatedPages() {
+        const path = window.location.pathname;
+        const relatedData = this.getRelatedPages(path);
+        
+        if (relatedData.length === 0) return;
+
+        const relatedContainer = document.createElement('div');
+        relatedContainer.className = 'related-pages';
+        
+        const title = document.createElement('h3');
+        title.textContent = 'さらに詳しい情報';
+        
+        const linksContainer = document.createElement('div');
+        linksContainer.className = 'related-links';
+
+        relatedData.forEach(item => {
+            const link = document.createElement('a');
+            link.href = item.url;
+            link.className = 'related-link';
+            
+            const linkTitle = document.createElement('div');
+            linkTitle.className = 'related-link-title';
+            linkTitle.textContent = item.title;
+            
+            const linkDesc = document.createElement('div');
+            linkDesc.className = 'related-link-desc';
+            linkDesc.textContent = item.description;
+            
+            link.appendChild(linkTitle);
+            link.appendChild(linkDesc);
+            linksContainer.appendChild(link);
+        });
+
+        relatedContainer.appendChild(title);
+        relatedContainer.appendChild(linksContainer);
+
+        // ページの最後に追加
+        const main = document.querySelector('main, .content');
+        if (main) {
+            main.appendChild(relatedContainer);
+        }
+    }
+
+    getRelatedPages(path) {
+        const relatedMap = {
+            '/': [
+                { title: '入札ノウハウ', url: '/knowhow/', description: '5ステップで学ぶ入札成功法' },
+                { title: 'サービス紹介', url: '/services/', description: 'トータルサポートサービス' },
+                { title: 'よくある質問', url: '/faq/', description: '入札に関する疑問を解決' }
+            ],
+            '/knowhow/': [
+                { title: 'よくある質問', url: '/faq/', description: '入札に関する疑問を解決' },
+                { title: 'サービス紹介', url: '/services/', description: '専門家によるサポート' },
+                { title: '成功事例', url: '/cases/', description: '実際の落札事例をご紹介' }
+            ],
+            '/faq/': [
+                { title: '入札ノウハウ', url: '/knowhow/', description: '詳細な手順とコツ' },
+                { title: 'お問い合わせ', url: '/contact/', description: '無料相談受付中' },
+                { title: '用語集', url: '/glossary/', description: '入札関連用語の解説' }
+            ],
+            '/services/': [
+                { title: 'ご利用の流れ', url: '/flow/', description: '5つのステップで安心サポート' },
+                { title: '入札ノウハウ', url: '/knowhow/', description: '成功のための知識' },
+                { title: '成功事例', url: '/cases/', description: '豊富な実績をご紹介' }
+            ]
+        };
+
+        return relatedMap[path] || [];
+    }
+}
+
+// 初期化
+document.addEventListener('DOMContentLoaded', () => {
+    new SiteSearch();
+    new TableOfContents();
+    new PageNavigation();
+    new Breadcrumb();
+    new RelatedPages();
+});
+
