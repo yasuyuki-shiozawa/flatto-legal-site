@@ -23,6 +23,10 @@ description: ふらっと法務事務所の入札サポートサービスのご�
             </p>
         </div>
         
+        <div class="flow-hero-image">
+            <img src="{{ '/assets/images/flow-process.png' | relative_url }}" alt="ご利用の流れ" class="flow-main-img">
+        </div>
+        
         <div class="flow-timeline">
             <div class="flow-step">
                 <div class="step-number">01</div>

@@ -23,6 +23,10 @@ description: ふらっと法務事務所の入札サポートサービスの詳�
             </p>
         </div>
         
+        <div class="service-hero-image">
+            <img src="{{ '/assets/images/service-overview.png' | relative_url }}" alt="サービス概要" class="service-main-img">
+        </div>
+        
         <div class="service-grid">
             <div class="service-card">
                 <div class="service-icon">

@@ -641,3 +641,85 @@ body {
     }
 }
 
+
+/* 画像配置用の追加スタイル - 訪問客のストレス軽減重視 */
+
+/* サービスページ画像 */
+.service-hero-image {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.service-main-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.1);
+}
+
+/* フローページ画像 */
+.flow-hero-image {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.flow-main-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 250px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.1);
+}
+
+/* ノウハウページ画像 */
+.knowhow-hero-image {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.knowhow-main-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.1);
+}
+
+/* 成功事例ページ画像 */
+.cases-hero-image {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.cases-main-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 250px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.1);
+}
+
+/* 小さなアクセント画像 */
+.accent-image {
+    max-width: 150px;
+    height: auto;
+    margin: 1rem auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .service-main-img,
+    .flow-main-img,
+    .knowhow-main-img,
+    .cases-main-img {
+        max-height: 200px;
+    }
+    
+    .accent-image {
+        max-width: 120px;
+    }
+}
+
