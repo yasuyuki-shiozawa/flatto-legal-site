@@ -1,0 +1,68 @@
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            <!-- ロゴ -->
+            <div class="logo">
+                <a href="{{ '/' | relative_url }}">
+                    <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="{{ site.title }}" class="logo-img">
+                </a>
+            </div>
+            
+            <!-- メインナビゲーション -->
+            <nav class="nav">
+                <ul class="nav-list">
+                    {% for item in site.data.navigation.main_nav %}
+                    <li class="nav-item">
+                        <a href="{{ item.url | relative_url }}" 
+                           class="nav-link{% if page.url == item.url %} active{% endif %}"
+                           title="{{ item.description }}">
+                            <i class="{{ item.icon }}"></i>
+                            {{ item.name }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+            
+            <!-- CTA -->
+            <div class="header-cta">
+                <a href="{{ site.data.navigation.cta.primary.url | relative_url }}" 
+                   class="btn btn-primary"
+                   title="{{ site.data.navigation.cta.primary.description }}">
+                    <i class="{{ site.data.navigation.cta.primary.icon }}"></i>
+                    {{ site.data.navigation.cta.primary.text }}
+                </a>
+            </div>
+            
+            <!-- モバイルメニューボタン -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="メニューを開く">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        
+        <!-- モバイルメニュー -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul class="mobile-nav-list">
+                {% for item in site.data.navigation.main_nav %}
+                <li>
+                    <a href="{{ item.url | relative_url }}"
+                       class="{% if page.url == item.url %}active{% endif %}">
+                        <i class="{{ item.icon }}"></i>
+                        {{ item.name }}
+                    </a>
+                </li>
+                {% endfor %}
+                <li class="mobile-cta">
+                    <a href="{{ site.data.navigation.cta.primary.url | relative_url }}" 
+                       class="btn btn-primary">
+                        <i class="{{ site.data.navigation.cta.primary.icon }}"></i>
+                        {{ site.data.navigation.cta.primary.text }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+

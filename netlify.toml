@@ -1,14 +1,13 @@
 [build]
-  base = "jekyll-site"
-  command = "bundle install && bundle exec jekyll build"
+  base = ""
+  command = "bundle exec jekyll build"
   publish = "_site"
 
 [build.environment]
   JEKYLL_ENV = "production"
-  RUBY_VERSION = "3.0.0"
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  from = "/old-site/*"
+  to = "/:splat"
+  status = 301
 

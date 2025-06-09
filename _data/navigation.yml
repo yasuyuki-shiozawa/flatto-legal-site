@@ -1,0 +1,88 @@
+# ナビゲーション設定ファイル
+# ヘッダーとフッターのメニュー項目を一元管理
+
+# メインナビゲーション（ヘッダー・フッター共通）
+main_nav:
+  - name: "ホーム"
+    url: "/"
+    icon: "fas fa-home"
+    description: "トップページ"
+    
+  - name: "サービス紹介"
+    url: "/service/"
+    icon: "fas fa-briefcase"
+    description: "入札サポートサービスの詳細"
+    
+  - name: "ご利用の流れ"
+    url: "/flow/"
+    icon: "fas fa-list-ol"
+    description: "サービス利用の手順"
+    
+  - name: "入札ノウハウ"
+    url: "/knowhow/"
+    icon: "fas fa-lightbulb"
+    description: "入札成功のコツ"
+    
+  - name: "成功事例"
+    url: "/cases/"
+    icon: "fas fa-trophy"
+    description: "お客様の成功事例"
+    
+  - name: "会社案内"
+    url: "/about/"
+    icon: "fas fa-building"
+    description: "会社概要・代表挨拶"
+    
+  - name: "お問い合わせ"
+    url: "/contact/"
+    icon: "fas fa-envelope"
+    description: "無料相談・お問い合わせ"
+
+# フッター専用ナビゲーション（SEO・補助的な情報）
+footer_only_nav:
+  - name: "用語集"
+    url: "/dictionary/"
+    icon: "fas fa-book"
+    description: "入札関連用語の解説"
+    
+  - name: "リンク集"
+    url: "/links/"
+    icon: "fas fa-external-link-alt"
+    description: "関連サイト・お役立ちリンク"
+    
+  - name: "ブログ"
+    url: "/blog/"
+    icon: "fas fa-blog"
+    description: "最新情報・コラム"
+
+# CTA（Call to Action）設定
+cta:
+  primary:
+    text: "無料相談"
+    url: "/contact/"
+    icon: "fas fa-phone"
+    description: "今すぐ無料相談を申し込む"
+    
+  secondary:
+    text: "資料請求"
+    url: "/contact/#download"
+    icon: "fas fa-download"
+    description: "サービス資料をダウンロード"
+
+# ソーシャルメディア（将来対応）
+social_media:
+  - name: "Facebook"
+    url: "#"
+    icon: "fab fa-facebook-f"
+    enabled: false
+    
+  - name: "Twitter"
+    url: "#"
+    icon: "fab fa-twitter"
+    enabled: false
+    
+  - name: "LinkedIn"
+    url: "#"
+    icon: "fab fa-linkedin-in"
+    enabled: false
+
