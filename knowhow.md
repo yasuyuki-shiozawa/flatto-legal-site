@@ -6,6 +6,14 @@ description: 入札から落札まで、初心者でも分かりやすい5ステ
 
 # 入札ノウハウ - 成功への5ステップガイド
 
+<!-- 塩澤さんのワンポイントコメント -->
+<div class="expert-comment">
+    <img src="/assets/images/shiozawa_character.jpeg" alt="塩澤康幸" class="comment-avatar">
+    <div class="comment-bubble">
+        <strong>塩澤です。</strong>入札について、初心者の方にも分かりやすく解説していきますね！
+    </div>
+</div>
+
 <div class="hero-section-enhanced">
     <div class="container">
         <div class="hero-content">
@@ -43,20 +51,11 @@ description: 入札から落札まで、初心者でも分かりやすい5ステ
 <div class="dialogue-intro">
     <div class="container">
         <div class="dialogue-content">
-            <div class="question-box">
-                <div class="character client">
-                    <img src="/assets/images/saori_character.jpeg" alt="さおりさん" class="character-avatar-img">
-                    <div class="speech-bubble">
-                        「入札に参加したいのですが、何から始めればよいでしょうか？手続きが複雑で不安です...」
-                    </div>
-                </div>
-            </div>
-            <div class="answer-box">
-                <div class="character expert">
-                    <img src="/assets/images/shiozawa_character.jpeg" alt="塩澤康幸" class="character-avatar-img">
-                    <div class="speech-bubble">
-                        「ご安心ください！入札は正しい手順を踏めば決して難しくありません。まずは基本から一緒に学んでいきましょう。」
-                    </div>
+            <!-- さおりさんのワンポイントコメント -->
+            <div class="client-comment">
+                <img src="/assets/images/saori_character.jpeg" alt="さおりさん" class="comment-avatar">
+                <div class="comment-bubble">
+                    入札に参加したいのですが、何から始めればよいでしょうか？
                 </div>
             </div>
         </div>
@@ -194,27 +193,11 @@ description: 入札から落札まで、初心者でも分かりやすい5ステ
 
 ## 入札の種類 {#bid-types}
 
-<!-- 入札の種類 対話セクション -->
-<div class="dialogue-section">
-    <div class="container">
-        <div class="dialogue-content">
-            <div class="question-box">
-                <div class="character client">
-                    <img src="/assets/images/saori_character.jpeg" alt="さおりさん" class="character-avatar-img">
-                    <div class="speech-bubble">
-                        「入札にはいろいろな種類があるって聞いたのですが、どんな違いがあるんですか？」
-                    </div>
-                </div>
-            </div>
-            <div class="answer-box">
-                <div class="character expert">
-                    <img src="/assets/images/shiozawa_character.jpeg" alt="塩澤康幸" class="character-avatar-img">
-                    <div class="speech-bubble">
-                        「主に3つの種類があります。一般競争入札、指名競争入札、企画競争入札ですね。それぞれ特徴が違うので、詳しく説明しますね。」
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- いまいさんのワンポイントコメント -->
+<div class="expert-comment">
+    <img src="/assets/images/imai_character.jpeg" alt="いまいさん" class="comment-avatar">
+    <div class="comment-bubble">
+        入札には主に3つの種類があります。それぞれの特徴を押さえておきましょう！
     </div>
 </div>
 

@@ -3481,3 +3481,68 @@ html {
     }
 }
 
+
+/* ワンポイントコメント用のスタイル */
+.expert-comment, .client-comment {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 20px 0;
+    padding: 15px;
+    background: linear-gradient(135deg, #fff3e0 0%, #ffffff 100%);
+    border-radius: 12px;
+    border-left: 4px solid var(--portal-orange);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.client-comment {
+    background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 100%);
+    border-left: 4px solid var(--portal-blue);
+}
+
+.comment-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    border: 2px solid white;
+}
+
+.comment-bubble {
+    background: transparent;
+    padding: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+.comment-bubble strong {
+    color: var(--portal-orange);
+}
+
+/* 既存の大きな対話セクションを簡素化 */
+.dialogue-intro {
+    background: transparent;
+    padding: 20px 0;
+    margin: 20px 0;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .expert-comment, .client-comment {
+        padding: 12px;
+        margin: 15px 0;
+    }
+    
+    .comment-avatar {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .comment-bubble {
+        font-size: 0.9rem;
+    }
+}
+
