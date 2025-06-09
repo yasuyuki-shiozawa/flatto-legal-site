@@ -287,6 +287,36 @@ description: 行政書士法人ふらっと法務事務所の入札サポート�
     </div>
 </section>
 
+<!-- 実績後CTA -->
+<section class="mid-cta achievements-cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <div class="cta-highlight">
+                <h3 class="cta-title">🏆 1,000件以上の実績が証明する確かな成果</h3>
+                <p class="cta-description">
+                    95%の成功率、15年の経験。<br>
+                    あなたの事業も、この実績の一部になりませんか？
+                </p>
+                <div class="cta-buttons">
+                    <a href="/consultation.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-rocket"></i>
+                        3年で6,000万円落札の実体験を聞く
+                    </a>
+                    <a href="/cases/" class="btn btn-secondary btn-large">
+                        <i class="fas fa-chart-line"></i>
+                        成功事例を詳しく見る
+                    </a>
+                </div>
+                <div class="cta-trust-indicators">
+                    <span class="trust-item">✓ 24時間以内に回答</span>
+                    <span class="trust-item">✓ 相談料完全無料</span>
+                    <span class="trust-item">✓ 秘密厳守</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- 対象業種 -->
 <section class="industries">
     <div class="container">
@@ -371,6 +401,35 @@ description: 行政書士法人ふらっと法務事務所の入札サポート�
                     <div class="author-info">
                         <h4 class="author-name">Webデザイン会社代表 Y様</h4>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- お客様の声後CTA -->
+<section class="mid-cta testimonials-cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <div class="cta-highlight">
+                <h3 class="cta-title">💬 お客様と同じ成功体験を手に入れませんか？</h3>
+                <p class="cta-description">
+                    「売上が安定した」「スタッフを安心して雇えるようになった」<br>
+                    <strong>あなたも同じ成功を実現できます。</strong>
+                </p>
+                <div class="cta-buttons">
+                    <a href="/consultation.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-handshake"></i>
+                        同じ事業者として、あなたの成功をサポート
+                    </a>
+                    <a href="tel:046-272-3357" class="btn btn-secondary btn-large">
+                        <i class="fas fa-phone"></i>
+                        今すぐ電話で相談する
+                    </a>
+                </div>
+                <div class="cta-urgency">
+                    <span class="urgency-text">⏰ 月10社限定のサポート枠</span>
+                    <span class="urgency-text">🎯 今月残り3枠</span>
                 </div>
             </div>
         </div>

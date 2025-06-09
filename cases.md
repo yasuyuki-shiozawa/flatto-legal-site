@@ -148,8 +148,44 @@ keywords: 入札支援,成功事例,お客様の声,落札実績,行政書士,�
 - 総契約金額：**8,500万円**
 - 官公庁案件の売上比率**60%**に向上
 
+<!-- 建設業事例後CTA -->
+<div class="case-cta construction-cta">
+    <div class="cta-highlight">
+        <h4>🏗️ 建設業での成功を目指しませんか？</h4>
+        <p>この事例と同じような課題をお持ちではありませんか？<br>
+        <strong>建設業専門の入札サポート</strong>で、あなたの会社も安定受注を実現できます。</p>
+        <div class="cta-buttons">
+            <a href="/consultation.html" class="btn btn-primary">建設業専門サポートを相談する</a>
+            <a href="tel:046-272-3357" class="btn btn-secondary">今すぐ電話で相談</a>
+        </div>
+        <div class="success-indicators">
+            <span>✓ 建設業420件の実績</span>
+            <span>✓ 成功率96.4%</span>
+            <span>✓ 経審対策も対応</span>
+        </div>
+    </div>
+</div>
+
 **お客様の声**
 > 「民間企業向けの開発は得意でしたが、官公庁案件は全く未知の世界でした。塩澤先生のサポートで、セキュリティ要件から技術提案まで、官公庁特有のポイントを理解できました。今では安定した収益源となっています。」
+
+<!-- IT業界事例後CTA -->
+<div class="case-cta it-cta">
+    <div class="cta-highlight">
+        <h4>💻 IT業界での官公庁案件受注を目指しませんか？</h4>
+        <p>システム開発の技術力はあるけれど、官公庁案件は未経験という方へ。<br>
+        <strong>IT業界専門の入札サポート</strong>で、新たな収益源を確保できます。</p>
+        <div class="cta-buttons">
+            <a href="/consultation.html" class="btn btn-primary">IT業界専門サポートを相談する</a>
+            <a href="/knowhow/" class="btn btn-secondary">入札ノウハウを学ぶ</a>
+        </div>
+        <div class="success-indicators">
+            <span>✓ IT業界280件の実績</span>
+            <span>✓ 成功率94.6%</span>
+            <span>✓ セキュリティ対策も指導</span>
+        </div>
+    </div>
+</div>
 
 ---
 
@@ -230,6 +266,24 @@ keywords: 入札支援,成功事例,お客様の声,落札実績,行政書士,�
 
 **お客様の声**
 > 「民間企業の売上減少に悩んでいましたが、官公庁市場への参入で新たな成長軌道に乗ることができました。塩澤先生には、資格取得から営業戦略まで総合的にサポートしていただき、本当に助かりました。」
+
+<!-- 製造業事例後CTA -->
+<div class="case-cta manufacturing-cta">
+    <div class="cta-highlight">
+        <h4>🏭 製造業での新規販路開拓をお考えですか？</h4>
+        <p>民間売上の減少でお悩みの製造業の皆様へ。<br>
+        <strong>官公庁市場への参入</strong>で、安定した新規販路を確保できます。</p>
+        <div class="cta-buttons">
+            <a href="/consultation.html" class="btn btn-primary">製造業専門サポートを相談する</a>
+            <a href="/cases/" class="btn btn-secondary">他の成功事例も見る</a>
+        </div>
+        <div class="success-indicators">
+            <span>✓ 製造業100件の実績</span>
+            <span>✓ 成功率97.0%</span>
+            <span>✓ 販路開拓も支援</span>
+        </div>
+    </div>
+</div>
 
 ---
 

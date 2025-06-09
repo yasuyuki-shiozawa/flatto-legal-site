@@ -525,6 +525,25 @@ description: 入札から落札まで、初心者でも分かりやすい5ステ
     全省庁統一資格と主要5県の資格を同時期に申請。効率的な書類準備により、申請コストを30%削減し、翌年度から安定的な受注を実現。</p>
 </div>
 
+<!-- STEP1後CTA -->
+<div class="knowhow-cta step1-cta">
+    <div class="character-comment">
+        <img src="/assets/images/shiozawa_character.jpeg" alt="塩澤康幸" class="character-avatar">
+        <div class="comment-bubble">
+            <p><strong>私たちも入札参加者として、3年で6,000万円を落札しました。</strong><br>
+            実体験に基づく確実なサポートをご提供します。</p>
+            <div class="cta-buttons">
+                <a href="/consultation.html" class="btn-inline primary">実体験を聞いてみる</a>
+                <a href="#step2" class="btn-inline secondary">STEP2に進む</a>
+            </div>
+            <div class="trust-indicators">
+                <span>✓ 当事者だからこその理解</span>
+                <span>✓ 実践的なアドバイス</span>
+            </div>
+        </div>
+    </div>
+</div>
+
 ## STEP2: 入札案件の探索 {#step2}
 
 入札参加資格を取得したら、次は自社に適した案件を見つけることが重要です。効率的な案件探索が、入札成功の鍵を握ります。
@@ -981,6 +1000,25 @@ description: 入札から落札まで、初心者でも分かりやすい5ステ
     <h4>📈 成功事例</h4>
     <p><strong>IT企業B社の場合</strong><br>
     説明会で他社の質問内容を分析し、技術提案の差別化ポイントを発見。結果として、技術点で高評価を獲得し、大手企業を抑えて落札に成功。</p>
+</div>
+
+<!-- STEP3後CTA -->
+<div class="knowhow-cta step3-cta">
+    <div class="character-comment">
+        <img src="/assets/images/imai_character.jpeg" alt="いまいさん" class="character-avatar">
+        <div class="comment-bubble">
+            <p><strong>仕様書の読み方や説明会での質問ポイントなど、実践的なアドバイスをいたします。</strong><br>
+            案件分析から競合調査まで、プロの視点でサポートします！</p>
+            <div class="cta-buttons">
+                <a href="/consultation.html" class="btn-inline primary">実践的なサポートを受ける</a>
+                <a href="/cases/" class="btn-inline secondary">成功事例を見る</a>
+            </div>
+            <div class="trust-indicators">
+                <span>✓ 案件分析のプロ</span>
+                <span>✓ 競合調査も対応</span>
+            </div>
+        </div>
+    </div>
 </div>
 
 ## STEP4: 入札書の作成・提出 {#step4}
@@ -1672,12 +1710,31 @@ description: 入札から落札まで、初心者でも分かりやすい5ステ
 ### 無料相談のご案内
 入札に関するご相談は無料で承っております。お気軽にお問い合わせください。
 
+<!-- STEP5後CTA -->
+<div class="knowhow-cta step5-cta">
+    <div class="character-comment">
+        <img src="/assets/images/akira_character.jpeg" alt="あきら君" class="character-avatar">
+        <div class="comment-bubble">
+            <p><strong>落札後の契約手続きまで一貫してサポートします。</strong><br>
+            入札から契約まで、安心してお任せください！</p>
+            <div class="cta-buttons">
+                <a href="/consultation.html" class="btn-inline primary">一貫サポートを申し込む</a>
+                <a href="/knowhow/" class="btn-inline secondary">ノウハウをもう一度確認</a>
+            </div>
+            <div class="trust-indicators">
+                <span>✓ 契約まで完全サポート</span>
+                <span>✓ アフターフォローも充実</span>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="consultation-cta">
     <div class="cta-content">
         <h3>🤝 専門家による無料相談</h3>
         <p>入札の成功率を高めるため、まずはお気軽にご相談ください。</p>
         <div class="cta-buttons">
-            <a href="/contact/" class="btn btn-primary">
+            <a href="/consultation.html" class="btn btn-primary">
                 <i class="fas fa-phone"></i>
                 無料相談を申し込む
             </a>
