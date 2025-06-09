@@ -25,21 +25,21 @@ description: 入札・公共調達に関する公式サイトや関連情報を�
             <div class="links-grid">
                 <div class="link-item">
                     <div class="link-header">
-                        <h3 class="link-name">政府電子調達システム（GEPS）</h3>
+                        <h3 class="link-name">調達ポータル</h3>
                         <span class="link-badge official">公式</span>
                     </div>
                     <p class="link-description">
-                        国の機関が行う調達情報の公開、入札参加申請、入札書提出等をオンラインで行うシステム
+                        府省庁共通の調達案件検索、電子入札・契約、少額物品販売等の一連手続きをオンラインで実施
                     </p>
                     <div class="link-details">
-                        <p class="link-url">https://www.geps.go.jp/</p>
+                        <p class="link-url">https://www.p-portal.go.jp/</p>
                         <div class="link-tags">
                             <span class="tag">電子入札</span>
                             <span class="tag">国の調達</span>
                             <span class="tag">必須</span>
                         </div>
                     </div>
-                    <a href="https://www.geps.go.jp/" target="_blank" class="link-button">
+                    <a href="https://www.p-portal.go.jp/" target="_blank" class="link-button">
                         <i class="fas fa-external-link-alt"></i>
                         サイトを開く
                     </a>
@@ -47,20 +47,21 @@ description: 入札・公共調達に関する公式サイトや関連情報を�
                 
                 <div class="link-item">
                     <div class="link-header">
-                        <h3 class="link-name">内閣府 公共調達の適正化</h3>
+                        <h3 class="link-name">国土交通省電子入札システム</h3>
                         <span class="link-badge official">公式</span>
                     </div>
                     <p class="link-description">
-                        公共調達に関する基本方針、ガイドライン、制度改正情報等を掲載
+                        国土交通省の電子入札システム。運用時間8:30～18:00（土日祝除く）
                     </p>
                     <div class="link-details">
-                        <p class="link-url">https://www.cao.go.jp/</p>
+                        <p class="link-url">https://www.e-bisc.go.jp/</p>
                         <div class="link-tags">
-                            <span class="tag">制度情報</span>
-                            <span class="tag">ガイドライン</span>
+                            <span class="tag">国土交通省</span>
+                            <span class="tag">電子入札</span>
+                            <span class="tag">建設工事</span>
                         </div>
                     </div>
-                    <a href="https://www.cao.go.jp/" target="_blank" class="link-button">
+                    <a href="https://www.e-bisc.go.jp/" target="_blank" class="link-button">
                         <i class="fas fa-external-link-alt"></i>
                         サイトを開く
                     </a>
@@ -68,20 +69,84 @@ description: 入札・公共調達に関する公式サイトや関連情報を�
                 
                 <div class="link-item">
                     <div class="link-header">
-                        <h3 class="link-name">総務省 地方公共団体の入札・契約制度</h3>
+                        <h3 class="link-name">全省庁統一資格審査</h3>
                         <span class="link-badge official">公式</span>
                     </div>
                     <p class="link-description">
-                        地方自治体の入札・契約制度に関する情報、改善指針等を提供
+                        各省庁における物品の製造・販売等に係る一般競争（指名競争）の入札参加資格
                     </p>
                     <div class="link-details">
-                        <p class="link-url">https://www.soumu.go.jp/</p>
+                        <p class="link-url">https://www.p-portal.go.jp/pps-web-biz/geps-chotatujoho/resources/app/html/shikaku.html</p>
                         <div class="link-tags">
-                            <span class="tag">地方自治体</span>
-                            <span class="tag">制度改善</span>
+                            <span class="tag">入札参加資格</span>
+                            <span class="tag">全省庁統一</span>
+                            <span class="tag">必須</span>
                         </div>
                     </div>
-                    <a href="https://www.soumu.go.jp/" target="_blank" class="link-button">
+                    <a href="https://www.p-portal.go.jp/pps-web-biz/geps-chotatujoho/resources/app/html/shikaku.html" target="_blank" class="link-button">
+                        <i class="fas fa-external-link-alt"></i>
+                        サイトを開く
+                    </a>
+                </div>
+                
+                <div class="link-item">
+                    <div class="link-header">
+                        <h3 class="link-name">e-Govポータル（公共調達）</h3>
+                        <span class="link-badge official">公式</span>
+                    </div>
+                    <p class="link-description">
+                        デジタル庁運営の公共調達に関する情報ポータル。調達情報の確認・入札等をインターネットで実施可能
+                    </p>
+                    <div class="link-details">
+                        <p class="link-url">https://www.e-gov.go.jp/about-government/public-procurements.html</p>
+                        <div class="link-tags">
+                            <span class="tag">政府ポータル</span>
+                            <span class="tag">デジタル庁</span>
+                        </div>
+                    </div>
+                    <a href="https://www.e-gov.go.jp/about-government/public-procurements.html" target="_blank" class="link-button">
+                        <i class="fas fa-external-link-alt"></i>
+                        サイトを開く
+                    </a>
+                </div>
+                
+                <div class="link-item">
+                    <div class="link-header">
+                        <h3 class="link-name">内閣府 電子契約の推進</h3>
+                        <span class="link-badge official">公式</span>
+                    </div>
+                    <p class="link-description">
+                        電子調達システム（GEPS）に関する情報。物品購入及び役務調達の電子化推進
+                    </p>
+                    <div class="link-details">
+                        <p class="link-url">https://www.cao.go.jp/chotatsu/denshi/denshi.html</p>
+                        <div class="link-tags">
+                            <span class="tag">制度・政策</span>
+                            <span class="tag">電子契約</span>
+                        </div>
+                    </div>
+                    <a href="https://www.cao.go.jp/chotatsu/denshi/denshi.html" target="_blank" class="link-button">
+                        <i class="fas fa-external-link-alt"></i>
+                        サイトを開く
+                    </a>
+                </div>
+                
+                <div class="link-item">
+                    <div class="link-header">
+                        <h3 class="link-name">総務省 調達情報・電子入札</h3>
+                        <span class="link-badge official">公式</span>
+                    </div>
+                    <p class="link-description">
+                        総務省の調達情報と電子入札システム。入札公告等の各種調達情報を掲載
+                    </p>
+                    <div class="link-details">
+                        <p class="link-url">https://www.soumu.go.jp/menu_sinsei/cyoutatsu/index.html</p>
+                        <div class="link-tags">
+                            <span class="tag">総務省</span>
+                            <span class="tag">調達情報</span>
+                        </div>
+                    </div>
+                    <a href="https://www.soumu.go.jp/menu_sinsei/cyoutatsu/index.html" target="_blank" class="link-button">
                         <i class="fas fa-external-link-alt"></i>
                         サイトを開く
                     </a>
