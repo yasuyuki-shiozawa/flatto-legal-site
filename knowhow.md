@@ -1,16 +1,16 @@
 ---
 layout: default
-title: 入札ノウハウ
-description: 入札から落札まで、初心者でも分かりやすい5ステップで詳しく解説。行政書士法人ふらっと法務事務所が実践的なノウハウをお教えします。
+title: 入札の基本から実践まで - 完全ガイド
+description: 入札・公共調達の基本制度から実践的な手続きまで、体系的に学べる完全ガイド。法的根拠に基づく正確な情報を提供します。
 ---
 
-# 入札ノウハウ - 成功への5ステップガイド
+# 入札の基本から実践まで - 完全ガイド
 
-<!-- 塩澤さんのワンポイントコメント -->
+<!-- しおさんのワンポイントコメント -->
 <div class="expert-comment">
-    <img src="/assets/images/shiozawa_character.jpeg" alt="塩澤康幸" class="comment-avatar">
+    <img src="/assets/images/shiozawa_character.jpeg" alt="しおさん" class="comment-avatar">
     <div class="comment-bubble">
-        <strong>塩澤です。</strong>入札について、初心者の方にも分かりやすく解説していきますね！
+        入札制度は複雑に見えますが、基本から順序立てて学べば必ず理解できます。一緒に学んでいきましょう！
     </div>
 </div>
 
@@ -18,30 +18,30 @@ description: 入札から落札まで、初心者でも分かりやすい5ステ
     <div class="container">
         <div class="hero-content">
             <div class="hero-badge">
-                <span>🏆 入札支援専門</span>
+                <span>📚 知識ポータル</span>
             </div>
-            <h1 class="hero-title">入札成功への道筋を<br><span class="highlight">5つのステップ</span>で完全解説</h1>
-            <p class="hero-subtitle">初心者から経験者まで、確実に成果を上げるための実践的ノウハウ</p>
+            <h1 class="hero-title">公共調達制度を<br><span class="highlight">5つのステップ</span>で体系的に理解</h1>
+            <p class="hero-subtitle">基本制度から実践的な手続きまで、法的根拠に基づく正確な情報</p>
             <div class="hero-stats">
                 <div class="stat-item">
-                    <div class="stat-icon">📊</div>
-                    <span class="stat-number">1,000+</span>
-                    <span class="stat-label">支援実績</span>
+                    <div class="stat-icon">📖</div>
+                    <span class="stat-number">5段階</span>
+                    <span class="stat-label">学習ステップ</span>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-icon">🎯</div>
-                    <span class="stat-number">95%</span>
-                    <span class="stat-label">成功率</span>
+                    <div class="stat-icon">⚖️</div>
+                    <span class="stat-number">法的根拠</span>
+                    <span class="stat-label">に基づく</span>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-icon">⭐</div>
-                    <span class="stat-number">15年</span>
-                    <span class="stat-label">の経験</span>
+                    <div class="stat-icon">🔄</div>
+                    <span class="stat-number">最新制度</span>
+                    <span class="stat-label">に対応</span>
                 </div>
             </div>
             <div class="hero-cta">
                 <a href="#step1" class="cta-button primary">5ステップガイドを見る</a>
-                <a href="/contact/" class="cta-button secondary">無料相談を申し込む</a>
+                <a href="/cases/" class="cta-button secondary">事例研究を見る</a>
             </div>
         </div>
     </div>
@@ -525,20 +525,19 @@ description: 入札から落札まで、初心者でも分かりやすい5ステ
     全省庁統一資格と主要5県の資格を同時期に申請。効率的な書類準備により、申請コストを30%削減し、翌年度から安定的な受注を実現。</p>
 </div>
 
-<!-- STEP1後CTA -->
+<!-- STEP1後の学習促進コメント -->
 <div class="knowhow-cta step1-cta">
     <div class="character-comment">
-        <img src="/assets/images/shiozawa_character.jpeg" alt="塩澤康幸" class="character-avatar">
+        <img src="/assets/images/shiozawa_character.jpeg" alt="しおさん" class="character-avatar">
         <div class="comment-bubble">
-            <p><strong>私たちも入札参加者として、3年で6,000万円を落札しました。</strong><br>
-            実体験に基づく確実なサポートをご提供します。</p>
+            <p>資格取得は時間がかかりますが、一度取得すれば長期間有効です。計画的に進めることが重要ですね。</p>
             <div class="cta-buttons">
-                <a href="/consultation.html" class="btn-inline primary">実体験を聞いてみる</a>
+                <a href="/cases/" class="btn-inline primary">関連事例を見る</a>
                 <a href="#step2" class="btn-inline secondary">STEP2に進む</a>
             </div>
             <div class="trust-indicators">
-                <span>✓ 当事者だからこその理解</span>
-                <span>✓ 実践的なアドバイス</span>
+                <span>✓ 法的根拠に基づく正確な情報</span>
+                <span>✓ 実務に役立つ具体的な解説</span>
             </div>
         </div>
     </div>

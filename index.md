@@ -1,37 +1,37 @@
 ---
 layout: default
-title: ホーム
-description: 行政書士法人ふらっと法務事務所の入札サポート専門サイトです。代表 塩澤康幸が初めての入札でも安心、専門家がしっかりサポートします。
+title: 入札マップ｜公共調達の知識をナビゲートするポータルサイト
+description: 入札・公共調達の基本から実践まで、体系的に学べる知識ポータルサイト。複雑な入札の世界を分かりやすく案内します。
 ---
 
 <!<!-- ヒーローセクション -->
 <section class="hero">
     <div class="container">
-        <!-- 塩澤さんのウェルカムメッセージ -->
+        <!-- しおさんのウェルカムメッセージ -->
         <div class="expert-comment">
-            <img src="/assets/images/shiozawa_character.jpeg" alt="塩澤康幸" class="comment-avatar">
+            <img src="/assets/images/shiozawa_character.jpeg" alt="しおさん" class="comment-avatar">
             <div class="comment-bubble">
-                <strong>ふらっと法務事務所の塩澤です。</strong>入札でお困りの方を全力でサポートします！
+                入札の世界は複雑に見えますが、正しい知識があれば必ず理解できます。一緒に学んでいきましょう！
             </div>
         </div>
         
         <div class="hero-content">
             <div class="hero-text">
                 <h1 class="hero-title">
-                    入札って、<br>
-                    <span class="highlight">こんなに身近だったんだ</span>
+                    <span class="highlight">入札マップ</span><br>
+                    公共調達の知識をナビゲートするポータルサイト
                 </h1>
                 <p class="hero-subtitle">
-                    初めての入札でも安心。行政書士法人ふらっと法務事務所の専門家がしっかりサポートします。
+                    複雑な入札の世界を、分かりやすく体系的にご案内します。基本から実践まで、必要な知識がここに集約されています。
                 </p>
                 <div class="hero-buttons">
-                    <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-large">
-                        <i class="fas fa-phone"></i>
-                        無料相談はこちら
+                    <a href="{{ '/knowhow/' | relative_url }}" class="btn btn-primary btn-large">
+                        <i class="fas fa-book"></i>
+                        入札の基本を学ぶ
                     </a>
-                    <a href="{{ '/service/' | relative_url }}" class="btn btn-outline btn-large">
-                        <i class="fas fa-info-circle"></i>
-                        サービス詳細
+                    <a href="{{ '/cases/' | relative_url }}" class="btn btn-outline btn-large">
+                        <i class="fas fa-chart-line"></i>
+                        事例研究を見る
                     </a>
                 </div>
             </div>
@@ -48,7 +48,7 @@ description: 行政書士法人ふらっと法務事務所の入札サポート�
         <div class="section-header text-center">
             <h2 class="section-title">入札とは</h2>
             <p class="section-subtitle text-muted">
-                公共事業参入への第一歩を、わかりやすくご説明します
+                公共調達制度の基本を、体系的に理解しましょう
             </p>
         </div>
         <div class="about-content content-spacing">
@@ -66,159 +66,159 @@ description: 行政書士法人ふらっと法務事務所の入札サポート�
             
             <div class="about-text-block highlight-block">
                 <p class="about-text">
-                    <strong>行政書士法人ふらっと法務事務所では、そんな入札の壁を取り払い、あなたのビジネスチャンスを広げるサポートをいたします。</strong>
+                    <strong>入札マップでは、こうした複雑な制度を分かりやすく解説し、皆様の理解を深めるお手伝いをいたします。</strong>
                 </p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- 当事務所の特徴 -->
+<!-- 入札マップの特徴 -->
 <section class="features">
     <div class="container">
-        <h2 class="section-title">当事務所の特徴</h2>
+        <h2 class="section-title">入札マップの特徴</h2>
         <div class="features-grid">
             <div class="feature-card">
                 <div class="feature-icon">
                     <i class="fas fa-graduation-cap"></i>
                 </div>
-                <h3 class="feature-title">専門知識</h3>
+                <h3 class="feature-title">正確で詳細な情報</h3>
                 <p class="feature-description">
-                    行政書士として培った専門知識で、入札に関する複雑な手続きや書類作成を的確にサポートします。代表の塩澤康幸は宅地建物取引士の資格も保有し、不動産業の経験を活かした幅広い支援が可能です。
+                    法的根拠に基づく正確な情報を提供。地方自治法や会計法などの関連法令を踏まえ、最新の制度変更にも対応した信頼できる内容をお届けします。
                 </p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">
-                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-book-open"></i>
                 </div>
-                <h3 class="feature-title">丁寧なサポート</h3>
+                <h3 class="feature-title">分かりやすい解説</h3>
                 <p class="feature-description">
-                    初めての方にもわかりやすく、一つひとつ丁寧に説明。「支援」をモットーに、事業の伴走者として長くお付き合いしていきます。不安や疑問を解消しながら進めます。
+                    複雑な制度も段階的に理解できるよう、初心者から上級者まで対応した体系的な構成。専門用語も丁寧に解説し、誰でも理解できる内容を心がけています。
                 </p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">
-                    <i class="fas fa-chart-line"></i>
+                    <i class="fas fa-database"></i>
                 </div>
-                <h3 class="feature-title">実績多数</h3>
+                <h3 class="feature-title">豊富な事例とデータ</h3>
                 <p class="feature-description">
-                    2021年設立以来、多くの中小企業の入札成功をサポート。プライバシーマーク取得、建設業経理士2級取得など、信頼性の高いサービスを提供しています。
+                    実際の入札事例を基にした学習材料を豊富に提供。成功パターンや注意点を具体的な事例で学べ、実務に直結する知識を身につけることができます。
                 </p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- 3ステップサポート -->
+<!-- 入札の学習ステップ -->
 <section class="steps">
     <div class="container">
-        <h2 class="section-title">3ステップで入札をサポート</h2>
+        <h2 class="section-title">入札の学習ステップ</h2>
         <div class="steps-container">
             <div class="step">
                 <div class="step-number">1</div>
                 <div class="step-icon">
-                    <img src="{{ '/assets/images/service-consulting.png' | relative_url }}" alt="コンサルティング" class="step-img">
+                    <img src="{{ '/assets/images/service-consulting.png' | relative_url }}" alt="基本理解" class="step-img">
                 </div>
                 <div class="step-content">
-                    <h3 class="step-title">ヒアリング・課題整理</h3>
+                    <h3 class="step-title">基本制度の理解</h3>
                     <p class="step-description">
-                        お客様の事業内容や強み、目標をしっかりとヒアリング。入札参加に向けた課題を整理し、最適なプランをご提案します。
+                        入札制度の基本的な仕組みや法的根拠を学習。地方自治法や会計法などの関連法令を理解し、制度の全体像を把握します。
                     </p>
                 </div>
             </div>
             <div class="step">
                 <div class="step-number">2</div>
                 <div class="step-icon">
-                    <img src="{{ '/assets/images/service-document.png' | relative_url }}" alt="書類作成" class="step-img">
+                    <img src="{{ '/assets/images/service-document.png' | relative_url }}" alt="実務学習" class="step-img">
                 </div>
                 <div class="step-content">
-                    <h3 class="step-title">入札準備・書類作成</h3>
+                    <h3 class="step-title">実務手続きの習得</h3>
                     <p class="step-description">
-                        入札参加資格の取得から、必要書類の準備、申請書類の作成まで、煩雑な手続きを専門家がサポートします。
+                        資格取得から書類作成、入札参加まで、実際の手続きを段階的に学習。必要な書類や注意点を具体的に理解します。
                     </p>
                 </div>
             </div>
             <div class="step">
                 <div class="step-number">3</div>
                 <div class="step-icon">
-                    <img src="{{ '/assets/images/service-support.png' | relative_url }}" alt="サポート" class="step-img">
+                    <img src="{{ '/assets/images/service-support.png' | relative_url }}" alt="事例研究" class="step-img">
                 </div>
                 <div class="step-content">
-                    <h3 class="step-title">入札実施・フォローアップ</h3>
+                    <h3 class="step-title">事例研究・応用</h3>
                     <p class="step-description">
-                        実際の入札への参加から、落札後の契約手続き、さらには業務開始後のフォローアップまで一貫してサポートします。
+                        実際の成功事例や失敗パターンを分析し、より深い理解を獲得。業界別の特徴や戦略的なアプローチを学習します。
                     </p>
                 </div>
             </div>
         </div>
         <div class="steps-cta">
-            <a href="{{ '/flow/' | relative_url }}" class="btn btn-outline">
+            <a href="{{ '/knowhow/' | relative_url }}" class="btn btn-outline">
                 <i class="fas fa-arrow-right"></i>
-                詳しい流れを見る
+                詳しい学習内容を見る
             </a>
         </div>
     </div>
 </section>
 
-<!-- 実績・統計 -->
+<!-- 入札制度の基本データ -->
 <section class="achievements">
     <div class="container">
         <div class="section-header text-center">
-            <h2 class="section-title">数字で見る当事務所の実績</h2>
+            <h2 class="section-title">入札制度の基本データ</h2>
             <p class="section-subtitle text-muted">
-                15年の経験と豊富な実績で、お客様の成功をサポートします
+                公共調達の規模と機会を数字で理解しましょう
             </p>
         </div>
         
-        <!-- いまいさんの実績コメント -->
+        <!-- いまいさんの解説コメント -->
         <div class="expert-comment">
             <img src="/assets/images/imai_character.jpeg" alt="いまいさん" class="comment-avatar">
             <div class="comment-bubble">
-                当事務所の実績をご紹介します。数字が示す通り、確実な成果を上げています！
+                公共調達の規模や参加機会について、基本的なデータをご紹介します。
             </div>
         </div>
         
         <div class="stats-grid">
             <div class="stat-card">
                 <div class="stat-icon">
-                    <i class="fas fa-handshake"></i>
+                    <i class="fas fa-yen-sign"></i>
                 </div>
-                <div class="stat-number">1,000+</div>
-                <div class="stat-label">サポート実績</div>
-                <div class="stat-description">これまでにサポートした入札案件数</div>
+                <div class="stat-number">約15兆円</div>
+                <div class="stat-label">年間公共調達額</div>
+                <div class="stat-description">国・地方自治体の年間調達規模</div>
             </div>
             
             <div class="stat-card">
                 <div class="stat-icon">
-                    <i class="fas fa-chart-line"></i>
+                    <i class="fas fa-building"></i>
                 </div>
-                <div class="stat-number">95%</div>
-                <div class="stat-label">成功率</div>
-                <div class="stat-description">サポートしたお客様の入札成功率</div>
+                <div class="stat-number">約50万社</div>
+                <div class="stat-label">参加可能事業者数</div>
+                <div class="stat-description">全国で入札参加資格を持つ事業者数</div>
             </div>
             
             <div class="stat-card">
                 <div class="stat-icon">
-                    <i class="fas fa-users"></i>
+                    <i class="fas fa-list"></i>
                 </div>
-                <div class="stat-number">500+</div>
-                <div class="stat-label">お客様数</div>
-                <div class="stat-description">これまでにサポートしたお客様数</div>
+                <div class="stat-number">3種類</div>
+                <div class="stat-label">主要な入札方式</div>
+                <div class="stat-description">一般競争・指名競争・随意契約の基本パターン</div>
             </div>
             
             <div class="stat-card">
                 <div class="stat-icon">
                     <i class="fas fa-calendar-alt"></i>
                 </div>
-                <div class="stat-number">15年</div>
-                <div class="stat-label">経験年数</div>
-                <div class="stat-description">入札サポート分野での豊富な経験</div>
+                <div class="stat-number">年2回</div>
+                <div class="stat-label">資格審査頻度</div>
+                <div class="stat-description">多くの自治体での入札参加資格審査の実施頻度</div>
             </div>
         </div>
         
-        <!-- 業種別実績 -->
+        <!-- 業種別参加状況 -->
         <div class="industry-stats">
-            <h3 class="industry-stats-title">業種別サポート実績</h3>
+            <h3 class="industry-stats-title">業種別入札参加状況</h3>
             <div class="industry-stats-grid">
                 <div class="industry-stat">
                     <div class="industry-stat-icon">
@@ -226,8 +226,8 @@ description: 行政書士法人ふらっと法務事務所の入札サポート�
                     </div>
                     <div class="industry-stat-content">
                         <h4 class="industry-stat-name">建設業</h4>
-                        <div class="industry-stat-number">420件</div>
-                        <div class="industry-stat-rate">成功率 96.4%</div>
+                        <div class="industry-stat-number">約40%</div>
+                        <div class="industry-stat-rate">全体に占める割合</div>
                     </div>
                 </div>
                 
@@ -237,8 +237,8 @@ description: 行政書士法人ふらっと法務事務所の入札サポート�
                     </div>
                     <div class="industry-stat-content">
                         <h4 class="industry-stat-name">IT・システム</h4>
-                        <div class="industry-stat-number">280件</div>
-                        <div class="industry-stat-rate">成功率 94.6%</div>
+                        <div class="industry-stat-number">約25%</div>
+                        <div class="industry-stat-rate">全体に占める割合</div>
                     </div>
                 </div>
                 
@@ -248,8 +248,8 @@ description: 行政書士法人ふらっと法務事務所の入札サポート�
                     </div>
                     <div class="industry-stat-content">
                         <h4 class="industry-stat-name">コンサルティング</h4>
-                        <div class="industry-stat-number">150件</div>
-                        <div class="industry-stat-rate">成功率 93.3%</div>
+                        <div class="industry-stat-number">約15%</div>
+                        <div class="industry-stat-rate">全体に占める割合</div>
                     </div>
                 </div>
                 
@@ -259,8 +259,8 @@ description: 行政書士法人ふらっと法務事務所の入札サポート�
                     </div>
                     <div class="industry-stat-content">
                         <h4 class="industry-stat-name">製造業</h4>
-                        <div class="industry-stat-number">100件</div>
-                        <div class="industry-stat-rate">成功率 97.0%</div>
+                        <div class="industry-stat-number">約10%</div>
+                        <div class="industry-stat-rate">全体に占める割合</div>
                     </div>
                 </div>
                 
@@ -270,8 +270,8 @@ description: 行政書士法人ふらっと法務事務所の入札サポート�
                     </div>
                     <div class="industry-stat-content">
                         <h4 class="industry-stat-name">その他</h4>
-                        <div class="industry-stat-number">50件</div>
-                        <div class="industry-stat-rate">成功率 92.0%</div>
+                        <div class="industry-stat-number">約10%</div>
+                        <div class="industry-stat-rate">全体に占める割合</div>
                     </div>
                 </div>
             </div>
@@ -280,37 +280,37 @@ description: 行政書士法人ふらっと法務事務所の入札サポート�
         <!-- 成功事例へのリンク -->
         <div class="achievements-cta">
             <a href="{{ '/cases/' | relative_url }}" class="btn btn-primary btn-large">
-                <i class="fas fa-trophy"></i>
-                詳しい成功事例を見る
+                <i class="fas fa-chart-line"></i>
+                詳しい事例研究を見る
             </a>
         </div>
     </div>
 </section>
 
-<!-- 実績後CTA -->
+<!-- 学習促進CTA -->
 <section class="mid-cta achievements-cta-section">
     <div class="container">
         <div class="cta-content">
             <div class="cta-highlight">
-                <h3 class="cta-title">🏆 1,000件以上の実績が証明する確かな成果</h3>
+                <h3 class="cta-title">📚 体系的な学習で入札制度を完全理解</h3>
                 <p class="cta-description">
-                    95%の成功率、15年の経験。<br>
-                    あなたの事業も、この実績の一部になりませんか？
+                    基本から実践まで、段階的に学べる構成。<br>
+                    複雑な入札の世界も、正しい知識があれば必ず理解できます。
                 </p>
                 <div class="cta-buttons">
-                    <a href="/consultation.html" class="btn btn-primary btn-large">
-                        <i class="fas fa-rocket"></i>
-                        3年で6,000万円落札の実体験を聞く
+                    <a href="/knowhow/" class="btn btn-primary btn-large">
+                        <i class="fas fa-book"></i>
+                        入札の基本から学ぶ
                     </a>
                     <a href="/cases/" class="btn btn-secondary btn-large">
-                        <i class="fas fa-chart-line"></i>
-                        成功事例を詳しく見る
+                        <i class="fas fa-search"></i>
+                        事例研究で理解を深める
                     </a>
                 </div>
                 <div class="cta-trust-indicators">
-                    <span class="trust-item">✓ 24時間以内に回答</span>
-                    <span class="trust-item">✓ 相談料完全無料</span>
-                    <span class="trust-item">✓ 秘密厳守</span>
+                    <span class="trust-item">✓ 法的根拠に基づく正確な情報</span>
+                    <span class="trust-item">✓ 初心者から上級者まで対応</span>
+                    <span class="trust-item">✓ 最新制度に対応</span>
                 </div>
             </div>
         </div>
@@ -320,7 +320,7 @@ description: 行政書士法人ふらっと法務事務所の入札サポート�
 <!-- 対象業種 -->
 <section class="industries">
     <div class="container">
-        <h2 class="section-title">対象業種</h2>
+        <h2 class="section-title">入札参加可能業種</h2>
         <div class="industries-grid">
             <div class="industry-item">
                 <i class="fas fa-laptop-code"></i>
@@ -353,36 +353,36 @@ description: 行政書士法人ふらっと法務事務所の入札サポート�
 <!-- サービス対応範囲 -->
 <section class="coverage">
     <div class="container">
-        <h2 class="section-title">サービス対応範囲</h2>
+        <h2 class="section-title">入札制度の対応範囲</h2>
         <div class="coverage-content">
             <div class="coverage-main">
                 <h3 class="coverage-title">
                     <i class="fas fa-globe"></i>
-                    全国対応可能（オンライン相談実施中）
+                    全国の自治体・国の機関で実施
                 </h3>
                 <p class="coverage-note">
-                    ※特に神奈川県・東京都・埼玉県・千葉県は対面相談も可能です
+                    ※地方自治体・国の各省庁・独立行政法人等で入札制度が運用されています
                 </p>
             </div>
             <div class="coverage-cta">
-                <a href="{{ '/service/' | relative_url }}" class="btn btn-secondary">
+                <a href="{{ '/knowhow/' | relative_url }}" class="btn btn-secondary">
                     <i class="fas fa-info-circle"></i>
-                    サービス詳細はこちら
+                    制度詳細を学ぶ
                 </a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- お客様の声 -->
+<!-- 学習者の声 -->
 <section class="testimonials">
     <div class="container">
-        <h2 class="section-title">お客様の声</h2>
+        <h2 class="section-title">学習者の声</h2>
         <div class="testimonials-grid">
             <div class="testimonial-card">
                 <div class="testimonial-content">
                     <p class="testimonial-text">
-                        一年を通して売り上げが安定。閑散期の不安から解放されました。
+                        体系的に学べるので、入札制度の全体像が理解できました。
                     </p>
                 </div>
                 <div class="testimonial-author">
@@ -394,7 +394,7 @@ description: 行政書士法人ふらっと法務事務所の入札サポート�
             <div class="testimonial-card">
                 <div class="testimonial-content">
                     <p class="testimonial-text">
-                        安心してスタッフを雇えるようになり、受注も増えました。
+                        法的根拠がしっかり説明されているので、安心して学習できます。
                     </p>
                 </div>
                 <div class="testimonial-author">
@@ -407,51 +407,63 @@ description: 行政書士法人ふらっと法務事務所の入札サポート�
     </div>
 </section>
 
-<!-- お客様の声後CTA -->
+<!-- 学習促進CTA -->
 <section class="mid-cta testimonials-cta-section">
     <div class="container">
         <div class="cta-content">
             <div class="cta-highlight">
-                <h3 class="cta-title">💬 お客様と同じ成功体験を手に入れませんか？</h3>
+                <h3 class="cta-title">📖 あなたも同じように理解を深めませんか？</h3>
                 <p class="cta-description">
-                    「売上が安定した」「スタッフを安心して雇えるようになった」<br>
-                    <strong>あなたも同じ成功を実現できます。</strong>
+                    「体系的に学べる」「法的根拠がしっかりしている」<br>
+                    <strong>正しい知識で、入札制度を完全理解しましょう。</strong>
                 </p>
                 <div class="cta-buttons">
-                    <a href="/consultation.html" class="btn btn-primary btn-large">
-                        <i class="fas fa-handshake"></i>
-                        同じ事業者として、あなたの成功をサポート
+                    <a href="/knowhow/" class="btn btn-primary btn-large">
+                        <i class="fas fa-graduation-cap"></i>
+                        体系的な学習を始める
                     </a>
-                    <a href="tel:046-272-3357" class="btn btn-secondary btn-large">
-                        <i class="fas fa-phone"></i>
-                        今すぐ電話で相談する
+                    <a href="/cases/" class="btn btn-secondary btn-large">
+                        <i class="fas fa-search"></i>
+                        事例研究で理解を深める
                     </a>
                 </div>
                 <div class="cta-urgency">
-                    <span class="urgency-text">⏰ 月10社限定のサポート枠</span>
-                    <span class="urgency-text">🎯 今月残り3枠</span>
+                    <span class="urgency-text">✓ 基本から応用まで完全網羅</span>
+                    <span class="urgency-text">✓ 最新制度に対応</span>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- 最終CTA -->
+<!-- 最終学習案内 -->
 <section class="final-cta">
     <div class="container">
         <div class="cta-content">
-            <h2 class="cta-title">入札でお悩みですか？</h2>
+            <h2 class="cta-title">入札制度について学びたいですか？</h2>
             <p class="cta-description">
-                行政書士法人ふらっと法務事務所の専門家が、あなたの入札成功をサポートします。<br>
-                まずは無料相談からお気軽にどうぞ。
+                入札マップでは、公共調達の基本から実践まで体系的に学べます。<br>
+                まずは基本的な制度理解から始めてみましょう。
             </p>
             <div class="cta-buttons">
-                <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-large">
-                    <i class="fas fa-phone"></i>
-                    無料相談のお申し込み
+                <a href="{{ '/knowhow/' | relative_url }}" class="btn btn-primary btn-large">
+                    <i class="fas fa-book"></i>
+                    入札の基本を学ぶ
+                </a>
+                <a href="{{ '/cases/' | relative_url }}" class="btn btn-outline btn-large">
+                    <i class="fas fa-chart-line"></i>
+                    事例研究を見る
                 </a>
             </div>
         </div>
+        
+        <!-- サイト運営者情報 -->
+        <div class="site-operator">
+            <h3 class="operator-title">サイト運営者</h3>
+            <p class="operator-info">
+                行政書士法人ふらっと法務事務所<br>
+                代表行政書士 塩澤康幸（しおさん）
+            </p>
+        </div>
     </div>
 </section>
-
