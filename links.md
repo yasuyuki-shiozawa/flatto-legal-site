@@ -154,29 +154,94 @@ description: 入札・公共調達に関する公式サイトや関連情報を�
             </div>
         </div>
         
-        <!-- 都道府県・政令市 -->
+        <!-- 都道府県 -->
         <div class="category-section">
             <h2 class="category-title">
                 <i class="fas fa-map-marker-alt"></i>
-                都道府県・政令市
+                都道府県
             </h2>
             <div class="links-grid">
                 <div class="link-item">
                     <div class="link-header">
-                        <h3 class="link-name">神奈川県 電子入札システム</h3>
+                        <h3 class="link-name">北海道電子自治体共同システム</h3>
                         <span class="link-badge local">地方</span>
                     </div>
                     <p class="link-description">
-                        神奈川県が実施する建設工事、委託業務等の入札情報・電子入札システム
+                        北海道と道内市町村の電子入札共同システム。道内自治体との広域連携
                     </p>
                     <div class="link-details">
-                        <p class="link-url">https://www.pref.kanagawa.jp/</p>
+                        <p class="link-url">https://idc.e-harp.jp/</p>
                         <div class="link-tags">
-                            <span class="tag">神奈川県</span>
+                            <span class="tag">北海道</span>
+                            <span class="tag">共同運営</span>
+                            <span class="tag">広域連携</span>
+                        </div>
+                    </div>
+                    <a href="https://idc.e-harp.jp/" target="_blank" class="link-button">
+                        <i class="fas fa-external-link-alt"></i>
+                        サイトを開く
+                    </a>
+                </div>
+                
+                <div class="link-item">
+                    <div class="link-header">
+                        <h3 class="link-name">青森県電子入札システム</h3>
+                        <span class="link-badge local">地方</span>
+                    </div>
+                    <p class="link-description">
+                        青森県の電子入札システム。8:30-20:00運用（R7.4.1から8:00-22:00に拡大）
+                    </p>
+                    <div class="link-details">
+                        <p class="link-url">https://www.pref.aomori.lg.jp/soshiki/kendo/kanri/e-nst_index.html</p>
+                        <div class="link-tags">
+                            <span class="tag">青森県</span>
+                            <span class="tag">運用時間拡大</span>
+                        </div>
+                    </div>
+                    <a href="https://www.pref.aomori.lg.jp/soshiki/kendo/kanri/e-nst_index.html" target="_blank" class="link-button">
+                        <i class="fas fa-external-link-alt"></i>
+                        サイトを開く
+                    </a>
+                </div>
+                
+                <div class="link-item">
+                    <div class="link-header">
+                        <h3 class="link-name">岩手県電子入札システム</h3>
+                        <span class="link-badge local">地方</span>
+                    </div>
+                    <p class="link-description">
+                        岩手県の電子入札システム。脱Java方式対応、8:30-20:00運用（R7.4.1から8:00-22:00に拡大）
+                    </p>
+                    <div class="link-details">
+                        <p class="link-url">https://www.pref.iwate.jp/kensei/nyuusatsu/kouji/1017413.html</p>
+                        <div class="link-tags">
+                            <span class="tag">岩手県</span>
+                            <span class="tag">脱Java方式</span>
+                            <span class="tag">運用時間拡大</span>
+                        </div>
+                    </div>
+                    <a href="https://www.pref.iwate.jp/kensei/nyuusatsu/kouji/1017413.html" target="_blank" class="link-button">
+                        <i class="fas fa-external-link-alt"></i>
+                        サイトを開く
+                    </a>
+                </div>
+                
+                <div class="link-item">
+                    <div class="link-header">
+                        <h3 class="link-name">宮城県電子入札システム</h3>
+                        <span class="link-badge local">地方</span>
+                    </div>
+                    <p class="link-description">
+                        宮城県の電子入札システム。9:00-20:00運用
+                    </p>
+                    <div class="link-details">
+                        <p class="link-url">https://www.pref.miyagi.jp/soshiki/keiyaku/system.html</p>
+                        <div class="link-tags">
+                            <span class="tag">宮城県</span>
                             <span class="tag">電子入札</span>
                         </div>
                     </div>
-                    <a href="https://www.pref.kanagawa.jp/" target="_blank" class="link-button">
+                    <a href="https://www.pref.miyagi.jp/soshiki/keiyaku/system.html" target="_blank" class="link-button">
                         <i class="fas fa-external-link-alt"></i>
                         サイトを開く
                     </a>
@@ -184,20 +249,116 @@ description: 入札・公共調達に関する公式サイトや関連情報を�
                 
                 <div class="link-item">
                     <div class="link-header">
-                        <h3 class="link-name">東京都 電子調達システム</h3>
+                        <h3 class="link-name">秋田県電子入札システム</h3>
                         <span class="link-badge local">地方</span>
                     </div>
                     <p class="link-description">
-                        東京都の工事、委託、物品等の調達情報と電子入札システム
+                        秋田県と22市町村の共同利用システム。7:00-24:00運用（最長運用時間）
                     </p>
                     <div class="link-details">
-                        <p class="link-url">https://www.metro.tokyo.lg.jp/</p>
+                        <p class="link-url">https://cals05.pref.akita.lg.jp/</p>
                         <div class="link-tags">
-                            <span class="tag">東京都</span>
+                            <span class="tag">秋田県</span>
+                            <span class="tag">22市町村共同</span>
+                            <span class="tag">最長運用</span>
+                        </div>
+                    </div>
+                    <a href="https://cals05.pref.akita.lg.jp/" target="_blank" class="link-button">
+                        <i class="fas fa-external-link-alt"></i>
+                        サイトを開く
+                    </a>
+                </div>
+                
+                <div class="link-item">
+                    <div class="link-header">
+                        <h3 class="link-name">山形県電子入札システム</h3>
+                        <span class="link-badge local">地方</span>
+                    </div>
+                    <p class="link-description">
+                        山形県の電子入札システム（工事関係のみ）。脱Java方式対応、技術資料オンライン提出可能
+                    </p>
+                    <div class="link-details">
+                        <p class="link-url">https://www.pref.yamagata.jp/sr/dbkk2/</p>
+                        <div class="link-tags">
+                            <span class="tag">山形県</span>
+                            <span class="tag">脱Java方式</span>
+                            <span class="tag">技術資料オンライン</span>
+                        </div>
+                    </div>
+                    <a href="https://www.pref.yamagata.jp/sr/dbkk2/" target="_blank" class="link-button">
+                        <i class="fas fa-external-link-alt"></i>
+                        サイトを開く
+                    </a>
+                </div>
+                
+                <div class="link-item">
+                    <div class="link-header">
+                        <h3 class="link-name">福島県電子入札システム</h3>
+                        <span class="link-badge local">地方</span>
+                    </div>
+                    <p class="link-description">
+                        福島県の電子入札システム（工事等・物品別システム）。平日9:00-17:00運用、入札書等提出期間2日間
+                    </p>
+                    <div class="link-details">
+                        <p class="link-url">https://www.pref.fukushima.lg.jp/sec/01115c/nyusatsu-98.html</p>
+                        <div class="link-tags">
+                            <span class="tag">福島県</span>
+                            <span class="tag">提出期間2日</span>
+                            <span class="tag">脱Java対応</span>
+                        </div>
+                    </div>
+                    <a href="https://www.pref.fukushima.lg.jp/sec/01115c/nyusatsu-98.html" target="_blank" class="link-button">
+                        <i class="fas fa-external-link-alt"></i>
+                        サイトを開く
+                    </a>
+                </div>
+                
+                <div class="link-item">
+                    <div class="link-header">
+                        <h3 class="link-name">かながわ電子入札共同システム</h3>
+                        <span class="link-badge local">地方</span>
+                    </div>
+                    <p class="link-description">
+                        神奈川県と県内市町村の電子入札共同システム
+                    </p>
+                    <div class="link-details">
+                        <p class="link-url">https://nyusatsu.e-kanagawa.lg.jp/</p>
+                        <div class="link-tags">
+                            <span class="tag">神奈川県</span>
+                            <span class="tag">共同システム</span>
+                        </div>
+                    </div>
+                    <a href="https://nyusatsu.e-kanagawa.lg.jp/" target="_blank" class="link-button">
+                        <i class="fas fa-external-link-alt"></i>
+                        サイトを開く
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 政令指定都市 -->
+        <div class="category-section">
+            <h2 class="category-title">
+                <i class="fas fa-city"></i>
+                政令指定都市
+            </h2>
+            <div class="links-grid">
+                <div class="link-item">
+                    <div class="link-header">
+                        <h3 class="link-name">名古屋市電子調達システム</h3>
+                        <span class="link-badge local">政令市</span>
+                    </div>
+                    <p class="link-description">
+                        名古屋市の電子調達システム。工事・委託・物品調達の電子入札
+                    </p>
+                    <div class="link-details">
+                        <p class="link-url">https://www.chotatsu.city.nagoya.jp/</p>
+                        <div class="link-tags">
+                            <span class="tag">名古屋市</span>
                             <span class="tag">電子調達</span>
                         </div>
                     </div>
-                    <a href="https://www.metro.tokyo.lg.jp/" target="_blank" class="link-button">
+                    <a href="https://www.chotatsu.city.nagoya.jp/" target="_blank" class="link-button">
                         <i class="fas fa-external-link-alt"></i>
                         サイトを開く
                     </a>
@@ -205,20 +366,135 @@ description: 入札・公共調達に関する公式サイトや関連情報を�
                 
                 <div class="link-item">
                     <div class="link-header">
-                        <h3 class="link-name">横浜市 入札情報サービス</h3>
-                        <span class="link-badge local">地方</span>
+                        <h3 class="link-name">大阪市電子調達システム</h3>
+                        <span class="link-badge local">政令市</span>
                     </div>
                     <p class="link-description">
-                        横浜市が発注する工事・委託・物品調達の入札情報
+                        大阪市の電子調達システム。契約・入札情報の総合窓口
                     </p>
                     <div class="link-details">
-                        <p class="link-url">https://www.city.yokohama.lg.jp/</p>
+                        <p class="link-url">https://www.keiyaku.city.osaka.lg.jp/</p>
                         <div class="link-tags">
-                            <span class="tag">横浜市</span>
-                            <span class="tag">政令市</span>
+                            <span class="tag">大阪市</span>
+                            <span class="tag">電子調達</span>
                         </div>
                     </div>
-                    <a href="https://www.city.yokohama.lg.jp/" target="_blank" class="link-button">
+                    <a href="https://www.keiyaku.city.osaka.lg.jp/" target="_blank" class="link-button">
+                        <i class="fas fa-external-link-alt"></i>
+                        サイトを開く
+                    </a>
+                </div>
+                
+                <div class="link-item">
+                    <div class="link-header">
+                        <h3 class="link-name">仙台市電子入札システム</h3>
+                        <span class="link-badge local">政令市</span>
+                    </div>
+                    <p class="link-description">
+                        仙台市の電子入札システム（工事・コンサル）。平日8:00-22:00運用
+                    </p>
+                    <div class="link-details">
+                        <p class="link-url">https://www.city.sendai.jp/kojikeyaku/jigyosha/keyaku/denshi/</p>
+                        <div class="link-tags">
+                            <span class="tag">仙台市</span>
+                            <span class="tag">長時間運用</span>
+                        </div>
+                    </div>
+                    <a href="https://www.city.sendai.jp/kojikeyaku/jigyosha/keyaku/denshi/" target="_blank" class="link-button">
+                        <i class="fas fa-external-link-alt"></i>
+                        サイトを開く
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 中核市・特例市 -->
+        <div class="category-section">
+            <h2 class="category-title">
+                <i class="fas fa-building"></i>
+                中核市・特例市
+            </h2>
+            <div class="links-grid">
+                <div class="link-item">
+                    <div class="link-header">
+                        <h3 class="link-name">福島市電子入札システム</h3>
+                        <span class="link-badge local">中核市</span>
+                    </div>
+                    <p class="link-description">
+                        福島市の電子入札システム（物品・役務）。指名委員会開催週火曜日に案件公開
+                    </p>
+                    <div class="link-details">
+                        <p class="link-url">https://www.city.fukushima.fukushima.jp/keiyaku-keiyaku/shigoto/nyusatsu/denshinyuusatsu/po-tarusaito/denshinyuusatsupo-taru2.html</p>
+                        <div class="link-tags">
+                            <span class="tag">福島市</span>
+                            <span class="tag">物品・役務</span>
+                        </div>
+                    </div>
+                    <a href="https://www.city.fukushima.fukushima.jp/keiyaku-keiyaku/shigoto/nyusatsu/denshinyuusatsu/po-tarusaito/denshinyuusatsupo-taru2.html" target="_blank" class="link-button">
+                        <i class="fas fa-external-link-alt"></i>
+                        サイトを開く
+                    </a>
+                </div>
+                
+                <div class="link-item">
+                    <div class="link-header">
+                        <h3 class="link-name">郡山市電子入札システム</h3>
+                        <span class="link-badge local">中核市</span>
+                    </div>
+                    <p class="link-description">
+                        郡山市の電子入札システム。平日8:30-22:00運用、脱Java版対応
+                    </p>
+                    <div class="link-details">
+                        <p class="link-url">https://www.city.koriyama.lg.jp/site/keiyakuportal/2923.html</p>
+                        <div class="link-tags">
+                            <span class="tag">郡山市</span>
+                            <span class="tag">脱Java版</span>
+                        </div>
+                    </div>
+                    <a href="https://www.city.koriyama.lg.jp/site/keiyakuportal/2923.html" target="_blank" class="link-button">
+                        <i class="fas fa-external-link-alt"></i>
+                        サイトを開く
+                    </a>
+                </div>
+                
+                <div class="link-item">
+                    <div class="link-header">
+                        <h3 class="link-name">盛岡市電子入札システム</h3>
+                        <span class="link-badge local">中核市</span>
+                    </div>
+                    <p class="link-description">
+                        盛岡市の電子入札システム（工事・コンサル・物品）。平日8:30-20:00運用、Windows11対応
+                    </p>
+                    <div class="link-details">
+                        <p class="link-url">https://www.city.morioka.iwate.jp/jigyousha/keiyaku/kensetsuitaku/1008511/index.html</p>
+                        <div class="link-tags">
+                            <span class="tag">盛岡市</span>
+                            <span class="tag">Windows11対応</span>
+                        </div>
+                    </div>
+                    <a href="https://www.city.morioka.iwate.jp/jigyousha/keiyaku/kensetsuitaku/1008511/index.html" target="_blank" class="link-button">
+                        <i class="fas fa-external-link-alt"></i>
+                        サイトを開く
+                    </a>
+                </div>
+                
+                <div class="link-item">
+                    <div class="link-header">
+                        <h3 class="link-name">佐賀市電子入札システム</h3>
+                        <span class="link-badge local">中核市</span>
+                    </div>
+                    <p class="link-description">
+                        佐賀市の電子入札システム（建設工事・業務委託・物品調達）。平日8:00-22:00運用、次期ブラウザ対応
+                    </p>
+                    <div class="link-details">
+                        <p class="link-url">https://www.city.saga.lg.jp/main/271.html</p>
+                        <div class="link-tags">
+                            <span class="tag">佐賀市</span>
+                            <span class="tag">次期ブラウザ対応</span>
+                            <span class="tag">長時間運用</span>
+                        </div>
+                    </div>
+                    <a href="https://www.city.saga.lg.jp/main/271.html" target="_blank" class="link-button">
                         <i class="fas fa-external-link-alt"></i>
                         サイトを開く
                     </a>
