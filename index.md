@@ -77,6 +77,15 @@ description: 入札・公共調達の基本から実践まで、体系的に学�
 <section class="features">
     <div class="container">
         <h2 class="section-title">入札マップの特徴</h2>
+        
+        <!-- あきら君の案内コメント -->
+        <div class="expert-comment">
+            <img src="/assets/images/akira_character.jpeg" alt="あきら君" class="comment-avatar">
+            <div class="comment-bubble">
+                入札制度の特徴を3つのポイントで整理しました。それぞれの重要性を理解していきましょう！
+            </div>
+        </div>
+        
         <div class="features-grid">
             <div class="feature-card">
                 <div class="feature-icon">
@@ -113,6 +122,14 @@ description: 入札・公共調達の基本から実践まで、体系的に学�
 <section class="steps">
     <div class="container">
         <h2 class="section-title">入札の学習ステップ</h2>
+        <!-- さおりさんの疑問コメント -->
+        <div class="expert-comment">
+            <img src="/assets/images/saori_character.jpeg" alt="さおりさん" class="comment-avatar">
+            <div class="comment-bubble">
+                入札って難しそうですが、どこから始めればいいんでしょうか？
+            </div>
+        </div>
+        
         <div class="steps-container">
             <div class="step">
                 <div class="step-number">1</div>
@@ -154,7 +171,7 @@ description: 入札・公共調達の基本から実践まで、体系的に学�
         <div class="steps-cta">
             <a href="{{ '/knowhow/' | relative_url }}" class="btn btn-outline">
                 <i class="fas fa-arrow-right"></i>
-                詳しい学習内容を見る
+                学習内容を詳しく見る
             </a>
         </div>
     </div>
@@ -281,7 +298,7 @@ description: 入札・公共調達の基本から実践まで、体系的に学�
         <div class="achievements-cta">
             <a href="{{ '/cases/' | relative_url }}" class="btn btn-primary btn-large">
                 <i class="fas fa-chart-line"></i>
-                詳しい事例研究を見る
+                事例研究を見る
             </a>
         </div>
     </div>
@@ -292,10 +309,10 @@ description: 入札・公共調達の基本から実践まで、体系的に学�
     <div class="container">
         <div class="cta-content">
             <div class="cta-highlight">
-                <h3 class="cta-title">📚 体系的な学習で入札制度を完全理解</h3>
+                <h3 class="cta-title">📚 体系的な学習で入札制度を理解</h3>
                 <p class="cta-description">
                     基本から実践まで、段階的に学べる構成。<br>
-                    複雑な入札の世界も、正しい知識があれば必ず理解できます。
+                    複雑な入札の世界も、正しい知識があれば理解できます。
                 </p>
                 <div class="cta-buttons">
                     <a href="/knowhow/" class="btn btn-primary btn-large">
@@ -415,7 +432,7 @@ description: 入札・公共調達の基本から実践まで、体系的に学�
                 <h3 class="cta-title">📖 あなたも同じように理解を深めませんか？</h3>
                 <p class="cta-description">
                     「体系的に学べる」「法的根拠がしっかりしている」<br>
-                    <strong>正しい知識で、入札制度を完全理解しましょう。</strong>
+                    正しい知識で、入札制度を理解しましょう。
                 </p>
                 <div class="cta-buttons">
                     <a href="/knowhow/" class="btn btn-primary btn-large">
@@ -428,7 +445,7 @@ description: 入札・公共調達の基本から実践まで、体系的に学�
                     </a>
                 </div>
                 <div class="cta-urgency">
-                    <span class="urgency-text">✓ 基本から応用まで完全網羅</span>
+                    <span class="urgency-text">✓ 基本から応用まで網羅</span>
                     <span class="urgency-text">✓ 最新制度に対応</span>
                 </div>
             </div>
@@ -459,10 +476,10 @@ description: 入札・公共調達の基本から実践まで、体系的に学�
         
         <!-- サイト運営者情報 -->
         <div class="site-operator">
-            <h3 class="operator-title">サイト運営者</h3>
+            <h3 class="operator-title">サイト運営</h3>
             <p class="operator-info">
-                行政書士法人ふらっと法務事務所<br>
-                代表行政書士 塩澤康幸（しおさん）
+                入札マップ<br>
+                運営：行政書士法人ふらっと法務事務所（しおさん）
             </p>
         </div>
     </div>

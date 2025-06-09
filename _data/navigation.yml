@@ -1,78 +1,73 @@
 # ナビゲーション設定ファイル
 # ヘッダーとフッターのメニュー項目を一元管理
 
-# メインナビゲーション（ヘッダー・フッター共通）
+# メインナビゲーション（ヘッダー・教育コンテンツ中心）
 main_nav:
-  - name: "ホーム"
+  - name: "入札マップ"
     url: "/"
     icon: "fas fa-home"
     description: "トップページ"
     
-  - name: "サービス紹介"
-    url: "/service/"
-    icon: "fas fa-briefcase"
-    description: "入札サポートサービスの詳細"
-    
-  - name: "ご利用の流れ"
-    url: "/flow/"
-    icon: "fas fa-list-ol"
-    description: "サービス利用の手順"
-    
-  - name: "入札ノウハウ"
+  - name: "入札の基本"
     url: "/knowhow/"
-    icon: "fas fa-lightbulb"
-    description: "入札成功のための詳細ガイド"
+    icon: "fas fa-graduation-cap"
+    description: "入札制度の基本から実践まで"
     
-  - name: "成功事例"
+  - name: "制度ガイド"
+    url: "/flow/"
+    icon: "fas fa-book-open"
+    description: "公共調達制度の詳細解説"
+    
+  - name: "事例研究"
     url: "/cases/"
-    icon: "fas fa-trophy"
-    description: "お客様の成功事例"
-    
-  - name: "会社案内"
-    url: "/about/"
-    icon: "fas fa-building"
-    description: "会社概要・代表挨拶"
-    
-  - name: "お問い合わせ"
-    url: "/contact/"
-    icon: "fas fa-envelope"
-    description: "無料相談・お問い合わせ"
-
-# フッター専用ナビゲーション（SEO・補助的な情報）
-footer_only_nav:
-  - name: "よくある質問"
-    url: "/faq/"
-    icon: "fas fa-question-circle"
-    description: "入札に関するよくある質問と回答"
+    icon: "fas fa-search"
+    description: "実際の入札事例から学ぶ"
     
   - name: "用語集"
     url: "/dictionary/"
     icon: "fas fa-book"
     description: "入札関連用語の解説"
     
-  - name: "リンク集"
+  - name: "最新情報"
+    url: "/blog/"
+    icon: "fas fa-newspaper"
+    description: "制度変更・最新動向"
+
+# フッター専用ナビゲーション（営業要素・補助情報）
+footer_only_nav:
+  - name: "専門サポートについて"
+    url: "/service/"
+    icon: "fas fa-hands-helping"
+    description: "専門家によるサポートサービス"
+    
+  - name: "サイトについて"
+    url: "/about/"
+    icon: "fas fa-info-circle"
+    description: "入札マップの理念・運営者情報"
+    
+  - name: "よくある質問"
+    url: "/faq/"
+    icon: "fas fa-question-circle"
+    description: "入札に関するよくある質問と回答"
+    
+  - name: "関連リンク"
     url: "/links/"
     icon: "fas fa-external-link-alt"
-    description: "関連サイト・お役立ちリンク"
-    
-  - name: "ブログ"
-    url: "/blog/"
-    icon: "fas fa-blog"
-    description: "最新情報・コラム"
+    description: "官公庁サイト・お役立ちリンク"
 
-# CTA（Call to Action）設定
+# CTA（Call to Action）設定 - 控えめな表現に変更
 cta:
   primary:
-    text: "無料相談"
+    text: "相談したい"
     url: "/contact/"
-    icon: "fas fa-phone"
-    description: "今すぐ無料相談を申し込む"
+    icon: "fas fa-comments"
+    description: "専門家に相談・質問する"
     
   secondary:
     text: "資料請求"
     url: "/contact/#download"
     icon: "fas fa-download"
-    description: "サービス資料をダウンロード"
+    description: "参考資料をダウンロード"
 
 # ソーシャルメディア（将来対応）
 social_media:

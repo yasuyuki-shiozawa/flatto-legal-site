@@ -1,33 +1,33 @@
 ---
 layout: default
-title: 会社案内
-description: 行政書士法人ふらっと法務事務所の会社概要、代表者 塩澤康幸の紹介、事務所の特徴をご紹介します。入札サポートの専門家として、お客様の成功をサポートいたします。
+title: サイトについて
+description: 入札マップの理念・目的、なぜこのサイトを作ったのか、どのような価値を提供したいのかをご紹介します。
 ---
 
 <!-- ページヘッダー -->
 <section class="page-header">
     <div class="container">
-        <h1 class="page-title">会社案内</h1>
-        <p class="page-subtitle">入札サポートの専門家として、お客様の成功をサポートいたします</p>
+        <h1 class="page-title">サイトについて</h1>
+        <p class="page-subtitle">入札マップの理念・目的と、なぜこのサイトを作ったのか</p>
     </div>
 </section>
 
-<!-- 代表者挨拶 -->
+<!-- サイトの理念 -->
 <section class="president-message">
     <div class="container">
-        <!-- 塩澤さんの挨拶コメント -->
+        <!-- しおさんのメッセージ -->
         <div class="expert-comment">
-            <img src="/assets/images/shiozawa_character.jpeg" alt="塩澤康幸" class="comment-avatar">
+            <img src="/assets/images/shiozawa_character.jpeg" alt="しおさん" class="comment-avatar">
             <div class="comment-bubble">
-                <strong>代表の塩澤です。</strong>皆様の事業発展のお手伝いができることを心より楽しみにしております。
+                入札制度をもっと身近に、もっと分かりやすく。そんな想いで「入札マップ」を作りました。
             </div>
         </div>
         
         <div class="message-content">
             <div class="message-text">
-                <h2 class="message-title">代表者ご挨拶</h2>
-                <div class="president-info">
-                    <h3 class="president-name">代表 行政書士 塩澤 康幸</h3>
+                <h2 class="message-title">入札マップの理念</h2>
+                <div class="site-concept">
+                    <h3 class="concept-title">「公共調達の知識をナビゲートするポータルサイト」</h3>
                     <p class="president-title">行政書士法人ふらっと法務事務所 代表</p>
                     <p class="president-qualifications">行政書士（申請取次可）・宅地建物取引士</p>
                 </div>

@@ -1,30 +1,38 @@
 ---
 layout: default
-title: サービス紹介
-description: ふらっと法務事務所の入札サポートサービスの詳細をご紹介します。専門知識と豊富な経験で、あなたの入札成功をサポートします。
+title: 専門サポートについて
+description: 入札に関する専門的なサポートが必要な場合の相談窓口。複雑な案件や個別対応が必要な場合にご利用ください。
 ---
 
 <!-- ページヘッダー -->
 <section class="page-header">
     <div class="container">
-        <h1 class="page-title">サービス紹介</h1>
-        <p class="page-subtitle">専門知識と豊富な経験で、あなたの入札成功をサポートします</p>
+        <h1 class="page-title">専門サポートについて</h1>
+        <p class="page-subtitle">複雑な案件や個別対応が必要な場合の専門的なサポート</p>
     </div>
 </section>
 
-<!-- サービス概要 -->
+<!-- サポート概要 -->
 <section class="service-overview">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">入札サポートサービス</h2>
+            <h2 class="section-title">専門家による個別サポート</h2>
             <p class="section-subtitle">
-                複雑な入札手続きを専門家がトータルサポート。<br>
-                初めての方でも安心して入札に参加できます。
+                入札マップで学習した後、より専門的なサポートが必要な場合に。<br>
+                複雑な案件や個別の事情に応じた対応を行います。
             </p>
         </div>
         
+        <!-- しおさんの説明コメント -->
+        <div class="expert-comment">
+            <img src="/assets/images/shiozawa_character.jpeg" alt="しおさん" class="comment-avatar">
+            <div class="comment-bubble">
+                基本的な知識は入札マップで学習できますが、個別の案件では専門的な判断が必要な場合があります。
+            </div>
+        </div>
+        
         <div class="service-hero-image">
-            <img src="{{ '/assets/images/service-overview.png' | relative_url }}" alt="サービス概要" class="service-main-img">
+            <img src="{{ '/assets/images/service-overview.png' | relative_url }}" alt="専門サポート概要" class="service-main-img">
         </div>
         
         <div class="service-grid">

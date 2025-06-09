@@ -1,7 +1,7 @@
 ---
 layout: default
-title: お問い合わせ
-description: 行政書士法人ふらっと法務事務所へのお問い合わせはこちらから。代表 塩澤康幸への入札に関するご相談、無料相談のお申し込みを承っております。
+title: 相談・質問
+description: 入札に関するご質問やご相談がございましたら、お気軽にお声がけください。学習内容についての疑問点なども承っております。
 ---
 
 <!-- ページヘッダー -->
@@ -11,22 +11,22 @@ description: 行政書士法人ふらっと法務事務所へのお問い合わ�
         <div class="expert-comment">
             <img src="/assets/images/akira_character.jpeg" alt="あきら君" class="comment-avatar">
             <div class="comment-bubble">
-                お問い合わせをお待ちしています！どんな小さなことでもお気軽にご相談ください。
+                入札について分からないことがあれば、お気軽にご相談ください！
             </div>
         </div>
         
-        <h1 class="page-title">お問い合わせ</h1>
-        <p class="page-subtitle">入札に関するご相談、お気軽にお問い合わせください</p>
+        <h1 class="page-title">相談・質問</h1>
+        <p class="page-subtitle">入札に関するご質問やご相談を承っております</p>
     </div>
 </section>
 
-<!-- お問い合わせ方法 -->
+<!-- 相談について -->
 <section class="contact-methods">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">お問い合わせ方法</h2>
+            <h2 class="section-title">ご相談について</h2>
             <p class="section-subtitle">
-                お客様のご都合に合わせて、様々な方法でお問い合わせいただけます
+                入札マップで学習された内容についての疑問点や、個別の案件についてのご相談を承っております
             </p>
         </div>
         
