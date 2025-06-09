@@ -5,21 +5,29 @@
             <div class="footer-section">
                 <h3 class="footer-title">{{ site.company.name }}</h3>
                 <div class="footer-info">
+                    <p class="footer-representative">
+                        <i class="fas fa-user"></i>
+                        {{ site.company.representative }}
+                    </p>
                     <p class="footer-address">
                         <i class="fas fa-map-marker-alt"></i>
                         {{ site.company.address }}
                     </p>
+                    <p class="footer-station">
+                        <i class="fas fa-train"></i>
+                        {{ site.company.station }}
+                    </p>
                     <p class="footer-tel">
                         <i class="fas fa-phone"></i>
-                        <a href="tel:{{ site.company.tel | replace: '-', '' }}">{{ site.company.tel }}</a>
+                        <a href="tel:{{ site.company.phone | replace: '-', '' }}">{{ site.company.phone }}</a>
+                    </p>
+                    <p class="footer-email">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>
                     </p>
                     <p class="footer-hours">
                         <i class="fas fa-clock"></i>
                         {{ site.company.hours }}
-                    </p>
-                    <p class="footer-email">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
                     </p>
                 </div>
             </div>
@@ -107,7 +115,17 @@
                 <div class="footer-right">
                     <div class="privacy-mark">
                         <img src="{{ '/assets/images/existing/flat-legal-privacy-mark.png' | relative_url }}" alt="プライバシーマーク" class="privacy-mark-img">
-                        <p class="privacy-text">プライバシーマーク取得<br>個人情報保護に取り組んでいます</p>
+                        <p class="privacy-text">{{ site.company.privacy_mark }}<br>個人情報保護に取り組んでいます</p>
+                    </div>
+                    <div class="footer-details">
+                        <p class="footer-established">
+                            <i class="fas fa-calendar-alt"></i>
+                            設立：{{ site.company.established }}
+                        </p>
+                        <p class="footer-staff">
+                            <i class="fas fa-users"></i>
+                            {{ site.company.staff }}
+                        </p>
                     </div>
                 </div>
             </div>

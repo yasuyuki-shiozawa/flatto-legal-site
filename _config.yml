@@ -1,19 +1,25 @@
-# ふらっと法務事務所 入札サポート専門サイト
+# 行政書士法人ふらっと法務事務所 入札サポート専門サイト
 
-title: "ふらっと法務事務所"
-description: "入札サポート専門サイト - あなたの入札を成功に導きます"
+title: "行政書士法人ふらっと法務事務所"
+description: "入札サポート専門サイト - 代表 塩澤康幸があなたの入札を成功に導きます"
 baseurl: ""
 url: "https://flatto-legal-site.netlify.app"
 
 # 会社情報
 company:
-  name: "ふらっと法務事務所"
-  phone: "045-123-4567"
-  email: "info@flatto-legal.com"
-  address: "神奈川県横浜市中区○○町1-2-3"
+  name: "行政書士法人ふらっと法務事務所"
+  representative: "代表 行政書士 塩澤康幸"
+  phone: "046-272-3357"
+  email: "mail@flat-legal.com"
+  address: "〒242-0006 神奈川県大和市南林間6丁目4番26号 1F"
+  hours: "電話受付 平日9時～17時 / メール24時間受付"
+  station: "小田急線南林間駅徒歩7分"
+  established: "2021年4月9日"
+  staff: "6名体制"
+  privacy_mark: "プライバシーマーク取得（2024年9月19日）"
 
 # SEO設定
-author: "ふらっと法務事務所"
+author: "行政書士法人ふらっと法務事務所"
 twitter:
   username: flatto_legal
   card: summary_large_image
