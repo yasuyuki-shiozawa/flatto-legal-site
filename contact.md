@@ -1,7 +1,7 @@
 ---
 layout: default
 title: お問い合わせ
-description: ふらっと法務事務所へのお問い合わせはこちらから。入札に関するご相談、無料相談のお申し込みを承っております。
+description: 行政書士法人ふらっと法務事務所へのお問い合わせはこちらから。代表 塩澤康幸への入札に関するご相談、無料相談のお申し込みを承っております。
 ---
 
 <!-- ページヘッダー -->
@@ -32,7 +32,7 @@ description: ふらっと法務事務所へのお問い合わせはこちらか�
                     <p class="phone-number">046-272-3357</p>
                     <p class="business-hours">
                         <i class="fas fa-clock"></i>
-                        営業時間：平日 9:00〜18:00
+                        営業時間：電話受付 平日9時～17時
                     </p>
                 </div>
                 <p class="contact-description">
@@ -46,10 +46,10 @@ description: ふらっと法務事務所へのお問い合わせはこちらか�
                 </div>
                 <h3 class="contact-title">メールでのお問い合わせ</h3>
                 <div class="contact-info">
-                    <p class="email-address">info@flatto-legal.com</p>
+                    <p class="email-address">mail@flat-legal.com</p>
                     <p class="response-time">
                         <i class="fas fa-reply"></i>
-                        24時間以内に回答いたします
+                        メール24時間受付・迅速回答
                     </p>
                 </div>
                 <p class="contact-description">
@@ -204,13 +204,13 @@ description: ふらっと法務事務所へのお問い合わせはこちらか�
         
         <div class="access-grid">
             <div class="access-details">
-                <h3 class="office-name">ふらっと法務事務所</h3>
+                <h3 class="office-name">行政書士法人ふらっと法務事務所</h3>
                 <div class="office-info">
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
                             <strong>住所</strong>
-                            <p>〒242-0006<br>神奈川県大和市南林間1丁目4番26号</p>
+                            <p>〒242-0006<br>神奈川県大和市南林間6丁目4番26号 1F</p>
                         </div>
                     </div>
                     
@@ -223,10 +223,18 @@ description: ふらっと法務事務所へのお問い合わせはこちらか�
                     </div>
                     
                     <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>メールアドレス</strong>
+                            <p>mail@flat-legal.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
                         <i class="fas fa-clock"></i>
                         <div>
                             <strong>営業時間</strong>
-                            <p>平日 9:00〜18:00<br>（土日祝日は事前予約制）</p>
+                            <p>電話受付 平日9時～17時<br>メール24時間受付</p>
                         </div>
                     </div>
                     
@@ -234,7 +242,7 @@ description: ふらっと法務事務所へのお問い合わせはこちらか�
                         <i class="fas fa-train"></i>
                         <div>
                             <strong>最寄り駅</strong>
-                            <p>小田急江ノ島線「南林間駅」徒歩3分</p>
+                            <p>小田急線南林間駅徒歩7分</p>
                         </div>
                     </div>
                 </div>

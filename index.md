@@ -1,7 +1,7 @@
 ---
 layout: default
 title: ホーム
-description: ふらっと法務事務所の入札サポート専門サイトです。初めての入札でも安心、専門家がしっかりサポートします。
+description: 行政書士法人ふらっと法務事務所の入札サポート専門サイトです。代表 塩澤康幸が初めての入札でも安心、専門家がしっかりサポートします。
 ---
 
 <!<!-- ヒーローセクション -->
@@ -14,7 +14,7 @@ description: ふらっと法務事務所の入札サポート専門サイトで�
                     <span class="highlight">こんなに身近だったんだ</span>
                 </h1>
                 <p class="hero-subtitle">
-                    初めての入札でも安心。専門家がしっかりサポートします。
+                    初めての入札でも安心。行政書士法人ふらっと法務事務所の専門家がしっかりサポートします。
                 </p>
                 <div class="hero-buttons">
                     <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-large">
@@ -58,12 +58,9 @@ description: ふらっと法務事務所の入札サポート専門サイトで�
             
             <div class="about-text-block highlight-block">
                 <p class="about-text">
-                    <strong>ふらっと法務事務所では、そんな入札の壁を取り払い、あなたのビジネスチャンスを広げるサポートをいたします。</strong>
+                    <strong>行政書士法人ふらっと法務事務所では、そんな入札の壁を取り払い、あなたのビジネスチャンスを広げるサポートをいたします。</strong>
                 </p>
             </div>
-        </div>
-    </div>
-</section>
         </div>
     </div>
 </section>
@@ -79,7 +76,7 @@ description: ふらっと法務事務所の入札サポート専門サイトで�
                 </div>
                 <h3 class="feature-title">専門知識</h3>
                 <p class="feature-description">
-                    行政書士として培った専門知識で、入札に関する複雑な手続きや書類作成を的確にサポートします。
+                    行政書士として培った専門知識で、入札に関する複雑な手続きや書類作成を的確にサポートします。代表の塩澤康幸は宅地建物取引士の資格も保有し、不動産業の経験を活かした幅広い支援が可能です。
                 </p>
             </div>
             <div class="feature-card">
@@ -88,7 +85,7 @@ description: ふらっと法務事務所の入札サポート専門サイトで�
                 </div>
                 <h3 class="feature-title">丁寧なサポート</h3>
                 <p class="feature-description">
-                    初めての方にもわかりやすく、一つひとつ丁寧に説明。不安や疑問を解消しながら進めます。
+                    初めての方にもわかりやすく、一つひとつ丁寧に説明。「支援」をモットーに、事業の伴走者として長くお付き合いしていきます。不安や疑問を解消しながら進めます。
                 </p>
             </div>
             <div class="feature-card">
@@ -97,7 +94,7 @@ description: ふらっと法務事務所の入札サポート専門サイトで�
                 </div>
                 <h3 class="feature-title">実績多数</h3>
                 <p class="feature-description">
-                    これまで多くの中小企業の入札成功をサポート。その経験とノウハウを活かし、あなたの成功をバックアップします。
+                    2021年設立以来、多くの中小企業の入札成功をサポート。プライバシーマーク取得、建設業経理士2級取得など、信頼性の高いサービスを提供しています。
                 </p>
             </div>
         </div>
@@ -251,7 +248,7 @@ description: ふらっと法務事務所の入札サポート専門サイトで�
         <div class="cta-content">
             <h2 class="cta-title">入札でお悩みですか？</h2>
             <p class="cta-description">
-                ふらっと法務事務所の専門家が、あなたの入札成功をサポートします。<br>
+                行政書士法人ふらっと法務事務所の専門家が、あなたの入札成功をサポートします。<br>
                 まずは無料相談からお気軽にどうぞ。
             </p>
             <div class="cta-buttons">
