@@ -723,3 +723,65 @@ body {
     }
 }
 
+
+/* お客様の声画像スタイル */
+.voice-image {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.testimonial-photo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* プライバシーマークスタイル */
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-left {
+    flex: 1;
+}
+
+.footer-right {
+    flex-shrink: 0;
+}
+
+.privacy-mark {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.privacy-mark-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.privacy-text {
+    font-size: 0.75rem;
+    color: #666;
+    line-height: 1.3;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .privacy-mark {
+        justify-content: center;
+    }
+}
+

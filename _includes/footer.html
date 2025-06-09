@@ -95,12 +95,22 @@
         
         <!-- コピーライト -->
         <div class="footer-bottom">
-            <p class="copyright">
-                &copy; {{ 'now' | date: "%Y" }} {{ site.company.name }}. All rights reserved.
-            </p>
-            <p class="footer-note">
-                このサイトは入札サポート専門サイトです。お気軽にご相談ください。
-            </p>
+            <div class="footer-bottom-content">
+                <div class="footer-left">
+                    <p class="copyright">
+                        &copy; {{ 'now' | date: "%Y" }} {{ site.company.name }}. All rights reserved.
+                    </p>
+                    <p class="footer-note">
+                        このサイトは入札サポート専門サイトです。お気軽にご相談ください。
+                    </p>
+                </div>
+                <div class="footer-right">
+                    <div class="privacy-mark">
+                        <img src="{{ '/assets/images/existing/flat-legal-privacy-mark.png' | relative_url }}" alt="プライバシーマーク" class="privacy-mark-img">
+                        <p class="privacy-text">プライバシーマーク取得<br>個人情報保護に取り組んでいます</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </footer>

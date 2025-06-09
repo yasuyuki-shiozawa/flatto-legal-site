@@ -41,7 +41,7 @@ description: ふらっと法務事務所の会社概要、代表者紹介、事�
                 </div>
             </div>
             <div class="message-photo">
-                <img src="{{ '/assets/images/representative-portrait.jpg' | relative_url }}" alt="代表者 塩澤康之" class="representative-photo">
+                <img src="{{ '/assets/images/existing/flat-legal-staff-shiozawa-photo.jpeg' | relative_url }}" alt="代表者 塩澤康幸" class="representative-photo">
             </div>
         </div>
     </div>
@@ -63,7 +63,7 @@ description: ふらっと法務事務所の会社概要、代表者紹介、事�
                     </tr>
                     <tr>
                         <th>代表者</th>
-                        <td>行政書士 塩澤 康之</td>
+                        <td>行政書士 塩澤 康幸</td>
                     </tr>
                     <tr>
                         <th>所在地</th>

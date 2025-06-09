@@ -291,12 +291,15 @@ description: ふらっと法務事務所がサポートした入札成功事例�
         </div>
         
         <div class="voices-grid">
-            <div class="voice-card">
+              <div class="voice-card">
                 <div class="voice-header">
-                    <div class="voice-company">製造業 E社様</div>
-                    <div class="voice-project">設備保守業務（年間2,000万円）</div>
+                    <div class="voice-company">清掃関係業 A様</div>
+                    <div class="voice-project">一年を通して売り上げが安定</div>
                 </div>
                 <div class="voice-content">
+                    <div class="voice-image">
+                        <img src="{{ '/assets/images/existing/flat-portal-testimonial-cleaning-company.jpeg' | relative_url }}" alt="清掃関係業代表 A様" class="testimonial-photo">
+                    </div>
                     <div class="voice-rating">
                         <div class="stars">
                             <i class="fas fa-star"></i>
@@ -308,18 +311,21 @@ description: ふらっと法務事務所がサポートした入札成功事例�
                         <span class="rating-text">満足度: 非常に高い</span>
                     </div>
                     <p class="voice-text">
-                        「初めての入札参加で不安でしたが、一から丁寧に教えていただき、無事に落札できました。書類作成から価格設定まで、すべてサポートしていただけて心強かったです。」
+                        「一年を通して売り上げが安定。閑散期の不安から解放されました。」
                     </p>
-                    <div class="voice-author">代表取締役 田中様</div>
+                    <div class="voice-author">清掃関係業代表 A様</div>
                 </div>
             </div>
             
             <div class="voice-card">
                 <div class="voice-header">
-                    <div class="voice-company">IT企業 F社様</div>
-                    <div class="voice-project">システム開発業務（8,000万円）</div>
+                    <div class="voice-company">Webデザイン会社 Y様</div>
+                    <div class="voice-project">安心してスタッフを雇えるように</div>
                 </div>
                 <div class="voice-content">
+                    <div class="voice-image">
+                        <img src="{{ '/assets/images/existing/flat-portal-testimonial-web-design-company.jpeg' | relative_url }}" alt="Webデザイン会社代表 Y様" class="testimonial-photo">
+                    </div>
                     <div class="voice-rating">
                         <div class="stars">
                             <i class="fas fa-star"></i>
@@ -331,9 +337,9 @@ description: ふらっと法務事務所がサポートした入札成功事例�
                         <span class="rating-text">満足度: 非常に高い</span>
                     </div>
                     <p class="voice-text">
-                        「技術提案書の作成に苦戦していましたが、専門家のアドバイスで説得力のある内容に仕上がりました。結果的に技術点で最高評価をいただき、大型案件を獲得できました。」
+                        「安心してスタッフを雇えるようになり、受注も増えました。」
                     </p>
-                    <div class="voice-author">営業部長 佐藤様</div>
+                    <div class="voice-author">Webデザイン会社代表 Y様</div>
                 </div>
             </div>
             
