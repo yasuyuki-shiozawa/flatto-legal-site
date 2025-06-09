@@ -21,7 +21,7 @@ main_nav:
   - name: "入札ノウハウ"
     url: "/knowhow/"
     icon: "fas fa-lightbulb"
-    description: "入札成功のコツ"
+    description: "入札成功のための詳細ガイド"
     
   - name: "成功事例"
     url: "/cases/"
@@ -40,6 +40,11 @@ main_nav:
 
 # フッター専用ナビゲーション（SEO・補助的な情報）
 footer_only_nav:
+  - name: "よくある質問"
+    url: "/faq/"
+    icon: "fas fa-question-circle"
+    description: "入札に関するよくある質問と回答"
+    
   - name: "用語集"
     url: "/dictionary/"
     icon: "fas fa-book"
