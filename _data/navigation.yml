@@ -28,8 +28,8 @@ main_nav:
     icon: "fas fa-book"
     description: "入札関連用語の解説"
     
-  - name: "最新情報"
-    url: "/blog/"
+  - name: "最新動向"
+    url: "/latest-trends/"
     icon: "fas fa-newspaper"
     description: "制度変更・最新動向"
 
