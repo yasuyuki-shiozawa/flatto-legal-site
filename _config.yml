@@ -1,0 +1,70 @@
+# ふらっと法務事務所 入札サポート専門サイト
+
+title: "ふらっと法務事務所"
+description: "入札サポート専門サイト - あなたの入札を成功に導きます"
+baseurl: ""
+url: "https://flatto-legal-site.netlify.app"
+
+# 会社情報
+company:
+  name: "ふらっと法務事務所"
+  phone: "045-123-4567"
+  email: "info@flatto-legal.com"
+  address: "神奈川県横浜市中区○○町1-2-3"
+
+# SEO設定
+author: "ふらっと法務事務所"
+twitter:
+  username: flatto_legal
+  card: summary_large_image
+
+# ビルド設定
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:title/
+
+# プラグイン
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# 除外ファイル
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - LICENSE
+  - CHANGELOG.md
+
+# 含めるファイル
+include:
+  - _pages
+
+# コレクション設定
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+# デフォルト設定
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+

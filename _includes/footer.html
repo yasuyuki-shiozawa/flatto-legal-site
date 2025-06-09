@@ -1,0 +1,107 @@
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <!-- 会社情報 -->
+            <div class="footer-section">
+                <h3 class="footer-title">{{ site.company.name }}</h3>
+                <div class="footer-info">
+                    <p class="footer-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        {{ site.company.address }}
+                    </p>
+                    <p class="footer-tel">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:{{ site.company.tel | replace: '-', '' }}">{{ site.company.tel }}</a>
+                    </p>
+                    <p class="footer-hours">
+                        <i class="fas fa-clock"></i>
+                        {{ site.company.hours }}
+                    </p>
+                    <p class="footer-email">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- メインサイトマップ -->
+            <div class="footer-section">
+                <h3 class="footer-title">サイトマップ</h3>
+                <ul class="footer-nav">
+                    {% for item in site.data.navigation.main_nav %}
+                    <li>
+                        <a href="{{ item.url | relative_url }}" title="{{ item.description }}">
+                            <i class="{{ item.icon }}"></i>
+                            {{ item.name }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            
+            <!-- お役立ち情報（フッター専用） -->
+            <div class="footer-section">
+                <h3 class="footer-title">お役立ち情報</h3>
+                <ul class="footer-nav">
+                    {% for item in site.data.navigation.footer_only_nav %}
+                    <li>
+                        <a href="{{ item.url | relative_url }}" title="{{ item.description }}">
+                            <i class="{{ item.icon }}"></i>
+                            {{ item.name }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            
+            <!-- CTA -->
+            <div class="footer-section">
+                <h3 class="footer-title">無料相談受付中</h3>
+                <p class="footer-cta-text">入札に関するご相談は無料です。<br>お気軽にお問い合わせください。</p>
+                <div class="footer-cta-buttons">
+                    <a href="{{ site.data.navigation.cta.primary.url | relative_url }}" 
+                       class="btn btn-primary"
+                       title="{{ site.data.navigation.cta.primary.description }}">
+                        <i class="{{ site.data.navigation.cta.primary.icon }}"></i>
+                        {{ site.data.navigation.cta.primary.text }}
+                    </a>
+                    <a href="{{ site.data.navigation.cta.secondary.url | relative_url }}" 
+                       class="btn btn-secondary"
+                       title="{{ site.data.navigation.cta.secondary.description }}">
+                        <i class="{{ site.data.navigation.cta.secondary.icon }}"></i>
+                        {{ site.data.navigation.cta.secondary.text }}
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ソーシャルメディア（将来対応） -->
+        {% assign enabled_social = site.data.navigation.social_media | where: "enabled", true %}
+        {% if enabled_social.size > 0 %}
+        <div class="footer-social">
+            <h4 class="footer-social-title">フォローする</h4>
+            <ul class="social-links">
+                {% for social in enabled_social %}
+                <li>
+                    <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer" 
+                       title="{{ social.name }}">
+                        <i class="{{ social.icon }}"></i>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+        
+        <!-- コピーライト -->
+        <div class="footer-bottom">
+            <p class="copyright">
+                &copy; {{ 'now' | date: "%Y" }} {{ site.company.name }}. All rights reserved.
+            </p>
+            <p class="footer-note">
+                このサイトは入札サポート専門サイトです。お気軽にご相談ください。
+            </p>
+        </div>
+    </div>
+</footer>
+

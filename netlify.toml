@@ -1,0 +1,13 @@
+[build]
+  base = ""
+  command = "bundle exec jekyll build"
+  publish = "_site"
+
+[build.environment]
+  JEKYLL_ENV = "production"
+
+[[redirects]]
+  from = "/old-site/*"
+  to = "/:splat"
+  status = 301
+
