@@ -68,6 +68,21 @@ description: 入札から落札まで、初心者でも分かりやすい5ステ
 
 入札とは、国や地方公共団体、独立行政法人などの公的機関が、工事や物品購入、サービス提供などの契約相手を決定する際に用いる競争的な手続きです。
 
+### 入札の法的根拠
+
+入札制度は、以下の法令に基づいて実施されています：
+
+<div class="law-reference-box">
+    <h4>📜 主要な関連法令</h4>
+    <ul>
+        <li><strong>地方自治法第234条</strong>：地方公共団体の契約締結方法を規定</li>
+        <li><strong>地方自治法施行令第167条</strong>：一般競争入札の実施要件</li>
+        <li><strong>地方自治法施行令第167条の2</strong>：随意契約の適用範囲</li>
+        <li><strong>会計法第29条の3</strong>：国の契約における競争入札の原則</li>
+        <li><strong>公共工事の入札及び契約の適正化の促進に関する法律</strong>：建設工事の入札適正化</li>
+    </ul>
+</div>
+
 ### 入札の基本原理
 
 公的機関は税金を財源として事業を行うため、**公正性**、**透明性**、**経済性**を確保する必要があります。入札制度は、これらの原則を実現するための重要な仕組みです。
@@ -80,6 +95,44 @@ description: 入札から落札まで、初心者でも分かりやすい5ステ
         <li><strong>経済性</strong>：最も有利な条件での契約締結</li>
     </ul>
 </div>
+
+### 入札と随意契約の違い
+
+<div class="comparison-table">
+    <table>
+        <thead>
+            <tr>
+                <th>項目</th>
+                <th>入札</th>
+                <th>随意契約</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>選定方法</strong></td>
+                <td>競争による選定</td>
+                <td>発注者による任意選定</td>
+            </tr>
+            <tr>
+                <td><strong>透明性</strong></td>
+                <td>高い（公開手続き）</td>
+                <td>低い（非公開も可能）</td>
+            </tr>
+            <tr>
+                <td><strong>適用条件</strong></td>
+                <td>原則として全案件</td>
+                <td>法令で定める場合のみ</td>
+            </tr>
+            <tr>
+                <td><strong>価格競争</strong></td>
+                <td>あり</td>
+                <td>限定的</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+**地方自治法第234条第2項**では、随意契約は政令で定める場合に該当するときに限って認められるとされており、入札が原則となっています。
 
 ## 入札参加のメリット {#bid-benefits}
 
@@ -109,6 +162,8 @@ description: 入札から落札まで、初心者でも分かりやすい5ステ
 
 **最も一般的な入札方式**で、資格要件を満たすすべての事業者が参加可能です。
 
+#### 一般競争入札の特徴
+
 <div class="comparison-table">
     <table>
         <tr>
@@ -116,8 +171,12 @@ description: 入札から落札まで、初心者でも分かりやすい5ステ
             <td>参加資格を満たせば誰でも参加可能</td>
         </tr>
         <tr>
+            <th>法的根拠</th>
+            <td>地方自治法第234条第1項、会計法第29条の3</td>
+        </tr>
+        <tr>
             <th>メリット</th>
-            <td>参加機会が多い、競争が公正</td>
+            <td>参加機会が多い、競争が公正、透明性が高い</td>
         </tr>
         <tr>
             <th>デメリット</th>
@@ -125,60 +184,127 @@ description: 入札から落札まで、初心者でも分かりやすい5ステ
         </tr>
         <tr>
             <th>適用例</th>
-            <td>物品購入、清掃業務、システム開発など</td>
+            <td>物品購入、清掃業務、システム開発、建設工事など</td>
         </tr>
     </table>
 </div>
+
+#### 価格決定の仕組み
+
+一般競争入札では、以下の価格設定により適正な競争を確保しています：
+
+<div class="price-mechanism">
+    <div class="price-item">
+        <h5>🔺 予定価格</h5>
+        <p><strong>上限価格</strong>として設定。これを超える入札は無効となります。</p>
+        <p><em>例：予定価格500万円の場合、501万円の入札は失格</em></p>
+    </div>
+    <div class="price-item">
+        <h5>🔻 最低制限価格</h5>
+        <p><strong>下限価格</strong>として設定。品質確保のため過度な安値を防止。</p>
+        <p><em>例：最低制限価格400万円の場合、399万円の入札は失格</em></p>
+    </div>
+</div>
+
+**具体例：建設工事の入札**
+- A社：450万円 ← **落札**（予定価格内かつ最低制限価格以上）
+- B社：380万円 ← 失格（最低制限価格未満）
+- C社：520万円 ← 失格（予定価格超過）
 
 ### 指名競争入札
 
 発注機関が指名した事業者のみが参加できる方式です。
 
+#### 指名競争入札の詳細
+
 <div class="comparison-table">
     <table>
         <tr>
             <th>特徴</th>
-            <td>発注機関による事前選定</td>
+            <td>発注機関による事前選定（通常5～10社程度）</td>
+        </tr>
+        <tr>
+            <th>法的根拠</th>
+            <td>地方自治法第234条第2項、地方自治法施行令第167条</td>
+        </tr>
+        <tr>
+            <th>指名基準</th>
+            <td>技術力、実績、財務状況、地域性等を総合評価</td>
         </tr>
         <tr>
             <th>メリット</th>
-            <td>競争相手が限定的、受注確率が高い</td>
+            <td>競争相手が限定的、受注確率が高い、事前審査済み</td>
         </tr>
         <tr>
             <th>デメリット</th>
-            <td>指名されなければ参加不可</td>
+            <td>指名されなければ参加不可、指名基準が不透明な場合あり</td>
         </tr>
         <tr>
             <th>適用例</th>
-            <td>専門性の高い業務、建設工事など</td>
+            <td>専門性の高い業務、建設工事、地域限定案件など</td>
         </tr>
     </table>
+</div>
+
+#### 指名を受けるためのポイント
+
+<div class="tips-box">
+    <h5>💡 指名獲得の戦略</h5>
+    <ul>
+        <li><strong>実績の蓄積</strong>：同種業務の実績を着実に積み重ね</li>
+        <li><strong>技術力の向上</strong>：資格取得や技術研修への参加</li>
+        <li><strong>地域貢献</strong>：地元での事業活動や社会貢献活動</li>
+        <li><strong>財務健全性</strong>：安定した経営状況の維持</li>
+        <li><strong>コンプライアンス</strong>：法令遵守体制の整備</li>
+    </ul>
 </div>
 
 ### 企画競争入札（プロポーザル方式）
 
 価格だけでなく、技術提案や企画内容も評価対象となる方式です。
 
+#### 企画競争入札の評価方式
+
 <div class="comparison-table">
     <table>
         <tr>
             <th>特徴</th>
-            <td>価格と技術提案の総合評価</td>
+            <td>価格と技術提案の総合評価（通常、技術点70%：価格点30%）</td>
+        </tr>
+        <tr>
+            <th>法的位置づけ</th>
+            <td>随意契約の一種（地方自治法施行令第167条の2）</td>
+        </tr>
+        <tr>
+            <th>評価項目</th>
+            <td>技術力、実施体制、スケジュール、価格等を総合評価</td>
         </tr>
         <tr>
             <th>メリット</th>
-            <td>技術力で差別化可能、適正価格での受注</td>
+            <td>技術力で差別化可能、適正価格での受注、長期関係構築</td>
         </tr>
         <tr>
             <th>デメリット</th>
-            <td>提案書作成に時間とコストが必要</td>
+            <td>提案書作成に時間とコストが必要、評価基準が複雑</td>
         </tr>
         <tr>
             <th>適用例</th>
-            <td>コンサルティング、設計業務、IT関連など</td>
+            <td>コンサルティング、設計業務、IT関連、調査研究など</td>
         </tr>
     </table>
 </div>
+
+#### 総合評価の計算例
+
+**案件：システム開発業務（予算1,000万円）**
+
+| 事業者 | 技術点（70点満点） | 価格点（30点満点） | 総合点 | 順位 |
+|--------|-------------------|-------------------|--------|------|
+| A社 | 65点 | 25点（800万円） | **90点** | 🥇 1位 |
+| B社 | 60点 | 30点（700万円） | 90点 | 2位 |
+| C社 | 55点 | 20点（900万円） | 75点 | 3位 |
+
+*価格点は最低価格を基準とした相対評価で算出*
 
 ---
 
@@ -1517,6 +1643,168 @@ description: 入札から落札まで、初心者でも分かりやすい5ステ
                 よくある質問を見る
             </a>
         </div>
+    </div>
+</div>
+
+
+
+## この記事のまとめ {#summary}
+
+<div class="article-summary">
+    <h3>📝 入札ノウハウの要点</h3>
+    
+    <div class="summary-grid">
+        <div class="summary-item">
+            <h4>🎯 入札の基本</h4>
+            <ul>
+                <li><strong>法的根拠</strong>：地方自治法第234条等に基づく公正な競争制度</li>
+                <li><strong>3つの原則</strong>：公正性・透明性・経済性の確保</li>
+                <li><strong>原則</strong>：入札が基本、随意契約は例外的適用</li>
+            </ul>
+        </div>
+        
+        <div class="summary-item">
+            <h4>📊 入札の種類</h4>
+            <ul>
+                <li><strong>一般競争入札</strong>：誰でも参加可能、最も透明性が高い</li>
+                <li><strong>指名競争入札</strong>：事前選定制、受注確率が高い</li>
+                <li><strong>企画競争入札</strong>：技術提案重視、差別化が可能</li>
+            </ul>
+        </div>
+        
+        <div class="summary-item">
+            <h4>💡 成功のポイント</h4>
+            <ul>
+                <li><strong>資格取得</strong>：全省庁統一資格等の確実な取得</li>
+                <li><strong>実績蓄積</strong>：継続的な案件参加による信頼構築</li>
+                <li><strong>専門性向上</strong>：技術力と提案力の継続的向上</li>
+            </ul>
+        </div>
+        
+        <div class="summary-item">
+            <h4>⚠️ 注意事項</h4>
+            <ul>
+                <li><strong>法令遵守</strong>：独占禁止法等の厳格な遵守</li>
+                <li><strong>期限管理</strong>：申請・提出期限の確実な管理</li>
+                <li><strong>品質確保</strong>：適正価格での確実な履行</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+---
+
+## よくある質問 {#faq-section}
+
+<div class="faq-section">
+    <div class="faq-item">
+        <h4>Q: 小さな会社でも入札に参加できますか？</h4>
+        <div class="faq-answer">
+            <p><strong>A: はい、会社の規模に関係なく参加可能です。</strong></p>
+            <p>むしろ中小企業向けの案件も多数設定されており、<strong>地方自治法施行令第167条の7</strong>では中小企業者の受注機会の確保が規定されています。多くの自治体で中小企業優遇措置も実施されています。</p>
+        </div>
+    </div>
+    
+    <div class="faq-item">
+        <h4>Q: 申請にはどのくらいの費用がかかりますか？</h4>
+        <div class="faq-answer">
+            <p><strong>A: 全省庁統一資格の申請は無料です。</strong></p>
+            <p>ただし、必要書類の取得に以下の費用がかかります：</p>
+            <ul>
+                <li>登記事項証明書：600円</li>
+                <li>納税証明書：400円程度</li>
+                <li>財務諸表等：会計士費用（必要に応じて）</li>
+            </ul>
+            <p>合計で数千円～数万円程度が一般的です。</p>
+        </div>
+    </div>
+    
+    <div class="faq-item">
+        <h4>Q: 入札参加資格の有効期間はどのくらいですか？</h4>
+        <div class="faq-answer">
+            <p><strong>A: 通常3年間ですが、機関により異なります。</strong></p>
+            <p>主な有効期間：</p>
+            <ul>
+                <li><strong>全省庁統一資格</strong>：3年間（更新制）</li>
+                <li><strong>地方公共団体</strong>：2～3年間（自治体により異なる）</li>
+                <li><strong>建設工事</strong>：2年間（経営事項審査の有効期間）</li>
+            </ul>
+            <p>期限切れ前の更新手続きが必要です。</p>
+        </div>
+    </div>
+    
+    <div class="faq-item">
+        <h4>Q: 落札できなかった場合、理由を知ることはできますか？</h4>
+        <div class="faq-answer">
+            <p><strong>A: はい、情報公開請求により詳細を確認できます。</strong></p>
+            <p><strong>情報公開法第5条</strong>に基づき、以下の情報が開示されます：</p>
+            <ul>
+                <li>落札者の入札価格</li>
+                <li>自社の順位</li>
+                <li>評価項目別の得点（総合評価方式の場合）</li>
+                <li>失格理由（該当する場合）</li>
+            </ul>
+            <p>次回の改善に活用できる貴重な情報です。</p>
+        </div>
+    </div>
+</div>
+
+---
+
+## 関連記事・参考情報 {#related-links}
+
+<div class="related-links">
+    <h3>🔗 さらに詳しく学ぶ</h3>
+    
+    <div class="link-grid">
+        <div class="link-item">
+            <h4>📚 基礎知識</h4>
+            <ul>
+                <li><a href="/faq/">入札に関するよくある質問</a></li>
+                <li><a href="/cases/">成功事例と実績</a></li>
+                <li><a href="/about/">当事務所の入札支援サービス</a></li>
+            </ul>
+        </div>
+        
+        <div class="link-item">
+            <h4>📋 実務情報</h4>
+            <ul>
+                <li><a href="https://www.geps.go.jp/" target="_blank">政府電子調達システム（GEPS）</a></li>
+                <li><a href="https://www.nyusatsu.go.jp/" target="_blank">入札情報サービス</a></li>
+                <li><a href="/contact/">専門家への相談</a></li>
+            </ul>
+        </div>
+        
+        <div class="link-item">
+            <h4>⚖️ 法令・制度</h4>
+            <ul>
+                <li><a href="https://elaws.e-gov.go.jp/" target="_blank">e-Gov法令検索</a></li>
+                <li><a href="https://www.jftc.go.jp/" target="_blank">公正取引委員会</a></li>
+                <li><a href="https://www.mlit.go.jp/" target="_blank">国土交通省（建設工事関連）</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+---
+
+<div class="consultation-cta">
+    <div class="cta-content">
+        <h3>🤝 入札参加でお困りではありませんか？</h3>
+        <p>15年の経験と1,000件以上の支援実績を持つ専門家が、あなたの入札成功をサポートします。</p>
+        <div class="cta-buttons">
+            <a href="/contact/" class="btn btn-primary btn-large">
+                <i class="fas fa-phone"></i>
+                無料相談のお申し込み
+            </a>
+            <a href="/cases/" class="btn btn-outline btn-large">
+                <i class="fas fa-trophy"></i>
+                成功事例を見る
+            </a>
+        </div>
+        <p class="cta-note">
+            <small>※初回相談は無料です。お気軽にお問い合わせください。</small>
+        </p>
     </div>
 </div>
 
