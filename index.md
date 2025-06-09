@@ -153,7 +153,123 @@ description: 行政書士法人ふらっと法務事務所の入札サポート�
 </section>
 
 <!-- 実績・統計 -->
-{% include achievements-section.html %}
+<section class="achievements">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2 class="section-title">数字で見る当事務所の実績</h2>
+            <p class="section-subtitle text-muted">
+                15年の経験と豊富な実績で、お客様の成功をサポートします
+            </p>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <div class="stat-number">1,000+</div>
+                <div class="stat-label">サポート実績</div>
+                <div class="stat-description">これまでにサポートした入札案件数</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="stat-number">95%</div>
+                <div class="stat-label">成功率</div>
+                <div class="stat-description">サポートしたお客様の入札成功率</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-number">500+</div>
+                <div class="stat-label">お客様数</div>
+                <div class="stat-description">これまでにサポートしたお客様数</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <div class="stat-number">15年</div>
+                <div class="stat-label">経験年数</div>
+                <div class="stat-description">入札サポート分野での豊富な経験</div>
+            </div>
+        </div>
+        
+        <!-- 業種別実績 -->
+        <div class="industry-stats">
+            <h3 class="industry-stats-title">業種別サポート実績</h3>
+            <div class="industry-stats-grid">
+                <div class="industry-stat">
+                    <div class="industry-stat-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <div class="industry-stat-content">
+                        <h4 class="industry-stat-name">建設業</h4>
+                        <div class="industry-stat-number">420件</div>
+                        <div class="industry-stat-rate">成功率 96.4%</div>
+                    </div>
+                </div>
+                
+                <div class="industry-stat">
+                    <div class="industry-stat-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="industry-stat-content">
+                        <h4 class="industry-stat-name">IT・システム</h4>
+                        <div class="industry-stat-number">280件</div>
+                        <div class="industry-stat-rate">成功率 94.6%</div>
+                    </div>
+                </div>
+                
+                <div class="industry-stat">
+                    <div class="industry-stat-icon">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                    <div class="industry-stat-content">
+                        <h4 class="industry-stat-name">コンサルティング</h4>
+                        <div class="industry-stat-number">150件</div>
+                        <div class="industry-stat-rate">成功率 93.3%</div>
+                    </div>
+                </div>
+                
+                <div class="industry-stat">
+                    <div class="industry-stat-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="industry-stat-content">
+                        <h4 class="industry-stat-name">製造業</h4>
+                        <div class="industry-stat-number">100件</div>
+                        <div class="industry-stat-rate">成功率 97.0%</div>
+                    </div>
+                </div>
+                
+                <div class="industry-stat">
+                    <div class="industry-stat-icon">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                    <div class="industry-stat-content">
+                        <h4 class="industry-stat-name">その他</h4>
+                        <div class="industry-stat-number">50件</div>
+                        <div class="industry-stat-rate">成功率 92.0%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 成功事例へのリンク -->
+        <div class="achievements-cta">
+            <a href="{{ '/cases/' | relative_url }}" class="btn btn-primary btn-large">
+                <i class="fas fa-trophy"></i>
+                詳しい成功事例を見る
+            </a>
+        </div>
+    </div>
+</section>
 
 <!-- 対象業種 -->
 <section class="industries">
