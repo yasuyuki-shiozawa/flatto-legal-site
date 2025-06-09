@@ -4,7 +4,7 @@ title: ホーム
 description: ふらっと法務事務所の入札サポート専門サイトです。初めての入札でも安心、専門家がしっかりサポートします。
 ---
 
-<!-- ヒーローセクション -->
+<!<!-- ヒーローセクション -->
 <section class="hero">
     <div class="container">
         <div class="hero-content">
@@ -16,21 +16,19 @@ description: ふらっと法務事務所の入札サポート専門サイトで�
                 <p class="hero-subtitle">
                     初めての入札でも安心。専門家がしっかりサポートします。
                 </p>
-                <div class="hero-cta">
+                <div class="hero-buttons">
                     <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-large">
                         <i class="fas fa-phone"></i>
                         無料相談はこちら
                     </a>
-                    <a href="{{ '/service/' | relative_url }}" class="btn btn-outline">
+                    <a href="{{ '/service/' | relative_url }}" class="btn btn-outline btn-large">
                         <i class="fas fa-info-circle"></i>
                         サービス詳細
                     </a>
                 </div>
             </div>
             <div class="hero-image">
-                <div class="hero-illustration">
-                    <i class="fas fa-handshake hero-icon"></i>
-                </div>
+                <img src="{{ '/assets/images/hero-business-partnership.png' | relative_url }}" alt="ビジネスパートナーシップ" class="hero-img">
             </div>
         </div>
     </div>
@@ -97,6 +95,9 @@ description: ふらっと法務事務所の入札サポート専門サイトで�
         <div class="steps-container">
             <div class="step">
                 <div class="step-number">1</div>
+                <div class="step-icon">
+                    <img src="{{ '/assets/images/service-consulting.png' | relative_url }}" alt="コンサルティング" class="step-img">
+                </div>
                 <div class="step-content">
                     <h3 class="step-title">ヒアリング・課題整理</h3>
                     <p class="step-description">
@@ -106,6 +107,9 @@ description: ふらっと法務事務所の入札サポート専門サイトで�
             </div>
             <div class="step">
                 <div class="step-number">2</div>
+                <div class="step-icon">
+                    <img src="{{ '/assets/images/service-document.png' | relative_url }}" alt="書類作成" class="step-img">
+                </div>
                 <div class="step-content">
                     <h3 class="step-title">入札準備・書類作成</h3>
                     <p class="step-description">
@@ -115,6 +119,9 @@ description: ふらっと法務事務所の入札サポート専門サイトで�
             </div>
             <div class="step">
                 <div class="step-number">3</div>
+                <div class="step-icon">
+                    <img src="{{ '/assets/images/service-support.png' | relative_url }}" alt="サポート" class="step-img">
+                </div>
                 <div class="step-content">
                     <h3 class="step-title">入札実施・フォローアップ</h3>
                     <p class="step-description">

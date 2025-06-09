@@ -41,10 +41,7 @@ description: ふらっと法務事務所の会社概要、代表者紹介、事�
                 </div>
             </div>
             <div class="message-photo">
-                <div class="photo-placeholder">
-                    <i class="fas fa-user"></i>
-                    <p>代表者写真</p>
-                </div>
+                <img src="{{ '/assets/images/representative-portrait.jpg' | relative_url }}" alt="代表者 塩澤康之" class="representative-photo">
             </div>
         </div>
     </div>
