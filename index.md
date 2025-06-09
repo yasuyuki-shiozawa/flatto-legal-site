@@ -7,6 +7,14 @@ description: 行政書士法人ふらっと法務事務所の入札サポート�
 <!<!-- ヒーローセクション -->
 <section class="hero">
     <div class="container">
+        <!-- 塩澤さんのウェルカムメッセージ -->
+        <div class="expert-comment">
+            <img src="/assets/images/shiozawa_character.jpeg" alt="塩澤康幸" class="comment-avatar">
+            <div class="comment-bubble">
+                <strong>ふらっと法務事務所の塩澤です。</strong>入札でお困りの方を全力でサポートします！
+            </div>
+        </div>
+        
         <div class="hero-content">
             <div class="hero-text">
                 <h1 class="hero-title">
@@ -160,6 +168,14 @@ description: 行政書士法人ふらっと法務事務所の入札サポート�
             <p class="section-subtitle text-muted">
                 15年の経験と豊富な実績で、お客様の成功をサポートします
             </p>
+        </div>
+        
+        <!-- いまいさんの実績コメント -->
+        <div class="expert-comment">
+            <img src="/assets/images/imai_character.jpeg" alt="いまいさん" class="comment-avatar">
+            <div class="comment-bubble">
+                当事務所の実績をご紹介します。数字が示す通り、確実な成果を上げています！
+            </div>
         </div>
         
         <div class="stats-grid">

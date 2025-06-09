@@ -7,6 +7,14 @@ description: 行政書士法人ふらっと法務事務所へのお問い合わ�
 <!-- ページヘッダー -->
 <section class="page-header">
     <div class="container">
+        <!-- あきら君の案内コメント -->
+        <div class="expert-comment">
+            <img src="/assets/images/akira_character.jpeg" alt="あきら君" class="comment-avatar">
+            <div class="comment-bubble">
+                お問い合わせをお待ちしています！どんな小さなことでもお気軽にご相談ください。
+            </div>
+        </div>
+        
         <h1 class="page-title">お問い合わせ</h1>
         <p class="page-subtitle">入札に関するご相談、お気軽にお問い合わせください</p>
     </div>

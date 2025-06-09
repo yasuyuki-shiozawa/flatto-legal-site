@@ -15,6 +15,14 @@ description: 行政書士法人ふらっと法務事務所の会社概要、代�
 <!-- 代表者挨拶 -->
 <section class="president-message">
     <div class="container">
+        <!-- 塩澤さんの挨拶コメント -->
+        <div class="expert-comment">
+            <img src="/assets/images/shiozawa_character.jpeg" alt="塩澤康幸" class="comment-avatar">
+            <div class="comment-bubble">
+                <strong>代表の塩澤です。</strong>皆様の事業発展のお手伝いができることを心より楽しみにしております。
+            </div>
+        </div>
+        
         <div class="message-content">
             <div class="message-text">
                 <h2 class="message-title">代表者ご挨拶</h2>

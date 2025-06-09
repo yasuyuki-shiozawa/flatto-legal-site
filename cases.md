@@ -7,6 +7,14 @@ keywords: 入札支援,成功事例,お客様の声,落札実績,行政書士,�
 
 # 成功事例・お客様の声
 
+<!-- あきら君の案内コメント -->
+<div class="expert-comment">
+    <img src="/assets/images/akira_character.jpeg" alt="あきら君" class="comment-avatar">
+    <div class="comment-bubble">
+        当事務所の成功事例をご紹介します。きっと皆様の参考になると思います！
+    </div>
+</div>
+
 塩澤康幸行政書士事務所では、これまで**1,000件以上**の入札支援を行い、**95%以上**の高い成功率を実現してまいりました。ここでは、代表的な成功事例とお客様からいただいた喜びの声をご紹介いたします。
 
 ## 目次
@@ -90,6 +98,14 @@ keywords: 入札支援,成功事例,お客様の声,落札実績,行政書士,�
 **結果**
 - **等級アップに成功**（C→B→A等級）
 - 大型案件（**1億2,000万円**）の落札
+
+<!-- いまいさんの専門コメント -->
+<div class="expert-comment">
+    <img src="/assets/images/imai_character.jpeg" alt="いまいさん" class="comment-avatar">
+    <div class="comment-bubble">
+        経営事項審査の点数向上は時間がかかりますが、確実に成果につながります。
+    </div>
+</div>
 - 年間売上**30%増加**
 
 **お客様の声**

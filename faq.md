@@ -6,6 +6,14 @@ description: 入札に関するよくある質問と回答。行政書士法人�
 
 # よくある質問（FAQ）
 
+<!-- さおりさんの質問導入 -->
+<div class="client-comment">
+    <img src="/assets/images/saori_character.jpeg" alt="さおりさん" class="comment-avatar">
+    <div class="comment-bubble">
+        入札について分からないことがたくさんあります。よくある質問を教えてください！
+    </div>
+</div>
+
 <div class="hero-section">
     <div class="container">
         <div class="hero-content">
@@ -140,6 +148,14 @@ description: 入札に関するよくある質問と回答。行政書士法人�
 ### Q6. 建設業許可がないと建設工事の入札に参加できませんか？
 
 <div class="faq-answer">
+
+<!-- 塩澤さんの専門回答 -->
+<div class="expert-comment">
+    <img src="/assets/images/shiozawa_character.jpeg" alt="塩澤康幸" class="comment-avatar">
+    <div class="comment-bubble">
+        <strong>建設業許可について詳しく説明しますね。</strong>500万円以上の工事には許可が必要です。
+    </div>
+</div>
 <p><strong>A.</strong> はい、建設工事の入札には建設業許可と経営事項審査（経審）の受審が必須です。</p>
 
 <div class="construction-requirements">
