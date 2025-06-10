@@ -169,11 +169,13 @@ class SiteSearch {
         this.searchResults = null;
         this.searchOverlay = null;
         
+        console.log('SiteSearch constructor called');
         this.init();
     }
     
     // 初期化
     async init() {
+        console.log('SiteSearch init started');
         try {
             // 検索インデックスを読み込み
             await this.loadSearchIndex();
@@ -183,13 +185,22 @@ class SiteSearch {
             this.searchResults = document.getElementById('search-results');
             this.searchOverlay = document.getElementById('search-overlay');
             
+            console.log('DOM elements:', {
+                searchInput: !!this.searchInput,
+                searchResults: !!this.searchResults,
+                searchOverlay: !!this.searchOverlay
+            });
+            
             // サイドバーの検索ボックスも取得
             this.sidebarSearchInput = document.querySelector('.right-sidebar input[placeholder*="キーワード"]');
+            console.log('Sidebar search input found:', !!this.sidebarSearchInput);
             
             if (this.searchInput) {
                 this.setupEventListeners();
                 this.isInitialized = true;
                 console.log('サイト内検索が初期化されました');
+            } else {
+                console.error('検索入力要素が見つかりません');
             }
         } catch (error) {
             console.error('検索システムの初期化に失敗しました:', error);
@@ -198,12 +209,21 @@ class SiteSearch {
     
     // 検索インデックスを読み込み
     async loadSearchIndex() {
+        console.log('Loading search index...');
         try {
             const response = await fetch('/search-index.json');
+            console.log('Search index response status:', response.status);
+            
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            
             const data = await response.json();
             this.documents = data.documents;
+            console.log('Documents loaded:', this.documents.length);
             
             // Lunr.jsで検索インデックスを構築
+            console.log('Building search index with Lunr.js...');
             this.searchIndex = lunr(function () {
                 this.ref('id');
                 this.field('title', { boost: 10 });
@@ -282,14 +302,25 @@ class SiteSearch {
     
     // 検索実行
     handleSearch(query) {
-        if (!this.isInitialized || !query) {
+        console.log('handleSearch called with query:', query);
+        
+        if (!this.isInitialized) {
+            console.log('Search not initialized yet');
+            this.clearResults();
+            return;
+        }
+        
+        if (!query) {
+            console.log('Empty query, clearing results');
             this.clearResults();
             return;
         }
         
         try {
+            console.log('Executing search for:', query);
             // 検索実行
             const results = this.searchIndex.search(query);
+            console.log('Search results:', results.length, 'items found');
             
             // 結果を表示
             this.displayResults(results, query);
@@ -434,7 +465,11 @@ class SiteSearch {
 
 // Lunr.jsライブラリの読み込み確認と初期化
 function initializeSearch() {
+    console.log('initializeSearch called');
+    console.log('Lunr.js available:', typeof lunr !== 'undefined');
+    
     if (typeof lunr !== 'undefined') {
+        console.log('Creating SiteSearch instance...');
         window.siteSearch = new SiteSearch();
     } else {
         console.error('Lunr.jsライブラリが読み込まれていません');
@@ -443,8 +478,10 @@ function initializeSearch() {
 
 // DOMContentLoaded後に初期化
 if (document.readyState === 'loading') {
+    console.log('Document still loading, adding event listener');
     document.addEventListener('DOMContentLoaded', initializeSearch);
 } else {
+    console.log('Document already loaded, initializing immediately');
     initializeSearch();
 }
 
