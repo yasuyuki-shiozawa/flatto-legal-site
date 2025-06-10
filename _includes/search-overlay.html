@@ -1,0 +1,18 @@
+<!-- 検索オーバーレイ -->
+<div id="search-overlay" class="search-overlay">
+    <div class="search-modal">
+        <div class="search-modal-header">
+            <div class="search-modal-input-container">
+                <i class="fas fa-search search-modal-icon"></i>
+                <input type="text" id="search-modal-input" placeholder="サイト内を検索..." class="search-modal-input" autocomplete="off">
+                <button type="button" class="search-modal-close" onclick="siteSearch.hideSearchOverlay()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        <div class="search-modal-body">
+            <div id="search-results" class="search-results"></div>
+        </div>
+    </div>
+</div>
+

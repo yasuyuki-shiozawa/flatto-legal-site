@@ -57,11 +57,17 @@
     </main>
     
     {% include footer.html %}
+      <!-- Lunr.js検索ライブラリ -->
+    <script src="https://unpkg.com/lunr/lunr.min.js"></script>
     
-    <!-- JavaScript -->
+    <!-- メインJavaScript -->
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
     
-    <!-- Google Tag Manager (noscript) -->
+    <!-- 検索オーバーレイ -->
+    {% include search-overlay.html %}
+    
+</body>
+</html> Tag Manager (noscript) -->
     {% if site.google_tag_manager %}
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
