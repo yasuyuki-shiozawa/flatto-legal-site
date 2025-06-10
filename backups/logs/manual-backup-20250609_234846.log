@@ -1,0 +1,24 @@
+手動バックアップログ
+==================
+
+実行日時: Mon Jun  9 23:48:48 EDT 2025
+バックアップタイプ: quick
+実行ユーザー: ubuntu
+実行ディレクトリ: /home/ubuntu/flatto-legal-site
+
+システム情報:
+- OS: Linux
+- カーネル: 6.1.102
+- アーキテクチャ: x86_64
+
+プロジェクト情報:
+- ファイル数: 97
+- 総サイズ: 171M
+
+Git情報:
+- ブランチ: main
+- 最新コミット: 8109180 セキュリティ強化完了 - セキュリティヘッダー、robots.txt、sitemap.xml追加
+
+バックアップファイル:
+-rw-rw-r-- 1 ubuntu ubuntu 53177300 Jun  9 23:48 /home/ubuntu/flatto-legal-site/backups/manual/quick-backup-20250609_234846.tar.gz
+

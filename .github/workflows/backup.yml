@@ -1,0 +1,173 @@
+name: 自動バックアップシステム
+# 入札マップサイトの定期的なバックアップを実行
+
+on:
+  # 毎日午前2時（JST = UTC+9, つまりUTC 17時）に実行
+  schedule:
+    - cron: '0 17 * * *'  # 日次バックアップ
+    - cron: '0 17 * * 0'  # 週次フルバックアップ（日曜日）
+  
+  # 手動実行も可能
+  workflow_dispatch:
+    inputs:
+      backup_type:
+        description: 'バックアップタイプ'
+        required: true
+        default: 'daily'
+        type: choice
+        options:
+        - daily
+        - weekly
+        - full
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: リポジトリをチェックアウト
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # 全履歴を取得
+    
+    - name: 日付とタイムスタンプを設定
+      id: date
+      run: |
+        echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+        echo "timestamp=$(date +'%Y%m%d_%H%M%S')" >> $GITHUB_OUTPUT
+        echo "week=$(date +'%Y-W%U')" >> $GITHUB_OUTPUT
+        echo "month=$(date +'%Y-%m')" >> $GITHUB_OUTPUT
+    
+    - name: バックアップディレクトリを作成
+      run: |
+        mkdir -p backups/daily
+        mkdir -p backups/weekly
+        mkdir -p backups/monthly
+        mkdir -p backups/logs
+    
+    - name: サイトコンテンツをバックアップ
+      run: |
+        # 全ファイルをアーカイブ
+        tar -czf "backups/daily/site-backup-${{ steps.date.outputs.timestamp }}.tar.gz" \
+          --exclude='.git' \
+          --exclude='node_modules' \
+          --exclude='backups' \
+          --exclude='*.log' \
+          .
+        
+        # ファイルリストを作成
+        find . -type f \
+          -not -path './.git/*' \
+          -not -path './node_modules/*' \
+          -not -path './backups/*' \
+          > "backups/daily/filelist-${{ steps.date.outputs.timestamp }}.txt"
+    
+    - name: 設定ファイルを個別バックアップ
+      run: |
+        # 重要な設定ファイルを個別保存
+        mkdir -p "backups/daily/configs-${{ steps.date.outputs.timestamp }}"
+        
+        # 設定ファイルをコピー
+        cp _headers "backups/daily/configs-${{ steps.date.outputs.timestamp }}/" 2>/dev/null || true
+        cp robots.txt "backups/daily/configs-${{ steps.date.outputs.timestamp }}/" 2>/dev/null || true
+        cp sitemap.xml "backups/daily/configs-${{ steps.date.outputs.timestamp }}/" 2>/dev/null || true
+        cp _config.yml "backups/daily/configs-${{ steps.date.outputs.timestamp }}/" 2>/dev/null || true
+        cp netlify.toml "backups/daily/configs-${{ steps.date.outputs.timestamp }}/" 2>/dev/null || true
+        
+        # データファイルをコピー
+        cp -r _data "backups/daily/configs-${{ steps.date.outputs.timestamp }}/" 2>/dev/null || true
+        cp -r _includes "backups/daily/configs-${{ steps.date.outputs.timestamp }}/" 2>/dev/null || true
+        cp -r _layouts "backups/daily/configs-${{ steps.date.outputs.timestamp }}/" 2>/dev/null || true
+    
+    - name: 週次バックアップ（日曜日のみ）
+      if: github.event.schedule == '0 17 * * 0' || github.event.inputs.backup_type == 'weekly' || github.event.inputs.backup_type == 'full'
+      run: |
+        # 週次バックアップを作成
+        cp "backups/daily/site-backup-${{ steps.date.outputs.timestamp }}.tar.gz" \
+           "backups/weekly/site-backup-${{ steps.date.outputs.week }}.tar.gz"
+        
+        # Git履歴も含めた完全バックアップ
+        tar -czf "backups/weekly/full-backup-${{ steps.date.outputs.week }}.tar.gz" \
+          --exclude='node_modules' \
+          --exclude='backups/daily' \
+          --exclude='backups/monthly' \
+          .
+    
+    - name: 月次アーカイブ（月初のみ）
+      if: github.event.schedule == '0 17 1 * *' || github.event.inputs.backup_type == 'full'
+      run: |
+        # 月次アーカイブを作成
+        cp "backups/weekly/full-backup-${{ steps.date.outputs.week }}.tar.gz" \
+           "backups/monthly/archive-${{ steps.date.outputs.month }}.tar.gz"
+    
+    - name: バックアップログを作成
+      run: |
+        # バックアップ情報をログに記録
+        cat > "backups/logs/backup-${{ steps.date.outputs.timestamp }}.log" << EOF
+        バックアップ実行日時: $(date)
+        バックアップタイプ: ${{ github.event.inputs.backup_type || 'scheduled' }}
+        リポジトリ: ${{ github.repository }}
+        コミットハッシュ: ${{ github.sha }}
+        ブランチ: ${{ github.ref_name }}
+        
+        ファイル数: $(find . -type f -not -path './.git/*' -not -path './node_modules/*' -not -path './backups/*' | wc -l)
+        総サイズ: $(du -sh . | cut -f1)
+        
+        バックアップファイル:
+        $(ls -la backups/daily/site-backup-${{ steps.date.outputs.timestamp }}.tar.gz 2>/dev/null || echo "日次バックアップなし")
+        $(ls -la backups/weekly/full-backup-${{ steps.date.outputs.week }}.tar.gz 2>/dev/null || echo "週次バックアップなし")
+        $(ls -la backups/monthly/archive-${{ steps.date.outputs.month }}.tar.gz 2>/dev/null || echo "月次バックアップなし")
+        EOF
+    
+    - name: 古いバックアップを削除
+      run: |
+        # 30日以上古い日次バックアップを削除
+        find backups/daily -name "*.tar.gz" -mtime +30 -delete 2>/dev/null || true
+        find backups/daily -name "*.txt" -mtime +30 -delete 2>/dev/null || true
+        find backups/daily -type d -name "configs-*" -mtime +30 -exec rm -rf {} + 2>/dev/null || true
+        
+        # 12週以上古い週次バックアップを削除
+        find backups/weekly -name "*.tar.gz" -mtime +84 -delete 2>/dev/null || true
+        
+        # 24ヶ月以上古いログを削除
+        find backups/logs -name "*.log" -mtime +730 -delete 2>/dev/null || true
+    
+    - name: バックアップをGitHubにコミット
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        
+        # バックアップファイルをGitに追加
+        git add backups/
+        
+        # 変更がある場合のみコミット
+        if ! git diff --staged --quiet; then
+          git commit -m "自動バックアップ: ${{ steps.date.outputs.timestamp }}"
+          git push
+        else
+          echo "バックアップに変更なし"
+        fi
+    
+    - name: バックアップ結果を通知
+      if: always()
+      run: |
+        if [ "${{ job.status }}" == "success" ]; then
+          echo "✅ バックアップが正常に完了しました"
+          echo "日時: $(date)"
+          echo "ファイル: backups/daily/site-backup-${{ steps.date.outputs.timestamp }}.tar.gz"
+        else
+          echo "❌ バックアップが失敗しました"
+          echo "ログを確認してください"
+        fi
+    
+    - name: バックアップファイルをアーティファクトとして保存
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: backup-${{ steps.date.outputs.timestamp }}
+        path: |
+          backups/daily/site-backup-${{ steps.date.outputs.timestamp }}.tar.gz
+          backups/daily/filelist-${{ steps.date.outputs.timestamp }}.txt
+          backups/logs/backup-${{ steps.date.outputs.timestamp }}.log
+        retention-days: 90
+
