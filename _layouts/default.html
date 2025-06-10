@@ -36,8 +36,17 @@
 <body>
     {% include header.html %}
     
-    <main>
-        {{ content }}
+    <main class="main-container">
+        <div class="content-wrapper">
+            <div class="main-content">
+                {{ content }}
+            </div>
+            {% unless page.hide_sidebar %}
+            <aside class="sidebar">
+                {% include sidebar.html %}
+            </aside>
+            {% endunless %}
+        </div>
     </main>
     
     {% include footer.html %}

@@ -1,0 +1,122 @@
+<!-- バナー形式メニューサイドバー -->
+<div class="sidebar-content">
+    
+    <!-- サイト内検索 -->
+    <div class="sidebar-section search-section">
+        <h3 class="sidebar-title">
+            <i class="fas fa-search"></i>
+            サイト内検索
+        </h3>
+        <div class="search-box">
+            <input type="text" id="sidebar-search" placeholder="キーワードを入力..." class="search-input">
+            <button type="button" class="search-button">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- メインナビゲーション（バナー形式） -->
+    <div class="sidebar-section banner-menu">
+        <h3 class="sidebar-title">
+            <i class="fas fa-compass"></i>
+            学習メニュー
+        </h3>
+        <div class="banner-menu-list">
+            
+            <!-- 入札の基本 -->
+            <a href="{{ '/knowhow/' | relative_url }}" class="banner-item banner-basic {% if page.url contains '/knowhow/' %}active{% endif %}">
+                <div class="banner-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="banner-content">
+                    <h4 class="banner-title">入札の基本</h4>
+                    <p class="banner-description">制度の仕組みと基礎知識</p>
+                </div>
+                <div class="banner-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </a>
+
+            <!-- 制度ガイド -->
+            <a href="{{ '/service/' | relative_url }}" class="banner-item banner-guide {% if page.url contains '/service/' %}active{% endif %}">
+                <div class="banner-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <div class="banner-content">
+                    <h4 class="banner-title">制度ガイド</h4>
+                    <p class="banner-description">詳細な制度解説と手続き</p>
+                </div>
+                <div class="banner-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </a>
+
+            <!-- 事例研究 -->
+            <a href="{{ '/cases/' | relative_url }}" class="banner-item banner-cases {% if page.url contains '/cases/' %}active{% endif %}">
+                <div class="banner-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="banner-content">
+                    <h4 class="banner-title">事例研究</h4>
+                    <p class="banner-description">成功事例と失敗パターン</p>
+                </div>
+                <div class="banner-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </a>
+
+            <!-- 用語集 -->
+            <a href="{{ '/about/' | relative_url }}" class="banner-item banner-dictionary {% if page.url contains '/about/' %}active{% endif %}">
+                <div class="banner-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="banner-content">
+                    <h4 class="banner-title">用語集</h4>
+                    <p class="banner-description">専門用語の詳細解説</p>
+                </div>
+                <div class="banner-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </a>
+
+            <!-- 最新動向 -->
+            <a href="{{ '/latest-trends/' | relative_url }}" class="banner-item banner-trends {% if page.url contains '/latest-trends/' %}active{% endif %}">
+                <div class="banner-icon">
+                    <i class="fas fa-newspaper"></i>
+                </div>
+                <div class="banner-content">
+                    <h4 class="banner-title">最新動向</h4>
+                    <p class="banner-description">制度変更と最新情報</p>
+                </div>
+                <div class="banner-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- お役立ちリンク -->
+    <div class="sidebar-section useful-links">
+        <h3 class="sidebar-title">
+            <i class="fas fa-external-link-alt"></i>
+            お役立ちリンク
+        </h3>
+        <div class="links-list">
+            <a href="https://www.digital.go.jp/procurement" target="_blank" rel="noopener" class="link-item">
+                <i class="fas fa-globe"></i>
+                デジタル庁調達情報
+            </a>
+            <a href="https://www.geps.go.jp/" target="_blank" rel="noopener" class="link-item">
+                <i class="fas fa-globe"></i>
+                政府電子調達システム
+            </a>
+            <a href="https://www.chusho.meti.go.jp/" target="_blank" rel="noopener" class="link-item">
+                <i class="fas fa-globe"></i>
+                中小企業庁
+            </a>
+        </div>
+    </div>
+
+</div>
+
