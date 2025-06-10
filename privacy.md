@@ -3,7 +3,6 @@ layout: default
 title: プライバシーポリシー | 入札マップ
 description: 入札マップのプライバシーポリシー。個人情報の取り扱い、Cookie使用、データ保護に関する方針を詳しく説明しています。
 keywords: プライバシーポリシー,個人情報保護,GDPR,Cookie,データ保護
-permalink: /privacy/
 ---
 
 <div class="privacy-page">
