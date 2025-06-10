@@ -28,12 +28,24 @@ twitter:
 markdown: kramdown
 highlighter: rouge
 permalink: pretty
+encoding: utf-8
+strict_front_matter: false
+liquid:
+  error_mode: warn
+  strict_filters: false
+  strict_variables: false
 
 # プラグイン
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+
+# コレクション設定
+collections:
+  pages:
+    output: true
+    permalink: /:name/
 
 # 除外ファイル
 exclude:
@@ -50,11 +62,14 @@ exclude:
   - README.md
   - LICENSE
   - CHANGELOG.md
+  - "*.tmp"
+  - "*.bak"
 
 # 含めるファイル
 include:
   - _pages
   - search-index.json
+  - .htaccess
 
 # デフォルト設定
 defaults:
@@ -65,9 +80,22 @@ defaults:
       layout: "default"
   - scope:
       path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
     values:
       layout: "default"
 
+# Sass設定
+sass:
+  style: compressed
+  sass_dir: _sass
+
+# 開発設定
+livereload: true
+incremental: true
 
 # アナリティクス設定
 # Google Analytics 4 (GA4) - 測定IDを設定してください

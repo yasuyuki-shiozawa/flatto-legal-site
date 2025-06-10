@@ -1,5 +1,14 @@
 # Netlify設定ファイル - パフォーマンス最適化
 
+# ビルド設定
+[build]
+  publish = "_site"
+  command = "bundle exec jekyll build --verbose"
+
+[build.environment]
+  JEKYLL_ENV = "production"
+  RUBY_VERSION = "3.1.0"
+
 # ヘッダー設定
 [[headers]]
   for = "/*"
@@ -11,7 +20,7 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     
     # パフォーマンス最適化
-    Cache-Control = "public, max-age=31536000"
+    Cache-Control = "public, max-age=3600"
 
 # 静的アセットのキャッシュ設定
 [[headers]]
@@ -35,6 +44,11 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+[[headers]]
+  for = "*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
 # HTMLファイルのキャッシュ設定
 [[headers]]
   for = "*.html"
@@ -46,18 +60,33 @@
   for = "*.js"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-    Content-Encoding = "gzip"
 
 [[headers]]
   for = "*.css"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-    Content-Encoding = "gzip"
+
+# JSON ファイル設定
+[[headers]]
+  for = "*.json"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+    Content-Type = "application/json; charset=utf-8"
 
 # リダイレクト設定
 [[redirects]]
   from = "/index.html"
   to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/privacy.html"
+  to = "/privacy-policy/"
+  status = 301
+
+[[redirects]]
+  from = "/privacy/"
+  to = "/privacy-policy/"
   status = 301
 
 # 404ページ設定
