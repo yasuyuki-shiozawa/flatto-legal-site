@@ -4,9 +4,11 @@ sitemap: false
 ---
 {
   "documents": [
+    {% assign page_count = 0 %}
     {% for page in site.pages %}
-      {% unless page.url contains '/admin/' or page.url contains '/assets/' or page.url contains '/css/' or page.url contains '/js/' or page.url contains '/search-index.json' %}
-        {% if page.title and page.content %}
+      {% if page.title and page.content and page.url != '/search-index.json' and page.url != '/404.html' %}
+        {% unless page.url contains '/admin/' or page.url contains '/assets/' %}
+          {% if page_count > 0 %},{% endif %}
           {
             "id": "{{ page.url | slugify }}",
             "title": "{{ page.title | escape }}",
@@ -15,13 +17,15 @@ sitemap: false
             "excerpt": "{{ page.content | strip_html | truncatewords: 30 | escape }}",
             "category": "{% if page.url contains '/knowhow' %}入札の基本{% elsif page.url contains '/cases' %}事例研究{% elsif page.url contains '/service' %}制度ガイド{% elsif page.url contains '/about' %}用語集{% elsif page.url contains '/latest-trends' %}最新動向{% else %}その他{% endif %}",
             "tags": "{{ page.tags | join: ', ' | escape }}"
-          }{% unless forloop.last %},{% endunless %}
-        {% endif %}
-      {% endunless %}
+          }
+          {% assign page_count = page_count | plus: 1 %}
+        {% endunless %}
+      {% endif %}
     {% endfor %}
     {% for post in site.posts %}
       {% if post.title and post.content %}
-        ,{
+        {% if page_count > 0 %},{% endif %}
+        {
           "id": "{{ post.url | slugify }}",
           "title": "{{ post.title | escape }}",
           "url": "{{ post.url }}",
@@ -30,7 +34,8 @@ sitemap: false
           "category": "{{ post.category | default: 'ブログ' }}",
           "tags": "{{ post.tags | join: ', ' | escape }}",
           "date": "{{ post.date | date: '%Y-%m-%d' }}"
-        }{% unless forloop.last %},{% endunless %}
+        }
+        {% assign page_count = page_count | plus: 1 %}
       {% endif %}
     {% endfor %}
   ]
