@@ -4,40 +4,60 @@ sitemap: false
 ---
 {
   "documents": [
-    {% assign page_count = 0 %}
-    {% for page in site.pages %}
-      {% if page.title and page.content and page.url != '/search-index.json' and page.url != '/404.html' %}
-        {% unless page.url contains '/admin/' or page.url contains '/assets/' %}
-          {% if page_count > 0 %},{% endif %}
-          {
-            "id": "{{ page.url | slugify }}",
-            "title": "{{ page.title | escape }}",
-            "url": "{{ page.url }}",
-            "content": "{{ page.content | strip_html | strip_newlines | escape }}",
-            "excerpt": "{{ page.content | strip_html | truncatewords: 30 | escape }}",
-            "category": "{% if page.url contains '/knowhow' %}入札の基本{% elsif page.url contains '/cases' %}事例研究{% elsif page.url contains '/service' %}制度ガイド{% elsif page.url contains '/about' %}用語集{% elsif page.url contains '/latest-trends' %}最新動向{% else %}その他{% endif %}",
-            "tags": "{{ page.tags | join: ', ' | escape }}"
-          }
-          {% assign page_count = page_count | plus: 1 %}
-        {% endunless %}
-      {% endif %}
-    {% endfor %}
-    {% for post in site.posts %}
-      {% if post.title and post.content %}
-        {% if page_count > 0 %},{% endif %}
-        {
-          "id": "{{ post.url | slugify }}",
-          "title": "{{ post.title | escape }}",
-          "url": "{{ post.url }}",
-          "content": "{{ post.content | strip_html | strip_newlines | escape }}",
-          "excerpt": "{{ post.content | strip_html | truncatewords: 30 | escape }}",
-          "category": "{{ post.category | default: 'ブログ' }}",
-          "tags": "{{ post.tags | join: ', ' | escape }}",
-          "date": "{{ post.date | date: '%Y-%m-%d' }}"
-        }
-        {% assign page_count = page_count | plus: 1 %}
-      {% endif %}
-    {% endfor %}
+    {
+      "id": "knowhow",
+      "title": "入札の基本から実践まで - 完全ガイド",
+      "url": "/knowhow/",
+      "content": "入札・公共調達の基本制度から実践的な手続きまで、体系的に学べる完全ガイド。法的根拠に基づく正確な情報を提供します。",
+      "excerpt": "入札・公共調達の基本制度から実践的な手続きまで、体系的に学べる完全ガイド。",
+      "category": "入札の基本",
+      "tags": "入札, 公共調達, 基本, 制度"
+    },
+    {
+      "id": "cases",
+      "title": "入札事例研究 - 成功パターンと失敗事例の分析",
+      "url": "/cases/",
+      "content": "実際の入札事例を基にした学習材料。成功パターンや注意点を具体的な事例で学べます。",
+      "excerpt": "実際の入札事例を基にした学習材料。成功パターンや注意点を具体的な事例で学べます。",
+      "category": "事例研究",
+      "tags": "事例, 成功, 失敗, 分析"
+    },
+    {
+      "id": "service",
+      "title": "公共調達制度の詳細ガイド",
+      "url": "/service/",
+      "content": "公共調達制度の詳細な解説と手続きについて。法的根拠に基づく正確な情報を提供します。",
+      "excerpt": "公共調達制度の詳細な解説と手続きについて。法的根拠に基づく正確な情報を提供します。",
+      "category": "制度ガイド",
+      "tags": "制度, 手続き, 法的根拠"
+    },
+    {
+      "id": "about",
+      "title": "公共調達用語集",
+      "url": "/about/",
+      "content": "公共調達・入札に関する専門用語の詳細解説。初心者から上級者まで対応した用語集です。",
+      "excerpt": "公共調達・入札に関する専門用語の詳細解説。初心者から上級者まで対応した用語集です。",
+      "category": "用語集",
+      "tags": "用語, 専門用語, 解説"
+    },
+    {
+      "id": "latest-trends",
+      "title": "公共調達の最新動向",
+      "url": "/latest-trends/",
+      "content": "公共調達のデジタル化、新制度、ESG配慮など最新動向を詳細解説。制度変更と最新情報をお届けします。",
+      "excerpt": "公共調達のデジタル化、新制度、ESG配慮など最新動向を詳細解説。",
+      "category": "最新動向",
+      "tags": "最新動向, デジタル化, 新制度, ESG"
+    },
+    {
+      "id": "index",
+      "title": "入札マップ｜公共調達の知識をナビゲートするポータルサイト",
+      "url": "/",
+      "content": "公共調達・入札の知識を体系的に学べるポータルサイト。正確で詳細な情報、分かりやすい解説、豊富な事例とデータを提供します。",
+      "excerpt": "公共調達・入札の知識を体系的に学べるポータルサイト。正確で詳細な情報、分かりやすい解説を提供します。",
+      "category": "その他",
+      "tags": "入札マップ, ポータルサイト, 公共調達"
+    }
   ]
 }
 
