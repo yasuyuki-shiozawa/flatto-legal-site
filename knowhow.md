@@ -62,43 +62,6 @@ description: 入札・公共調達の基本制度から実践的な手続きま�
     </div>
 </div>
 
-<!-- 目次 -->
-<div class="table-of-contents">
-    <div class="container">
-        <div class="portal-toc">
-            <h2>📋 目次</h2>
-            <div class="toc-grid">
-                <div class="toc-section">
-                    <h3>🔵 入札の基本</h3>
-                    <ul>
-                        <li><a href="#what-is-bid">入札案件とは？</a></li>
-                        <li><a href="#bid-benefits">入札参加のメリット</a></li>
-                        <li><a href="#bid-types">入札の種類</a></li>
-                    </ul>
-                </div>
-                <div class="toc-section">
-                    <h3>🟡 5ステップガイド</h3>
-                    <ul>
-                        <li><a href="#step1">STEP1: 入札参加資格の取得</a></li>
-                        <li><a href="#step2">STEP2: 入札案件の探索</a></li>
-                        <li><a href="#step3">STEP3: 仕様書取得・説明会参加</a></li>
-                        <li><a href="#step4">STEP4: 入札書の作成・提出</a></li>
-                        <li><a href="#step5">STEP5: 開札・落札・契約</a></li>
-                    </ul>
-                </div>
-                <div class="toc-section">
-                    <h3>🟢 成功のコツ</h3>
-                    <ul>
-                        <li><a href="#success-tips">落札のポイント</a></li>
-                        <li><a href="#common-mistakes">よくある失敗</a></li>
-                        <li><a href="#expert-advice">専門家のアドバイス</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 ## 入札とは何か {#what-is-bid}
 
 入札とは、国や地方公共団体、独立行政法人などの公的機関が、工事や物品購入、サービス提供などの契約相手を決定する際に用いる競争的な手続きです。

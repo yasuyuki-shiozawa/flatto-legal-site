@@ -37,12 +37,19 @@
     {% include header.html %}
     
     <main class="main-container">
-        <div class="content-wrapper">
+        <div class="content-wrapper three-column">
+            {% unless page.hide_left_sidebar %}
+            <aside class="left-sidebar">
+                {% include left-sidebar.html %}
+            </aside>
+            {% endunless %}
+            
             <div class="main-content">
                 {{ content }}
             </div>
-            {% unless page.hide_sidebar %}
-            <aside class="sidebar">
+            
+            {% unless page.hide_right_sidebar %}
+            <aside class="right-sidebar">
                 {% include sidebar.html %}
             </aside>
             {% endunless %}

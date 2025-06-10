@@ -1,0 +1,81 @@
+<!-- 左サイドバーコンポーネント -->
+<div class="left-sidebar-content">
+    
+    <!-- ページ内目次（TOC） -->
+    <div class="left-sidebar-section toc-section">
+        <h3 class="left-sidebar-title">
+            <i class="fas fa-list"></i>
+            この記事の目次
+        </h3>
+        <div id="toc-container" class="toc-container">
+            <!-- JavaScriptで動的に生成 -->
+        </div>
+    </div>
+
+    <!-- クイックナビゲーション -->
+    <div class="left-sidebar-section quick-nav">
+        <h3 class="left-sidebar-title">
+            <i class="fas fa-compass"></i>
+            クイックナビ
+        </h3>
+        <div class="quick-nav-list">
+            <a href="{{ '/' | relative_url }}" class="quick-nav-item {% if page.url == '/' %}active{% endif %}">
+                <i class="fas fa-home"></i>
+                <span>トップページ</span>
+            </a>
+            <a href="{{ '/knowhow/' | relative_url }}" class="quick-nav-item {% if page.url contains '/knowhow/' %}active{% endif %}">
+                <i class="fas fa-graduation-cap"></i>
+                <span>入札の基本</span>
+            </a>
+            <a href="{{ '/service/' | relative_url }}" class="quick-nav-item {% if page.url contains '/service/' %}active{% endif %}">
+                <i class="fas fa-book-open"></i>
+                <span>制度ガイド</span>
+            </a>
+            <a href="{{ '/cases/' | relative_url }}" class="quick-nav-item {% if page.url contains '/cases/' %}active{% endif %}">
+                <i class="fas fa-chart-line"></i>
+                <span>事例研究</span>
+            </a>
+            <a href="{{ '/about/' | relative_url }}" class="quick-nav-item {% if page.url contains '/about/' %}active{% endif %}">
+                <i class="fas fa-book"></i>
+                <span>用語集</span>
+            </a>
+            <a href="{{ '/latest-trends/' | relative_url }}" class="quick-nav-item {% if page.url contains '/latest-trends/' %}active{% endif %}">
+                <i class="fas fa-newspaper"></i>
+                <span>最新動向</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 学習進捗 -->
+    <div class="left-sidebar-section progress-section">
+        <h3 class="left-sidebar-title">
+            <i class="fas fa-chart-bar"></i>
+            学習の進め方
+        </h3>
+        <div class="progress-steps">
+            <div class="progress-step {% if page.url contains '/knowhow/' %}current{% endif %}">
+                <div class="step-indicator">1</div>
+                <div class="step-content">
+                    <div class="step-title">基本を学ぶ</div>
+                    <div class="step-desc">制度の仕組み</div>
+                </div>
+            </div>
+            <div class="progress-step {% if page.url contains '/service/' %}current{% endif %}">
+                <div class="step-indicator">2</div>
+                <div class="step-content">
+                    <div class="step-title">制度を理解</div>
+                    <div class="step-desc">詳細な手続き</div>
+                </div>
+            </div>
+            <div class="progress-step {% if page.url contains '/cases/' %}current{% endif %}">
+                <div class="step-indicator">3</div>
+                <div class="step-content">
+                    <div class="step-title">事例で学習</div>
+                    <div class="step-desc">実践的知識</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
