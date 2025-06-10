@@ -179,9 +179,12 @@ class SiteSearch {
             await this.loadSearchIndex();
             
             // DOM要素を取得
-            this.searchInput = document.getElementById('search-input');
+            this.searchInput = document.getElementById('search-modal-input');
             this.searchResults = document.getElementById('search-results');
             this.searchOverlay = document.getElementById('search-overlay');
+            
+            // サイドバーの検索ボックスも取得
+            this.sidebarSearchInput = document.querySelector('.right-sidebar input[placeholder*="キーワード"]');
             
             if (this.searchInput) {
                 this.setupEventListeners();
@@ -227,11 +230,33 @@ class SiteSearch {
     
     // イベントリスナーを設定
     setupEventListeners() {
-        // 検索入力イベント
+        // 検索入力イベント（モーダル内）
         this.searchInput.addEventListener('input', (e) => {
             const query = e.target.value.trim();
             this.handleSearch(query);
         });
+        
+        // サイドバーの検索ボックスクリックでモーダルを開く
+        if (this.sidebarSearchInput) {
+            this.sidebarSearchInput.addEventListener('click', () => {
+                this.showSearchOverlay();
+                // フォーカスをモーダル内の検索ボックスに移動
+                setTimeout(() => {
+                    if (this.searchInput) {
+                        this.searchInput.focus();
+                    }
+                }, 100);
+            });
+            
+            this.sidebarSearchInput.addEventListener('focus', () => {
+                this.showSearchOverlay();
+                setTimeout(() => {
+                    if (this.searchInput) {
+                        this.searchInput.focus();
+                    }
+                }, 100);
+            });
+        }
         
         // フォーカス・ブラーイベント
         this.searchInput.addEventListener('focus', () => {
