@@ -6,8 +6,64 @@
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     
+    <!-- SEO Keywords -->
+    <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}入札,公共調達,行政書士,入札制度,政府調達,地方自治体,競争入札,随意契約,プロポーザル,入札参加資格{% endif %}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:image" content="{{ '/assets/images/og-image.png' | absolute_url }}">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:locale" content="ja_JP">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ page.url | absolute_url }}">
+    <meta property="twitter:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
+    <meta property="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="twitter:image" content="{{ '/assets/images/og-image.png' | absolute_url }}">
+    
+    <!-- Additional SEO -->
+    <meta name="author" content="行政書士法人ふらっと法務事務所">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    
     <!-- SEO -->
     {% seo %}
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "行政書士法人ふらっと法務事務所",
+      "url": "{{ site.url }}",
+      "logo": "{{ '/assets/images/logo.png' | absolute_url }}",
+      "description": "{{ site.description }}",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "JP"
+      },
+      "sameAs": []
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "{{ site.title }}",
+      "url": "{{ site.url }}",
+      "description": "{{ site.description }}",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "{{ site.url }}/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
     
     <!-- CSS -->
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
@@ -57,7 +113,8 @@
     </main>
     
     {% include footer.html %}
-      <!-- Lunr.js検索ライブラリ -->
+    
+    <!-- Lunr.js検索ライブラリ -->
     <script src="https://unpkg.com/lunr/lunr.min.js"></script>
     
     <!-- メインJavaScript -->
@@ -66,8 +123,7 @@
     <!-- 検索オーバーレイ -->
     {% include search-overlay.html %}
     
-</body>
-</html> Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
     {% if site.google_tag_manager %}
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

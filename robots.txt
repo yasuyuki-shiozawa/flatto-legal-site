@@ -30,6 +30,10 @@ Disallow: /node_modules/
 Disallow: /*.log
 Disallow: /*.tmp
 
+# 検索エンジン向けの追加指示
+# 重要なページの明示的な許可
+Allow: /search-index.json
+
 # クロール頻度の調整（1日1回程度）
 Crawl-delay: 86400
 
