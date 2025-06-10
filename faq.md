@@ -1,636 +1,1192 @@
 ---
 layout: default
-title: よくある質問（FAQ）
-description: 入札に関するよくある質問と回答。行政書士法人ふらっと法務事務所が15年の経験を基に詳しく解説します。
+title: よくある質問（FAQ） | 入札マップ
+description: 入札・公共調達に関するよくある質問と回答をまとめました。基本的な疑問から実務的な問題まで、専門家が分かりやすく解説します。
+keywords: よくある質問,FAQ,入札疑問,公共調達質問,入札手続き,資格要件,技術提案
 ---
 
-# よくある質問（FAQ）
-
-<!-- さおりさんの質問導入 -->
-<div class="client-comment">
-    <img src="/assets/images/saori_character.jpeg" alt="さおりさん" class="comment-avatar">
-    <div class="comment-bubble">
-        入札について分からないことがたくさんあります。よくある質問を教えてください！
-    </div>
-</div>
-
-<div class="hero-section">
-    <div class="container">
-        <div class="hero-content">
-            <h1 class="hero-title">入札に関する<br>よくある質問</h1>
-            <p class="hero-subtitle">15年の経験を基に、皆様からよく寄せられる質問にお答えします</p>
+<div class="faq-page">
+    <!-- ヒーローセクション -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="icon">❓</span>
+                    よくある質問（FAQ）
+                </h1>
+                <p class="hero-description">
+                    入札・公共調達に関する疑問を<br>
+                    専門家が分かりやすく解説
+                </p>
+            </div>
         </div>
-    </div>
-</div>
+    </section>
 
-<!-- FAQ カテゴリ選択 -->
-<div class="faq-categories">
-    <div class="container">
-        <h2>📋 カテゴリから選ぶ</h2>
-        <div class="category-grid">
-            <a href="#qualification" class="category-item">
-                <div class="category-icon">🎯</div>
-                <h3>入札参加資格</h3>
-                <p>資格取得・申請手続き</p>
-            </a>
-            <a href="#search" class="category-item">
-                <div class="category-icon">🔍</div>
-                <h3>案件探索</h3>
-                <p>案件の探し方・選び方</p>
-            </a>
-            <a href="#procedure" class="category-item">
-                <div class="category-icon">📝</div>
-                <h3>入札手続き</h3>
-                <p>仕様書・提出・開札</p>
-            </a>
-            <a href="#pricing" class="category-item">
-                <div class="category-icon">💰</div>
-                <h3>価格・契約</h3>
-                <p>価格設定・契約手続き</p>
-            </a>
-            <a href="#system" class="category-item">
-                <div class="category-icon">💻</div>
-                <h3>電子入札</h3>
-                <p>システム操作・技術的問題</p>
-            </a>
-            <a href="#support" class="category-item">
-                <div class="category-icon">🤝</div>
-                <h3>サポート</h3>
-                <p>専門家支援・相談</p>
-            </a>
+    <!-- 検索・フィルター -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-wrapper">
+                <div class="search-box">
+                    <input type="text" id="faqSearch" placeholder="質問内容を検索..." class="search-input">
+                    <button class="search-btn" onclick="searchFAQ()">
+                        <span class="search-icon">🔍</span>
+                    </button>
+                </div>
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-category="all">すべて</button>
+                    <button class="filter-tab" data-category="basic">基本制度</button>
+                    <button class="filter-tab" data-category="qualification">参加資格</button>
+                    <button class="filter-tab" data-category="procedure">手続き</button>
+                    <button class="filter-tab" data-category="technical">技術提案</button>
+                    <button class="filter-tab" data-category="contract">契約・履行</button>
+                    <button class="filter-tab" data-category="electronic">電子入札</button>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-
----
-
-## 入札参加資格について {#qualification}
-
-<div class="faq-section">
-
-### Q1. 入札参加資格とは何ですか？
-
-<div class="faq-answer">
-<p><strong>A.</strong> 入札参加資格とは、国や地方公共団体の入札に参加するために必要な「資格」です。この資格がないと、入札に参加することができません。</p>
-
-<div class="detail-box">
-<h4>📋 主な資格の種類</h4>
-<ul>
-<li><strong>全省庁統一資格</strong>：国の各省庁の案件に参加</li>
-<li><strong>地方公共団体資格</strong>：都道府県・市町村の案件に参加</li>
-<li><strong>建設工事資格</strong>：建設工事案件に参加（経審が必要）</li>
-</ul>
-</div>
-</div>
-
-### Q2. 全省庁統一資格の申請時期はいつですか？
-
-<div class="faq-answer">
-<p><strong>A.</strong> 通常、3年に1度の定期受付が1月～2月に行われます。ただし、一部の機関では随時受付も実施しています。</p>
-
-<div class="schedule-info">
-<table>
-<tr><th>申請種類</th><th>受付時期</th><th>有効期間</th></tr>
-<tr><td>定期受付</td><td>1月～2月</td><td>3年間</td></tr>
-<tr><td>随時受付</td><td>通年</td><td>次回定期受付まで</td></tr>
-</table>
-</div>
-</div>
-
-### Q3. 申請に必要な書類は何ですか？
-
-<div class="faq-answer">
-<p><strong>A.</strong> 主に以下の書類が必要です。申請前に最新の要項を確認することをお勧めします。</p>
-
-<div class="document-list">
-<ul>
-<li>✅ 入札参加資格審査申請書</li>
-<li>✅ 登記事項証明書（3か月以内）</li>
-<li>✅ 財務諸表（直近2期分）</li>
-<li>✅ 納税証明書（法人税・消費税・法人事業税）</li>
-<li>✅ 社会保険料納付証明書</li>
-<li>✅ 印鑑証明書</li>
-</ul>
-</div>
-</div>
-
-### Q4. 小さな会社でも申請できますか？
-
-<div class="faq-answer">
-<p><strong>A.</strong> はい、会社の規模に関係なく申請可能です。むしろ中小企業向けの案件も多数あります。</p>
-
-<div class="company-size-info">
-<h4>💡 中小企業のメリット</h4>
-<ul>
-<li><strong>専用案件</strong>：中小企業向けの案件が設定されている</li>
-<li><strong>地域性</strong>：地元企業優遇の案件がある</li>
-<li><strong>機動力</strong>：迅速な対応で差別化可能</li>
-</ul>
-</div>
-</div>
-
-### Q5. 等級はどのように決まりますか？
-
-<div class="faq-answer">
-<p><strong>A.</strong> 主に売上高、従業員数、資本金などの客観的指標により決定されます。</p>
-
-<div class="grade-criteria">
-<table>
-<tr><th>等級</th><th>主な基準</th><th>参加可能案件</th></tr>
-<tr><td>A等級</td><td>売上高大・従業員多</td><td>高額案件</td></tr>
-<tr><td>B等級</td><td>中規模企業</td><td>中規模案件</td></tr>
-<tr><td>C等級</td><td>中小企業</td><td>小規模案件</td></tr>
-<tr><td>D等級</td><td>小規模企業</td><td>少額案件</td></tr>
-</table>
-</div>
-</div>
-
-### Q6. 建設業許可がないと建設工事の入札に参加できませんか？
-
-<div class="faq-answer">
-
-<!-- 塩澤さんの専門回答 -->
-<div class="expert-comment">
-    <img src="/assets/images/shiozawa_character.jpeg" alt="塩澤康幸" class="comment-avatar">
-    <div class="comment-bubble">
-        <strong>建設業許可について詳しく説明しますね。</strong>500万円以上の工事には許可が必要です。
-    </div>
-</div>
-<p><strong>A.</strong> はい、建設工事の入札には建設業許可と経営事項審査（経審）の受審が必須です。</p>
-
-<div class="construction-requirements">
-<h4>🏗️ 建設工事入札の要件</h4>
-<ol>
-<li><strong>建設業許可</strong>：該当業種の許可取得</li>
-<li><strong>経営事項審査</strong>：毎年の受審</li>
-<li><strong>入札参加資格申請</strong>：各発注機関への申請</li>
-</ol>
-</div>
-</div>
-
-</div>
-
----
-
-## 案件探索について {#search}
-
-<div class="faq-section">
-
-### Q7. どこで入札案件を探せばよいですか？
-
-<div class="faq-answer">
-<p><strong>A.</strong> 主に以下のサイトで案件情報を確認できます。</p>
-
-<div class="search-sites">
-<table>
-<tr><th>サイト名</th><th>対象</th><th>URL</th></tr>
-<tr><td>政府電子調達（GEPS）</td><td>国の機関</td><td>https://www.p-portal.go.jp/</td></tr>
-<tr><td>各自治体の電子入札システム</td><td>地方公共団体</td><td>各自治体のサイト</td></tr>
-<tr><td>入札情報サービス</td><td>全般</td><td>民間サービス</td></tr>
-</table>
-</div>
-</div>
-
-### Q8. 自社に適した案件の見つけ方は？
-
-<div class="faq-answer">
-<p><strong>A.</strong> 以下の条件で絞り込むことをお勧めします。</p>
-
-<div class="search-criteria">
-<h4>🎯 効果的な検索条件</h4>
-<ul>
-<li><strong>業種</strong>：自社の得意分野に限定</li>
-<li><strong>地域</strong>：対応可能な範囲内</li>
-<li><strong>金額</strong>：自社の受注可能規模</li>
-<li><strong>入札方式</strong>：参加しやすい方式を選択</li>
-</ul>
-</div>
-</div>
-
-### Q9. 案件情報はどのくらいの頻度でチェックすべきですか？
-
-<div class="faq-answer">
-<p><strong>A.</strong> 機会を逃さないため、以下の頻度をお勧めします。</p>
-
-<div class="check-frequency">
-<table>
-<tr><th>頻度</th><th>作業内容</th><th>目的</th></tr>
-<tr><td>毎日</td><td>新着案件のチェック</td><td>機会の逃失防止</td></tr>
-<tr><td>週1回</td><td>詳細な案件分析</td><td>参加可否の判断</td></tr>
-<tr><td>月1回</td><td>検索条件の見直し</td><td>戦略の最適化</td></tr>
-</table>
-</div>
-</div>
-
-### Q10. 競合が多い案件は避けるべきですか？
-
-<div class="faq-answer">
-<p><strong>A.</strong> 一概には言えません。競合が多くても、自社の強みを活かせる案件であれば挑戦する価値があります。</p>
-
-<div class="competition-strategy">
-<h4>💡 競合分析のポイント</h4>
-<ul>
-<li><strong>技術的優位性</strong>：自社の技術力で差別化可能か</li>
-<li><strong>実績の適合性</strong>：求められる実績を満たしているか</li>
-<li><strong>価格競争力</strong>：適正価格での受注可能性</li>
-<li><strong>提案力</strong>：独自の付加価値を提案できるか</li>
-</ul>
-</div>
-</div>
-
-</div>
-
----
-
-## 入札手続きについて {#procedure}
-
-<div class="faq-section">
-
-### Q11. 仕様書はどこで入手できますか？
-
-<div class="faq-answer">
-<p><strong>A.</strong> 主に以下の方法で入手できます。</p>
-
-<div class="spec-acquisition">
-<ul>
-<li><strong>電子入札システム</strong>：24時間ダウンロード可能</li>
-<li><strong>発注機関窓口</strong>：直接受取（質問も可能）</li>
-<li><strong>郵送請求</strong>：一部の機関で対応</li>
-</ul>
-</div>
-</div>
-
-### Q12. 入札説明会には必ず参加すべきですか？
-
-<div class="faq-answer">
-<p><strong>A.</strong> 必須ではありませんが、参加を強くお勧めします。重要な情報を得られる貴重な機会です。</p>
-
-<div class="meeting-benefits">
-<h4>🎯 説明会参加のメリット</h4>
-<ul>
-<li><strong>詳細情報</strong>：仕様書では分からない詳細を確認</li>
-<li><strong>現場確認</strong>：実際の作業環境を把握</li>
-<li><strong>質問機会</strong>：不明点を直接確認</li>
-<li><strong>競合把握</strong>：参加者数や競合の特徴を把握</li>
-</ul>
-</div>
-</div>
-
-### Q13. 質問書はどのように提出すればよいですか？
-
-<div class="faq-answer">
-<p><strong>A.</strong> 以下の形式で提出することが一般的です。</p>
-
-<div class="question-format">
-<h4>📝 質問書の構成</h4>
-<ol>
-<li><strong>件名</strong>：案件名と質問である旨を明記</li>
-<li><strong>質問者情報</strong>：会社名・担当者名・連絡先</li>
-<li><strong>質問内容</strong>：番号を付けて整理</li>
-<li><strong>根拠</strong>：仕様書の該当箇所を明記</li>
-</ol>
-</div>
-</div>
-
-### Q14. 入札書の提出期限を過ぎてしまった場合はどうなりますか？
-
-<div class="faq-answer">
-<p><strong>A.</strong> 期限を過ぎた入札書は受理されません。入札参加ができなくなります。</p>
-
-<div class="deadline-caution">
-<h4>⚠️ 期限管理のポイント</h4>
-<ul>
-<li><strong>余裕を持った準備</strong>：期限の2-3日前には完成</li>
-<li><strong>システム確認</strong>：電子入札システムの動作確認</li>
-<li><strong>バックアップ計画</strong>：システム障害時の対応策</li>
-</ul>
-</div>
-</div>
-
-### Q15. 技術提案書の分量はどの程度が適切ですか？
-
-<div class="faq-answer">
-<p><strong>A.</strong> 仕様書で指定されている場合はその範囲内で、指定がない場合は20-30ページ程度が一般的です。</p>
-
-<div class="proposal-guidelines">
-<h4>📄 提案書作成のポイント</h4>
-<ul>
-<li><strong>簡潔性</strong>：要点を分かりやすく記載</li>
-<li><strong>具体性</strong>：抽象的な表現を避ける</li>
-<li><strong>視覚性</strong>：図表を効果的に活用</li>
-<li><strong>差別化</strong>：他社にない独自性をアピール</li>
-</ul>
-</div>
-</div>
-
-</div>
-
----
-
-## 価格・契約について {#pricing}
-
-<div class="faq-section">
-
-### Q16. 入札価格はどのように決めればよいですか？
-
-<div class="faq-answer">
-<p><strong>A.</strong> 以下の要素を総合的に考慮して決定します。</p>
-
-<div class="pricing-factors">
-<h4>💰 価格設定の要素</h4>
-<ul>
-<li><strong>コスト積算</strong>：人件費・経費・利益の適切な積算</li>
-<li><strong>市場価格</strong>：類似案件の落札価格を参考</li>
-<li><strong>競合予測</strong>：競合他社の価格戦略を予測</li>
-<li><strong>戦略的判断</strong>：長期的な関係構築を考慮</li>
-</ul>
-</div>
-</div>
-
-### Q17. 予定価格は公表されますか？
-
-<div class="faq-answer">
-<p><strong>A.</strong> 発注機関により異なります。事前公表、事後公表、非公表の3パターンがあります。</p>
-
-<div class="price-disclosure">
-<table>
-<tr><th>公表方式</th><th>特徴</th><th>対応策</th></tr>
-<tr><td>事前公表</td><td>入札前に公表</td><td>予定価格を参考に価格設定</td></tr>
-<tr><td>事後公表</td><td>開札後に公表</td><td>市場価格を基に推定</td></tr>
-<tr><td>非公表</td><td>公表されない</td><td>過去実績から推定</td></tr>
-</table>
-</div>
-</div>
-
-### Q18. 落札後の契約手続きはどのような流れですか？
-
-<div class="faq-answer">
-<p><strong>A.</strong> 一般的に以下の流れで進みます。</p>
-
-<div class="contract-process">
-<h4>📝 契約締結の流れ</h4>
-<ol>
-<li><strong>落札通知</strong>：正式な落札通知の受領</li>
-<li><strong>契約書案確認</strong>：契約条件の詳細確認</li>
-<li><strong>必要書類準備</strong>：印鑑証明書等の準備</li>
-<li><strong>契約保証金</strong>：必要に応じて保証金の準備</li>
-<li><strong>契約書調印</strong>：正式な契約書への調印</li>
-</ol>
-</div>
-</div>
-
-### Q19. 契約保証金とは何ですか？
-
-<div class="faq-answer">
-<p><strong>A.</strong> 契約の履行を保証するために納付する金銭で、通常は契約金額の10%程度です。</p>
-
-<div class="guarantee-info">
-<h4>🛡️ 保証金の種類</h4>
-<ul>
-<li><strong>現金納付</strong>：直接現金で納付</li>
-<li><strong>保証書</strong>：銀行等の保証書を提出</li>
-<li><strong>保険</strong>：履行保証保険に加入</li>
-</ul>
-</div>
-</div>
-
-### Q20. 支払いはいつ頃になりますか？
-
-<div class="faq-answer">
-<p><strong>A.</strong> 契約内容により異なりますが、一般的には以下のパターンがあります。</p>
-
-<div class="payment-schedule">
-<table>
-<tr><th>支払方式</th><th>タイミング</th><th>特徴</th></tr>
-<tr><td>完成払い</td><td>業務完了後</td><td>最も一般的</td></tr>
-<tr><td>部分払い</td><td>進捗に応じて</td><td>長期案件で採用</td></tr>
-<tr><td>前払い</td><td>契約後</td><td>大型案件で採用</td></tr>
-</table>
-</div>
-</div>
-
-</div>
-
----
-
-## 電子入札について {#system}
-
-<div class="faq-section">
-
-### Q21. 電子入札システムの利用に必要なものは何ですか？
-
-<div class="faq-answer">
-<p><strong>A.</strong> 主に以下が必要です。</p>
-
-<div class="system-requirements">
-<h4>💻 必要な環境</h4>
-<ul>
-<li><strong>ICカード</strong>：電子証明書が格納されたカード</li>
-<li><strong>ICカードリーダー</strong>：カードを読み取る機器</li>
-<li><strong>対応ブラウザ</strong>：Internet Explorer等の指定ブラウザ</li>
-<li><strong>Java実行環境</strong>：システム動作に必要</li>
-</ul>
-</div>
-</div>
-
-### Q22. ICカードはどこで取得できますか？
-
-<div class="faq-answer">
-<p><strong>A.</strong> 認証局から取得できます。主要な認証局は以下の通りです。</p>
-
-<div class="ca-list">
-<ul>
-<li><strong>日本商工会議所</strong>：商工会議所の会員向け</li>
-<li><strong>帝国データバンク</strong>：TDB電子認証サービス</li>
-<li><strong>東北インフォメーション・システムズ</strong>：TOISS認証サービス</li>
-<li><strong>日本電子認証</strong>：JCAN認証サービス</li>
-</ul>
-</div>
-</div>
-
-### Q23. システムにログインできない場合はどうすればよいですか？
-
-<div class="faq-answer">
-<p><strong>A.</strong> 以下の点を確認してください。</p>
-
-<div class="login-troubleshooting">
-<h4>🔧 トラブルシューティング</h4>
-<ul>
-<li><strong>ICカード</strong>：正しく挿入されているか</li>
-<li><strong>ブラウザ</strong>：対応ブラウザを使用しているか</li>
-<li><strong>Java</strong>：最新版がインストールされているか</li>
-<li><strong>ポップアップ</strong>：ブロックされていないか</li>
-</ul>
-</div>
-</div>
-
-### Q24. 電子入札システムで提出した書類は修正できますか？
-
-<div class="faq-answer">
-<p><strong>A.</strong> 提出期限内であれば、多くのシステムで修正・再提出が可能です。</p>
-
-<div class="modification-rules">
-<h4>📝 修正のルール</h4>
-<ul>
-<li><strong>期限内</strong>：提出期限内であれば修正可能</li>
-<li><strong>最新版有効</strong>：最後に提出したものが有効</li>
-<li><strong>システム確認</strong>：修正機能の有無をシステムで確認</li>
-</ul>
-</div>
-</div>
-
-### Q25. システム障害で提出できない場合はどうなりますか？
-
-<div class="faq-answer">
-<p><strong>A.</strong> 発注機関により対応が異なりますが、一般的には以下の措置が取られます。</p>
-
-<div class="system-failure">
-<h4>🚨 障害時の対応</h4>
-<ul>
-<li><strong>期限延長</strong>：提出期限の延長</li>
-<li><strong>代替手段</strong>：郵送・持参での提出受付</li>
-<li><strong>入札中止</strong>：障害が長期間続く場合</li>
-</ul>
-</div>
-</div>
-
-</div>
-
----
-
-## サポートについて {#support}
-
-<div class="faq-section">
-
-### Q26. 行政書士に依頼するメリットは何ですか？
-
-<div class="faq-answer">
-<p><strong>A.</strong> 専門知識と経験により、効率的で確実な手続きが可能になります。</p>
-
-<div class="support-benefits">
-<h4>🤝 専門家サポートのメリット</h4>
-<ul>
-<li><strong>時間短縮</strong>：複雑な手続きを効率的に処理</li>
-<li><strong>ミス防止</strong>：経験に基づく確実な手続き</li>
-<li><strong>戦略立案</strong>：最適な入札戦略の提案</li>
-<li><strong>継続支援</strong>：長期的な関係でのサポート</li>
-</ul>
-</div>
-</div>
-
-### Q27. どのような支援を受けられますか？
-
-<div class="faq-answer">
-<p><strong>A.</strong> 入札参加から落札まで、トータルサポートを提供しています。</p>
-
-<div class="support-services">
-<h4>📋 主なサポート内容</h4>
-<ul>
-<li><strong>資格申請代行</strong>：入札参加資格の申請手続き</li>
-<li><strong>案件選定支援</strong>：自社に適した案件の選定</li>
-<li><strong>書類作成支援</strong>：技術提案書等の作成支援</li>
-<li><strong>価格戦略相談</strong>：適切な価格設定のアドバイス</li>
-<li><strong>契約手続き支援</strong>：落札後の契約手続き</li>
-</ul>
-</div>
-</div>
-
-### Q28. 相談料はかかりますか？
-
-<div class="faq-answer">
-<p><strong>A.</strong> 初回相談は無料です。お気軽にご相談ください。</p>
-
-<div class="consultation-info">
-<h4>💬 相談について</h4>
-<ul>
-<li><strong>初回無料</strong>：初回相談は無料（60分程度）</li>
-<li><strong>秘密厳守</strong>：相談内容は厳格に秘密保持</li>
-<li><strong>複数方法</strong>：電話・メール・対面での相談</li>
-<li><strong>迅速対応</strong>：お問い合わせから24時間以内に回答</li>
-</ul>
-</div>
-</div>
-
-### Q29. 遠方からでも依頼できますか？
-
-<div class="faq-answer">
-<p><strong>A.</strong> はい、全国対応しています。オンラインでの打ち合わせも可能です。</p>
-
-<div class="remote-support">
-<h4>🌐 遠方対応について</h4>
-<ul>
-<li><strong>全国対応</strong>：日本全国からのご依頼に対応</li>
-<li><strong>オンライン打ち合わせ</strong>：Web会議での相談・打ち合わせ</li>
-<li><strong>電子手続き</strong>：多くの手続きが電子化により遠隔対応可能</li>
-<li><strong>郵送対応</strong>：必要書類の郵送でのやり取り</li>
-</ul>
-</div>
-</div>
-
-### Q30. 成功報酬制はありますか？
-
-<div class="faq-answer">
-<p><strong>A.</strong> 案件により成功報酬制も対応可能です。詳細はご相談ください。</p>
-
-<div class="fee-structure">
-<h4>💰 料金体系</h4>
-<ul>
-<li><strong>固定料金</strong>：作業内容に応じた固定料金</li>
-<li><strong>成功報酬</strong>：落札時のみ料金発生（案件により）</li>
-<li><strong>月額顧問</strong>：継続的なサポートの月額料金</li>
-<li><strong>組み合わせ</strong>：固定料金＋成功報酬の組み合わせ</li>
-</ul>
-</div>
-</div>
-
-</div>
-
----
-
-## その他のご質問
-
-<div class="additional-questions">
-    <div class="container">
-        <h2>🤔 その他のご質問がございましたら</h2>
-        <p>上記以外にもご不明な点がございましたら、お気軽にお問い合わせください。<br>
-        15年の経験を持つ専門家が、丁寧にお答えいたします。</p>
+    </section>
+
+    <!-- FAQ一覧 -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-container">
+                
+                <!-- 基本制度に関する質問 -->
+                <div class="faq-category" data-category="basic">
+                    <h2 class="category-title">
+                        <span class="category-icon">📋</span>
+                        基本制度について
+                    </h2>
+                    
+                    <div class="faq-item" data-keywords="入札制度 目的 意味">
+                        <div class="faq-question">
+                            <h3>入札制度とは何ですか？なぜ必要なのですか？</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>入札制度とは、公的機関が工事、物品、サービス等を調達する際に、複数の事業者から提案を募り、最も適切な事業者を選定する制度です。</p>
+                            <p><strong>必要な理由：</strong></p>
+                            <ul>
+                                <li><strong>公正性の確保：</strong> すべての事業者に平等な参加機会を提供</li>
+                                <li><strong>透明性の向上：</strong> 選定過程を明確にし、恣意的な判断を排除</li>
+                                <li><strong>経済性の追求：</strong> 競争により適正な価格での調達を実現</li>
+                                <li><strong>品質の確保：</strong> 技術力や実績を適正に評価</li>
+                            </ul>
+                            <p>税金を財源とする公的調達において、国民・住民への説明責任を果たすための重要な仕組みです。</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-keywords="一般競争入札 指名競争入札 随意契約 違い">
+                        <div class="faq-question">
+                            <h3>一般競争入札、指名競争入札、随意契約の違いは何ですか？</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>一般競争入札：</strong></p>
+                            <ul>
+                                <li>資格要件を満たすすべての事業者が参加可能</li>
+                                <li>最も競争性・透明性が高い</li>
+                                <li>高額案件や標準的な仕様の案件に適用</li>
+                            </ul>
+                            <p><strong>指名競争入札：</strong></p>
+                            <ul>
+                                <li>発注者が指名した特定の事業者のみが参加</li>
+                                <li>手続きが比較的簡素で迅速</li>
+                                <li>専門性の高い案件や緊急性のある案件に適用</li>
+                            </ul>
+                            <p><strong>随意契約：</strong></p>
+                            <ul>
+                                <li>競争入札によらず、特定の事業者と直接契約</li>
+                                <li>少額案件や特殊な案件に限定</li>
+                                <li>法令で定められた要件を満たす場合のみ可能</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-keywords="総合評価落札方式 最低価格落札方式">
+                        <div class="faq-question">
+                            <h3>総合評価落札方式と最低価格落札方式の違いは？</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>最低価格落札方式：</strong></p>
+                            <ul>
+                                <li>予定価格以下の最低価格で入札した者が落札</li>
+                                <li>価格のみで評価</li>
+                                <li>手続きが簡素で迅速</li>
+                                <li>標準的な仕様の案件に適用</li>
+                            </ul>
+                            <p><strong>総合評価落札方式：</strong></p>
+                            <ul>
+                                <li>価格と技術力等を総合的に評価</li>
+                                <li>技術提案、施工計画、企業の技術力等を考慮</li>
+                                <li>品質重視の調達が可能</li>
+                                <li>技術的な工夫が求められる案件に適用</li>
+                            </ul>
+                            <p>近年は品質確保の観点から、総合評価落札方式の適用が拡大しています。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 参加資格に関する質問 -->
+                <div class="faq-category" data-category="qualification">
+                    <h2 class="category-title">
+                        <span class="category-icon">🏢</span>
+                        入札参加資格について
+                    </h2>
+                    
+                    <div class="faq-item" data-keywords="入札参加資格 申請 必要書類">
+                        <div class="faq-question">
+                            <h3>入札参加資格を取得するにはどうすればよいですか？</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>申請手続きの流れ：</strong></p>
+                            <ol>
+                                <li><strong>申請時期の確認：</strong> 多くの機関で年1回（通常1-2月）に受付</li>
+                                <li><strong>必要書類の準備：</strong> 下記の書類を準備</li>
+                                <li><strong>申請書の提出：</strong> 指定された方法で提出</li>
+                                <li><strong>審査：</strong> 財務状況、技術力、社会性等を審査</li>
+                                <li><strong>資格認定：</strong> 業種・等級別に資格を認定</li>
+                            </ol>
+                            <p><strong>主な必要書類：</strong></p>
+                            <ul>
+                                <li>入札参加資格審査申請書</li>
+                                <li>登記事項証明書</li>
+                                <li>財務諸表（貸借対照表、損益計算書等）</li>
+                                <li>納税証明書</li>
+                                <li>社会保険料納付証明書</li>
+                                <li>技術者名簿</li>
+                                <li>工事経歴書</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-keywords="等級 A B C D 違い">
+                        <div class="faq-question">
+                            <h3>建設工事の等級（A、B、C、D等級）はどのように決まりますか？</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>等級は主に以下の要素を総合的に評価して決定されます：</p>
+                            <p><strong>主な評価項目：</strong></p>
+                            <ul>
+                                <li><strong>年間平均完成工事高：</strong> 過去2-3年の工事実績</li>
+                                <li><strong>自己資本額：</strong> 財務の安定性</li>
+                                <li><strong>技術者数：</strong> 主任技術者・監理技術者の配置状況</li>
+                                <li><strong>工事成績：</strong> 過去の工事評価点</li>
+                                <li><strong>地域貢献：</strong> 災害協力、地域雇用等</li>
+                            </ul>
+                            <p><strong>等級別の参加可能工事：</strong></p>
+                            <ul>
+                                <li><strong>A等級：</strong> 大規模工事（数億円以上）</li>
+                                <li><strong>B等級：</strong> 中規模工事（数千万円～数億円）</li>
+                                <li><strong>C等級：</strong> 小規模工事（数百万円～数千万円）</li>
+                                <li><strong>D等級：</strong> 最小規模工事（数百万円以下）</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-keywords="経営事項審査 経審 P点">
+                        <div class="faq-question">
+                            <h3>経営事項審査（経審）とは何ですか？</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>経営事項審査（経審）は、建設業者の経営状況を客観的に評価する制度です。公共工事の入札参加資格審査で活用されます。</p>
+                            <p><strong>審査項目（4つの評価項目）：</strong></p>
+                            <ul>
+                                <li><strong>X1（完成工事高）：</strong> 2年平均または3年平均の完成工事高</li>
+                                <li><strong>X2（自己資本額・利払前税引前償却前利益）：</strong> 財務状況</li>
+                                <li><strong>Y（経営状況）：</strong> 負債抵抗力、収益性・効率性、財務健全性、絶対的力量</li>
+                                <li><strong>Z（技術力）：</strong> 技術職員数、元請完成工事高</li>
+                                <li><strong>W（その他審査項目）：</strong> 労働福祉の状況、建設業の営業継続の状況、防災活動・法令遵守の状況、建設業の経理の状況</li>
+                            </ul>
+                            <p><strong>総合評定値（P点）：</strong></p>
+                            <p>P = 0.25X1 + 0.15X2 + 0.20Y + 0.25Z + 0.15W</p>
+                            <p>このP点により等級が決定され、参加可能な工事の規模が決まります。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 手続きに関する質問 -->
+                <div class="faq-category" data-category="procedure">
+                    <h2 class="category-title">
+                        <span class="category-icon">📝</span>
+                        入札手続きについて
+                    </h2>
+                    
+                    <div class="faq-item" data-keywords="入札公告 いつ どこで 確認">
+                        <div class="faq-question">
+                            <h3>入札公告はいつ、どこで確認できますか？</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>公告の掲載場所：</strong></p>
+                            <ul>
+                                <li><strong>官報：</strong> 国の機関の入札情報</li>
+                                <li><strong>各機関のウェブサイト：</strong> 最も確実で詳細な情報</li>
+                                <li><strong>電子入札システム：</strong> 統合的な情報提供</li>
+                                <li><strong>掲示板：</strong> 各機関の庁舎内</li>
+                                <li><strong>業界紙：</strong> 建設通信新聞、建設工業新聞等</li>
+                            </ul>
+                            <p><strong>公告のタイミング：</strong></p>
+                            <ul>
+                                <li><strong>一般競争入札：</strong> 入札日の10日以上前</li>
+                                <li><strong>指名競争入札：</strong> 指名通知から5日以上前</li>
+                                <li><strong>緊急時：</strong> 短縮される場合あり</li>
+                            </ul>
+                            <p><strong>効率的な情報収集方法：</strong></p>
+                            <ul>
+                                <li>関心のある機関のメール配信サービスに登録</li>
+                                <li>電子入札システムの検索機能を活用</li>
+                                <li>業界団体の情報サービスを利用</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-keywords="入札説明書 質問 回答">
+                        <div class="faq-question">
+                            <h3>入札説明書の内容について質問がある場合はどうすればよいですか？</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>質問の手続き：</strong></p>
+                            <ol>
+                                <li><strong>質問期限の確認：</strong> 入札説明書に記載された期限を確認</li>
+                                <li><strong>質問書の作成：</strong> 指定された様式で質問書を作成</li>
+                                <li><strong>提出方法：</strong> 電子メール、FAX、持参等の指定された方法で提出</li>
+                                <li><strong>回答の確認：</strong> 全参加者に対して一括回答される</li>
+                            </ol>
+                            <p><strong>質問時の注意点：</strong></p>
+                            <ul>
+                                <li><strong>具体的に：</strong> 曖昧な質問は避け、具体的な箇所を明示</li>
+                                <li><strong>期限厳守：</strong> 質問期限を過ぎると受け付けられない</li>
+                                <li><strong>公平性：</strong> 回答は全参加者に公開される</li>
+                                <li><strong>記録保持：</strong> 質問と回答は契約書類の一部となる</li>
+                            </ul>
+                            <p><strong>よくある質問内容：</strong></p>
+                            <ul>
+                                <li>仕様書の技術的な詳細</li>
+                                <li>工期・納期の詳細</li>
+                                <li>現場条件・制約事項</li>
+                                <li>提出書類の様式・記載方法</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-keywords="予定価格 推定 積算">
+                        <div class="faq-question">
+                            <h3>予定価格はどのように推定すればよいですか？</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>予定価格推定の方法：</strong></p>
+                            <ul>
+                                <li><strong>設計書の分析：</strong> 公開される設計書から積算</li>
+                                <li><strong>過去実績の参考：</strong> 同種工事の落札実績を調査</li>
+                                <li><strong>市場価格調査：</strong> 資材・労務単価の最新情報を収集</li>
+                                <li><strong>標準歩掛の活用：</strong> 公表されている標準的な歩掛を使用</li>
+                            </ul>
+                            <p><strong>積算の基本要素：</strong></p>
+                            <ul>
+                                <li><strong>直接工事費：</strong> 材料費、労務費、機械経費</li>
+                                <li><strong>共通仮設費：</strong> 現場管理、安全対策等</li>
+                                <li><strong>現場管理費：</strong> 現場運営に必要な経費</li>
+                                <li><strong>一般管理費等：</strong> 本社経費、利益等</li>
+                            </ul>
+                            <p><strong>注意点：</strong></p>
+                            <ul>
+                                <li>予定価格は公表されない場合が多い</li>
+                                <li>最低制限価格の設定にも注意</li>
+                                <li>地域の実情を考慮した単価設定</li>
+                                <li>最新の労務単価・資材単価を使用</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 技術提案に関する質問 -->
+                <div class="faq-category" data-category="technical">
+                    <h2 class="category-title">
+                        <span class="category-icon">💡</span>
+                        技術提案について
+                    </h2>
+                    
+                    <div class="faq-item" data-keywords="技術提案書 書き方 ポイント">
+                        <div class="faq-question">
+                            <h3>効果的な技術提案書を作成するポイントは？</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>技術提案書作成のポイント：</strong></p>
+                            <ul>
+                                <li><strong>発注者のニーズを把握：</strong> 求められている技術的課題を正確に理解</li>
+                                <li><strong>具体的な提案：</strong> 抽象的でなく、具体的で実現可能な提案</li>
+                                <li><strong>根拠の明示：</strong> 提案内容の技術的根拠を明確に説明</li>
+                                <li><strong>効果の定量化：</strong> 可能な限り数値で効果を示す</li>
+                                <li><strong>実績の活用：</strong> 過去の類似工事での実績を効果的に活用</li>
+                            </ul>
+                            <p><strong>主な提案項目：</strong></p>
+                            <ul>
+                                <li><strong>施工計画：</strong> 効率的で安全な施工方法</li>
+                                <li><strong>品質管理：</strong> 品質確保のための具体的方法</li>
+                                <li><strong>安全管理：</strong> 事故防止のための対策</li>
+                                <li><strong>環境配慮：</strong> 環境負荷軽減の取組み</li>
+                                <li><strong>地域貢献：</strong> 地域経済・雇用への貢献</li>
+                            </ul>
+                            <p><strong>避けるべき内容：</strong></p>
+                            <ul>
+                                <li>一般論や教科書的な記述</li>
+                                <li>実現困難な過大な提案</li>
+                                <li>コストに見合わない提案</li>
+                                <li>他の案件からの単純なコピー</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-keywords="施工計画 工程計画 作成方法">
+                        <div class="faq-question">
+                            <h3>施工計画・工程計画はどのように作成すればよいですか？</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>施工計画作成の手順：</strong></p>
+                            <ol>
+                                <li><strong>現場条件の把握：</strong> 地形、地質、周辺環境等を詳細に調査</li>
+                                <li><strong>制約条件の整理：</strong> 工期、施工時間、搬入路等の制約を整理</li>
+                                <li><strong>施工方法の選定：</strong> 最適な工法・機械を選定</li>
+                                <li><strong>工程計画の作成：</strong> 各工種の工程を詳細に計画</li>
+                                <li><strong>品質・安全計画：</strong> 品質管理・安全管理の具体的方法を計画</li>
+                            </ol>
+                            <p><strong>工程計画のポイント：</strong></p>
+                            <ul>
+                                <li><strong>クリティカルパスの明確化：</strong> 工期に影響する重要工程を特定</li>
+                                <li><strong>天候等の考慮：</strong> 季節要因、天候リスクを考慮</li>
+                                <li><strong>資源の平準化：</strong> 人員・機械の効率的な配置</li>
+                                <li><strong>余裕の確保：</strong> 適切な余裕時間の設定</li>
+                            </ul>
+                            <p><strong>図表の活用：</strong></p>
+                            <ul>
+                                <li>ガントチャート（工程表）</li>
+                                <li>ネットワーク工程表</li>
+                                <li>施工ステップ図</li>
+                                <li>配置計画図</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 契約・履行に関する質問 -->
+                <div class="faq-category" data-category="contract">
+                    <h2 class="category-title">
+                        <span class="category-icon">📋</span>
+                        契約・履行について
+                    </h2>
+                    
+                    <div class="faq-item" data-keywords="契約保証金 履行保証 保険">
+                        <div class="faq-question">
+                            <h3>契約保証金や履行保証保険とは何ですか？</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>契約保証金とは：</strong></p>
+                            <p>契約の適正な履行を担保するために、受注者が発注者に納付する保証金です。</p>
+                            <p><strong>保証の方法：</strong></p>
+                            <ul>
+                                <li><strong>現金納付：</strong> 契約金額の10%程度を現金で納付</li>
+                                <li><strong>履行保証保険：</strong> 保険会社との保険契約</li>
+                                <li><strong>履行保証：</strong> 銀行等の金融機関による保証</li>
+                                <li><strong>国債等の有価証券：</strong> 国債、地方債等での代用</li>
+                            </ul>
+                            <p><strong>履行保証保険の特徴：</strong></p>
+                            <ul>
+                                <li><strong>資金負担軽減：</strong> 現金納付に比べて資金負担が軽い</li>
+                                <li><strong>保険料：</strong> 契約金額の0.3-0.6%程度</li>
+                                <li><strong>審査：</strong> 保険会社による財務審査あり</li>
+                                <li><strong>継続性：</strong> 工事完成まで継続</li>
+                            </ul>
+                            <p><strong>免除される場合：</strong></p>
+                            <ul>
+                                <li>少額契約（500万円未満等）</li>
+                                <li>国・地方公共団体との契約</li>
+                                <li>特に信用度の高い事業者</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-keywords="工事監督 検査 完成検査">
+                        <div class="faq-question">
+                            <h3>工事監督や完成検査ではどのような点がチェックされますか？</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>工事監督でのチェック項目：</strong></p>
+                            <ul>
+                                <li><strong>設計図書との適合性：</strong> 図面・仕様書通りの施工</li>
+                                <li><strong>施工方法：</strong> 適切な工法・手順での施工</li>
+                                <li><strong>使用材料：</strong> 指定材料の使用、品質確認</li>
+                                <li><strong>出来形：</strong> 寸法、形状の確認</li>
+                                <li><strong>品質管理：</strong> 試験結果、管理記録の確認</li>
+                                <li><strong>安全管理：</strong> 安全対策の実施状況</li>
+                                <li><strong>工程管理：</strong> 予定工程との整合性</li>
+                            </ul>
+                            <p><strong>完成検査でのチェック項目：</strong></p>
+                            <ul>
+                                <li><strong>外観検査：</strong> 仕上がり状況、欠陥の有無</li>
+                                <li><strong>機能検査：</strong> 設備等の動作確認</li>
+                                <li><strong>寸法検査：</strong> 設計寸法との適合性</li>
+                                <li><strong>強度検査：</strong> 必要に応じた強度試験</li>
+                                <li><strong>書類検査：</strong> 施工記録、試験成績書等</li>
+                                <li><strong>数量確認：</strong> 出来高数量の確認</li>
+                            </ul>
+                            <p><strong>検査に向けた準備：</strong></p>
+                            <ul>
+                                <li>施工記録の整理・保管</li>
+                                <li>試験成績書の準備</li>
+                                <li>写真記録の整理</li>
+                                <li>自主検査の実施</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 電子入札に関する質問 -->
+                <div class="faq-category" data-category="electronic">
+                    <h2 class="category-title">
+                        <span class="category-icon">💻</span>
+                        電子入札について
+                    </h2>
+                    
+                    <div class="faq-item" data-keywords="電子入札 始め方 登録">
+                        <div class="faq-question">
+                            <h3>電子入札を始めるにはどうすればよいですか？</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>電子入札開始の手順：</strong></p>
+                            <ol>
+                                <li><strong>電子証明書の取得：</strong> 認証局から電子証明書を取得</li>
+                                <li><strong>システム利用者登録：</strong> 各電子入札システムに利用者登録</li>
+                                <li><strong>動作環境の確認：</strong> パソコン・ブラウザの動作確認</li>
+                                <li><strong>操作研修の受講：</strong> システム操作方法の習得</li>
+                                <li><strong>テスト運用：</strong> 実際の案件での操作確認</li>
+                            </ol>
+                            <p><strong>必要な電子証明書：</strong></p>
+                            <ul>
+                                <li><strong>商業登記に基づく電子証明書：</strong> 法務局発行</li>
+                                <li><strong>民間認証局の証明書：</strong> 日本電子認証等</li>
+                                <li><strong>公的個人認証：</strong> 個人事業主の場合</li>
+                            </ul>
+                            <p><strong>主要な電子入札システム：</strong></p>
+                            <ul>
+                                <li><strong>国土交通省：</strong> GEPS（政府電子調達システム）</li>
+                                <li><strong>地方自治体：</strong> 各自治体独自システム</li>
+                                <li><strong>都道府県：</strong> 共同利用システム</li>
+                            </ul>
+                            <p><strong>導入のメリット：</strong></p>
+                            <ul>
+                                <li>移動時間・交通費の削減</li>
+                                <li>書類作成の効率化</li>
+                                <li>入札情報の一元管理</li>
+                                <li>手続きの迅速化</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-keywords="電子証明書 更新 有効期限">
+                        <div class="faq-question">
+                            <h3>電子証明書の有効期限が切れそうです。どうすればよいですか？</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>電子証明書更新の手順：</strong></p>
+                            <ol>
+                                <li><strong>有効期限の確認：</strong> 証明書の有効期限を確認</li>
+                                <li><strong>更新申請：</strong> 発行機関に更新申請を提出</li>
+                                <li><strong>必要書類の準備：</strong> 登記事項証明書等の最新書類</li>
+                                <li><strong>新証明書の取得：</strong> 新しい証明書をダウンロード</li>
+                                <li><strong>システム登録：</strong> 各電子入札システムに新証明書を登録</li>
+                            </ol>
+                            <p><strong>更新時の注意点：</strong></p>
+                            <ul>
+                                <li><strong>早めの手続き：</strong> 有効期限の1-2ヶ月前に更新</li>
+                                <li><strong>継続性の確保：</strong> 旧証明書の有効期限内に新証明書を取得</li>
+                                <li><strong>全システムの更新：</strong> 利用している全ての電子入札システムで更新</li>
+                                <li><strong>バックアップ：</strong> 証明書ファイルの適切な保管</li>
+                            </ul>
+                            <p><strong>更新に必要な書類：</strong></p>
+                            <ul>
+                                <li>登記事項証明書（3ヶ月以内）</li>
+                                <li>印鑑証明書（3ヶ月以内）</li>
+                                <li>更新申請書</li>
+                                <li>現在の電子証明書</li>
+                            </ul>
+                            <p><strong>費用：</strong></p>
+                            <ul>
+                                <li>商業登記電子証明書：年額7,900円</li>
+                                <li>民間認証局：年額1-3万円程度</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 検索結果表示 -->
+            <div class="search-results" id="searchResults" style="display: none;">
+                <h2>検索結果</h2>
+                <div class="results-count" id="resultsCount"></div>
+                <div class="results-list" id="resultsList"></div>
+            </div>
+
+            <!-- 検索結果なし -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <div class="no-results-content">
+                    <div class="no-results-icon">🔍</div>
+                    <h3>該当する質問が見つかりませんでした</h3>
+                    <p>
+                        検索キーワードを変更してお試しください。<br>
+                        または、<a href="{{ '/contact/' | relative_url }}">お問い合わせフォーム</a>からご質問ください。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- お問い合わせCTA -->
+    <section class="contact-cta-section">
+        <div class="container">
+            <div class="contact-cta">
+                <div class="cta-content">
+                    <h2>他にご質問がございますか？</h2>
+                    <p>
+                        FAQで解決しない疑問や、より詳細な相談については<br>
+                        お気軽にお問い合わせください。専門家が丁寧にお答えします。
+                    </p>
+                    <a href="{{ '/contact/' | relative_url }}" class="cta-btn">
+                        📞 専門家に相談する
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<style>
+/* ===== FAQページ専用スタイル ===== */
+
+.faq-page {
+    min-height: 100vh;
+}
+
+/* ヒーローセクション */
+.hero-section {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    color: white;
+    padding: 4rem 0 3rem;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.hero-title .icon {
+    font-size: 2rem;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* 検索セクション */
+.search-section {
+    padding: 2rem 0;
+    background: white;
+    border-bottom: 1px solid #e1e8ed;
+}
+
+.search-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.search-box {
+    display: flex;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.search-input {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-btn {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    color: white;
+    border: none;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+    background: linear-gradient(135deg, #ee5a24 0%, #c44569 100%);
+}
+
+.search-icon {
+    font-size: 1.2rem;
+}
+
+/* フィルタータブ */
+.filter-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.filter-tab {
+    background: #f8f9fa;
+    color: #666;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.filter-tab:hover {
+    background: #e9ecef;
+    color: #333;
+}
+
+.filter-tab.active {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    color: white;
+}
+
+/* FAQセクション */
+.faq-section {
+    padding: 4rem 0;
+    background: #f8f9fa;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* カテゴリタイトル */
+.category-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #ff6b6b;
+}
+
+.category-icon {
+    font-size: 1.3rem;
+}
+
+/* FAQ項目 */
+.faq-item {
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.faq-question {
+    padding: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background: #f8f9fa;
+}
+
+.faq-question h3 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    flex: 1;
+    padding-right: 1rem;
+}
+
+.toggle-icon {
+    font-size: 1.5rem;
+    color: #ff6b6b;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.faq-item.active .toggle-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    padding: 0 1.5rem 1.5rem;
+    color: #555;
+    line-height: 1.6;
+    display: none;
+    border-top: 1px solid #f0f0f0;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.faq-answer p {
+    margin-bottom: 1rem;
+}
+
+.faq-answer ul, .faq-answer ol {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+}
+
+.faq-answer li {
+    margin-bottom: 0.5rem;
+}
+
+.faq-answer strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* 検索結果 */
+.search-results {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.search-results h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.results-count {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+
+.results-list .faq-item {
+    margin-bottom: 1rem;
+}
+
+/* 検索結果なし */
+.no-results {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.no-results-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.no-results h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.no-results p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.no-results a {
+    color: #ff6b6b;
+    text-decoration: none;
+}
+
+.no-results a:hover {
+    text-decoration: underline;
+}
+
+/* お問い合わせCTAセクション */
+.contact-cta-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+}
+
+.contact-cta {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.cta-btn {
+    display: inline-block;
+    background: white;
+    color: #4facfe;
+    padding: 1rem 2.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+    color: #357abd;
+    text-decoration: none;
+}
+
+/* カテゴリの非表示 */
+.faq-category.hidden {
+    display: none;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .search-wrapper {
+        padding: 0 1rem;
+    }
+    
+    .filter-tabs {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+    }
+    
+    .filter-tab {
+        flex-shrink: 0;
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .faq-container {
+        padding: 0 1rem;
+    }
+    
+    .faq-question {
+        padding: 1rem;
+    }
+    
+    .faq-question h3 {
+        font-size: 1rem;
+    }
+    
+    .faq-answer {
+        padding: 0 1rem 1rem;
+    }
+    
+    .category-title {
+        font-size: 1.3rem;
+    }
+    
+    .cta-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .cta-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 2rem 0;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .search-box {
+        margin-bottom: 1.5rem;
+    }
+    
+    .search-input {
+        padding: 0.875rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .search-btn {
+        padding: 0.875rem 1rem;
+    }
+    
+    .faq-question {
+        padding: 0.875rem;
+    }
+    
+    .faq-answer {
+        padding: 0 0.875rem 0.875rem;
+    }
+    
+    .toggle-icon {
+        font-size: 1.3rem;
+    }
+}
+</style>
+
+<script>
+// FAQ機能のJavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    // FAQ項目のトグル機能
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', function() {
+            // 他の開いている項目を閉じる
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            
+            // クリックされた項目をトグル
+            item.classList.toggle('active');
+        });
+    });
+
+    // フィルタータブ機能
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const faqCategories = document.querySelectorAll('.faq-category');
+    
+    filterTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const category = this.getAttribute('data-category');
+            
+            // アクティブタブの切り替え
+            filterTabs.forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+            
+            // カテゴリの表示/非表示
+            faqCategories.forEach(cat => {
+                if (category === 'all' || cat.getAttribute('data-category') === category) {
+                    cat.classList.remove('hidden');
+                } else {
+                    cat.classList.add('hidden');
+                }
+            });
+            
+            // 検索結果をクリア
+            clearSearch();
+        });
+    });
+
+    // 検索機能
+    const searchInput = document.getElementById('faqSearch');
+    searchInput.addEventListener('input', function() {
+        const query = this.value.trim();
+        if (query.length > 0) {
+            searchFAQ(query);
+        } else {
+            clearSearch();
+        }
+    });
+
+    // Enterキーでの検索
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            const query = this.value.trim();
+            if (query.length > 0) {
+                searchFAQ(query);
+            }
+        }
+    });
+});
+
+// FAQ検索機能
+function searchFAQ(query) {
+    if (!query) {
+        query = document.getElementById('faqSearch').value.trim();
+    }
+    
+    if (query.length === 0) {
+        clearSearch();
+        return;
+    }
+    
+    const faqItems = document.querySelectorAll('.faq-item');
+    const searchResults = document.getElementById('searchResults');
+    const resultsList = document.getElementById('resultsList');
+    const resultsCount = document.getElementById('resultsCount');
+    const noResults = document.getElementById('noResults');
+    const faqContainer = document.querySelector('.faq-container');
+    
+    // 検索結果をクリア
+    resultsList.innerHTML = '';
+    
+    const results = [];
+    const queryLower = query.toLowerCase();
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question h3').textContent;
+        const answer = item.querySelector('.faq-answer').textContent;
+        const keywords = item.getAttribute('data-keywords') || '';
         
-        <div class="contact-methods">
-            <div class="contact-item">
-                <div class="contact-icon">📞</div>
-                <h3>お電話でのお問い合わせ</h3>
-                <p><strong>046-272-3357</strong></p>
-                <p>平日 9:00-17:00</p>
-            </div>
-            <div class="contact-item">
-                <div class="contact-icon">📧</div>
-                <h3>メールでのお問い合わせ</h3>
-                <p><strong>mail@flat-legal.com</strong></p>
-                <p>24時間受付</p>
-            </div>
-            <div class="contact-item">
-                <div class="contact-icon">💬</div>
-                <h3>無料相談のお申し込み</h3>
-                <p>初回相談は無料です</p>
-                <a href="/contact/" class="btn btn-primary">相談を申し込む</a>
-            </div>
-        </div>
-    </div>
-</div>
+        // 検索対象テキスト
+        const searchText = (question + ' ' + answer + ' ' + keywords).toLowerCase();
+        
+        // マッチング判定
+        if (searchText.includes(queryLower)) {
+            results.push({
+                element: item.cloneNode(true),
+                relevance: calculateRelevance(searchText, queryLower, question.toLowerCase())
+            });
+        }
+    });
+    
+    // 関連度でソート
+    results.sort((a, b) => b.relevance - a.relevance);
+    
+    if (results.length > 0) {
+        // 検索結果を表示
+        results.forEach(result => {
+            const clonedItem = result.element;
+            
+            // イベントリスナーを再設定
+            const question = clonedItem.querySelector('.faq-question');
+            question.addEventListener('click', function() {
+                clonedItem.classList.toggle('active');
+            });
+            
+            resultsList.appendChild(clonedItem);
+        });
+        
+        resultsCount.textContent = `${results.length}件の質問が見つかりました`;
+        
+        // 表示切り替え
+        faqContainer.style.display = 'none';
+        searchResults.style.display = 'block';
+        noResults.style.display = 'none';
+        
+    } else {
+        // 検索結果なし
+        faqContainer.style.display = 'none';
+        searchResults.style.display = 'none';
+        noResults.style.display = 'block';
+    }
+}
 
-<div class="expert-message">
-    <div class="container">
-        <div class="message-content">
-            <div class="expert-info">
-                <h3>行政書士法人ふらっと法務事務所</h3>
-                <p><strong>代表 行政書士 塩澤康幸</strong></p>
-            </div>
-            <div class="message-text">
-                <p>「入札は複雑で分かりにくい」とよく言われますが、適切な知識と準備があれば、必ず成功できます。</p>
-                <p>私たちは15年間で1,000件以上の入札支援を行い、多くの企業様の成功をサポートしてまいりました。</p>
-                <p><strong>皆様の入札成功を、全力でサポートいたします。</strong></p>
-            </div>
-        </div>
-    </div>
-</div>
+// 関連度計算
+function calculateRelevance(text, query, title) {
+    let score = 0;
+    
+    // タイトルでの完全一致
+    if (title.includes(query)) {
+        score += 100;
+    }
+    
+    // タイトルでの部分一致
+    const queryWords = query.split(' ');
+    queryWords.forEach(word => {
+        if (word.length > 1 && title.includes(word)) {
+            score += 50;
+        }
+    });
+    
+    // 本文での一致
+    const matches = (text.match(new RegExp(query, 'gi')) || []).length;
+    score += matches * 10;
+    
+    // 単語での一致
+    queryWords.forEach(word => {
+        if (word.length > 1) {
+            const wordMatches = (text.match(new RegExp(word, 'gi')) || []).length;
+            score += wordMatches * 5;
+        }
+    });
+    
+    return score;
+}
+
+// 検索結果をクリア
+function clearSearch() {
+    const searchResults = document.getElementById('searchResults');
+    const noResults = document.getElementById('noResults');
+    const faqContainer = document.querySelector('.faq-container');
+    
+    // 表示を元に戻す
+    faqContainer.style.display = 'block';
+    searchResults.style.display = 'none';
+    noResults.style.display = 'none';
+    
+    // フィルターを「すべて」に戻す
+    const allTab = document.querySelector('.filter-tab[data-category="all"]');
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const faqCategories = document.querySelectorAll('.faq-category');
+    
+    filterTabs.forEach(tab => tab.classList.remove('active'));
+    allTab.classList.add('active');
+    
+    faqCategories.forEach(cat => cat.classList.remove('hidden'));
+}
+
+// 検索ボタンクリック
+function searchFAQ() {
+    const query = document.getElementById('faqSearch').value.trim();
+    if (query.length > 0) {
+        searchFAQ(query);
+    }
+}
+</script>
 
