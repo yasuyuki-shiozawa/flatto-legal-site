@@ -1,13 +1,68 @@
-[build]
-  base = ""
-  command = "bundle exec jekyll build"
-  publish = "_site"
+# Netlify設定ファイル - パフォーマンス最適化
 
-[build.environment]
-  JEKYLL_ENV = "production"
+# ヘッダー設定
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # セキュリティヘッダー
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+    # パフォーマンス最適化
+    Cache-Control = "public, max-age=31536000"
 
+# 静的アセットのキャッシュ設定
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# 画像ファイルのキャッシュ設定
+[[headers]]
+  for = "*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.jpeg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# HTMLファイルのキャッシュ設定
+[[headers]]
+  for = "*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+# 圧縮設定
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Content-Encoding = "gzip"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Content-Encoding = "gzip"
+
+# リダイレクト設定
 [[redirects]]
-  from = "/old-site/*"
-  to = "/:splat"
+  from = "/index.html"
+  to = "/"
   status = 301
+
+# 404ページ設定
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
 

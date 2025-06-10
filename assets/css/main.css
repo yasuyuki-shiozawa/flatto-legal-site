@@ -5542,3 +5542,51 @@ body.search-active {
     }
 }
 
+
+/* ===== パフォーマンス最適化 ===== */
+
+/* 画像の遅延読み込み */
+img {
+  loading: lazy;
+}
+
+/* 重要でない画像の最適化 */
+.character-image,
+.service-image {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* フォントの最適化 */
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-display: swap;
+}
+
+/* CSSアニメーションの最適化 */
+.btn,
+.feature-card,
+.step {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* 重要でないコンテンツの遅延表示 */
+.testimonials,
+.achievements {
+  content-visibility: auto;
+  contain-intrinsic-size: 500px;
+}
+
+/* スクロール最適化 */
+.main-container {
+  contain: layout style paint;
+}
+
+/* 画像の最適化ヒント */
+.hero-img,
+.service-img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
