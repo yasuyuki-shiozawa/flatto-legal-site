@@ -1,0 +1,35 @@
+User-agent: *
+Allow: /
+
+# 主要ページの優先度設定
+Sitemap: https://flatto-legal-site.netlify.app/sitemap.xml
+
+# 検索エンジンに重要なページを明示
+# トップページ
+Allow: /
+
+# 学習コンテンツページ
+Allow: /knowhow/
+Allow: /cases/
+Allow: /service/
+Allow: /about/
+Allow: /latest-trends/
+
+# お問い合わせページ
+Allow: /contact/
+
+# 静的リソース
+Allow: /assets/
+Allow: /images/
+
+# 除外するファイル・ディレクトリ
+Disallow: /_*
+Disallow: /admin/
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /*.log
+Disallow: /*.tmp
+
+# クロール頻度の調整（1日1回程度）
+Crawl-delay: 86400
+

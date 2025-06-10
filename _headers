@@ -1,0 +1,65 @@
+# Netlify セキュリティヘッダー設定
+# 入札マップサイトのセキュリティ強化
+
+/*
+  # Content Security Policy - XSS攻撃防止
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+  
+  # X-Frame-Options - クリックジャッキング攻撃防止
+  X-Frame-Options: DENY
+  
+  # Strict Transport Security - HTTPS通信強制
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  
+  # X-Content-Type-Options - MIMEタイプ推測防止
+  X-Content-Type-Options: nosniff
+  
+  # Referrer Policy - リファラー情報制御
+  Referrer-Policy: strict-origin-when-cross-origin
+  
+  # X-XSS-Protection - XSS保護（レガシーブラウザ対応）
+  X-XSS-Protection: 1; mode=block
+  
+  # Permissions Policy - 機能制限
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), speaker=(), vibrate=(), fullscreen=(self)
+  
+  # Cache Control - キャッシュ制御
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTMLファイル専用設定
+/*.html
+  # Cache Control - HTMLは短時間キャッシュ
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# CSSファイル専用設定
+/*.css
+  # Cache Control - CSSは長時間キャッシュ
+  Cache-Control: public, max-age=31536000, immutable
+
+# JavaScriptファイル専用設定
+/*.js
+  # Cache Control - JSは長時間キャッシュ
+  Cache-Control: public, max-age=31536000, immutable
+
+# 画像ファイル専用設定
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+# フォントファイル専用設定
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+/*.ttf
+  Cache-Control: public, max-age=31536000, immutable
+/*.eot
+  Cache-Control: public, max-age=31536000, immutable
+
