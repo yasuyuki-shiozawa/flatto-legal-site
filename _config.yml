@@ -27,7 +27,13 @@ twitter:
 # ビルド設定
 markdown: kramdown
 highlighter: rouge
-permalink: /:categories/:title/
+permalink: pretty
+
+# コレクション設定
+collections:
+  pages:
+    output: true
+    permalink: /:name/
 
 # プラグイン
 plugins:
@@ -56,12 +62,6 @@ include:
   - _pages
   - search-index.json
 
-# コレクション設定
-collections:
-  pages:
-    output: true
-    permalink: /:name/
-
 # デフォルト設定
 defaults:
   - scope:
@@ -71,7 +71,6 @@ defaults:
       layout: "default"
   - scope:
       path: ""
-      type: "pages"
     values:
       layout: "default"
 
