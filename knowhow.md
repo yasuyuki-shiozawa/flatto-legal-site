@@ -42,7 +42,7 @@ keywords: 入札基本,公共調達制度,一般競争入札,指名競争入札,
             </div>
             <div class="hero-cta">
                 <a href="#step1" class="cta-button primary">5ステップガイドを見る</a>
-                <a href="/cases/" class="cta-button secondary">事例研究を見る</a>
+                <a href="{{ '/cases/' | relative_url }}" class="cta-button secondary">事例研究を見る</a>
             </div>
         </div>
     </div>
@@ -84,7 +84,7 @@ keywords: 入札基本,公共調達制度,一般競争入札,指名競争入札,
 
 ### 入札の基本原理
 
-公的機関は税金を財源として事業を行うため、**公正性**、**透明性**、**経済性**を確保する必要があります。入札制度は、これらの原則を実現するための重要な仕組みです。
+公的機関は税金を財源として事業を行うため、**公正性**、**透明性**、**経済性**を確保する必要があります。入札制度は、これらの原則を実現するための重要な仕組みです。詳細な<a href="{{ '/cases/' | relative_url }}">事例研究</a>もご参照ください。
 
 <div class="info-box">
     <h4>🎯 入札の3つの原則</h4>

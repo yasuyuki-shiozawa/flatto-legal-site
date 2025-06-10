@@ -94,7 +94,7 @@ keywords: 入札,公共調達,行政書士,入札制度,政府調達,地方自�
                 </div>
                 <h3 class="feature-title">正確で詳細な情報</h3>
                 <p class="feature-description">
-                    法的根拠に基づく正確な情報を提供。地方自治法や会計法などの関連法令を踏まえ、最新の制度変更にも対応した信頼できる内容をお届けします。
+                    <a href="{{ '/knowhow/' | relative_url }}">法的根拠に基づく正確な情報</a>を提供。<a href="{{ '/knowhow/' | relative_url }}">地方自治法や会計法</a>などの関連法令を踏まえ、<a href="{{ '/latest-trends/' | relative_url }}">最新の制度変更</a>にも対応した信頼できる内容をお届けします。
                 </p>
             </div>
             <div class="feature-card">
@@ -103,7 +103,7 @@ keywords: 入札,公共調達,行政書士,入札制度,政府調達,地方自�
                 </div>
                 <h3 class="feature-title">分かりやすい解説</h3>
                 <p class="feature-description">
-                    複雑な制度も段階的に理解できるよう、初心者から上級者まで対応した体系的な構成。専門用語も丁寧に解説し、誰でも理解できる内容を心がけています。
+                    複雑な制度も段階的に理解できるよう、<a href="{{ '/knowhow/' | relative_url }}">初心者から上級者まで対応した体系的な構成</a>。<a href="{{ '/about/' | relative_url }}">専門用語も丁寧に解説</a>し、誰でも理解できる内容を心がけています。
                 </p>
             </div>
             <div class="feature-card">
@@ -112,7 +112,7 @@ keywords: 入札,公共調達,行政書士,入札制度,政府調達,地方自�
                 </div>
                 <h3 class="feature-title">豊富な事例とデータ</h3>
                 <p class="feature-description">
-                    実際の入札事例を基にした学習材料を豊富に提供。成功パターンや注意点を具体的な事例で学べ、実務に直結する知識を身につけることができます。
+                    <a href="{{ '/cases/' | relative_url }}">実際の入札事例を基にした学習材料</a>を豊富に提供。<a href="{{ '/cases/' | relative_url }}">成功パターンや注意点</a>を具体的な事例で学べ、実務に直結する知識を身につけることができます。
                 </p>
             </div>
         </div>
@@ -140,7 +140,7 @@ keywords: 入札,公共調達,行政書士,入札制度,政府調達,地方自�
                 <div class="step-content">
                     <h3 class="step-title">基本制度の理解</h3>
                     <p class="step-description">
-                        入札制度の基本的な仕組みや法的根拠を学習。地方自治法や会計法などの関連法令を理解し、制度の全体像を把握します。
+                        <a href="{{ '/knowhow/' | relative_url }}">入札制度の基本的な仕組みや法的根拠</a>を学習。<a href="{{ '/knowhow/' | relative_url }}">地方自治法や会計法</a>などの関連法令を理解し、制度の全体像を把握します。
                     </p>
                 </div>
             </div>
@@ -152,7 +152,7 @@ keywords: 入札,公共調達,行政書士,入札制度,政府調達,地方自�
                 <div class="step-content">
                     <h3 class="step-title">実務手続きの習得</h3>
                     <p class="step-description">
-                        資格取得から書類作成、入札参加まで、実際の手続きを段階的に学習。必要な書類や注意点を具体的に理解します。
+                        <a href="{{ '/service/' | relative_url }}">資格取得から書類作成、入札参加</a>まで、実際の手続きを段階的に学習。必要な書類や注意点を具体的に理解します。
                     </p>
                 </div>
             </div>
@@ -164,7 +164,7 @@ keywords: 入札,公共調達,行政書士,入札制度,政府調達,地方自�
                 <div class="step-content">
                     <h3 class="step-title">事例研究・応用</h3>
                     <p class="step-description">
-                        実際の成功事例や失敗パターンを分析し、より深い理解を獲得。業界別の特徴や戦略的なアプローチを学習します。
+                        <a href="{{ '/cases/' | relative_url }}">実際の成功事例や失敗パターン</a>を分析し、より深い理解を獲得。<a href="{{ '/cases/' | relative_url }}">業界別の特徴や戦略的なアプローチ</a>を学習します。
                     </p>
                 </div>
             </div>
