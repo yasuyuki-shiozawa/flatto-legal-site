@@ -54,6 +54,7 @@ exclude:
 # 含めるファイル
 include:
   - _pages
+  - search-index.json
 
 # コレクション設定
 collections:
