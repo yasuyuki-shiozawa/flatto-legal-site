@@ -574,6 +574,14 @@ body {
     box-shadow: 0 8px 32px rgba(59, 130, 246, 0.15);
 }
 
+/* モバイル表示時の画像サイズ調整 */
+@media (max-width: 768px) {
+    .hero-img {
+        max-height: 200px;
+        object-fit: contain;
+    }
+}
+
 .step-icon {
     margin-bottom: 1rem;
 }
@@ -722,6 +730,13 @@ body {
     
     .accent-image {
         max-width: 120px;
+    }
+    
+    /* ロゴ画像のサイズ調整 */
+    img[alt*="行政書士法人ふらっと法務事務所"] {
+        max-height: 40px;
+        width: auto;
+        object-fit: contain;
     }
 }
 
