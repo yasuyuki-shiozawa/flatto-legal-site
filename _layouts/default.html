@@ -69,6 +69,43 @@
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v=20250611">
     <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}?v=20250611" as="style">
     
+    <!-- インラインスタイル（モバイル表示時の画像サイズ制御用） -->
+    <style>
+        @media (max-width: 768px) {
+            /* ヒーロー画像のサイズ制限を強化 */
+            .hero-image img.hero-img,
+            .hero-content .hero-image img.hero-img,
+            img.hero-img,
+            .container .hero-content .hero-image img.hero-img {
+                max-height: 150px !important;
+                max-width: 100% !important;
+                width: auto !important;
+                object-fit: contain !important;
+                display: block !important;
+            }
+            
+            /* ロゴ画像のサイズ調整を強化 */
+            .logo img.logo-img,
+            .header .logo img,
+            .header-content .logo img,
+            img[alt*="行政書士法人ふらっと法務事務所"],
+            .header .container .header-content .logo a img {
+                max-height: 30px !important;
+                width: auto !important;
+                object-fit: contain !important;
+            }
+            
+            /* その他のセクション画像も調整 */
+            .section-image img,
+            .feature-image img,
+            .step-img {
+                max-height: 120px !important;
+                width: auto !important;
+                object-fit: contain !important;
+            }
+        }
+    </style>
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
