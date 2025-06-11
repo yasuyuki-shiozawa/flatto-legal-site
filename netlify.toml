@@ -1,94 +1,14 @@
-# Netlify設定ファイル - パフォーマンス最適化
-
-# ビルド設定
 [build]
-  publish = "_site"
+  base = ""
   command = "bundle install && bundle exec jekyll build"
+  publish = "_site"
 
 [build.environment]
   JEKYLL_ENV = "production"
   RUBY_VERSION = "3.0.2"
 
-# ヘッダー設定
-[[headers]]
-  for = "/*"
-  [headers.values]
-    # セキュリティヘッダー
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    
-    # パフォーマンス最適化
-    Cache-Control = "public, max-age=3600"
-
-# 静的アセットのキャッシュ設定
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-# 画像ファイルのキャッシュ設定
-[[headers]]
-  for = "*.png"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "*.jpg"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "*.jpeg"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "*.webp"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-# HTMLファイルのキャッシュ設定
-[[headers]]
-  for = "*.html"
-  [headers.values]
-    Cache-Control = "public, max-age=3600"
-
-# 圧縮設定
-[[headers]]
-  for = "*.js"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "*.css"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-# JSON ファイル設定
-[[headers]]
-  for = "*.json"
-  [headers.values]
-    Cache-Control = "public, max-age=3600"
-    Content-Type = "application/json; charset=utf-8"
-
-# リダイレクト設定
 [[redirects]]
-  from = "/index.html"
-  to = "/"
+  from = "/old-site/*"
+  to = "/:splat"
   status = 301
-
-[[redirects]]
-  from = "/privacy.html"
-  to = "/privacy-policy/"
-  status = 301
-
-[[redirects]]
-  from = "/privacy/"
-  to = "/privacy-policy/"
-  status = 301
-
-# 404ページ設定 - 修正版
-# 注意: ワイルドカード "/*" の設定は全てのリクエストを404にリダイレクトするため削除
 
