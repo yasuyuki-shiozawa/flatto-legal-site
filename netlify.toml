@@ -3,7 +3,7 @@
 # ビルド設定
 [build]
   publish = "_site"
-  command = "bundle exec jekyll build --verbose"
+  command = "bundle install && bundle exec jekyll build"
 
 [build.environment]
   JEKYLL_ENV = "production"
