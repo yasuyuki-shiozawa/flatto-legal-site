@@ -574,11 +574,42 @@ body {
     box-shadow: 0 8px 32px rgba(59, 130, 246, 0.15);
 }
 
-/* モバイル表示時の画像サイズ調整 */
+/* モバイル表示時の画像サイズ調整 - 優先度強化版 */
 @media (max-width: 768px) {
+    /* ヒーロー画像のサイズ制限を強化 */
     .hero-img {
         max-height: 200px;
         object-fit: contain;
+    }
+    
+    /* 追加の強化セレクタ - 最大優先度 */
+    .hero-image img.hero-img,
+    .hero-content .hero-image img.hero-img,
+    .container .hero-content .hero-image img.hero-img {
+        max-height: 150px !important;
+        max-width: 100% !important;
+        width: auto !important;
+        object-fit: contain !important;
+        display: block !important;
+    }
+    
+    /* ロゴ画像のサイズ調整を強化 */
+    .logo img.logo-img,
+    .header .logo img,
+    .header-content .logo img,
+    img[alt*="行政書士法人ふらっと法務事務所"],
+    .header .container .header-content .logo a img {
+        max-height: 30px !important;
+        width: auto !important;
+        object-fit: contain !important;
+    }
+    
+    /* その他のセクション画像も調整 */
+    .section-image img,
+    .feature-image img {
+        max-height: 120px !important;
+        width: auto !important;
+        object-fit: contain !important;
     }
 }
 
