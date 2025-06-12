@@ -72,9 +72,10 @@
     </style>
     
     <!-- 非クリティカルCSS（遅延読み込み） -->
-    <link rel="preload" href="{{ '/assets/css/optimized/non-critical.css' | relative_url }}?v=20250612" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ '/assets/css/optimized/non-critical.css' | relative_url }}?v=20250612"></noscript>
-    
+   <link rel="stylesheet" href="{{ 
+'/assets/css/optimized/non-critical.css' | relative_url }}?v=20250612_1" >
+    <noscript><link rel="stylesheet" href="{{ 
+'/assets/css/optimized/non-critical.css' | relative_url }}?v=20250612_1"></noscript>    
     <!-- ページ固有CSS（条件付き読み込み） -->
     {% if page.use_page_specific_css %}
     <link rel="stylesheet" href="{{ '/assets/css/optimized/page-specific.css' | relative_url }}?v=20250612">
@@ -90,7 +91,7 @@
     
     <!-- 重要なリソースのプリロード -->
     <link rel="preload" href="{{ '/assets/images/logo.webp' | relative_url }}" as="image">
-    <link rel="preload" href="{{ '/assets/images/hero-character.webp' | relative_url }}" as="image">
+    <link rel="preload" href="{{ '/assets/images/hero-character.png' | relative_url }}" as="image">
     
     <!-- Google Analytics 4 (GA4) -->
     {% if site.google_analytics %}
