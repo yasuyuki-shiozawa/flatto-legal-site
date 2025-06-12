@@ -4,7 +4,9 @@ title: 入札マップ｜公共調達の知識をナビゲートするポータ�
 description: 入札・公共調達の基本から実践まで、体系的に学べる知識ポータルサイト。複雑な入札の世界を分かりやすく案内します。
 keywords: 入札,公共調達,行政書士,入札制度,政府調達,地方自治体,競争入札,随意契約,プロポーザル,入札参加資格,公共工事,物品調達,業務委託
 ---
-<!-- ヒーローセクション -->section class="hero">
+
+<!-- ヒーローセクション -->
+<section class="hero">
     <div class="container">
         <!-- しおさんのウェルカムメッセージ -->
         <div class="expert-comment">
@@ -402,85 +404,9 @@ keywords: 入札,公共調達,行政書士,入札制度,政府調達,地方自�
                         体系的に学べるので、入札制度の全体像が理解できました。
                     </p>
                 </div>
-                <div class="testimonial-author">
-                    <div class="author-info">
-                        <h4 class="author-name">清掃関係業代表 A様</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-content">
-                    <p class="testimonial-text">
-                        法的根拠がしっかり説明されているので、安心して学習できます。
-                    </p>
-                </div>
-                <div class="testimonial-author">
-                    <div class="author-info">
-                        <h4 class="author-name">Webデザイン会社代表 Y様</h4>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- 学習促進CTA -->
-<section class="mid-cta testimonials-cta-section">
-    <div class="container">
-        <div class="cta-content">
-            <div class="cta-highlight">
-                <h3 class="cta-title">📖 あなたも同じように理解を深めませんか？</h3>
-                <p class="cta-description">
-                    「体系的に学べる」「法的根拠がしっかりしている」<br>
-                    正しい知識で、入札制度を理解しましょう。
-                </p>
-                <div class="cta-buttons">
-                    <a href="/knowhow/" class="btn btn-primary btn-large">
-                        <i class="fas fa-graduation-cap"></i>
-                        体系的な学習を始める
-                    </a>
-                    <a href="/cases/" class="btn btn-secondary btn-large">
-                        <i class="fas fa-search"></i>
-                        事例研究で理解を深める
-                    </a>
-                </div>
-                <div class="cta-urgency">
-                    <span class="urgency-text">✓ 基本から応用まで網羅</span>
-                    <span class="urgency-text">✓ 最新制度に対応</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- 最終学習案内 -->
-<section class="final-cta">
-    <div class="container">
-        <div class="cta-content">
-            <h2 class="cta-title">入札制度について学びたいですか？</h2>
-            <p class="cta-description">
-                入札マップでは、公共調達の基本から実践まで体系的に学べます。<br>
-                まずは基本的な制度理解から始めてみましょう。
-            </p>
-            <div class="cta-buttons">
-                <a href="{{ '/knowhow/' | relative_url }}" class="btn btn-primary btn-large">
-                    <i class="fas fa-book"></i>
-                    入札の基本を学ぶ
-                </a>
-                <a href="{{ '/cases/' | relative_url }}" class="btn btn-outline btn-large">
-                    <i class="fas fa-chart-line"></i>
-                    事例研究を見る
-                </a>
-            </div>
-        </div>
-        
-        <!-- サイト運営者情報 -->
-        <div class="site-operator">
-            <h3 class="operator-title">サイト運営</h3>
-            <p class="operator-info">
-                入札マップ<br>
-                運営：行政書士法人ふらっと法務事務所（しおさん）
-            </p>
-        </div>
-    </div>
-</section>
