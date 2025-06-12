@@ -2,8 +2,8 @@
 
 title: "行政書士法人ふらっと法務事務所"
 description: "入札サポート専門サイト - 代表 塩澤康幸があなたの入札を成功に導きます"
-baseurl: ""
-url: "https://flatto-legal-site.netlify.app"
+baseurl: "/flatto-legal-site"
+url: "https://yasuyuki-shiozawa.github.io"
 
 # 会社情報
 company:
