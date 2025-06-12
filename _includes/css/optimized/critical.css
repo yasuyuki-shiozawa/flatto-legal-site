@@ -88,6 +88,29 @@ body {
     width: auto !important;
     object-fit: contain !important;
   }
+  
+  /* サービスページの画像サイズ調整 */
+  .service-main-img {
+    max-width: 100% !important;
+    width: auto !important;
+    height: auto !important;
+    max-height: 400px !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+  
+  .comment-avatar {
+    max-width: 80px !important;
+    width: auto !important;
+    height: auto !important;
+  }
+  
+  .privacy-mark-img {
+    max-width: 100% !important;
+    width: auto !important;
+    max-height: 150px !important;
+  }
 }
 
 /* メインコンテナ */
@@ -113,6 +136,28 @@ body {
 
 .main-content {
   width: 100%;
+}
+
+/* サービスページの画像サイズ調整（全画面サイズ共通） */
+.service-main-img {
+  max-width: 100% !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+.comment-avatar {
+  max-width: 126px !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.privacy-mark-img {
+  max-width: 100% !important;
+  width: auto !important;
+  max-height: 200px !important;
 }
 
 /* 基本的なタイポグラフィ */
