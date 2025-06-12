@@ -110,3 +110,6 @@ google_tag_manager: ""
 # 例: google_site_verification: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 google_site_verification: ""
 
+
+# Minor change to trigger rebuild
+
