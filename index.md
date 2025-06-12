@@ -10,7 +10,7 @@ keywords: 入札,公共調達,行政書士,入札制度,政府調達,地方自�
     <div class="container">
         <!-- しおさんのウェルカムメッセージ -->
         <div class="expert-comment">
-            <img src="/assets/images/shiozawa_character.jpeg" alt="しおさん" class="comment-avatar">
+            <img src="/assets/images/shiozawa_character.webp" alt="しおさん" class="comment-avatar">
             <div class="comment-bubble">
                 入札の世界は複雑に見えますが、正しい知識があれば必ず理解できます。一緒に学んでいきましょう！
             </div>
@@ -37,7 +37,7 @@ keywords: 入札,公共調達,行政書士,入札制度,政府調達,地方自�
                 </div>
             </div>
             <div class="hero-image">
-                <img src="{{ site.baseurl }}/assets/images/hero-character.png" alt="入札マップのキャラクターイラスト" class="hero-img">
+                <img src="{{ site.baseurl }}/assets/images/hero-character.webp" alt="入札マップのキャラクターイラスト" class="hero-img">
             </div>
         </div>
     </div>
@@ -81,7 +81,7 @@ keywords: 入札,公共調達,行政書士,入札制度,政府調達,地方自�
         
         <!-- あきら君の案内コメント -->
         <div class="expert-comment">
-            <img src="/assets/images/akira_character.jpeg" alt="あきら君" class="comment-avatar">
+            <img src="/assets/images/akira_character.webp" alt="あきら君" class="comment-avatar">
             <div class="comment-bubble">
                 入札制度の特徴を3つのポイントで整理しました。それぞれの重要性を理解していきましょう！
             </div>
@@ -125,7 +125,7 @@ keywords: 入札,公共調達,行政書士,入札制度,政府調達,地方自�
         <h2 class="section-title">入札の学習ステップ</h2>
         <!-- さおりさんの疑問コメント -->
         <div class="expert-comment">
-            <img src="/assets/images/saori_character.jpeg" alt="さおりさん" class="comment-avatar">
+            <img src="/assets/images/saori_character.webp" alt="さおりさん" class="comment-avatar">
             <div class="comment-bubble">
                 入札って難しそうですが、どこから始めればいいんでしょうか？
             </div>
@@ -190,7 +190,7 @@ keywords: 入札,公共調達,行政書士,入札制度,政府調達,地方自�
         
         <!-- いまいさんの解説コメント -->
         <div class="expert-comment">
-            <img src="/assets/images/imai_character.jpeg" alt="いまいさん" class="comment-avatar">
+            <img src="/assets/images/imai_character.webp" alt="いまいさん" class="comment-avatar">
             <div class="comment-bubble">
                 公共調達の規模や参加機会について、内閣府や国土交通省の公式データに基づく正確な情報をご紹介します。
             </div>

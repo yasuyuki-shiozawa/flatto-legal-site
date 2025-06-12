@@ -13,7 +13,7 @@ keywords: 公共調達最新動向,入札制度改正,デジタル化,電子入�
 
 <!-- しおさんの解説コメント -->
 <div class="expert-comment">
-    <img src="/assets/images/shiozawa_character.jpeg" alt="しおさん" class="comment-avatar">
+    <img src="/assets/images/shiozawa_character.webp" alt="しおさん" class="comment-avatar">
     <div class="comment-bubble">
         公共調達のデジタル化は、事業者にとって大きなチャンスです。新しい制度を理解して、戦略的に活用していきましょう！
     </div>

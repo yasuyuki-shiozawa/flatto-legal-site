@@ -9,7 +9,7 @@ keywords: 入札基本,公共調達制度,一般競争入札,指名競争入札,
 
 <!-- しおさんのワンポイントコメント -->
 <div class="expert-comment">
-    <img src="/assets/images/shiozawa_character.jpeg" alt="しおさん" class="comment-avatar">
+    <img src="/assets/images/shiozawa_character.webp" alt="しおさん" class="comment-avatar">
     <div class="comment-bubble">
         入札制度は複雑に見えますが、基本から順序立てて学べば必ず理解できます。一緒に学んでいきましょう！
     </div>
@@ -492,7 +492,7 @@ keywords: 入札基本,公共調達制度,一般競争入札,指名競争入札,
 <!-- STEP1後の学習促進コメント -->
 <div class="knowhow-cta step1-cta">
     <div class="character-comment">
-        <img src="/assets/images/shiozawa_character.jpeg" alt="しおさん" class="character-avatar">
+        <img src="/assets/images/shiozawa_character.webp" alt="しおさん" class="character-avatar">
         <div class="comment-bubble">
             <p>資格取得は時間がかかりますが、一度取得すれば長期間有効です。計画的に進めることが重要ですね。</p>
             <div class="cta-buttons">

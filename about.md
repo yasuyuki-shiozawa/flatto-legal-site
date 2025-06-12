@@ -17,7 +17,7 @@ description: 行政書士法人ふらっと法務事務所の理念、代表者�
     <div class="container">
         <!-- しおさんのメッセージ -->
         <div class="expert-comment">
-            <img src="/assets/images/shiozawa_character.jpeg" alt="しおさん" class="comment-avatar">
+            <img src="/assets/images/shiozawa_character.webp" alt="しおさん" class="comment-avatar">
             <div class="comment-bubble">
                 入札制度をもっと身近に、もっと分かりやすく。そんな想いで「入札マップ」を作りました。
             </div>
