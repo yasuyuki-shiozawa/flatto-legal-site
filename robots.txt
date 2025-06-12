@@ -23,7 +23,6 @@ Allow: /assets/
 Allow: /images/
 
 # 除外するファイル・ディレクトリ
-Disallow: /_*
 Disallow: /admin/
 Disallow: /.git/
 Disallow: /node_modules/
@@ -34,6 +33,5 @@ Disallow: /*.tmp
 # 重要なページの明示的な許可
 Allow: /search-index.json
 
-# クロール頻度の調整（1日1回程度）
-Crawl-delay: 86400
-
+# クロール頻度の調整（適切な値に修正）
+# Crawl-delay: 10
