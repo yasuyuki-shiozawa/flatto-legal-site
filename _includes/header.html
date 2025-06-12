@@ -3,8 +3,8 @@
         <div class="header-content">
             <!-- ロゴ -->
             <div class="logo">
-                <a href="{{ '/' | relative_url }}">
-                    <img src="{{ '/assets/images/logo.webp' | relative_url }}" alt="{{ site.title }}" class="logo-img">
+                <a href="/">
+                    <img src="/assets/images/logo.webp" alt="{{ site.title }}" class="logo-img">
                 </a>
             </div>
             
@@ -13,7 +13,7 @@
                 <ul class="nav-list">
                     {% for item in site.data.navigation.main_nav %}
                     <li class="nav-item">
-                        <a href="{{ item.url | relative_url }}" 
+                        <a href="{{ item.url }}" 
                            class="nav-link{% if page.url == item.url %} active{% endif %}"
                            title="{{ item.description }}">
                             <i class="{{ item.icon }}"></i>
