@@ -67,8 +67,8 @@
     </script>
     
     <!-- CSS -->
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v=20250611">
-    <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}?v=20250611" as="style">
+    <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}?v=20250611" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v=20250611"></noscript>
     
     <!-- インラインスタイル（モバイル表示時の画像サイズ制御用） -->
     <style>
