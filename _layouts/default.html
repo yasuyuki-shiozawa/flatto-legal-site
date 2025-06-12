@@ -66,46 +66,19 @@
     }
     </script>
     
-    <!-- CSS -->
-    <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}?v=20250611" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v=20250611"></noscript>
-    
-    <!-- インラインスタイル（モバイル表示時の画像サイズ制御用） -->
+    <!-- クリティカルCSS（インライン） -->
     <style>
-        @media (max-width: 768px) {
-            /* ヒーロー画像のサイズ制限を強化 */
-            .hero-image img.hero-img,
-            .hero-content .hero-image img.hero-img,
-            img.hero-img,
-            .container .hero-content .hero-image img.hero-img {
-                max-height: 150px !important;
-                max-width: 100% !important;
-                width: auto !important;
-                object-fit: contain !important;
-                display: block !important;
-            }
-            
-            /* ロゴ画像のサイズ調整を強化 */
-            .logo img.logo-img,
-            .header .logo img,
-            .header-content .logo img,
-            img[alt*="行政書士法人ふらっと法務事務所"],
-            .header .container .header-content .logo a img {
-                max-height: 30px !important;
-                width: auto !important;
-                object-fit: contain !important;
-            }
-            
-            /* その他のセクション画像も調整 */
-            .section-image img,
-            .feature-image img,
-            .step-img {
-                max-height: 120px !important;
-                width: auto !important;
-                object-fit: contain !important;
-            }
-        }
+    {% include /assets/css/optimized/critical.css %}
     </style>
+    
+    <!-- 非クリティカルCSS（遅延読み込み） -->
+    <link rel="preload" href="{{ '/assets/css/optimized/non-critical.css' | relative_url }}?v=20250612" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ '/assets/css/optimized/non-critical.css' | relative_url }}?v=20250612"></noscript>
+    
+    <!-- ページ固有CSS（条件付き読み込み） -->
+    {% if page.use_page_specific_css %}
+    <link rel="stylesheet" href="{{ '/assets/css/optimized/page-specific.css' | relative_url }}?v=20250612">
+    {% endif %}
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,8 +92,8 @@
     <link rel="preload" href="{{ 
 '/assets/images/logo.webp' | relative_url }}" as="image">     <link rel="preload" href="{{ 
 '/assets/images/hero-business-partnership.webp' | relative_url }}" as="image">    
+    
     <!-- Google Analytics 4 (GA4) -->
-    <!-- GA4トラッキングコードをここに設置予定 -->
     {% if site.google_analytics %}
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
@@ -131,6 +104,9 @@
       gtag('config', '{{ site.google_analytics }}');
     </script>
     {% endif %}
+    
+    <!-- コアJavaScript -->
+    <script src="{{ '/assets/js/optimized/core.js' | relative_url }}?v=20250612" defer></script>
 </head>
 <body>
     {% include header.html %}
@@ -157,11 +133,18 @@
     
     {% include footer.html %}
     
+    <!-- 条件付きスクリプト読み込み -->
+    {% if page.use_toc %}
+    <!-- 目次機能 -->
+    <script src="{{ '/assets/js/optimized/toc.js' | relative_url }}?v=20250612" defer></script>
+    {% endif %}
+    
+    {% if page.use_search %}
     <!-- Lunr.js検索ライブラリ -->
     <script src="https://unpkg.com/lunr/lunr.min.js" defer></script>
-    
-    <!-- メインJavaScript -->
-    <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+    <!-- 検索機能 -->
+    <script src="{{ '/assets/js/optimized/search.js' | relative_url }}?v=20250612" defer></script>
+    {% endif %}
     
     <!-- 検索オーバーレイ -->
     {% include search-overlay.html %}
@@ -171,6 +154,21 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     {% endif %}
+    
+    <!-- 画像遅延読み込みスクリプト -->
+    <script>
+        // 画像の遅延読み込み
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img:not([loading])');
+            images.forEach(img => {
+                // ヒーロー画像やロゴなど重要な画像は除外
+                if (!img.classList.contains('hero-img') && 
+                    !img.classList.contains('logo-img') && 
+                    !img.src.includes('logo.webp')) {
+                    img.setAttribute('loading', 'lazy');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
-
