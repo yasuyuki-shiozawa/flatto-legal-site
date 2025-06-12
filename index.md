@@ -36,10 +36,9 @@ keywords: 入札,公共調達,行政書士,入札制度,政府調達,地方自�
                     </a>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="{{ '/assets/images/hero-office-green.jpg' | relative_url }}" alt="オフィス風景" class="hero-img">
-            </div>
-        </div>
+            <div class="hero-imag                <img src="{{ 
+'/assets/images/hero-office-green.jpg' | relative_url }}" alt="オフィス風景" class="hero-img">
+            </div>      </div>
     </div>
 </section>
 
