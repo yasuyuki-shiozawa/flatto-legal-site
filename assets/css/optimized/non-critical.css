@@ -9,6 +9,7 @@
 @media (min-width: 1024px) {
   .nav {
     display: block;
+    width: auto;
   }
 }
 
