@@ -37,7 +37,7 @@ keywords: 入札,公共調達,行政書士,入札制度,政府調達,地方自�
                 </div>
             </div>
             <div class="hero-image">
-                <img src="{{ '/assets/images/hero-business-partnership.png' | relative_url }}" alt="ビジネスパートナーシップ" class="hero-img">
+                <img src="{{ '/assets/images/hero-character.webp' | relative_url }}" alt="入札マップのキャラクターイラスト" class="hero-img">
             </div>
         </div>
     </div>
