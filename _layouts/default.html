@@ -71,11 +71,8 @@
     {% include css/optimized/critical.css %}
     </style>
     
-    <!-- サイドバー修正用CSS -->
-    <link rel="stylesheet" href="/assets/css/optimized/sidebar-fix-final.css?v=20250613_06">
-    
-    <!-- 画像サイズ制御用CSS -->
-    <link rel="stylesheet" href="/assets/css/optimized/image-size-control.css?v=20250613_05">
+    <!-- 統合修正CSS（最優先） -->
+    <link rel="stylesheet" href="/assets/css/optimized/comprehensive-fix.css?v=20250613_01">
     
     <!-- 非クリティカルCSS（遅延読み込み） -->
    <link rel="stylesheet" href="/assets/css/optimized/non-critical.css?v=20250613_01">
@@ -108,12 +105,6 @@
     
     <!-- コアJavaScript -->
     <script src="/assets/js/optimized/core.js?v=20250613_01" defer></script>
-
-    <!-- サイドバー修正用CSS -->
-    <link rel="stylesheet" href="/assets/css/optimized/sidebar-fix-final.css?v=20250613_05">
-    
-    <!-- 画像サイズ制御用CSS -->
-    <link rel="stylesheet" href="/assets/css/optimized/image-size-control.css?v=20250613_04">
 </head>
 <body>
     {% include header.html %}

@@ -1,0 +1,105 @@
+/* サイドバー固定表示とヘッダーロゴサイズ制御の統合修正CSS */
+/* 2025年6月13日 - 根本原因に基づく確実な修正 */
+
+/* ===== ヘッダーロゴサイズ制御 ===== */
+.logo-img {
+    max-width: 200px !important;
+    max-height: 60px !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+}
+
+/* ===== サイドバー固定表示修正 ===== */
+.main-container {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: calc(100vh - 80px) !important;
+}
+
+.content-wrapper.three-column {
+    display: grid !important;
+    grid-template-columns: 250px 1fr 300px !important;
+    grid-template-rows: 1fr !important;
+    gap: 20px !important;
+    min-height: calc(100vh - 120px) !important;
+    padding: 20px !important;
+}
+
+.left-sidebar {
+    position: sticky !important;
+    top: 100px !important;
+    height: fit-content !important;
+    max-height: calc(100vh - 120px) !important;
+    overflow-y: auto !important;
+    background: #ffffff !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    padding: 20px !important;
+    z-index: 10 !important;
+}
+
+.right-sidebar {
+    position: sticky !important;
+    top: 100px !important;
+    height: fit-content !important;
+    max-height: calc(100vh - 120px) !important;
+    overflow-y: auto !important;
+    background: #ffffff !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    padding: 20px !important;
+    z-index: 10 !important;
+}
+
+.main-content {
+    min-height: 600px !important;
+    padding: 20px !important;
+}
+
+/* ===== レスポンシブ対応 ===== */
+@media (max-width: 1024px) {
+    .content-wrapper.three-column {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto auto auto !important;
+    }
+    
+    .left-sidebar,
+    .right-sidebar {
+        position: static !important;
+        max-height: none !important;
+    }
+}
+
+/* ===== 画像サイズ制御（全般） ===== */
+img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* service-overview.png の特別制御 */
+img[src*="service-overview.png"] {
+    max-width: 400px !important;
+    max-height: 400px !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+
+/* その他の大きな画像の制御 */
+.main-content img {
+    max-width: 600px !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+
+/* ===== ヘッダー固定表示の確保 ===== */
+.header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+    background: #ffffff !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
