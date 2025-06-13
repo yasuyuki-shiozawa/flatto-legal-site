@@ -82,3 +82,20 @@
     padding: 0;
   }
 }
+
+/* 制度ガイドページの画像サイズ修正 */
+.main-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* 特に大きな画像の場合の追加制限 */
+.main-content img[src*="service-overview"] {
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+
