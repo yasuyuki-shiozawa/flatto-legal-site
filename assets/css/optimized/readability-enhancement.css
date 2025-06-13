@@ -52,7 +52,7 @@ strong {
 }
 
 /* 重要な情報ボックス */
-.info-box, .detail-box, .tips-box, .warning-box {
+.info-box, .detail-box, .tips-box, .warning-box, .tip-box {
     margin: 2rem 0;
     padding: 1.5rem;
     border-radius: 8px;
@@ -71,7 +71,7 @@ strong {
     background: linear-gradient(135deg, #ecfdf5 0%, #f8fafc 100%);
 }
 
-.tips-box {
+.tips-box, .tip-box {
     border-left-color: #f59e0b;
     background: linear-gradient(135deg, #fffbeb 0%, #f8fafc 100%);
 }
@@ -81,7 +81,7 @@ strong {
     background: linear-gradient(135deg, #fef2f2 0%, #f8fafc 100%);
 }
 
-.info-box h4, .detail-box h4, .tips-box h4, .warning-box h4 {
+.info-box h4, .detail-box h4, .tips-box h4, .warning-box h4, .tip-box h4 {
     margin-top: 0;
     margin-bottom: 1rem;
     font-size: 1.125rem;
@@ -90,7 +90,7 @@ strong {
     padding: 0;
 }
 
-.info-box h5, .detail-box h5, .tips-box h5, .warning-box h5 {
+.info-box h5, .detail-box h5, .tips-box h5, .warning-box h5, .tip-box h5 {
     margin-top: 0;
     margin-bottom: 0.75rem;
     font-size: 1rem;
@@ -356,3 +356,255 @@ a:hover {
     font-size: 0.875rem;
 }
 
+/* 新規追加: 区切り線 */
+.section-divider {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    margin: 2.5rem 0;
+    clear: both;
+}
+
+/* 新規追加: コンテンツボックス共通スタイル */
+.content-box {
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 新規追加: 各種ボックスタイプ */
+.summary-box {
+    background-color: #f5f5f5;
+    border-left: 5px solid #607d8b;
+}
+
+.reference-box {
+    background-color: #f3e5f5;
+    border-left: 5px solid #9c27b0;
+}
+
+/* 新規追加: ステップガイド（リスト形式） */
+.step-guide {
+    counter-reset: step-counter;
+    margin: 2rem 0;
+}
+
+.step-guide-item {
+    position: relative;
+    padding-left: 3rem;
+    margin-bottom: 1.5rem;
+    counter-increment: step-counter;
+}
+
+.step-guide-item:before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2rem;
+    height: 2rem;
+    background-color: #2196f3;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* 新規追加: 要約セクション（ボックス形式） */
+.summary-section {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-left: 5px solid #607d8b;
+}
+
+/* 新規追加: プロセスフロー */
+.process-flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.flow-step {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 1rem;
+    flex: 1;
+    min-width: 150px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.flow-arrow {
+    font-size: 1.5rem;
+    color: #3b82f6;
+    margin: 0 0.5rem;
+    font-weight: bold;
+}
+
+.flow-number {
+    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin: 0 auto 0.5rem;
+}
+
+.flow-content h4 {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    border: none;
+    padding: 0;
+}
+
+.flow-content p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+/* 新規追加: 比較表 */
+.comparison-table {
+    overflow-x: auto;
+    margin: 2rem 0;
+}
+
+/* 新規追加: 成功事例ボックス */
+.success-story {
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+    border-left: 5px solid #10b981;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.success-story h4 {
+    color: #047857;
+    margin-top: 0;
+    border: none;
+    padding: 0;
+}
+
+/* 新規追加: 知識ポータルCTA */
+.knowhow-cta {
+    background: linear-gradient(135deg, #eff6ff 0%, #bfdbfe 100%);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 3rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.character-comment {
+    display: flex;
+    align-items: flex-start;
+}
+
+.character-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment-bubble {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    flex: 1;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.comment-bubble:before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 20px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid white;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-inline {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-inline.primary {
+    background: #2563eb;
+    color: white;
+}
+
+.btn-inline.secondary {
+    background: white;
+    color: #2563eb;
+    border: 1px solid #2563eb;
+}
+
+.btn-inline:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.trust-indicators {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    color: #4b5563;
+}
+
+/* 新規追加: 対話型導入セクション */
+.dialogue-intro {
+    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.client-comment {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.client-comment .comment-avatar {
+    width: 50px;
+    height: 50px;
+}
+
+.client-comment .comment-bubble {
+    background: #eff6ff;
+}
+
+.client-comment .comment-bubble:before {
+    border-right-color: #eff6ff;
+}

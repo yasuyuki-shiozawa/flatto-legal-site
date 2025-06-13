@@ -1,11 +1,16 @@
 /* サイドバー固定表示のためのCSS - 最終修正版 */
 /* 2025年6月13日 - グリッドレイアウト構造に最適化 */
 
+/* main-containerの高さ調整 */
+html body .main-container {
+  min-height: 100vh !important; /* ビューポート高さを確保 */
+}
+
 /* グリッドレイアウトの親要素を調整 */
-.content-wrapper.three-column {
+html body .main-container .content-wrapper.three-column {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: auto !important; /* 高さを自動調整に変更 */
+  grid-template-rows: 1fr !important; /* グリッドアイテムが利用可能なスペースを埋めるように変更 */
   min-height: 100vh; /* 最低でもビューポート高さを確保 */
 }
 
@@ -76,3 +81,5 @@
 .right-sidebar-content:hover {
   background-color: #ffffff !important;
 }
+
+
