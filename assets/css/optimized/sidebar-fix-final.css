@@ -1,0 +1,78 @@
+/* サイドバー固定表示のためのCSS - 最終修正版 */
+/* 2025年6月13日 - グリッドレイアウト構造に最適化 */
+
+/* グリッドレイアウトの親要素を調整 */
+.content-wrapper.three-column {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: auto !important; /* 高さを自動調整に変更 */
+  min-height: 100vh; /* 最低でもビューポート高さを確保 */
+}
+
+/* サイドバーの親要素の調整 */
+.content-wrapper.three-column > .left-sidebar,
+.content-wrapper.three-column > .right-sidebar {
+  position: relative !important; /* 相対位置指定を強制 */
+  height: auto !important; /* 高さを自動調整に */
+  min-height: 100vh !important; /* 最低でもビューポート高さを確保 */
+  overflow: visible !important; /* オーバーフローを表示 */
+  align-self: start !important; /* グリッド内での位置調整 */
+  display: block !important; /* ブロック要素として表示 */
+}
+
+/* サイドバーコンテンツの固定表示設定 */
+.content-wrapper.three-column .left-sidebar .left-sidebar-content,
+.content-wrapper.three-column .right-sidebar .right-sidebar-content {
+  position: sticky !important;
+  top: 100px !important; /* ヘッダーの高さ + 余白 */
+  max-height: calc(100vh - 120px) !important; /* 画面の高さから余白を引いた値 */
+  overflow-y: auto !important; /* コンテンツが長い場合はスクロール可能に */
+  z-index: 10 !important;
+  padding-bottom: 2rem !important; /* 下部に余白を追加 */
+}
+
+/* スクロールバーのデザイン調整 */
+.left-sidebar-content::-webkit-scrollbar,
+.right-sidebar-content::-webkit-scrollbar {
+  width: 5px;
+}
+
+.left-sidebar-content::-webkit-scrollbar-thumb,
+.right-sidebar-content::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* モバイル表示時の調整 */
+@media (max-width: 768px) {
+  .content-wrapper.three-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content-wrapper.three-column > .left-sidebar,
+  .content-wrapper.three-column > .right-sidebar {
+    min-height: auto !important;
+  }
+  
+  .content-wrapper.three-column .left-sidebar .left-sidebar-content,
+  .content-wrapper.three-column .right-sidebar .right-sidebar-content {
+    position: relative !important;
+    max-height: none !important;
+  }
+}
+
+/* サイドバーの視覚的強調（オプション） */
+.left-sidebar-content,
+.right-sidebar-content {
+  background-color: rgba(255, 255, 255, 0.95) !important; /* 背景色を少し透明に */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05) !important; /* 微妙な影を追加 */
+  border-radius: 5px !important; /* 角を少し丸く */
+  transition: background-color 0.3s ease !important; /* 背景色の変化をスムーズに */
+}
+
+/* ホバー時の視覚的フィードバック */
+.left-sidebar-content:hover,
+.right-sidebar-content:hover {
+  background-color: #ffffff !important;
+}
