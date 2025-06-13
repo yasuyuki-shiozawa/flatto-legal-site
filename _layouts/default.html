@@ -77,27 +77,7 @@
     <!-- ページ固有CSS（条件付き読み込み） -->
     {% if page.use_page_specific_css %}
     <link rel="stylesheet" href="/assets/css/optimized/page-specific.css?v=20250613_01">
-    {% endif %}
-    
-    <!-- サイドバー修正用CSS -->
-    <link rel="stylesheet" href="/assets/css/optimized/sidebar-fix-final.css?v=20250613_03">
-    
-    <!-- 読みやすさ向上用CSS -->
-    <link rel="stylesheet" href="/assets/css/optimized/readability-enhancement.css?v=20250613_01">
-    
-    <!-- サイドバー強化用CSS（ボタン反転効果） -->
-    <link rel="stylesheet" href="/assets/css/optimized/sidebar-enhanced.css?v=20250613_01">
-    
-    <!-- 余白・間隔最適化用CSS（更新版） -->
-    <link rel="stylesheet" href="/assets/css/optimized/spacing-enhancement-v2.css?v=20250613_03">
-    
-    <!-- アイコン・テキスト間隔最適化用CSS -->
-    <link rel="stylesheet" href="/assets/css/optimized/icon-text-enhancement.css?v=20250613_01">
-    
-    <!-- 画像サイズ制御用CSS -->
-    <link rel="stylesheet" href="/assets/css/optimized/image-size-control.css?v=20250613_02">
-    
-    <!-- Google Fonts -->
+    {% endif %}    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -115,13 +95,19 @@
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '{{ site.google_analytics }}');
+      gtag(\'js\', new Date());
+      gtag(\'config\', \'{{ site.google_analytics }}\');
     </script>
     {% endif %}
     
     <!-- コアJavaScript -->
     <script src="/assets/js/optimized/core.js?v=20250613_01" defer></script>
+
+    <!-- サイドバー修正用CSS -->
+    <link rel="stylesheet" href="/assets/css/optimized/sidebar-fix-final.css?v=20250613_04">
+    
+    <!-- 画像サイズ制御用CSS -->
+    <link rel="stylesheet" href="/assets/css/optimized/image-size-control.css?v=20250613_03">
 </head>
 <body>
     {% include header.html %}
