@@ -72,11 +72,11 @@
     </style>
     
     <!-- 非クリティカルCSS（遅延読み込み） -->
-   <link rel="stylesheet" href="/assets/css/optimized/non-critical.css?v=20250612_21">
-    <noscript><link rel="stylesheet" href="/assets/css/optimized/non-critical.css?v=20250612_21"></noscript>
+   <link rel="stylesheet" href="/assets/css/optimized/non-critical.css?v=20250613_01">
+    <noscript><link rel="stylesheet" href="/assets/css/optimized/non-critical.css?v=20250613_01"></noscript>
     <!-- ページ固有CSS（条件付き読み込み） -->
     {% if page.use_page_specific_css %}
-    <link rel="stylesheet" href="/assets/css/optimized/page-specific.css?v=20250612_21">
+    <link rel="stylesheet" href="/assets/css/optimized/page-specific.css?v=20250613_01">
     {% endif %}
     
     <!-- サイドバー修正用CSS -->
@@ -86,7 +86,13 @@
     <link rel="stylesheet" href="/assets/css/optimized/readability-enhancement.css?v=20250613_01">
     
     <!-- サイドバー強化用CSS（ボタン反転効果） -->
-    <link rel="stylesheet" href="/assets/css/optimized/sidebar-enhanced.css?v=20250613_03">
+    <link rel="stylesheet" href="/assets/css/optimized/sidebar-enhanced.css?v=20250613_01">
+    
+    <!-- 余白・間隔最適化用CSS（更新版） -->
+    <link rel="stylesheet" href="/assets/css/optimized/spacing-enhancement-v2.css?v=20250613_03">
+    
+    <!-- アイコン・テキスト間隔最適化用CSS -->
+    <link rel="stylesheet" href="/assets/css/optimized/icon-text-enhancement.css?v=20250613_01">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -112,7 +118,7 @@
     {% endif %}
     
     <!-- コアJavaScript -->
-    <script src="/assets/js/optimized/core.js?v=20250612_21" defer></script>
+    <script src="/assets/js/optimized/core.js?v=20250613_01" defer></script>
 </head>
 <body>
     {% include header.html %}
@@ -142,14 +148,14 @@
     <!-- 条件付きスクリプト読み込み -->
     {% if page.use_toc %}
     <!-- 目次機能 -->
-    <script src="{{ '/assets/js/optimized/toc.js' | relative_url }}?v=20250612" defer></script>
+    <script src="{{ '/assets/js/optimized/toc.js' | relative_url }}?v=20250613_01" defer></script>
     {% endif %}
     
     {% if page.use_search %}
     <!-- Lunr.js検索ライブラリ -->
     <script src="https://unpkg.com/lunr/lunr.min.js" defer></script>
     <!-- 検索機能 -->
-    <script src="{{ '/assets/js/optimized/search.js' | relative_url }}?v=20250612" defer></script>
+    <script src="{{ '/assets/js/optimized/search.js' | relative_url }}?v=20250613_01" defer></script>
     {% endif %}
     
     <!-- 検索オーバーレイ -->

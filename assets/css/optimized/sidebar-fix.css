@@ -1,101 +1,75 @@
-/* サイドバー修正用追加スタイル */
+/* サイドバー固定表示のためのCSS */
+/* 2025年6月13日作成 */
 
-/* 左サイドバー */
-.left-sidebar {
-  width: 100%;
-  display: block;
+/* 左右サイドバーの固定表示設定 */
+.left-sidebar-content,
+.right-sidebar-content {
+  position: sticky;
+  top: 100px; /* ヘッダーの高さ + 余白 */
+  max-height: calc(100vh - 120px); /* 画面の高さから余白を引いた値 */
+  overflow-y: auto; /* コンテンツが長い場合はスクロール可能に */
+  scrollbar-width: thin; /* スクロールバーを細く */
+  scrollbar-color: rgba(59, 130, 246, 0.3) rgba(241, 245, 249, 0.5);
 }
 
-@media (min-width: 1024px) {
-  .left-sidebar {
-    width: 100%;
-    display: block;
-    min-width: 220px;
+/* スクロールバーのスタイリング（Webkit系ブラウザ用） */
+.left-sidebar-content::-webkit-scrollbar,
+.right-sidebar-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.left-sidebar-content::-webkit-scrollbar-track,
+.right-sidebar-content::-webkit-scrollbar-track {
+  background: rgba(241, 245, 249, 0.5);
+  border-radius: 10px;
+}
+
+.left-sidebar-content::-webkit-scrollbar-thumb,
+.right-sidebar-content::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.3);
+  border-radius: 10px;
+}
+
+.left-sidebar-content::-webkit-scrollbar-thumb:hover,
+.right-sidebar-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.5);
+}
+
+/* サイドバーのスムーズなトランジション */
+.left-sidebar-content,
+.right-sidebar-content {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* スクロール時のサイドバー強調表示（オプション） */
+.left-sidebar-content:hover,
+.right-sidebar-content:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* モバイル表示時の調整 */
+@media (max-width: 1023px) {
+  .left-sidebar-content,
+  .right-sidebar-content {
+    position: static; /* モバイル表示では固定しない */
+    max-height: none;
+    overflow-y: visible;
   }
 }
 
-.left-sidebar-content {
-  background-color: #f8fafc;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+/* サイドバーの親要素に必要な設定 */
+.content-wrapper.three-column > div {
+  min-height: 0; /* sticky要素の親に必要 */
+  align-self: start; /* グリッドレイアウト内での位置調整 */
 }
 
-.left-sidebar-section {
-  margin-bottom: 2rem;
-}
-
-.left-sidebar-section:last-child {
-  margin-bottom: 0;
-}
-
-.left-sidebar-title {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: #1f2937;
-  display: flex;
-  align-items: center;
-}
-
-.left-sidebar-title i {
-  margin-right: 0.5rem;
-  color: #3b82f6;
-}
-
-/* 右サイドバー */
-.right-sidebar {
-  width: 100%;
-  display: block;
-}
-
-@media (min-width: 1024px) {
-  .right-sidebar {
-    width: 100%;
-    display: block;
-    min-width: 220px;
-  }
-}
-
-/* ヒーロー画像 */
-.hero-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-/* ヒーローセクション */
-.hero-image-container {
-  text-align: center;
-  margin: 2rem 0;
-}
-
-/* メインコンテンツ */
+/* メインコンテンツエリアのスクロール調整 */
 .main-content {
-  width: 100%;
-  padding: 0 1rem;
+  overflow-x: hidden; /* 横スクロール防止 */
 }
 
-@media (min-width: 1024px) {
-  .main-content {
-    padding: 0;
-  }
+/* サイドバーのz-indexを調整して他要素より前面に */
+.left-sidebar-content,
+.right-sidebar-content {
+  z-index: 10;
 }
-
-/* 制度ガイドページの画像サイズ修正 */
-.main-content img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-/* 特に大きな画像の場合の追加制限 */
-.main-content img[src*="service-overview"] {
-  max-width: 80%;
-  height: auto;
-  display: block;
-  margin: 1rem auto;
-}
-
