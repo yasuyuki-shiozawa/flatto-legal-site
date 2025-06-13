@@ -1,104 +1,57 @@
-<!-- バナー形式メニューサイドバー -->
-<div class="sidebar-content">
-    
+<!-- 右サイドバーコンポーネント -->
+<div class="right-sidebar-content">
+
     <!-- サイト内検索 -->
-    <div class="sidebar-section search-section">
-        <h3 class="sidebar-title">
+    <div class="right-sidebar-section search-section">
+        <h3 class="right-sidebar-title">
             <i class="fas fa-search"></i>
             サイト内検索
         </h3>
         <div class="search-box">
             <input type="text" id="search-input" placeholder="キーワードを入力..." class="search-input" autocomplete="off">
-            <button type="button" class="search-button" onclick="document.getElementById('search-input').focus()">
+            <button type="button" class="search-button" onclick="document.getElementById(\'search-input\').focus()">
                 <i class="fas fa-search"></i>
             </button>
         </div>
     </div>
 
-    <!-- メインナビゲーション（バナー形式） -->
-    <div class="sidebar-section banner-menu">
-        <h3 class="sidebar-title">
+    <!-- クイックナビゲーション -->
+    <div class="right-sidebar-section quick-nav">
+        <h3 class="right-sidebar-title">
             <i class="fas fa-compass"></i>
-            学習メニュー
+            クイックナビ
         </h3>
-        <div class="banner-menu-list">
-            
-            <!-- 入札の基本 -->
-            <a href="{{ '/knowhow/' | relative_url }}" class="banner-item banner-basic {% if page.url contains '/knowhow/' %}active{% endif %}">
-                <div class="banner-icon">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <div class="banner-content">
-                    <h4 class="banner-title">入札の基本</h4>
-                    <p class="banner-description">制度の仕組みと基礎知識</p>
-                </div>
-                <div class="banner-arrow">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
+        <div class="quick-nav-list">
+            <a href="/" class="quick-nav-item {% if page.url == \'/\' %}active{% endif %}">
+                <i class="fas fa-home"></i>
+                <span>トップページ</span>
             </a>
-
-            <!-- 制度ガイド -->
-            <a href="{{ '/service/' | relative_url }}" class="banner-item banner-guide {% if page.url contains '/service/' %}active{% endif %}">
-                <div class="banner-icon">
-                    <i class="fas fa-book-open"></i>
-                </div>
-                <div class="banner-content">
-                    <h4 class="banner-title">制度ガイド</h4>
-                    <p class="banner-description">詳細な制度解説と手続き</p>
-                </div>
-                <div class="banner-arrow">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
+            <a href="/knowhow/" class="quick-nav-item {% if page.url contains \'/knowhow/\' %}active{% endif %}">
+                <i class="fas fa-graduation-cap"></i>
+                <span>入札の基本</span>
             </a>
-
-            <!-- 事例研究 -->
-            <a href="{{ '/cases/' | relative_url }}" class="banner-item banner-cases {% if page.url contains '/cases/' %}active{% endif %}">
-                <div class="banner-icon">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <div class="banner-content">
-                    <h4 class="banner-title">事例研究</h4>
-                    <p class="banner-description">成功事例と失敗パターン</p>
-                </div>
-                <div class="banner-arrow">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
+            <a href="/service/" class="quick-nav-item {% if page.url contains \'/service/\' %}active{% endif %}">
+                <i class="fas fa-book-open"></i>
+                <span>制度ガイド</span>
             </a>
-
-            <!-- 用語集 -->
-            <a href="{{ '/about/' | relative_url }}" class="banner-item banner-dictionary {% if page.url contains '/about/' %}active{% endif %}">
-                <div class="banner-icon">
-                    <i class="fas fa-book"></i>
-                </div>
-                <div class="banner-content">
-                    <h4 class="banner-title">用語集</h4>
-                    <p class="banner-description">専門用語の詳細解説</p>
-                </div>
-                <div class="banner-arrow">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
+            <a href="/cases/" class="quick-nav-item {% if page.url contains \'/cases/\' %}active{% endif %}">
+                <i class="fas fa-chart-line"></i>
+                <span>事例研究</span>
             </a>
-
-            <!-- 最新動向 -->
-            <a href="{{ '/latest-trends/' | relative_url }}" class="banner-item banner-trends {% if page.url contains '/latest-trends/' %}active{% endif %}">
-                <div class="banner-icon">
-                    <i class="fas fa-newspaper"></i>
-                </div>
-                <div class="banner-content">
-                    <h4 class="banner-title">最新動向</h4>
-                    <p class="banner-description">制度変更と最新情報</p>
-                </div>
-                <div class="banner-arrow">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
+            <a href="/about/" class="quick-nav-item {% if page.url contains \'/about/\' %}active{% endif %}">
+                <i class="fas fa-book"></i>
+                <span>用語集</span>
             </a>
-
+            <a href="/latest-trends/" class="quick-nav-item {% if page.url contains \'/latest-trends/\' %}active{% endif %}">
+                <i class="fas fa-newspaper"></i>
+                <span>最新動向</span>
+            </a>
         </div>
     </div>
 
     <!-- お役立ちリンク -->
-    <div class="sidebar-section useful-links">
-        <h3 class="sidebar-title">
+    <div class="right-sidebar-section useful-links">
+        <h3 class="right-sidebar-title">
             <i class="fas fa-external-link-alt"></i>
             お役立ちリンク
         </h3>
