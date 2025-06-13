@@ -171,3 +171,100 @@
     margin-right: 0.5rem;
   }
 }
+
+
+/* sidebar-fix.css の内容を統合 */
+
+/* 左サイドバー */
+.left-sidebar {
+  width: 100%;
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .left-sidebar {
+    width: 100%;
+    display: block;
+    min-width: 220px;
+  }
+}
+
+/* .left-sidebar-content は sidebar-enhanced.css で既に定義されているため、競合を避けるためにコメントアウトまたは削除を検討 */
+/*
+.left-sidebar-content {
+  background-color: #f8fafc;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+*/
+
+/* .left-sidebar-section は sidebar-enhanced.css で既に定義されているため、競合を避けるためにコメントアウトまたは削除を検討 */
+/*
+.left-sidebar-section {
+  margin-bottom: 2rem;
+}
+
+.left-sidebar-section:last-child {
+  margin-bottom: 0;
+}
+*/
+
+/* .left-sidebar-title は sidebar-enhanced.css で既に定義されているため、競合を避けるためにコメントアウトまたは削除を検討 */
+/*
+.left-sidebar-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+}
+
+.left-sidebar-title i {
+  margin-right: 0.5rem;
+  color: #3b82f6;
+}
+*/
+
+/* 右サイドバー */
+.right-sidebar {
+  width: 100%;
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .right-sidebar {
+    width: 100%;
+    display: block;
+    min-width: 220px;
+  }
+}
+
+/* ヒーロー画像 */
+.hero-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ヒーローセクション */
+.hero-image-container {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* メインコンテンツ */
+.main-content {
+  width: 100%;
+  padding: 0 1rem;
+}
+
+@media (min-width: 1024px) {
+  .main-content {
+    padding: 0;
+  }
+}
+
+
