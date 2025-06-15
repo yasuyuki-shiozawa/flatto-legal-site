@@ -72,10 +72,10 @@
     </style>
     
     <!-- 統合修正CSS（最優先） -->
-    <link rel="stylesheet" href="/assets/css/optimized/comprehensive-fix.css?v=20250615_03">
+    <link rel="stylesheet" href="/assets/css/optimized/comprehensive-fix.css?v=20250615_06">
     
     <!-- サイドバーアクティブ状態JavaScript -->
-    <script src="/assets/js/optimized/sidebar-active.js?v=20250615_01" defer></script>
+    <script src="/assets/js/optimized/sidebar-active.js?v=20250615_04" defer></script>
     
     <!-- 非クリティカルCSS（遅延読み込み） -->
    <link rel="stylesheet" href="/assets/css/optimized/non-critical.css?v=20250613_01">
@@ -109,7 +109,7 @@
     <!-- コアJavaScript -->
     <script src="/assets/js/optimized/core.js?v=20250613_01" defer></script>
 </head>
-<body class="{% if page.url == '/' %}page-home{% else %}page-{{ page.url | remove: '/' | replace: '/', '-' | replace: '.', '-' }}{% endif %}">
+<body data-page-path="{{ page.url }}">
     {% include header.html %}
     
     <main class="main-container">
@@ -173,3 +173,5 @@
     </script>
 </body>
 </html>
+
+

@@ -4,19 +4,22 @@ document.addEventListener("DOMContentLoaded", function() {
     const currentPath = window.location.pathname;
     
     // ページに応じてbodyにクラスを追加
-    if (currentPath === "/" || currentPath === "/index.html") {
+    // パスの末尾のスラッシュを削除して比較することで、/path/ と /path の両方に対応
+    const normalizedCurrentPath = currentPath.endsWith('/') && currentPath.length > 1 ? currentPath.slice(0, -1) : currentPath;
+
+    if (normalizedCurrentPath === "" || normalizedCurrentPath === "/index.html") { // トップページ
         document.body.classList.add("page-home");
-    } else if (currentPath.includes("/入札の基本/")) {
+    } else if (normalizedCurrentPath.includes("/入札の基本")) { // 入札の基本
         document.body.classList.add("page-knowhow");
-    } else if (currentPath.includes("/制度ガイド/")) {
+    } else if (normalizedCurrentPath.includes("/制度ガイド")) { // 制度ガイド
         document.body.classList.add("page-system");
-    } else if (currentPath.includes("/事例研究/")) {
+    } else if (normalizedCurrentPath.includes("/事例研究")) { // 事例研究
         document.body.classList.add("page-case-study");
-    } else if (currentPath.includes("/用語集/")) {
+    } else if (normalizedCurrentPath.includes("/用語集")) { // 用語集
         document.body.classList.add("page-glossary");
-    } else if (currentPath.includes("/最新動向/")) {
+    } else if (normalizedCurrentPath.includes("/最新動向")) { // 最新動向
         document.body.classList.add("page-latest-trends");
-    } else if (currentPath.includes("/相談したい/")) {
+    } else if (normalizedCurrentPath.includes("/相談したい")) { // 相談したい
         document.body.classList.add("page-contact");
     }
     
@@ -25,12 +28,14 @@ document.addEventListener("DOMContentLoaded", function() {
     allLinks.forEach(link => {
         const href = link.getAttribute("href");
         if (href) {
-            // 完全一致または部分一致でアクティブ状態を判定
-            // 日本語パスに対応するため、decodeURIComponentを使用
             const decodedHref = decodeURIComponent(href);
-            if ((currentPath === "/" && decodedHref === "/") ||
-                (currentPath !== "/" && decodedHref !== "/" && currentPath.includes(decodedHref))) {
+            const normalizedDecodedHref = decodedHref.endsWith('/') && decodedHref.length > 1 ? decodedHref.slice(0, -1) : decodedHref;
+
+            // 完全一致でアクティブ状態を判定
+            if (normalizedCurrentPath === normalizedDecodedHref) {
                 link.classList.add("active");
+            } else {
+                link.classList.remove("active"); // 意図しないアクティブ状態を解除
             }
         }
     });
