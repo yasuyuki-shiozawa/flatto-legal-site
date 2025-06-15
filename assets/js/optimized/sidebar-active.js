@@ -11,16 +11,23 @@ document.addEventListener("DOMContentLoaded", function() {
         const linkHref = link.getAttribute("href");
         console.log("リンクのhref: ", linkHref);
 
-        // リンクのhrefが現在のパスと一致するか、または現在のパスがリンクのhrefで始まる場合にactiveクラスを付与
         // トップページ("/")は厳密に一致する場合のみactiveにする
-        if (linkHref === "/" && currentPath === "/") {
-            link.classList.add("active");
-            console.log("Active (Exact Match): ", linkHref);
-        } else if (linkHref !== "/" && currentPath.startsWith(linkHref)) {
-            link.classList.add("active");
-            console.log("Active (Starts With): ", linkHref);
+        if (linkHref === "/") {
+            if (currentPath === "/") {
+                link.classList.add("active");
+                console.log("Active (Top Page Exact Match): ", linkHref);
+            } else {
+                link.classList.remove("active");
+            }
         } else {
-            link.classList.remove("active");
+            // その他のページは、現在のパスがリンクのhrefで始まる場合にactiveにする
+            // ただし、トップページ以外のリンクが"/"で始まる場合も考慮
+            if (currentPath.startsWith(linkHref) && linkHref !== "/") {
+                link.classList.add("active");
+                console.log("Active (Starts With): ", linkHref);
+            } else {
+                link.classList.remove("active");
+            }
         }
     });
 });
