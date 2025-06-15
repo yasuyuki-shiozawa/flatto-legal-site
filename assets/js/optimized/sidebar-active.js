@@ -8,20 +8,33 @@ document.addEventListener('DOMContentLoaded', function() {
     sidebarLinks.forEach(link => {
         let linkPath = link.getAttribute('href');
 
-        console.log('Link Path:', linkPath);
+        // リンクパスの末尾のスラッシュを削除（トップページ以外）
+        if (linkPath.endsWith('/') && linkPath.length > 1) {
+            linkPath = linkPath.slice(0, -1);
+        }
+
+        console.log('Processed Link Path:', linkPath);
+
+        // 現在のパスの末尾のスラッシュを削除（トップページ以外）
+        let processedCurrentPath = currentPath;
+        if (processedCurrentPath.endsWith('/') && processedCurrentPath.length > 1) {
+            processedCurrentPath = processedCurrentPath.slice(0, -1);
+        }
+
+        console.log('Processed Current Path:', processedCurrentPath);
 
         // トップページの場合の特別処理
-        if (linkPath === '/' && currentPath === '/') {
+        if (linkPath === '/' && processedCurrentPath === '/') {
             link.classList.add('active');
             console.log('Activated (Home):', linkPath);
             return; // 次のリンクへ
         }
 
         // トップページ以外のリンクの場合
-        // 厳密なパス一致でアクティブにする
-        if (linkPath !== '/' && currentPath === linkPath) {
+        // 現在のパスがリンクパスで始まる場合にアクティブにする
+        if (linkPath !== '/' && processedCurrentPath.startsWith(linkPath)) {
             link.classList.add('active');
-            console.log('Activated (Exact Match):', linkPath);
+            console.log('Activated (Starts With):', linkPath);
         }
     });
 });
