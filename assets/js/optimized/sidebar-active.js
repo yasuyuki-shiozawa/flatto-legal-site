@@ -24,12 +24,12 @@ document.addEventListener("DOMContentLoaded", function() {
             const normalizedDecodedHref = decodedHref.endsWith("/") && decodedHref.length > 1 ? decodedHref.slice(0, -1) : decodedHref;
             const normalizedPagePath = pagePath && pagePath.endsWith("/") && pagePath.length > 1 ? pagePath.slice(0, -1) : pagePath;
 
-            console.log("Comparing:", normalizedPagePath, "with", normalizedDecodedHref);
+            console.log("Comparing: Page Path = ", normalizedPagePath, ", Link Href = ", normalizedDecodedHref);
 
             // 部分一致でアクティブ状態を判定
             if (normalizedPagePath.startsWith(normalizedDecodedHref) && normalizedDecodedHref !== "") {
                 link.classList.add("active");
-                console.log("Added active class to:", link.textContent.trim());
+                console.log("Added active class to:", link.textContent.trim(), "for path:", normalizedPagePath);
             } else {
                 link.classList.remove("active");
             }
