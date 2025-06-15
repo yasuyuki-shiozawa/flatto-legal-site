@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const linkHref = link.getAttribute("href");
         console.log("リンクのhref: ", linkHref);
 
-        // トップページ("/")は厳密に一致する場合のみactiveにする
+        // トップページ("/")の厳密な一致判定
         if (linkHref === "/") {
             if (currentPath === "/") {
                 link.classList.add("active");
@@ -20,11 +20,17 @@ document.addEventListener("DOMContentLoaded", function() {
                 link.classList.remove("active");
             }
         } else {
-            // その他のページは、現在のパスがリンクのhrefで始まる場合にactiveにする
-            // ただし、トップページ以外のリンクが"/"で始まる場合も考慮
+            // その他のページの判定
+            // linkHrefがcurrentPathのプレフィックスであり、かつ
+            // currentPathがlinkHrefの長さと一致するか、または
+            // currentPathのlinkHrefの次の文字が'/'である場合にactiveにする
             if (currentPath.startsWith(linkHref) && linkHref !== "/") {
-                link.classList.add("active");
-                console.log("Active (Starts With): ", linkHref);
+                if (currentPath.length === linkHref.length || currentPath.charAt(linkHref.length) === '/') {
+                    link.classList.add("active");
+                    console.log("Active (Starts With and Valid Path): ", linkHref);
+                } else {
+                    link.classList.remove("active");
+                }
             } else {
                 link.classList.remove("active");
             }

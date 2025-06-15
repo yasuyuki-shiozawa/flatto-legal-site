@@ -71,19 +71,21 @@
     {% include css/optimized/critical.css %}
     </style>
     
-    <!-- 統合修正CSS（最優先） -->
-    <link rel="stylesheet" href="/assets/css/optimized/comprehensive-fix.css?v=20250615_07">
-    
-    <!-- サイドバーアクティブ状態JavaScript -->
-    <script src="/assets/js/optimized/sidebar-active.js?v=20250615_05" defer></script>
-    
     <!-- 非クリティカルCSS（遅延読み込み） -->
    <link rel="stylesheet" href="/assets/css/optimized/non-critical.css?v=20250613_01">
     <noscript><link rel="stylesheet" href="/assets/css/optimized/non-critical.css?v=20250613_01"></noscript>
     <!-- ページ固有CSS（条件付き読み込み） -->
     {% if page.use_page_specific_css %}
     <link rel="stylesheet" href="/assets/css/optimized/page-specific.css?v=20250613_01">
-    {% endif %}    <!-- Google Fonts -->
+    {% endif %}
+
+    <!-- 統合修正CSS（最優先） -->
+    <link rel="stylesheet" href="/assets/css/optimized/comprehensive-fix.css?v=20250615_08">
+    
+    <!-- サイドバーアクティブ状態JavaScript -->
+    <script src="/assets/js/optimized/sidebar-active.js?v=20250615_06" defer></script>
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -101,15 +103,15 @@
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag(\'js\', new Date());
-      gtag(\'config\', \'{{ site.google_analytics }}\');
+      gtag('js', new Date());
+      gtag('config', '{{ site.google_analytics }}');
     </script>
     {% endif %}
     
     <!-- コアJavaScript -->
     <script src="/assets/js/optimized/core.js?v=20250613_01" defer></script>
 </head>
-<body data-page-url="{{ page.url }}" data-page-path="{{ page.path }}">
+<body data-page-url="{{ page.url }}">
     {% include header.html %}
     
     <main class="main-container">
