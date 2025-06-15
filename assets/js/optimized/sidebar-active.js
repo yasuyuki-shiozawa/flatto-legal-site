@@ -1,39 +1,27 @@
 // サイドバーのアクティブ状態を動的に設定するJavaScript
-// 現在のページのURLに基づいて、サイドバーの対応するリンクにactiveクラスを付与します。
-
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function() {
     const currentPath = window.location.pathname;
-    console.log("現在のパス: ", currentPath);
+    const sidebarLinks = document.querySelectorAll('.left-sidebar a');
 
-    const sidebarLinks = document.querySelectorAll(".left-sidebar a");
+    console.log('Current Path:', currentPath);
 
     sidebarLinks.forEach(link => {
-        const linkHref = link.getAttribute("href");
-        console.log("リンクのhref: ", linkHref);
+        let linkPath = link.getAttribute('href');
 
-        // トップページ("/")の厳密な一致判定
-        if (linkHref === "/") {
-            if (currentPath === "/") {
-                link.classList.add("active");
-                console.log("Active (Top Page Exact Match): ", linkHref);
-            } else {
-                link.classList.remove("active");
-            }
-        } else {
-            // その他のページの判定
-            // linkHrefがcurrentPathのプレフィックスであり、かつ
-            // currentPathがlinkHrefの長さと一致するか、または
-            // currentPathのlinkHrefの次の文字が'/'である場合にactiveにする
-            if (currentPath.startsWith(linkHref) && linkHref !== "/") {
-                if (currentPath.length === linkHref.length || currentPath.charAt(linkHref.length) === '/') {
-                    link.classList.add("active");
-                    console.log("Active (Starts With and Valid Path): ", linkHref);
-                } else {
-                    link.classList.remove("active");
-                }
-            } else {
-                link.classList.remove("active");
-            }
+        console.log('Link Path:', linkPath);
+
+        // トップページの場合の特別処理
+        if (linkPath === '/' && currentPath === '/') {
+            link.classList.add('active');
+            console.log('Activated (Home):', linkPath);
+            return; // 次のリンクへ
+        }
+
+        // トップページ以外のリンクの場合
+        // 厳密なパス一致でアクティブにする
+        if (linkPath !== '/' && currentPath === linkPath) {
+            link.classList.add('active');
+            console.log('Activated (Exact Match):', linkPath);
         }
     });
 });

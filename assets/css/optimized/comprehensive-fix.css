@@ -89,43 +89,43 @@
 }
 
 /* トップページ */
-body.page-home .left-sidebar a[href="/"] {
+.left-sidebar a[href="/"][data-active-page="/"] {
     background-color: #0000EE !important;
     color: #FFFFFF !important;
 }
 
 /* 入札の基本 */
-body.page-knowhow .left-sidebar a[href*="knowhow"] {
+.left-sidebar a[href*="/入札の基本/"][data-active-page*="/入札の基本/"] {
     background-color: #0056B3 !important;
     color: #FFFFFF !important;
 }
 
 /* 制度ガイド */
-body.page-system .left-sidebar a[href*="system"] {
+.left-sidebar a[href*="/制度ガイド/"][data-active-page*="/制度ガイド/"] {
     background-color: #007BFF !important;
     color: #FFFFFF !important;
 }
 
 /* 事例研究 */
-body.page-case-study .left-sidebar a[href*="case-study"] {
+.left-sidebar a[href*="/事例研究/"][data-active-page*="/事例研究/"] {
     background-color: #28A745 !important;
     color: #FFFFFF !important;
 }
 
 /* 用語集 */
-body.page-glossary .left-sidebar a[href*="glossary"] {
+.left-sidebar a[href*="/用語集/"][data-active-page*="/用語集/"] {
     background-color: #6C757D !important;
     color: #FFFFFF !important;
 }
 
 /* 最新動向 */
-body.page-latest-trends .left-sidebar a[href*="latest-trends"] {
+.left-sidebar a[href*="/最新動向/"][data-active-page*="/最新動向/"] {
     background-color: #FFC107 !important;
     color: #FFFFFF !important;
 }
 
 /* 相談したい */
-body.page-contact .left-sidebar a[href*="contact"] {
+.left-sidebar a[href*="/相談したい/"][data-active-page*="/相談したい/"] {
     background-color: #DC3545 !important;
     color: #FFFFFF !important;
 }
@@ -220,6 +220,5 @@ img[src*="service-overview.png"] {
     background: #ffffff !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
 }
-
 
 
