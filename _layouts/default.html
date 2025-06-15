@@ -109,7 +109,7 @@
     <!-- コアJavaScript -->
     <script src="/assets/js/optimized/core.js?v=20250613_01" defer></script>
 </head>
-<body>
+<body class="{% if page.url == '/' %}page-home{% else %}page-{{ page.url | remove: '/' | replace: '/', '-' | replace: '.', '-' }}{% endif %}">
     {% include header.html %}
     
     <main class="main-container">
