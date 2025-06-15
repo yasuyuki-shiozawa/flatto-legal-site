@@ -26,7 +26,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
             console.log("Comparing:", normalizedPagePath, "with", normalizedDecodedHref);
 
-            if (normalizedPagePath === normalizedDecodedHref) {
+            // 部分一致でアクティブ状態を判定
+            if (normalizedPagePath.startsWith(normalizedDecodedHref) && normalizedDecodedHref !== "") {
                 link.classList.add("active");
                 console.log("Added active class to:", link.textContent.trim());
             } else {
