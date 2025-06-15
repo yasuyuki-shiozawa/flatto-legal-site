@@ -1,53 +1,27 @@
 // サイドバーのアクティブ状態を動的に設定するJavaScript
+// 現在のページのURLに基づいて、サイドバーの対応するリンクにactiveクラスを付与します。
+
 document.addEventListener("DOMContentLoaded", function() {
-    const body = document.body;
-    const pagePath = body.getAttribute("data-page-path");
+    const currentPath = window.location.pathname;
+    console.log("現在のパス: ", currentPath);
 
-    console.log("Current pagePath from data-page-path:", pagePath);
+    const sidebarLinks = document.querySelectorAll(".left-sidebar a");
 
-    if (pagePath) {
-        let pageClass = "";
-        if (pagePath === "/" || pagePath === "/index.html") {
-            pageClass = "page-home";
+    sidebarLinks.forEach(link => {
+        const linkHref = link.getAttribute("href");
+        console.log("リンクのhref: ", linkHref);
+
+        // リンクのhrefが現在のパスと一致するか、または現在のパスがリンクのhrefで始まる場合にactiveクラスを付与
+        // トップページ("/")は厳密に一致する場合のみactiveにする
+        if (linkHref === "/" && currentPath === "/") {
+            link.classList.add("active");
+            console.log("Active (Exact Match): ", linkHref);
+        } else if (linkHref !== "/" && currentPath.startsWith(linkHref)) {
+            link.classList.add("active");
+            console.log("Active (Starts With): ", linkHref);
         } else {
-            pageClass = "page-" + pagePath.replace(/^\/|\/$/g, "").replace(/\//g, "-");
+            link.classList.remove("active");
         }
-        body.classList.add(pageClass);
-        console.log("Added body class:", pageClass);
-    }
-
-    const allLinks = document.querySelectorAll(".left-sidebar a, .right-sidebar a");
-    allLinks.forEach(link => {
-        const href = link.getAttribute("href");
-        if (href) {
-            const decodedHref = decodeURIComponent(href);
-            const normalizedDecodedHref = decodedHref.endsWith("/") && decodedHref.length > 1 ? decodedHref.slice(0, -1) : decodedHref;
-            const normalizedPagePath = pagePath && pagePath.endsWith("/") && pagePath.length > 1 ? pagePath.slice(0, -1) : pagePath;
-
-            console.log("Comparing: Page Path = ", normalizedPagePath, ", Link Href = ", normalizedDecodedHref);
-
-            // 部分一致でアクティブ状態を判定
-            if (normalizedPagePath.startsWith(normalizedDecodedHref) && normalizedDecodedHref !== "") {
-                link.classList.add("active");
-                console.log("Added active class to:", link.textContent.trim(), "for path:", normalizedPagePath);
-            } else {
-                link.classList.remove("active");
-            }
-        }
-    });
-    
-    allLinks.forEach(link => {
-        link.addEventListener("mouseenter", function() {
-            if (!this.classList.contains("active")) {
-                this.style.transform = "translateX(4px)";
-            }
-        });
-        
-        link.addEventListener("mouseleave", function() {
-            if (!this.classList.contains("active")) {
-                this.style.transform = "translateX(0)";
-            }
-        });
     });
 });
 
