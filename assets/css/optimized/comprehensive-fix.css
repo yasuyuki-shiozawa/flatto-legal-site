@@ -1,5 +1,5 @@
 /* サイドバー固定表示とヘッダーロゴサイズ制御の統合修正CSS */
-/* 2025年6月13日 - 根本原因に基づく確実な修正 */
+/* 2025年6月15日 - ナビゲーションバーデザインを元のスタイルに復元 */
 
 /* ===== ヘッダーロゴサイズ制御 ===== */
 .logo-img {
@@ -11,7 +11,7 @@
     display: block !important;
 }
 
-/* ===== サイドバー固定表示修正 ===== */
+/* ===== サイドバー固定表示修正（元のデザインに復元） ===== */
 .main-container {
     display: flex !important;
     flex-direction: column !important;
@@ -33,11 +33,12 @@
     height: fit-content !important;
     max-height: calc(100vh - 120px) !important;
     overflow-y: auto !important;
-    background: #ffffff !important;
-    border-radius: 8px !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-    padding: 20px !important;
     z-index: 10 !important;
+    /* 白いボックスデザインを削除し、元のシンプルなデザインに復元 */
+    /* background: #ffffff !important; */
+    /* border-radius: 8px !important; */
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important; */
+    /* padding: 20px !important; */
 }
 
 .right-sidebar {
@@ -46,11 +47,12 @@
     height: fit-content !important;
     max-height: calc(100vh - 120px) !important;
     overflow-y: auto !important;
-    background: #ffffff !important;
-    border-radius: 8px !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-    padding: 20px !important;
     z-index: 10 !important;
+    /* 白いボックスデザインを削除し、元のシンプルなデザインに復元 */
+    /* background: #ffffff !important; */
+    /* border-radius: 8px !important; */
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important; */
+    /* padding: 20px !important; */
 }
 
 .main-content {
