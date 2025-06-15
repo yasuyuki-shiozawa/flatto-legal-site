@@ -1,5 +1,5 @@
 /* サイドバー固定表示とヘッダーロゴサイズ制御の統合修正CSS */
-/* 2025年6月15日 - ナビゲーションバーデザインを元のスタイルに復元 */
+/* 2025年6月15日 - プロフェッショナルなサイドバーデザイン実装 */
 
 /* ===== ヘッダーロゴサイズ制御 ===== */
 .logo-img {
@@ -11,7 +11,7 @@
     display: block !important;
 }
 
-/* ===== サイドバー固定表示修正（元のデザインに復元） ===== */
+/* ===== サイドバー固定表示修正 ===== */
 .main-container {
     display: flex !important;
     flex-direction: column !important;
@@ -27,20 +27,8 @@
     padding: 20px !important;
 }
 
-.left-sidebar {
-    position: sticky !important;
-    top: 100px !important;
-    height: fit-content !important;
-    max-height: calc(100vh - 120px) !important;
-    overflow-y: auto !important;
-    z-index: 10 !important;
-    /* 白いボックスデザインを削除し、元のシンプルなデザインに復元 */
-    /* background: #ffffff !important; */
-    /* border-radius: 8px !important; */
-    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important; */
-    /* padding: 20px !important; */
-}
-
+/* ===== プロフェッショナルサイドバーデザイン ===== */
+.left-sidebar,
 .right-sidebar {
     position: sticky !important;
     top: 100px !important;
@@ -48,11 +36,116 @@
     max-height: calc(100vh - 120px) !important;
     overflow-y: auto !important;
     z-index: 10 !important;
-    /* 白いボックスデザインを削除し、元のシンプルなデザインに復元 */
-    /* background: #ffffff !important; */
-    /* border-radius: 8px !important; */
-    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important; */
-    /* padding: 20px !important; */
+    background: #1A202C !important;
+    border-radius: 8px !important;
+    padding: 20px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* サイドバー内のテキスト色 */
+.left-sidebar,
+.right-sidebar {
+    color: #ffffff !important;
+}
+
+.left-sidebar h3,
+.right-sidebar h3,
+.left-sidebar h4,
+.right-sidebar h4 {
+    color: #ffffff !important;
+    margin-bottom: 15px !important;
+    font-weight: 600 !important;
+}
+
+/* ナビゲーションリンクのスタイル */
+.left-sidebar a,
+.right-sidebar a {
+    display: flex !important;
+    align-items: center !important;
+    padding: 12px 16px !important;
+    margin: 4px 0 !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    border-radius: 6px !important;
+    transition: all 0.3s ease !important;
+    font-weight: 500 !important;
+}
+
+/* ホバー状態 */
+.left-sidebar a:hover,
+.right-sidebar a:hover {
+    background-color: #2D3748 !important;
+    color: #66BB6A !important;
+    transform: translateX(4px) !important;
+}
+
+/* アクティブ状態（現在のページ） */
+.left-sidebar a.active,
+.right-sidebar a.active,
+.left-sidebar a[href*="knowhow"].active,
+.right-sidebar a[href*="knowhow"].active,
+.left-sidebar a[href*="service"].active,
+.right-sidebar a[href*="service"].active,
+.left-sidebar a[href*="latest-trends"].active,
+.right-sidebar a[href*="latest-trends"].active {
+    background-color: #66BB6A !important;
+    color: #1A202C !important;
+    font-weight: 600 !important;
+}
+
+/* 現在のページに基づくアクティブ状態の自動適用 */
+body.page-knowhow .left-sidebar a[href*="knowhow"],
+body.page-knowhow .right-sidebar a[href*="knowhow"],
+body.page-service .left-sidebar a[href*="service"],
+body.page-service .right-sidebar a[href*="service"],
+body.page-latest-trends .left-sidebar a[href*="latest-trends"],
+body.page-latest-trends .right-sidebar a[href*="latest-trends"],
+body.page-home .left-sidebar a[href="/"],
+body.page-home .right-sidebar a[href="/"] {
+    background-color: #66BB6A !important;
+    color: #1A202C !important;
+    font-weight: 600 !important;
+}
+
+/* アイコンのスタイル */
+.left-sidebar a i,
+.right-sidebar a i {
+    margin-right: 12px !important;
+    font-size: 16px !important;
+    width: 20px !important;
+    text-align: center !important;
+}
+
+/* 検索ボックスのスタイル */
+.right-sidebar input[type="search"],
+.right-sidebar input[type="text"] {
+    background-color: #2D3748 !important;
+    border: 1px solid #4A5568 !important;
+    color: #ffffff !important;
+    padding: 10px 12px !important;
+    border-radius: 6px !important;
+    width: 100% !important;
+    margin-bottom: 15px !important;
+}
+
+.right-sidebar input[type="search"]::placeholder,
+.right-sidebar input[type="text"]::placeholder {
+    color: #A0AEC0 !important;
+}
+
+.right-sidebar input[type="search"]:focus,
+.right-sidebar input[type="text"]:focus {
+    outline: none !important;
+    border-color: #66BB6A !important;
+    box-shadow: 0 0 0 2px rgba(102, 187, 106, 0.2) !important;
+}
+
+/* セクション区切り線 */
+.left-sidebar > div + div,
+.right-sidebar > div + div {
+    border-top: 1px solid #2D3748 !important;
+    margin-top: 20px !important;
+    padding-top: 20px !important;
 }
 
 .main-content {
