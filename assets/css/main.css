@@ -368,7 +368,7 @@ body {
 }
 
 .about-content {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -1052,7 +1052,7 @@ th {
 
 /* コンテンツブロックのスペーシング */
 .content-spacing {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
