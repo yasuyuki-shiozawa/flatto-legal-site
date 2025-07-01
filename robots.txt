@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /
+
+# このサイトは移転しました
+# 新しいサイト: https://nyusatsu-map.com/
