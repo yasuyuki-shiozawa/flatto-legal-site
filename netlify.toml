@@ -15,10 +15,3 @@
   for = "/*"
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
-    
-# nyusatsu-map.comでアクセスされた場合はインデックスを許可
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Robots-Tag = "all"
-  conditions = {Host = ["nyusatsu-map.com", "www.nyusatsu-map.com"]}
