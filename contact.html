@@ -16,7 +16,7 @@
       "@type": "ContactPage",
       "name": "お問い合わせ・無料相談",
       "description": "入札サポートに関するご相談・お問い合わせはこちらから。",
-      "url": "https://www.example.com/contact.html",
+      "url": "https://nyusatsu-map.com/contact.html",
       "provider": {
         "@type": "LegalService",
         "name": "ふらっと法務事務所",
@@ -126,7 +126,11 @@
                 
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
-                        <form id="contact-form" class="contact-form">
+                        <form id="contact-form" class="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/contact-success">
+                            <!-- ボット対策用の隠しフィールド -->
+                            <input type="hidden" name="bot-field" />
+                            <input type="hidden" name="form-name" value="contact" />
+                            
                             <div class="form-step active" id="step1">
                                 <h3 class="form-step-title">Step 1: 基本情報</h3>
                                 
@@ -480,19 +484,28 @@
             
             // フォーム送信
             contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
+                // 最後のステップの必須項目を検証
+                const lastStep = document.querySelector('#step3');
+                const lastStepInputs = lastStep.querySelectorAll('[required]');
                 
-                // 実際の送信処理はここに実装（今回はデモのため省略）
-                
-                // 成功メッセージ表示
-                contactForm.style.display = 'none';
-                formSuccess.style.display = 'block';
-                
-                // ページトップにスクロール
-                window.scrollTo({
-                    top: document.querySelector('.contact-form-section').offsetTop - 100,
-                    behavior: 'smooth'
+                let isValid = true;
+                lastStepInputs.forEach(input => {
+                    if (!input.checkValidity()) {
+                        isValid = false;
+                        input.classList.add('is-invalid');
+                    } else {
+                        input.classList.remove('is-invalid');
+                    }
                 });
+                
+                if (!isValid) {
+                    e.preventDefault();
+                    alert('必須項目を入力してください。');
+                    return;
+                }
+                
+                // Netlify Formsは自動的に処理されるため、デフォルトの送信を許可
+                // フォームデータは自動的にNetlifyダッシュボードに送信される
             });
         });
     </script>

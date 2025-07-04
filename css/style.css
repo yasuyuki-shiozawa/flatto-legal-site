@@ -79,6 +79,15 @@ a:hover {
     transition: all 0.3s ease;
 }
 
+/* フォームステップのスタイル */
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+}
+
 .btn-primary {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
