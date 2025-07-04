@@ -1,0 +1,24 @@
+[[redirects]]
+  from = "https://flatto-legal-site.netlify.app/*"
+  to = "https://nyusatsu-map.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://flatto-legal-site.netlify.app/*"
+  to = "https://nyusatsu-map.com/:splat"
+  status = 301
+  force = true
+
+# 追加のヘッダー設定でSEO対策
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    
+# nyusatsu-map.comでアクセスされた場合はインデックスを許可
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "all"
+  conditions = {Host = ["nyusatsu-map.com", "www.nyusatsu-map.com"]}
