@@ -1,5 +1,9 @@
 User-agent: *
-Disallow: /
+Allow: /
 
-# このサイトは移転しました
-# 新しいサイト: https://nyusatsu-map.com/
+# サイトマップの場所
+Sitemap: https://nyusatsu-map.com/sitemap.xml
+
+# 管理ページなどのクロール制限（必要に応じて追加）
+# Disallow: /admin/
+# Disallow: /private/
