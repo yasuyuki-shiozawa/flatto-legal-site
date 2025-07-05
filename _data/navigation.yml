@@ -13,10 +13,10 @@ main_nav:
     icon: "fas fa-graduation-cap"
     description: "入札制度の基本から実践まで"
     
-  - name: "制度ガイド"
+  - name: "ご利用の流れ"
     url: "/flow/"
     icon: "fas fa-book-open"
-    description: "公共調達制度の詳細解説"
+    description: "サービス利用の流れ・手順"
     
   - name: "事例研究"
     url: "/cases/"
