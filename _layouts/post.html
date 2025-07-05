@@ -1,0 +1,95 @@
+---
+layout: default
+---
+
+<article class="post-article">
+    <header class="post-header">
+        <div class="container">
+            <h1 class="post-title">{{ page.title }}</h1>
+            
+            <div class="post-meta">
+                {% if page.date %}
+                <span class="post-date">
+                    <i class="fas fa-calendar"></i>
+                    {{ page.date | date: "%Y年%m月%d日" }}
+                </span>
+                {% endif %}
+                
+                {% if page.category %}
+                <span class="post-category">
+                    <i class="fas fa-folder"></i>
+                    {{ page.category }}
+                </span>
+                {% endif %}
+                
+                <span class="reading-time">
+                    <!-- 読了時間は JavaScript で計算 -->
+                </span>
+            </div>
+            
+            {% if page.tags %}
+            <div class="post-tags">
+                {% for tag in page.tags %}
+                <a href="{{ '/tags/' | relative_url }}#{{ tag | slugify }}" class="tag">
+                    <i class="fas fa-tag"></i>
+                    {{ tag }}
+                </a>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="post-layout grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <!-- 目次（デスクトップ） -->
+            <aside class="lg:col-span-3 hidden lg:block">
+                <div id="auto-toc"></div>
+            </aside>
+            
+            <!-- 本文 -->
+            <div class="post-content lg:col-span-9 article-content">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+    
+    <!-- 関連記事 -->
+    {% if page.related_posts %}
+    <section class="related-posts section">
+        <div class="container">
+            <h2 class="section-title">関連記事</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {% for post in page.related_posts limit:3 %}
+                <article class="card card-hover">
+                    <div class="card-body">
+                        <h3 class="text-lg font-bold mb-2">
+                            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                        </h3>
+                        <p class="text-muted text-sm mb-3">{{ post.excerpt | strip_html | truncate: 100 }}</p>
+                        <div class="text-sm text-muted">
+                            <i class="fas fa-calendar"></i>
+                            {{ post.date | date: "%Y年%m月%d日" }}
+                        </div>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+</article>
+
+<!-- モバイル用目次ボタン -->
+<div class="toc-mobile lg:hidden">
+    <button class="toc-mobile-toggle" aria-label="目次を表示">
+        <i class="fas fa-list-ul"></i>
+    </button>
+    <div class="toc-mobile-content">
+        <div id="auto-toc-mobile"></div>
+    </div>
+</div>
+
+<!-- インタラクティブ機能のスクリプト -->
+<script src="{{ '/assets/js/auto-toc.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/reading-progress.js' | relative_url }}" defer></script>

@@ -1,0 +1,148 @@
+---
+layout: default
+title: サイト内検索
+description: 入札マップ内のコンテンツを検索できます
+permalink: /search/
+---
+
+<div class="search-page">
+    <div class="container">
+        <h1 class="page-title text-center mb-8">
+            <i class="fas fa-search"></i>
+            サイト内検索
+        </h1>
+        
+        <!-- 検索コンポーネント -->
+        {% include enhanced-search.html %}
+        
+        <!-- 検索のヒント -->
+        <div class="search-hints mt-8">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="text-lg font-bold mb-4">
+                        <i class="fas fa-lightbulb"></i>
+                        検索のヒント
+                    </h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="font-medium mb-2">効果的な検索方法</h3>
+                            <ul class="list-disc list-inside space-y-2 text-sm text-muted">
+                                <li>複数のキーワードを使用すると、すべてを含む結果が表示されます</li>
+                                <li>カテゴリやタグで絞り込むことができます</li>
+                                <li>日付範囲を指定して最新の情報を探せます</li>
+                                <li>部分一致でも検索できます（例：「入札」で「競争入札」も検索）</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="font-medium mb-2">よく検索されるキーワード</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <a href="#" class="badge badge-primary" onclick="searchKeyword('入札参加資格')">入札参加資格</a>
+                                <a href="#" class="badge badge-primary" onclick="searchKeyword('電子入札')">電子入札</a>
+                                <a href="#" class="badge badge-primary" onclick="searchKeyword('一般競争入札')">一般競争入札</a>
+                                <a href="#" class="badge badge-primary" onclick="searchKeyword('随意契約')">随意契約</a>
+                                <a href="#" class="badge badge-primary" onclick="searchKeyword('プロポーザル')">プロポーザル</a>
+                                <a href="#" class="badge badge-primary" onclick="searchKeyword('入札公告')">入札公告</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- カテゴリ別ブラウズ -->
+        <div class="browse-categories mt-8">
+            <h2 class="text-xl font-bold mb-4">カテゴリから探す</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <a href="{{ '/knowhow/' | relative_url }}" class="card card-hover">
+                    <div class="card-body">
+                        <h3 class="font-medium mb-2">
+                            <i class="fas fa-book"></i>
+                            入札の基礎知識
+                        </h3>
+                        <p class="text-sm text-muted">入札制度の基本を学ぶ</p>
+                    </div>
+                </a>
+                
+                <a href="{{ '/cases/' | relative_url }}" class="card card-hover">
+                    <div class="card-body">
+                        <h3 class="font-medium mb-2">
+                            <i class="fas fa-chart-line"></i>
+                            事例研究
+                        </h3>
+                        <p class="text-sm text-muted">実際の入札事例から学ぶ</p>
+                    </div>
+                </a>
+                
+                <a href="{{ '/service/' | relative_url }}" class="card card-hover">
+                    <div class="card-body">
+                        <h3 class="font-medium mb-2">
+                            <i class="fas fa-cogs"></i>
+                            実務手続き
+                        </h3>
+                        <p class="text-sm text-muted">入札参加の具体的な手順</p>
+                    </div>
+                </a>
+                
+                <a href="{{ '/latest-trends/' | relative_url }}" class="card card-hover">
+                    <div class="card-body">
+                        <h3 class="font-medium mb-2">
+                            <i class="fas fa-newspaper"></i>
+                            最新動向
+                        </h3>
+                        <p class="text-sm text-muted">制度変更や最新情報</p>
+                    </div>
+                </a>
+                
+                <a href="{{ '/faq/' | relative_url }}" class="card card-hover">
+                    <div class="card-body">
+                        <h3 class="font-medium mb-2">
+                            <i class="fas fa-question-circle"></i>
+                            よくある質問
+                        </h3>
+                        <p class="text-sm text-muted">入札に関するQ&A</p>
+                    </div>
+                </a>
+                
+                <a href="{{ '/glossary/' | relative_url }}" class="card card-hover">
+                    <div class="card-body">
+                        <h3 class="font-medium mb-2">
+                            <i class="fas fa-spell-check"></i>
+                            用語集
+                        </h3>
+                        <p class="text-sm text-muted">専門用語の解説</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 検索スクリプト -->
+<script src="{{ '/assets/js/enhanced-search.js' | relative_url }}" defer></script>
+<script>
+    // クリックでキーワード検索
+    function searchKeyword(keyword) {
+        const searchInput = document.getElementById('enhanced-search-input');
+        if (searchInput) {
+            searchInput.value = keyword;
+            searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+        }
+    }
+    
+    // URLパラメータから検索クエリを取得
+    document.addEventListener('DOMContentLoaded', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('q');
+        
+        if (query) {
+            const searchInput = document.getElementById('enhanced-search-input');
+            if (searchInput) {
+                searchInput.value = query;
+                searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+            }
+        }
+    });
+</script>

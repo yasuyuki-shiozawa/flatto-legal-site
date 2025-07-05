@@ -1,0 +1,336 @@
+// 目次（Table of Contents）コンポーネント
+// 記事の見出しから自動生成される目次のスタイル
+
+// 目次コンテナ
+#auto-toc {
+  position: relative;
+  
+  @media (max-width: 1024px) {
+    display: none; // モバイルでは非表示
+  }
+}
+
+// 目次ラッパー
+.toc-wrapper {
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-base);
+  
+  // スティッキー時の影
+  &.is-sticky {
+    box-shadow: var(--shadow-lg);
+  }
+  
+  // 折りたたみ状態
+  &.toc-collapsed {
+    .toc-content {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    
+    .toc-progress {
+      display: none;
+    }
+  }
+}
+
+// 目次ヘッダー
+.toc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-bg-secondary);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.toc-title {
+  margin: 0;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  
+  i {
+    color: var(--color-primary-600);
+  }
+}
+
+.toc-toggle {
+  padding: var(--space-1);
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  
+  &:hover {
+    color: var(--color-text-primary);
+  }
+  
+  i {
+    transition: transform var(--transition-base);
+  }
+}
+
+// 目次コンテンツ
+.toc-content {
+  padding: var(--space-4);
+  max-height: 60vh;
+  overflow-y: auto;
+  transition: all var(--transition-base);
+  
+  // カスタムスクロールバー
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: var(--color-bg-secondary);
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: var(--radius-full);
+    
+    &:hover {
+      background: var(--color-border-hover);
+    }
+  }
+}
+
+// 目次リスト
+.toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  &.toc-nested {
+    margin-left: var(--space-4);
+    margin-top: var(--space-1);
+  }
+}
+
+// 目次アイテム
+.toc-item {
+  margin-bottom: var(--space-1);
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  // レベル別スタイル
+  &.toc-level-2 {
+    .toc-link {
+      font-weight: var(--font-weight-medium);
+    }
+  }
+  
+  &.toc-level-3 {
+    .toc-link {
+      font-size: var(--font-size-sm);
+      padding-left: var(--space-2);
+    }
+  }
+  
+  &.toc-level-4 {
+    .toc-link {
+      font-size: var(--font-size-sm);
+      padding-left: var(--space-4);
+      color: var(--color-text-secondary);
+    }
+  }
+}
+
+// 目次リンク
+.toc-link {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  padding: var(--space-1-5) var(--space-2);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  position: relative;
+  
+  &:hover {
+    color: var(--color-primary-600);
+    background-color: var(--color-primary-50);
+  }
+  
+  // アクティブ状態
+  &.toc-active {
+    color: var(--color-primary-600);
+    background-color: var(--color-primary-100);
+    font-weight: var(--font-weight-medium);
+    
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 3px;
+      height: 60%;
+      background-color: var(--color-primary-600);
+      border-radius: var(--radius-full);
+    }
+  }
+  
+  // 親要素がアクティブ
+  &.toc-parent-active {
+    color: var(--color-primary-600);
+  }
+}
+
+// 目次番号
+.toc-number {
+  flex-shrink: 0;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  font-family: var(--font-family-mono);
+  min-width: 2em;
+}
+
+// 目次テキスト
+.toc-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 読み進み状況
+.toc-progress {
+  height: 3px;
+  background-color: var(--color-bg-tertiary);
+  position: relative;
+  overflow: hidden;
+}
+
+.toc-progress-bar {
+  height: 100%;
+  background-color: var(--color-primary-600);
+  width: 0%;
+  transition: width 0.1s ease-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+// モバイル用フローティング目次
+@media (max-width: 1024px) {
+  .toc-mobile {
+    position: fixed;
+    bottom: var(--space-6);
+    right: var(--space-6);
+    z-index: var(--z-index-fixed);
+    
+    @supports (padding: max(0px)) {
+      bottom: max(var(--space-6), env(safe-area-inset-bottom));
+      right: max(var(--space-6), env(safe-area-inset-right));
+    }
+  }
+  
+  .toc-mobile-toggle {
+    width: 56px;
+    height: 56px;
+    background-color: var(--color-primary-600);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: var(--shadow-xl);
+    }
+    
+    i {
+      font-size: var(--font-size-xl);
+    }
+  }
+  
+  .toc-mobile-content {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    margin-bottom: var(--space-3);
+    width: 300px;
+    max-width: calc(100vw - var(--space-8));
+    background-color: var(--color-bg-primary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all var(--transition-base);
+    
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+}
+
+// アニメーション
+@keyframes tocSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.toc-wrapper {
+  animation: tocSlideIn 0.3s ease-out;
+}
+
+// 印刷時のスタイル
+@media print {
+  #auto-toc {
+    display: block !important;
+    position: relative !important;
+    page-break-inside: avoid;
+  }
+  
+  .toc-wrapper {
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+  }
+  
+  .toc-toggle,
+  .toc-progress {
+    display: none !important;
+  }
+  
+  .toc-content {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  
+  .toc-link {
+    color: #000 !important;
+    
+    &::after {
+      content: " (ページ " target-counter(attr(href), page) ")";
+      font-size: 0.875em;
+      color: #666;
+    }
+  }
+}
