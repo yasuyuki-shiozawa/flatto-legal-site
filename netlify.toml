@@ -1,0 +1,14 @@
+[build]
+  # ベースディレクトリを現在のディレクトリに設定
+  base = ""
+  # ビルドコマンドなし（静的サイトのため）
+  command = ""
+  # 公開ディレクトリはルート
+  publish = "."
+
+# Netlifyデフォルトドメインからのリダイレクト
+[[redirects]]
+  from = "https://flatto-legal-site.netlify.app/*"
+  to = "https://nyusatsu-map.com/:splat"
+  status = 301
+  force = true

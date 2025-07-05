@@ -1,0 +1,6 @@
+# Netlifyデフォルトドメインからメインドメインへの301リダイレクト
+# SEO対策として重複コンテンツを防ぐ
+https://flatto-legal-site.netlify.app/* https://nyusatsu-map.com/:splat 301!
+http://flatto-legal-site.netlify.app/* https://nyusatsu-map.com/:splat 301!
+
+# flat-portal.comからのリダイレクトは別途DNS設定で対応

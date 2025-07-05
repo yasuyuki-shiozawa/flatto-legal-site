@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ（シンプル版） | ふらっと法務事務所</title>
+    <meta name="description" content="入札サポートに関するご相談・お問い合わせはこちらから。">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="canonical" href="https://nyusatsu-map.com/contact-simple.html">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" alt="ふらっと法務事務所" class="logo">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main style="padding-top: 100px;">
+        <section class="section-padding">
+            <div class="container">
+                <h1 class="text-center mb-5">お問い合わせフォーム（テスト版）</h1>
+                
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <!-- シンプルなNetlifyフォーム -->
+                        <form name="contact-simple" method="POST" data-netlify="true" action="/contact-success">
+                            <input type="hidden" name="form-name" value="contact-simple">
+                            
+                            <div class="mb-3">
+                                <label for="name" class="form-label">お名前 <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="email" class="form-label">メールアドレス <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">電話番号 <span class="text-danger">*</span></label>
+                                <input type="tel" class="form-control" id="phone" name="phone" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="message" class="form-label">お問い合わせ内容 <span class="text-danger">*</span></label>
+                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">送信する</button>
+                            </div>
+                        </form>
+                        
+                        <hr class="my-5">
+                        
+                        <div class="text-center">
+                            <h3>お電話でのお問い合わせ</h3>
+                            <p class="h4 mb-3">
+                                <a href="tel:046-272-3357">046-272-3357</a>
+                            </p>
+                            <p>受付時間：平日 9:00〜18:00</p>
+                            
+                            <h3 class="mt-4">メールでのお問い合わせ</h3>
+                            <p class="h5">
+                                <a href="mailto:mail@flat-legal.com">mail@flat-legal.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
