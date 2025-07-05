@@ -107,6 +107,9 @@
   text-align: center;
   padding: 2.5rem 2rem;
   
+  // 注：これらのカードは通常クリックできません（情報表示用）
+  // クリック可能にする場合は card-interactive クラスと併用してください
+  
   .card-feature-icon {
     width: 84px;
     height: 84px;
@@ -160,6 +163,41 @@
     color: var(--color-gray-600);
     line-height: 1.75;
     font-size: 1rem;
+  }
+  
+  // クリック可能バージョン（aタグでラップされている場合）
+  &.clickable,
+  a& {
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    
+    // 「詳しく見る」リンクを追加
+    &::after {
+      content: '詳しく見る →';
+      position: absolute;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.875rem;
+      color: var(--color-primary-600);
+      font-weight: 500;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+    
+    &:hover {
+      padding-bottom: 3.5rem; // スペースを作る
+      
+      &::after {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+      
+      .card-feature-title {
+        color: var(--color-primary-600);
+      }
+    }
   }
 }
 
@@ -250,6 +288,20 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  border: 2px solid transparent;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  // 初期状態でもクリック可能であることを示す
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, var(--color-primary-400), var(--color-primary-600));
+    opacity: 1; // 常に表示
+  }
   
   // 背景パターン
   &::after {
@@ -266,24 +318,29 @@
     pointer-events: none;
   }
   
-  &:hover::after {
-    opacity: 0.5;
+  &:hover {
+    border-color: var(--color-primary-200);
+    
+    &::after {
+      opacity: 0.5;
+    }
   }
   
-  // クリック可能インジケーター
+  // クリック可能インジケーター（常に表示）
   .card-arrow {
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--color-primary-100);
-    color: var(--color-primary-600);
+    background: var(--color-primary-500);
+    color: var(--color-white);
     border-radius: 50%;
     transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     
     i {
       font-size: 0.875rem;
@@ -291,14 +348,45 @@
     }
   }
   
-  &:hover .card-arrow {
-    background: var(--color-primary-600);
-    color: var(--color-white);
-    transform: scale(1.1);
+  // 「クリックして開く」テキスト
+  .click-hint {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 0.75rem;
+    color: var(--color-primary-600);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    opacity: 0.8;
+    transition: all 0.3s ease;
     
     i {
-      transform: translateX(2px);
+      font-size: 0.625rem;
     }
+  }
+  
+  &:hover {
+    .card-arrow {
+      background: var(--color-primary-600);
+      transform: scale(1.1);
+      
+      i {
+        transform: translateX(2px);
+      }
+    }
+    
+    .click-hint {
+      opacity: 1;
+      transform: translateX(-2px);
+    }
+  }
+  
+  // フォーカス時のアクセシビリティ
+  &:focus-visible {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 2px;
   }
 }
 

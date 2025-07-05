@@ -19,6 +19,10 @@ keywords: 入札 やり方,公共調達 参加方法,入札参加資格 取得,�
       <div class="card-arrow">
         <i class="fas fa-arrow-right"></i>
       </div>
+      <div class="click-hint">
+        <i class="fas fa-mouse-pointer"></i>
+        クリックして詳細を見る
+      </div>
     </a>
     <a href="/zuii-keiyaku/" class="card-interactive">
       <div class="card-feature-icon">
@@ -28,6 +32,10 @@ keywords: 入札 やり方,公共調達 参加方法,入札参加資格 取得,�
       <p class="card-feature-description">要件・手続き・注意点を解説</p>
       <div class="card-arrow">
         <i class="fas fa-arrow-right"></i>
+      </div>
+      <div class="click-hint">
+        <i class="fas fa-mouse-pointer"></i>
+        クリックして詳細を見る
       </div>
     </a>
   </div>
