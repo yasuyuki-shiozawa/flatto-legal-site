@@ -1,3 +1,6 @@
+<!-- ヘッダーのスペーサー（固定ヘッダー用） -->
+<div class="header-spacer"></div>
+
 <header class="header">
     <div class="container">
         <div class="header-content">
@@ -44,7 +47,11 @@
         
         <!-- モバイルメニュー -->
         <div class="mobile-menu" id="mobileMenu">
-            <ul class="mobile-nav-list">
+            <div class="mobile-menu-header">
+                <h2 class="mobile-menu-title">メニュー</h2>
+            </div>
+            <div class="mobile-menu-body">
+                <ul class="mobile-nav-list">
                 {% for item in site.data.navigation.main_nav %}
                 <li>
                     <a href="{{ item.url | relative_url }}"
@@ -62,7 +69,11 @@
                     </a>
                 </li>
             </ul>
+            </div>
         </div>
     </div>
 </header>
+
+<!-- モバイルメニューオーバーレイ -->
+<div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
 

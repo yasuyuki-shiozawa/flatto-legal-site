@@ -114,6 +114,9 @@
 <body data-page-url="{{ page.url }}">
     {% include header.html %}
     
+    <!-- パンくずリスト -->
+    {% include breadcrumb.html %}
+    
     <main class="main-container">
         <div class="content-wrapper three-column">
             {% unless page.hide_left_sidebar %}
@@ -173,6 +176,10 @@
             });
         });
     </script>
+    
+    <!-- ナビゲーション改善用スクリプト -->
+    <script src="{{ '/assets/js/sticky-header.js' | relative_url }}" defer></script>
+    <script src="{{ '/assets/js/mobile-menu.js' | relative_url }}" defer></script>
 </body>
 </html>
 

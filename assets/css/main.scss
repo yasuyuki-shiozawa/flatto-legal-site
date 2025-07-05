@@ -1,0 +1,14 @@
+---
+# Jekyll用のフロントマター
+---
+
+// メインスタイルシート
+// SCSSファイルをインポート
+
+// コンポーネント
+@import "../../_sass/components/breadcrumb";
+@import "../../_sass/components/header";
+@import "../../_sass/components/mobile-menu";
+
+// 既存のスタイルをインポート
+// 注: 既存のCSSファイルがある場合は、それらもインポートまたは統合する必要があります
