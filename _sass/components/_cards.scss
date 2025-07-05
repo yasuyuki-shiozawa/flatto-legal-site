@@ -1,0 +1,284 @@
+// カードコンポーネント
+// コンテンツをグループ化するコンテナ
+
+// ベースカード
+.card {
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: all var(--transition-base);
+  
+  // ホバー効果（オプション）
+  &.card-hover {
+    cursor: pointer;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-border-hover);
+    }
+  }
+  
+  // カードヘッダー
+  .card-header {
+    padding: var(--space-4) var(--space-6);
+    background-color: var(--color-bg-secondary);
+    border-bottom: 1px solid var(--color-border);
+    
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: 0;
+    }
+    
+    &.card-header-primary {
+      background-color: var(--color-primary-600);
+      color: var(--color-white);
+      border-bottom-color: var(--color-primary-700);
+    }
+  }
+  
+  // カードボディ
+  .card-body {
+    padding: var(--space-6);
+    
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  // カードフッター
+  .card-footer {
+    padding: var(--space-4) var(--space-6);
+    background-color: var(--color-bg-secondary);
+    border-top: 1px solid var(--color-border);
+    
+    &.card-footer-transparent {
+      background-color: transparent;
+    }
+  }
+  
+  // カード画像
+  .card-image {
+    position: relative;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    // オーバーレイ
+    .card-image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+      display: flex;
+      align-items: flex-end;
+      padding: var(--space-4);
+      color: var(--color-white);
+    }
+  }
+}
+
+// カードサイズバリエーション
+.card-sm {
+  .card-header,
+  .card-body,
+  .card-footer {
+    padding: var(--space-3) var(--space-4);
+  }
+}
+
+.card-lg {
+  .card-header,
+  .card-body,
+  .card-footer {
+    padding: var(--space-8) var(--space-10);
+  }
+}
+
+// カードスタイルバリエーション
+.card-outlined {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.card-elevated {
+  border: none;
+  box-shadow: var(--shadow-md);
+  
+  &:hover {
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+.card-flat {
+  border: none;
+  box-shadow: none;
+  background-color: var(--color-bg-secondary);
+}
+
+// 特殊なカードタイプ
+
+// 統計カード
+.card-stat {
+  text-align: center;
+  
+  .card-stat-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto var(--space-4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary-100);
+    color: var(--color-primary-600);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-2xl);
+  }
+  
+  .card-stat-value {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-2);
+  }
+  
+  .card-stat-label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+  }
+}
+
+// 機能カード
+.card-feature {
+  text-align: center;
+  padding: var(--space-8) var(--space-6);
+  
+  .card-feature-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto var(--space-6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--color-primary-500) 0%, var(--color-primary-700) 100%);
+    color: var(--color-white);
+    border-radius: var(--radius-lg);
+    font-size: var(--font-size-3xl);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .card-feature-title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--space-3);
+  }
+  
+  .card-feature-description {
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+  }
+}
+
+// 価格カード
+.card-pricing {
+  text-align: center;
+  
+  &.card-pricing-featured {
+    border-color: var(--color-primary-500);
+    box-shadow: 0 0 0 2px var(--color-primary-500);
+    transform: scale(1.05);
+  }
+  
+  .card-pricing-badge {
+    background-color: var(--color-primary-600);
+    color: var(--color-white);
+    padding: var(--space-1) var(--space-3);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+  }
+  
+  .card-pricing-price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    margin: var(--space-6) 0;
+    
+    .currency {
+      font-size: var(--font-size-xl);
+      color: var(--color-text-secondary);
+      margin-right: var(--space-1);
+    }
+    
+    .amount {
+      font-size: var(--font-size-4xl);
+      font-weight: var(--font-weight-bold);
+      color: var(--color-text-primary);
+    }
+    
+    .period {
+      font-size: var(--font-size-base);
+      color: var(--color-text-secondary);
+      margin-left: var(--space-2);
+    }
+  }
+  
+  .card-pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-6) 0;
+    
+    li {
+      padding: var(--space-3) 0;
+      border-bottom: 1px solid var(--color-border);
+      
+      &:last-child {
+        border-bottom: none;
+      }
+      
+      &:before {
+        content: "✓";
+        color: var(--color-success);
+        font-weight: var(--font-weight-bold);
+        margin-right: var(--space-2);
+      }
+    }
+  }
+}
+
+// カードグリッドレイアウト
+.card-grid {
+  display: grid;
+  gap: var(--space-6);
+  
+  &.card-grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  &.card-grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  &.card-grid-4 {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}

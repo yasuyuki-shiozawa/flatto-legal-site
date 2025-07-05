@@ -5,10 +5,47 @@
 // メインスタイルシート
 // SCSSファイルをインポート
 
+// ベース（変数とタイポグラフィ）
+@import "../../_sass/base/variables";
+@import "../../_sass/base/typography";
+
 // コンポーネント
 @import "../../_sass/components/breadcrumb";
 @import "../../_sass/components/header";
 @import "../../_sass/components/mobile-menu";
+@import "../../_sass/components/buttons";
+@import "../../_sass/components/cards";
+@import "../../_sass/components/forms";
+@import "../../_sass/components/alerts";
+
+// ユーティリティクラス
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+  
+  @media (min-width: 640px) {
+    max-width: 640px;
+  }
+  
+  @media (min-width: 768px) {
+    max-width: 768px;
+    padding: 0 var(--space-6);
+  }
+  
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+  }
+  
+  @media (min-width: 1280px) {
+    max-width: 1280px;
+  }
+}
+
+// リセット
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
 // 既存のスタイルをインポート
 // 注: 既存のCSSファイルがある場合は、それらもインポートまたは統合する必要があります
