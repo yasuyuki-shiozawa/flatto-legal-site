@@ -63,4 +63,28 @@
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
+  
+  <!-- よくある質問 -->
+  <url>
+    <loc>https://nyusatsu-map.com/faq.html</loc>
+    <lastmod>2025-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- プライバシーポリシー -->
+  <url>
+    <loc>https://nyusatsu-map.com/privacy.html</loc>
+    <lastmod>2025-01-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <!-- 特定商取引法に基づく表記 -->
+  <url>
+    <loc>https://nyusatsu-map.com/terms.html</loc>
+    <lastmod>2025-01-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>
