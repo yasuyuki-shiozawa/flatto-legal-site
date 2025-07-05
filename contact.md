@@ -32,7 +32,7 @@ keywords: お問い合わせ,入札相談,公共調達相談,行政書士相談,
                     通常1-2営業日以内にご回答いたします。</p>
                 </div>
 
-                <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="contact-form" id="contactForm">
+                <form name="contact" method="POST" action="/thanks/" data-netlify="true" data-netlify-honeypot="bot-field" class="contact-form" id="contactForm">
                     <!-- Netlify Forms用の隠しフィールド -->
                     <input type="hidden" name="form-name" value="contact" />
                     
@@ -860,9 +860,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // フォーム送信処理
     form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
         if (!validateForm()) {
+            e.preventDefault();
             return;
         }
 
@@ -871,36 +870,15 @@ document.addEventListener('DOMContentLoaded', function() {
         btnText.classList.add('hidden');
         btnLoading.classList.remove('hidden');
 
-        // Netlify Formsに送信
-        const formData = new FormData(form);
-        
-        fetch('/', {
-            method: 'POST',
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: new URLSearchParams(formData).toString()
-        })
-        .then(() => {
-            // 成功時の処理
-            form.style.display = 'none';
-            successMessage.classList.remove('hidden');
-            
-            // Google Analytics イベント送信（もしあれば）
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'form_submit', {
-                    'event_category': 'Contact',
-                    'event_label': 'Contact Form'
-                });
-            }
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-            alert('送信中にエラーが発生しました。しばらく時間をおいて再度お試しください。');
-            
-            // ボタンを元の状態に戻す
-            submitBtn.disabled = false;
-            btnText.classList.remove('hidden');
-            btnLoading.classList.add('hidden');
-        });
+        // Google Analytics イベント送信（もしあれば）
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'form_submit', {
+                'event_category': 'Contact',
+                'event_label': 'Contact Form'
+            });
+        }
+
+        // フォームは通常通り送信される（Netlify Formsが処理）
     });
 
     // リアルタイムバリデーション
