@@ -1,0 +1,205 @@
+<!-- 事例研究テンプレート -->
+<div class="case-study">
+    <!-- ヘッダー情報 -->
+    <div class="case-study-header">
+        <div class="case-study-meta">
+            <span class="case-study-type">
+                <i class="fas fa-tag"></i>
+                {{ include.type | default: "事例研究" }}
+            </span>
+            <span class="case-study-date">
+                <i class="fas fa-calendar"></i>
+                {{ include.date | default: page.date | date: "%Y年%m月%d日" }}
+            </span>
+            {% if include.difficulty %}
+            <span class="case-study-difficulty difficulty-{{ include.difficulty }}">
+                <i class="fas fa-signal"></i>
+                難易度: {{ include.difficulty | capitalize }}
+            </span>
+            {% endif %}
+        </div>
+    </div>
+    
+    <!-- 概要カード -->
+    <div class="case-study-overview card card-elevated">
+        <div class="card-body">
+            <h3 class="card-title">
+                <i class="fas fa-clipboard-list"></i>
+                事例の概要
+            </h3>
+            <div class="overview-grid">
+                {% if include.client %}
+                <div class="overview-item">
+                    <span class="overview-label">発注者</span>
+                    <span class="overview-value">{{ include.client }}</span>
+                </div>
+                {% endif %}
+                
+                {% if include.budget %}
+                <div class="overview-item">
+                    <span class="overview-label">予算規模</span>
+                    <span class="overview-value">{{ include.budget }}</span>
+                </div>
+                {% endif %}
+                
+                {% if include.period %}
+                <div class="overview-item">
+                    <span class="overview-label">契約期間</span>
+                    <span class="overview-value">{{ include.period }}</span>
+                </div>
+                {% endif %}
+                
+                {% if include.method %}
+                <div class="overview-item">
+                    <span class="overview-label">入札方式</span>
+                    <span class="overview-value">{{ include.method }}</span>
+                </div>
+                {% endif %}
+                
+                {% if include.participants %}
+                <div class="overview-item">
+                    <span class="overview-label">参加者数</span>
+                    <span class="overview-value">{{ include.participants }}社</span>
+                </div>
+                {% endif %}
+                
+                {% if include.result %}
+                <div class="overview-item">
+                    <span class="overview-label">結果</span>
+                    <span class="overview-value result-{{ include.result }}">
+                        {% case include.result %}
+                        {% when "success" %}
+                            <i class="fas fa-check-circle"></i> 落札成功
+                        {% when "failure" %}
+                            <i class="fas fa-times-circle"></i> 落札失敗
+                        {% when "learning" %}
+                            <i class="fas fa-book"></i> 学習事例
+                        {% else %}
+                            {{ include.result }}
+                        {% endcase %}
+                    </span>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    <!-- 課題と解決策 -->
+    {% if include.challenges or include.solutions %}
+    <div class="case-study-analysis">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {% if include.challenges %}
+            <div class="card">
+                <div class="card-header bg-warning text-white">
+                    <h4 class="mb-0">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        直面した課題
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <ul class="challenge-list">
+                        {% for challenge in include.challenges %}
+                        <li class="challenge-item">
+                            <i class="fas fa-chevron-right"></i>
+                            {{ challenge }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endif %}
+            
+            {% if include.solutions %}
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h4 class="mb-0">
+                        <i class="fas fa-lightbulb"></i>
+                        実施した対策
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <ul class="solution-list">
+                        {% for solution in include.solutions %}
+                        <li class="solution-item">
+                            <i class="fas fa-check"></i>
+                            {{ solution }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    {% endif %}
+    
+    <!-- タイムライン -->
+    {% if include.timeline %}
+    <div class="case-study-timeline">
+        <h3 class="timeline-title">
+            <i class="fas fa-history"></i>
+            実施経過
+        </h3>
+        <div class="timeline">
+            {% for event in include.timeline %}
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">{{ event.date }}</div>
+                    <div class="timeline-event">{{ event.event }}</div>
+                    {% if event.note %}
+                    <div class="timeline-note">{{ event.note }}</div>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+    
+    <!-- 学んだポイント -->
+    {% if include.lessons %}
+    <div class="case-study-lessons">
+        <div class="card card-feature">
+            <div class="card-body">
+                <h3 class="card-title">
+                    <i class="fas fa-graduation-cap"></i>
+                    この事例から学べるポイント
+                </h3>
+                <div class="lessons-grid">
+                    {% for lesson in include.lessons %}
+                    <div class="lesson-item">
+                        <div class="lesson-number">{{ forloop.index }}</div>
+                        <div class="lesson-content">
+                            <h4 class="lesson-title">{{ lesson.title }}</h4>
+                            <p class="lesson-description">{{ lesson.description }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    
+    <!-- 関連資料 -->
+    {% if include.resources %}
+    <div class="case-study-resources">
+        <h3 class="resources-title">
+            <i class="fas fa-file-alt"></i>
+            関連資料・参考リンク
+        </h3>
+        <div class="resources-list">
+            {% for resource in include.resources %}
+            <a href="{{ resource.url }}" class="resource-item" {% if resource.external %}target="_blank" rel="noopener"{% endif %}>
+                <i class="fas fa-{{ resource.icon | default: 'link' }}"></i>
+                <span>{{ resource.title }}</span>
+                {% if resource.external %}
+                <i class="fas fa-external-link-alt"></i>
+                {% endif %}
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+</div>

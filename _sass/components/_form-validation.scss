@@ -1,0 +1,335 @@
+// フォームバリデーションのスタイル
+// リアルタイムバリデーション、エラー表示、成功表示
+
+// フィールドの状態
+.field-error {
+  border-color: var(--color-error) !important;
+  background-color: rgba(239, 68, 68, 0.05);
+  
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+  }
+}
+
+.field-success {
+  border-color: var(--color-success) !important;
+  background-color: rgba(34, 197, 94, 0.05);
+  
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
+  }
+}
+
+// エラーメッセージ
+.error-message {
+  display: none;
+  font-size: var(--font-size-sm);
+  color: var(--color-error);
+  margin-top: var(--space-1);
+  animation: slideIn 0.3s ease-out;
+}
+
+// フォーム全体のエラー
+.form-error-message {
+  background-color: var(--color-error-light);
+  border: 1px solid var(--color-error);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  margin-bottom: var(--space-4);
+  color: var(--color-error-dark);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  animation: slideDown 0.3s ease-out;
+  
+  i {
+    font-size: var(--font-size-lg);
+    flex-shrink: 0;
+  }
+}
+
+// 成功メッセージ
+.form-success-message {
+  background-color: var(--color-success-light);
+  border: 1px solid var(--color-success);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  margin-top: var(--space-4);
+  color: var(--color-success-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-lg);
+  animation: scaleIn 0.3s ease-out;
+  
+  i {
+    font-size: var(--font-size-xl);
+  }
+  
+  &.fade-out {
+    animation: fadeOut 0.3s ease-out forwards;
+  }
+}
+
+// パスワード強度インジケーター
+.password-strength {
+  margin-top: var(--space-2);
+  
+  .strength-bar {
+    height: 4px;
+    background-color: var(--color-bg-tertiary);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    margin-bottom: var(--space-1);
+  }
+  
+  .strength-fill {
+    height: 100%;
+    transition: width 0.3s ease, background-color 0.3s ease;
+    
+    &.strength-weak {
+      background-color: var(--color-error);
+    }
+    
+    &.strength-fair {
+      background-color: var(--color-warning);
+    }
+    
+    &.strength-good {
+      background-color: var(--color-info);
+    }
+    
+    &.strength-strong {
+      background-color: var(--color-success);
+    }
+  }
+  
+  .strength-text {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+  }
+}
+
+// 文字数カウンター
+.character-counter {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  text-align: right;
+  margin-top: var(--space-1);
+  
+  &.warning {
+    color: var(--color-warning);
+    font-weight: var(--font-weight-medium);
+  }
+}
+
+// フォームフィールドの改善
+.form-group {
+  margin-bottom: var(--space-4);
+  position: relative;
+  
+  label {
+    display: block;
+    margin-bottom: var(--space-2);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+    
+    .required-mark {
+      color: var(--color-error);
+      margin-left: var(--space-1);
+    }
+  }
+  
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: var(--space-3);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-base);
+    transition: all var(--transition-fast);
+    background-color: var(--color-bg-primary);
+    
+    &:focus {
+      outline: none;
+      border-color: var(--color-primary-500);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+    
+    &:disabled {
+      background-color: var(--color-bg-tertiary);
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+  }
+  
+  textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  
+  // ヘルプテキスト
+  .form-help {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    margin-top: var(--space-1);
+    
+    i {
+      margin-right: var(--space-1);
+      color: var(--color-info);
+    }
+  }
+  
+  // インラインフィードバック
+  .input-group {
+    position: relative;
+    
+    .input-icon {
+      position: absolute;
+      left: var(--space-3);
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--color-text-muted);
+      pointer-events: none;
+    }
+    
+    .input-with-icon {
+      padding-left: var(--space-10);
+    }
+    
+    .input-feedback {
+      position: absolute;
+      right: var(--space-3);
+      top: 50%;
+      transform: translateY(-50%);
+      
+      .success-icon {
+        color: var(--color-success);
+      }
+      
+      .error-icon {
+        color: var(--color-error);
+      }
+    }
+  }
+}
+
+// フォームレイアウト
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-4);
+  
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// フォームアクション
+.form-actions {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  
+  @media (max-width: 640px) {
+    flex-direction: column;
+  }
+  
+  .btn-submit {
+    min-width: 150px;
+    
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+}
+
+// アニメーション
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+// アクセシビリティ
+[aria-invalid="true"] {
+  border-color: var(--color-error) !important;
+}
+
+[aria-invalid="false"]:not(:focus) {
+  border-color: var(--color-success) !important;
+}
+
+// 高コントラストモード対応
+@media (prefers-contrast: high) {
+  .field-error {
+    outline: 2px solid var(--color-error);
+    outline-offset: 2px;
+  }
+  
+  .field-success {
+    outline: 2px solid var(--color-success);
+    outline-offset: 2px;
+  }
+  
+  .error-message {
+    font-weight: var(--font-weight-bold);
+  }
+}

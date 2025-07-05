@@ -1,0 +1,195 @@
+<!-- Q&Aアコーディオン -->
+<div class="faq-accordion" id="faq-{{ include.id | default: 'default' }}">
+    {% for item in include.items %}
+    <div class="faq-item" data-category="{{ item.category | default: 'general' }}">
+        <button class="faq-question" 
+                type="button" 
+                aria-expanded="false"
+                aria-controls="faq-answer-{{ forloop.index }}"
+                data-faq-id="{{ forloop.index }}">
+            <span class="faq-question-content">
+                <span class="faq-q-mark">Q{{ forloop.index }}.</span>
+                <span class="faq-question-text">{{ item.question }}</span>
+            </span>
+            <span class="faq-toggle-icon">
+                <i class="fas fa-chevron-down"></i>
+            </span>
+        </button>
+        
+        <div class="faq-answer" 
+             id="faq-answer-{{ forloop.index }}"
+             aria-hidden="true">
+            <div class="faq-answer-content">
+                <span class="faq-a-mark">A.</span>
+                <div class="faq-answer-text">
+                    {{ item.answer }}
+                    
+                    {% if item.examples %}
+                    <div class="faq-examples">
+                        <h5 class="faq-examples-title">
+                            <i class="fas fa-lightbulb"></i>
+                            具体例
+                        </h5>
+                        <ul class="faq-examples-list">
+                            {% for example in item.examples %}
+                            <li>{{ example }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                    
+                    {% if item.links %}
+                    <div class="faq-links">
+                        <h5 class="faq-links-title">
+                            <i class="fas fa-link"></i>
+                            関連情報
+                        </h5>
+                        <ul class="faq-links-list">
+                            {% for link in item.links %}
+                            <li>
+                                <a href="{{ link.url }}" {% if link.external %}target="_blank" rel="noopener"{% endif %}>
+                                    {{ link.text }}
+                                    {% if link.external %}<i class="fas fa-external-link-alt"></i>{% endif %}
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                    
+                    {% if item.warning %}
+                    <div class="faq-warning">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <span>{{ item.warning }}</span>
+                    </div>
+                    {% endif %}
+                    
+                    {% if item.tip %}
+                    <div class="faq-tip">
+                        <i class="fas fa-info-circle"></i>
+                        <span>{{ item.tip }}</span>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            
+            {% if item.updated %}
+            <div class="faq-updated">
+                <i class="fas fa-clock"></i>
+                最終更新: {{ item.updated | date: "%Y年%m月%d日" }}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- カテゴリフィルター（オプション） -->
+{% if include.show_filter %}
+<div class="faq-filter">
+    <button class="faq-filter-btn active" data-filter="all">
+        すべて
+    </button>
+    {% for category in include.categories %}
+    <button class="faq-filter-btn" data-filter="{{ category.value }}">
+        {{ category.label }}
+    </button>
+    {% endfor %}
+</div>
+{% endif %}
+
+<!-- 検索ボックス（オプション） -->
+{% if include.show_search %}
+<div class="faq-search">
+    <input type="search" 
+           class="faq-search-input" 
+           placeholder="質問を検索..."
+           aria-label="FAQ内を検索">
+    <i class="fas fa-search"></i>
+</div>
+{% endif %}
+
+<script>
+// FAQ アコーディオンの動作
+(function() {
+    const accordion = document.getElementById('faq-{{ include.id | default: "default" }}');
+    if (!accordion) return;
+    
+    // アコーディオンの開閉
+    accordion.addEventListener('click', function(e) {
+        const button = e.target.closest('.faq-question');
+        if (!button) return;
+        
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+        const answerId = button.getAttribute('aria-controls');
+        const answer = document.getElementById(answerId);
+        
+        // 他のアイテムを閉じる（オプション）
+        {% if include.close_others %}
+        accordion.querySelectorAll('.faq-question').forEach(btn => {
+            if (btn !== button) {
+                btn.setAttribute('aria-expanded', 'false');
+                const otherId = btn.getAttribute('aria-controls');
+                const otherAnswer = document.getElementById(otherId);
+                if (otherAnswer) {
+                    otherAnswer.setAttribute('aria-hidden', 'true');
+                }
+            }
+        });
+        {% endif %}
+        
+        // 現在のアイテムをトグル
+        button.setAttribute('aria-expanded', !isExpanded);
+        answer.setAttribute('aria-hidden', isExpanded);
+    });
+    
+    // カテゴリフィルター
+    {% if include.show_filter %}
+    const filterButtons = document.querySelectorAll('.faq-filter-btn');
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const filter = this.dataset.filter;
+            
+            // アクティブクラスの更新
+            filterButtons.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            // FAQアイテムのフィルタリング
+            accordion.querySelectorAll('.faq-item').forEach(item => {
+                if (filter === 'all' || item.dataset.category === filter) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+    {% endif %}
+    
+    // 検索機能
+    {% if include.show_search %}
+    const searchInput = document.querySelector('.faq-search-input');
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            
+            accordion.querySelectorAll('.faq-item').forEach(item => {
+                const question = item.querySelector('.faq-question-text').textContent.toLowerCase();
+                const answer = item.querySelector('.faq-answer-text').textContent.toLowerCase();
+                
+                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                    item.style.display = 'block';
+                    
+                    // 検索語をハイライト
+                    if (searchTerm) {
+                        item.classList.add('search-match');
+                    }
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    }
+    {% endif %}
+})();
+</script>

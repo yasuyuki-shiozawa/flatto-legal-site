@@ -1,0 +1,301 @@
+<!-- チェックリストコンポーネント -->
+<div class="checklist-component" id="checklist-{{ include.id | default: 'default' }}">
+    <div class="checklist-header">
+        <h3 class="checklist-title">
+            <i class="fas fa-tasks"></i>
+            {{ include.title | default: "チェックリスト" }}
+        </h3>
+        
+        <div class="checklist-actions">
+            <span class="checklist-progress">
+                <span class="progress-text">完了: <span class="progress-count">0</span> / <span class="total-count">0</span></span>
+                <div class="progress-bar-wrapper">
+                    <div class="progress-bar-fill"></div>
+                </div>
+            </span>
+            
+            {% if include.printable %}
+            <button class="btn btn-sm btn-ghost" onclick="window.print()">
+                <i class="fas fa-print"></i>
+                印刷
+            </button>
+            {% endif %}
+            
+            {% if include.saveable %}
+            <button class="btn btn-sm btn-ghost save-checklist">
+                <i class="fas fa-save"></i>
+                保存
+            </button>
+            {% endif %}
+        </div>
+    </div>
+    
+    <div class="checklist-content">
+        {% for section in include.sections %}
+        <div class="checklist-section">
+            {% if section.title %}
+            <h4 class="checklist-section-title">
+                <i class="fas fa-{{ section.icon | default: 'folder' }}"></i>
+                {{ section.title }}
+                {% if section.required %}
+                <span class="badge badge-error">必須</span>
+                {% endif %}
+            </h4>
+            {% endif %}
+            
+            {% if section.description %}
+            <p class="checklist-section-description">{{ section.description }}</p>
+            {% endif %}
+            
+            <ul class="checklist-items">
+                {% for item in section.items %}
+                <li class="checklist-item" data-item-id="{{ forloop.parentloop.index }}-{{ forloop.index }}">
+                    <label class="checklist-label">
+                        <input type="checkbox" 
+                               class="checklist-checkbox" 
+                               {% if item.required %}required{% endif %}
+                               {% if item.checked %}checked{% endif %}>
+                        <span class="checkbox-custom"></span>
+                        <span class="checklist-text">
+                            {{ item.text }}
+                            {% if item.required %}
+                            <span class="required-mark">*</span>
+                            {% endif %}
+                        </span>
+                    </label>
+                    
+                    {% if item.note %}
+                    <div class="checklist-note">
+                        <i class="fas fa-info-circle"></i>
+                        {{ item.note }}
+                    </div>
+                    {% endif %}
+                    
+                    {% if item.subitems %}
+                    <ul class="checklist-subitems">
+                        {% for subitem in item.subitems %}
+                        <li class="checklist-subitem">
+                            <label class="checklist-label">
+                                <input type="checkbox" class="checklist-checkbox">
+                                <span class="checkbox-custom"></span>
+                                <span class="checklist-text">{{ subitem }}</span>
+                            </label>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                    
+                    {% if item.deadline %}
+                    <div class="checklist-deadline">
+                        <i class="fas fa-calendar-alt"></i>
+                        期限: {{ item.deadline }}
+                    </div>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+    </div>
+    
+    {% if include.show_summary %}
+    <div class="checklist-summary">
+        <div class="summary-card">
+            <h4 class="summary-title">
+                <i class="fas fa-chart-pie"></i>
+                進捗サマリー
+            </h4>
+            <div class="summary-stats">
+                <div class="stat-item stat-completed">
+                    <div class="stat-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-value completed-count">0</div>
+                        <div class="stat-label">完了</div>
+                    </div>
+                </div>
+                <div class="stat-item stat-remaining">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-value remaining-count">0</div>
+                        <div class="stat-label">未完了</div>
+                    </div>
+                </div>
+                <div class="stat-item stat-percentage">
+                    <div class="stat-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-value percentage-value">0%</div>
+                        <div class="stat-label">達成率</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+<script>
+// チェックリストの動作
+(function() {
+    const checklistId = 'checklist-{{ include.id | default: "default" }}';
+    const checklist = document.getElementById(checklistId);
+    if (!checklist) return;
+    
+    // 初期化
+    function initChecklist() {
+        updateProgress();
+        
+        // 保存されたデータを復元
+        {% if include.saveable %}
+        loadChecklistState();
+        {% endif %}
+    }
+    
+    // 進捗の更新
+    function updateProgress() {
+        const checkboxes = checklist.querySelectorAll('.checklist-checkbox');
+        const checked = checklist.querySelectorAll('.checklist-checkbox:checked');
+        const total = checkboxes.length;
+        const completed = checked.length;
+        const percentage = total > 0 ? Math.round((completed / total) * 100) : 0;
+        
+        // 進捗バーの更新
+        const progressCount = checklist.querySelector('.progress-count');
+        const totalCount = checklist.querySelector('.total-count');
+        const progressFill = checklist.querySelector('.progress-bar-fill');
+        
+        if (progressCount) progressCount.textContent = completed;
+        if (totalCount) totalCount.textContent = total;
+        if (progressFill) progressFill.style.width = percentage + '%';
+        
+        // サマリーの更新
+        {% if include.show_summary %}
+        const completedCount = checklist.querySelector('.completed-count');
+        const remainingCount = checklist.querySelector('.remaining-count');
+        const percentageValue = checklist.querySelector('.percentage-value');
+        
+        if (completedCount) completedCount.textContent = completed;
+        if (remainingCount) remainingCount.textContent = total - completed;
+        if (percentageValue) percentageValue.textContent = percentage + '%';
+        {% endif %}
+        
+        // 完了時のアニメーション
+        if (percentage === 100 && total > 0) {
+            checklist.classList.add('all-completed');
+            showCompletionMessage();
+        } else {
+            checklist.classList.remove('all-completed');
+        }
+    }
+    
+    // チェックボックスの変更イベント
+    checklist.addEventListener('change', function(e) {
+        if (e.target.classList.contains('checklist-checkbox')) {
+            const item = e.target.closest('.checklist-item');
+            
+            // アイテムの状態を更新
+            if (e.target.checked) {
+                item.classList.add('completed');
+            } else {
+                item.classList.remove('completed');
+            }
+            
+            // 親アイテムのチェックボックスの場合、子アイテムも更新
+            const subitems = item.querySelectorAll('.checklist-subitem input');
+            if (subitems.length > 0) {
+                subitems.forEach(subitem => {
+                    subitem.checked = e.target.checked;
+                });
+            }
+            
+            updateProgress();
+            
+            // 状態を保存
+            {% if include.saveable %}
+            saveChecklistState();
+            {% endif %}
+        }
+    });
+    
+    // 完了メッセージの表示
+    function showCompletionMessage() {
+        const message = document.createElement('div');
+        message.className = 'checklist-completion-message';
+        message.innerHTML = `
+            <i class="fas fa-trophy"></i>
+            <span>すべてのタスクが完了しました！</span>
+        `;
+        
+        checklist.appendChild(message);
+        
+        setTimeout(() => {
+            message.classList.add('show');
+        }, 100);
+        
+        setTimeout(() => {
+            message.classList.remove('show');
+            setTimeout(() => message.remove(), 300);
+        }, 3000);
+    }
+    
+    // 状態の保存
+    {% if include.saveable %}
+    function saveChecklistState() {
+        const state = {};
+        checklist.querySelectorAll('.checklist-checkbox').forEach((checkbox, index) => {
+            state[index] = checkbox.checked;
+        });
+        
+        try {
+            localStorage.setItem(checklistId + '-state', JSON.stringify(state));
+            
+            // 保存成功の通知
+            const saveBtn = checklist.querySelector('.save-checklist');
+            if (saveBtn) {
+                saveBtn.innerHTML = '<i class="fas fa-check"></i> 保存済み';
+                setTimeout(() => {
+                    saveBtn.innerHTML = '<i class="fas fa-save"></i> 保存';
+                }, 2000);
+            }
+        } catch (e) {
+            console.error('Failed to save checklist state:', e);
+        }
+    }
+    
+    function loadChecklistState() {
+        try {
+            const saved = localStorage.getItem(checklistId + '-state');
+            if (saved) {
+                const state = JSON.parse(saved);
+                checklist.querySelectorAll('.checklist-checkbox').forEach((checkbox, index) => {
+                    if (state[index] !== undefined) {
+                        checkbox.checked = state[index];
+                        const item = checkbox.closest('.checklist-item');
+                        if (item) {
+                            item.classList.toggle('completed', state[index]);
+                        }
+                    }
+                });
+                updateProgress();
+            }
+        } catch (e) {
+            console.error('Failed to load checklist state:', e);
+        }
+    }
+    
+    // 保存ボタンのクリックイベント
+    const saveBtn = checklist.querySelector('.save-checklist');
+    if (saveBtn) {
+        saveBtn.addEventListener('click', saveChecklistState);
+    }
+    {% endif %}
+    
+    // 初期化を実行
+    initChecklist();
+})();
+</script>

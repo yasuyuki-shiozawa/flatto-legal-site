@@ -1,0 +1,355 @@
+<!-- ステップバイステップガイド -->
+<div class="step-guide" id="step-guide-{{ include.id | default: 'default' }}">
+    <div class="step-guide-header">
+        <h3 class="step-guide-title">
+            <i class="fas fa-route"></i>
+            {{ include.title | default: "手順ガイド" }}
+        </h3>
+        
+        {% if include.estimated_time %}
+        <div class="step-guide-time">
+            <i class="fas fa-clock"></i>
+            所要時間: 約{{ include.estimated_time }}
+        </div>
+        {% endif %}
+    </div>
+    
+    <!-- プログレスインジケーター -->
+    <div class="step-progress">
+        <div class="step-progress-bar">
+            <div class="step-progress-fill"></div>
+        </div>
+        <div class="step-progress-text">
+            ステップ <span class="current-step">1</span> / <span class="total-steps">{{ include.steps | size }}</span>
+        </div>
+    </div>
+    
+    <!-- ステップナビゲーション -->
+    <div class="step-navigation">
+        {% for step in include.steps %}
+        <button class="step-nav-item {% if forloop.first %}active{% endif %}" 
+                data-step="{{ forloop.index }}"
+                aria-label="ステップ{{ forloop.index }}: {{ step.title }}">
+            <span class="step-nav-number">{{ forloop.index }}</span>
+            <span class="step-nav-title">{{ step.title }}</span>
+        </button>
+        {% endfor %}
+    </div>
+    
+    <!-- ステップコンテンツ -->
+    <div class="step-content-wrapper">
+        {% for step in include.steps %}
+        <div class="step-content {% if forloop.first %}active{% endif %}" 
+             data-step-content="{{ forloop.index }}">
+            
+            <!-- ステップヘッダー -->
+            <div class="step-header">
+                <div class="step-number-large">Step {{ forloop.index }}</div>
+                <div class="step-info">
+                    <h4 class="step-title">{{ step.title }}</h4>
+                    {% if step.subtitle %}
+                    <p class="step-subtitle">{{ step.subtitle }}</p>
+                    {% endif %}
+                </div>
+            </div>
+            
+            <!-- ステップ本文 -->
+            <div class="step-body">
+                {{ step.content }}
+                
+                {% if step.checklist %}
+                <div class="step-checklist">
+                    <h5 class="step-checklist-title">
+                        <i class="fas fa-check-square"></i>
+                        確認事項
+                    </h5>
+                    <ul class="step-checklist-items">
+                        {% for item in step.checklist %}
+                        <li class="step-checklist-item">
+                            <label>
+                                <input type="checkbox" class="step-checkbox">
+                                <span>{{ item }}</span>
+                            </label>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+                
+                {% if step.tips %}
+                <div class="step-tips">
+                    <h5 class="step-tips-title">
+                        <i class="fas fa-lightbulb"></i>
+                        ポイント・アドバイス
+                    </h5>
+                    <ul class="step-tips-list">
+                        {% for tip in step.tips %}
+                        <li>{{ tip }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+                
+                {% if step.warning %}
+                <div class="step-warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <div class="step-warning-content">
+                        <strong>注意:</strong> {{ step.warning }}
+                    </div>
+                </div>
+                {% endif %}
+                
+                {% if step.resources %}
+                <div class="step-resources">
+                    <h5 class="step-resources-title">
+                        <i class="fas fa-paperclip"></i>
+                        関連資料
+                    </h5>
+                    <div class="step-resources-list">
+                        {% for resource in step.resources %}
+                        <a href="{{ resource.url }}" class="step-resource-link" 
+                           {% if resource.external %}target="_blank" rel="noopener"{% endif %}>
+                            <i class="fas fa-{{ resource.icon | default: 'file' }}"></i>
+                            {{ resource.title }}
+                            {% if resource.external %}<i class="fas fa-external-link-alt"></i>{% endif %}
+                        </a>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+            
+            <!-- ステップアクション -->
+            <div class="step-actions">
+                <button class="btn btn-outline step-prev" {% if forloop.first %}disabled{% endif %}>
+                    <i class="fas fa-chevron-left"></i>
+                    前のステップ
+                </button>
+                
+                {% if forloop.last %}
+                <button class="btn btn-primary step-complete">
+                    <i class="fas fa-check"></i>
+                    完了
+                </button>
+                {% else %}
+                <button class="btn btn-primary step-next">
+                    次のステップ
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <!-- 完了画面 -->
+    <div class="step-completion" style="display: none;">
+        <div class="completion-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <h3 class="completion-title">すべてのステップが完了しました！</h3>
+        <p class="completion-message">
+            {{ include.completion_message | default: "お疲れさまでした。すべての手順が正常に完了しました。" }}
+        </p>
+        
+        {% if include.next_actions %}
+        <div class="completion-actions">
+            <h4>次のアクション</h4>
+            <div class="next-actions-grid">
+                {% for action in include.next_actions %}
+                <a href="{{ action.url }}" class="next-action-card">
+                    <i class="fas fa-{{ action.icon }}"></i>
+                    <span>{{ action.title }}</span>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+        
+        <button class="btn btn-outline" onclick="resetStepGuide()">
+            <i class="fas fa-redo"></i>
+            最初からやり直す
+        </button>
+    </div>
+</div>
+
+<script>
+// ステップガイドの動作
+(function() {
+    const guide = document.getElementById('step-guide-{{ include.id | default: "default" }}');
+    if (!guide) return;
+    
+    let currentStep = 1;
+    const totalSteps = {{ include.steps | size }};
+    
+    // 初期化
+    function initStepGuide() {
+        updateProgress();
+        setupEventListeners();
+        
+        // URLハッシュからステップを復元
+        const hash = window.location.hash;
+        if (hash) {
+            const stepMatch = hash.match(/step-(\d+)/);
+            if (stepMatch) {
+                const step = parseInt(stepMatch[1]);
+                if (step > 0 && step <= totalSteps) {
+                    goToStep(step);
+                }
+            }
+        }
+    }
+    
+    // イベントリスナーの設定
+    function setupEventListeners() {
+        // ナビゲーションボタン
+        guide.querySelectorAll('.step-nav-item').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const step = parseInt(this.dataset.step);
+                goToStep(step);
+            });
+        });
+        
+        // 次へ/前へボタン
+        guide.querySelectorAll('.step-next').forEach(btn => {
+            btn.addEventListener('click', nextStep);
+        });
+        
+        guide.querySelectorAll('.step-prev').forEach(btn => {
+            btn.addEventListener('click', prevStep);
+        });
+        
+        // 完了ボタン
+        const completeBtn = guide.querySelector('.step-complete');
+        if (completeBtn) {
+            completeBtn.addEventListener('click', completeGuide);
+        }
+        
+        // チェックボックス
+        guide.querySelectorAll('.step-checkbox').forEach(checkbox => {
+            checkbox.addEventListener('change', updateStepCompletion);
+        });
+    }
+    
+    // ステップの移動
+    function goToStep(step) {
+        if (step < 1 || step > totalSteps) return;
+        
+        currentStep = step;
+        
+        // コンテンツの切り替え
+        guide.querySelectorAll('.step-content').forEach(content => {
+            content.classList.remove('active');
+        });
+        guide.querySelector(`[data-step-content="${step}"]`).classList.add('active');
+        
+        // ナビゲーションの更新
+        guide.querySelectorAll('.step-nav-item').forEach(nav => {
+            nav.classList.remove('active', 'completed');
+            const navStep = parseInt(nav.dataset.step);
+            if (navStep === step) {
+                nav.classList.add('active');
+            } else if (navStep < step) {
+                nav.classList.add('completed');
+            }
+        });
+        
+        updateProgress();
+        
+        // URLハッシュを更新
+        history.replaceState(null, null, `#step-${step}`);
+        
+        // スクロール位置を調整
+        guide.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    
+    // 次のステップへ
+    function nextStep() {
+        if (currentStep < totalSteps) {
+            goToStep(currentStep + 1);
+        }
+    }
+    
+    // 前のステップへ
+    function prevStep() {
+        if (currentStep > 1) {
+            goToStep(currentStep - 1);
+        }
+    }
+    
+    // 進捗の更新
+    function updateProgress() {
+        const percentage = (currentStep / totalSteps) * 100;
+        const progressFill = guide.querySelector('.step-progress-fill');
+        const currentStepText = guide.querySelector('.current-step');
+        
+        if (progressFill) {
+            progressFill.style.width = percentage + '%';
+        }
+        
+        if (currentStepText) {
+            currentStepText.textContent = currentStep;
+        }
+    }
+    
+    // ステップの完了状態を更新
+    function updateStepCompletion() {
+        const currentContent = guide.querySelector('.step-content.active');
+        const checkboxes = currentContent.querySelectorAll('.step-checkbox');
+        const checked = currentContent.querySelectorAll('.step-checkbox:checked');
+        
+        if (checkboxes.length > 0 && checkboxes.length === checked.length) {
+            const navItem = guide.querySelector(`.step-nav-item[data-step="${currentStep}"]`);
+            if (navItem) {
+                navItem.classList.add('step-completed');
+            }
+        }
+    }
+    
+    // ガイドの完了
+    function completeGuide() {
+        guide.querySelector('.step-content-wrapper').style.display = 'none';
+        guide.querySelector('.step-navigation').style.display = 'none';
+        guide.querySelector('.step-progress').style.display = 'none';
+        guide.querySelector('.step-completion').style.display = 'block';
+        
+        // 完了をローカルストレージに保存
+        try {
+            localStorage.setItem('step-guide-{{ include.id | default: "default" }}-completed', 'true');
+        } catch (e) {
+            console.error('Failed to save completion state:', e);
+        }
+    }
+    
+    // リセット
+    window.resetStepGuide = function() {
+        currentStep = 1;
+        goToStep(1);
+        
+        guide.querySelector('.step-content-wrapper').style.display = 'block';
+        guide.querySelector('.step-navigation').style.display = 'flex';
+        guide.querySelector('.step-progress').style.display = 'block';
+        guide.querySelector('.step-completion').style.display = 'none';
+        
+        // チェックボックスをリセット
+        guide.querySelectorAll('.step-checkbox').forEach(cb => {
+            cb.checked = false;
+        });
+        
+        // ナビゲーションをリセット
+        guide.querySelectorAll('.step-nav-item').forEach(nav => {
+            nav.classList.remove('step-completed');
+        });
+        
+        // ローカルストレージをクリア
+        try {
+            localStorage.removeItem('step-guide-{{ include.id | default: "default" }}-completed');
+        } catch (e) {
+            console.error('Failed to clear completion state:', e);
+        }
+    };
+    
+    // 初期化
+    initStepGuide();
+})();
+</script>
