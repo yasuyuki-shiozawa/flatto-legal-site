@@ -1,0 +1,394 @@
+// タッチフレンドリーUIコンポーネント
+// モバイルデバイス向けの最適化
+
+// タッチターゲットサイズ
+:root {
+  --touch-target-min: 44px; // iOS推奨の最小タッチターゲット
+  --touch-target-comfortable: 48px; // 快適なタッチターゲット
+}
+
+// タッチフレンドリーボタン
+.btn-touch {
+  min-height: var(--touch-target-min);
+  min-width: var(--touch-target-min);
+  padding: var(--space-3) var(--space-4);
+  
+  // タッチ時のフィードバック
+  @media (hover: none) {
+    &:active {
+      transform: scale(0.95);
+      transition: transform 0.1s ease-out;
+    }
+  }
+}
+
+// タッチフレンドリーリンク
+.link-touch {
+  display: inline-block;
+  padding: var(--space-2) var(--space-3);
+  margin: calc(var(--space-2) * -1) calc(var(--space-3) * -1);
+  min-height: var(--touch-target-min);
+  
+  @media (hover: hover) {
+    padding: 0;
+    margin: 0;
+    min-height: auto;
+  }
+}
+
+// タッチフレンドリーなドロップダウン
+.dropdown-touch {
+  .dropdown-toggle {
+    min-height: var(--touch-target-comfortable);
+    padding-right: var(--space-12);
+    
+    &::after {
+      position: absolute;
+      right: var(--space-4);
+      top: 50%;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+    }
+  }
+  
+  .dropdown-menu {
+    // タッチデバイスでより大きなパディング
+    @media (hover: none) {
+      .dropdown-item {
+        padding: var(--space-3) var(--space-4);
+        min-height: var(--touch-target-comfortable);
+      }
+    }
+  }
+}
+
+// スワイプ可能なタブ
+.tabs-swipeable {
+  .tab-list {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .tab-item {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      min-width: max-content;
+      padding: var(--space-3) var(--space-4);
+      min-height: var(--touch-target-comfortable);
+      
+      &:first-child {
+        margin-left: var(--space-4);
+      }
+      
+      &:last-child {
+        margin-right: var(--space-4);
+      }
+    }
+  }
+  
+  // スクロールインジケーター
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+  }
+  
+  &::before {
+    left: 0;
+    background: linear-gradient(to right, var(--color-bg-primary) 0%, transparent 100%);
+  }
+  
+  &::after {
+    right: 0;
+    background: linear-gradient(to left, var(--color-bg-primary) 0%, transparent 100%);
+  }
+}
+
+// タッチフレンドリーなスライダー
+.slider-touch {
+  .slider-track {
+    height: 24px;
+    position: relative;
+    
+    .slider-rail {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 4px;
+      background-color: var(--color-gray-300);
+      border-radius: var(--radius-full);
+    }
+    
+    .slider-progress {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 4px;
+      background-color: var(--color-primary-600);
+      border-radius: var(--radius-full);
+    }
+  }
+  
+  .slider-thumb {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: var(--touch-target-min);
+    height: var(--touch-target-min);
+    background-color: var(--color-white);
+    border: 2px solid var(--color-primary-600);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    touch-action: none;
+    box-shadow: var(--shadow-md);
+    
+    // アクティブ時の拡大
+    &:active {
+      transform: translate(-50%, -50%) scale(1.2);
+      transition: transform 0.1s ease-out;
+    }
+    
+    // 内側のインジケーター
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 16px;
+      height: 16px;
+      background-color: var(--color-primary-600);
+      border-radius: var(--radius-full);
+    }
+  }
+}
+
+// ボトムシート（モバイル向け）
+.bottom-sheet {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-bg-primary);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  box-shadow: var(--shadow-xl);
+  transform: translateY(100%);
+  transition: transform var(--transition-base);
+  z-index: var(--z-index-modal);
+  max-height: 90vh;
+  overflow: hidden;
+  
+  &.is-open {
+    transform: translateY(0);
+  }
+  
+  // ドラッグハンドル
+  .sheet-handle {
+    width: 40px;
+    height: 4px;
+    background-color: var(--color-gray-400);
+    border-radius: var(--radius-full);
+    margin: var(--space-3) auto;
+    cursor: grab;
+    
+    &:active {
+      cursor: grabbing;
+    }
+  }
+  
+  .sheet-content {
+    padding: var(--space-4) var(--space-6);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    max-height: calc(90vh - 40px);
+  }
+}
+
+// タッチ対応のトグルスイッチ
+.switch-touch {
+  .switch-track {
+    width: 60px;
+    height: 32px;
+    background-color: var(--color-gray-300);
+    border-radius: var(--radius-full);
+    position: relative;
+    cursor: pointer;
+    transition: background-color var(--transition-base);
+    
+    &.is-checked {
+      background-color: var(--color-primary-600);
+    }
+  }
+  
+  .switch-thumb {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 28px;
+    height: 28px;
+    background-color: var(--color-white);
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-base);
+    
+    .is-checked & {
+      transform: translateX(28px);
+    }
+  }
+  
+  // タッチエリアの拡大
+  .switch-touch-area {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+  }
+}
+
+// モバイル用FAB（フローティングアクションボタン）
+.fab-mobile {
+  position: fixed;
+  bottom: var(--space-6);
+  right: var(--space-6);
+  width: 56px;
+  height: 56px;
+  background-color: var(--color-primary-600);
+  color: var(--color-white);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: var(--z-index-fixed);
+  transition: all var(--transition-base);
+  
+  &:active {
+    transform: scale(0.9);
+  }
+  
+  // セーフエリアの考慮
+  @supports (padding: max(0px)) {
+    bottom: max(var(--space-6), env(safe-area-inset-bottom));
+    right: max(var(--space-6), env(safe-area-inset-right));
+  }
+  
+  // 拡張メニュー
+  &.is-expanded {
+    .fab-menu {
+      opacity: 1;
+      pointer-events: auto;
+      
+      .fab-menu-item {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+  
+  .fab-menu {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    margin-bottom: var(--space-3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-base);
+    
+    .fab-menu-item {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-bottom: var(--space-3);
+      transform: translateY(20px);
+      opacity: 0;
+      transition: all var(--transition-base);
+      
+      @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+          transition-delay: #{$i * 50}ms;
+        }
+      }
+      
+      .fab-label {
+        background-color: var(--color-gray-900);
+        color: var(--color-white);
+        padding: var(--space-2) var(--space-3);
+        border-radius: var(--radius-md);
+        margin-right: var(--space-3);
+        font-size: var(--font-size-sm);
+        white-space: nowrap;
+      }
+      
+      .fab-action {
+        width: 48px;
+        height: 48px;
+        background-color: var(--color-bg-primary);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-full);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: var(--shadow-md);
+        cursor: pointer;
+        
+        &:active {
+          transform: scale(0.9);
+        }
+      }
+    }
+  }
+}
+
+// ジェスチャーヒント
+.gesture-hint {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
+  animation: gestureHint 2s ease-in-out;
+  
+  &.swipe-left {
+    animation-name: swipeLeftHint;
+  }
+  
+  &.swipe-right {
+    animation-name: swipeRightHint;
+  }
+  
+  &.pinch {
+    animation-name: pinchHint;
+  }
+}
+
+// アニメーション
+@keyframes swipeLeftHint {
+  0%, 100% { opacity: 0; transform: translate(-50%, -50%) translateX(0); }
+  50% { opacity: 1; transform: translate(-50%, -50%) translateX(-50px); }
+}
+
+@keyframes swipeRightHint {
+  0%, 100% { opacity: 0; transform: translate(-50%, -50%) translateX(0); }
+  50% { opacity: 1; transform: translate(-50%, -50%) translateX(50px); }
+}
+
+@keyframes pinchHint {
+  0%, 100% { opacity: 0; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 1; transform: translate(-50%, -50%) scale(1.5); }
+}

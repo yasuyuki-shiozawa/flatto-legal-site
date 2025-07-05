@@ -1,0 +1,388 @@
+// 画像コンポーネント
+// レスポンシブで最適化された画像表示
+
+// ベース画像スタイル
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// レスポンシブ画像コンテナ
+.image-container {
+  position: relative;
+  overflow: hidden;
+  
+  // アスペクト比の保持
+  &.aspect-square {
+    aspect-ratio: 1 / 1;
+  }
+  
+  &.aspect-video {
+    aspect-ratio: 16 / 9;
+  }
+  
+  &.aspect-4-3 {
+    aspect-ratio: 4 / 3;
+  }
+  
+  &.aspect-3-2 {
+    aspect-ratio: 3 / 2;
+  }
+  
+  // 画像のフィット方法
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    &.object-contain {
+      object-fit: contain;
+    }
+    
+    &.object-fill {
+      object-fit: fill;
+    }
+    
+    &.object-none {
+      object-fit: none;
+    }
+    
+    &.object-scale-down {
+      object-fit: scale-down;
+    }
+  }
+  
+  // ローディングプレースホルダー
+  &.is-loading {
+    background: linear-gradient(
+      90deg,
+      var(--color-gray-200) 0%,
+      var(--color-gray-300) 50%,
+      var(--color-gray-200) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s ease-in-out infinite;
+    
+    img {
+      opacity: 0;
+      transition: opacity var(--transition-base);
+    }
+  }
+  
+  &.is-loaded {
+    img {
+      opacity: 1;
+    }
+  }
+}
+
+// 遅延読み込み画像
+.lazy-image {
+  filter: blur(10px);
+  transition: filter var(--transition-base);
+  
+  &.loaded {
+    filter: blur(0);
+  }
+}
+
+// 画像ギャラリー
+.image-gallery {
+  display: grid;
+  gap: var(--space-4);
+  
+  &.gallery-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  &.gallery-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  &.gallery-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  // レスポンシブギャラリー
+  &.gallery-responsive {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    
+    @media (min-width: 640px) {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  }
+  
+  // ギャラリーアイテム
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: transform var(--transition-base);
+    
+    &:hover {
+      transform: scale(1.05);
+      
+      .gallery-overlay {
+        opacity: 1;
+      }
+    }
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  // オーバーレイ
+  .gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(0, 0, 0, 0.7) 100%
+    );
+    display: flex;
+    align-items: flex-end;
+    padding: var(--space-4);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+    
+    .gallery-caption {
+      color: var(--color-white);
+      font-size: var(--font-size-sm);
+    }
+  }
+}
+
+// 画像カルーセル
+.image-carousel {
+  position: relative;
+  overflow: hidden;
+  
+  .carousel-container {
+    display: flex;
+    transition: transform var(--transition-base);
+    
+    .carousel-item {
+      flex: 0 0 100%;
+      
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  
+  // カルーセルコントロール
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--color-white);
+    border: none;
+    padding: var(--space-3);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    z-index: 10;
+    
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    
+    &.carousel-prev {
+      left: var(--space-4);
+    }
+    
+    &.carousel-next {
+      right: var(--space-4);
+    }
+    
+    @media (max-width: 768px) {
+      padding: var(--space-2);
+      
+      &.carousel-prev {
+        left: var(--space-2);
+      }
+      
+      &.carousel-next {
+        right: var(--space-2);
+      }
+    }
+  }
+  
+  // カルーセルインジケーター
+  .carousel-indicators {
+    position: absolute;
+    bottom: var(--space-4);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: var(--space-2);
+    z-index: 10;
+    
+    .indicator {
+      width: 8px;
+      height: 8px;
+      border-radius: var(--radius-full);
+      background-color: rgba(255, 255, 255, 0.5);
+      border: none;
+      cursor: pointer;
+      transition: all var(--transition-base);
+      
+      &.active {
+        width: 24px;
+        background-color: var(--color-white);
+      }
+    }
+  }
+}
+
+// 画像の比較スライダー
+.image-compare {
+  position: relative;
+  overflow: hidden;
+  cursor: col-resize;
+  
+  .compare-before,
+  .compare-after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  .compare-after {
+    clip-path: inset(0 0 0 50%);
+  }
+  
+  .compare-slider {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background-color: var(--color-white);
+    transform: translateX(-50%);
+    cursor: col-resize;
+    
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background-color: var(--color-white);
+      border-radius: var(--radius-full);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: var(--shadow-md);
+    }
+    
+    &::after {
+      width: 20px;
+      height: 20px;
+      background-color: var(--color-primary-600);
+    }
+  }
+}
+
+// タッチフレンドリーな画像ズーム
+.image-zoom {
+  position: relative;
+  overflow: hidden;
+  touch-action: none;
+  
+  img {
+    width: 100%;
+    height: auto;
+    transition: transform var(--transition-base);
+    transform-origin: center;
+  }
+  
+  &.zoomed {
+    img {
+      transform: scale(2);
+      cursor: move;
+    }
+  }
+  
+  // ズームコントロール
+  .zoom-controls {
+    position: absolute;
+    bottom: var(--space-4);
+    right: var(--space-4);
+    display: flex;
+    gap: var(--space-2);
+    
+    button {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: var(--color-white);
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all var(--transition-base);
+      
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.9);
+      }
+    }
+  }
+}
+
+// アニメーション
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+// アクセシビリティ
+.image-container,
+.gallery-item,
+.carousel-item {
+  // フォーカススタイル
+  &:focus {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 2px;
+  }
+}
+
+// 印刷時の最適化
+@media print {
+  .image-container,
+  .lazy-image,
+  img {
+    filter: none !important;
+    opacity: 1 !important;
+  }
+  
+  .carousel-control,
+  .carousel-indicators,
+  .zoom-controls {
+    display: none !important;
+  }
+}

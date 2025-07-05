@@ -16,28 +16,30 @@ keywords: 入札,公共調達,行政書士,入札制度,政府調達,地方自�
             </div>
         </div>
         
-        <div class="hero-content">
+        <div class="hero-content grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div class="hero-text">
-                <h1 class="hero-title">
+                <h1 class="hero-title text-3xl lg:text-5xl font-bold mb-4">
                     <span class="highlight">入札マップ</span><br>
                     公共調達の知識をナビゲートするポータルサイト
                 </h1>
-                <p class="hero-subtitle">
+                <p class="hero-subtitle text-lg lg:text-xl text-muted mb-8">
                     複雑な入札の世界を、分かりやすく体系的にご案内します。基本から実践まで、必要な知識がここに集約されています。
                 </p>
-                <div class="hero-buttons">
-                    <a href="{{ '/knowhow/' | relative_url }}" class="btn btn-primary btn-large">
+                <div class="hero-buttons flex flex-col sm:flex-row gap-4">
+                    <a href="{{ '/knowhow/' | relative_url }}" class="btn btn-primary btn-lg btn-touch">
                         <i class="fas fa-book"></i>
                         入札の基本を学ぶ
                     </a>
-                    <a href="{{ '/cases/' | relative_url }}" class="btn btn-outline btn-large">
+                    <a href="{{ '/cases/' | relative_url }}" class="btn btn-outline btn-lg btn-touch">
                         <i class="fas fa-chart-line"></i>
                         事例研究を見る
                     </a>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="{{ site.baseurl }}/assets/images/hero-character.webp" alt="入札マップのキャラクターイラスト" class="hero-img">
+                <div class="image-container aspect-4-3">
+                    <img src="{{ site.baseurl }}/assets/images/hero-character.webp" alt="入札マップのキャラクターイラスト" class="hero-img lazy-image">
+                </div>
             </div>
         </div>
     </div>
@@ -87,33 +89,39 @@ keywords: 入札,公共調達,行政書士,入札制度,政府調達,地方自�
             </div>
         </div>
         
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-graduation-cap"></i>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="card card-hover">
+                <div class="card-body">
+                    <div class="card-feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">正確で詳細な情報</h3>
+                    <p class="text-muted">
+                        <a href="{{ '/knowhow/' | relative_url }}">法的根拠に基づく正確な情報</a>を提供。<a href="{{ '/knowhow/' | relative_url }}">地方自治法や会計法</a>などの関連法令を踏まえ、<a href="{{ '/latest-trends/' | relative_url }}">最新の制度変更</a>にも対応した信頼できる内容をお届けします。
+                    </p>
                 </div>
-                <h3 class="feature-title">正確で詳細な情報</h3>
-                <p class="feature-description">
-                    <a href="{{ '/knowhow/' | relative_url }}">法的根拠に基づく正確な情報</a>を提供。<a href="{{ '/knowhow/' | relative_url }}">地方自治法や会計法</a>などの関連法令を踏まえ、<a href="{{ '/latest-trends/' | relative_url }}">最新の制度変更</a>にも対応した信頼できる内容をお届けします。
-                </p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-book-open"></i>
+            <div class="card card-hover">
+                <div class="card-body">
+                    <div class="card-feature-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">分かりやすい解説</h3>
+                    <p class="text-muted">
+                        複雑な制度も段階的に理解できるよう、<a href="{{ '/knowhow/' | relative_url }}">初心者から上級者まで対応した体系的な構成</a>。<a href="{{ '/about/' | relative_url }}">専門用語も丁寧に解説</a>し、誰でも理解できる内容を心がけています。
+                    </p>
                 </div>
-                <h3 class="feature-title">分かりやすい解説</h3>
-                <p class="feature-description">
-                    複雑な制度も段階的に理解できるよう、<a href="{{ '/knowhow/' | relative_url }}">初心者から上級者まで対応した体系的な構成</a>。<a href="{{ '/about/' | relative_url }}">専門用語も丁寧に解説</a>し、誰でも理解できる内容を心がけています。
-                </p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-database"></i>
+            <div class="card card-hover">
+                <div class="card-body">
+                    <div class="card-feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">豊富な事例とデータ</h3>
+                    <p class="text-muted">
+                        <a href="{{ '/cases/' | relative_url }}">実際の入札事例を基にした学習材料</a>を豊富に提供。<a href="{{ '/cases/' | relative_url }}">成功パターンや注意点</a>を具体的な事例で学べ、実務に直結する知識を身につけることができます。
+                    </p>
                 </div>
-                <h3 class="feature-title">豊富な事例とデータ</h3>
-                <p class="feature-description">
-                    <a href="{{ '/cases/' | relative_url }}">実際の入札事例を基にした学習材料</a>を豊富に提供。<a href="{{ '/cases/' | relative_url }}">成功パターンや注意点</a>を具体的な事例で学べ、実務に直結する知識を身につけることができます。
-                </p>
             </div>
         </div>
     </div>
@@ -196,41 +204,49 @@ keywords: 入札,公共調達,行政書士,入札制度,政府調達,地方自�
             </div>
         </div>
         
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-icon">
-                    <i class="fas fa-yen-sign"></i>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="card-stat">
+                <div class="card-body">
+                    <div class="card-stat-icon">
+                        <i class="fas fa-yen-sign"></i>
+                    </div>
+                    <div class="card-stat-value">約21兆円</div>
+                    <div class="card-stat-label">年間公共調達額</div>
+                    <div class="text-sm text-muted mt-2">国約8兆円・地方約13兆円の合計（内閣府調査）</div>
                 </div>
-                <div class="stat-number">約21兆円</div>
-                <div class="stat-label">年間公共調達額</div>
-                <div class="stat-description">国約8兆円・地方約13兆円の合計（内閣府調査）</div>
             </div>
             
-            <div class="stat-card">
-                <div class="stat-icon">
-                    <i class="fas fa-building"></i>
+            <div class="card-stat">
+                <div class="card-body">
+                    <div class="card-stat-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="card-stat-value">約7万社</div>
+                    <div class="card-stat-label">参加可能事業者数</div>
+                    <div class="text-sm text-muted mt-2">全省庁統一資格保有企業数（2024年4月）</div>
                 </div>
-                <div class="stat-number">約7万社</div>
-                <div class="stat-label">参加可能事業者数</div>
-                <div class="stat-description">全省庁統一資格保有企業数（2024年4月）</div>
             </div>
             
-            <div class="stat-card">
-                <div class="stat-icon">
-                    <i class="fas fa-list"></i>
+            <div class="card-stat">
+                <div class="card-body">
+                    <div class="card-stat-icon">
+                        <i class="fas fa-list"></i>
+                    </div>
+                    <div class="card-stat-value">3種類</div>
+                    <div class="card-stat-label">主要な入札方式</div>
+                    <div class="text-sm text-muted mt-2">一般競争・指名競争・随意契約の基本パターン</div>
                 </div>
-                <div class="stat-number">3種類</div>
-                <div class="stat-label">主要な入札方式</div>
-                <div class="stat-description">一般競争・指名競争・随意契約の基本パターン</div>
             </div>
             
-            <div class="stat-card">
-                <div class="stat-icon">
-                    <i class="fas fa-calendar-alt"></i>
+            <div class="card-stat">
+                <div class="card-body">
+                    <div class="card-stat-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="card-stat-value">2年に1回</div>
+                    <div class="card-stat-label">資格審査頻度</div>
+                    <div class="text-sm text-muted mt-2">地方自治体の定期審査実施頻度（国土交通省）</div>
                 </div>
-                <div class="stat-number">2年に1回</div>
-                <div class="stat-label">資格審査頻度</div>
-                <div class="stat-description">地方自治体の定期審査実施頻度（国土交通省）</div>
             </div>
         </div>
         

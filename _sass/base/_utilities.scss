@@ -1,0 +1,277 @@
+// ユーティリティクラス
+// 汎用的なスタイルヘルパー
+
+// スペーシング
+// パディング
+@each $side in (top, right, bottom, left) {
+  $abbrev: str-slice($side, 1, 1);
+  @for $i from 0 through 12 {
+    .p#{$abbrev}-#{$i} {
+      padding-#{$side}: var(--space-#{$i}) !important;
+    }
+  }
+}
+
+// 全方向パディング
+@for $i from 0 through 12 {
+  .p-#{$i} {
+    padding: var(--space-#{$i}) !important;
+  }
+  .px-#{$i} {
+    padding-left: var(--space-#{$i}) !important;
+    padding-right: var(--space-#{$i}) !important;
+  }
+  .py-#{$i} {
+    padding-top: var(--space-#{$i}) !important;
+    padding-bottom: var(--space-#{$i}) !important;
+  }
+}
+
+// マージン
+@each $side in (top, right, bottom, left) {
+  $abbrev: str-slice($side, 1, 1);
+  @for $i from 0 through 12 {
+    .m#{$abbrev}-#{$i} {
+      margin-#{$side}: var(--space-#{$i}) !important;
+    }
+  }
+}
+
+// 全方向マージン
+@for $i from 0 through 12 {
+  .m-#{$i} {
+    margin: var(--space-#{$i}) !important;
+  }
+  .mx-#{$i} {
+    margin-left: var(--space-#{$i}) !important;
+    margin-right: var(--space-#{$i}) !important;
+  }
+  .my-#{$i} {
+    margin-top: var(--space-#{$i}) !important;
+    margin-bottom: var(--space-#{$i}) !important;
+  }
+}
+
+// 自動マージン
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+// テキスト配置
+.text-left { text-align: left !important; }
+.text-center { text-align: center !important; }
+.text-right { text-align: right !important; }
+.text-justify { text-align: justify !important; }
+
+// レスポンシブテキスト配置
+@media (min-width: 640px) {
+  .sm\:text-left { text-align: left !important; }
+  .sm\:text-center { text-align: center !important; }
+  .sm\:text-right { text-align: right !important; }
+}
+
+@media (min-width: 768px) {
+  .md\:text-left { text-align: left !important; }
+  .md\:text-center { text-align: center !important; }
+  .md\:text-right { text-align: right !important; }
+}
+
+@media (min-width: 1024px) {
+  .lg\:text-left { text-align: left !important; }
+  .lg\:text-center { text-align: center !important; }
+  .lg\:text-right { text-align: right !important; }
+}
+
+// フォントサイズ
+.text-xs { font-size: var(--font-size-xs) !important; }
+.text-sm { font-size: var(--font-size-sm) !important; }
+.text-base { font-size: var(--font-size-base) !important; }
+.text-lg { font-size: var(--font-size-lg) !important; }
+.text-xl { font-size: var(--font-size-xl) !important; }
+.text-2xl { font-size: var(--font-size-2xl) !important; }
+.text-3xl { font-size: var(--font-size-3xl) !important; }
+.text-4xl { font-size: var(--font-size-4xl) !important; }
+.text-5xl { font-size: var(--font-size-5xl) !important; }
+
+// フォント太さ
+.font-thin { font-weight: var(--font-weight-thin) !important; }
+.font-light { font-weight: var(--font-weight-light) !important; }
+.font-normal { font-weight: var(--font-weight-normal) !important; }
+.font-medium { font-weight: var(--font-weight-medium) !important; }
+.font-semibold { font-weight: var(--font-weight-semibold) !important; }
+.font-bold { font-weight: var(--font-weight-bold) !important; }
+.font-extrabold { font-weight: var(--font-weight-extrabold) !important; }
+
+// 行の高さ
+.leading-none { line-height: 1 !important; }
+.leading-tight { line-height: var(--line-height-tight) !important; }
+.leading-normal { line-height: var(--line-height-normal) !important; }
+.leading-relaxed { line-height: var(--line-height-relaxed) !important; }
+.leading-loose { line-height: var(--line-height-loose) !important; }
+
+// テキストカラー
+.text-primary { color: var(--color-primary-600) !important; }
+.text-secondary { color: var(--color-secondary-600) !important; }
+.text-success { color: var(--color-success) !important; }
+.text-warning { color: var(--color-warning) !important; }
+.text-error { color: var(--color-error) !important; }
+.text-info { color: var(--color-info) !important; }
+.text-muted { color: var(--color-text-muted) !important; }
+
+// 背景色
+.bg-primary { background-color: var(--color-primary-600) !important; }
+.bg-secondary { background-color: var(--color-secondary-600) !important; }
+.bg-success { background-color: var(--color-success) !important; }
+.bg-warning { background-color: var(--color-warning) !important; }
+.bg-error { background-color: var(--color-error) !important; }
+.bg-info { background-color: var(--color-info) !important; }
+.bg-white { background-color: var(--color-white) !important; }
+.bg-black { background-color: var(--color-black) !important; }
+.bg-transparent { background-color: transparent !important; }
+
+// グレースケール背景
+@for $i from 1 through 9 {
+  .bg-gray-#{$i}00 {
+    background-color: var(--color-gray-#{$i}00) !important;
+  }
+}
+
+// ボーダー
+.border { border: 1px solid var(--color-border) !important; }
+.border-0 { border: 0 !important; }
+.border-t { border-top: 1px solid var(--color-border) !important; }
+.border-r { border-right: 1px solid var(--color-border) !important; }
+.border-b { border-bottom: 1px solid var(--color-border) !important; }
+.border-l { border-left: 1px solid var(--color-border) !important; }
+
+// ボーダー太さ
+.border-2 { border-width: 2px !important; }
+.border-4 { border-width: 4px !important; }
+.border-8 { border-width: 8px !important; }
+
+// 角丸
+.rounded-none { border-radius: 0 !important; }
+.rounded-sm { border-radius: var(--radius-sm) !important; }
+.rounded { border-radius: var(--radius-default) !important; }
+.rounded-md { border-radius: var(--radius-md) !important; }
+.rounded-lg { border-radius: var(--radius-lg) !important; }
+.rounded-xl { border-radius: var(--radius-xl) !important; }
+.rounded-full { border-radius: var(--radius-full) !important; }
+
+// 影
+.shadow-none { box-shadow: none !important; }
+.shadow-sm { box-shadow: var(--shadow-sm) !important; }
+.shadow { box-shadow: var(--shadow-default) !important; }
+.shadow-md { box-shadow: var(--shadow-md) !important; }
+.shadow-lg { box-shadow: var(--shadow-lg) !important; }
+.shadow-xl { box-shadow: var(--shadow-xl) !important; }
+
+// オーバーフロー
+.overflow-auto { overflow: auto !important; }
+.overflow-hidden { overflow: hidden !important; }
+.overflow-visible { overflow: visible !important; }
+.overflow-scroll { overflow: scroll !important; }
+.overflow-x-auto { overflow-x: auto !important; }
+.overflow-y-auto { overflow-y: auto !important; }
+
+// ポジション
+.static { position: static !important; }
+.fixed { position: fixed !important; }
+.absolute { position: absolute !important; }
+.relative { position: relative !important; }
+.sticky { position: sticky !important; }
+
+// ポジション値
+.top-0 { top: 0 !important; }
+.right-0 { right: 0 !important; }
+.bottom-0 { bottom: 0 !important; }
+.left-0 { left: 0 !important; }
+.inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+
+// z-index
+.z-0 { z-index: 0 !important; }
+.z-10 { z-index: 10 !important; }
+.z-20 { z-index: 20 !important; }
+.z-30 { z-index: 30 !important; }
+.z-40 { z-index: 40 !important; }
+.z-50 { z-index: 50 !important; }
+.z-auto { z-index: auto !important; }
+
+// 幅と高さ
+.w-full { width: 100% !important; }
+.w-screen { width: 100vw !important; }
+.w-auto { width: auto !important; }
+.h-full { height: 100% !important; }
+.h-screen { height: 100vh !important; }
+.h-auto { height: auto !important; }
+
+// 最小/最大幅・高さ
+.min-w-0 { min-width: 0 !important; }
+.min-w-full { min-width: 100% !important; }
+.max-w-none { max-width: none !important; }
+.min-h-0 { min-height: 0 !important; }
+.min-h-full { min-height: 100% !important; }
+.min-h-screen { min-height: 100vh !important; }
+
+// カーソル
+.cursor-auto { cursor: auto !important; }
+.cursor-default { cursor: default !important; }
+.cursor-pointer { cursor: pointer !important; }
+.cursor-wait { cursor: wait !important; }
+.cursor-text { cursor: text !important; }
+.cursor-move { cursor: move !important; }
+.cursor-not-allowed { cursor: not-allowed !important; }
+
+// ユーザー選択
+.select-none { user-select: none !important; }
+.select-text { user-select: text !important; }
+.select-all { user-select: all !important; }
+.select-auto { user-select: auto !important; }
+
+// トランジション
+.transition-none { transition: none !important; }
+.transition-all { transition: all var(--transition-base) !important; }
+.transition { transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform !important; transition-duration: var(--duration-base) !important; }
+.transition-colors { transition-property: background-color, border-color, color, fill, stroke !important; transition-duration: var(--duration-base) !important; }
+.transition-opacity { transition-property: opacity !important; transition-duration: var(--duration-base) !important; }
+.transition-shadow { transition-property: box-shadow !important; transition-duration: var(--duration-base) !important; }
+.transition-transform { transition-property: transform !important; transition-duration: var(--duration-base) !important; }
+
+// トランスフォーム
+.scale-90 { transform: scale(0.9) !important; }
+.scale-95 { transform: scale(0.95) !important; }
+.scale-100 { transform: scale(1) !important; }
+.scale-105 { transform: scale(1.05) !important; }
+.scale-110 { transform: scale(1.1) !important; }
+
+// 回転
+.rotate-0 { transform: rotate(0deg) !important; }
+.rotate-45 { transform: rotate(45deg) !important; }
+.rotate-90 { transform: rotate(90deg) !important; }
+.rotate-180 { transform: rotate(180deg) !important; }
+
+// スクリーンリーダーのみ
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border-width: 0 !important;
+}
+
+// フォーカス時にスクリーンリーダーのみ解除
+.not-sr-only:focus {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  padding: inherit !important;
+  margin: inherit !important;
+  overflow: visible !important;
+  clip: auto !important;
+  white-space: normal !important;
+}
