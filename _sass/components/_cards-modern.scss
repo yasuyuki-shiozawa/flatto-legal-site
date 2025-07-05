@@ -1,0 +1,375 @@
+// モダンなカードデザイン
+// 既存のカードスタイルを拡張・改善
+
+// ========================================
+// モダンカードベース
+// ========================================
+.card-modern {
+  background: var(--color-white);
+  border-radius: 16px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  // アクセントライン（上部）
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, var(--color-primary-500), var(--color-primary-700));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  // ホバー効果
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    
+    &::before {
+      opacity: 1;
+    }
+  }
+  
+  // カラーバリエーション
+  &.card-primary {
+    &::before {
+      opacity: 1;
+      background: linear-gradient(135deg, var(--color-primary-400), var(--color-primary-600));
+    }
+  }
+  
+  &.card-secondary {
+    &::before {
+      opacity: 1;
+      background: linear-gradient(135deg, var(--color-secondary-400), var(--color-secondary-600));
+    }
+  }
+  
+  &.card-success {
+    &::before {
+      opacity: 1;
+      background: linear-gradient(135deg, #10b981, #059669);
+    }
+  }
+}
+
+// ========================================
+// グラスモーフィズムカード
+// ========================================
+.card-glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+// ========================================
+// グラデーションカード
+// ========================================
+.card-gradient {
+  background: linear-gradient(135deg, var(--color-primary-50), var(--color-primary-100));
+  border: none;
+  color: var(--color-primary-900);
+  
+  &.gradient-secondary {
+    background: linear-gradient(135deg, var(--color-secondary-50), var(--color-secondary-100));
+    color: var(--color-secondary-900);
+  }
+  
+  &.gradient-dark {
+    background: linear-gradient(135deg, var(--color-gray-700), var(--color-gray-900));
+    color: var(--color-white);
+    
+    .card-feature-icon {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--color-white);
+    }
+  }
+}
+
+// ========================================
+// 改善された機能カード
+// ========================================
+.card-feature-modern {
+  @extend .card-modern;
+  text-align: center;
+  padding: 2.5rem 2rem;
+  
+  .card-feature-icon {
+    width: 84px;
+    height: 84px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--color-primary-100), var(--color-primary-200));
+    color: var(--color-primary-600);
+    border-radius: 20px;
+    font-size: 2.5rem;
+    position: relative;
+    transition: all 0.3s ease;
+    
+    // アイコンの背景装飾
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--color-primary-400), var(--color-primary-600));
+      border-radius: 20px;
+      opacity: 0;
+      transform: scale(0.8);
+      transition: all 0.3s ease;
+      z-index: -1;
+    }
+  }
+  
+  &:hover {
+    .card-feature-icon {
+      transform: scale(1.05);
+      color: var(--color-white);
+      background: transparent;
+      
+      &::after {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+  
+  .card-feature-title {
+    font-size: 1.375rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--color-gray-900);
+  }
+  
+  .card-feature-description {
+    color: var(--color-gray-600);
+    line-height: 1.75;
+    font-size: 1rem;
+  }
+}
+
+// ========================================
+// 数値表示カード
+// ========================================
+.card-stat-modern {
+  @extend .card-modern;
+  text-align: center;
+  padding: 2rem;
+  
+  .card-stat-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary-50);
+    color: var(--color-primary-500);
+    border-radius: 14px;
+    font-size: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    
+    // パルスアニメーション
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: var(--color-primary-100);
+      border-radius: 14px;
+      animation: pulse 2s infinite;
+    }
+    
+    i {
+      position: relative;
+      z-index: 1;
+    }
+  }
+  
+  .card-stat-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-gray-900);
+    margin-bottom: 0.5rem;
+    font-variant-numeric: tabular-nums;
+    
+    // カウントアップアニメーション用
+    &[data-count] {
+      transition: all 0.5s ease;
+    }
+  }
+  
+  .card-stat-label {
+    font-size: 0.875rem;
+    color: var(--color-gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+  }
+  
+  .card-stat-change {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-top: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    background: var(--color-success-50);
+    color: var(--color-success-700);
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    
+    &.negative {
+      background: var(--color-error-50);
+      color: var(--color-error-700);
+    }
+  }
+}
+
+// ========================================
+// インタラクティブカード
+// ========================================
+.card-interactive {
+  @extend .card-modern;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  
+  // 背景パターン
+  &::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background-image: radial-gradient(circle, var(--color-primary-100) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  
+  &:hover::after {
+    opacity: 0.5;
+  }
+  
+  // クリック可能インジケーター
+  .card-arrow {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary-100);
+    color: var(--color-primary-600);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    
+    i {
+      font-size: 0.875rem;
+      transition: transform 0.3s ease;
+    }
+  }
+  
+  &:hover .card-arrow {
+    background: var(--color-primary-600);
+    color: var(--color-white);
+    transform: scale(1.1);
+    
+    i {
+      transform: translateX(2px);
+    }
+  }
+}
+
+// ========================================
+// アニメーション定義
+// ========================================
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+// ========================================
+// レスポンシブ対応
+// ========================================
+@media (max-width: 768px) {
+  .card-modern,
+  .card-feature-modern,
+  .card-stat-modern {
+    padding: 1.5rem;
+  }
+  
+  .card-feature-modern {
+    .card-feature-icon {
+      width: 72px;
+      height: 72px;
+      font-size: 2rem;
+    }
+    
+    .card-feature-title {
+      font-size: 1.25rem;
+    }
+  }
+  
+  .card-stat-modern {
+    .card-stat-value {
+      font-size: 2rem;
+    }
+  }
+}
+
+// ========================================
+// 既存カードの改善
+// ========================================
+// 既存の.cardクラスにモダンな要素を追加
+.card {
+  // 既存のスタイルを保持しつつ、改善を追加
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  &.card-hover {
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.15);
+    }
+  }
+  
+  // 既存のcard-feature-iconを改善
+  .card-feature-icon {
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: rotate(-5deg) scale(1.1);
+    }
+  }
+}

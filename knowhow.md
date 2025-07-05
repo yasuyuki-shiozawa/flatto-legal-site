@@ -10,15 +10,25 @@ keywords: 入札 やり方,公共調達 参加方法,入札参加資格 取得,�
 <div class="quick-links">
   <h2>よく読まれている記事</h2>
   <div class="quick-links-grid">
-    <a href="/nyusatsu-shikaku/" class="quick-link-card">
-      <div class="quick-link-icon">📋</div>
-      <h3>入札参加資格の取得方法</h3>
-      <p>申請から取得まで完全ガイド</p>
+    <a href="/nyusatsu-shikaku/" class="card-interactive">
+      <div class="card-feature-icon">
+        <i class="fas fa-clipboard-list"></i>
+      </div>
+      <h3 class="card-feature-title">入札参加資格の取得方法</h3>
+      <p class="card-feature-description">申請から取得まで完全ガイド</p>
+      <div class="card-arrow">
+        <i class="fas fa-arrow-right"></i>
+      </div>
     </a>
-    <a href="/zuii-keiyaku/" class="quick-link-card">
-      <div class="quick-link-icon">📄</div>
-      <h3>随意契約とは？</h3>
-      <p>要件・手続き・注意点を解説</p>
+    <a href="/zuii-keiyaku/" class="card-interactive">
+      <div class="card-feature-icon">
+        <i class="fas fa-file-contract"></i>
+      </div>
+      <h3 class="card-feature-title">随意契約とは？</h3>
+      <p class="card-feature-description">要件・手続き・注意点を解説</p>
+      <div class="card-arrow">
+        <i class="fas fa-arrow-right"></i>
+      </div>
     </a>
   </div>
 </div>
