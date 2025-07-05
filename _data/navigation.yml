@@ -32,6 +32,11 @@ main_nav:
     url: "/latest-trends/"
     icon: "fas fa-newspaper"
     description: "制度変更・最新動向"
+    
+  - name: "ブログ"
+    url: "/blog/"
+    icon: "fas fa-blog"
+    description: "入札ノウハウ・最新情報"
 
 # フッター専用ナビゲーション（営業要素・補助情報）
 footer_only_nav:
