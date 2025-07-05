@@ -156,6 +156,47 @@ permalink: /dashboard/
                     </div>
                 </div>
             </div>
+            
+            <div class="widget-category">
+                <h4>分析ツール</h4>
+                <div class="widget-grid">
+                    <div class="widget-option" data-widget="site-analytics">
+                        <div class="widget-preview">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h5>サイト分析</h5>
+                        <p>アクセス解析とパフォーマンス</p>
+                        <a href="/analytics/" class="btn btn-sm btn-primary">分析画面へ</a>
+                    </div>
+                    
+                    <div class="widget-option" data-widget="comparison-tools">
+                        <div class="widget-preview">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h5>比較ツール</h5>
+                        <p>入札案件・事業者比較</p>
+                        <a href="/comparison/" class="btn btn-sm btn-primary">比較画面へ</a>
+                    </div>
+                    
+                    <div class="widget-option" data-widget="data-visualization">
+                        <div class="widget-preview">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <h5>データ可視化</h5>
+                        <p>チャートとグラフ生成</p>
+                        <button class="btn btn-sm btn-primary">追加</button>
+                    </div>
+                    
+                    <div class="widget-option" data-widget="report-generator">
+                        <div class="widget-preview">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h5>レポート生成</h5>
+                        <p>分析レポート作成</p>
+                        <button class="btn btn-sm btn-primary">追加</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

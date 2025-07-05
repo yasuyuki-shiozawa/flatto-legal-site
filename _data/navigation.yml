@@ -35,6 +35,16 @@ main_nav:
 
 # フッター専用ナビゲーション（営業要素・補助情報）
 footer_only_nav:
+  - name: "入札参加資格取得"
+    url: "/nyusatsu-shikaku/"
+    icon: "fas fa-certificate"
+    description: "入札参加資格の取得方法を詳しく解説"
+    
+  - name: "随意契約について"
+    url: "/zuii-keiyaku/"
+    icon: "fas fa-file-contract"
+    description: "随意契約の要件・手続きを解説"
+    
   - name: "専門サポートについて"
     url: "/service/"
     icon: "fas fa-hands-helping"

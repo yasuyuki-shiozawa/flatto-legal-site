@@ -1,11 +1,27 @@
 ---
 layout: default
-title: 入札の基本から実践まで - 完全ガイド
-description: 公共調達・入札制度の基本から実践までを体系的に解説。法的根拠に基づく正確な情報と実践的なノウハウを提供します。
-keywords: 入札,公共調達,競争入札,随意契約,プロポーザル,入札参加資格,落札,予定価格,最低制限価格
+title: 入札のやり方 完全ガイド | 公共調達の参加方法を基本から解説
+description: 入札のやり方を基本から実践まで詳しく解説。公共調達への参加方法、入札参加資格の取得、必要書類の準備まで行政書士が分かりやすく説明します。
+keywords: 入札 やり方,公共調達 参加方法,入札参加資格 取得,競争入札,随意契約とは,入札 流れ,公共工事 入札,物品調達 入札,業務委託 入札
 ---
 
 # 入札の基本から実践まで - 完全ガイド
+
+<div class="quick-links">
+  <h2>よく読まれている記事</h2>
+  <div class="quick-links-grid">
+    <a href="/nyusatsu-shikaku/" class="quick-link-card">
+      <div class="quick-link-icon">📋</div>
+      <h3>入札参加資格の取得方法</h3>
+      <p>申請から取得まで完全ガイド</p>
+    </a>
+    <a href="/zuii-keiyaku/" class="quick-link-card">
+      <div class="quick-link-icon">📄</div>
+      <h3>随意契約とは？</h3>
+      <p>要件・手続き・注意点を解説</p>
+    </a>
+  </div>
+</div>
 
 <div class="hero-section">
   <p class="hero-tag">📚 知識ポータル</p>
