@@ -213,21 +213,22 @@ keywords: お問い合わせ,入札相談,公共調達相談,行政書士相談,
                     <div class="info-icon">📧</div>
                     <h3>メールでのお問い合わせ</h3>
                     <p>上記フォームまたは直接メールでお問い合わせください</p>
-                    <a href="mailto:info@flatto-legal.com" class="contact-link">info@flatto-legal.com</a>
+                    <a href="mailto:mail@flat-legal.com" class="contact-link">mail@flat-legal.com</a>
                 </div>
 
                 <div class="info-card">
                     <div class="info-icon">📞</div>
                     <h3>お電話でのお問い合わせ</h3>
-                    <p>平日 9:00-18:00</p>
-                    <a href="tel:03-1234-5678" class="contact-link">03-1234-5678</a>
+                    <p>平日 9:00-17:00</p>
+                    <a href="tel:046-272-3357" class="contact-link">046-272-3357</a>
                 </div>
 
                 <div class="info-card">
                     <div class="info-icon">⏰</div>
                     <h3>営業時間</h3>
                     <p>
-                        平日：9:00-18:00<br>
+                        電話受付：平日 9:00-17:00<br>
+                        メール受付：24時間<br>
                         土日祝：休業
                     </p>
                 </div>
