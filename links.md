@@ -2,6 +2,7 @@
 layout: default
 title: お役立ちリンク集
 description: 入札・公共調達に関する公式サイトや関連情報をまとめたリンク集。入札参加に必要な情報収集にお役立てください。
+permalink: /links/
 ---
 
 <!-- ページヘッダー -->
@@ -796,30 +797,4 @@ description: 入札・公共調達に関する公式サイトや関連情報を�
             </div>
         </div>
     </div>
-</section>n>
-
-<!-- 注意事項 -->
-<section class="disclaimer">
-    <div class="container">
-        <h2>ご利用にあたっての注意事項</h2>
-        <ul>
-            <li>各サイトの情報は予告なく変更される場合があります</li>
-            <li>リンク先サイトの内容については、各サイトの運営者にお問い合わせください</li>
-            <li>入札参加にあたっては、必ず最新の公式情報をご確認ください</li>
-            <li>当事務所は、リンク先サイトの内容について責任を負いません</li>
-        </ul>
-    </div>
 </section>
-
-<!-- CTA -->
-<section class="cta-section">
-    <div class="container">
-        <h2>入札情報の収集でお困りですか？</h2>
-        <p>効率的な情報収集方法から入札参加まで、<br>専門家がトータルサポートいたします。</p>
-        <a href="/contact/" class="cta-button">
-            <i class="fas fa-envelope"></i>
-            無料相談はこちら
-        </a>
-    </div>
-</section>
-

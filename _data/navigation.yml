@@ -75,7 +75,7 @@ cta:
     
   secondary:
     text: "資料請求"
-    url: "/contact/#download"
+    url: "/contact/"
     icon: "fas fa-download"
     description: "参考資料をダウンロード"
 

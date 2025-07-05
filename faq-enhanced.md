@@ -30,7 +30,7 @@ permalink: /faq-enhanced/
         <div class="related-links mt-12">
             <h2 class="text-xl font-bold mb-4">関連情報</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <a href="/glossary/" class="card card-hover">
+                <a href="/dictionary/" class="card card-hover">
                     <div class="card-body">
                         <h3 class="font-medium mb-2">
                             <i class="fas fa-spell-check"></i>

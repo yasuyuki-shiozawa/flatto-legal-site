@@ -173,7 +173,7 @@ keywords: ニュースレター,メール配信,入札情報,法改正,最新動
                             <label class="checkbox-label">
                                 <input type="checkbox" id="privacy" name="privacy" required />
                                 <span class="checkbox-custom"></span>
-                                <a href="{{ '/privacy/' | relative_url }}" target="_blank" class="privacy-link">プライバシーポリシー</a>に同意します <span class="required-mark">*</span>
+                                <a href="{{ '/privacy-policy/' | relative_url }}" target="_blank" class="privacy-link">プライバシーポリシー</a>に同意します <span class="required-mark">*</span>
                             </label>
                             <div class="error-message" id="privacyError"></div>
                         </div>

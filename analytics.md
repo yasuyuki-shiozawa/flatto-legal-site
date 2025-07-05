@@ -192,7 +192,7 @@ permalink: /analytics/
         <div class="cookie-consent-actions">
             <button class="btn btn-primary" id="accept-cookies">同意する</button>
             <button class="btn btn-outline-secondary" id="decline-cookies">拒否する</button>
-            <a href="/privacy/" class="btn btn-link">詳細を見る</a>
+            <a href="/privacy-policy/" class="btn btn-link">詳細を見る</a>
         </div>
     </div>
 </div>
