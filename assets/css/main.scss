@@ -7,6 +7,7 @@
 
 // ベース（変数とタイポグラフィ）
 @import "../../_sass/base/variables";
+@import "../../_sass/base/color-theme";
 @import "../../_sass/base/typography";
 @import "../../_sass/base/grid";
 @import "../../_sass/base/utilities";
@@ -41,6 +42,9 @@
 @import "../../_sass/components/comparison-tools";
 @import "../../_sass/components/site-analytics";
 @import "../../_sass/components/popular-posts";
+
+// ページ固有スタイル
+@import "../../_sass/pages/home";
 
 // モバイルファーストのリセット
 *, *::before, *::after {
