@@ -6,7 +6,6 @@ categories: [制度解説, 契約方式]
 tags: [随意契約, 競争入札, 地方自治法]
 author: あきら君
 excerpt: "随意契約は特定の条件下で認められる契約方式です。どのような場合に適用できるのか、メリット・デメリットと共に詳しく解説します。"
-image: /assets/images/blog/zuii-keiyaku.jpg
 ---
 
 ## 随意契約の基本

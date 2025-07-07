@@ -24,6 +24,14 @@ twitter:
   username: flatto_legal
   card: summary_large_image
 
+# デフォルト設定
+defaults:
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      image: "/assets/images/blog/default-blog-image.jpg"
+
 # ビルド設定
 markdown: kramdown
 highlighter: rouge

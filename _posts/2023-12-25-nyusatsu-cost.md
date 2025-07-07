@@ -6,7 +6,6 @@ categories: [実務ガイド, コスト管理]
 tags: [費用, コスト, 予算計画]
 author: いまいさん
 excerpt: "入札参加にはどれくらいの費用がかかるのか？初期投資から運用コストまで、実際の金額を交えて詳しく解説します。"
-image: /assets/images/blog/cost-analysis.jpg
 ---
 
 ## 入札参加にかかる費用の全体像

@@ -6,7 +6,6 @@ categories: [実務ガイド, デジタル化]
 tags: [電子入札, システム操作, ICカード]
 author: さおりさん
 excerpt: "電子入札システムの基本的な使い方から、ICカードの取得、実際の入札手順まで、画面付きで分かりやすく解説します。"
-image: /assets/images/blog/digital-transformation.jpg
 ---
 
 ## 電子入札システムとは

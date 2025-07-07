@@ -6,7 +6,6 @@ categories: [地域別ガイド, 戦略]
 tags: [地方自治体, 都道府県, 市町村, 地域特性]
 author: しおさん
 excerpt: "地方自治体の入札は、それぞれ独自のルールや慣習があります。都道府県・市町村別の特徴を理解し、効果的な入札戦略を立てましょう。"
-image: /assets/images/blog/local-government.jpg
 ---
 
 ## 地方自治体入札の特徴

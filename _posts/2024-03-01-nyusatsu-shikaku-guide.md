@@ -6,7 +6,6 @@ categories: [入門ガイド, 資格取得]
 tags: [入札参加資格, 申請手順, 初心者向け]
 author: しおさん
 excerpt: "入札参加資格の取得は、公共調達に参加するための第一歩です。本記事では、申請に必要な書類から具体的な手順まで、初心者の方でも理解できるよう詳しく解説します。"
-image: /assets/images/blog/qualification-guide.jpg
 ---
 
 ## はじめに

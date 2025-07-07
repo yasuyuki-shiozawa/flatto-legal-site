@@ -6,7 +6,6 @@ categories: [実務ガイド, 失敗事例]
 tags: [失敗事例, 注意点, トラブル対策]
 author: あきら君
 excerpt: "入札での失敗は避けたいもの。よくある失敗パターンを事前に知っておくことで、リスクを大幅に減らせます。"
-image: /assets/images/blog/failure-patterns.jpg
 ---
 
 ## はじめに

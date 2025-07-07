@@ -6,7 +6,6 @@ categories: [制度解説, 入札方式]
 tags: [総合評価方式, 技術提案, 品質評価]
 author: いまいさん
 excerpt: "価格と品質を総合的に評価する「総合評価方式」。技術力のある企業にとってチャンスとなるこの方式について、評価項目や対策を詳しく解説します。"
-image: /assets/images/blog/sougou-hyouka.jpg
 ---
 
 ## 総合評価方式の概要
