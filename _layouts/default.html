@@ -71,9 +71,9 @@
     {% include css/optimized/critical.css %}
     </style>
     
-    <!-- 非クリティカルCSS（遅延読み込み） -->
+    <!-- 非クリティカルCSS（遅延読み込み） - コメントアウト
    <link rel="stylesheet" href="/assets/css/optimized/non-critical.css?v=20250613_01">
-    <noscript><link rel="stylesheet" href="/assets/css/optimized/non-critical.css?v=20250613_01"></noscript>
+    <noscript><link rel="stylesheet" href="/assets/css/optimized/non-critical.css?v=20250613_01"></noscript> -->
     <!-- ページ固有CSS（条件付き読み込み） -->
     {% if page.use_page_specific_css %}
     <link rel="stylesheet" href="/assets/css/optimized/page-specific.css?v=20250613_01">
@@ -105,7 +105,10 @@
     <!-- コアJavaScript -->
     <script src="/assets/js/optimized/core.js?v=20250613_01" defer></script>
 
-    <!-- 統合修正CSS（最優先） -->
+    <!-- メインCSS（SCSSからコンパイル） -->
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    
+    <!-- 統合修正CSS（追加スタイル） -->
     <link rel="stylesheet" href="/assets/css/optimized/comprehensive-fix.css?v=20250615_09">
     
     <!-- サイドバーアクティブ状態JavaScript -->
