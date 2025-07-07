@@ -166,8 +166,7 @@
   }
   
   // クリック可能バージョン（aタグでラップされている場合）
-  &.clickable,
-  a& {
+  &.clickable {
     cursor: pointer;
     text-decoration: none;
     position: relative;
@@ -199,6 +198,13 @@
       }
     }
   }
+}
+
+// aタグでラップされたカード
+a .card-modern {
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
 }
 
 // ========================================
