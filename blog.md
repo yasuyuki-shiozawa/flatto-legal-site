@@ -37,7 +37,7 @@ permalink: /blog/
                     {% if post.image %}
                     <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
                     {% else %}
-                    <img src="{{ '/assets/images/blog/default-post.jpg' | relative_url }}" alt="{{ post.title }}">
+                    <img src="{{ '/assets/images/blog/default-blog-image.jpg' | relative_url }}" alt="{{ post.title }}">
                     {% endif %}
                     <div class="post-category">{{ post.categories | first }}</div>
                 </div>
@@ -87,7 +87,7 @@ permalink: /blog/
                                 {% if post.image %}
                                 <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
                                 {% else %}
-                                <img src="{{ '/assets/images/blog/default-thumb.jpg' | relative_url }}" alt="{{ post.title }}">
+                                <img src="{{ '/assets/images/blog/default-blog-image.jpg' | relative_url }}" alt="{{ post.title }}">
                                 {% endif %}
                             </div>
                             <div class="popular-post-content">

@@ -14,6 +14,7 @@
         initAccessibility();
         initFormValidation();
         initSearch();
+        initImageErrorHandling();
     });
 
     // モバイルメニュー機能
@@ -193,6 +194,9 @@
         
         // WebP対応チェック
         checkWebPSupport();
+        
+        // 画像エラーハンドリング
+        handleImageErrors();
     }
     
     // WebP対応チェック
@@ -205,6 +209,20 @@
             }
         };
         webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+    }
+    
+    // 画像エラーハンドリング
+    function handleImageErrors() {
+        const images = document.querySelectorAll('img');
+        images.forEach(img => {
+            img.addEventListener('error', function() {
+                this.classList.add('error');
+                // デフォルト画像の設定
+                if (this.src.includes('default-post.jpg') || this.src.includes('default-thumb.jpg')) {
+                    this.src = '/assets/images/blog/default-blog-image.jpg';
+                }
+            });
+        });
     }
 
     // アクセシビリティ機能
@@ -427,6 +445,36 @@
                 timeout = setTimeout(later, wait);
             };
         }
+    }
+    
+    // 画像エラーハンドリング
+    function initImageErrorHandling() {
+        const images = document.querySelectorAll('img');
+        
+        images.forEach(img => {
+            img.addEventListener('error', function() {
+                // エラークラスを追加
+                this.classList.add('error');
+                
+                // デフォルト画像があれば設定
+                const defaultSrc = this.dataset.defaultSrc || '/assets/images/default-image.svg';
+                
+                // 無限ループを防ぐため、既にデフォルト画像の場合はスキップ
+                if (this.src !== window.location.origin + defaultSrc) {
+                    this.src = defaultSrc;
+                }
+                
+                // alt属性がない場合は設定
+                if (!this.alt) {
+                    this.alt = '画像を読み込めませんでした';
+                }
+            });
+            
+            // 既に読み込みエラーが発生している画像の処理
+            if (img.complete && img.naturalHeight === 0) {
+                img.dispatchEvent(new Event('error'));
+            }
+        });
     }
 
 })();

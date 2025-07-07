@@ -132,7 +132,13 @@ img[loading="lazy"] {
 }
 
 // 画像エラー時のフォールバック
-img {
+// onerror属性を持つ画像にのみ適用
+img.error {
+  position: relative;
+  display: block;
+  min-height: 200px;
+  min-width: 300px;
+  
   &::before {
     content: "";
     display: block;
@@ -142,6 +148,7 @@ img {
     width: 100%;
     height: 100%;
     background: #f3f4f6;
+    z-index: 1;
   }
   
   &::after {
@@ -157,6 +164,7 @@ img {
     font-size: 0.875rem;
     color: #6b7280;
     background: #f3f4f6;
+    z-index: 2;
   }
 }
 

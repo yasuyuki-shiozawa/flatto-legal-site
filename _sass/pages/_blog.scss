@@ -1,0 +1,74 @@
+// ブログページ専用スタイル
+
+// ブログリスト
+.blog-posts {
+  .post-item {
+    margin-bottom: 2rem;
+    
+    // 画像エラーの非表示
+    img.error {
+      display: none;
+    }
+  }
+}
+
+// ブログ記事
+.blog-post {
+  // 記事内の画像
+  .post-content {
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      
+      // エラー画像は非表示
+      &.error {
+        display: none;
+      }
+    }
+  }
+}
+
+// ブログサムネイル
+.blog-thumbnail {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background-color: #f3f4f6;
+  
+  // エラー時は非表示
+  &.error {
+    display: none;
+  }
+}
+
+// ブログカード
+.blog-card {
+  .card-image {
+    height: 200px;
+    overflow: hidden;
+    background-color: #f3f4f6;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      
+      // エラー画像は非表示
+      &.error {
+        display: none;
+      }
+    }
+    
+    // 画像がない場合のプレースホルダー
+    &:empty::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+    }
+  }
+}
