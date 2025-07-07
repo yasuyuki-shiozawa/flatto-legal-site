@@ -297,21 +297,23 @@ img:not([alt]) {
   }
 }
 
-// 読み上げ順序の制御
-.content-wrapper {
-  display: flex;
-  flex-direction: column;
-  
-  .main-content {
-    order: 1;
-  }
-  
-  .left-sidebar {
-    order: 2;
-  }
-  
-  .right-sidebar {
-    order: 3;
+// 読み上げ順序の制御（スクリーンリーダー専用）
+@media screen and (max-width: 1px) {
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    
+    .main-content {
+      order: 1;
+    }
+    
+    .left-sidebar {
+      order: 2;
+    }
+    
+    .right-sidebar {
+      order: 3;
+    }
   }
 }
 

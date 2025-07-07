@@ -33,6 +33,8 @@
 
 // 左サイドバー
 .left-sidebar {
+  grid-column: 1; // 明示的に1列目に配置
+  
   @media (max-width: 1023px) {
     display: none; // タブレット以下では非表示（モバイルメニューで対応）
   }
@@ -66,6 +68,7 @@
 
 // メインコンテンツ
 .main-content {
+  grid-column: 2; // 明示的に2列目に配置
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
@@ -139,6 +142,8 @@
 
 // 右サイドバー
 .right-sidebar {
+  grid-column: 3; // 明示的に3列目に配置
+  
   @media (max-width: 1023px) {
     grid-column: 1;
     margin-top: 2rem;

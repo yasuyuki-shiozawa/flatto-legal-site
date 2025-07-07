@@ -70,7 +70,7 @@ $wide: 1280px;
 // メインコンテンツのモバイル最適化
 .main-content {
   @media (max-width: $desktop - 1px) {
-    order: 1;
+    grid-column: 1 !important;
     width: 100%;
     padding: 1.5rem;
     margin-bottom: 2rem;
@@ -85,7 +85,7 @@ $wide: 1280px;
 // 右サイドバーのモバイル配置
 .right-sidebar {
   @media (max-width: $desktop - 1px) {
-    order: 2;
+    grid-column: 1 !important;
     
     .right-sidebar-content {
       position: static;
