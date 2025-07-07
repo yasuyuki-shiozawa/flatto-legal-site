@@ -24,6 +24,7 @@
 @import "../../_sass/components/cards";
 @import "../../_sass/components/cards-modern";
 @import "../../_sass/components/sidebar-cards";
+@import "../../_sass/components/sidebar-cards-enhanced";
 @import "../../_sass/components/quick-links";
 @import "../../_sass/components/forms";
 @import "../../_sass/components/alerts";
@@ -45,6 +46,7 @@
 
 // ページ固有スタイル
 @import "../../_sass/pages/home";
+@import "../../_sass/pages/home-enhanced";
 
 // モバイルファーストのリセット
 *, *::before, *::after {

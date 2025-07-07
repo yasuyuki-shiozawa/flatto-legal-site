@@ -1,0 +1,425 @@
+// 洗練されたサイドバーカードデザイン
+// 参考サイトのプロフェッショナルなデザインを採用
+
+// カード基本スタイル
+.sidebar-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    border-color: rgba(0, 0, 0, 0.08);
+  }
+  
+  // カードヘッダー（グラデーション控えめ）
+  .sidebar-card-header {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    color: #2c3e50;
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    position: relative;
+    
+    // アイコンスタイル
+    i {
+      font-size: 1.5rem;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    }
+    
+    h3 {
+      margin: 0;
+      font-size: 1.125rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #2c3e50;
+    }
+    
+    // アクセントカラーバリエーション
+    &.primary {
+      background: linear-gradient(135deg, #e6fffa 0%, #b2f5ea 100%);
+      
+      i {
+        color: var(--color-primary-600);
+        background: rgba(22, 160, 133, 0.1);
+      }
+    }
+    
+    &.secondary {
+      background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+      
+      i {
+        color: var(--color-secondary-600);
+        background: rgba(108, 92, 231, 0.1);
+      }
+    }
+    
+    &.accent {
+      background: linear-gradient(135deg, #ffe4e6 0%, #fecdd3 100%);
+      
+      i {
+        color: var(--color-accent-600);
+        background: rgba(253, 121, 168, 0.1);
+      }
+    }
+  }
+  
+  // カードボディ
+  .sidebar-card-body {
+    padding: 1.5rem;
+    background: #ffffff;
+  }
+  
+  // CTA（Call to Action）カード
+  &.sidebar-card-cta {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: visible;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-primary-400) 100%);
+      border-radius: 12px;
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    &:hover::before {
+      opacity: 1;
+    }
+    
+    .sidebar-card-body {
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+    
+    h4 {
+      color: #2c3e50;
+      margin-bottom: 0.75rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+    
+    p {
+      color: #6c757d;
+      margin-bottom: 1.5rem;
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-primary-500) 100%);
+      border: none;
+      padding: 0.875rem 1.75rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      box-shadow: 0 4px 12px rgba(22, 160, 133, 0.25);
+      
+      &:hover {
+        background: linear-gradient(135deg, var(--color-primary-700) 0%, var(--color-primary-600) 100%);
+        transform: translateY(-1px);
+        box-shadow: 0 6px 20px rgba(22, 160, 133, 0.35);
+      }
+    }
+  }
+}
+
+// ナビゲーションリストの改善
+.sidebar-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+  li {
+    margin-bottom: 0.375rem;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.sidebar-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.875rem 1.125rem;
+  color: #495057;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--color-primary-600);
+    transform: translateX(-100%);
+    transition: transform 0.2s ease;
+  }
+  
+  span {
+    flex: 1;
+  }
+  
+  i {
+    color: #adb5bd;
+    font-size: 0.75rem;
+    transition: all 0.2s ease;
+  }
+  
+  &:hover {
+    background: #f8f9fa;
+    color: var(--color-primary-700);
+    padding-left: 1.375rem;
+    
+    &::before {
+      transform: translateX(0);
+    }
+    
+    i {
+      color: var(--color-primary-600);
+      transform: translateX(3px);
+    }
+  }
+  
+  &.active {
+    background: rgba(22, 160, 133, 0.08);
+    color: var(--color-primary-700);
+    font-weight: 600;
+    padding-left: 1.375rem;
+    
+    &::before {
+      transform: translateX(0);
+    }
+    
+    i {
+      color: var(--color-primary-600);
+    }
+  }
+}
+
+// 人気記事カードの改善
+.popular-posts {
+  .popular-post-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f1f3f5;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      background: #f8f9fa;
+      margin: 0 -1rem;
+      padding: 1rem;
+      border-radius: 8px;
+      border-bottom-color: transparent;
+    }
+    
+    &:first-child {
+      padding-top: 0;
+    }
+    
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+  
+  .popular-post-rank {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.875rem;
+    border-radius: 8px;
+    
+    // ランキング別の色分け
+    &:nth-child(1) {
+      background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+      color: #856404;
+    }
+    
+    &:nth-child(2) {
+      background: linear-gradient(135deg, #c0c0c0 0%, #e0e0e0 100%);
+      color: #495057;
+    }
+    
+    &:nth-child(3) {
+      background: linear-gradient(135deg, #cd7f32 0%, #e59b5f 100%);
+      color: #ffffff;
+    }
+    
+    &:nth-child(n+4) {
+      background: #f1f3f5;
+      color: #6c757d;
+    }
+  }
+}
+
+// カテゴリーリストの改善
+.category-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #495057;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  
+  &:hover {
+    background: white;
+    border-color: var(--color-primary-300);
+    color: var(--color-primary-700);
+    transform: translateX(2px);
+    box-shadow: 0 2px 8px rgba(22, 160, 133, 0.1);
+  }
+  
+  .category-name {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    
+    &::before {
+      content: '#';
+      color: var(--color-primary-400);
+      font-weight: 400;
+    }
+  }
+  
+  .category-count {
+    background: white;
+    color: #6c757d;
+    padding: 0.25rem 0.625rem;
+    border-radius: 20px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    min-width: 32px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+}
+
+// 検索ボックスの改善
+.search-box {
+  position: relative;
+  
+  .search-input {
+    width: 100%;
+    padding: 0.875rem 3rem 0.875rem 1.125rem;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    font-size: 0.9375rem;
+    transition: all 0.2s ease;
+    background: #f8f9fa;
+    
+    &:focus {
+      outline: none;
+      border-color: var(--color-primary-400);
+      background: white;
+      box-shadow: 0 0 0 4px rgba(22, 160, 133, 0.1);
+    }
+    
+    &::placeholder {
+      color: #adb5bd;
+    }
+  }
+  
+  .search-button {
+    position: absolute;
+    right: 0.375rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-primary-500) 100%);
+    color: #ffffff;
+    border: none;
+    padding: 0.625rem 0.875rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      background: linear-gradient(135deg, var(--color-primary-700) 0%, var(--color-primary-600) 100%);
+      box-shadow: 0 2px 8px rgba(22, 160, 133, 0.3);
+    }
+  }
+}
+
+// お役立ちリンクの改善
+.useful-link-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #495057;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.625rem 0;
+  transition: all 0.2s ease;
+  position: relative;
+  
+  &::after {
+    content: '→';
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.2s ease;
+  }
+  
+  i {
+    color: var(--color-primary-400);
+    font-size: 1rem;
+    width: 24px;
+    text-align: center;
+  }
+  
+  &:hover {
+    color: var(--color-primary-700);
+    padding-left: 0.5rem;
+    
+    &::after {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    i {
+      color: var(--color-primary-600);
+    }
+  }
+}
