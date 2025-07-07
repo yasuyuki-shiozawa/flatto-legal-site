@@ -1,68 +1,107 @@
 <!-- 左サイドバーコンポーネント -->
 <div class="left-sidebar-content">
     
-    <!-- クイックナビゲーション -->
-    <div class="left-sidebar-section quick-nav">
-        <h3 class="left-sidebar-title">
-            <i class="fas fa-compass"></i>
-            クイックナビ
-        </h3>
-        <div class="quick-nav-list"            <a href="/" class="quick-nav-item">
-                <i class="fas fa-home"></i>
-                <span>トップページ</span>
-            </a>
-            <a href="/knowhow/" class="quick-nav-item">
-                <i class="fas fa-graduation-cap"></i>
-                <span>入札の基本</span>
-            </a>
-            <a href="/flow/" class="quick-nav-item">
-                <i class="fas fa-stream"></i>
-                <span>ご利用の流れ</span>
-            </a>
-            <a href="/cases/" class="quick-nav-item">
-                <i class="fas fa-chart-line"></i>
-                <span>事例研究</span>
-            </a>
-            <a href="/dictionary/" class="quick-nav-item">
-                <i class="fas fa-book"></i>
-                <span>用語集</span>
-            </a>
-            <a href="/latest-trends/" class="quick-nav-item">
-                <i class="fas fa-newspaper"></i>
-                <span>最新動向</span>
-            </a>      </div>
+    <!-- 学習するカード -->
+    <div class="sidebar-card">
+        <div class="sidebar-card-header">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>学習する</h3>
+        </div>
+        <div class="sidebar-card-body">
+            <ul class="sidebar-nav-list">
+                <li>
+                    <a href="/knowhow/" class="sidebar-nav-link {% if page.url contains '/knowhow/' %}active{% endif %}">
+                        <span>入札の基本</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="/dictionary/" class="sidebar-nav-link {% if page.url contains '/dictionary/' %}active{% endif %}">
+                        <span>用語集</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="/latest-trends/" class="sidebar-nav-link {% if page.url contains '/latest-trends/' %}active{% endif %}">
+                        <span>最新動向</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 
-    <!-- 学習進捗 -->
-    <div class="left-sidebar-section progress-section">
-        <h3 class="left-sidebar-title">
-            <i class="fas fa-chart-bar"></i>
-            学習の進め方
-        </h3>
-        <div class="progress-steps">
-            <div class="progress-step {% if page.url contains '/knowhow/' %}current{% endif %}">
-                <div class="step-indicator">1</div>
-                <div class="step-content">
-                    <div class="step-title">基本を学ぶ</div>
-                    <div class="step-desc">制度の仕組み</div>
-                </div>
-            </div>
-            <div class="progress-step {% if page.url contains '/service/' %}current{% endif %}">
-                <div class="step-indicator">2</div>
-                <div class="step-content">
-                    <div class="step-title">制度を理解</div>
-                    <div class="step-desc">詳細な手続き</div>
-                </div>
-            </div>
-            <div class="progress-step {% if page.url contains '/cases/' %}current{% endif %}">
-                <div class="step-indicator">3</div>
-                <div class="step-content">
-                    <div class="step-title">事例で学習</div>
-                    <div class="step-desc">実践的知識</div>
-                </div>
-            </div>
+    <!-- 実践するカード -->
+    <div class="sidebar-card">
+        <div class="sidebar-card-header">
+            <i class="fas fa-search"></i>
+            <h3>実践する</h3>
+        </div>
+        <div class="sidebar-card-body">
+            <ul class="sidebar-nav-list">
+                <li>
+                    <a href="/flow/" class="sidebar-nav-link {% if page.url contains '/flow/' %}active{% endif %}">
+                        <span>ご利用の流れ</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="/cases/" class="sidebar-nav-link {% if page.url contains '/cases/' %}active{% endif %}">
+                        <span>事例研究</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="/faq/" class="sidebar-nav-link {% if page.url contains '/faq/' %}active{% endif %}">
+                        <span>よくある質問</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- サービスカード -->
+    <div class="sidebar-card">
+        <div class="sidebar-card-header">
+            <i class="fas fa-briefcase"></i>
+            <h3>サービス</h3>
+        </div>
+        <div class="sidebar-card-body">
+            <ul class="sidebar-nav-list">
+                <li>
+                    <a href="/nyusatsu-shikaku/" class="sidebar-nav-link {% if page.url contains '/nyusatsu-shikaku/' %}active{% endif %}">
+                        <span>資格取得支援</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="/zuii-keiyaku/" class="sidebar-nav-link {% if page.url contains '/zuii-keiyaku/' %}active{% endif %}">
+                        <span>随意契約</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="/service/" class="sidebar-nav-link {% if page.url contains '/service/' %}active{% endif %}">
+                        <span>専門サポート</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- お問い合わせカード -->
+    <div class="sidebar-card sidebar-card-cta">
+        <div class="sidebar-card-body text-center">
+            <i class="fas fa-comments fa-3x mb-3 text-primary"></i>
+            <h4>無料相談</h4>
+            <p class="small">入札に関するご質問・ご相談はお気軽に</p>
+            <a href="/contact/" class="btn btn-primary btn-block">
+                <i class="fas fa-envelope"></i>
+                お問い合わせ
+            </a>
         </div>
     </div>
 
 </div>
-

@@ -1,0 +1,51 @@
+<!-- モバイルサイドバー -->
+<div class="mobile-sidebar-overlay" id="mobileSidebarOverlay"></div>
+
+<div class="mobile-sidebar-panel" id="mobileSidebarPanel">
+    <div class="mobile-sidebar-header">
+        <h2>メニュー</h2>
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="メニューを閉じる">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <div class="mobile-sidebar-content">
+        {% include left-sidebar.html %}
+    </div>
+</div>
+
+<!-- モバイルサイドバートグルボタン -->
+<button class="mobile-sidebar-toggle" id="mobileSidebarToggle" aria-label="メニューを開く">
+    <i class="fas fa-bars"></i>
+</button>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.getElementById('mobileSidebarToggle');
+    const overlay = document.getElementById('mobileSidebarOverlay');
+    const panel = document.getElementById('mobileSidebarPanel');
+    const closeBtn = document.getElementById('mobileSidebarClose');
+    
+    function openSidebar() {
+        overlay.classList.add('active');
+        panel.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function closeSidebar() {
+        overlay.classList.remove('active');
+        panel.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    
+    toggle.addEventListener('click', openSidebar);
+    closeBtn.addEventListener('click', closeSidebar);
+    overlay.addEventListener('click', closeSidebar);
+    
+    // ESCキーで閉じる
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && panel.classList.contains('active')) {
+            closeSidebar();
+        }
+    });
+});
+</script>

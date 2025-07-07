@@ -1,0 +1,139 @@
+// モバイルサイドバー用スタイル
+// タブレット以下で左サイドバーを表示するためのオーバーレイメニュー
+
+.mobile-sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  
+  @media (max-width: 1023px) {
+    display: block;
+    pointer-events: none;
+  }
+  
+  &.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.mobile-sidebar-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 280px;
+  background: #ffffff;
+  z-index: 999;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.1);
+  
+  @media (max-width: 1023px) {
+    display: block;
+  }
+  
+  @media (min-width: 1024px) {
+    display: none;
+  }
+  
+  &.active {
+    transform: translateX(0);
+  }
+  
+  .mobile-sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #e5e7eb;
+    background: #f9fafb;
+    
+    h2 {
+      margin: 0;
+      font-size: 1.125rem;
+      color: #1f2937;
+      font-weight: 600;
+    }
+    
+    .mobile-sidebar-close {
+      background: transparent;
+      border: none;
+      color: #6b7280;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0.25rem;
+      line-height: 1;
+      transition: color 0.2s ease;
+      
+      &:hover {
+        color: #1f2937;
+      }
+    }
+  }
+  
+  .mobile-sidebar-content {
+    padding: 1rem;
+    
+    // モバイル用にカードの間隔を調整
+    .sidebar-card {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+// モバイルナビゲーション強化
+@media (max-width: 1023px) {
+  // CTAカードをモバイルで目立たせる
+  .sidebar-card-cta {
+    position: sticky;
+    bottom: 0;
+    margin-bottom: 0;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  // ナビゲーションリンクのタッチターゲット拡大
+  .sidebar-nav-link {
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+  }
+}
+
+// アニメーション用キーフレーム
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// アクセシビリティ: フォーカス時のスタイル
+.mobile-sidebar-panel:focus-within {
+  .mobile-sidebar-close:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}

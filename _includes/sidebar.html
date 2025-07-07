@@ -1,75 +1,125 @@
 <!-- 右サイドバーコンポーネント -->
 <div class="right-sidebar-content">
 
-    <!-- サイト内検索 -->
-    <div class="right-sidebar-section search-section">
-        <h3 class="right-sidebar-title">
+    <!-- 人気記事カード -->
+    <div class="sidebar-card">
+        <div class="sidebar-card-header">
+            <i class="fas fa-fire"></i>
+            <h3>人気記事</h3>
+        </div>
+        <div class="sidebar-card-body">
+            <div class="popular-posts">
+                {% assign sorted_posts = site.posts | sort: 'popular_rank' | slice: 0, 5 %}
+                {% for post in sorted_posts %}
+                <article class="popular-post-item">
+                    <div class="popular-post-rank">{{ forloop.index }}</div>
+                    <div class="popular-post-content">
+                        <h4 class="popular-post-title">
+                            <a href="{{ post.url | relative_url }}">{{ post.title | truncate: 35 }}</a>
+                        </h4>
+                        <div class="popular-post-meta">
+                            <time>{{ post.date | date: "%Y.%m.%d" }}</time>
+                        </div>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- 最新記事カード -->
+    <div class="sidebar-card">
+        <div class="sidebar-card-header">
+            <i class="fas fa-newspaper"></i>
+            <h3>最新記事</h3>
+        </div>
+        <div class="sidebar-card-body">
+            <div class="latest-posts">
+                {% for post in site.posts limit:5 %}
+                <article class="latest-post-item">
+                    <h4 class="latest-post-title">
+                        <a href="{{ post.url | relative_url }}">{{ post.title | truncate: 40 }}</a>
+                    </h4>
+                    <div class="latest-post-meta">
+                        <time>{{ post.date | date: "%Y年%-m月%-d日" }}</time>
+                        <span class="latest-post-category">{{ post.categories | first }}</span>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+            <div class="text-center mt-3">
+                <a href="/blog/" class="btn btn-outline-primary btn-sm">
+                    すべての記事を見る
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- カテゴリーカード -->
+    <div class="sidebar-card">
+        <div class="sidebar-card-header">
+            <i class="fas fa-folder-open"></i>
+            <h3>カテゴリー</h3>
+        </div>
+        <div class="sidebar-card-body">
+            <div class="category-list">
+                {% assign categories = site.posts | map: 'categories' | join: ',' | split: ',' | uniq | sort %}
+                {% for category in categories %}
+                {% assign category_posts = site.posts | where_exp: "post", "post.categories contains category" %}
+                <a href="/blog/#{{ category | slugify }}" class="category-item">
+                    <span class="category-name">{{ category }}</span>
+                    <span class="category-count">{{ category_posts.size }}</span>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- サイト内検索カード -->
+    <div class="sidebar-card">
+        <div class="sidebar-card-header">
             <i class="fas fa-search"></i>
-            サイト内検索
-        </h3>
-        <div class="search-box">
-            <input type="text" id="search-input" placeholder="キーワードを入力..." class="search-input" autocomplete="off">
-            <button type="button" class="search-button" onclick="document.getElementById(\'search-input\').focus()">
-                <i class="fas fa-search"></i>
-            </button>
+            <h3>サイト内検索</h3>
+        </div>
+        <div class="sidebar-card-body">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="キーワードを入力..." class="search-input" autocomplete="off">
+                <button type="button" class="search-button" onclick="document.getElementById('search-input').focus()">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
         </div>
     </div>
 
-    <!-- クイックナビゲーション -->
-    <div class="right-sidebar-section quick-nav">
-        <h3 class="right-sidebar-title">
-            <i class="fas fa-compass"></i>
-            クイックナビ
-        </h3>
-        <div class="quick-nav-list">
-            <a href="/" class="quick-nav-item {% if page.url == \'/\' %}active{% endif %}">
-                <i class="fas fa-home"></i>
-                <span>トップページ</span>
-            </a>
-            <a href="/knowhow/" class="quick-nav-item {% if page.url contains \'/knowhow/\' %}active{% endif %}">
-                <i class="fas fa-graduation-cap"></i>
-                <span>入札の基本</span>
-            </a>
-            <a href="/flow/" class="quick-nav-item {% if page.url contains \'/flow/\' %}active{% endif %}">
-                <i class="fas fa-book-open"></i>
-                <span>ご利用の流れ</span>
-            </a>
-            <a href="/cases/" class="quick-nav-item {% if page.url contains \'/cases/\' %}active{% endif %}">
-                <i class="fas fa-chart-line"></i>
-                <span>事例研究</span>
-            </a>
-            <a href="/dictionary/" class="quick-nav-item {% if page.url contains \'/dictionary/\' %}active{% endif %}">
-                <i class="fas fa-book"></i>
-                <span>用語集</span>
-            </a>
-            <a href="/latest-trends/" class="quick-nav-item {% if page.url contains \'/latest-trends/\' %}active{% endif %}">
-                <i class="fas fa-newspaper"></i>
-                <span>最新動向</span>
-            </a>
+    <!-- お役立ちリンクカード -->
+    <div class="sidebar-card">
+        <div class="sidebar-card-header">
+            <i class="fas fa-link"></i>
+            <h3>お役立ちリンク</h3>
         </div>
-    </div>
-
-    <!-- お役立ちリンク -->
-    <div class="right-sidebar-section useful-links">
-        <h3 class="right-sidebar-title">
-            <i class="fas fa-external-link-alt"></i>
-            お役立ちリンク
-        </h3>
-        <div class="links-list">
-            <a href="https://www.digital.go.jp/procurement" target="_blank" rel="noopener" class="link-item">
-                <i class="fas fa-globe"></i>
-                デジタル庁調達情報
-            </a>
-            <a href="https://www.geps.go.jp/" target="_blank" rel="noopener" class="link-item">
-                <i class="fas fa-globe"></i>
-                政府電子調達システム
-            </a>
-            <a href="https://www.chusho.meti.go.jp/" target="_blank" rel="noopener" class="link-item">
-                <i class="fas fa-globe"></i>
-                中小企業庁
-            </a>
+        <div class="sidebar-card-body">
+            <ul class="useful-links">
+                <li>
+                    <a href="/links/" class="useful-link-item">
+                        <i class="fas fa-external-link-alt"></i>
+                        官公庁リンク集
+                    </a>
+                </li>
+                <li>
+                    <a href="/downloads/" class="useful-link-item">
+                        <i class="fas fa-download"></i>
+                        資料ダウンロード
+                    </a>
+                </li>
+                <li>
+                    <a href="/comparison/" class="useful-link-item">
+                        <i class="fas fa-balance-scale"></i>
+                        制度比較表
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 
 </div>
-
