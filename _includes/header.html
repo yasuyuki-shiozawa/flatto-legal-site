@@ -1,23 +1,24 @@
 <!-- ヘッダーのスペーサー（固定ヘッダー用） -->
 <div class="header-spacer"></div>
 
-<header class="header">
+<header class="header" role="banner">
     <div class="container">
         <div class="header-content">
             <!-- ロゴ -->
             <div class="logo">
-                <a href="/">
+                <a href="/" aria-label="ホームページへ戻る">
                     <img src="/assets/images/logo.webp" alt="{{ site.title }}" class="logo-img">
                 </a>
             </div>
             
             <!-- メインナビゲーション -->
-            <nav class="nav">
+            <nav class="nav" role="navigation" aria-label="メインナビゲーション">
                 <ul class="nav-list">
                     {% for item in site.data.navigation.main_nav %}
                     <li class="nav-item">
                         <a href="{{ item.url }}" 
                            class="nav-link{% if page.url == item.url %} active{% endif %}"
+                           {% if page.url == item.url %}aria-current="page"{% endif %}
                            title="{{ item.description }}">
                             <i class="{{ item.icon }}"></i>
                             {{ item.name }}

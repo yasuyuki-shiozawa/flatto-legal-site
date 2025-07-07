@@ -1,0 +1,342 @@
+// アクセシビリティ向上のための追加スタイル
+// WCAG 2.1 AAレベル準拠
+
+// カラーコントラストの改善
+:root {
+  // 高コントラストカラー定義
+  --color-text-high-contrast: #1a1a1a;
+  --color-bg-high-contrast: #ffffff;
+  --color-link-high-contrast: #0055aa;
+  --color-link-visited: #551a8b;
+  --color-focus: #0066cc;
+  --color-error: #d32f2f;
+  --color-success: #2e7d32;
+}
+
+// フォーカスインジケーターの統一
+*:focus {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+// キーボードフォーカス時のみアウトラインを表示
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+// ボタンとリンクのコントラスト改善
+.btn,
+button,
+a {
+  // 最小コントラスト比 4.5:1 を確保
+  &.btn-primary {
+    background-color: #0055aa;
+    color: #ffffff;
+    
+    &:hover,
+    &:focus {
+      background-color: #004488;
+    }
+  }
+  
+  &.btn-secondary {
+    background-color: #6c757d;
+    color: #ffffff;
+    
+    &:hover,
+    &:focus {
+      background-color: #5a6268;
+    }
+  }
+}
+
+// テキストのコントラスト改善
+body {
+  color: var(--color-text-high-contrast);
+  background-color: var(--color-bg-high-contrast);
+}
+
+// リンクの識別性向上
+a {
+  color: var(--color-link-high-contrast);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  
+  &:visited {
+    color: var(--color-link-visited);
+  }
+  
+  &:hover,
+  &:focus {
+    text-decoration-thickness: 2px;
+  }
+}
+
+// ARIA属性の視覚的フィードバック
+[aria-expanded="true"] {
+  &::after {
+    content: " ▼";
+    font-size: 0.8em;
+  }
+}
+
+[aria-expanded="false"] {
+  &::after {
+    content: " ▶";
+    font-size: 0.8em;
+  }
+}
+
+// スクリーンリーダー専用テキスト（改善版）
+.sr-only,
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+// フォーカス時に表示されるスキップリンク
+.skip-link {
+  &:focus,
+  &:focus-within {
+    position: fixed !important;
+    top: 10px !important;
+    left: 10px !important;
+    z-index: 9999 !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0.5rem 1rem !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    clip: auto !important;
+    white-space: normal !important;
+    background-color: var(--color-primary-600);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+// フォーム要素のアクセシビリティ
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  color: var(--color-text-high-contrast);
+}
+
+input,
+textarea,
+select {
+  border: 2px solid #6c757d;
+  
+  &:focus {
+    border-color: var(--color-focus);
+    box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.25);
+  }
+  
+  &[aria-invalid="true"],
+  &.error {
+    border-color: var(--color-error);
+  }
+  
+  &[aria-invalid="false"],
+  &.success {
+    border-color: var(--color-success);
+  }
+}
+
+// 必須フィールドの表示
+.required,
+[required] {
+  &::after {
+    content: " *";
+    color: var(--color-error);
+  }
+}
+
+// エラーメッセージのスタイル
+.error-message {
+  color: var(--color-error);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  
+  &::before {
+    content: "⚠ ";
+    font-weight: bold;
+  }
+}
+
+// 成功メッセージのスタイル
+.success-message {
+  color: var(--color-success);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  
+  &::before {
+    content: "✓ ";
+    font-weight: bold;
+  }
+}
+
+// モーダルのアクセシビリティ
+[role="dialog"] {
+  &:focus {
+    outline: none;
+  }
+  
+  .modal-header {
+    h2, h3, h4 {
+      margin: 0;
+      color: var(--color-text-high-contrast);
+    }
+  }
+  
+  .modal-close {
+    &:focus {
+      outline-offset: -4px;
+    }
+  }
+}
+
+// テーブルのアクセシビリティ
+table {
+  caption {
+    text-align: left;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-high-contrast);
+  }
+  
+  th {
+    background-color: #f3f4f6;
+    font-weight: 700;
+    text-align: left;
+  }
+  
+  tr:hover {
+    background-color: #f9fafb;
+  }
+  
+  // ストライプパターン（読みやすさ向上）
+  tbody tr:nth-child(odd) {
+    background-color: #f9fafb;
+  }
+}
+
+// 画像の代替テキスト表示
+img:not([alt]) {
+  border: 3px solid var(--color-error);
+}
+
+// 高コントラストモード対応
+@media (prefers-contrast: high) {
+  :root {
+    --color-primary-600: #0033cc;
+    --color-text-secondary: #333333;
+    --color-border: #000000;
+  }
+  
+  * {
+    border-color: #000000 !important;
+  }
+  
+  .btn {
+    border: 2px solid currentColor;
+  }
+}
+
+// ダークモード対応
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text-high-contrast: #ffffff;
+    --color-bg-high-contrast: #1a1a1a;
+    --color-link-high-contrast: #6db3f2;
+    --color-link-visited: #b19cd9;
+  }
+  
+  body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+  
+  .main-content {
+    background-color: #2a2a2a;
+  }
+  
+  input,
+  textarea,
+  select {
+    background-color: #333333;
+    color: #ffffff;
+    border-color: #555555;
+  }
+}
+
+// アニメーション無効化オプション
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// 読み上げ順序の制御
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  
+  .main-content {
+    order: 1;
+  }
+  
+  .left-sidebar {
+    order: 2;
+  }
+  
+  .right-sidebar {
+    order: 3;
+  }
+}
+
+// ランドマークの視覚的区別
+[role="banner"],
+[role="navigation"],
+[role="main"],
+[role="complementary"],
+[role="contentinfo"] {
+  position: relative;
+  
+  &::before {
+    content: attr(role);
+    position: absolute;
+    top: -1.5rem;
+    left: 0;
+    font-size: 0.75rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  
+  &:focus-within::before {
+    opacity: 1;
+  }
+}

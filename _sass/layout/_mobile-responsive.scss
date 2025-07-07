@@ -1,0 +1,265 @@
+// モバイルレスポンシブレイアウトの改善
+// モバイルファーストアプローチで再設計
+
+// ブレークポイントの定義
+$mobile: 567px;
+$tablet: 768px;
+$desktop: 1024px;
+$wide: 1280px;
+
+// モバイルでの3カラムレイアウトの適切な処理
+.content-wrapper {
+  &.three-column {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 0 1rem;
+    
+    @media (min-width: $tablet) {
+      padding: 0 1.5rem;
+      gap: 1.5rem;
+    }
+    
+    @media (min-width: $desktop) {
+      grid-template-columns: 250px 1fr 300px;
+      gap: 2rem;
+      padding: 0 1.5rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    @media (min-width: $wide) {
+      grid-template-columns: 280px 1fr 320px;
+    }
+  }
+}
+
+// サイドバーのモバイル対応
+.left-sidebar,
+.right-sidebar {
+  @media (max-width: $desktop - 1px) {
+    width: 100%;
+    margin-bottom: 2rem;
+    
+    .sidebar-card {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+// 左サイドバーのモバイル表示制御
+.left-sidebar {
+  @media (max-width: $desktop - 1px) {
+    display: none;
+    
+    &.mobile-visible {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: white;
+      z-index: 1000;
+      overflow-y: auto;
+      padding: 1rem;
+    }
+  }
+}
+
+// メインコンテンツのモバイル最適化
+.main-content {
+  @media (max-width: $desktop - 1px) {
+    order: 1;
+    width: 100%;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  @media (max-width: $mobile) {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+// 右サイドバーのモバイル配置
+.right-sidebar {
+  @media (max-width: $desktop - 1px) {
+    order: 2;
+    
+    .right-sidebar-content {
+      position: static;
+      max-height: none;
+    }
+  }
+}
+
+// モバイルナビゲーショントグル
+.mobile-nav-toggle {
+  display: none;
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1rem;
+  width: 56px;
+  height: 56px;
+  background: var(--color-primary-600);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  @media (max-width: $desktop - 1px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  &:hover {
+    background: var(--color-primary-700);
+    transform: scale(1.05);
+  }
+  
+  i {
+    font-size: 1.5rem;
+  }
+}
+
+// タッチフレンドリーな要素サイズ
+@media (max-width: $desktop - 1px) {
+  // リンクとボタンの最小タップターゲット
+  a,
+  button,
+  .btn,
+  .sidebar-nav-link {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  
+  // サイドバーカードのタップ領域拡大
+  .sidebar-card {
+    .sidebar-nav-link {
+      padding: 1rem 1.25rem;
+    }
+  }
+  
+  // フォーム要素のサイズ調整
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea,
+  select {
+    min-height: 44px;
+    font-size: 16px; // iOS zoom防止
+  }
+}
+
+// コンテンツカードのモバイルグリッド
+.content-cards-grid {
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  @media (min-width: $mobile + 1px) and (max-width: $tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+// サービスカードのモバイル対応
+.service-cards-container {
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+// テキストの可読性向上
+@media (max-width: $tablet) {
+  .main-content {
+    // 最適な行長さ
+    p,
+    li {
+      max-width: 65ch;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    // 見出しのサイズ調整
+    h1 {
+      font-size: 1.75rem;
+      line-height: 1.3;
+    }
+    
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 1.75rem;
+    }
+    
+    h3 {
+      font-size: 1.25rem;
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+// ヒーローセクションのモバイル対応
+.hero-section {
+  @media (max-width: $tablet) {
+    padding: 2rem 0;
+    min-height: auto;
+    
+    .hero-title {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+    
+    .hero-actions {
+      flex-direction: column;
+      gap: 0.75rem;
+      
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// モバイルでのパフォーマンス最適化
+@media (max-width: $desktop - 1px) {
+  // 不要なアニメーションを削減
+  * {
+    animation-duration: 0.2s !important;
+  }
+  
+  // ホバーエフェクトを無効化
+  .content-card:hover,
+  .service-card:hover {
+    transform: none;
+  }
+  
+  // スティッキー要素を解除
+  .left-sidebar-content,
+  .right-sidebar-content {
+    position: static !important;
+  }
+}
+
+// セーフエリア対応（iPhone X以降）
+@supports (padding: max(0px)) {
+  .mobile-nav-toggle {
+    bottom: max(1.5rem, env(safe-area-inset-bottom));
+  }
+  
+  .main-container {
+    padding-bottom: max(3rem, env(safe-area-inset-bottom));
+  }
+}

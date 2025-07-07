@@ -1,0 +1,250 @@
+// 簡略化されたタイポグラフィシステム
+// clampの過度な使用を避け、シンプルで保守しやすい設計
+
+// フォントサイズの定義（モバイルファースト）
+:root {
+  // ベースサイズ
+  --font-size-xs: 0.75rem;    // 12px
+  --font-size-sm: 0.875rem;   // 14px
+  --font-size-base: 1rem;     // 16px
+  --font-size-lg: 1.125rem;   // 18px
+  --font-size-xl: 1.25rem;    // 20px
+  --font-size-2xl: 1.5rem;    // 24px
+  --font-size-3xl: 1.875rem;  // 30px
+  --font-size-4xl: 2.25rem;   // 36px
+  
+  // 行間（読みやすさ重視）
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  --line-height-loose: 2;
+  
+  // 文字間隔
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.025em;
+  
+  // フォントウェイト
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+}
+
+// レスポンシブフォントサイズ（シンプルな実装）
+@media (min-width: 768px) {
+  :root {
+    --font-size-lg: 1.25rem;    // 20px
+    --font-size-xl: 1.5rem;     // 24px
+    --font-size-2xl: 1.875rem;  // 30px
+    --font-size-3xl: 2.25rem;   // 36px
+    --font-size-4xl: 3rem;      // 48px
+  }
+}
+
+// ベースタイポグラフィ
+body {
+  font-family: 'Noto Sans JP', 'Hiragino Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// 見出しの簡略化されたスタイル
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-primary);
+}
+
+h1 {
+  font-size: var(--font-size-3xl);
+  margin-bottom: 1.5rem;
+  
+  @media (min-width: 768px) {
+    font-size: var(--font-size-4xl);
+  }
+}
+
+h2 {
+  font-size: var(--font-size-2xl);
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  
+  @media (min-width: 768px) {
+    font-size: var(--font-size-3xl);
+  }
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  
+  @media (min-width: 768px) {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+h4 {
+  font-size: var(--font-size-lg);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  
+  @media (min-width: 768px) {
+    font-size: var(--font-size-xl);
+  }
+}
+
+h5, h6 {
+  font-size: var(--font-size-base);
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: var(--font-weight-medium);
+}
+
+// 段落とテキストブロック
+p {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  max-width: 65ch; // 読みやすい行長
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// 記事本文のコンテナ
+.article-content,
+.main-content {
+  p, li {
+    line-height: var(--line-height-relaxed);
+  }
+  
+  // 見出し前後の間隔調整
+  h2, h3, h4 {
+    & + p {
+      margin-top: 0;
+    }
+  }
+  
+  p + h2 {
+    margin-top: 3rem;
+  }
+  
+  p + h3 {
+    margin-top: 2.5rem;
+  }
+}
+
+// リスト
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+  
+  li {
+    margin-bottom: 0.5rem;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  // ネストしたリスト
+  ul, ol {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+}
+
+// リンク（シンプルで明確なスタイル）
+a {
+  color: var(--color-primary-600);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s;
+  
+  &:hover {
+    color: var(--color-primary-700);
+  }
+  
+  &:visited {
+    color: var(--color-primary-800);
+  }
+}
+
+// コード（シンプルなスタイル）
+code {
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 0.875em;
+  background-color: #f3f4f6;
+  padding: 0.125rem 0.25rem;
+  border-radius: 3px;
+}
+
+pre {
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 0.875rem;
+  background-color: #1f2937;
+  color: #e5e7eb;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin-bottom: 1.25rem;
+  
+  code {
+    background-color: transparent;
+    padding: 0;
+    color: inherit;
+  }
+}
+
+// 引用
+blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1.25rem;
+  border-left: 4px solid var(--color-primary-500);
+  font-style: italic;
+  color: var(--color-text-secondary);
+}
+
+// 便利なユーティリティクラス（最小限）
+.text-small {
+  font-size: var(--font-size-sm);
+}
+
+.text-large {
+  font-size: var(--font-size-lg);
+}
+
+.font-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: var(--color-text-secondary);
+}
+
+// 印刷時の最適化
+@media print {
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+  
+  h1 { font-size: 18pt; }
+  h2 { font-size: 16pt; }
+  h3 { font-size: 14pt; }
+  
+  p {
+    max-width: none;
+  }
+}

@@ -1,0 +1,32 @@
+---
+layout: default
+title: オフライン
+---
+
+<div class="offline-page">
+    <div class="offline-content">
+        <i class="fas fa-wifi-slash fa-4x text-muted mb-4"></i>
+        <h1>オフラインです</h1>
+        <p class="lead">インターネット接続がありません。</p>
+        <p>ネットワーク接続を確認してから、もう一度お試しください。</p>
+        <button class="btn btn-primary mt-3" onclick="window.location.reload()">
+            <i class="fas fa-sync-alt"></i>
+            再読み込み
+        </button>
+    </div>
+</div>
+
+<style>
+.offline-page {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.offline-content {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+</style>

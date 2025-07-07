@@ -1,0 +1,42 @@
+{% comment %}
+  レスポンシブ画像コンポーネント
+  Usage: {% include picture.html src="image.jpg" alt="説明" class="optional-class" loading="lazy" %}
+{% endcomment %}
+
+{% assign image_path = include.src | remove_first: "/" %}
+{% assign image_name = image_path | split: "." | first %}
+{% assign image_ext = image_path | split: "." | last %}
+{% assign webp_path = image_name | append: ".webp" %}
+
+<picture>
+  <!-- WebP形式（モダンブラウザ用） -->
+  <source 
+    type="image/webp"
+    srcset="{{ webp_path | relative_url }} 1x,
+            {{ image_name | append: '@2x.webp' | relative_url }} 2x"
+    media="(min-width: 768px)">
+  
+  <!-- WebP形式（モバイル用） -->
+  <source 
+    type="image/webp"
+    srcset="{{ image_name | append: '-mobile.webp' | relative_url }} 1x,
+            {{ image_name | append: '-mobile@2x.webp' | relative_url }} 2x"
+    media="(max-width: 767px)">
+  
+  <!-- 元の形式（フォールバック） -->
+  <source 
+    type="image/{{ image_ext }}"
+    srcset="{{ image_path | relative_url }} 1x,
+            {{ image_name | append: '@2x.' | append: image_ext | relative_url }} 2x"
+    media="(min-width: 768px)">
+  
+  <!-- デフォルト画像 -->
+  <img 
+    src="{{ image_path | relative_url }}"
+    alt="{{ include.alt | default: '' }}"
+    class="{{ include.class | default: '' }}"
+    loading="{{ include.loading | default: 'lazy' }}"
+    decoding="async"
+    {% if include.width %}width="{{ include.width }}"{% endif %}
+    {% if include.height %}height="{{ include.height }}"{% endif %}>
+</picture>

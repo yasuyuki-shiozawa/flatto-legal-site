@@ -1,37 +1,28 @@
 User-agent: *
 Allow: /
 
-# 主要ページの優先度設定
-Sitemap: https://flatto-legal-site.netlify.app/sitemap.xml
+Sitemap: https://nyusatsu-map.com/sitemap.xml
 
-# 検索エンジンに重要なページを明示
-# トップページ
-Allow: /
+# 管理ページをクロール対象外に
+Disallow: /admin/
+Disallow: /login/
+Disallow: /api/
 
-# 学習コンテンツページ
-Allow: /knowhow/
-Allow: /cases/
-Allow: /service/
-Allow: /about/
-Allow: /latest-trends/
+# 一時ファイルをクロール対象外に
+Disallow: /tmp/
+Disallow: /*.tmp$
 
-# お問い合わせページ
-Allow: /contact/
-
-# 静的リソース
+# アセットファイルは許可
 Allow: /assets/
 Allow: /images/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
 
-# 除外するファイル・ディレクトリ
-Disallow: /admin/
-Disallow: /.git/
-Disallow: /node_modules/
-Disallow: /*.log
-Disallow: /*.tmp
-
-# 検索エンジン向けの追加指示
-# 重要なページの明示的な許可
-Allow: /search-index.json
-
-# クロール頻度の調整（適切な値に修正）
-# Crawl-delay: 10
+# クロール速度の推奨
+Crawl-delay: 1

@@ -1,487 +1,432 @@
-// 自動目次生成とスクロール追従機能
-document.addEventListener('DOMContentLoaded', function() {
-    generateTableOfContents();
-    setupScrollSpy();
-    setupSmoothScrolling();
-});
+// 統合メインJavaScriptファイル
+// すべてのJavaScript機能を一つのファイルに統合
 
-// 目次の自動生成
-function generateTableOfContents() {
-    const tocContainer = document.getElementById('toc-container');
-    if (!tocContainer) return;
+(function() {
+    'use strict';
 
-    const headings = document.querySelectorAll('.main-content h2, .main-content h3, .main-content h4');
-    if (headings.length === 0) {
-        tocContainer.innerHTML = '<p class="no-toc">目次がありません</p>';
-        return;
-    }
+    // DOM読み込み完了を待つ
+    document.addEventListener('DOMContentLoaded', function() {
+        initMobileMenu();
+        initMobileSidebarToggle();
+        initSidebarActive();
+        initSmoothScroll();
+        initLazyLoading();
+        initAccessibility();
+        initFormValidation();
+        initSearch();
+    });
 
-    const tocList = document.createElement('ul');
-    tocList.className = 'toc-list';
+    // モバイルメニュー機能
+    function initMobileMenu() {
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const overlay = document.querySelector('.mobile-menu-overlay');
+        const body = document.body;
 
-    headings.forEach((heading, index) => {
-        // 見出しにIDを設定（既存のIDがない場合）
-        if (!heading.id) {
-            heading.id = `heading-${index}`;
+        if (!menuToggle || !mobileMenu) return;
+
+        menuToggle.addEventListener('click', function() {
+            const isOpen = mobileMenu.classList.contains('open');
+            
+            if (isOpen) {
+                closeMobileMenu();
+            } else {
+                openMobileMenu();
+            }
+        });
+
+        if (overlay) {
+            overlay.addEventListener('click', closeMobileMenu);
         }
 
-        const listItem = document.createElement('li');
-        const link = document.createElement('a');
+        // ESCキーで閉じる
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+                closeMobileMenu();
+            }
+        });
+
+        function openMobileMenu() {
+            mobileMenu.classList.add('open');
+            if (overlay) overlay.classList.add('active');
+            body.style.overflow = 'hidden';
+            menuToggle.setAttribute('aria-expanded', 'true');
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+            if (overlay) overlay.classList.remove('active');
+            body.style.overflow = '';
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+    }
+
+    // モバイルサイドバートグル機能
+    function initMobileSidebarToggle() {
+        const navToggle = document.querySelector('.mobile-nav-toggle');
+        const leftSidebar = document.querySelector('.left-sidebar');
         
-        link.href = `#${heading.id}`;
-        link.textContent = heading.textContent;
-        link.className = `toc-${heading.tagName.toLowerCase()}`;
-        link.setAttribute('data-target', heading.id);
-
-        listItem.appendChild(link);
-        tocList.appendChild(listItem);
-    });
-
-    tocContainer.appendChild(tocList);
-}
-
-// スクロール追従（現在位置のハイライト）
-function setupScrollSpy() {
-    const tocLinks = document.querySelectorAll('.toc-container a[data-target]');
-    if (tocLinks.length === 0) return;
-
-    const headings = Array.from(document.querySelectorAll('.main-content h2, .main-content h3, .main-content h4'))
-        .filter(h => h.id);
-
-    function updateActiveLink() {
-        let currentHeading = null;
-        const scrollPosition = window.scrollY + 100; // オフセット
-
-        // 現在のスクロール位置に最も近い見出しを見つける
-        for (let i = headings.length - 1; i >= 0; i--) {
-            const heading = headings[i];
-            if (heading.offsetTop <= scrollPosition) {
-                currentHeading = heading;
-                break;
-            }
+        if (!navToggle || !leftSidebar) return;
+        
+        // トグルボタンを作成（存在しない場合）
+        if (!document.querySelector('.mobile-nav-toggle')) {
+            const toggleBtn = document.createElement('button');
+            toggleBtn.className = 'mobile-nav-toggle';
+            toggleBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            toggleBtn.setAttribute('aria-label', 'サイドバーメニューを開く');
+            document.body.appendChild(toggleBtn);
         }
-
-        // すべてのリンクからactiveクラスを削除
-        tocLinks.forEach(link => link.classList.remove('active'));
-
-        // 現在の見出しに対応するリンクにactiveクラスを追加
-        if (currentHeading) {
-            const activeLink = document.querySelector(`.toc-container a[data-target="${currentHeading.id}"]`);
-            if (activeLink) {
-                activeLink.classList.add('active');
+        
+        navToggle.addEventListener('click', function() {
+            const isVisible = leftSidebar.classList.contains('mobile-visible');
+            
+            if (isVisible) {
+                leftSidebar.classList.remove('mobile-visible');
+                navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                navToggle.setAttribute('aria-label', 'サイドバーメニューを開く');
+                document.body.style.overflow = '';
+            } else {
+                leftSidebar.classList.add('mobile-visible');
+                navToggle.innerHTML = '<i class="fas fa-times"></i>';
+                navToggle.setAttribute('aria-label', 'サイドバーメニューを閉じる');
+                document.body.style.overflow = 'hidden';
             }
+        });
+        
+        // 閉じるボタンを追加
+        const closeBtn = document.createElement('button');
+        closeBtn.className = 'sidebar-close-btn';
+        closeBtn.innerHTML = '<i class="fas fa-times"></i>';
+        closeBtn.setAttribute('aria-label', 'サイドバーを閉じる');
+        closeBtn.style.cssText = 'position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 1.5rem; cursor: pointer;';
+        
+        if (leftSidebar.querySelector('.left-sidebar-content')) {
+            leftSidebar.querySelector('.left-sidebar-content').prepend(closeBtn);
         }
+        
+        closeBtn.addEventListener('click', function() {
+            leftSidebar.classList.remove('mobile-visible');
+            navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            navToggle.setAttribute('aria-label', 'サイドバーメニューを開く');
+            document.body.style.overflow = '';
+        });
     }
 
-    // スクロールイベントリスナー
-    let ticking = false;
-    window.addEventListener('scroll', function() {
-        if (!ticking) {
-            requestAnimationFrame(function() {
-                updateActiveLink();
-                ticking = false;
-            });
-            ticking = true;
-        }
-    });
+    // サイドバーアクティブ状態
+    function initSidebarActive() {
+        const currentPath = window.location.pathname;
+        const sidebarLinks = document.querySelectorAll('.sidebar-nav-link');
+        
+        sidebarLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href && currentPath.includes(href) && href !== '/') {
+                link.classList.add('active');
+            }
+        });
+    }
 
-    // 初期状態の設定
-    updateActiveLink();
-}
-
-// スムーズスクロール
-function setupSmoothScrolling() {
-    const tocLinks = document.querySelectorAll('.toc-container a[href^="#"]');
-    
-    tocLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-            
-            if (targetElement) {
-                const headerHeight = document.querySelector('.header')?.offsetHeight || 0;
-                const offset = headerHeight + 20; // ヘッダー高さ + 余白
+    // スムーススクロール
+    function initSmoothScroll() {
+        const links = document.querySelectorAll('a[href^="#"]');
+        
+        links.forEach(link => {
+            link.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
                 
-                const targetPosition = targetElement.offsetTop - offset;
+                const target = document.querySelector(href);
+                if (!target) return;
+                
+                e.preventDefault();
+                
+                const offset = 80; // ヘッダーの高さ
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
                 
                 window.scrollTo({
                     top: targetPosition,
                     behavior: 'smooth'
                 });
-            }
-        });
-    });
-}
-
-// サイドバー検索機能
-document.addEventListener('DOMContentLoaded', function() {
-    const searchInput = document.getElementById('sidebar-search');
-    const searchButton = document.querySelector('.search-button');
-    
-    if (searchInput && searchButton) {
-        // 検索ボタンクリック
-        searchButton.addEventListener('click', function() {
-            performSearch();
-        });
-        
-        // Enterキー押下
-        searchInput.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                performSearch();
-            }
-        });
-    }
-    
-    function performSearch() {
-        const query = searchInput.value.trim();
-        if (query) {
-            // 簡易検索実装（Google Site Search風）
-            const searchUrl = `https://www.google.com/search?q=site:${window.location.hostname} ${encodeURIComponent(query)}`;
-            window.open(searchUrl, '_blank');
-        }
-    }
-});
-
-// レスポンシブ対応
-window.addEventListener('resize', function() {
-    // ウィンドウサイズ変更時の処理
-    const tocContainer = document.getElementById('toc-container');
-    if (tocContainer && window.innerWidth <= 768) {
-        // スマホサイズでは目次を非表示
-        tocContainer.style.display = 'none';
-    } else if (tocContainer) {
-        tocContainer.style.display = 'block';
-    }
-});
-
-
-// ===== サイト内検索機能 =====
-
-// 検索システムの初期化
-class SiteSearch {
-    constructor() {
-        this.searchIndex = null;
-        this.documents = [];
-        this.isInitialized = false;
-        this.searchInput = null;
-        this.searchResults = null;
-        this.searchOverlay = null;
-        
-        console.log('SiteSearch constructor called');
-        this.init();
-    }
-    
-    // 初期化
-    async init() {
-        console.log('SiteSearch init started');
-        try {
-            // 検索インデックスを読み込み
-            await this.loadSearchIndex();
-            
-            // DOM要素を取得
-            this.searchInput = document.getElementById('search-modal-input');
-            this.searchResults = document.getElementById('search-results');
-            this.searchOverlay = document.getElementById('search-overlay');
-            
-            console.log('DOM elements:', {
-                searchInput: !!this.searchInput,
-                searchResults: !!this.searchResults,
-                searchOverlay: !!this.searchOverlay
             });
-            
-            // サイドバーの検索ボックスも取得
-            this.sidebarSearchInput = document.querySelector('.right-sidebar input[placeholder*="キーワード"]');
-            console.log('Sidebar search input found:', !!this.sidebarSearchInput);
-            
-            if (this.searchInput) {
-                this.setupEventListeners();
-                this.isInitialized = true;
-                console.log('サイト内検索が初期化されました');
-            } else {
-                console.error('検索入力要素が見つかりません');
-            }
-        } catch (error) {
-            console.error('検索システムの初期化に失敗しました:', error);
-        }
-    }
-    
-    // 検索インデックスを読み込み
-    async loadSearchIndex() {
-        console.log('Loading search index...');
-        try {
-            const response = await fetch('/search-index.json');
-            console.log('Search index response status:', response.status);
-            
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            
-            const data = await response.json();
-            this.documents = data.documents;
-            console.log('Documents loaded:', this.documents.length);
-            
-            // Lunr.jsで検索インデックスを構築
-            console.log('Building search index with Lunr.js...');
-            this.searchIndex = lunr(function () {
-                this.ref('id');
-                this.field('title', { boost: 10 });
-                this.field('content', { boost: 1 });
-                this.field('excerpt', { boost: 5 });
-                this.field('category', { boost: 3 });
-                this.field('tags', { boost: 2 });
-                
-                // 日本語対応
-                this.pipeline.remove(lunr.stemmer);
-                this.searchPipeline.remove(lunr.stemmer);
-                
-                data.documents.forEach(function (doc) {
-                    this.add(doc);
-                }, this);
-            });
-            
-            console.log(`検索インデックスを構築しました (${this.documents.length}件)`);
-        } catch (error) {
-            console.error('検索インデックスの読み込みに失敗しました:', error);
-            throw error;
-        }
-    }
-    
-    // イベントリスナーを設定
-    setupEventListeners() {
-        // 検索入力イベント（モーダル内）
-        this.searchInput.addEventListener('input', (e) => {
-            const query = e.target.value.trim();
-            this.handleSearch(query);
         });
+    }
+
+    // 画像の遅延読み込み（改善版）
+    function initLazyLoading() {
+        const lazyImages = document.querySelectorAll('img[loading="lazy"], img[data-src]');
         
-        // サイドバーの検索ボックスクリックでモーダルを開く
-        if (this.sidebarSearchInput) {
-            this.sidebarSearchInput.addEventListener('click', () => {
-                this.showSearchOverlay();
-                // フォーカスをモーダル内の検索ボックスに移動
-                setTimeout(() => {
-                    if (this.searchInput) {
-                        this.searchInput.focus();
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        
+                        // data-src属性がある場合
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                            img.removeAttribute('data-src');
+                        }
+                        
+                        // 読み込み完了時にクラスを追加
+                        img.addEventListener('load', function() {
+                            img.classList.add('loaded');
+                        });
+                        
+                        imageObserver.unobserve(img);
                     }
-                }, 100);
+                });
+            }, {
+                rootMargin: '50px 0px', // 50px手前から読み込み開始
+                threshold: 0.01
             });
             
-            this.sidebarSearchInput.addEventListener('focus', () => {
-                this.showSearchOverlay();
-                setTimeout(() => {
-                    if (this.searchInput) {
-                        this.searchInput.focus();
-                    }
-                }, 100);
+            lazyImages.forEach(img => imageObserver.observe(img));
+        } else {
+            // Fallback for browsers that don't support IntersectionObserver
+            lazyImages.forEach(img => {
+                if (img.dataset.src) {
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                }
+                img.classList.add('loaded');
             });
         }
         
-        // フォーカス・ブラーイベント
-        this.searchInput.addEventListener('focus', () => {
-            this.showSearchOverlay();
-        });
-        
-        // ESCキーで検索を閉じる
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                this.hideSearchOverlay();
+        // WebP対応チェック
+        checkWebPSupport();
+    }
+    
+    // WebP対応チェック
+    function checkWebPSupport() {
+        const webP = new Image();
+        webP.onload = webP.onerror = function() {
+            const isSupported = webP.height === 2;
+            if (!isSupported) {
+                document.documentElement.classList.add('no-webp');
             }
+        };
+        webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+    }
+
+    // アクセシビリティ機能
+    function initAccessibility() {
+        // フォーカストラップ
+        const modals = document.querySelectorAll('[role="dialog"]');
+        modals.forEach(modal => {
+            const focusableElements = modal.querySelectorAll(
+                'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select'
+            );
+            const firstFocusable = focusableElements[0];
+            const lastFocusable = focusableElements[focusableElements.length - 1];
+
+            modal.addEventListener('keydown', function(e) {
+                if (e.key === 'Tab') {
+                    if (e.shiftKey) {
+                        if (document.activeElement === firstFocusable) {
+                            lastFocusable.focus();
+                            e.preventDefault();
+                        }
+                    } else {
+                        if (document.activeElement === lastFocusable) {
+                            firstFocusable.focus();
+                            e.preventDefault();
+                        }
+                    }
+                }
+            });
         });
-        
-        // オーバーレイクリックで閉じる
-        if (this.searchOverlay) {
-            this.searchOverlay.addEventListener('click', (e) => {
-                if (e.target === this.searchOverlay) {
-                    this.hideSearchOverlay();
+
+        // スキップリンク
+        const skipLink = document.querySelector('.skip-link');
+        if (skipLink) {
+            skipLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.tabIndex = -1;
+                    target.focus();
                 }
             });
         }
     }
-    
-    // 検索実行
-    handleSearch(query) {
-        console.log('handleSearch called with query:', query);
+
+    // フォームバリデーション
+    function initFormValidation() {
+        const forms = document.querySelectorAll('form[data-validate]');
         
-        if (!this.isInitialized) {
-            console.log('Search not initialized yet');
-            this.clearResults();
-            return;
-        }
-        
-        if (!query) {
-            console.log('Empty query, clearing results');
-            this.clearResults();
-            return;
-        }
-        
-        try {
-            console.log('Executing search for:', query);
-            // 検索実行
-            const results = this.searchIndex.search(query);
-            console.log('Search results:', results.length, 'items found');
-            
-            // 結果を表示
-            this.displayResults(results, query);
-            
-            // 検索統計を更新
-            this.updateSearchStats(results.length, query);
-            
-        } catch (error) {
-            console.error('検索エラー:', error);
-            this.showError('検索中にエラーが発生しました');
-        }
-    }
-    
-    // 検索結果を表示
-    displayResults(results, query) {
-        if (!this.searchResults) return;
-        
-        if (results.length === 0) {
-            this.searchResults.innerHTML = `
-                <div class="search-no-results">
-                    <i class="fas fa-search"></i>
-                    <p>「${this.escapeHtml(query)}」に関する結果が見つかりませんでした</p>
-                    <div class="search-suggestions">
-                        <p>検索のヒント:</p>
-                        <ul>
-                            <li>キーワードを変更してみてください</li>
-                            <li>より一般的な用語を使用してください</li>
-                            <li>スペースで区切って複数のキーワードを試してください</li>
-                        </ul>
-                    </div>
-                </div>
-            `;
-            return;
-        }
-        
-        // 結果をHTMLに変換
-        const resultsHtml = results.slice(0, 10).map(result => {
-            const doc = this.documents.find(d => d.id === result.ref);
-            if (!doc) return '';
-            
-            return `
-                <div class="search-result-item" data-score="${result.score.toFixed(2)}">
-                    <div class="search-result-header">
-                        <h3 class="search-result-title">
-                            <a href="${doc.url}">${this.highlightText(doc.title, query)}</a>
-                        </h3>
-                        <span class="search-result-category">${doc.category}</span>
-                    </div>
-                    <p class="search-result-excerpt">
-                        ${this.highlightText(doc.excerpt, query)}
-                    </p>
-                    <div class="search-result-meta">
-                        <span class="search-result-url">${doc.url}</span>
-                        <span class="search-result-score">関連度: ${(result.score * 100).toFixed(0)}%</span>
-                    </div>
-                </div>
-            `;
-        }).join('');
-        
-        this.searchResults.innerHTML = `
-            <div class="search-results-header">
-                <h3>検索結果 (${results.length}件)</h3>
-                <button class="search-close-btn" onclick="siteSearch.hideSearchOverlay()">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="search-results-list">
-                ${resultsHtml}
-            </div>
-        `;
-    }
-    
-    // テキストをハイライト
-    highlightText(text, query) {
-        if (!query) return this.escapeHtml(text);
-        
-        const escapedText = this.escapeHtml(text);
-        const escapedQuery = this.escapeHtml(query);
-        const regex = new RegExp(`(${escapedQuery})`, 'gi');
-        
-        return escapedText.replace(regex, '<mark class="search-highlight">$1</mark>');
-    }
-    
-    // HTMLエスケープ
-    escapeHtml(text) {
-        const div = document.createElement('div');
-        div.textContent = text;
-        return div.innerHTML;
-    }
-    
-    // 検索オーバーレイを表示
-    showSearchOverlay() {
-        if (this.searchOverlay) {
-            this.searchOverlay.classList.add('active');
-            document.body.classList.add('search-active');
-        }
-    }
-    
-    // 検索オーバーレイを非表示
-    hideSearchOverlay() {
-        if (this.searchOverlay) {
-            this.searchOverlay.classList.remove('active');
-            document.body.classList.remove('search-active');
-        }
-        this.clearResults();
-        if (this.searchInput) {
-            this.searchInput.value = '';
-            this.searchInput.blur();
-        }
-    }
-    
-    // 結果をクリア
-    clearResults() {
-        if (this.searchResults) {
-            this.searchResults.innerHTML = '';
-        }
-    }
-    
-    // エラー表示
-    showError(message) {
-        if (this.searchResults) {
-            this.searchResults.innerHTML = `
-                <div class="search-error">
-                    <i class="fas fa-exclamation-triangle"></i>
-                    <p>${this.escapeHtml(message)}</p>
-                </div>
-            `;
-        }
-    }
-    
-    // 検索統計を更新
-    updateSearchStats(resultCount, query) {
-        // Google Analytics等に送信する場合
-        if (typeof gtag !== 'undefined') {
-            gtag('event', 'search', {
-                search_term: query,
-                result_count: resultCount
+        forms.forEach(form => {
+            form.addEventListener('submit', function(e) {
+                const inputs = form.querySelectorAll('[required]');
+                let isValid = true;
+                
+                inputs.forEach(input => {
+                    if (!input.value.trim()) {
+                        isValid = false;
+                        input.classList.add('error');
+                        showError(input, '必須項目です');
+                    } else {
+                        input.classList.remove('error');
+                        removeError(input);
+                    }
+                    
+                    // メールアドレスのバリデーション
+                    if (input.type === 'email' && input.value) {
+                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        if (!emailRegex.test(input.value)) {
+                            isValid = false;
+                            input.classList.add('error');
+                            showError(input, '正しいメールアドレスを入力してください');
+                        }
+                    }
+                });
+                
+                if (!isValid) {
+                    e.preventDefault();
+                }
             });
+        });
+        
+        function showError(input, message) {
+            removeError(input);
+            const error = document.createElement('span');
+            error.className = 'error-message';
+            error.textContent = message;
+            input.parentElement.appendChild(error);
+        }
+        
+        function removeError(input) {
+            const error = input.parentElement.querySelector('.error-message');
+            if (error) {
+                error.remove();
+            }
         }
     }
-}
-
-// Lunr.jsライブラリの読み込み確認と初期化
-function initializeSearch() {
-    console.log('initializeSearch called');
-    console.log('Lunr.js available:', typeof lunr !== 'undefined');
     
-    if (typeof lunr !== 'undefined') {
-        console.log('Creating SiteSearch instance...');
-        window.siteSearch = new SiteSearch();
-    } else {
-        console.error('Lunr.jsライブラリが読み込まれていません');
+    // 検索機能
+    function initSearch() {
+        const searchToggle = document.querySelector('.search-toggle');
+        const searchOverlay = document.querySelector('.search-overlay');
+        const searchInput = document.querySelector('#search-input');
+        const searchResults = document.querySelector('#search-results');
+        let searchData = null;
+        
+        if (!searchToggle || !searchOverlay) return;
+        
+        // 検索データの読み込み
+        fetch('/search.json')
+            .then(response => response.json())
+            .then(data => {
+                searchData = data;
+            })
+            .catch(error => console.error('検索データの読み込みに失敗しました:', error));
+        
+        // 検索オーバーレイの開閉
+        searchToggle.addEventListener('click', function() {
+            searchOverlay.classList.add('active');
+            searchInput.focus();
+            document.body.style.overflow = 'hidden';
+        });
+        
+        // 閉じるボタン
+        const closeBtn = searchOverlay.querySelector('.search-close');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', closeSearch);
+        }
+        
+        // ESCキーで閉じる
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && searchOverlay.classList.contains('active')) {
+                closeSearch();
+            }
+        });
+        
+        // オーバーレイクリックで閉じる
+        searchOverlay.addEventListener('click', function(e) {
+            if (e.target === searchOverlay) {
+                closeSearch();
+            }
+        });
+        
+        function closeSearch() {
+            searchOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+            searchInput.value = '';
+            searchResults.innerHTML = '';
+        }
+        
+        // 検索実行
+        if (searchInput) {
+            searchInput.addEventListener('input', debounce(function() {
+                const query = this.value.trim().toLowerCase();
+                
+                if (query.length < 2) {
+                    searchResults.innerHTML = '<p class="search-hint">2文字以上入力してください</p>';
+                    return;
+                }
+                
+                if (!searchData) {
+                    searchResults.innerHTML = '<p class="search-error">検索データを読み込んでいます...</p>';
+                    return;
+                }
+                
+                const results = searchData.filter(item => {
+                    return item.title.toLowerCase().includes(query) ||
+                           (item.content && item.content.toLowerCase().includes(query)) ||
+                           (item.description && item.description.toLowerCase().includes(query));
+                });
+                
+                displayResults(results, query);
+            }, 300));
+        }
+        
+        function displayResults(results, query) {
+            if (results.length === 0) {
+                searchResults.innerHTML = `<p class="search-no-results">「${query}」に一致する結果が見つかりませんでした</p>`;
+                return;
+            }
+            
+            const html = results.map(result => {
+                const title = highlightText(result.title, query);
+                const content = result.content ? highlightText(truncate(result.content, 150), query) : '';
+                
+                return `
+                    <article class="search-result-item">
+                        <h3 class="search-result-title">
+                            <a href="${result.url}">${title}</a>
+                        </h3>
+                        ${content ? `<p class="search-result-excerpt">${content}</p>` : ''}
+                        ${result.date ? `<time class="search-result-date">${result.date}</time>` : ''}
+                    </article>
+                `;
+            }).join('');
+            
+            searchResults.innerHTML = `
+                <p class="search-result-count">${results.length}件の検索結果</p>
+                ${html}
+            `;
+        }
+        
+        function highlightText(text, query) {
+            if (!text) return '';
+            const regex = new RegExp(`(${query})`, 'gi');
+            return text.replace(regex, '<mark>$1</mark>');
+        }
+        
+        function truncate(text, length) {
+            if (!text || text.length <= length) return text;
+            return text.substring(0, length) + '...';
+        }
+        
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func.apply(this, args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
     }
-}
 
-// DOMContentLoaded後に初期化
-if (document.readyState === 'loading') {
-    console.log('Document still loading, adding event listener');
-    document.addEventListener('DOMContentLoaded', initializeSearch);
-} else {
-    console.log('Document already loaded, initializing immediately');
-    initializeSearch();
-}
-
+})();

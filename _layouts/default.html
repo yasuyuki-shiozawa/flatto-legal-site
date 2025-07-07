@@ -66,18 +66,14 @@
     }
     </script>
     
-    <!-- クリティカルCSS（インライン） -->
+    <!-- Critical CSS（インライン） -->
     <style>
-    {% include css/optimized/critical.css %}
+    {% include critical.css %}
     </style>
     
-    <!-- 非クリティカルCSS（遅延読み込み） - コメントアウト
-   <link rel="stylesheet" href="/assets/css/optimized/non-critical.css?v=20250613_01">
-    <noscript><link rel="stylesheet" href="/assets/css/optimized/non-critical.css?v=20250613_01"></noscript> -->
-    <!-- ページ固有CSS（条件付き読み込み） -->
-    {% if page.use_page_specific_css %}
-    <link rel="stylesheet" href="/assets/css/optimized/page-specific.css?v=20250613_01">
-    {% endif %}
+    <!-- メインCSS（SCSSからコンパイル）のプリロード -->
+    <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}"></noscript>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,17 +98,11 @@
     </script>
     {% endif %}
     
-    <!-- コアJavaScript -->
-    <script src="/assets/js/optimized/core.js?v=20250613_01" defer></script>
-
-    <!-- メインCSS（SCSSからコンパイル） -->
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-    
-    <!-- 統合修正CSS（追加スタイル） -->
-    <link rel="stylesheet" href="/assets/css/optimized/comprehensive-fix.css?v=20250615_09">
-    
-    <!-- サイドバーアクティブ状態JavaScript -->
-    <script src="/assets/js/optimized/sidebar-active.js?v=20250615_07" defer></script>
+    <!-- Polyfill for rel=preload -->
+    <script>
+    /*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+    !function(e){"use strict";e.loadCSS||(e.loadCSS=function(){});var t=loadCSS.relpreload={};if(t.support=function(){var t;try{t=e.document.createElement("link").relList.supports("preload")}catch(e){t=!1}return function(){return t}}(),t.bindMediaToggle=function(e){var t=e.media||"all";function a(){e.addEventListener?e.removeEventListener("load",a):e.attachEvent&&e.detachEvent("onload",a),e.setAttribute("onload",null),e.media=t}e.addEventListener?e.addEventListener("load",a):e.attachEvent&&e.attachEvent("onload",a),setTimeout(function(){e.rel="stylesheet",e.media="only x"}),setTimeout(function(){e.media=t},0)},t.poly=function(){if(!t.support())for(var a=e.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),t.bindMediaToggle(o))}},!t.support()){t.poly();var a=e.setInterval(t.poly,500);e.addEventListener?e.addEventListener("load",function(){t.poly(),e.clearInterval(a)}):e.attachEvent&&e.attachEvent("onload",function(){t.poly(),e.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:e.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+    </script>
 </head>
 <body data-page-url="{{ page.url }}" {% if page.body_class %}class="{{ page.body_class }}"{% endif %}>
     {% include header.html %}
@@ -183,20 +173,23 @@
         });
     </script>
     
-    <!-- ナビゲーション改善用スクリプト -->
-    <script src="{{ '/assets/js/sticky-header.js' | relative_url }}" defer></script>
-    <script src="{{ '/assets/js/mobile-menu.js' | relative_url }}" defer></script>
-    <!-- 画像遅延読み込みスクリプト -->
-    <script src="{{ '/assets/js/lazy-images.js' | relative_url }}" defer></script>
+    <!-- 統合JavaScript（遅延読み込み） -->
+    <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
     
-    <!-- インタラクティブ機能（記事ページで自動有効化） -->
-    {% if page.layout == 'post' or page.use_toc %}
-    <script src="{{ '/assets/js/auto-toc.js' | relative_url }}" defer></script>
-    <script src="{{ '/assets/js/reading-progress.js' | relative_url }}" defer></script>
-    {% endif %}
-    
-    <!-- サイト分析ツール -->
-    <script src="{{ '/assets/js/site-analytics.js' | relative_url }}" defer></script>
+    <!-- Service Worker登録 -->
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js')
+                .then(function(registration) {
+                    console.log('Service Worker registered');
+                })
+                .catch(function(error) {
+                    console.log('Service Worker registration failed:', error);
+                });
+        });
+    }
+    </script>
 </body>
 </html>
 

@@ -8,12 +8,13 @@
 // ベース（変数とタイポグラフィ）
 @import "../../_sass/base/variables";
 @import "../../_sass/base/color-theme";
-@import "../../_sass/base/typography";
+@import "../../_sass/base/typography-simplified";
 @import "../../_sass/base/grid";
 @import "../../_sass/base/utilities";
 
 // レイアウト
 @import "../../_sass/layout/three-column";
+@import "../../_sass/layout/mobile-responsive";
 
 // コンポーネント
 @import "../../_sass/components/breadcrumb";
@@ -29,6 +30,7 @@
 @import "../../_sass/components/forms";
 @import "../../_sass/components/alerts";
 @import "../../_sass/components/images";
+@import "../../_sass/components/optimized-images";
 @import "../../_sass/components/touch";
 @import "../../_sass/components/search";
 @import "../../_sass/components/toc";
@@ -36,6 +38,7 @@
 @import "../../_sass/components/content-templates";
 @import "../../_sass/components/form-validation";
 @import "../../_sass/components/accessibility";
+@import "../../_sass/components/accessibility-enhanced";
 @import "../../_sass/components/user-feedback";
 @import "../../_sass/components/personalization";
 @import "../../_sass/components/dashboard";

@@ -1,0 +1,180 @@
+// 最適化された画像スタイル
+// WebP対応とレスポンシブ画像の実装
+
+// pictureタグのデフォルトスタイル
+picture {
+  display: block;
+  
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+// 画像のアスペクト比保持
+.image-container {
+  position: relative;
+  overflow: hidden;
+  background-color: #f3f4f6; // プレースホルダー色
+  
+  // 16:9
+  &.ratio-16-9 {
+    padding-bottom: 56.25%;
+  }
+  
+  // 4:3
+  &.ratio-4-3 {
+    padding-bottom: 75%;
+  }
+  
+  // 1:1（正方形）
+  &.ratio-1-1 {
+    padding-bottom: 100%;
+  }
+  
+  // 3:2
+  &.ratio-3-2 {
+    padding-bottom: 66.67%;
+  }
+  
+  img,
+  picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+// 遅延読み込みのプレースホルダー
+img[loading="lazy"] {
+  background: linear-gradient(
+    90deg,
+    #f3f4f6 0%,
+    #e5e7eb 50%,
+    #f3f4f6 100%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+  
+  &.loaded {
+    animation: none;
+    background: none;
+  }
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+// ヒーロー画像の最適化
+.hero-image {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: cover;
+  
+  @media (max-width: 767px) {
+    max-height: 400px;
+  }
+}
+
+// サムネイル画像
+.thumbnail {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+// アイコン画像
+.icon-image {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  
+  &.small {
+    width: 24px;
+    height: 24px;
+  }
+  
+  &.large {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+// ロゴ画像の最適化
+.logo-img {
+  max-width: 200px;
+  max-height: 60px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  
+  @media (max-width: 767px) {
+    max-width: 150px;
+    max-height: 45px;
+  }
+}
+
+// 画像エラー時のフォールバック
+img {
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f3f4f6;
+  }
+  
+  &::after {
+    content: "画像を読み込めません";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 0.875rem;
+    color: #6b7280;
+    background: #f3f4f6;
+  }
+}
+
+// WebP未対応ブラウザのフォールバック
+.no-webp {
+  picture source[type="image/webp"] {
+    display: none;
+  }
+}
+
+// 印刷時の画像最適化
+@media print {
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+  
+  picture source {
+    display: none;
+  }
+}
