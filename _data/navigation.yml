@@ -69,6 +69,16 @@ footer_only_nav:
     url: "/links/"
     icon: "fas fa-external-link-alt"
     description: "官公庁サイト・お役立ちリンク"
+    
+  - name: "プライバシーポリシー"
+    url: "/privacy/"
+    icon: "fas fa-shield-alt"
+    description: "個人情報の取り扱いについて"
+    
+  - name: "特定商取引法表記"
+    url: "/terms/"
+    icon: "fas fa-gavel"
+    description: "特定商取引法に基づく表記"
 
 # CTA（Call to Action）設定 - 控えめな表現に変更
 cta:
