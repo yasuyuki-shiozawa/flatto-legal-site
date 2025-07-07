@@ -1,3 +1,4 @@
+{% unless page.hide_left_sidebar %}
 <!-- モバイルサイドバー -->
 <div class="mobile-sidebar-overlay" id="mobileSidebarOverlay"></div>
 
@@ -25,6 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const panel = document.getElementById('mobileSidebarPanel');
     const closeBtn = document.getElementById('mobileSidebarClose');
     
+    // 要素が存在しない場合は処理を中断
+    if (!toggle || !overlay || !panel || !closeBtn) return;
+    
     function openSidebar() {
         overlay.classList.add('active');
         panel.classList.add('active');
@@ -49,3 +53,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+{% endunless %}
