@@ -1,6 +1,22 @@
 // トップページ専用スタイル
 // 独自のカード型レイアウトと入札マップオリジナルデザイン
 
+// ホームページでメインコンテンツを全幅に
+.home-page {
+  .main-content {
+    max-width: 100%;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  
+  .content-wrapper {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
 // ヒーローセクション
 .hero-section {
   background: linear-gradient(135deg, #f0fdfa 0%, #e6fffa 100%);
@@ -106,8 +122,12 @@
 
 // 記事コンテンツカードセクション
 .content-cards-section {
-  padding: 4rem 0;
+  padding: 4rem 2rem;
   background: var(--color-bg-secondary);
+  
+  @media (max-width: 767px) {
+    padding: 3rem 1rem;
+  }
 }
 
 .section-header {
@@ -288,8 +308,12 @@
 
 // サービス紹介カードセクション（縦1列配置）
 .service-cards-section {
-  padding: 4rem 0;
+  padding: 4rem 2rem;
   background: white;
+  
+  @media (max-width: 767px) {
+    padding: 3rem 1rem;
+  }
 }
 
 .service-cards-container {
@@ -450,8 +474,12 @@
 
 // カテゴリタグクラウド
 .category-cloud-section {
-  padding: 4rem 0;
+  padding: 4rem 2rem;
   background: var(--color-bg-secondary);
+  
+  @media (max-width: 767px) {
+    padding: 3rem 1rem;
+  }
 }
 
 .tag-cloud {
@@ -538,7 +566,7 @@
 // お知らせバナー
 .notice-banner {
   background: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-primary-700) 100%);
-  padding: 2rem 0;
+  padding: 2rem;
   color: white;
   
   .notice-content {
@@ -593,8 +621,12 @@
 
 // 統計セクション
 .stats-section {
-  padding: 4rem 0;
+  padding: 4rem 2rem;
   background: white;
+  
+  @media (max-width: 767px) {
+    padding: 3rem 1rem;
+  }
   
   .stats-grid {
     display: grid;

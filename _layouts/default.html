@@ -111,7 +111,7 @@
     <!-- サイドバーアクティブ状態JavaScript -->
     <script src="/assets/js/optimized/sidebar-active.js?v=20250615_07" defer></script>
 </head>
-<body data-page-url="{{ page.url }}">
+<body data-page-url="{{ page.url }}" {% if page.body_class %}class="{{ page.body_class }}"{% endif %}>
     {% include header.html %}
     
     <!-- パンくずリスト -->

@@ -128,6 +128,26 @@
   }
 }
 
+.btn-outline-primary {
+  background-color: transparent;
+  border-color: var(--color-primary-600);
+  color: var(--color-primary-600);
+  
+  &:hover:not(:disabled) {
+    background-color: var(--color-primary-600);
+    color: var(--color-white);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  &:active:not(:disabled) {
+    background-color: var(--color-primary-700);
+    border-color: var(--color-primary-700);
+    transform: translateY(0);
+    box-shadow: var(--shadow-sm);
+  }
+}
+
 .btn-ghost {
   background-color: transparent;
   border-color: transparent;
