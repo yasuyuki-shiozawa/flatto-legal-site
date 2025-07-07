@@ -71,7 +71,7 @@ footer_only_nav:
     description: "官公庁サイト・お役立ちリンク"
     
   - name: "プライバシーポリシー"
-    url: "/privacy/"
+    url: "/privacy-policy/"
     icon: "fas fa-shield-alt"
     description: "個人情報の取り扱いについて"
     
