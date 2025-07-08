@@ -1,0 +1,61 @@
+// CTAセクションのキャラクター配置
+.cta-section {
+  position: relative;
+  
+  .cta-character {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    
+    @media (min-width: 768px) {
+      width: 150px;
+      height: 150px;
+    }
+    
+    @media (min-width: 1024px) {
+      width: 180px;
+      height: 180px;
+    }
+    
+    // 右側に配置
+    right: 2rem;
+    bottom: 2rem;
+    z-index: 1;
+    
+    @media (max-width: 767px) {
+      // モバイルでは小さく、中央寄りに
+      right: 1rem;
+      bottom: 1rem;
+      width: 100px;
+      height: 100px;
+    }
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+      animation: bounce 2s ease-in-out infinite;
+    }
+  }
+  
+  // テキストエリアの調整
+  .cta-container {
+    position: relative;
+    z-index: 2;
+    
+    @media (min-width: 1024px) {
+      padding-right: 200px; // キャラクター分のスペース確保
+    }
+  }
+}
+
+// バウンスアニメーション
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
