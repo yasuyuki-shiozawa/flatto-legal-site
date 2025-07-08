@@ -241,3 +241,138 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+
+<!-- 縦長表示問題の緊急修正CSS -->
+<style>
+/* ブログページ専用の修正CSS */
+.featured-posts-grid,
+.articles-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)) !important;
+    gap: 2rem !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+@media (max-width: 767px) {
+    .featured-posts-grid,
+    .articles-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+}
+
+.featured-post-card {
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    background: white !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+    transition: all 0.3s ease !important;
+}
+
+.featured-post-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+.featured-post-card .post-image {
+    position: relative !important;
+    width: 100% !important;
+    height: 200px !important;
+    overflow: hidden !important;
+    flex-shrink: 0 !important;
+}
+
+.featured-post-card .post-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transition: transform 0.5s ease !important;
+}
+
+.featured-post-card:hover .post-image img {
+    transform: scale(1.05) !important;
+}
+
+.featured-post-card .post-content {
+    padding: 1.5rem !important;
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.featured-post-card .post-content h3 {
+    font-size: 1.25rem !important;
+    color: #1e293b !important;
+    margin-bottom: 0.75rem !important;
+    line-height: 1.4 !important;
+    min-height: 2.8em !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+}
+
+.featured-post-card .post-content p {
+    color: #64748b !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1rem !important;
+    flex: 1 !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+}
+
+.featured-post-card .post-meta {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    font-size: 0.875rem !important;
+    color: #94a3b8 !important;
+    margin-top: auto !important;
+}
+
+.featured-post-card .post-cta {
+    padding: 1.5rem !important;
+    border-top: 1px solid #e2e8f0 !important;
+}
+
+.featured-post-card .post-cta a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    color: #3b82f6 !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+}
+
+/* 古いスタイルを確実に無効化 */
+.posts-grid,
+.post-card {
+    display: none !important;
+}
+
+/* 価値提案カードも修正 */
+.value-props-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 2rem !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+.value-prop-card {
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    background: white !important;
+    padding: 2rem !important;
+    border-radius: 12px !important;
+    text-align: center !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
+}
+</style>
