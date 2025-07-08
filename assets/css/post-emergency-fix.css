@@ -1,0 +1,86 @@
+/* 個別記事ページの縦長表示問題の緊急修正 */
+
+/* 記事コンテンツの最大幅を制限 */
+.post-article .article-content {
+    max-width: 800px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 1rem !important;
+}
+
+/* すべての要素の最大幅を制限 */
+.post-article .article-content * {
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+}
+
+/* 長い単語の改行処理 */
+.post-article .article-content p,
+.post-article .article-content li,
+.post-article .article-content td,
+.post-article .article-content th {
+    word-break: break-word !important;
+    hyphens: auto !important;
+}
+
+/* コードブロックの横スクロール */
+.post-article .article-content pre {
+    overflow-x: auto !important;
+    max-width: 100% !important;
+}
+
+/* テーブルの横スクロール */
+.post-article .article-content table {
+    display: block !important;
+    overflow-x: auto !important;
+    max-width: 100% !important;
+}
+
+/* 画像の最大幅制限 */
+.post-article .article-content img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* iframeの最大幅制限 */
+.post-article .article-content iframe {
+    max-width: 100% !important;
+}
+
+/* レイアウトの修正 */
+.post-article .post-layout {
+    display: flex !important;
+    gap: 3rem !important;
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+    padding: 0 1rem !important;
+}
+
+/* 目次サイドバーの幅固定 */
+.post-article .post-toc {
+    width: 250px !important;
+    flex-shrink: 0 !important;
+}
+
+/* メインコンテンツの幅調整 */
+.post-article .article-content {
+    flex: 1 !important;
+    min-width: 0 !important; /* flexboxの縮小を許可 */
+}
+
+/* モバイル対応 */
+@media (max-width: 1024px) {
+    .post-article .post-layout {
+        flex-direction: column !important;
+    }
+    
+    .post-article .post-toc {
+        width: 100% !important;
+        display: none !important; /* モバイルでは非表示 */
+    }
+    
+    .post-article .article-content {
+        width: 100% !important;
+    }
+}

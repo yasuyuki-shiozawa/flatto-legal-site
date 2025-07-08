@@ -1,0 +1,202 @@
+/* 緊急修正: ブログページの縦長表示問題 */
+/* このファイルは最高優先度で読み込まれる必要があります */
+
+/* リセット - 他のスタイルの影響を排除 */
+.blog-lp-page *,
+.blog-lp-page *::before,
+.blog-lp-page *::after {
+    box-sizing: border-box !important;
+}
+
+/* グリッドレイアウトの強制適用 */
+.blog-lp-page .featured-posts-grid,
+.blog-lp-page .articles-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)) !important;
+    gap: 2rem !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 1rem !important;
+}
+
+/* モバイル対応 */
+@media screen and (max-width: 767px) {
+    .blog-lp-page .featured-posts-grid,
+    .blog-lp-page .articles-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+}
+
+/* 記事カードのレイアウト修正 */
+.blog-lp-page .featured-post-card {
+    /* 基本レイアウト */
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    
+    /* デザイン */
+    background: white !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+    transition: all 0.3s ease !important;
+}
+
+.blog-lp-page .featured-post-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* 画像部分の修正 */
+.blog-lp-page .featured-post-card .post-image {
+    position: relative !important;
+    width: 100% !important;
+    height: 200px !important;
+    min-height: 200px !important;
+    max-height: 200px !important;
+    overflow: hidden !important;
+    flex-shrink: 0 !important;
+}
+
+.blog-lp-page .featured-post-card .post-image img {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+/* カテゴリバッジ */
+.blog-lp-page .featured-post-card .post-category {
+    position: absolute !important;
+    top: 1rem !important;
+    left: 1rem !important;
+    z-index: 1 !important;
+}
+
+/* コンテンツ部分の修正 */
+.blog-lp-page .featured-post-card .post-content {
+    padding: 1.5rem !important;
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 0 !important;
+}
+
+/* タイトル */
+.blog-lp-page .featured-post-card .post-content h3 {
+    font-size: 1.25rem !important;
+    line-height: 1.4 !important;
+    color: #1e293b !important;
+    margin: 0 0 0.75rem 0 !important;
+    padding: 0 !important;
+    min-height: 2.8em !important;
+    
+    /* テキストの切り詰め */
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+/* 本文 */
+.blog-lp-page .featured-post-card .post-content p {
+    font-size: 0.9375rem !important;
+    line-height: 1.6 !important;
+    color: #64748b !important;
+    margin: 0 0 1rem 0 !important;
+    padding: 0 !important;
+    flex: 1 !important;
+    
+    /* テキストの切り詰め */
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+/* メタ情報 */
+.blog-lp-page .featured-post-card .post-meta {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    font-size: 0.875rem !important;
+    color: #94a3b8 !important;
+    margin-top: auto !important;
+    padding: 0 !important;
+}
+
+/* CTA部分 */
+.blog-lp-page .featured-post-card .post-cta {
+    padding: 1.5rem !important;
+    margin: 0 !important;
+    border-top: 1px solid #e2e8f0 !important;
+}
+
+.blog-lp-page .featured-post-card .post-cta a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    color: #3b82f6 !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+}
+
+/* 価値提案グリッド */
+.blog-lp-page .value-props-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 2rem !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 1rem !important;
+}
+
+.blog-lp-page .value-prop-card {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    background: white !important;
+    padding: 2rem !important;
+    border-radius: 12px !important;
+    text-align: center !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
+    margin: 0 !important;
+}
+
+/* 古いスタイルを無効化 */
+.blog-lp-page .posts-grid,
+.blog-lp-page .post-card,
+.blog-lp-page .blog-grid,
+.blog-lp-page .blog-card {
+    display: none !important;
+}
+
+/* セクションの幅制限 */
+.blog-lp-page .blog-featured-posts,
+.blog-lp-page .blog-articles-section {
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+    padding: 3rem 1rem !important;
+}
+
+/* デバッグ用 - 問題が解決したら削除 */
+.blog-lp-page .featured-post-card {
+    border: 2px solid transparent !important;
+}
+
+/* 印刷時の対応 */
+@media print {
+    .blog-lp-page .featured-post-card {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+    }
+}

@@ -2,6 +2,9 @@
 layout: default
 ---
 
+<!-- 記事ページ緊急修正CSS -->
+<link rel="stylesheet" href="{{ '/assets/css/post-emergency-fix.css' | relative_url }}?v={{ 'now' | date: '%Y%m%d%H%M%S' }}">
+
 <article class="post-article">
     <header class="post-header">
         <div class="container">
@@ -41,19 +44,24 @@ layout: default
     </header>
     
     <div class="container">
-        <div class="post-layout grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div class="post-layout">
             <!-- 目次（デスクトップ） -->
-            <aside class="lg:col-span-3 hidden lg:block">
-                <div id="auto-toc"></div>
+            <aside class="post-toc hidden lg:block">
+                <div id="auto-toc">
+                    <h3 class="toc-title">目次</h3>
+                    <!-- 目次はJavaScriptで自動生成 -->
+                </div>
             </aside>
             
             <!-- 本文 -->
-            <div class="post-content lg:col-span-9 article-content">
+            <main class="article-content">
                 {{ content }}
                 
                 <!-- 内部リンク最適化 -->
+                {% if site.internal_links %}
                 {% include internal-links.html %}
-            </div>
+                {% endif %}
+            </main>
         </div>
     </div>
     

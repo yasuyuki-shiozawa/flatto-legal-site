@@ -6,6 +6,9 @@ permalink: /blog/
 body_class: blog-lp-page
 ---
 
+<!-- 緊急修正CSS読み込み -->
+<link rel="stylesheet" href="{{ '/assets/css/blog-emergency-fix.css' | relative_url }}?v={{ 'now' | date: '%Y%m%d%H%M%S' }}">
+
 <!-- ブログヒーローセクション -->
 <section class="blog-hero">
     <div class="blog-hero-content">
@@ -240,10 +243,62 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+    // JavaScriptで強制的にスタイルを適用
+    setTimeout(function() {
+        // すべての記事カードに対して強制的にスタイルを適用
+        const cards = document.querySelectorAll('.featured-post-card');
+        cards.forEach(function(card) {
+            card.style.cssText = 'height: 100% !important; display: flex !important; flex-direction: column !important; background: white !important; border-radius: 12px !important; overflow: hidden !important; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;';
+            
+            const postImage = card.querySelector('.post-image');
+            if (postImage) {
+                postImage.style.cssText = 'position: relative !important; width: 100% !important; height: 200px !important; overflow: hidden !important; flex-shrink: 0 !important;';
+                
+                const img = postImage.querySelector('img');
+                if (img) {
+                    img.style.cssText = 'width: 100% !important; height: 100% !important; object-fit: cover !important;';
+                }
+            }
+            
+            const postContent = card.querySelector('.post-content');
+            if (postContent) {
+                postContent.style.cssText = 'padding: 1.5rem !important; flex: 1 !important; display: flex !important; flex-direction: column !important;';
+                
+                const h3 = postContent.querySelector('h3');
+                if (h3) {
+                    h3.style.cssText = 'font-size: 1.25rem !important; color: #1e293b !important; margin-bottom: 0.75rem !important; line-height: 1.4 !important; min-height: 2.8em !important;';
+                }
+                
+                const p = postContent.querySelector('p');
+                if (p) {
+                    p.style.cssText = 'color: #64748b !important; line-height: 1.6 !important; margin-bottom: 1rem !important; flex: 1 !important;';
+                }
+                
+                const meta = postContent.querySelector('.post-meta');
+                if (meta) {
+                    meta.style.cssText = 'display: flex !important; align-items: center !important; gap: 1rem !important; font-size: 0.875rem !important; color: #94a3b8 !important; margin-top: auto !important;';
+                }
+            }
+        });
+        
+        // グリッドレイアウトも強制適用
+        const grids = document.querySelectorAll('.featured-posts-grid, .articles-grid');
+        grids.forEach(function(grid) {
+            grid.style.cssText = 'display: grid !important; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)) !important; gap: 2rem !important; max-width: 1200px !important; margin: 0 auto !important;';
+        });
+        
+        console.log('ブログページのスタイル修正を適用しました');
+    }, 100);
+});
 </script>
 
 <!-- 縦長表示問題の緊急修正CSS -->
 <style>
+/* リセットCSS - 他のスタイルの影響を完全に排除 */
+.blog-lp-page * {
+    box-sizing: border-box !important;
+}
+
 /* ブログページ専用の修正CSS */
 .featured-posts-grid,
 .articles-grid {
@@ -252,6 +307,7 @@ document.addEventListener('DOMContentLoaded', function() {
     gap: 2rem !important;
     max-width: 1200px !important;
     margin: 0 auto !important;
+    padding: 0 1rem !important;
 }
 
 @media (max-width: 767px) {
@@ -271,6 +327,9 @@ document.addEventListener('DOMContentLoaded', function() {
     overflow: hidden !important;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
     transition: all 0.3s ease !important;
+    margin: 0 !important;
+    max-width: none !important;
+    width: 100% !important;
 }
 
 .featured-post-card:hover {
@@ -284,6 +343,8 @@ document.addEventListener('DOMContentLoaded', function() {
     height: 200px !important;
     overflow: hidden !important;
     flex-shrink: 0 !important;
+    min-height: 200px !important;
+    max-height: 200px !important;
 }
 
 .featured-post-card .post-image img {
@@ -291,6 +352,10 @@ document.addEventListener('DOMContentLoaded', function() {
     height: 100% !important;
     object-fit: cover !important;
     transition: transform 0.5s ease !important;
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
 }
 
 .featured-post-card:hover .post-image img {
@@ -302,29 +367,34 @@ document.addEventListener('DOMContentLoaded', function() {
     flex: 1 !important;
     display: flex !important;
     flex-direction: column !important;
+    min-height: 0 !important;
 }
 
 .featured-post-card .post-content h3 {
     font-size: 1.25rem !important;
     color: #1e293b !important;
-    margin-bottom: 0.75rem !important;
+    margin: 0 0 0.75rem 0 !important;
+    padding: 0 !important;
     line-height: 1.4 !important;
     min-height: 2.8em !important;
     display: -webkit-box !important;
     -webkit-line-clamp: 2 !important;
     -webkit-box-orient: vertical !important;
     overflow: hidden !important;
+    text-overflow: ellipsis !important;
 }
 
 .featured-post-card .post-content p {
     color: #64748b !important;
     line-height: 1.6 !important;
-    margin-bottom: 1rem !important;
+    margin: 0 0 1rem 0 !important;
+    padding: 0 !important;
     flex: 1 !important;
     display: -webkit-box !important;
     -webkit-line-clamp: 3 !important;
     -webkit-box-orient: vertical !important;
     overflow: hidden !important;
+    text-overflow: ellipsis !important;
 }
 
 .featured-post-card .post-meta {
@@ -334,11 +404,13 @@ document.addEventListener('DOMContentLoaded', function() {
     font-size: 0.875rem !important;
     color: #94a3b8 !important;
     margin-top: auto !important;
+    padding: 0 !important;
 }
 
 .featured-post-card .post-cta {
     padding: 1.5rem !important;
     border-top: 1px solid #e2e8f0 !important;
+    margin: 0 !important;
 }
 
 .featured-post-card .post-cta a {
@@ -352,7 +424,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /* 古いスタイルを確実に無効化 */
 .posts-grid,
-.post-card {
+.post-card,
+.blog-grid,
+.blog-card {
     display: none !important;
 }
 
@@ -363,6 +437,7 @@ document.addEventListener('DOMContentLoaded', function() {
     gap: 2rem !important;
     max-width: 1200px !important;
     margin: 0 auto !important;
+    padding: 0 1rem !important;
 }
 
 .value-prop-card {
@@ -374,5 +449,20 @@ document.addEventListener('DOMContentLoaded', function() {
     border-radius: 12px !important;
     text-align: center !important;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
+    margin: 0 !important;
+}
+
+/* セクション全体の幅を制限 */
+.blog-featured-posts,
+.blog-articles-section {
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+    padding: 3rem 1rem !important;
+}
+
+/* body要素にクラスを追加して優先度を上げる */
+body.blog-lp-page .featured-post-card {
+    width: 100% !important;
+    max-width: none !important;
 }
 </style>
