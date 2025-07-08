@@ -297,6 +297,41 @@
   padding: 1.5rem;
   margin: 2rem 0;
   border-radius: 0 8px 8px 0;
+  position: relative;
+  
+  // キャラクター配置（左側）
+  &.section-with-character {
+    padding-left: 120px;
+    
+    @media (max-width: 767px) {
+      padding-left: 1.5rem;
+    }
+    
+    .section-character.left-float {
+      position: absolute;
+      left: -30px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100px;
+      height: 100px;
+      z-index: 2;
+      
+      @media (max-width: 767px) {
+        position: static;
+        transform: none;
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 1rem;
+      }
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+      }
+    }
+  }
   
   .inline-cta-content {
     display: flex;

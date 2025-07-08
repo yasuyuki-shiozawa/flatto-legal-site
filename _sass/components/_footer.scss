@@ -255,8 +255,8 @@
   .privacy-mark-img {
     width: 60px;
     height: auto;
-    filter: brightness(0) invert(1);
-    opacity: 0.8;
+    // フィルターを削除（元の画像をそのまま表示）
+    opacity: 0.9;
   }
   
   .privacy-text {
