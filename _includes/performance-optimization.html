@@ -1,0 +1,54 @@
+<!-- パフォーマンス最適化 -->
+
+<!-- DNS プリフェッチ -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//fonts.gstatic.com">
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+<link rel="dns-prefetch" href="//www.googletagmanager.com">
+
+<!-- プリコネクト -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- リソースヒント -->
+{% if page.url == "/" %}
+<!-- ホームページから頻繁にアクセスされるページをプリフェッチ -->
+<link rel="prefetch" href="/knowhow/">
+<link rel="prefetch" href="/flow/">
+<link rel="prefetch" href="/nyusatsu-shikaku/">
+{% endif %}
+
+<!-- 重要なリソースのプリロード -->
+<link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style">
+<link rel="preload" href="{{ '/assets/js/main.js' | relative_url }}" as="script">
+<link rel="preload" href="{{ '/assets/images/logo.webp' | relative_url }}" as="image" type="image/webp">
+
+<!-- フォントのプリロード -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
+
+<!-- Lazy loading用のIntersection Observer polyfill -->
+<script>
+if (!('IntersectionObserver' in window)) {
+    var script = document.createElement('script');
+    script.src = 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver';
+    document.head.appendChild(script);
+}
+</script>
+
+<!-- Service Worker登録（PWA対応） -->
+<script>
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').then(function(registration) {
+            console.log('ServiceWorker registration successful');
+        }, function(err) {
+            console.log('ServiceWorker registration failed: ', err);
+        });
+    });
+}
+</script>
+
+<!-- Critical CSS用のloadCSS -->
+<script>
+!function(e){"use strict";var t=function(t,n,r,o){var i,a=e.document,d=a.createElement("link");if(n)i=n;else{var f=(a.body||a.getElementsByTagName("head")[0]).childNodes;i=f[f.length-1]}var l=a.styleSheets;if(o)for(var s in o)o.hasOwnProperty(s)&&d.setAttribute(s,o[s]);d.rel="stylesheet",d.href=t,d.media="only x",function e(t){if(a.body)return t();setTimeout(function(){e(t)})}(function(){i.parentNode.insertBefore(d,n?i:i.nextSibling)});var u=function(e){for(var t=d.href,n=l.length;n--;)if(l[n].href===t)return e();setTimeout(function(){u(e)})};function c(){d.addEventListener&&d.removeEventListener("load",c),d.media=r||"all"}return d.addEventListener&&d.addEventListener("load",c),d.onloadcssdefined=u,u(c),d};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this);
+</script>

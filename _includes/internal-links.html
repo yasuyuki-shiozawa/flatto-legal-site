@@ -1,0 +1,267 @@
+<!-- 内部リンク最適化 - SEO効果を高める関連ページへのリンク -->
+
+<section class="internal-links-section">
+    <div class="container">
+        <h2 class="section-title">関連情報</h2>
+        
+        {% if page.url == "/" %}
+        <!-- ホームページからの内部リンク -->
+        <div class="link-cards-grid">
+            <a href="/knowhow/first-step/" class="link-card">
+                <div class="link-card-icon">
+                    <i class="fas fa-play-circle"></i>
+                </div>
+                <h3>初めての方へ</h3>
+                <p>入札参加の基本から丁寧に解説</p>
+            </a>
+            
+            <a href="/flow/" class="link-card">
+                <div class="link-card-icon">
+                    <i class="fas fa-stream"></i>
+                </div>
+                <h3>入札の流れ</h3>
+                <p>資格取得から落札まで完全ガイド</p>
+            </a>
+            
+            <a href="/nyusatsu-shikaku/" class="link-card">
+                <div class="link-card-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h3>入札参加資格</h3>
+                <p>申請方法と必要書類を詳しく説明</p>
+            </a>
+            
+            <a href="/cases/" class="link-card">
+                <div class="link-card-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3>成功事例</h3>
+                <p>実際の落札事例から学ぶ</p>
+            </a>
+        </div>
+        
+        {% elsif page.url contains "/blog/" and page.layout == "post" %}
+        <!-- ブログ記事からの内部リンク -->
+        <div class="related-posts">
+            <h3>関連記事</h3>
+            <ul class="related-posts-list">
+                {% assign related_posts = site.posts | where_exp: "post", "post.url != page.url" %}
+                {% assign has_related = false %}
+                
+                {% for post in related_posts limit:5 %}
+                    {% assign match = false %}
+                    
+                    <!-- カテゴリが一致する記事を優先 -->
+                    {% for cat in page.categories %}
+                        {% if post.categories contains cat %}
+                            {% assign match = true %}
+                            {% assign has_related = true %}
+                            {% break %}
+                        {% endif %}
+                    {% endfor %}
+                    
+                    <!-- タグが一致する記事も含める -->
+                    {% unless match %}
+                        {% for tag in page.tags %}
+                            {% if post.tags contains tag %}
+                                {% assign match = true %}
+                                {% assign has_related = true %}
+                                {% break %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endunless %}
+                    
+                    {% if match %}
+                    <li>
+                        <a href="{{ post.url | relative_url }}">
+                            <span class="post-date">{{ post.date | date: "%Y.%m.%d" }}</span>
+                            {{ post.title }}
+                        </a>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+                
+                <!-- 関連記事が見つからない場合は人気記事を表示 -->
+                {% unless has_related %}
+                    {% for post in site.posts limit:3 %}
+                        {% if post.url != page.url %}
+                        <li>
+                            <a href="{{ post.url | relative_url }}">
+                                <span class="post-date">{{ post.date | date: "%Y.%m.%d" }}</span>
+                                {{ post.title }}
+                            </a>
+                        </li>
+                        {% endif %}
+                    {% endfor %}
+                {% endunless %}
+            </ul>
+        </div>
+        
+        <!-- サービスへの誘導 -->
+        <div class="service-cta-block">
+            <h3>プロのサポートが必要ですか？</h3>
+            <p>入札参加でお困りの方は、専門家にご相談ください。</p>
+            <a href="/contact/" class="btn btn-primary">無料相談はこちら</a>
+        </div>
+        
+        {% else %}
+        <!-- その他のページからの内部リンク -->
+        <div class="breadcrumb-links">
+            <a href="/">ホーム</a>
+            {% if page.categories %}
+                {% for category in page.categories %}
+                    <span class="separator">›</span>
+                    <a href="/category/{{ category | slugify }}/">{{ category }}</a>
+                {% endfor %}
+            {% endif %}
+            <span class="separator">›</span>
+            <span class="current">{{ page.title }}</span>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<style>
+.internal-links-section {
+    padding: 2rem 0;
+    margin: 2rem 0;
+    border-top: 1px solid #e5e7eb;
+}
+
+.link-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.link-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.link-card:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+    transform: translateY(-2px);
+}
+
+.link-card-icon {
+    width: 48px;
+    height: 48px;
+    background: #eff6ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    color: #3b82f6;
+    font-size: 1.5rem;
+}
+
+.link-card h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    color: #1e293b;
+}
+
+.link-card p {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin: 0;
+}
+
+.related-posts {
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+.related-posts h3 {
+    margin-bottom: 1rem;
+    color: #1e293b;
+}
+
+.related-posts-list {
+    list-style: none;
+    padding: 0;
+}
+
+.related-posts-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.related-posts-list li:last-child {
+    border-bottom: none;
+}
+
+.related-posts-list a {
+    color: #334155;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: color 0.3s ease;
+}
+
+.related-posts-list a:hover {
+    color: #3b82f6;
+}
+
+.post-date {
+    font-size: 0.875rem;
+    color: #94a3b8;
+    flex-shrink: 0;
+}
+
+.service-cta-block {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.service-cta-block h3 {
+    color: #1e3a8a;
+    margin-bottom: 0.5rem;
+}
+
+.service-cta-block p {
+    color: #3730a3;
+    margin-bottom: 1.5rem;
+}
+
+.breadcrumb-links {
+    font-size: 0.875rem;
+    color: #64748b;
+    padding: 0.5rem 0;
+}
+
+.breadcrumb-links a {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+.breadcrumb-links a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-links .separator {
+    margin: 0 0.5rem;
+    color: #cbd5e1;
+}
+
+.breadcrumb-links .current {
+    color: #1e293b;
+    font-weight: 500;
+}
+</style>

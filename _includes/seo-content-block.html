@@ -1,0 +1,167 @@
+<!-- SEOコンテンツブロック - 重要キーワードを含む構造化コンテンツ -->
+
+{% if page.url == "/" %}
+<!-- ホームページ用SEOコンテンツ -->
+<section class="seo-content-section">
+    <div class="container">
+        <h2 class="seo-title">入札・公共調達のプロフェッショナルサポート</h2>
+        
+        <div class="seo-content-grid">
+            <div class="seo-content-block">
+                <h3>入札参加資格とは</h3>
+                <p>入札参加資格は、国や地方自治体が実施する<strong>競争入札</strong>に参加するために必要な資格です。
+                <strong>建設工事</strong>、<strong>測量・コンサルタント</strong>、<strong>物品・役務</strong>の3つの分野があり、
+                それぞれ別々に申請が必要です。</p>
+                <ul>
+                    <li>国の入札：全省庁統一資格</li>
+                    <li>地方自治体：各自治体独自の資格</li>
+                    <li>有効期限：通常2〜3年</li>
+                </ul>
+            </div>
+            
+            <div class="seo-content-block">
+                <h3>入札制度の種類</h3>
+                <p>公共調達には様々な入札方式があります：</p>
+                <ul>
+                    <li><strong>一般競争入札</strong>：最も基本的な入札方式</li>
+                    <li><strong>指名競争入札</strong>：発注者が入札参加者を指名</li>
+                    <li><strong>随意契約</strong>：競争によらない契約方式</li>
+                    <li><strong>総合評価落札方式</strong>：価格と技術力を総合評価</li>
+                    <li><strong>企画競争（プロポーザル）</strong>：提案内容で選定</li>
+                </ul>
+            </div>
+            
+            <div class="seo-content-block">
+                <h3>対応地域</h3>
+                <p>当事務所は<strong>神奈川県大和市</strong>を拠点に、以下の地域の入札をサポート：</p>
+                <ul>
+                    <li>神奈川県内：横浜市、川崎市、相模原市、藤沢市、大和市など</li>
+                    <li>東京都内：23区、多摩地域の市町村</li>
+                    <li>関東全域：埼玉県、千葉県、茨城県、栃木県、群馬県</li>
+                    <li>全国対応：国の機関、独立行政法人等</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- よく検索されるキーワード -->
+        <div class="seo-keywords-section">
+            <h3>入札関連キーワード</h3>
+            <div class="keyword-tags">
+                <span class="keyword-tag">入札参加資格申請</span>
+                <span class="keyword-tag">電子入札</span>
+                <span class="keyword-tag">入札保証金</span>
+                <span class="keyword-tag">競争参加資格</span>
+                <span class="keyword-tag">格付け（ランク）</span>
+                <span class="keyword-tag">経営事項審査</span>
+                <span class="keyword-tag">建設業許可</span>
+                <span class="keyword-tag">実績要件</span>
+                <span class="keyword-tag">財務諸表</span>
+                <span class="keyword-tag">納税証明書</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% elsif page.url contains "/nyusatsu-shikaku/" %}
+<!-- 入札参加資格ページ用SEOコンテンツ -->
+<section class="seo-content-section">
+    <div class="container">
+        <div class="seo-content-block">
+            <h2>入札参加資格申請の完全ガイド</h2>
+            <p><strong>入札参加資格申請</strong>は、公共工事や物品調達の入札に参加するための第一歩です。
+            申請には多くの書類が必要で、手続きも複雑ですが、適切なサポートがあれば確実に取得できます。</p>
+            
+            <h3>必要書類チェックリスト</h3>
+            <ul>
+                <li>登記事項証明書（法人）/ 身分証明書（個人）</li>
+                <li>財務諸表（直近2期分）</li>
+                <li>納税証明書（国税・地方税）</li>
+                <li>社会保険料納入証明書</li>
+                <li>営業許可証等（業種により必要）</li>
+                <li>ISO認証書（加点対象）</li>
+                <li>障害者雇用状況報告書（加点対象）</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+{% elsif page.url contains "/blog/" %}
+<!-- ブログページ用SEOコンテンツ -->
+<section class="seo-content-section">
+    <div class="container">
+        <div class="seo-content-block">
+            <h2>入札・公共調達の最新情報</h2>
+            <p>入札制度は頻繁に改正されます。最新の<strong>法改正情報</strong>、<strong>入札公告</strong>、
+            <strong>落札結果</strong>など、実務に役立つ情報を随時更新しています。</p>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<style>
+.seo-content-section {
+    padding: 3rem 0;
+    background: #f8fafc;
+    margin: 2rem 0;
+}
+
+.seo-content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.seo-content-block {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.seo-content-block h3 {
+    color: #1e293b;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.seo-content-block ul {
+    list-style: none;
+    padding: 0;
+}
+
+.seo-content-block li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.seo-content-block li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #3b82f6;
+    font-weight: bold;
+}
+
+.seo-keywords-section {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.keyword-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.keyword-tag {
+    background: #e0e7ff;
+    color: #3730a3;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+}
+</style>

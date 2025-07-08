@@ -50,6 +50,9 @@ layout: default
             <!-- 本文 -->
             <div class="post-content lg:col-span-9 article-content">
                 {{ content }}
+                
+                <!-- 内部リンク最適化 -->
+                {% include internal-links.html %}
             </div>
         </div>
     </div>

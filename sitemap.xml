@@ -1,41 +1,57 @@
 ---
 layout: null
+sitemap: false
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {% for page in site.pages %}
-    {% unless page.url contains '.xml' or page.url contains '.txt' or page.url contains '.css' or page.url contains '.js' %}
-      {% unless page.sitemap.exclude == true %}
-        <url>
-          <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
-          {% if page.sitemap.lastmod %}
-            <lastmod>{{ page.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
-          {% elsif page.date %}
-            <lastmod>{{ page.date | date: "%Y-%m-%d" }}</lastmod>
-          {% else %}
-            <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
-          {% endif %}
-          {% if page.sitemap.changefreq %}
-            <changefreq>{{ page.sitemap.changefreq }}</changefreq>
-          {% else %}
-            <changefreq>monthly</changefreq>
-          {% endif %}
-          {% if page.sitemap.priority %}
-            <priority>{{ page.sitemap.priority }}</priority>
-          {% else %}
-            <priority>0.5</priority>
-          {% endif %}
-        </url>
-      {% endunless %}
-    {% endunless %}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- ホームページ（最重要） -->
+  <url>
+    <loc>{{ site.url }}/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- 重要な固定ページ（優先順位高） -->
+  {% assign important_pages = "/knowhow/,/flow/,/nyusatsu-shikaku/,/service/,/contact/,/blog/,/blog-lp/" | split: "," %}
+  {% for important_url in important_pages %}
+  <url>
+    <loc>{{ site.url }}{{ important_url }}</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>{% if important_url contains 'knowhow' or important_url contains 'flow' or important_url contains 'nyusatsu-shikaku' %}0.9{% else %}0.8{% endif %}</priority>
+  </url>
   {% endfor %}
   
+  <!-- ブログ記事（画像情報付き） -->
   {% for post in site.posts %}
+  <url>
+    <loc>{{ post.url | absolute_url }}</loc>
+    <lastmod>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    {% if post.image %}
+    <image:image>
+      <image:loc>{{ post.image | absolute_url }}</image:loc>
+      <image:title>{{ post.title | xml_escape }}</image:title>
+      <image:caption>{{ post.excerpt | strip_html | truncate: 160 | xml_escape }}</image:caption>
+    </image:image>
+    {% endif %}
+  </url>
+  {% endfor %}
+  
+  <!-- その他のページ -->
+  {% for page in site.pages %}
+    {% unless page.sitemap == false or page.url contains '.xml' or page.url contains '.txt' or page.url contains '.json' or page.url contains '.css' or page.url contains '.js' %}
+    {% unless important_pages contains page.url or page.url == "/" %}
     <url>
-      <loc>{{ site.url }}{{ post.url }}</loc>
-      <lastmod>{{ post.date | date: "%Y-%m-%d" }}</lastmod>
+      <loc>{{ page.url | absolute_url }}</loc>
+      <lastmod>{{ page.last_modified_at | default: site.time | date_to_xmlschema }}</lastmod>
       <changefreq>monthly</changefreq>
-      <priority>0.7</priority>
+      <priority>0.5</priority>
     </url>
+    {% endunless %}
+    {% endunless %}
   {% endfor %}
 </urlset>

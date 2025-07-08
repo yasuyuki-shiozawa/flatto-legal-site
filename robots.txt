@@ -1,22 +1,29 @@
+# robots.txt for nyusatsu-map.com
+# 最終更新: 2025年7月
+
+# すべての検索エンジンに対する設定
 User-agent: *
 Allow: /
-
-Sitemap: https://nyusatsu-map.com/sitemap.xml
-
-# 管理ページをクロール対象外に
 Disallow: /admin/
-Disallow: /login/
-Disallow: /api/
-
-# 一時ファイルをクロール対象外に
-Disallow: /tmp/
+Disallow: /private/
+Disallow: /_site/
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /vendor/
+Disallow: /search?
+Disallow: /404.html
 Disallow: /*.tmp$
+Crawl-delay: 1
 
-# アセットファイルは許可
-Allow: /assets/
-Allow: /images/
-Allow: /*.css$
-Allow: /*.js$
+# Googlebot専用設定（高速クロール許可）
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Crawl-delay: 0
+
+# 画像ファイルは許可
+Allow: /assets/images/
 Allow: /*.jpg$
 Allow: /*.jpeg$
 Allow: /*.png$
@@ -24,5 +31,14 @@ Allow: /*.gif$
 Allow: /*.svg$
 Allow: /*.webp$
 
-# クロール速度の推奨
-Crawl-delay: 1
+# CSS/JSファイルは許可
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /*.css$
+Allow: /*.js$
+
+# サイトマップの場所
+Sitemap: https://nyusatsu-map.com/sitemap.xml
+
+# ホスト指定（優先ドメイン）
+Host: https://nyusatsu-map.com

@@ -34,37 +34,11 @@
     <!-- SEO -->
     {% seo %}
     
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "行政書士法人ふらっと法務事務所",
-      "url": "{{ site.url }}",      "logo": "{{ 
-'/assets/images/logo.webp' | absolute_url }}",
-      "description": "{{ site.description }}",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "JP"
-      },
-      "sameAs": []
-    }
-    </script>
+    <!-- Enhanced SEO and Structured Data -->
+    {% include seo-enhancements.html %}
     
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "{{ site.title }}",
-      "url": "{{ site.url }}",
-      "description": "{{ site.description }}",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "{{ site.url }}/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
+    <!-- Performance Optimization -->
+    {% include performance-optimization.html %}
     
     <!-- Critical CSS（インライン） -->
     <style>
