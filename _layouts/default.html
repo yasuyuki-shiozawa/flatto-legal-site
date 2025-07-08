@@ -71,9 +71,10 @@
     {% include critical.css %}
     </style>
     
-    <!-- メインCSS（SCSSからコンパイル）のプリロード -->
-    <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}"></noscript>
+    <!-- メインCSS（SCSSからコンパイル） -->
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+    <!-- 緊急修正CSS（main.cssがコンパイルされない場合の代替） -->
+    <link rel="stylesheet" href="{{ '/assets/css/emergency-fix.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -174,7 +175,7 @@
     </script>
     
     <!-- 統合JavaScript（遅延読み込み） -->
-    <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+    <script src="{{ '/assets/js/main.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
     
     <!-- Service Worker登録 -->
     <script>

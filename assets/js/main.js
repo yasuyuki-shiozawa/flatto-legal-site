@@ -6,6 +6,9 @@
 
     // DOM読み込み完了を待つ
     document.addEventListener('DOMContentLoaded', function() {
+        // レイアウトの安定性を確保
+        ensureLayoutStability();
+        
         initMobileMenu();
         initMobileSidebarToggle();
         initSidebarActive();
@@ -16,6 +19,22 @@
         initSearch();
         initImageErrorHandling();
     });
+    
+    // 全てのリソースが読み込まれた後にも実行
+    window.addEventListener('load', function() {
+        ensureLayoutStability();
+    });
+    
+    // ページ表示時（キャッシュからの復帰も含む）にも実行
+    window.addEventListener('pageshow', function(event) {
+        ensureLayoutStability();
+    });
+    
+    // レイアウトの安定性を確保（必要に応じて保持）
+    function ensureLayoutStability() {
+        // 現在はcore-layout.scssで処理されているため、特別な処理は不要
+        // 将来的なレイアウト調整のためにフック関数として保持
+    }
 
     // モバイルメニュー機能
     function initMobileMenu() {

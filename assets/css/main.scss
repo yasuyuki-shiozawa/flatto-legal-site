@@ -6,51 +6,56 @@
 // SCSSファイルをインポート
 
 // ベース（変数とタイポグラフィ）
-@import "../../_sass/base/variables";
-@import "../../_sass/base/color-theme";
-@import "../../_sass/base/typography-simplified";
-@import "../../_sass/base/grid";
-@import "../../_sass/base/utilities";
+@import "base/variables";
+@import "base/color-theme";
+@import "base/typography-simplified";
+@import "base/typography-enhanced";
+@import "base/grid";
+@import "base/utilities";
 
 // レイアウト
-@import "../../_sass/layout/three-column";
-@import "../../_sass/layout/mobile-responsive";
+@import "layout/core-layout"; // 統合されたコアレイアウト
+// @import "layout/three-column"; // core-layoutに統合
+// @import "layout/mobile-responsive"; // core-layoutに統合
 
 // コンポーネント
-@import "../../_sass/components/breadcrumb";
-@import "../../_sass/components/header";
-@import "../../_sass/components/mobile-menu";
-@import "../../_sass/components/mobile-sidebar";
-@import "../../_sass/components/buttons";
-@import "../../_sass/components/cards";
-@import "../../_sass/components/sidebar-cards";
-@import "../../_sass/components/cards-modern";
-@import "../../_sass/components/sidebar-cards-enhanced";
-@import "../../_sass/components/quick-links";
-@import "../../_sass/components/forms";
-@import "../../_sass/components/alerts";
-@import "../../_sass/components/images";
-@import "../../_sass/components/optimized-images";
-@import "../../_sass/components/touch";
-@import "../../_sass/components/search";
-@import "../../_sass/components/toc";
-@import "../../_sass/components/progress";
-@import "../../_sass/components/content-templates";
-@import "../../_sass/components/form-validation";
-@import "../../_sass/components/accessibility";
-@import "../../_sass/components/accessibility-enhanced";
-@import "../../_sass/components/user-feedback";
-@import "../../_sass/components/personalization";
-@import "../../_sass/components/dashboard";
-@import "../../_sass/components/report-generator";
-@import "../../_sass/components/comparison-tools";
-@import "../../_sass/components/site-analytics";
-@import "../../_sass/components/popular-posts";
+@import "components/breadcrumb";
+@import "components/header";
+@import "components/footer";
+@import "components/mobile-menu";
+@import "components/mobile-sidebar";
+@import "components/buttons";
+@import "components/cards";
+@import "components/sidebar-cards";
+@import "components/cards-modern";
+@import "components/sidebar-cards-enhanced";
+@import "components/quick-links";
+@import "components/forms";
+@import "components/alerts";
+@import "components/images";
+@import "components/content-images";
+@import "components/optimized-images";
+@import "components/touch";
+@import "components/search";
+@import "components/toc";
+@import "components/progress";
+@import "components/content-templates";
+@import "components/form-validation";
+@import "components/accessibility";
+@import "components/accessibility-enhanced";
+@import "components/user-feedback";
+@import "components/personalization";
+@import "components/dashboard";
+@import "components/report-generator";
+@import "components/comparison-tools";
+@import "components/site-analytics";
+@import "components/popular-posts";
 
 // ページ固有スタイル
-@import "../../_sass/pages/home";
-@import "../../_sass/pages/home-enhanced";
-@import "../../_sass/pages/blog";
+@import "pages/home";
+@import "pages/home-enhanced";
+@import "pages/blog";
+@import "pages/blog-enhanced";
 
 // モバイルファーストのリセット
 *, *::before, *::after {
