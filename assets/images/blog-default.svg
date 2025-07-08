@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" fill="none">
+  <!-- 背景グラデーション -->
+  <defs>
+    <linearGradient id="blogBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#eff6ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dbeafe;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="250" fill="url(#blogBg)" rx="8"/>
+  
+  <!-- 装飾パターン -->
+  <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+    <circle cx="2" cy="2" r="1" fill="#60a5fa" opacity="0.2"/>
+  </pattern>
+  <rect width="400" height="250" fill="url(#dots)"/>
+  
+  <!-- ドキュメントアイコン -->
+  <g transform="translate(160, 50)">
+    <!-- ドキュメント本体 -->
+    <rect x="0" y="0" width="80" height="100" fill="white" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    
+    <!-- ドキュメントの折り目 -->
+    <path d="M60 0 L60 20 L80 20" fill="#e0e7ff" stroke="#3b82f6" stroke-width="2"/>
+    
+    <!-- テキストライン -->
+    <rect x="10" y="30" width="60" height="3" fill="#cbd5e1" rx="1.5"/>
+    <rect x="10" y="40" width="50" height="3" fill="#cbd5e1" rx="1.5"/>
+    <rect x="10" y="50" width="55" height="3" fill="#cbd5e1" rx="1.5"/>
+    <rect x="10" y="60" width="45" height="3" fill="#cbd5e1" rx="1.5"/>
+    <rect x="10" y="70" width="60" height="3" fill="#cbd5e1" rx="1.5"/>
+    <rect x="10" y="80" width="40" height="3" fill="#cbd5e1" rx="1.5"/>
+  </g>
+  
+  <!-- 鉛筆アイコン -->
+  <g transform="translate(250, 80) rotate(45)">
+    <rect x="0" y="0" width="8" height="50" fill="#fbbf24" stroke="#f59e0b" stroke-width="1"/>
+    <path d="M0 50 L4 58 L8 50" fill="#1f2937"/>
+    <path d="M0 0 L0 -8 L8 -8 L8 0" fill="#fca5a5" stroke="#ef4444" stroke-width="1"/>
+    <rect x="2" y="-6" width="4" height="4" fill="#4b5563"/>
+  </g>
+  
+  <!-- ブログアイコン（吹き出し） -->
+  <g transform="translate(80, 120)">
+    <path d="M0 20 Q0 0 20 0 L60 0 Q80 0 80 20 L80 40 Q80 60 60 60 L30 60 L15 75 L20 60 L20 60 Q0 60 0 40 Z" 
+          fill="white" stroke="#3b82f6" stroke-width="2"/>
+    <circle cx="20" cy="30" r="2" fill="#3b82f6"/>
+    <circle cx="40" cy="30" r="2" fill="#3b82f6"/>
+    <circle cx="60" cy="30" r="2" fill="#3b82f6"/>
+  </g>
+  
+  <!-- タイトルテキスト -->
+  <text x="200" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">
+    入札ガイド記事
+  </text>
+  <text x="200" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#64748b">
+    専門知識をわかりやすく解説
+  </text>
+</svg>

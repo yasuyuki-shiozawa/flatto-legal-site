@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 200" fill="none">
+  <!-- 背景 -->
+  <rect width="250" height="200" fill="#fef3c7" rx="15" opacity="0.2"/>
+  
+  <!-- CTAキャラクター（メガホンを持つ） -->
+  <g id="cta-character">
+    <!-- 影 -->
+    <ellipse cx="125" cy="180" rx="45" ry="7" fill="#9ca3af" opacity="0.3"/>
+    
+    <!-- 体 -->
+    <path d="M125 120 Q100 130 95 160 L95 175 Q95 185 105 185 L145 185 Q155 185 155 175 L155 160 Q150 130 125 120" fill="#ef4444"/>
+    
+    <!-- ボタンのようなデザイン -->
+    <rect x="110" y="140" width="30" height="10" fill="white" rx="5"/>
+    <text x="125" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#ef4444">GO!</text>
+    
+    <!-- 腕（左） -->
+    <path d="M95 140 Q75 145 70 160 Q70 170 80 170 Q90 165 95 155" fill="#fca5a5" stroke="#ef4444" stroke-width="2"/>
+    
+    <!-- 腕（右）- メガホンを持つ -->
+    <path d="M155 135 Q175 130 185 140" fill="#fca5a5" stroke="#ef4444" stroke-width="2"/>
+    
+    <!-- メガホン -->
+    <g transform="translate(180, 125) rotate(-30)">
+      <path d="M0 0 L25 -10 L25 10 Z" fill="#fbbf24" stroke="#f59e0b" stroke-width="2"/>
+      <rect x="-5" y="-3" width="8" height="6" fill="#f59e0b" rx="1"/>
+      <!-- 音波 -->
+      <path d="M28 -8 Q35 0 28 8" stroke="#f59e0b" stroke-width="2" fill="none" opacity="0.6"/>
+      <path d="M32 -10 Q40 0 32 10" stroke="#f59e0b" stroke-width="2" fill="none" opacity="0.4"/>
+    </g>
+    
+    <!-- 頭 -->
+    <circle cx="125" cy="80" r="30" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+    
+    <!-- 髪の毛（エネルギッシュ） -->
+    <path d="M95 55 Q125 45 155 55 Q155 65 150 70 Q140 50 110 50 Q95 60 95 55" fill="#dc2626"/>
+    <path d="M100 50 L105 45 M120 45 L125 40 M140 50 L145 45" stroke="#dc2626" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- 顔 -->
+    <!-- 目（大きく開いた） -->
+    <circle cx="110" cy="75" r="10" fill="white" stroke="#1f2937" stroke-width="2"/>
+    <circle cx="140" cy="75" r="10" fill="white" stroke="#1f2937" stroke-width="2"/>
+    <circle cx="110" cy="77" r="5" fill="#1f2937"/>
+    <circle cx="140" cy="77" r="5" fill="#1f2937"/>
+    <circle cx="112" cy="75" r="2" fill="white"/>
+    <circle cx="142" cy="75" r="2" fill="white"/>
+    
+    <!-- 口（叫んでいる） -->
+    <ellipse cx="125" cy="95" rx="12" ry="8" fill="#dc2626" stroke="#1f2937" stroke-width="2"/>
+    <rect x="117" y="91" width="16" height="4" fill="white"/>
+    
+    <!-- ほっぺ（興奮） -->
+    <circle cx="95" cy="85" r="8" fill="#fca5a5" opacity="0.6"/>
+    <circle cx="155" cy="85" r="8" fill="#fca5a5" opacity="0.6"/>
+  </g>
+  
+  <!-- アクションライン -->
+  <g opacity="0.5">
+    <line x1="40" y1="40" x2="60" y2="50" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+    <line x1="35" y1="80" x2="55" y2="85" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+    <line x1="40" y1="120" x2="60" y2="120" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+    
+    <line x1="210" y1="40" x2="190" y2="50" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+    <line x1="215" y1="80" x2="195" y2="85" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  
+  <!-- テキスト吹き出し -->
+  <g transform="translate(50, 20)">
+    <rect x="0" y="0" width="80" height="30" fill="white" stroke="#ef4444" stroke-width="2" rx="15"/>
+    <text x="40" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ef4444">今すぐ相談！</text>
+  </g>
+</svg>

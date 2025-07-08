@@ -64,9 +64,9 @@ body_class: blog-lp-page
         <article class="featured-post-card">
             <div class="post-image">
                 {% if post.image %}
-                <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" onerror="this.src='/assets/images/character-placeholder.svg'">
+                <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" onerror="this.src='/assets/images/blog-default.svg'">
                 {% else %}
-                <img src="/assets/images/character-placeholder.svg" alt="{{ post.title }}">
+                <img src="/assets/images/blog-default.svg" alt="{{ post.title }}">
                 {% endif %}
                 <span class="post-category">{{ post.categories | first }}</span>
             </div>
@@ -168,9 +168,9 @@ body_class: blog-lp-page
         <article class="featured-post-card" data-category="{{ post.categories | join: ' ' }}">
             <div class="post-image">
                 {% if post.image %}
-                <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+                <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" onerror="this.src='/assets/images/blog-default.svg'">
                 {% else %}
-                <img src="/assets/images/character-placeholder.svg" alt="{{ post.title }}">
+                <img src="/assets/images/blog-default.svg" alt="{{ post.title }}">
                 {% endif %}
                 <span class="post-category">{{ post.categories | first }}</span>
             </div>
