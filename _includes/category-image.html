@@ -1,0 +1,12 @@
+{% comment %}
+  カテゴリに基づいて適切な画像を返すインクルードファイル
+  使用方法: {% include category-image.html post=post %}
+{% endcomment %}
+
+{% if include.post.image %}
+  {{ include.post.image | relative_url }}
+{% else %}
+  {% assign first_category = include.post.categories | first %}
+  {% assign category_data = site.data.category_images[first_category] | default: site.data.category_images.default %}
+  {{ category_data.image }}
+{% endif %}

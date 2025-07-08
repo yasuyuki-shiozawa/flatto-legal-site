@@ -1,0 +1,7 @@
+{% comment %}
+  カテゴリに基づいて適切な色を返すインクルードファイル
+  使用方法: {% include category-color.html category=category %}
+{% endcomment %}
+
+{% assign category_data = site.data.category_images[include.category] | default: site.data.category_images.default %}
+{{ category_data.color }}

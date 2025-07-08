@@ -64,11 +64,13 @@ body_class: blog-lp-page
         <article class="featured-post-card">
             <div class="post-image">
                 {% if post.image %}
-                <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" onerror="this.src='/assets/images/blog-default.svg'">
+                <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
                 {% else %}
-                <img src="/assets/images/blog-default.svg" alt="{{ post.title }}">
+                    {% assign first_category = post.categories | first %}
+                    {% assign category_data = site.data.category_images[first_category] | default: site.data.category_images.default %}
+                    <img src="{{ category_data.image }}" alt="{{ category_data.alt }}">
                 {% endif %}
-                <span class="post-category">{{ post.categories | first }}</span>
+                <span class="post-category" style="background-color: {{ site.data.category_images[post.categories.first].color | default: '#6b7280' }}">{{ post.categories | first }}</span>
             </div>
             <div class="post-content">
                 <h3>{{ post.title | truncate: 50 }}</h3>
@@ -168,11 +170,13 @@ body_class: blog-lp-page
         <article class="featured-post-card" data-category="{{ post.categories | join: ' ' }}">
             <div class="post-image">
                 {% if post.image %}
-                <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" onerror="this.src='/assets/images/blog-default.svg'">
+                <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
                 {% else %}
-                <img src="/assets/images/blog-default.svg" alt="{{ post.title }}">
+                    {% assign first_category = post.categories | first %}
+                    {% assign category_data = site.data.category_images[first_category] | default: site.data.category_images.default %}
+                    <img src="{{ category_data.image }}" alt="{{ category_data.alt }}">
                 {% endif %}
-                <span class="post-category">{{ post.categories | first }}</span>
+                <span class="post-category" style="background-color: {{ site.data.category_images[post.categories.first].color | default: '#6b7280' }}">{{ post.categories | first }}</span>
             </div>
             <div class="post-content">
                 <h3>{{ post.title | truncate: 50 }}</h3>

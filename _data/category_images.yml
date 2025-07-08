@@ -1,0 +1,39 @@
+# カテゴリごとのデフォルト画像設定
+# カテゴリ名に対応する画像を定義
+
+# メインカテゴリ
+実務ガイド:
+  image: /assets/images/service-document.webp
+  alt: 実務ガイドのイメージ
+  color: "#3b82f6"  # 青色（実務的）
+
+制度解説:
+  image: /assets/images/knowhow-icon.webp
+  alt: 制度解説のイメージ
+  color: "#10b981"  # 緑色（知識）
+
+戦略ガイド:
+  image: /assets/images/service-consulting.webp
+  alt: 戦略ガイドのイメージ
+  color: "#f59e0b"  # オレンジ（戦略）
+
+最新動向:
+  image: /assets/images/flow-process.webp
+  alt: 最新動向のイメージ
+  color: "#ef4444"  # 赤色（最新）
+
+入門ガイド:
+  image: /assets/images/knowhow-expertise.webp
+  alt: 入門ガイドのイメージ
+  color: "#8b5cf6"  # 紫色（初心者向け）
+
+地域別ガイド:
+  image: /assets/images/hero-business-partnership.webp
+  alt: 地域別ガイドのイメージ
+  color: "#06b6d4"  # シアン（地域）
+
+# デフォルト（カテゴリが設定されていない場合）
+default:
+  image: /assets/images/blog-default.svg
+  alt: 入札ガイド記事
+  color: "#6b7280"  # グレー
