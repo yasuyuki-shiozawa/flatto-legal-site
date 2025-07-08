@@ -19,6 +19,7 @@
         initSearch();
         initImageErrorHandling();
         initFloatingCharacter();
+        initStickyCTA();
     });
     
     // 全てのリソースが読み込まれた後にも実行
@@ -546,6 +547,61 @@
         
         window.addEventListener('scroll', adjustCharacterPosition);
         window.addEventListener('resize', adjustCharacterPosition);
+    }
+    
+    // スティッキーCTAバーの初期化
+    function initStickyCTA() {
+        const stickyCTA = document.getElementById('stickyCTA');
+        if (!stickyCTA) return;
+        
+        let hasShown = false;
+        const showThreshold = 0.3; // ページの30%スクロール後に表示
+        
+        function checkScroll() {
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPosition = window.pageYOffset;
+            const scrollPercentage = scrollPosition / scrollHeight;
+            
+            // 一定スクロール後に表示
+            if (scrollPercentage > showThreshold && !hasShown) {
+                stickyCTA.classList.add('show');
+                hasShown = true;
+            }
+            
+            // ページ最下部付近では非表示
+            if (scrollHeight - scrollPosition < 200) {
+                stickyCTA.classList.remove('show');
+            } else if (hasShown && scrollPercentage > showThreshold) {
+                stickyCTA.classList.add('show');
+            }
+        }
+        
+        // スクロールイベントの最適化
+        let ticking = false;
+        function requestTick() {
+            if (!ticking) {
+                window.requestAnimationFrame(checkScroll);
+                ticking = true;
+                setTimeout(() => { ticking = false; }, 100);
+            }
+        }
+        
+        window.addEventListener('scroll', requestTick);
+        
+        // 閉じるボタン機能（オプション）
+        const closeBtn = stickyCTA.querySelector('.sticky-cta-close');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function() {
+                stickyCTA.classList.remove('show');
+                // セッション中は再表示しない
+                sessionStorage.setItem('hideStickyCtA', 'true');
+            });
+        }
+        
+        // セッションストレージチェック
+        if (sessionStorage.getItem('hideStickyCtA')) {
+            stickyCTA.style.display = 'none';
+        }
     }
 
 })();
