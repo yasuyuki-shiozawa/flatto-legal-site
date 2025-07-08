@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- キャラクタープレースホルダー -->
+  <rect width="200" height="200" fill="#f3f4f6" rx="10"/>
+  
+  <!-- 顔 -->
+  <circle cx="100" cy="80" r="40" fill="#e5e7eb"/>
+  
+  <!-- 目 -->
+  <circle cx="85" cy="75" r="5" fill="#9ca3af"/>
+  <circle cx="115" cy="75" r="5" fill="#9ca3af"/>
+  
+  <!-- 口 -->
+  <path d="M90 90 Q100 95 110 90" stroke="#9ca3af" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <!-- 体 -->
+  <ellipse cx="100" cy="145" rx="35" ry="45" fill="#e5e7eb"/>
+  
+  <!-- 腕 -->
+  <ellipse cx="65" cy="130" rx="15" ry="25" fill="#e5e7eb" transform="rotate(-30 65 130)"/>
+  <ellipse cx="135" cy="130" rx="15" ry="25" fill="#e5e7eb" transform="rotate(30 135 130)"/>
+  
+  <!-- テキスト -->
+  <text x="100" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">キャラクター画像</text>
+</svg>

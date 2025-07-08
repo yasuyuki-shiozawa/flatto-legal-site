@@ -136,6 +136,15 @@
     <!-- モバイルサイドバー -->
     {% include mobile-sidebar.html %}
     
+    <!-- フローティングキャラクター -->
+    <div class="floating-character" id="floatingCharacter">
+        <img src="/assets/images/character-helper.png" alt="お助けキャラクター" onerror="this.src='/assets/images/character-placeholder.svg'">
+        <div class="character-bubble">
+            何かお困りですか？<br>
+            クリックで相談ページへ！
+        </div>
+    </div>
+    
     <!-- 条件付きスクリプト読み込み -->
     {% if page.use_toc %}
     <!-- 目次機能 -->

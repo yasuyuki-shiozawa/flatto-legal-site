@@ -18,6 +18,7 @@
         initFormValidation();
         initSearch();
         initImageErrorHandling();
+        initFloatingCharacter();
     });
     
     // 全てのリソースが読み込まれた後にも実行
@@ -494,6 +495,57 @@
                 img.dispatchEvent(new Event('error'));
             }
         });
+    }
+    
+    // フローティングキャラクターの初期化
+    function initFloatingCharacter() {
+        const character = document.getElementById('floatingCharacter');
+        if (!character) return;
+        
+        // クリックで相談ページへ
+        character.addEventListener('click', function() {
+            window.location.href = '/contact/';
+        });
+        
+        // スクロールに応じて表示/非表示
+        let lastScrollTop = 0;
+        let hideTimeout;
+        
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // 下スクロール時は非表示
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                character.style.transform = 'translateX(100px)';
+            } else {
+                character.style.transform = 'translateX(0)';
+            }
+            
+            lastScrollTop = scrollTop;
+            
+            // スクロール停止後3秒で再表示
+            clearTimeout(hideTimeout);
+            hideTimeout = setTimeout(function() {
+                character.style.transform = 'translateX(0)';
+            }, 3000);
+        });
+        
+        // ページ下部付近では上に移動
+        function adjustCharacterPosition() {
+            const scrollHeight = document.documentElement.scrollHeight;
+            const scrollPosition = window.innerHeight + window.pageYOffset;
+            const footerHeight = 200; // フッターの推定高さ
+            
+            if (scrollHeight - scrollPosition < footerHeight) {
+                const offset = footerHeight - (scrollHeight - scrollPosition);
+                character.style.bottom = (20 + offset) + 'px';
+            } else {
+                character.style.bottom = '20px';
+            }
+        }
+        
+        window.addEventListener('scroll', adjustCharacterPosition);
+        window.addEventListener('resize', adjustCharacterPosition);
     }
 
 })();
