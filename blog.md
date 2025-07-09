@@ -111,21 +111,21 @@ body_class: blog-lp-page
             <div class="indicator-icon">
                 <i class="fas fa-users"></i>
             </div>
-            <div class="indicator-number">500+</div>
+            <div class="indicator-number">100+</div>
             <div class="indicator-text">サポート企業数</div>
         </div>
         <div class="trust-indicator">
             <div class="indicator-icon">
                 <i class="fas fa-file-alt"></i>
             </div>
-            <div class="indicator-number">1,200+</div>
+            <div class="indicator-number">300+</div>
             <div class="indicator-text">作成した入札書類</div>
         </div>
         <div class="trust-indicator">
             <div class="indicator-icon">
                 <i class="fas fa-percentage"></i>
             </div>
-            <div class="indicator-number">95%</div>
+            <div class="indicator-number">90%</div>
             <div class="indicator-text">資格取得成功率</div>
         </div>
         <div class="trust-indicator">
