@@ -228,7 +228,7 @@ permalink: /contact-enhanced/
                     </p>
                     <p class="hours">
                         <strong>受付時間：</strong><br>
-                        平日 9:00～18:00<br>
+                        平日 9:00～17:00<br>
                         （土日祝日を除く）
                     </p>
                 </div>

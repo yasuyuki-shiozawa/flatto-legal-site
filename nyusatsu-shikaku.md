@@ -255,7 +255,7 @@ permalink: /nyusatsu-shikaku/
     <div class="cta-card">
       <h3>📞 電話相談</h3>
       <p>専門家が直接アドバイス</p>
-      <a href="tel:046-272-3357" class="btn btn-outline">046-272-3357</a>
+      <a href="tel:046-272-3367" class="btn btn-outline">046-272-3367</a>
     </div>
     <div class="cta-card">
       <h3>📧 メール相談</h3>

@@ -84,7 +84,7 @@ description: 行政書士法人ふらっと法務事務所の理念、代表者�
                     </tr>
                     <tr>
                         <th>電話番号</th>
-                        <td>046-272-3357</td>
+                        <td>046-272-3367</td>
                     </tr>
                     <tr>
                         <th>メールアドレス</th>
@@ -310,7 +310,7 @@ description: 行政書士法人ふらっと法務事務所の理念、代表者�
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
                             <strong>住所</strong>
-                            <p>〒242-0006<br>神奈川県大和市南林間1丁目4番26号</p>
+                            <p>〒242-0006<br>神奈川県大和市南林間6丁目4番26号 1F</p>
                         </div>
                     </div>
                     
@@ -357,9 +357,9 @@ description: 行政書士法人ふらっと法務事務所の理念、代表者�
                     <i class="fas fa-envelope"></i>
                     お問い合わせ
                 </a>
-                <a href="tel:046-272-3357" class="btn btn-outline btn-large">
+                <a href="tel:046-272-3367" class="btn btn-outline btn-large">
                     <i class="fas fa-phone"></i>
-                    046-272-3357
+                    046-272-3367
                 </a>
             </div>
         </div>
