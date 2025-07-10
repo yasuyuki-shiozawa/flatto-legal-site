@@ -145,7 +145,7 @@ description: 行政書士法人ふらっと法務事務所の理念、代表者�
                 </p>
                 <ul class="feature-details">
                     <li>行政書士資格保有</li>
-                    <li>入札サポート実績1,000件以上</li>
+                    <li>豊富な入札サポート実績</li>
                     <li>各種研修・セミナー参加</li>
                     <li>最新法令への対応</li>
                 </ul>
@@ -171,15 +171,15 @@ description: 行政書士法人ふらっと法務事務所の理念、代表者�
                 <div class="feature-icon">
                     <i class="fas fa-trophy"></i>
                 </div>
-                <h3 class="feature-title">高い成功率</h3>
+                <h3 class="feature-title">戦略的サポート</h3>
                 <p class="feature-description">
-                    これまでサポートしたお客様の入札成功率は95%以上。戦略的なアプローチで、お客様の落札確率を最大化します。
+                    豊富な経験に基づく戦略的なアプローチで、お客様の落札確率を最大化します。
                 </p>
                 <ul class="feature-details">
-                    <li>成功率95%以上</li>
                     <li>戦略的アプローチ</li>
                     <li>競合分析の実施</li>
                     <li>継続的な改善</li>
+                    <li>成功への最適化</li>
                 </ul>
             </div>
             
@@ -202,40 +202,6 @@ description: 行政書士法人ふらっと法務事務所の理念、代表者�
     </div>
 </section>
 
-<!-- 実績・数字 -->
-<section class="achievements">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">実績・数字で見る当事務所</h2>
-        </div>
-        
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-number">1,000+</div>
-                <div class="stat-label">サポート実績</div>
-                <div class="stat-description">これまでにサポートした入札案件数</div>
-            </div>
-            
-            <div class="stat-card">
-                <div class="stat-number">95%</div>
-                <div class="stat-label">成功率</div>
-                <div class="stat-description">サポートしたお客様の入札成功率</div>
-            </div>
-            
-            <div class="stat-card">
-                <div class="stat-number">500+</div>
-                <div class="stat-label">お客様数</div>
-                <div class="stat-description">これまでにサポートしたお客様数</div>
-            </div>
-            
-            <div class="stat-card">
-                <div class="stat-number">15年</div>
-                <div class="stat-label">経験年数</div>
-                <div class="stat-description">入札サポート分野での豊富な経験</div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- 対応業種 -->
 <section class="supported-industries">
