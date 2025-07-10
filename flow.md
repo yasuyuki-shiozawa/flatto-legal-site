@@ -199,7 +199,7 @@ permalink: /flow/
                 </div>
                 <h3 class="support-title">迅速な対応</h3>
                 <p class="support-description">
-                    お問い合わせには24時間以内に回答。緊急時には即座に対応いたします。
+                    お問い合わせには迅速に対応。緊急時には優先的に対応いたします。
                 </p>
             </div>
             

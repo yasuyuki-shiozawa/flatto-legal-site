@@ -28,7 +28,7 @@ keywords: 入札サポート,行政書士,専門相談,入札支援,公共調達
         <div class="expert-comment">
             <img src="/assets/images/shiozawa_character.webp" alt="しおさん" class="comment-avatar">
             <div class="comment-bubble">
-                基本的な知識は入札マップで学習できますが、個別の案件では専門的な判断が必要な場合があります。
+                入札マップで基礎知識を学んだ後、個別の案件で専門的なサポートが必要な場合はお気軽にご相談ください。
             </div>
         </div>
         

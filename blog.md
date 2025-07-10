@@ -104,39 +104,6 @@ body_class: blog-lp-page
     </div>
 </div>
 
-<!-- 信頼性指標セクション -->
-<section class="blog-trust-indicators">
-    <div class="trust-indicators-grid">
-        <div class="trust-indicator">
-            <div class="indicator-icon">
-                <i class="fas fa-users"></i>
-            </div>
-            <div class="indicator-number">100+</div>
-            <div class="indicator-text">サポート企業数</div>
-        </div>
-        <div class="trust-indicator">
-            <div class="indicator-icon">
-                <i class="fas fa-file-alt"></i>
-            </div>
-            <div class="indicator-number">300+</div>
-            <div class="indicator-text">作成した入札書類</div>
-        </div>
-        <div class="trust-indicator">
-            <div class="indicator-icon">
-                <i class="fas fa-percentage"></i>
-            </div>
-            <div class="indicator-number">90%</div>
-            <div class="indicator-text">資格取得成功率</div>
-        </div>
-        <div class="trust-indicator">
-            <div class="indicator-icon">
-                <i class="fas fa-star"></i>
-            </div>
-            <div class="indicator-number">4.8</div>
-            <div class="indicator-text">顧客満足度</div>
-        </div>
-    </div>
-</section>
 
 <!-- ニュースレター購読セクション -->
 <section class="blog-newsletter">
