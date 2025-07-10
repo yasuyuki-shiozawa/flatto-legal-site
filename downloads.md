@@ -35,6 +35,10 @@ keywords: 資料ダウンロード,入札ガイド,PDF,チェックリスト,テ
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">入札制度完全ガイド</h3>
+                        <div class="update-notice">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <strong>重要なお知らせ</strong>：このPDFは2024年版です。2025年4月1日施行の随意契約基準額改正など最新情報は<a href="{{ '/zuii-keiyaku/' | relative_url }}">こちら</a>をご覧ください。
+                        </div>
                         <p class="card-description">
                             入札・公共調達制度について基本から実践まで体系的に解説した包括的なガイドブック。法的根拠から実務のポイントまで網羅的に学習できます。
                         </p>
@@ -53,7 +57,7 @@ keywords: 資料ダウンロード,入札ガイド,PDF,チェックリスト,テ
                             </div>
                             <div class="detail-item">
                                 <span class="detail-label">更新日:</span>
-                                <span class="detail-value">2025年6月10日</span>
+                                <span class="detail-value">2024年版</span>
                             </div>
                         </div>
                         <div class="card-contents">
@@ -543,6 +547,33 @@ keywords: 資料ダウンロード,入札ガイド,PDF,チェックリスト,テ
     border-radius: 25px;
     font-weight: 600;
     font-size: 1rem;
+}
+
+/* 更新通知 */
+.update-notice {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: #856404;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.update-notice i {
+    margin-right: 0.5rem;
+    color: #f39c12;
+}
+
+.update-notice a {
+    color: #d68910;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.update-notice a:hover {
+    color: #e67e22;
 }
 
 /* 利用規約セクション */
