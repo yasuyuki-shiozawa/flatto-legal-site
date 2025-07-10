@@ -42,9 +42,9 @@ sitemap: false
                 <div class="urgent-contact">
                     <h3>お急ぎの場合は</h3>
                     <p>すぐにご相談されたい場合は、お電話でお気軽にお問い合わせください。</p>
-                    <a href="tel:046-272-3367" class="phone-button">
+                    <a href="tel:046-272-3357" class="phone-button">
                         <i class="fas fa-phone"></i>
-                        046-272-3367
+                        046-272-3357
                     </a>
                     <p class="contact-hours">受付時間：平日 9:00-17:00</p>
                 </div>

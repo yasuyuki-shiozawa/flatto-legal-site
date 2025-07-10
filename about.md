@@ -84,7 +84,7 @@ description: 行政書士法人ふらっと法務事務所の理念、代表者�
                     </tr>
                     <tr>
                         <th>電話番号</th>
-                        <td>046-272-3367</td>
+                        <td>046-272-3357</td>
                     </tr>
                     <tr>
                         <th>メールアドレス</th>
@@ -357,9 +357,9 @@ description: 行政書士法人ふらっと法務事務所の理念、代表者�
                     <i class="fas fa-envelope"></i>
                     お問い合わせ
                 </a>
-                <a href="tel:046-272-3367" class="btn btn-outline btn-large">
+                <a href="tel:046-272-3357" class="btn btn-outline btn-large">
                     <i class="fas fa-phone"></i>
-                    046-272-3367
+                    046-272-3357
                 </a>
             </div>
         </div>

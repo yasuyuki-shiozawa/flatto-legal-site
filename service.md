@@ -203,9 +203,9 @@ keywords: 入札サポート,行政書士,専門相談,入札支援,公共調達
                     <i class="fas fa-phone"></i>
                     無料相談のお申し込み
                 </a>
-                <a href="tel:046-272-3367" class="btn btn-outline btn-large">
+                <a href="tel:046-272-3357" class="btn btn-outline btn-large">
                     <i class="fas fa-phone"></i>
-                    046-272-3367
+                    046-272-3357
                 </a>
             </div>
         </div>

@@ -226,8 +226,8 @@ permalink: /privacy-policy/
                         <div class="contact-item">
                             <strong>行政書士法人ふらっと法務事務所</strong><br>
                             個人情報保護責任者：代表行政書士<br>
-                            メール：<a href="mailto:privacy@flatto-legal.com">privacy@flatto-legal.com</a><br>
-                            電話：046-272-3367<br>
+                            メール：<a href="mailto:mail@flat-legal.com">mail@flat-legal.com</a><br>
+                            電話：046-272-3357<br>
                             受付時間：平日 9:00-17:00
                         </div>
                     </div>

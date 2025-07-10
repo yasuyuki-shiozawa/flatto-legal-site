@@ -220,7 +220,7 @@ keywords: お問い合わせ,入札相談,公共調達相談,行政書士相談,
                     <div class="info-icon">📞</div>
                     <h3>お電話でのお問い合わせ</h3>
                     <p>平日 9:00-17:00</p>
-                    <a href="tel:046-272-3367" class="contact-link">046-272-3367</a>
+                    <a href="tel:046-272-3357" class="contact-link">046-272-3357</a>
                 </div>
 
                 <div class="info-card">

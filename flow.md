@@ -241,9 +241,9 @@ permalink: /flow/
                     <i class="fas fa-calendar-alt"></i>
                     無料相談の予約
                 </a>
-                <a href="tel:046-272-3367" class="btn btn-outline btn-large">
+                <a href="tel:046-272-3357" class="btn btn-outline btn-large">
                     <i class="fas fa-phone"></i>
-                    046-272-3367
+                    046-272-3357
                 </a>
             </div>
         </div>
