@@ -91,6 +91,7 @@ keywords: 資料ダウンロード,入札ガイド,PDF,チェックリスト,テ
                 <div class="download-card">
                     <div class="card-header">
                         <div class="card-icon">✅</div>
+                        <div class="card-badge new">New</div>
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">入札参加チェックリスト</h3>
@@ -100,26 +101,39 @@ keywords: 資料ダウンロード,入札ガイド,PDF,チェックリスト,テ
                         <div class="card-details">
                             <div class="detail-item">
                                 <span class="detail-label">ページ数:</span>
-                                <span class="detail-value">5ページ</span>
+                                <span class="detail-value">8ページ</span>
                             </div>
                             <div class="detail-item">
                                 <span class="detail-label">ファイル形式:</span>
                                 <span class="detail-value">PDF</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">更新日:</span>
+                                <span class="detail-value">2025年1月</span>
                             </div>
                         </div>
                         <div class="card-contents">
                             <h4>チェック項目</h4>
                             <ul>
                                 <li>入札参加資格の確認</li>
-                                <li>必要書類の準備状況</li>
-                                <li>技術者の配置計画</li>
-                                <li>施工体制の整備</li>
-                                <li>安全管理計画</li>
+                                <li>必要書類の準備状況（最新版）</li>
+                                <li>技術者・体制の確認</li>
+                                <li>財務・経営状況の確認</li>
+                                <li>入札手続きの確認</li>
+                                <li>価格・積算の確認</li>
+                                <li>リスク管理</li>
+                                <li>最終確認事項</li>
                             </ul>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <span class="coming-soon">近日公開予定</span>
+                        <a href="{{ '/assets/downloads/nyusatsu-checklist.pdf' | relative_url }}" 
+                           class="download-btn" 
+                           download="入札参加チェックリスト.pdf"
+                           onclick="trackDownload('入札参加チェックリスト')">
+                            <span class="btn-icon">📥</span>
+                            無料ダウンロード
+                        </a>
                     </div>
                 </div>
 
@@ -417,6 +431,10 @@ keywords: 資料ダウンロード,入札ガイド,PDF,チェックリスト,テ
     border-radius: 15px;
     font-size: 0.8rem;
     font-weight: 600;
+}
+
+.card-badge.new {
+    background: #4facfe;
 }
 
 /* カードコンテンツ */

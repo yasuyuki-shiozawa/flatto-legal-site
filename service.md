@@ -104,77 +104,36 @@ keywords: 入札サポート,行政書士,専門相談,入札支援,公共調達
     </div>
 </section>
 
-<!-- 料金プラン -->
-<section class="pricing">
+<!-- サポート内容 -->
+<section class="support-details">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">料金プラン</h2>
+            <h2 class="section-title">サポート内容について</h2>
             <p class="section-subtitle">
-                お客様のニーズに合わせて選べる3つのプランをご用意しています
+                お客様のニーズに合わせて、最適なサポートプランをご提案いたします
             </p>
         </div>
         
-        <div class="pricing-grid">
-            <div class="pricing-card">
-                <div class="pricing-header">
-                    <h3 class="pricing-title">ベーシックプラン</h3>
-                    <div class="pricing-price">
-                        <span class="price-amount">50,000</span>
-                        <span class="price-unit">円〜</span>
-                    </div>
-                </div>
-                <ul class="pricing-features">
-                    <li>案件調査・分析</li>
-                    <li>基本的な書類作成</li>
-                    <li>入札戦略アドバイス</li>
-                    <li>メールサポート</li>
-                </ul>
-                <div class="pricing-cta">
-                    <a href="{{ '/contact/' | relative_url }}" class="btn btn-outline">お問い合わせ</a>
-                </div>
+        <div class="support-message">
+            <div class="message-icon">
+                <i class="fas fa-info-circle"></i>
             </div>
-            
-            <div class="pricing-card featured">
-                <div class="pricing-badge">おすすめ</div>
-                <div class="pricing-header">
-                    <h3 class="pricing-title">スタンダードプラン</h3>
-                    <div class="pricing-price">
-                        <span class="price-amount">100,000</span>
-                        <span class="price-unit">円〜</span>
-                    </div>
-                </div>
-                <ul class="pricing-features">
-                    <li>案件調査・分析</li>
-                    <li>全書類作成・申請代行</li>
-                    <li>詳細な入札戦略立案</li>
-                    <li>電話・メールサポート</li>
-                    <li>落札後の契約サポート</li>
-                </ul>
-                <div class="pricing-cta">
-                    <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary">お問い合わせ</a>
-                </div>
+            <div class="message-content">
+                <p>
+                    サポート内容や料金については、お客様の具体的なニーズや案件の内容により異なります。<br>
+                    まずは無料相談にて、お客様の状況を詳しくお聞かせください。<br>
+                    最適なサポートプランをご提案させていただきます。
+                </p>
             </div>
-            
-            <div class="pricing-card">
-                <div class="pricing-header">
-                    <h3 class="pricing-title">プレミアムプラン</h3>
-                    <div class="pricing-price">
-                        <span class="price-amount">200,000</span>
-                        <span class="price-unit">円〜</span>
-                    </div>
-                </div>
-                <ul class="pricing-features">
-                    <li>案件調査・分析</li>
-                    <li>全書類作成・申請代行</li>
-                    <li>詳細な入札戦略立案</li>
-                    <li>24時間サポート</li>
-                    <li>落札後の継続サポート</li>
-                    <li>専任担当者の配置</li>
-                </ul>
-                <div class="pricing-cta">
-                    <a href="{{ '/contact/' | relative_url }}" class="btn btn-outline">お問い合わせ</a>
-                </div>
-            </div>
+        </div>
+
+        <div class="consultation-cta">
+            <h3>まずは無料相談から</h3>
+            <p>専門の行政書士が、お客様の状況に応じた最適なアドバイスをいたします。</p>
+            <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-large">
+                <i class="fas fa-comments"></i>
+                無料相談を申し込む
+            </a>
         </div>
     </div>
 </section>
@@ -209,21 +168,21 @@ keywords: 入札サポート,行政書士,専門相談,入札支援,公共調達
             
             <div class="faq-item">
                 <div class="faq-question">
-                    <h3>料金はどのように決まりますか？</h3>
+                    <h3>相談は無料ですか？</h3>
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    <p>案件の規模や複雑さ、必要なサポート内容によって料金が決まります。まずは無料相談で詳細をお聞かせいただき、最適なプランをご提案いたします。</p>
+                    <p>はい、初回相談は無料で承っております。お客様の状況を詳しくお伺いし、どのようなサポートが必要かを一緒に検討させていただきます。</p>
                 </div>
             </div>
             
             <div class="faq-item">
                 <div class="faq-question">
-                    <h3>成功報酬制はありますか？</h3>
+                    <h3>サポート内容はカスタマイズできますか？</h3>
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    <p>基本的には固定料金制ですが、案件によっては成功報酬制も対応可能です。お客様のご希望に応じて柔軟に対応いたしますので、ご相談ください。</p>
+                    <p>はい、お客様のニーズに合わせて柔軟にカスタマイズ可能です。必要な部分だけのサポートから、トータルサポートまで、お客様に最適なプランをご提案いたします。</p>
                 </div>
             </div>
         </div>
@@ -252,4 +211,83 @@ keywords: 入札サポート,行政書士,専門相談,入札支援,公共調達
         </div>
     </div>
 </section>
+
+<style>
+/* サポート内容セクション */
+.support-details {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+}
+
+.support-message {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 3rem 0;
+}
+
+.message-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: #e3f2fd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1976d2;
+    font-size: 1.5rem;
+}
+
+.message-content {
+    flex-grow: 1;
+}
+
+.message-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin: 0;
+}
+
+.consultation-cta {
+    text-align: center;
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.consultation-cta h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.consultation-cta p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .support-message {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .message-icon {
+        margin: 0 auto;
+    }
+    
+    .message-content p {
+        font-size: 1rem;
+    }
+}
+</style>
 
