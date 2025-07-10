@@ -141,6 +141,7 @@ keywords: 資料ダウンロード,入札ガイド,PDF,チェックリスト,テ
                 <div class="download-card">
                     <div class="card-header">
                         <div class="card-icon">📝</div>
+                        <div class="card-badge new">New</div>
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">技術提案書テンプレート</h3>
@@ -150,26 +151,38 @@ keywords: 資料ダウンロード,入札ガイド,PDF,チェックリスト,テ
                         <div class="card-details">
                             <div class="detail-item">
                                 <span class="detail-label">ページ数:</span>
-                                <span class="detail-value">15ページ</span>
+                                <span class="detail-value">11ページ</span>
                             </div>
                             <div class="detail-item">
                                 <span class="detail-label">ファイル形式:</span>
-                                <span class="detail-value">Word + PDF</span>
+                                <span class="detail-value">PDF</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">更新日:</span>
+                                <span class="detail-value">2025年1月</span>
                             </div>
                         </div>
                         <div class="card-contents">
                             <h4>テンプレート内容</h4>
                             <ul>
-                                <li>施工計画書の構成例</li>
-                                <li>品質管理計画のポイント</li>
-                                <li>安全管理計画の作成方法</li>
-                                <li>環境配慮の提案例</li>
-                                <li>地域貢献の訴求方法</li>
+                                <li>技術提案書の基本構成</li>
+                                <li>会社概要・施工実績の書き方</li>
+                                <li>技術提案の作成ポイント</li>
+                                <li>品質・安全管理計画</li>
+                                <li>環境配慮・地域貢献</li>
+                                <li>2025年度評価基準への対応</li>
+                                <li>高評価を得るための留意点</li>
                             </ul>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <span class="coming-soon">近日公開予定</span>
+                        <a href="{{ '/assets/downloads/technical-proposal-template.pdf' | relative_url }}" 
+                           class="download-btn" 
+                           download="技術提案書テンプレート.pdf"
+                           onclick="trackDownload('技術提案書テンプレート')">
+                            <span class="btn-icon">📥</span>
+                            無料ダウンロード
+                        </a>
                     </div>
                 </div>
 
@@ -177,35 +190,48 @@ keywords: 資料ダウンロード,入札ガイド,PDF,チェックリスト,テ
                 <div class="download-card">
                     <div class="card-header">
                         <div class="card-icon">📊</div>
+                        <div class="card-badge new">New</div>
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title">最新法改正情報まとめ</h3>
+                        <h3 class="card-title">最新法改正情報まとめ 2025年版</h3>
                         <p class="card-description">
                             入札・公共調達に関する最新の法改正情報をまとめた資料。制度変更のポイントと対応方法を分かりやすく解説しています。
                         </p>
                         <div class="card-details">
                             <div class="detail-item">
                                 <span class="detail-label">ページ数:</span>
-                                <span class="detail-value">10ページ</span>
+                                <span class="detail-value">9ページ</span>
                             </div>
                             <div class="detail-item">
                                 <span class="detail-label">ファイル形式:</span>
                                 <span class="detail-value">PDF</span>
                             </div>
+                            <div class="detail-item">
+                                <span class="detail-label">更新日:</span>
+                                <span class="detail-value">2025年1月</span>
+                            </div>
                         </div>
                         <div class="card-contents">
                             <h4>主な改正内容</h4>
                             <ul>
-                                <li>デジタル化推進関連の制度変更</li>
-                                <li>働き方改革関連の新制度</li>
-                                <li>環境配慮に関する新基準</li>
-                                <li>地域経済活性化施策</li>
+                                <li>少額随意契約基準額の大幅引き上げ（約半世紀ぶり）</li>
+                                <li>電子入札システムの標準化</li>
+                                <li>BIM/CIM原則適用の拡大</li>
+                                <li>建設業の時間外労働上限規制</li>
+                                <li>週休2日制工事の標準化</li>
+                                <li>カーボンニュートラル対応</li>
                                 <li>中小企業支援制度の拡充</li>
                             </ul>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <span class="coming-soon">近日公開予定</span>
+                        <a href="{{ '/assets/downloads/law-revision-2025.pdf' | relative_url }}" 
+                           class="download-btn" 
+                           download="最新法改正情報まとめ2025.pdf"
+                           onclick="trackDownload('最新法改正情報まとめ')">
+                            <span class="btn-icon">📥</span>
+                            無料ダウンロード
+                        </a>
                     </div>
                 </div>
 
@@ -213,6 +239,7 @@ keywords: 資料ダウンロード,入札ガイド,PDF,チェックリスト,テ
                 <div class="download-card">
                     <div class="card-header">
                         <div class="card-icon">📈</div>
+                        <div class="card-badge new">New</div>
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">入札統計データ集</h3>
@@ -222,26 +249,38 @@ keywords: 資料ダウンロード,入札ガイド,PDF,チェックリスト,テ
                         <div class="card-details">
                             <div class="detail-item">
                                 <span class="detail-label">ページ数:</span>
-                                <span class="detail-value">20ページ</span>
+                                <span class="detail-value">8ページ</span>
                             </div>
                             <div class="detail-item">
                                 <span class="detail-label">ファイル形式:</span>
-                                <span class="detail-value">PDF + Excel</span>
+                                <span class="detail-value">PDF</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">更新日:</span>
+                                <span class="detail-value">2025年1月</span>
                             </div>
                         </div>
                         <div class="card-contents">
                             <h4>データ内容</h4>
                             <ul>
-                                <li>年間公共調達額の推移</li>
-                                <li>業種別発注状況</li>
-                                <li>地域別調達動向</li>
-                                <li>落札率の分析</li>
+                                <li>公共調達市場の概要（世界・日本）</li>
+                                <li>業種別発注状況と成長分野</li>
+                                <li>地域別調達動向と特性</li>
+                                <li>落札率の分析（契約方式別・業種別）</li>
                                 <li>競争参加者数の傾向</li>
+                                <li>中小企業の受注状況</li>
+                                <li>2025-2030年の市場予測</li>
                             </ul>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <span class="coming-soon">近日公開予定</span>
+                        <a href="{{ '/assets/downloads/statistics-data.pdf' | relative_url }}" 
+                           class="download-btn" 
+                           download="入札統計データ集.pdf"
+                           onclick="trackDownload('入札統計データ集')">
+                            <span class="btn-icon">📥</span>
+                            無料ダウンロード
+                        </a>
                     </div>
                 </div>
 
@@ -249,6 +288,7 @@ keywords: 資料ダウンロード,入札ガイド,PDF,チェックリスト,テ
                 <div class="download-card">
                     <div class="card-header">
                         <div class="card-icon">❓</div>
+                        <div class="card-badge new">New</div>
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">入札Q&A集</h3>
@@ -258,26 +298,38 @@ keywords: 資料ダウンロード,入札ガイド,PDF,チェックリスト,テ
                         <div class="card-details">
                             <div class="detail-item">
                                 <span class="detail-label">ページ数:</span>
-                                <span class="detail-value">25ページ</span>
+                                <span class="detail-value">13ページ</span>
                             </div>
                             <div class="detail-item">
                                 <span class="detail-label">ファイル形式:</span>
                                 <span class="detail-value">PDF</span>
                             </div>
+                            <div class="detail-item">
+                                <span class="detail-label">更新日:</span>
+                                <span class="detail-value">2025年1月</span>
+                            </div>
                         </div>
                         <div class="card-contents">
                             <h4>Q&A分野</h4>
                             <ul>
-                                <li>入札参加資格に関する疑問</li>
-                                <li>技術提案の作成方法</li>
-                                <li>契約変更の手続き</li>
-                                <li>検査・検収のポイント</li>
-                                <li>トラブル対応方法</li>
+                                <li>入札制度の基本（5問）</li>
+                                <li>入札参加資格（5問）</li>
+                                <li>入札手続き（6問）</li>
+                                <li>電子入札（4問）</li>
+                                <li>価格・積算（3問）</li>
+                                <li>契約・履行（4問）</li>
+                                <li>トラブル対応（3問）</li>
                             </ul>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <span class="coming-soon">近日公開予定</span>
+                        <a href="{{ '/assets/downloads/nyusatsu-qa.pdf' | relative_url }}" 
+                           class="download-btn" 
+                           download="入札Q&A集.pdf"
+                           onclick="trackDownload('入札Q&A集')">
+                            <span class="btn-icon">📥</span>
+                            無料ダウンロード
+                        </a>
                     </div>
                 </div>
 
