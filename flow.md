@@ -226,51 +226,6 @@ permalink: /flow/
     </div>
 </section>
 
-<!-- 料金・期間の目安 -->
-<section class="pricing-guide">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">料金・期間の目安</h2>
-        </div>
-        
-        <div class="guide-table">
-            <table>
-                <thead>
-                    <tr>
-                        <th>案件規模</th>
-                        <th>サポート期間</th>
-                        <th>料金目安</th>
-                        <th>主なサービス内容</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>小規模案件<br>（〜500万円）</td>
-                        <td>2〜3週間</td>
-                        <td>5〜10万円</td>
-                        <td>基本的な書類作成・戦略立案</td>
-                    </tr>
-                    <tr>
-                        <td>中規模案件<br>（500万〜3,000万円）</td>
-                        <td>3〜6週間</td>
-                        <td>10〜30万円</td>
-                        <td>詳細な分析・戦略立案・継続サポート</td>
-                    </tr>
-                    <tr>
-                        <td>大規模案件<br>（3,000万円〜）</td>
-                        <td>6週間〜</td>
-                        <td>30万円〜</td>
-                        <td>総合的なサポート・専任チーム配置</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        
-        <div class="guide-note">
-            <p><i class="fas fa-info-circle"></i> 料金は案件の複雑さや必要なサポート内容により変動します。詳細はお気軽にお問い合わせください。</p>
-        </div>
-    </div>
-</section>
 
 <!-- CTA -->
 <section class="cta">
