@@ -31,11 +31,18 @@
     <meta name="google-site-verification" content="pm0dB5OZdlVLMG0oY-Ot2QBGvDZ2pNd3TA_MPUJF3ig" />
     <link rel="canonical" href="{{ page.url | absolute_url }}">
     
+    <!-- Hreflang tags for Japanese market -->
+    <link rel="alternate" hreflang="ja-JP" href="{{ page.url | absolute_url }}" />
+    <link rel="alternate" hreflang="x-default" href="{{ page.url | absolute_url }}" />
+    
     <!-- SEO -->
     {% seo %}
     
     <!-- Enhanced SEO and Structured Data -->
     {% include seo-enhancements.html %}
+    
+    <!-- FAQ Structured Data -->
+    {% include faq-structured-data.html %}
     
     <!-- Performance Optimization -->
     {% include performance-optimization.html %}

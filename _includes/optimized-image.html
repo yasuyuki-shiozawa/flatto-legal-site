@@ -1,0 +1,32 @@
+{% comment %}
+  Optimized Image Include
+  Usage: {% include optimized-image.html src="/path/to/image.jpg" alt="Description" class="optional-class" loading="lazy" %}
+  
+  This include will:
+  1. Generate WebP version path
+  2. Create picture element with WebP and fallback
+  3. Add loading="lazy" by default
+  4. Include alt text for accessibility
+{% endcomment %}
+
+{% assign img_src = include.src %}
+{% assign img_alt = include.alt | default: "" %}
+{% assign img_class = include.class | default: "" %}
+{% assign img_loading = include.loading | default: "lazy" %}
+
+{% comment %} Generate WebP path {% endcomment %}
+{% assign img_extension = img_src | split: "." | last %}
+{% assign img_without_ext = img_src | split: "." | first %}
+{% assign webp_src = img_without_ext | append: ".webp" %}
+
+<picture>
+  <source srcset="{{ webp_src | relative_url }}" type="image/webp">
+  <source srcset="{{ img_src | relative_url }}" type="image/{{ img_extension }}">
+  <img 
+    src="{{ img_src | relative_url }}" 
+    alt="{{ img_alt }}"
+    {% if img_class != "" %}class="{{ img_class }}"{% endif %}
+    loading="{{ img_loading }}"
+    decoding="async"
+  >
+</picture>
