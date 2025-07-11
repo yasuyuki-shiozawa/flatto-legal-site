@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>入札参加チェックリスト</title>
+    <style>
+        @media print {
+            body { margin: 0; }
+            .no-print { display: none; }
+        }
+        body {
+            font-family: "游ゴシック", "Yu Gothic", sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 { color: #2c3e50; }
+        h1 { border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+        h2 { border-bottom: 1px solid #3498db; padding-bottom: 5px; margin-top: 30px; }
+        .checkbox { margin: 10px 0; }
+        .checkbox input { margin-right: 10px; }
+        .section { margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 5px; }
+        .important { background: #fff3cd; padding: 10px; border-left: 4px solid #ffc107; margin: 15px 0; }
+        @page { size: A4; margin: 20mm; }
+    </style>
+</head>
+<body>
+    <h1>入札参加チェックリスト</h1>
+    <p class="no-print"><button onclick="window.print()">PDFとして印刷</button></p>
+    
+    <div class="important">
+        <strong>重要：</strong>このチェックリストを使って、入札参加前に必要な準備が整っているか確認しましょう。
+    </div>
+
+    <h2>1. 入札参加資格の確認</h2>
+    <div class="section">
+        <div class="checkbox"><input type="checkbox"> 必要な業種の登録があるか</div>
+        <div class="checkbox"><input type="checkbox"> 等級（ランク）は適合しているか</div>
+        <div class="checkbox"><input type="checkbox"> 地域要件を満たしているか</div>
+        <div class="checkbox"><input type="checkbox"> 営業所の所在地要件を満たしているか</div>
+        <div class="checkbox"><input type="checkbox"> 資格の有効期限は切れていないか</div>
+    </div>
+
+    <h2>2. 必要書類の準備状況</h2>
+    <div class="section">
+        <div class="checkbox"><input type="checkbox"> 入札参加資格審査申請書</div>
+        <div class="checkbox"><input type="checkbox"> 会社概要書・パンフレット</div>
+        <div class="checkbox"><input type="checkbox"> 財務諸表（直近3年分）</div>
+        <div class="checkbox"><input type="checkbox"> 納税証明書（国税・地方税）</div>
+        <div class="checkbox"><input type="checkbox"> 社会保険料納入証明書</div>
+        <div class="checkbox"><input type="checkbox"> 登記事項証明書（3ヶ月以内）</div>
+        <div class="checkbox"><input type="checkbox"> 印鑑証明書（3ヶ月以内）</div>
+        <div class="checkbox"><input type="checkbox"> 建設業許可証（建設工事の場合）</div>
+        <div class="checkbox"><input type="checkbox"> ISO認証書類（必要な場合）</div>
+    </div>
+
+    <p style="text-align: right; margin-top: 40px;">
+        行政書士法人ふらっと法務事務所<br>
+        TEL: 046-272-3357
+    </p>
+</body>
+</html>
