@@ -372,7 +372,7 @@ keywords: お問い合わせ,入札相談,公共調達相談,行政書士相談,
     color: #6b7280;
     font-size: 0.875rem;
 }
-</style>
+
 /* ===== お問い合わせページ専用スタイル ===== */
 
 .contact-page {
@@ -1017,4 +1017,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+</style>
 
