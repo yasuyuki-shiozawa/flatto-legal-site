@@ -9,20 +9,45 @@
         </div>
         <div class="sidebar-card-body">
             <div class="popular-posts">
-                {% assign sorted_posts = site.posts | sort: 'popular_rank' | slice: 0, 5 %}
-                {% for post in sorted_posts %}
-                <article class="popular-post-item">
-                    <div class="popular-post-rank">{{ forloop.index }}</div>
-                    <div class="popular-post-content">
-                        <h4 class="popular-post-title">
-                            <a href="{{ post.url | relative_url }}">{{ post.title | truncate: 35 }}</a>
-                        </h4>
-                        <div class="popular-post-meta">
-                            <time>{{ post.date | date: "%Y.%m.%d" }}</time>
+                {% if site.data.popular_posts %}
+                    {% for popular_post in site.data.popular_posts.posts %}
+                        {% assign post = site.posts | where: "slug", popular_post.post_url | first %}
+                        {% if post %}
+                        <article class="popular-post-item">
+                            <div class="popular-post-rank">{{ forloop.index }}</div>
+                            <div class="popular-post-content">
+                                <h4 class="popular-post-title">
+                                    <a href="{{ post.url | relative_url }}">
+                                        {% if popular_post.custom_title %}
+                                            {{ popular_post.custom_title | truncate: 35 }}
+                                        {% else %}
+                                            {{ post.title | truncate: 35 }}
+                                        {% endif %}
+                                    </a>
+                                </h4>
+                                <div class="popular-post-meta">
+                                    <time>{{ post.date | date: "%Y.%m.%d" }}</time>
+                                </div>
+                            </div>
+                        </article>
+                        {% endif %}
+                    {% endfor %}
+                {% else %}
+                    <!-- フォールバック：popular_posts.ymlがない場合は最新記事を表示 -->
+                    {% for post in site.posts limit:5 %}
+                    <article class="popular-post-item">
+                        <div class="popular-post-rank">{{ forloop.index }}</div>
+                        <div class="popular-post-content">
+                            <h4 class="popular-post-title">
+                                <a href="{{ post.url | relative_url }}">{{ post.title | truncate: 35 }}</a>
+                            </h4>
+                            <div class="popular-post-meta">
+                                <time>{{ post.date | date: "%Y.%m.%d" }}</time>
+                            </div>
                         </div>
-                    </div>
-                </article>
-                {% endfor %}
+                    </article>
+                    {% endfor %}
+                {% endif %}
             </div>
         </div>
     </div>

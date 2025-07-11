@@ -83,16 +83,35 @@
                 
                 <!-- 関連記事が見つからない場合は人気記事を表示 -->
                 {% unless has_related %}
-                    {% for post in site.posts limit:3 %}
-                        {% if post.url != page.url %}
-                        <li>
-                            <a href="{{ post.url | relative_url }}">
-                                <span class="post-date">{{ post.date | date: "%Y.%m.%d" }}</span>
-                                {{ post.title }}
-                            </a>
-                        </li>
-                        {% endif %}
-                    {% endfor %}
+                    {% if site.data.popular_posts %}
+                        {% for popular_post in site.data.popular_posts.posts limit:3 %}
+                            {% assign post = site.posts | where: "slug", popular_post.post_url | first %}
+                            {% if post and post.url != page.url %}
+                            <li>
+                                <a href="{{ post.url | relative_url }}">
+                                    <span class="post-date">{{ post.date | date: "%Y.%m.%d" }}</span>
+                                    {% if popular_post.custom_title %}
+                                        {{ popular_post.custom_title }}
+                                    {% else %}
+                                        {{ post.title }}
+                                    {% endif %}
+                                </a>
+                            </li>
+                            {% endif %}
+                        {% endfor %}
+                    {% else %}
+                        <!-- フォールバック：popular_posts.ymlがない場合は最新記事を表示 -->
+                        {% for post in site.posts limit:3 %}
+                            {% if post.url != page.url %}
+                            <li>
+                                <a href="{{ post.url | relative_url }}">
+                                    <span class="post-date">{{ post.date | date: "%Y.%m.%d" }}</span>
+                                    {{ post.title }}
+                                </a>
+                            </li>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
                 {% endunless %}
             </ul>
         </div>
