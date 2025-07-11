@@ -410,13 +410,14 @@ keywords: お問い合わせ,入札相談,公共調達相談,行政書士相談,
 /* フォームセクション */
 .contact-form-section {
     padding: 4rem 0;
-    background: #f8f9fa;
+    background: #f3f4f6;
 }
 
 .form-wrapper {
     max-width: 800px;
     margin: 0 auto;
-    background: white;
+    background: #fafafa;
+    border: 1px solid #e5e7eb;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -480,19 +481,44 @@ keywords: お問い合わせ,入札相談,公共調達相談,行政書士相談,
 .form-select,
 .form-textarea {
     padding: 0.75rem;
-    border: 2px solid #e1e8ed;
+    border: 2px solid #d1d5db;
     border-radius: 8px;
     font-size: 1rem;
     transition: all 0.3s ease;
     font-family: inherit;
+    background-color: #ffffff;
+    color: #1f2937;
+}
+
+.form-input:hover,
+.form-select:hover,
+.form-textarea:hover {
+    border-color: #9ca3af;
 }
 
 .form-input:focus,
 .form-select:focus,
 .form-textarea:focus {
     outline: none;
-    border-color: #4facfe;
-    box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.1);
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    background-color: #ffffff;
+}
+
+/* プレースホルダーのスタイル */
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #9ca3af;
+    opacity: 1;
+}
+
+/* 選択されていないselectの文字色 */
+.form-select {
+    color: #1f2937;
+}
+
+.form-select option[value=""] {
+    color: #9ca3af;
 }
 
 .form-textarea {
