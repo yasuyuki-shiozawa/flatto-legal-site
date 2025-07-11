@@ -201,7 +201,7 @@ permalink: /zuii-keiyaku/
 <style>
 /* ページ専用スタイル */
 .hero-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
   color: white;
   padding: 3rem 2rem;
   border-radius: 12px;

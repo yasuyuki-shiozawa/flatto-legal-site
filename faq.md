@@ -592,7 +592,7 @@ faq_items:
 
 /* ヒーローセクション */
 .hero-section {
-    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
     color: white;
     padding: 4rem 0 3rem;
     text-align: center;

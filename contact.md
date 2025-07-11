@@ -381,7 +381,7 @@ keywords: お問い合わせ,入札相談,公共調達相談,行政書士相談,
 
 /* ヒーローセクション */
 .hero-section {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
     color: white;
     padding: 4rem 0 3rem;
     text-align: center;
