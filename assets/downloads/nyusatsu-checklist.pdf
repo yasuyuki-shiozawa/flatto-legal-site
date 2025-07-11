@@ -31,17 +31,21 @@ endobj
 endobj
 4 0 obj
 <<
-/Length 100
+/Length 150
 >>
 stream
 BT
-/F1 24 Tf
+/F1 28 Tf
 50 700 Td
 (Nyusatsu Checklist) Tj
+0 -40 Td
+/F1 16 Tf
+50 650 Td
+(PDF Document) Tj
 0 -30 Td
 /F1 12 Tf
-50 650 Td
-(PDF File) Tj
+50 600 Td
+(Please use browser to view Japanese content) Tj
 ET
 endstream
 endobj
@@ -58,5 +62,5 @@ trailer
 /Root 1 0 R
 >>
 startxref
-488
+538
 %%EOF
