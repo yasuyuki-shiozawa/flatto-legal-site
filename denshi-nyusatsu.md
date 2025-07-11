@@ -1,14 +1,10 @@
 ---
-layout: post
-title: "電子入札システム完全ガイド：初めての方でも安心の使い方【2024年最新版】"
-date: 2024-03-15
-categories: [実務ガイド, デジタル化]
-tags: [電子入札, システム操作, ICカード, GEPS, 政府調達]
-author: さおりさん
-excerpt: "日本の主要な電子入札システム（GEPS、国交省、MEXT等）の使い方から、ICカードの取得、実際の入札手順、トラブル対処法まで実践的に解説します。"
-description: 電子入札システムの使い方完全ガイド【2024年最新版】。政府電子調達システム（GEPS）、各省庁システム、ICカード取得方法、電子証明書の登録、よくあるトラブルと対処法まで詳しく解説。初心者も安心して電子入札に参加できます。
-image: /assets/images/blog/digital-transformation.jpg
+layout: default
+title: "電子入札システム完全ガイド【2024年最新版】"
+description: "日本の電子入札システム（GEPS、国交省、MEXT等）の使い方、ICカード取得、トラブル対処法まで実践的に解説。初心者も安心の完全ガイド。"
 ---
+
+# 電子入札システム完全ガイド【2024年最新版】
 
 ## 電子入札システムとは
 
@@ -18,16 +14,16 @@ image: /assets/images/blog/digital-transformation.jpg
 
 ### 1. 政府電子調達システム（GEPS）・調達ポータル
 2024年1月4日より、GEPSは「調達ポータル」に統合されました。政府の統一的な電子調達の窓口として機能しています。
-- **URL**: https://www.p-portal.go.jp/
+- **URL**: [https://www.p-portal.go.jp/](https://www.p-portal.go.jp/)
 - **特徴**: 調達情報の通知、契約結果情報のダウンロードが可能
 
 ### 2. 国土交通省電子入札システム
-- **URL**: https://www.e-bisc.go.jp/
+- **URL**: [https://www.e-bisc.go.jp/](https://www.e-bisc.go.jp/)
 - **利用時間**: 8:30〜18:00（土日祝日、年末年始12/29〜1/3を除く）
 - **特徴**: 建設工事・建設コンサルタント業務等の入札に使用
 
 ### 3. 文部科学省電子入札システム
-- **URL**: https://portal.ebid03.mext.go.jp/
+- **URL**: [https://portal.ebid03.mext.go.jp/](https://portal.ebid03.mext.go.jp/)
 - **特徴**: 教育・研究関連の調達案件
 
 ### 4. 地方自治体の電子入札システム
@@ -67,7 +63,7 @@ image: /assets/images/blog/digital-transformation.jpg
   - 商工会議所会員は割引あり（2,000円引き）
   - TDB電子認証サービスTypeAやセコムパスポートfor G-IDを提供
 
-**費用**: ICカードの種類や有効期間により異なるが、年間あたり1〜2万円程度
+**費用**: ICカードの種類や有効期間により異なるが、年間あたり1〜2万円程度  
 **注意**: 一度発行されたICカードの登録情報（氏名、住所、組織名等）は変更不可。変更が必要な場合は新規発行が必要。
 
 ### 2. パソコン環境の準備（2024年12月時点）
@@ -216,4 +212,13 @@ image: /assets/images/blog/digital-transformation.jpg
 
 初めは戸惑うかもしれませんが、一度習得すれば業務効率が大幅に向上します。まずはICカードの取得から始め、各システムの練習環境で操作に慣れることをお勧めします。
 
-電子入札に関するご質問やお困りの点がございましたら、お気軽にお問い合わせください。
+## 関連リンク
+
+- [政府調達ポータル](https://www.p-portal.go.jp/)
+- [国土交通省電子入札システム](https://www.e-bisc.go.jp/)
+- [文部科学省電子入札システム](https://portal.ebid03.mext.go.jp/)
+- [電子入札コアシステム（JACIC）](https://www.cals.jacic.or.jp/coreconso/)
+
+---
+
+*最終更新日: 2024年12月*
