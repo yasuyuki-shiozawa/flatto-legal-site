@@ -29,8 +29,11 @@ keywords: お問い合わせ,入札相談,公共調達相談,行政書士相談,
                 <div class="form-header">
                     <h2>ご相談フォーム</h2>
                     <p>以下のフォームにご記入の上、送信してください。<br>
-                    通常1-2営業日以内にご回答いたします。</p>
+                    <strong class="response-time">⏰ 通常1営業日以内（最短当日）にご回答いたします</strong></p>
                 </div>
+                
+                <!-- 信頼性バッジ -->
+                {% include trust-badges.html %}
 
                 <form name="contact" method="POST" action="/thanks/" data-netlify="true" data-netlify-honeypot="bot-field" class="contact-form" id="contactForm">
                     <!-- Netlify Forms用の隠しフィールド -->
@@ -114,10 +117,11 @@ keywords: お問い合わせ,入札相談,公共調達相談,行政書士相談,
                             </label>
                             <select id="category" name="category" class="form-select" required>
                                 <option value="">選択してください</option>
-                                <option value="入札制度について">入札制度について</option>
-                                <option value="入札参加資格について">入札参加資格について</option>
-                                <option value="具体的な案件について">具体的な案件について</option>
-                                <option value="書類作成について">書類作成について</option>
+                                <option value="初めて入札に参加したい">🔰 初めて入札に参加したい</option>
+                                <option value="入札参加資格を取得したい">📋 入札参加資格を取得したい</option>
+                                <option value="具体的な案件について相談したい">🎯 具体的な案件について相談したい</option>
+                                <option value="書類作成を依頼したい">📝 書類作成を依頼したい</option>
+                                <option value="電子入札について聞きたい">💻 電子入札について聞きたい</option>
                                 <option value="その他">その他</option>
                             </select>
                             <div class="error-message" id="categoryError"></div>
@@ -205,6 +209,45 @@ keywords: お問い合わせ,入札相談,公共調達相談,行政書士相談,
         </div>
     </section>
 
+    <!-- 成功事例 -->
+    <section class="success-stories-section">
+        <div class="container">
+            <h2 class="section-title">お客様の声</h2>
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="quote-icon">"</div>
+                    <p class="story-text">
+                        初めての入札で不安でしたが、丁寧にサポートしていただき、無事に落札できました。書類作成から入札まで、すべてお任せできて安心でした。
+                    </p>
+                    <div class="story-author">
+                        <strong>建設業 A社様</strong>
+                        <span>2024年10月に初落札</span>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="quote-icon">"</div>
+                    <p class="story-text">
+                        電子入札システムの使い方がわからず困っていましたが、画面共有でひとつひとつ教えていただけました。今では自信を持って入札できます。
+                    </p>
+                    <div class="story-author">
+                        <strong>IT企業 B社様</strong>
+                        <span>継続的にサポート利用中</span>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="quote-icon">"</div>
+                    <p class="story-text">
+                        複数の自治体への入札参加資格申請を代行していただきました。自社でやっていたら何週間もかかったと思います。本当に助かりました。
+                    </p>
+                    <div class="story-author">
+                        <strong>製造業 C社様</strong>
+                        <span>5つの自治体で資格取得</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- 連絡先情報 -->
     <section class="contact-info-section">
         <div class="container">
@@ -249,6 +292,87 @@ keywords: お問い合わせ,入札相談,公共調達相談,行政書士相談,
 </div>
 
 <style>
+/* 信頼性向上のためのスタイル */
+.response-time {
+    color: #dc2626;
+    font-size: 1.125rem;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #fef2f2;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+}
+
+/* 成功事例セクション */
+.success-stories-section {
+    background: #f8f9fa;
+    padding: 3rem 0;
+    margin: 3rem 0;
+}
+
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.story-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    position: relative;
+}
+
+.quote-icon {
+    font-size: 3rem;
+    color: #3b82f6;
+    line-height: 1;
+    margin-bottom: 1rem;
+    font-family: Georgia, serif;
+}
+
+.story-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+}
+
+.story-author {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 1rem;
+}
+
+.story-author strong {
+    color: #1f2937;
+    margin-bottom: 0.25rem;
+}
+
+.story-author span {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+/* フォームの改善 */
+.form-select option[value*="初めて"] {
+    font-weight: bold;
+}
+
+/* 必須マークの強調 */
+.required-mark {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+.optional-mark {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+</style>
 /* ===== お問い合わせページ専用スタイル ===== */
 
 .contact-page {

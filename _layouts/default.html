@@ -89,6 +89,11 @@
 <body data-page-url="{{ page.url }}" {% if page.body_class %}class="{{ page.body_class }}"{% endif %}>
     {% include header.html %}
     
+    <!-- キャンペーンバナー -->
+    {% if page.url != '/thanks/' %}
+    {% include campaign-banner.html %}
+    {% endif %}
+    
     <!-- パンくずリスト -->
     {% include breadcrumb.html %}
     
@@ -117,6 +122,9 @@
     <!-- モバイルサイドバー -->
     {% include mobile-sidebar.html %}
     
+    <!-- モバイル用固定CTA -->
+    {% include mobile-fixed-cta.html %}
+    
     <!-- フローティングキャラクター -->
     <div class="floating-character" id="floatingCharacter">
         <img src="/assets/images/saori_character.webp" alt="お助けキャラクター さおり">
@@ -128,7 +136,7 @@
     
     <!-- フローティングCTA -->
     <div class="floating-cta">
-        <a href="tel:0120-123-456" class="floating-cta-button">
+        <a href="tel:046-272-3357" class="floating-cta-button">
             <i class="fas fa-phone"></i>
         </a>
         <div class="floating-cta-tooltip">
@@ -148,7 +156,7 @@
                     <i class="fas fa-envelope"></i>
                     メールで相談
                 </a>
-                <a href="tel:0120-123-456" class="cta-button cta-secondary">
+                <a href="tel:046-272-3357" class="cta-button cta-secondary">
                     <i class="fas fa-phone"></i>
                     電話で相談
                 </a>

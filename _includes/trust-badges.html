@@ -1,0 +1,81 @@
+<!-- 信頼性バッジ -->
+<div class="trust-badges">
+    <div class="trust-badge">
+        <img src="{{ '/assets/images/privacy-mark.webp' | relative_url }}" alt="プライバシーマーク" class="badge-icon">
+        <div class="badge-text">
+            <strong>プライバシーマーク取得</strong>
+            <span>2024年9月19日認定</span>
+        </div>
+    </div>
+    <div class="trust-badge">
+        <i class="fas fa-balance-scale badge-icon"></i>
+        <div class="badge-text">
+            <strong>行政書士法人</strong>
+            <span>国家資格者が対応</span>
+        </div>
+    </div>
+    <div class="trust-badge">
+        <i class="fas fa-shield-alt badge-icon"></i>
+        <div class="badge-text">
+            <strong>守秘義務厳守</strong>
+            <span>法律で保護された秘密保持</span>
+        </div>
+    </div>
+</div>
+
+<style>
+.trust-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.badge-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    color: #3b82f6;
+    font-size: 2rem;
+}
+
+.badge-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.badge-text strong {
+    font-size: 0.875rem;
+    color: #1f2937;
+}
+
+.badge-text span {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+@media (max-width: 768px) {
+    .trust-badges {
+        flex-direction: column;
+    }
+    
+    .trust-badge {
+        width: 100%;
+    }
+}
+</style>
