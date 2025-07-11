@@ -1,87 +1,117 @@
-<!DOCTYPE html>
+#!/usr/bin/env python3
+"""
+Create PDF files for download resources
+Uses HTML to PDF conversion concept
+"""
+
+import os
+import base64
+
+def create_html_for_pdf(title, content, filename):
+    """Create HTML that can be converted to PDF"""
+    
+    html_content = f"""<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>入札参加チェックリスト</title>
+    <title>{title}</title>
     <style>
-        @page {
+        @page {{
             size: A4;
             margin: 20mm;
-        }
-        body {
+        }}
+        body {{
             font-family: "Noto Sans CJK JP", "Yu Gothic", "Hiragino Sans", sans-serif;
             line-height: 1.6;
             color: #333;
             max-width: 100%;
             margin: 0;
             padding: 0;
-        }
-        h1 {
+        }}
+        h1 {{
             color: #2c3e50;
             border-bottom: 3px solid #3498db;
             padding-bottom: 10px;
             margin-bottom: 30px;
             font-size: 24px;
-        }
-        h2 {
+        }}
+        h2 {{
             color: #2c3e50;
             border-bottom: 1px solid #3498db;
             padding-bottom: 5px;
             margin-top: 30px;
             margin-bottom: 15px;
             font-size: 18px;
-        }
-        h3 {
+        }}
+        h3 {{
             color: #34495e;
             margin-top: 20px;
             margin-bottom: 10px;
             font-size: 16px;
-        }
-        .checkbox-list {
+        }}
+        .checkbox-list {{
             list-style: none;
             padding-left: 0;
-        }
-        .checkbox-list li {
+        }}
+        .checkbox-list li {{
             margin: 8px 0;
             padding-left: 25px;
             position: relative;
-        }
-        .checkbox-list li:before {
+        }}
+        .checkbox-list li:before {{
             content: "☐";
             position: absolute;
             left: 0;
             color: #3498db;
             font-weight: bold;
-        }
-        .important {
+        }}
+        .important {{
             background: #fff3cd;
             padding: 15px;
             border-left: 4px solid #ffc107;
             margin: 20px 0;
             border-radius: 4px;
-        }
-        .footer {
+        }}
+        .footer {{
             margin-top: 40px;
             text-align: right;
             border-top: 1px solid #ddd;
             padding-top: 20px;
             color: #666;
-        }
-        .section {
+        }}
+        .section {{
             margin: 20px 0;
             padding: 15px;
             background: #f8f9fa;
             border-radius: 5px;
-        }
-        @media print {
-            body { margin: 0; }
-            .no-print { display: none; }
-        }
+        }}
+        @media print {{
+            body {{ margin: 0; }}
+            .no-print {{ display: none; }}
+        }}
     </style>
 </head>
 <body>
+    {content}
     
+    <div class="footer">
+        <strong>行政書士法人ふらっと法務事務所</strong><br>
+        TEL: 046-272-3357<br>
+        Email: mail@flat-legal.com
+    </div>
+</body>
+</html>"""
+    
+    # HTMLファイルとして保存
+    with open(f"{filename}.html", "w", encoding="utf-8") as f:
+        f.write(html_content)
+    
+    return html_content
+
+def create_checklist_content():
+    """入札参加チェックリストのコンテンツを生成"""
+    return """
     <h1>入札参加チェックリスト</h1>
     
     <div class="important">
@@ -201,12 +231,18 @@
             <li>前払金保証事業会社との契約ができる（必要な場合）</li>
         </ul>
     </div>
+    """
+
+# メイン実行部分
+if __name__ == "__main__":
+    print("Creating HTML files for PDF conversion...")
     
+    # 入札参加チェックリスト
+    checklist_content = create_checklist_content()
+    create_html_for_pdf("入札参加チェックリスト", checklist_content, "nyusatsu-checklist")
     
-    <div class="footer">
-        <strong>行政書士法人ふらっと法務事務所</strong><br>
-        TEL: 046-272-3357<br>
-        Email: mail@flat-legal.com
-    </div>
-</body>
-</html>
+    print("✓ nyusatsu-checklist.html created")
+    print("\\nTo convert to PDF:")
+    print("1. Open the HTML file in a browser")
+    print("2. Print -> Save as PDF")
+    print("3. Rename to .pdf and place in downloads folder")
