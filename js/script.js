@@ -1,18 +1,84 @@
 // ふらっと法務事務所 入札サポート専門サイト スクリプト
 
 document.addEventListener('DOMContentLoaded', function() {
+    // タッチデバイスの検出
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    if (isTouchDevice) {
+        document.body.classList.add('touch-device');
+    }
+    
     // ナビゲーションのスクロール効果
     const header = document.querySelector('.navbar');
+    let lastScrollTop = 0;
+    let scrollTimeout;
     
     window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-            header.classList.add('navbar-scrolled');
-        } else {
-            header.classList.remove('navbar-scrolled');
-        }
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > 50) {
+                header.classList.add('navbar-scrolled');
+                
+                // モバイルでのヘッダー自動非表示/表示
+                if (window.innerWidth <= 768) {
+                    if (scrollTop > lastScrollTop && scrollTop > 100) {
+                        // 下スクロール時にヘッダーを隠す
+                        header.style.transform = 'translateY(-100%)';
+                    } else {
+                        // 上スクロール時にヘッダーを表示
+                        header.style.transform = 'translateY(0)';
+                    }
+                }
+            } else {
+                header.classList.remove('navbar-scrolled');
+                header.style.transform = 'translateY(0)';
+            }
+            
+            lastScrollTop = scrollTop;
+        }, 10);
     });
     
-    // スムーススクロール
+    // ヘッダーのトランジション設定
+    header.style.transition = 'all 0.3s ease';
+    
+    // モバイルメニューの動作改善
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    
+    if (navbarToggler && navbarCollapse) {
+        // メニューの開閉状態を管理
+        let isMenuOpen = false;
+        
+        navbarToggler.addEventListener('click', function(e) {
+            e.stopPropagation();
+            isMenuOpen = !isMenuOpen;
+            
+            if (isMenuOpen) {
+                document.body.style.overflow = 'hidden'; // スクロール無効化
+            } else {
+                document.body.style.overflow = ''; // スクロール有効化
+            }
+        });
+        
+        // メニュー外タップで閉じる
+        document.addEventListener('click', function(e) {
+            if (isMenuOpen && !navbarCollapse.contains(e.target) && !navbarToggler.contains(e.target)) {
+                navbarToggler.click();
+            }
+        });
+        
+        // メニュー項目クリックで閉じる
+        navbarCollapse.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 991 && isMenuOpen) {
+                    navbarToggler.click();
+                }
+            });
+        });
+    }
+    
+    // スムーススクロール（改善版）
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -22,8 +88,11 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
+                const headerHeight = header.offsetHeight;
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+                
                 window.scrollTo({
-                    top: targetElement.offsetTop - 80,
+                    top: targetPosition,
                     behavior: 'smooth'
                 });
             }

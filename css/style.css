@@ -1276,6 +1276,95 @@ a:hover {
     }
 }
 
+/* ===== モバイル専用スタイル ===== */
+/* ハンバーガーメニューのタップ領域拡大 */
+.navbar-toggler {
+    padding: 0.5rem 0.75rem;
+    min-width: 44px;
+    min-height: 44px;
+    position: relative;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem rgba(26, 75, 132, 0.25);
+}
+
+/* モバイルナビゲーションの改善 */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: var(--white-color);
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        margin-top: 1rem;
+        padding: 1rem;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid var(--light-gray-color);
+    }
+    
+    .navbar-nav .nav-link:last-child {
+        border-bottom: none;
+    }
+}
+
+/* タッチデバイスでのホバー効果無効化 */
+@media (hover: none) and (pointer: coarse) {
+    .btn:hover,
+    .nav-link:hover,
+    .step-card:hover,
+    .service-card:hover,
+    .testimonial-card:hover,
+    .philosophy-card:hover,
+    .industry-item:hover {
+        transform: none;
+        box-shadow: none;
+    }
+    
+    .nav-link:hover:after {
+        width: 0;
+    }
+}
+
+/* スクロール時のヘッダー固定と影 */
+.navbar-scrolled {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+/* モバイルでのボタンサイズ最適化 */
+@media (max-width: 767px) {
+    .btn {
+        min-height: 44px;
+        padding: 12px 24px;
+        width: 100%;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+    }
+}
+
+/* iOS Safari対応 */
+@supports (-webkit-touch-callout: none) {
+    body {
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    .btn,
+    .nav-link {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+    }
+}
+
+/* スクロール可能な要素のモバイル最適化 */
+.scrollable-content {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+}
+
 /* アクセシビリティ向上のためのスタイル */
 .sr-only {
     position: absolute;
