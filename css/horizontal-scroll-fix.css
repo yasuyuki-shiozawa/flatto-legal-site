@@ -1,0 +1,311 @@
+/* 横スクロール防止のための修正CSS */
+
+/* 基本的な横スクロール防止 */
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+/* コンテナ要素の幅制限 */
+.container,
+.container-fluid {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* 全ての行とカラムの幅制限 */
+.row {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.col, .col-* {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+/* テーブルの横スクロール対策 */
+table {
+    width: 100%;
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* table-responsiveが適用されていないテーブルの修正 */
+.table:not(.table-responsive table) {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+    .table:not(.table-responsive table) {
+        font-size: 0.8rem;
+    }
+    
+    .table th,
+    .table td {
+        padding: 0.5rem 0.25rem;
+        white-space: normal;
+        word-break: break-word;
+    }
+}
+
+/* 業種グリッドの修正 */
+.industry-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+@media (max-width: 991px) {
+    .industry-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+}
+
+@media (max-width: 767px) {
+    .industry-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .industry-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+}
+
+/* 業種アイテムの幅制限 */
+.industry-item {
+    min-width: 0; /* フレックスアイテムの幅制限 */
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* フォーム要素の横スクロール対策 */
+.form-control,
+.form-select,
+.btn {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* ボタングループの修正 */
+.hero-buttons,
+.cta-buttons {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+@media (max-width: 767px) {
+    .hero-buttons,
+    .cta-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .hero-buttons .btn,
+    .cta-buttons .btn {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+/* 画像の横スクロール対策 */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.hero-image,
+.testimonial-card img,
+.staff-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* 長いテキストの折り返し */
+h1, h2, h3, h4, h5, h6,
+p, span, div, a {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+/* フッターの修正 */
+.footer-policy-links {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+@media (max-width: 767px) {
+    .footer-policy-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .footer-policy-links a {
+        margin-left: 0 !important;
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+    
+    .separator {
+        display: none;
+    }
+}
+
+/* カード要素の幅制限 */
+.step-card,
+.service-card,
+.testimonial-card,
+.content-card,
+.case-card,
+.philosophy-card {
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* アイコンとテキストの組み合わせ */
+.feature-item,
+.contact-info-item {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.feature-content,
+.contact-info-content {
+    min-width: 0; /* フレックスアイテムの幅制限 */
+    overflow: hidden;
+}
+
+/* ナビゲーションの修正 */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        max-width: 100%;
+        overflow: hidden;
+    }
+    
+    .navbar-nav {
+        max-width: 100%;
+    }
+    
+    .nav-link {
+        white-space: normal;
+        word-wrap: break-word;
+    }
+}
+
+/* タイムライン要素の修正 */
+.timeline {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.timeline-content {
+    max-width: calc(100% - 60px);
+    overflow: hidden;
+}
+
+/* アコーディオン要素の修正 */
+.accordion-button,
+.accordion-body {
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+/* 価格テーブルの修正 */
+.price-table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+@media (max-width: 767px) {
+    .price-table {
+        font-size: 0.85rem;
+    }
+    
+    .price-table th,
+    .price-table td {
+        padding: 8px 4px;
+        word-break: break-word;
+    }
+}
+
+/* コンテンツ内の長いURL対策 */
+a[href*="http"] {
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+/* 絶対配置要素の制限 */
+.section-title:after {
+    max-width: 60px;
+}
+
+/* プリコード要素の対策 */
+pre, code {
+    max-width: 100%;
+    overflow-x: auto;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+/* 特定ページでの追加対策 */
+/* contact.html のフォームステップ */
+.form-step {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.form-step .row {
+    margin: 0;
+}
+
+.form-step .col-md-6 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* knowhow.html のチェックリスト */
+.checklist-card {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.checklist-item {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.checklist-item label {
+    max-width: calc(100% - 30px);
+    word-wrap: break-word;
+}
+
+/* ファイナル調整：全要素に対する緊急対策 */
+* {
+    max-width: 100vw;
+    box-sizing: border-box;
+}
+
+/* ただし、以下の要素は除外 */
+html, body, .container, .container-fluid {
+    max-width: 100%;
+}

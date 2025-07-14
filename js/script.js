@@ -165,4 +165,73 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+    
+    // タッチイベントの最適化
+    if (isTouchDevice) {
+        // タッチ開始位置を記録
+        let touchStartX = 0;
+        let touchStartY = 0;
+        
+        document.addEventListener('touchstart', function(e) {
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+        }, { passive: true });
+        
+        // スワイプによるメニュー操作（オプション）
+        document.addEventListener('touchend', function(e) {
+            const touchEndX = e.changedTouches[0].clientX;
+            const touchEndY = e.changedTouches[0].clientY;
+            const deltaX = touchEndX - touchStartX;
+            const deltaY = touchEndY - touchStartY;
+            
+            // 横スワイプの検出（縦スワイプより大きい場合）
+            if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
+                if (deltaX > 0 && touchStartX < 20) {
+                    // 左端から右へのスワイプでメニューを開く
+                    if (navbarToggler && !navbarCollapse.classList.contains('show')) {
+                        navbarToggler.click();
+                    }
+                }
+            }
+        }, { passive: true });
+    }
+    
+    // パフォーマンス最適化：画像の遅延読み込み
+    const lazyImages = document.querySelectorAll('img[data-src]');
+    if (lazyImages.length > 0) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                    observer.unobserve(img);
+                }
+            });
+        });
+        
+        lazyImages.forEach(img => imageObserver.observe(img));
+    }
+    
+    // ビューポートサイズ変更時の処理
+    let resizeTimeout;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            // モバイルからデスクトップへの切り替え時にメニューをリセット
+            if (window.innerWidth > 991 && navbarCollapse) {
+                document.body.style.overflow = '';
+                navbarCollapse.classList.remove('show');
+            }
+        }, 250);
+    });
+    
+    // iOS Safariのバウンススクロール対策
+    if (isTouchDevice && /iPad|iPhone|iPod/.test(navigator.userAgent)) {
+        document.body.addEventListener('touchmove', function(e) {
+            if (document.body.style.overflow === 'hidden') {
+                e.preventDefault();
+            }
+        }, { passive: false });
+    }
 });
