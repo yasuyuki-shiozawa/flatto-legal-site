@@ -7,8 +7,8 @@
   publish = "."
 
 # Netlifyデフォルトドメインからのリダイレクト
-[[redirects]]
-  from = "https://flatto-legal-site.netlify.app/*"
-  to = "https://nyusatsu-map.com/:splat"
-  status = 301
-  force = true
+# [[redirects]]
+#   from = "https://flatto-legal-site.netlify.app/*"
+#   to = "https://nyusatsu-map.com/:splat"
+#   status = 301
+#   force = true
