@@ -277,16 +277,28 @@ permalink: /free-application/
     color: #1e40af;
 }
 
-.lp-pricing-amount {
-    font-size: 3.5rem;
+.lp-pricing-free {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #059669;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #059669;
+}
+
+.lp-pricing-monthly {
+    font-size: 2.2rem;
     font-weight: 800;
-    color: #3b82f6;
+    color: #1e40af;
     margin-bottom: 10px;
 }
 
-.lp-pricing-period {
+.lp-pricing-note {
     color: #64748b;
     margin-bottom: 30px;
+    font-size: 0.95rem;
 }
 
 .lp-pricing-features {
@@ -531,16 +543,16 @@ permalink: /free-application/
         </h1>
         <p class="lp-hero-subtitle">
             通常10万円の申請費用が0円！<br>
-            6ヶ月間の入札サポート付きで確実に資格取得
+            成功まで完全サポートで確実に資格取得
         </p>
         
-        <div class="lp-price-comparison">
-            <div class="lp-price-old">通常価格：100,000円</div>
-            <div class="lp-price-new">0円</div>
-            <div style="font-size: 1.1rem; margin-top: 10px;">
-                + 6ヶ月入札サポート（198,000円）
-            </div>
-        </div>
+    <div class="lp-price-comparison">
+    <div class="lp-price-old">通常価格：100,000円</div>
+    <div class="lp-price-new">0円</div>
+    <div class="lp-price-support">+ 成功まで完全サポート</div>
+  </div>
+        
+        <div class="lp-cta-buttons">
         
         <a href="#contact-form" class="lp-cta-button">
             🚀 今すぐ無料で申請する
@@ -671,16 +683,20 @@ permalink: /free-application/
 <!-- 料金セクション -->
 <section class="lp-pricing-section">
     <div class="lp-section">
-        <h2 class="lp-section-title">料金プラン</h2>
+        <h2 class="lp-section-title">成功サポートプラン</h2>
         <p class="lp-section-subtitle">
-            申請費用無料 + 6ヶ月サポートのお得なパッケージ
+            申請費用無料 + 成功まで完全サポートのパッケージ
         </p>
         
         <div class="lp-pricing-card">
             <div class="lp-pricing-badge">最もお得</div>
-            <h3 class="lp-pricing-title">全省庁統一資格申請 + 6ヶ月サポート</h3>
-            <div class="lp-pricing-amount">198,000円</div>
-            <div class="lp-pricing-period">一括払い（税込）</div>
+            <h3 class="lp-pricing-title">全省庁統一資格申請 + 成功サポート</h3>
+            
+            <div class="lp-pricing-main">
+                <div class="lp-pricing-free">申請費用：完全無料</div>
+                <div class="lp-pricing-monthly">月額 16,500円〜</div>
+                <div class="lp-pricing-note">（成功サポート・分割払いの場合）</div>
+            </div>
             
             <ul class="lp-pricing-features">
                 <li>全省庁統一資格申請代行（通常10万円 → 無料）</li>
@@ -695,7 +711,7 @@ permalink: /free-application/
             
             <div style="margin: 30px 0; padding: 20px; background: #f0f9ff; border-radius: 10px; border-left: 4px solid #3b82f6;">
                 <strong style="color: #1e40af;">セゾンインボイス分割払い対応</strong><br>
-                月額16,500円〜（12回払いの場合）<br>
+                <small style="color: #64748b;">※成功サポート費用のみ・申請費用は完全無料</small><br>
                 <small style="color: #64748b;">※審査により分割回数が決定されます</small>
             </div>
             
