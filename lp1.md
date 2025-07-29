@@ -464,7 +464,7 @@ permalink: /lp1/
         <p style="text-align: center; font-size: 20px; color: #64748b; margin-bottom: 60px;">申請費用無料のこの機会をお見逃しなく。<br>あなたの事業拡大を全力でサポートいたします。</p>
         
         <form style="background: #f8fafc; padding: 50px; border-radius: 20px; border: 2px solid #e2e8f0;">
-            <h3 style="font-size: 28px; font-weight: 600; margin-bottom: 30px; color: #2d3748; text-align: center;">無料申請 お申し込みフォーム</h3>
+            <h3 style="font-size: 28px; font-weight: 600; margin-bottom: 30px; color: #2d3748; text-align: center;">無料相談申し込み</h3>
             
             <div style="margin-bottom: 25px;">
                 <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #2d3748;">会社名 *</label>
@@ -499,17 +499,20 @@ permalink: /lp1/
             </div>
             
             <div style="margin-bottom: 25px;">
-                <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #2d3748;">お支払い方法 *</label>
-                <select name="payment" required style="width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
-                    <option value="">選択してください</option>
-                    <option value="一括払い">一括払い（198,000円）</option>
-                    <option value="分割払い">セゾンインボイス分割払い</option>
+                <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #2d3748;">相談内容</label>
+                <select name="consultation_type" style="width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
+                    <option value="">選択してください（任意）</option>
+                    <option value="全省庁統一資格について">全省庁統一資格について</option>
+                    <option value="入札参加について">入札参加について</option>
+                    <option value="書類作成について">書類作成について</option>
+                    <option value="サポート内容について">サポート内容について</option>
+                    <option value="その他">その他</option>
                 </select>
             </div>
             
             <div style="margin-bottom: 30px;">
-                <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #2d3748;">ご質問・ご要望</label>
-                <textarea name="message" rows="4" style="width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px; resize: vertical;"></textarea>
+                <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #2d3748;">ご質問・ご相談内容</label>
+                <textarea name="message" rows="4" placeholder="どのようなことでお困りでしょうか？お気軽にご相談ください。" style="width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px; resize: vertical;"></textarea>
             </div>
             
             <div style="margin-bottom: 30px;">
@@ -523,7 +526,7 @@ permalink: /lp1/
                 <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style="display: inline-block; margin-right: 10px; vertical-align: middle;">
                     <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
                 </svg>
-                無料申請を申し込む
+                無料相談を申し込む
             </button>
         </form>
     </div>
@@ -551,12 +554,12 @@ document.querySelector('form').addEventListener('submit', function(e) {
     const email = formData.get('email') || '';
     const phone = formData.get('phone') || '';
     const industry = formData.get('industry') || '';
-    const payment = formData.get('payment') || '';
+    const consultationType = formData.get('consultation_type') || '';
     const message = formData.get('message') || '';
     
     // メール本文を作成
-    const subject = 'LP1からのお申し込み';
-    const body = `お名前：${name}%0D%0A会社名：${company}%0D%0A電話番号：${phone}%0D%0Aメールアドレス：${email}%0D%0A業種：${industry}%0D%0Aお支払い方法：${payment}%0D%0A%0D%0Aご質問・ご要望：%0D%0A${message}`;
+    const subject = 'LP1からの無料相談申し込み';
+    const body = `お名前：${name}%0D%0A会社名：${company}%0D%0A電話番号：${phone}%0D%0Aメールアドレス：${email}%0D%0A業種：${industry}%0D%0A相談内容：${consultationType}%0D%0A%0D%0Aご質問・ご相談内容：%0D%0A${message}`;
     
     // メールクライアントを開く
     window.location.href = `mailto:mail@flat-legal.com?subject=${subject}&body=${body}`;
