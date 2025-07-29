@@ -542,14 +542,14 @@ permalink: /free-application/
             <span style="color: #fbbf24;">完全無料</span>
         </h1>
         <p class="lp-hero-subtitle">
-            他社は資格取得のみ。当事務所は<strong>落札まで</strong>サポート！<br>
-            <strong>資格を取っても入札できない問題を解決</strong>
+            他社は資格取得のみ。当事務所は<strong>入札参加まで</strong>サポート！<br>
+            <strong>案件発見から入札手続きまでの完全フロー支援</strong>
         </p>
         
     <div class="lp-price-comparison">
     <div class="lp-price-old">他社：申請のみ（100,000円）</div>
-    <div class="lp-price-new">当事務所：申請無料 + 落札まで</div>
-    <div class="lp-price-support">資格取得だけでは終わらない</div>
+    <div class="lp-price-new">当事務所：申請無料 + 入札参加まで</div>
+    <div class="lp-price-support">案件発見から手続きまで完全サポート</div>
   </div>
         
         <div class="lp-cta-buttons">
@@ -597,18 +597,19 @@ permalink: /free-application/
             <h4 style="color: #dc2626; margin-bottom: 15px;">⚠️ 業界の問題</h4>
             <p style="color: #7f1d1d; font-size: 1.1rem; margin: 0;">
                 <strong>入札参加資格を取得しても、実際に入札手続きに進める事業者は少ない</strong><br>
-                資格取得だけでは意味がありません。落札して初めて成果です。
+                資格取得だけでは意味がありません。案件を見つけて入札参加することが重要です。
             </p>
         </div>
         
         <div style="background: #f0fdf4; padding: 25px; border-radius: 15px; margin: 30px 0; border-left: 4px solid #059669;">
             <h4 style="color: #059669; margin-bottom: 15px;">✅ 当事務所の解決策</h4>
             <p style="color: #064e3b; font-size: 1.1rem; margin-bottom: 20px;">
-                <strong>申請費用無料 + 落札まで完全サポート</strong><br>
+                <strong>申請費用無料 + 入札参加まで完全サポート</strong><br>
                 入札サポート（月額33,000円）を6ヶ月間ご契約いただくことで、申請費用を完全無料でご提供。
             </p>
             <ul style="color: #064e3b; margin: 0; padding-left: 20px;">
-                <li>資格取得から落札まで一貫サポート</li>
+                <li>資格取得から入札参加まで一貫サポート</li>
+                <li>案件発見・情報提供</li>
                 <li>入札手続きの完全代行</li>
                 <li>提案書作成から入札戦略まで</li>
             </ul>
@@ -630,7 +631,12 @@ permalink: /free-application/
                 <tr>
                     <td style="padding: 15px; border: 1px solid #e2e8f0;">サポート範囲</td>
                     <td style="padding: 15px; border: 1px solid #e2e8f0; text-align: center; color: #dc2626;">資格取得のみ</td>
-                    <td style="padding: 15px; border: 1px solid #e2e8f0; text-align: center; color: #059669; background: #f0fdf4;">落札まで完全サポート</td>
+                    <td style="padding: 15px; border: 1px solid #e2e8f0; text-align: center; color: #059669; background: #f0fdf4;">入札参加まで完全サポート</td>
+                </tr>
+                <tr>
+                    <td style="padding: 15px; border: 1px solid #e2e8f0;">案件発見</td>
+                    <td style="padding: 15px; border: 1px solid #e2e8f0; text-align: center;">お客様任せ</td>
+                    <td style="padding: 15px; border: 1px solid #e2e8f0; text-align: center; background: #f0fdf4;">情報提供・サポート</td>
                 </tr>
                 <tr>
                     <td style="padding: 15px; border: 1px solid #e2e8f0;">入札手続き</td>
@@ -638,9 +644,9 @@ permalink: /free-application/
                     <td style="padding: 15px; border: 1px solid #e2e8f0; text-align: center; background: #f0fdf4;">完全代行</td>
                 </tr>
                 <tr>
-                    <td style="padding: 15px; border: 1px solid #e2e8f0;">成果保証</td>
+                    <td style="padding: 15px; border: 1px solid #e2e8f0;">継続サポート</td>
                     <td style="padding: 15px; border: 1px solid #e2e8f0; text-align: center;">なし</td>
-                    <td style="padding: 15px; border: 1px solid #e2e8f0; text-align: center; background: #f0fdf4;">落札まで責任</td>
+                    <td style="padding: 15px; border: 1px solid #e2e8f0; text-align: center; background: #f0fdf4;">6ヶ月間</td>
                 </tr>
                 <tr>
                     <td style="padding: 15px; border: 1px solid #e2e8f0;">分割払い</td>
@@ -653,10 +659,10 @@ permalink: /free-application/
         <div style="background: #fef3c7; padding: 25px; border-radius: 10px; border-left: 4px solid #f59e0b;">
             <h4 style="color: #92400e; margin-bottom: 15px;">なぜこのモデルが可能なのか？</h4>
             <ul style="color: #92400e; margin: 0; padding-left: 20px;">
-                <li><strong>成果報酬型の考え方</strong> - お客様が落札して初めて成功</li>
+                <li><strong>プロセス重視の考え方</strong> - 入札参加の機会創出に価値</li>
                 <li><strong>長期パートナーシップ</strong> - 継続的な関係性による安定収益</li>
                 <li><strong>専門性の活用</strong> - 入札のプロとして価値を提供</li>
-                <li><strong>Win-Winの関係</strong> - お客様の成功が当事務所の成功</li>
+                <li><strong>Win-Winの関係</strong> - お客様の成長が当事務所の成功</li>
             </ul>
         </div>
         
