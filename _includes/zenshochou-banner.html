@@ -1,0 +1,80 @@
+<!-- 全省庁統一資格専用バナー -->
+{% if include.type == "hero" %}
+<!-- ヒーローセクション下用バナー (970x250) -->
+<div class="zenshochou-banner-hero">
+    <a href="/zenshochou-lp/" onclick="gtag('event', 'click', {'event_category': 'banner', 'event_label': 'zenshochou_hero'});">
+        <img src="/assets/images/banners/banner_zenshochou_hero_970x250.png" alt="全省庁統一資格 完全ガイド - 国の入札参加に必要な資格を詳しく解説" loading="lazy">
+    </a>
+</div>
+
+{% elsif include.type == "sidebar" %}
+<!-- サイドバー用バナー (300x250) -->
+<div class="zenshochou-banner-sidebar">
+    <a href="/zenshochou-lp/" onclick="gtag('event', 'click', {'event_category': 'banner', 'event_label': 'zenshochou_sidebar'});">
+        <img src="/assets/images/banners/banner_zenshochou_sidebar_300x250.png" alt="全省庁統一資格 完全ガイド - 詳しく見る" loading="lazy">
+    </a>
+</div>
+
+{% elsif include.type == "leaderboard" %}
+<!-- 記事間挿入用バナー (728x90) -->
+<div class="zenshochou-banner-leaderboard">
+    <a href="/zenshochou-lp/" onclick="gtag('event', 'click', {'event_category': 'banner', 'event_label': 'zenshochou_leaderboard'});">
+        <img src="/assets/images/banners/banner_zenshochou_leaderboard_728x90.png" alt="全省庁統一資格 完全ガイド - 詳細を見る" loading="lazy">
+    </a>
+</div>
+
+{% endif %}
+
+<style>
+/* 全省庁統一資格バナー専用スタイル */
+.zenshochou-banner-hero,
+.zenshochou-banner-sidebar,
+.zenshochou-banner-leaderboard {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.zenshochou-banner-hero a,
+.zenshochou-banner-sidebar a,
+.zenshochou-banner-leaderboard a {
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.zenshochou-banner-hero a:hover,
+.zenshochou-banner-sidebar a:hover,
+.zenshochou-banner-leaderboard a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.zenshochou-banner-hero img,
+.zenshochou-banner-sidebar img,
+.zenshochou-banner-leaderboard img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .zenshochou-banner-hero {
+        margin: 1.5rem 0;
+    }
+    
+    .zenshochou-banner-hero img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .zenshochou-banner-hero,
+    .zenshochou-banner-leaderboard {
+        margin: 1rem 0;
+    }
+}
+</style>
+

@@ -8,6 +8,11 @@ main_nav:
     icon: "fas fa-home"
     description: "トップページ"
     
+  - name: "全省庁統一資格"
+    url: "/zenshochou-lp/"
+    icon: "fas fa-certificate"
+    description: "全省庁統一資格の詳細ガイド"
+    
   - name: "入札の基本"
     url: "/knowhow/"
     icon: "fas fa-graduation-cap"
