@@ -351,7 +351,7 @@ permalink: /lp1/
         <h1 class="hero-catchcopy">入札参加、もう迷わない</h1>
         <h2 class="hero-title">全省庁統一資格申請<br><span class="highlight">完全無料</span></h2>
         <p class="hero-subtitle">※ただし、入札サポート（月額33,000円×6ヶ月）のご利用が条件となります</p>
-        <a href="#contact" class="hero-cta">
+        <a href="mailto:mail@flat-legal.com?subject=LP1からのお問い合わせ&body=お名前：%0D%0A会社名：%0D%0A電話番号：%0D%0A%0D%0Aお問い合わせ内容：%0D%0A" class="hero-cta">
             <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style="display: inline-block; margin-right: 10px; vertical-align: middle;">
                 <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
             </svg>
@@ -453,7 +453,7 @@ permalink: /lp1/
             ※審査により分割回数が決定されます
         </p>
         
-        <a href="#contact" class="pricing-cta">今すぐ申し込む</a>
+        <a href="mailto:mail@flat-legal.com?subject=LP1からのお申し込み&body=お名前：%0D%0A会社名：%0D%0A電話番号：%0D%0A%0D%0A申し込み内容：全省庁統一資格申請+6ヶ月サポート%0D%0A%0D%0Aご質問・ご要望：%0D%0A" class="pricing-cta">今すぐ申し込む</a>
     </div>
 </section>
 
@@ -468,27 +468,27 @@ permalink: /lp1/
             
             <div style="margin-bottom: 25px;">
                 <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #2d3748;">会社名 *</label>
-                <input type="text" required style="width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
+                <input type="text" name="company" required style="width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
             </div>
             
             <div style="margin-bottom: 25px;">
                 <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #2d3748;">代表者名 *</label>
-                <input type="text" required style="width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
+                <input type="text" name="name" required style="width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
             </div>
             
             <div style="margin-bottom: 25px;">
                 <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #2d3748;">メールアドレス *</label>
-                <input type="email" required style="width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
+                <input type="email" name="email" required style="width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
             </div>
             
             <div style="margin-bottom: 25px;">
                 <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #2d3748;">電話番号 *</label>
-                <input type="tel" required style="width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
+                <input type="tel" name="phone" required style="width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
             </div>
             
             <div style="margin-bottom: 25px;">
                 <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #2d3748;">業種 *</label>
-                <select required style="width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
+                <select name="industry" required style="width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
                     <option value="">選択してください</option>
                     <option value="建設業">建設業</option>
                     <option value="IT・システム">IT・システム</option>
@@ -500,7 +500,7 @@ permalink: /lp1/
             
             <div style="margin-bottom: 25px;">
                 <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #2d3748;">お支払い方法 *</label>
-                <select required style="width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
+                <select name="payment" required style="width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
                     <option value="">選択してください</option>
                     <option value="一括払い">一括払い（198,000円）</option>
                     <option value="分割払い">セゾンインボイス分割払い</option>
@@ -509,7 +509,7 @@ permalink: /lp1/
             
             <div style="margin-bottom: 30px;">
                 <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #2d3748;">ご質問・ご要望</label>
-                <textarea rows="4" style="width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px; resize: vertical;"></textarea>
+                <textarea name="message" rows="4" style="width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px; resize: vertical;"></textarea>
             </div>
             
             <div style="margin-bottom: 30px;">
@@ -543,7 +543,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // フォーム送信処理
 document.querySelector('form').addEventListener('submit', function(e) {
     e.preventDefault();
-    alert('お申し込みありがとうございます。担当者より24時間以内にご連絡いたします。');
+    
+    // フォームデータを取得
+    const formData = new FormData(this);
+    const company = formData.get('company') || '';
+    const name = formData.get('name') || '';
+    const email = formData.get('email') || '';
+    const phone = formData.get('phone') || '';
+    const industry = formData.get('industry') || '';
+    const payment = formData.get('payment') || '';
+    const message = formData.get('message') || '';
+    
+    // メール本文を作成
+    const subject = 'LP1からのお申し込み';
+    const body = `お名前：${name}%0D%0A会社名：${company}%0D%0A電話番号：${phone}%0D%0Aメールアドレス：${email}%0D%0A業種：${industry}%0D%0Aお支払い方法：${payment}%0D%0A%0D%0Aご質問・ご要望：%0D%0A${message}`;
+    
+    // メールクライアントを開く
+    window.location.href = `mailto:mail@flat-legal.com?subject=${subject}&body=${body}`;
 });
 </script>
 
