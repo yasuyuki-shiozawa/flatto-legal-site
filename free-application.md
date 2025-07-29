@@ -20,13 +20,15 @@ permalink: /free-application/
     color: #1e293b;
 }
 
-.lp-hero {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #334155 100%);
-    color: white;
-    padding: 100px 0;
+.lp-h  .hero {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 50%, #90caf9 100%);
+    color: #1a365d;
+    padding: 4rem 2rem;
     text-align: center;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }en;
 }
 
 .lp-hero::before {
@@ -71,18 +73,16 @@ permalink: /free-application/
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 24px;
-    background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #1a365d;
     letter-spacing: -0.02em;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .lp-hero-subtitle {
     font-size: 1.25rem;
     font-weight: 400;
     margin-bottom: 40px;
-    opacity: 0.9;
+    color: #2d3748;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -90,19 +90,18 @@ permalink: /free-application/
 }
 
 .lp-price-comparison {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(26, 54, 93, 0.1);
     padding: 32px;
     border-radius: 24px;
     margin: 40px 0;
-    backdrop-filter: blur(20px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .lp-price-old {
     font-size: 1.1rem;
     text-decoration: line-through;
-    opacity: 0.7;
+    color: #64748b;
     margin-bottom: 12px;
     font-weight: 500;
 }
@@ -110,40 +109,46 @@ permalink: /free-application/
 .lp-price-new {
     font-size: 3.5rem;
     font-weight: 800;
-    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #dc2626;
     letter-spacing: -0.02em;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .lp-cta-button {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    background: linear-gradient(135deg, #ff6b35 0%, #f56500 100%);
     color: white;
     padding: 18px 32px;
     font-size: 1.1rem;
     font-weight: 600;
     text-decoration: none;
     border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     margin: 16px 8px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: none;
 }
 
 .lp-cta-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 20px 40px rgba(255, 107, 53, 0.4);
     color: white;
     text-decoration: none;
 }
 
 .lp-cta-button.secondary {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
-    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.95);
+    color: #1a365d;
+    border: 2px solid #1a365d;
+    box-shadow: 0 10px 30px rgba(26, 54, 93, 0.1);
+}
+
+.lp-cta-button.secondary:hover {
+    background: #1a365d;
+    color: white;
+    box-shadow: 0 20px 40px rgba(26, 54, 93, 0.3);
 }
 
 .lp-section {
