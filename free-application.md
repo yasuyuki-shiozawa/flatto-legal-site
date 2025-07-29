@@ -10,15 +10,20 @@ permalink: /free-application/
 ---
 
 <style>
-/* 専用LP用のスタイル */
+/* 専用LP用のスタイル - 洗練されたデザインシステム */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 .free-application-page {
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #fafbff 0%, #f1f5f9 50%, #e8f2ff 100%);
+    line-height: 1.6;
+    color: #1e293b;
 }
 
 .lp-hero {
-    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #334155 100%);
     color: white;
-    padding: 80px 0;
+    padding: 100px 0;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -31,156 +36,203 @@ permalink: /free-application/
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-    opacity: 0.3;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
+    opacity: 0.8;
 }
 
 .lp-hero-content {
     position: relative;
     z-index: 2;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 24px;
 }
 
 .lp-hero-badge {
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 8px 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px 24px;
     border-radius: 50px;
     font-size: 14px;
     font-weight: 600;
-    margin-bottom: 20px;
-    backdrop-filter: blur(10px);
+    margin-bottom: 32px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .lp-hero-title {
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    line-height: 1.1;
+    margin-bottom: 24px;
+    background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.02em;
 }
 
 .lp-hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 400;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
 }
 
 .lp-price-comparison {
-    background: rgba(255, 255, 255, 0.15);
-    padding: 20px;
-    border-radius: 15px;
-    margin: 30px 0;
-    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 32px;
+    border-radius: 24px;
+    margin: 40px 0;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .lp-price-old {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-decoration: line-through;
     opacity: 0.7;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    font-weight: 500;
 }
 
 .lp-price-new {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 800;
-    color: #fbbf24;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.02em;
 }
 
 .lp-cta-button {
-    display: inline-block;
-    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
     color: white;
-    padding: 20px 40px;
-    font-size: 1.3rem;
-    font-weight: 700;
+    padding: 18px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
     text-decoration: none;
-    border-radius: 50px;
-    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4);
-    transition: all 0.3s ease;
-    margin: 20px 10px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 16px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .lp-cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(245, 158, 11, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.4);
     color: white;
     text-decoration: none;
 }
 
+.lp-cta-button.secondary {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    backdrop-filter: blur(20px);
+}
+
 .lp-section {
-    padding: 80px 0;
+    padding: 100px 24px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .lp-section-title {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 20px;
-    color: #1e40af;
+    margin-bottom: 24px;
+    color: #0f172a;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
 }
 
 .lp-section-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.125rem;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
     color: #64748b;
-    max-width: 600px;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.7;
 }
 
 .lp-features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    margin: 60px 0;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 32px;
+    margin: 80px 0;
 }
 
 .lp-feature-card {
-    background: white;
-    padding: 40px 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    padding: 40px 32px;
+    border-radius: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     text-align: center;
-    transition: all 0.3s ease;
-    border: 1px solid #e2e8f0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    position: relative;
+    overflow: hidden;
+}
+
+.lp-feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
 }
 
 .lp-feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
 
 .lp-feature-icon {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
-    border-radius: 50%;
+    width: 72px;
+    height: 72px;
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 20px;
-    font-size: 2rem;
+    margin: 0 auto 24px;
+    font-size: 1.5rem;
     color: white;
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
 }
 
 .lp-feature-title {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
     font-weight: 600;
-    margin-bottom: 15px;
-    color: #1e40af;
+    margin-bottom: 16px;
+    color: #0f172a;
+    letter-spacing: -0.01em;
 }
 
 .lp-feature-description {
     color: #64748b;
-    line-height: 1.6;
+    line-height: 1.7;
+    font-size: 15px;
 }
 
 .lp-pricing-section {
@@ -525,7 +577,15 @@ permalink: /free-application/
     
     <div class="lp-features-grid">
         <div class="lp-feature-card">
-            <div class="lp-feature-icon">📋</div>
+            <div class="lp-feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14,2 14,8 20,8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                    <polyline points="10,9 9,9 8,9"/>
+                </svg>
+            </div>
             <h3 class="lp-feature-title">完全無料申請</h3>
             <p class="lp-feature-description">
                 通常10万円かかる全省庁統一資格申請を完全無料で代行。書類作成から提出まで全てお任せください。
@@ -533,7 +593,17 @@ permalink: /free-application/
         </div>
         
         <div class="lp-feature-card">
-            <div class="lp-feature-icon">🎯</div>
+            <div class="lp-feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="3"/>
+                    <path d="M12 1v6m0 6v6"/>
+                    <path d="m15.5 3.5-3 3-3-3"/>
+                    <path d="m15.5 20.5-3-3-3 3"/>
+                    <path d="M1 12h6m6 0h6"/>
+                    <path d="m3.5 15.5 3-3 3 3"/>
+                    <path d="m20.5 15.5-3-3-3 3"/>
+                </svg>
+            </div>
             <h3 class="lp-feature-title">6ヶ月入札サポート</h3>
             <p class="lp-feature-description">
                 資格取得後の6ヶ月間、入札案件の紹介から提案書作成まで、入札成功に向けて徹底サポートします。
@@ -541,7 +611,13 @@ permalink: /free-application/
         </div>
         
         <div class="lp-feature-card">
-            <div class="lp-feature-icon">💳</div>
+            <div class="lp-feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                    <line x1="8" y1="21" x2="16" y2="21"/>
+                    <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+            </div>
             <h3 class="lp-feature-title">分割払い対応</h3>
             <p class="lp-feature-description">
                 セゾンインボイスによる分割払いで、月額16,500円〜のお支払いが可能。初期負担を大幅軽減。
@@ -549,7 +625,12 @@ permalink: /free-application/
         </div>
         
         <div class="lp-feature-card">
-            <div class="lp-feature-icon">🏆</div>
+            <div class="lp-feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 12l2 2 4-4"/>
+                    <path d="M21 12c.552 0 1-.448 1-1V5c0-.552-.448-1-1-1H3c-.552 0-1 .448-1 1v6c0 .552.448 1 1 1h9zm0 0v7c0 .552-.448 1-1 1H10c-.552 0-1-.448-1-1v-7"/>
+                </svg>
+            </div>
             <h3 class="lp-feature-title">100%取得保証</h3>
             <p class="lp-feature-description">
                 行政書士法人として豊富な実績。万が一取得できない場合は全額返金いたします。
@@ -557,7 +638,11 @@ permalink: /free-application/
         </div>
         
         <div class="lp-feature-card">
-            <div class="lp-feature-icon">⚡</div>
+            <div class="lp-feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                </svg>
+            </div>
             <h3 class="lp-feature-title">最短2週間で取得</h3>
             <p class="lp-feature-description">
                 効率的な申請プロセスにより、最短2週間での資格取得が可能。すぐに入札参加を開始できます。
@@ -565,7 +650,11 @@ permalink: /free-application/
         </div>
         
         <div class="lp-feature-card">
-            <div class="lp-feature-icon">📞</div>
+            <div class="lp-feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+            </div>
             <h3 class="lp-feature-title">専任担当制</h3>
             <p class="lp-feature-description">
                 お客様一人ひとりに専任担当者が付き、申請から入札成功まで一貫してサポートいたします。
