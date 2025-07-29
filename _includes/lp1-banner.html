@@ -1,0 +1,165 @@
+<!-- LP1バナー表示コンポーネント -->
+<div class="lp1-banner-container" data-banner-type="{{ include.type | default: 'hero' }}">
+    {% case include.type %}
+        {% when 'hero' %}
+            <!-- ヒーロー下バナー (970x250) -->
+            <div class="lp1-banner lp1-banner-hero">
+                <a href="/lp1/" class="lp1-banner-link" onclick="gtag('event', 'click', {'event_category': 'LP1_Banner', 'event_label': 'Hero_Banner'});">
+                    <img src="/assets/images/banners/banner_lp1_hero_970x250.png" 
+                         alt="入札参加、もう迷わない - 全省庁統一資格申請完全無料" 
+                         class="lp1-banner-image"
+                         loading="lazy">
+                </a>
+            </div>
+        
+        {% when 'sidebar' %}
+            <!-- サイドバーバナー (300x250) -->
+            <div class="lp1-banner lp1-banner-sidebar">
+                <a href="/lp1/" class="lp1-banner-link" onclick="gtag('event', 'click', {'event_category': 'LP1_Banner', 'event_label': 'Sidebar_Banner'});">
+                    <img src="/assets/images/banners/banner_lp1_sidebar_300x250.png" 
+                         alt="入札参加、もう迷わない - 完全無料申請" 
+                         class="lp1-banner-image"
+                         loading="lazy">
+                </a>
+            </div>
+        
+        {% when 'leaderboard' %}
+            <!-- 記事間バナー (728x90) -->
+            <div class="lp1-banner lp1-banner-leaderboard">
+                <a href="/lp1/" class="lp1-banner-link" onclick="gtag('event', 'click', {'event_category': 'LP1_Banner', 'event_label': 'Leaderboard_Banner'});">
+                    <img src="/assets/images/banners/banner_lp1_leaderboard_728x90.png" 
+                         alt="入札参加、もう迷わない - 申請費用完全無料" 
+                         class="lp1-banner-image"
+                         loading="lazy">
+                </a>
+            </div>
+        
+        {% when 'square' %}
+            <!-- 正方形バナー (250x250) -->
+            <div class="lp1-banner lp1-banner-square">
+                <a href="/lp1/" class="lp1-banner-link" onclick="gtag('event', 'click', {'event_category': 'LP1_Banner', 'event_label': 'Square_Banner'});">
+                    <img src="/assets/images/banners/banner_lp1_square_250x250.png" 
+                         alt="入札参加、もう迷わない - 完全無料" 
+                         class="lp1-banner-image"
+                         loading="lazy">
+                </a>
+            </div>
+        
+        {% when 'footer' %}
+            <!-- フッターバナー (970x250) -->
+            <div class="lp1-banner lp1-banner-footer">
+                <a href="/lp1/" class="lp1-banner-link" onclick="gtag('event', 'click', {'event_category': 'LP1_Banner', 'event_label': 'Footer_Banner'});">
+                    <img src="/assets/images/banners/banner_lp1_footer_970x250.png" 
+                         alt="まだ迷っていませんか？入札参加の第一歩を踏み出そう" 
+                         class="lp1-banner-image"
+                         loading="lazy">
+                </a>
+            </div>
+        
+        {% else %}
+            <!-- デフォルト: ヒーローバナー -->
+            <div class="lp1-banner lp1-banner-hero">
+                <a href="/lp1/" class="lp1-banner-link" onclick="gtag('event', 'click', {'event_category': 'LP1_Banner', 'event_label': 'Default_Banner'});">
+                    <img src="/assets/images/banners/banner_lp1_hero_970x250.png" 
+                         alt="入札参加、もう迷わない - 全省庁統一資格申請完全無料" 
+                         class="lp1-banner-image"
+                         loading="lazy">
+                </a>
+            </div>
+    {% endcase %}
+</div>
+
+<!-- LP1バナー専用CSS -->
+<style>
+.lp1-banner-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.lp1-banner {
+    display: inline-block;
+    max-width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lp1-banner:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.lp1-banner-link {
+    display: block;
+    text-decoration: none;
+}
+
+.lp1-banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: none;
+}
+
+/* バナータイプ別スタイル */
+.lp1-banner-hero {
+    max-width: 970px;
+    margin: 0 auto;
+}
+
+.lp1-banner-sidebar {
+    max-width: 300px;
+    margin: 0 auto 20px;
+}
+
+.lp1-banner-leaderboard {
+    max-width: 728px;
+    margin: 0 auto;
+}
+
+.lp1-banner-square {
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.lp1-banner-footer {
+    max-width: 970px;
+    margin: 0 auto;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .lp1-banner-hero,
+    .lp1-banner-footer {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    
+    .lp1-banner-leaderboard {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    
+    .lp1-banner-sidebar,
+    .lp1-banner-square {
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .lp1-banner-container {
+        margin: 15px 0;
+    }
+    
+    .lp1-banner {
+        border-radius: 6px;
+    }
+    
+    .lp1-banner-sidebar,
+    .lp1-banner-square {
+        max-width: 250px;
+    }
+}
+</style>
+
