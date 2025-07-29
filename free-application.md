@@ -542,23 +542,23 @@ permalink: /free-application/
             <span style="color: #fbbf24;">完全無料</span>
         </h1>
         <p class="lp-hero-subtitle">
-            通常10万円の申請費用が0円！<br>
-            成功まで完全サポートで確実に資格取得
+            他社は資格取得のみ。当事務所は<strong>落札まで</strong>サポート！<br>
+            <strong>資格を取っても入札できない問題を解決</strong>
         </p>
         
     <div class="lp-price-comparison">
-    <div class="lp-price-old">通常価格：100,000円</div>
-    <div class="lp-price-new">0円</div>
-    <div class="lp-price-support">+ 成功まで完全サポート</div>
+    <div class="lp-price-old">他社：申請のみ（100,000円）</div>
+    <div class="lp-price-new">当事務所：申請無料 + 落札まで</div>
+    <div class="lp-price-support">資格取得だけでは終わらない</div>
   </div>
         
         <div class="lp-cta-buttons">
         
         <a href="#contact-form" class="lp-cta-button">
-            🚀 今すぐ無料で申請する
+            📞 まずは無料相談・問い合わせ
         </a>
-        <a href="#details" class="lp-cta-button" style="background: rgba(255,255,255,0.2); backdrop-filter: blur(10px);">
-            📋 詳細を確認する
+        <a href="#why-free" class="lp-cta-button-secondary">
+            📋 なぜ無料なのか詳細を見る
         </a>
     </div>
 </section>
@@ -588,9 +588,84 @@ permalink: /free-application/
 <!-- サービス詳細 -->
 <section id="details" class="lp-section">
     <h2 class="lp-section-title">なぜ申請費用が無料なのか？</h2>
-    <p class="lp-section-subtitle">
-        6ヶ月間の入札サポートをご契約いただくことで、申請費用を完全無料でご提供いたします
-    </p>
+    <div id="why-free"></div>
+    
+    <div style="background: #f8fafc; padding: 40px; border-radius: 20px; margin: 40px 0;">
+        <h3 style="color: #1e40af; margin-bottom: 20px; font-size: 1.5rem;">業界の課題を解決する独自アプローチ</h3>
+        
+        <div style="background: #fef2f2; padding: 25px; border-radius: 15px; margin: 30px 0; border-left: 4px solid #dc2626;">
+            <h4 style="color: #dc2626; margin-bottom: 15px;">⚠️ 業界の問題</h4>
+            <p style="color: #7f1d1d; font-size: 1.1rem; margin: 0;">
+                <strong>入札参加資格を取得しても、実際に入札手続きに進める事業者は少ない</strong><br>
+                資格取得だけでは意味がありません。落札して初めて成果です。
+            </p>
+        </div>
+        
+        <div style="background: #f0fdf4; padding: 25px; border-radius: 15px; margin: 30px 0; border-left: 4px solid #059669;">
+            <h4 style="color: #059669; margin-bottom: 15px;">✅ 当事務所の解決策</h4>
+            <p style="color: #064e3b; font-size: 1.1rem; margin-bottom: 20px;">
+                <strong>申請費用無料 + 落札まで完全サポート</strong><br>
+                入札サポート（月額33,000円）を6ヶ月間ご契約いただくことで、申請費用を完全無料でご提供。
+            </p>
+            <ul style="color: #064e3b; margin: 0; padding-left: 20px;">
+                <li>資格取得から落札まで一貫サポート</li>
+                <li>入札手続きの完全代行</li>
+                <li>提案書作成から入札戦略まで</li>
+            </ul>
+        </div>
+        
+        <div style="background: white; padding: 30px; border-radius: 15px; margin: 30px 0;">
+            <h4 style="color: #dc2626; margin-bottom: 20px;">他社との決定的な違い</h4>
+            <table style="width: 100%; border-collapse: collapse;">
+                <tr style="background: #f1f5f9;">
+                    <th style="padding: 15px; border: 1px solid #e2e8f0; text-align: left;">項目</th>
+                    <th style="padding: 15px; border: 1px solid #e2e8f0; text-align: center;">他社</th>
+                    <th style="padding: 15px; border: 1px solid #e2e8f0; text-align: center; background: #dbeafe;">当事務所</th>
+                </tr>
+                <tr>
+                    <td style="padding: 15px; border: 1px solid #e2e8f0;">申請費用</td>
+                    <td style="padding: 15px; border: 1px solid #e2e8f0; text-align: center; color: #dc2626; font-weight: bold;">10万円</td>
+                    <td style="padding: 15px; border: 1px solid #e2e8f0; text-align: center; color: #059669; font-weight: bold; background: #f0fdf4;">0円</td>
+                </tr>
+                <tr>
+                    <td style="padding: 15px; border: 1px solid #e2e8f0;">サポート範囲</td>
+                    <td style="padding: 15px; border: 1px solid #e2e8f0; text-align: center; color: #dc2626;">資格取得のみ</td>
+                    <td style="padding: 15px; border: 1px solid #e2e8f0; text-align: center; color: #059669; background: #f0fdf4;">落札まで完全サポート</td>
+                </tr>
+                <tr>
+                    <td style="padding: 15px; border: 1px solid #e2e8f0;">入札手続き</td>
+                    <td style="padding: 15px; border: 1px solid #e2e8f0; text-align: center;">お客様任せ</td>
+                    <td style="padding: 15px; border: 1px solid #e2e8f0; text-align: center; background: #f0fdf4;">完全代行</td>
+                </tr>
+                <tr>
+                    <td style="padding: 15px; border: 1px solid #e2e8f0;">成果保証</td>
+                    <td style="padding: 15px; border: 1px solid #e2e8f0; text-align: center;">なし</td>
+                    <td style="padding: 15px; border: 1px solid #e2e8f0; text-align: center; background: #f0fdf4;">落札まで責任</td>
+                </tr>
+                <tr>
+                    <td style="padding: 15px; border: 1px solid #e2e8f0;">分割払い</td>
+                    <td style="padding: 15px; border: 1px solid #e2e8f0; text-align: center;">不可</td>
+                    <td style="padding: 15px; border: 1px solid #e2e8f0; text-align: center; background: #f0fdf4;">可能</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div style="background: #fef3c7; padding: 25px; border-radius: 10px; border-left: 4px solid #f59e0b;">
+            <h4 style="color: #92400e; margin-bottom: 15px;">なぜこのモデルが可能なのか？</h4>
+            <ul style="color: #92400e; margin: 0; padding-left: 20px;">
+                <li><strong>成果報酬型の考え方</strong> - お客様が落札して初めて成功</li>
+                <li><strong>長期パートナーシップ</strong> - 継続的な関係性による安定収益</li>
+                <li><strong>専門性の活用</strong> - 入札のプロとして価値を提供</li>
+                <li><strong>Win-Winの関係</strong> - お客様の成功が当事務所の成功</li>
+            </ul>
+        </div>
+        
+        <div style="text-align: center; margin: 40px 0;">
+            <a href="#contact-form" style="display: inline-block; background: linear-gradient(135deg, #ff6b35 0%, #f59e0b 100%); color: white; padding: 20px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.2rem; box-shadow: 0 10px 30px rgba(245, 158, 11, 0.3); transition: all 0.3s ease;">
+                📞 まずは無料相談で詳しく聞く
+            </a>
+        </div>
+    </div>
     
     <div class="lp-features-grid">
         <div class="lp-feature-card">
