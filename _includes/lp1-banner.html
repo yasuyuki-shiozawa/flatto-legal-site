@@ -2,11 +2,11 @@
 <div class="lp1-banner-container" data-banner-type="{{ include.type | default: 'hero' }}">
     {% case include.type %}
         {% when 'hero' %}
-            <!-- ヒーロー下バナー (728x150) - ポータルサイト向けコンパクトサイズ -->
+            <!-- ヒーロー下バナー (970x250) - 明確な価値提案版 -->
             <div class="lp1-banner lp1-banner-hero">
                 <a href="/lp1/" class="lp1-banner-link" onclick="gtag('event', 'click', {'event_category': 'LP1_Banner', 'event_label': 'Hero_Banner'});">
-                    <img src="/assets/images/banners/banner_lp1_hero_revised_728x150.png" 
-                         alt="入札参加、もう迷わない - 毎月先着50組限定完全無料" 
+                    <img src="/assets/images/banners/banner_lp1_hero_revised_clear_message_970x250.png" 
+                         alt="全省庁統一資格申請 完全無料 - 通常10万円の申請費用が0円" 
                          class="lp1-banner-image"
                          loading="lazy">
                 </a>
@@ -16,8 +16,8 @@
             <!-- サイドバーバナー (300x250) - 毎月先着50組限定版 -->
             <div class="lp1-banner lp1-banner-sidebar">
                 <a href="/lp1/" class="lp1-banner-link" onclick="gtag('event', 'click', {'event_category': 'LP1_Banner', 'event_label': 'Sidebar_Banner'});">
-                    <img src="/assets/images/banners/banner_lp1_sidebar_revised_300x250.png" 
-                         alt="入札参加、もう迷わない - 毎月先着50組限定完全無料申請" 
+                    <img src="/assets/images/banners/banner_lp1_sidebar_revised_clear_message_300x250.png" 
+                         alt="全省庁統一資格申請 完全無料 - 通常10万円→0円" 
                          class="lp1-banner-image"
                          loading="lazy">
                 </a>
@@ -27,8 +27,8 @@
             <!-- 記事間バナー (728x90) -->
             <div class="lp1-banner lp1-banner-leaderboard">
                 <a href="/lp1/" class="lp1-banner-link" onclick="gtag('event', 'click', {'event_category': 'LP1_Banner', 'event_label': 'Leaderboard_Banner'});">
-                    <img src="/assets/images/banners/banner_lp1_leaderboard_728x90.png" 
-                         alt="入札参加、もう迷わない - 申請費用完全無料" 
+                    <img src="/assets/images/banners/banner_lp1_leaderboard_revised_clear_message_728x90.png" 
+                         alt="全省庁統一資格申請が完全無料 - 通常10万円→0円" 
                          class="lp1-banner-image"
                          loading="lazy">
                 </a>
@@ -104,7 +104,7 @@
 
 /* バナータイプ別スタイル */
 .lp1-banner-hero {
-    max-width: 728px;
+    max-width: 970px;
     margin: 0 auto;
 }
 
