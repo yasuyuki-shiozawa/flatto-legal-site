@@ -1,32 +1,17 @@
 # ナビゲーション設定ファイル
 # ヘッダーとフッターのメニュー項目を一元管理
 
-# メインナビゲーション（ヘッダー・教育コンテンツ中心）
+# メインナビゲーション（情報提供重視）
 main_nav:
   - name: "入札マップ"
     url: "/"
     icon: "fas fa-home"
     description: "トップページ"
     
-  - name: "全省庁統一資格"
-    url: "/zenshochou-lp/"
-    icon: "fas fa-certificate"
-    description: "全省庁統一資格の詳細ガイド"
-    
   - name: "入札の基本"
     url: "/knowhow/"
     icon: "fas fa-graduation-cap"
     description: "入札制度の基本から実践まで"
-    
-  - name: "ご利用の流れ"
-    url: "/flow/"
-    icon: "fas fa-book-open"
-    description: "サービス利用の流れ・手順"
-    
-  - name: "事例研究"
-    url: "/cases/"
-    icon: "fas fa-search"
-    description: "実際の入札事例から学ぶ"
     
   - name: "用語集"
     url: "/dictionary/"
@@ -37,6 +22,16 @@ main_nav:
     url: "/latest-trends/"
     icon: "fas fa-newspaper"
     description: "制度変更・最新動向"
+    
+  - name: "事例研究"
+    url: "/cases/"
+    icon: "fas fa-search"
+    description: "実際の入札事例から学ぶ"
+    
+  - name: "よくある質問"
+    url: "/faq/"
+    icon: "fas fa-question-circle"
+    description: "入札に関するよくある質問"
     
   - name: "ブログ"
     url: "/blog/"
@@ -85,19 +80,13 @@ footer_only_nav:
     icon: "fas fa-gavel"
     description: "特定商取引法に基づく表記"
 
-# CTA（Call to Action）設定 - 控えめな表現に変更
+# CTA（Call to Action）設定 - 控えめで情報重視
 cta:
   primary:
-    text: "相談したい"
+    text: "お問い合わせ"
     url: "/contact/"
-    icon: "fas fa-comments"
-    description: "専門家に相談・質問する"
-    
-  secondary:
-    text: "資料請求"
-    url: "/contact/"
-    icon: "fas fa-download"
-    description: "参考資料をダウンロード"
+    icon: "fas fa-envelope"
+    description: "ご質問・お問い合わせはこちら"
 
 # ソーシャルメディア（将来対応）
 social_media:
