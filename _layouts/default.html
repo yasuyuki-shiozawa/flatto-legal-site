@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- キャッシュ制御（モバイル修正反映のため） -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     
@@ -66,6 +72,11 @@
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
     <!-- 緊急修正CSS（main.cssがコンパイルされない場合の代替） -->
     <link rel="stylesheet" href="{{ '/assets/css/emergency-fix.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+    <!-- モバイル緊急修正CSS -->
+    <link rel="stylesheet" href="{{ '/assets/css/mobile-emergency-fix.css' | relative_url }}?v=20250729_mobile_fix_v2&t={{ site.time | date: '%s' }}">
+    
+    <!-- モバイル最適化CSS -->
+    <link rel="stylesheet" href="{{ '/assets/css/mobile-optimization.css' | relative_url }}?v=20250729_mobile_opt_v2&t={{ site.time | date: '%s' }}">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -207,6 +218,9 @@
     
     <!-- 統合JavaScript（遅延読み込み） -->
     <script src="{{ '/assets/js/main.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+    
+    <!-- モバイルメニュー緊急修正JavaScript -->
+    <script src="{{ '/assets/js/mobile-menu-fix.js' | relative_url }}?v=20250729_mobile_menu_v2&t={{ site.time | date: '%s' }}" defer></script>
     
     <!-- Service Worker登録 -->
     <script>
