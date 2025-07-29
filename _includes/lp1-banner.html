@@ -2,11 +2,11 @@
 <div class="lp1-banner-container" data-banner-type="{{ include.type | default: 'hero' }}">
     {% case include.type %}
         {% when 'hero' %}
-            <!-- ヒーロー下バナー (970x250) - 明確な価値提案版 -->
+            <!-- ヒーロー下バナー (600x120) - 小さく品のあるサイズ -->
             <div class="lp1-banner lp1-banner-hero">
                 <a href="/lp1/" class="lp1-banner-link" onclick="gtag('event', 'click', {'event_category': 'LP1_Banner', 'event_label': 'Hero_Banner'});">
-                    <img src="/assets/images/banners/banner_lp1_hero_revised_clear_message_970x250.png" 
-                         alt="全省庁統一資格申請 完全無料 - 通常10万円の申請費用が0円" 
+                    <img src="/assets/images/banners/banner_lp1_hero_horizontal_small_600x120.png" 
+                         alt="全省庁統一資格申請 完全無料 - 通常10万円→0円" 
                          class="lp1-banner-image"
                          loading="lazy">
                 </a>
@@ -104,7 +104,7 @@
 
 /* バナータイプ別スタイル */
 .lp1-banner-hero {
-    max-width: 970px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
