@@ -2,22 +2,22 @@
 <div class="lp1-banner-container" data-banner-type="{{ include.type | default: 'hero' }}">
     {% case include.type %}
         {% when 'hero' %}
-            <!-- ヒーロー下バナー (970x250) -->
+            <!-- ヒーロー下バナー (728x150) - ポータルサイト向けコンパクトサイズ -->
             <div class="lp1-banner lp1-banner-hero">
                 <a href="/lp1/" class="lp1-banner-link" onclick="gtag('event', 'click', {'event_category': 'LP1_Banner', 'event_label': 'Hero_Banner'});">
-                    <img src="/assets/images/banners/banner_lp1_hero_970x250.png" 
-                         alt="入札参加、もう迷わない - 全省庁統一資格申請完全無料" 
+                    <img src="/assets/images/banners/banner_lp1_hero_revised_728x150.png" 
+                         alt="入札参加、もう迷わない - 毎月先着50組限定完全無料" 
                          class="lp1-banner-image"
                          loading="lazy">
                 </a>
             </div>
         
         {% when 'sidebar' %}
-            <!-- サイドバーバナー (300x250) -->
+            <!-- サイドバーバナー (300x250) - 毎月先着50組限定版 -->
             <div class="lp1-banner lp1-banner-sidebar">
                 <a href="/lp1/" class="lp1-banner-link" onclick="gtag('event', 'click', {'event_category': 'LP1_Banner', 'event_label': 'Sidebar_Banner'});">
-                    <img src="/assets/images/banners/banner_lp1_sidebar_300x250.png" 
-                         alt="入札参加、もう迷わない - 完全無料申請" 
+                    <img src="/assets/images/banners/banner_lp1_sidebar_revised_300x250.png" 
+                         alt="入札参加、もう迷わない - 毎月先着50組限定完全無料申請" 
                          class="lp1-banner-image"
                          loading="lazy">
                 </a>
@@ -104,7 +104,7 @@
 
 /* バナータイプ別スタイル */
 .lp1-banner-hero {
-    max-width: 970px;
+    max-width: 728px;
     margin: 0 auto;
 }
 
