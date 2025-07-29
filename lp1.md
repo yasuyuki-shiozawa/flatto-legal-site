@@ -6,7 +6,7 @@ keywords: 全省庁統一資格,無料申請,入札サポート,行政書士,公
 hide_left_sidebar: true
 hide_right_sidebar: true
 body_class: free-application-page
-permalink: /free-application/
+permalink: /lp1/
 ---
 
 <style>
