@@ -10,25 +10,30 @@ permalink: /free-application/
 ---
 
 <style>
-/* 専用LP用のスタイル - 洗練されたデザインシステム */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+/* 専用LP用のスタイル - 最高品質のデザインシステム */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 .free-application-page {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #fafbff 0%, #f1f5f9 50%, #e8f2ff 100%);
-    line-height: 1.6;
-    color: #1e293b;
+    font-family: 'Noto Sans JP', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 25%, #fed7aa 75%, #fdba74 100%);
+    line-height: 1.7;
+    color: #1c1917;
+    overflow-x: hidden;
 }
 
-.lp-h  .hero {
-    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 50%, #90caf9 100%);
-    color: #1a365d;
-    padding: 4rem 2rem;
+/* ヒーローセクション - 感情に響くデザイン */
+.lp-hero {
+    background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 30%, #fb923c 70%, #ea580c 100%);
+    color: #1c1917;
+    padding: 6rem 2rem;
     text-align: center;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  }en;
+    box-shadow: 0 25px 50px rgba(234, 88, 12, 0.15);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .lp-hero::before {
@@ -39,16 +44,22 @@ permalink: /free-application/
     right: 0;
     bottom: 0;
     background: 
-        radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
-    opacity: 0.8;
+        radial-gradient(circle at 20% 80%, rgba(251, 191, 36, 0.4) 0%, transparent 60%),
+        radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.3) 0%, transparent 60%),
+        radial-gradient(circle at 40% 40%, rgba(252, 211, 77, 0.2) 0%, transparent 60%);
+    opacity: 0.9;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(1deg); }
 }
 
 .lp-hero-content {
     position: relative;
     z-index: 2;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 24px;
 }
@@ -56,47 +67,372 @@ permalink: /free-application/
 .lp-hero-badge {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 12px 24px;
+    gap: 12px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.1) 100%);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 16px 32px;
     border-radius: 50px;
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 32px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 40px;
     backdrop-filter: blur(20px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    animation: pulse 2s ease-in-out infinite;
+    color: #92400e;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.lp-hero-catch {
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: #92400e;
+    margin-bottom: 30px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    text-shadow: 0 4px 8px rgba(146, 64, 14, 0.2);
+}
+
+.lp-hero-catch span {
+    font-weight: 800;
+    color: #78350f;
+    display: block;
+    margin-top: 10px;
+    background: linear-gradient(135deg, #78350f 0%, #92400e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .lp-hero-title {
-    font-size: 4rem;
-    font-weight: 800;
+    font-size: 4.5rem;
+    font-weight: 900;
     line-height: 1.1;
-    margin-bottom: 24px;
-    color: #1a365d;
-    letter-spacing: -0.02em;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    color: #1c1917;
+    letter-spacing: -0.03em;
+    text-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.lp-hero-title span {
+    color: #ea580c;
+    text-shadow: 0 4px 12px rgba(234, 88, 12, 0.4);
+    background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+
+.lp-hero-title span::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
+    border-radius: 2px;
+    animation: underline 2s ease-in-out infinite;
+}
+
+@keyframes underline {
+    0%, 100% { transform: scaleX(1); }
+    50% { transform: scaleX(1.1); }
 }
 
 .lp-hero-subtitle {
-    font-size: 1.25rem;
-    font-weight: 400;
-    margin-bottom: 40px;
-    color: #2d3748;
-    max-width: 600px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 50px;
+    color: #451a03;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-    line-height: 1.6;
+    line-height: 1.7;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+/* 価格比較セクション - より魅力的に */
 .lp-price-comparison {
-    background: rgba(255, 255, 255, 0.95);
-    border: 1px solid rgba(26, 54, 93, 0.1);
-    padding: 32px;
-    border-radius: 24px;
-    margin: 40px 0;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
+    border: 3px solid rgba(234, 88, 12, 0.2);
+    padding: 40px;
+    border-radius: 30px;
+    margin: 50px 0;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
 }
+
+.lp-price-comparison::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
+}
+
+.lp-price-old {
+    font-size: 1.3rem;
+    text-decoration: line-through;
+    color: #78716c;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.lp-price-new {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #ea580c;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 4px rgba(234, 88, 12, 0.2);
+    margin-bottom: 10px;
+}
+
+.lp-price-support {
+    font-size: 1.1rem;
+    color: #451a03;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* CTAボタン - より魅力的なデザイン */
+.lp-cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
+    color: white;
+    padding: 22px 40px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(234, 88, 12, 0.4);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 20px 12px;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.lp-cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.6s;
+}
+
+.lp-cta-button:hover::before {
+    left: 100%;
+}
+
+.lp-cta-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 25px 50px rgba(234, 88, 12, 0.5);
+    color: white;
+    text-decoration: none;
+}
+
+.lp-cta-button.secondary {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
+    color: #ea580c;
+    border: 3px solid #ea580c;
+    box-shadow: 0 15px 35px rgba(234, 88, 12, 0.2);
+}
+
+.lp-cta-button.secondary:hover {
+    background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
+    color: white;
+    box-shadow: 0 25px 50px rgba(234, 88, 12, 0.4);
+}
+
+/* セクション全般 */
+.lp-section {
+    padding: 120px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.lp-section-title {
+    font-size: 3.2rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1c1917;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    position: relative;
+}
+
+.lp-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
+    border-radius: 2px;
+}
+
+.lp-section-subtitle {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 100px;
+    color: #78716c;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+/* 特徴カード - より洗練されたデザイン */
+.lp-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 40px;
+    margin: 100px 0;
+}
+
+.lp-feature-card {
+    background: linear-gradient(135deg, #ffffff 0%, #fefbf3 100%);
+    padding: 50px 40px;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid rgba(234, 88, 12, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.lp-feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.lp-feature-card:hover::before {
+    transform: scaleX(1);
+}
+
+.lp-feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    border-color: rgba(234, 88, 12, 0.3);
+}
+
+.lp-feature-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+    color: white;
+    box-shadow: 0 10px 25px rgba(234, 88, 12, 0.3);
+    transition: all 0.4s ease;
+}
+
+.lp-feature-card:hover .lp-feature-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 15px 35px rgba(234, 88, 12, 0.4);
+}
+
+.lp-feature-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1c1917;
+    line-height: 1.3;
+}
+
+.lp-feature-description {
+    font-size: 1.1rem;
+    color: #78716c;
+    line-height: 1.7;
+    font-weight: 500;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .lp-hero {
+        padding: 4rem 1rem;
+        min-height: 90vh;
+    }
+    
+    .lp-hero-catch {
+        font-size: 2.5rem;
+    }
+    
+    .lp-hero-title {
+        font-size: 3rem;
+    }
+    
+    .lp-hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .lp-section-title {
+        font-size: 2.5rem;
+    }
+    
+    .lp-features-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .lp-feature-card {
+        padding: 40px 30px;
+    }
+    
+    .lp-cta-button {
+        padding: 18px 30px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .lp-hero-catch {
+        font-size: 2rem;
+    }
+    
+    .lp-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .lp-section-title {
+        font-size: 2rem;
+    }
+    
+    .lp-price-comparison {
+        padding: 30px 20px;
+    }
+}
+</style>
 
 .lp-price-old {
     font-size: 1.1rem;
@@ -537,19 +873,23 @@ permalink: /free-application/
 <section class="lp-hero">
     <div class="lp-hero-content">
         <div class="lp-hero-badge">🎉 期間限定特別オファー</div>
+        <div class="lp-hero-catch" style="font-size: 2.5rem; font-weight: 300; color: #92400e; margin-bottom: 20px; line-height: 1.2;">
+            もう、入札参加<br>
+            <span style="font-weight: 600; color: #78350f;">迷わない</span>
+        </div>
         <h1 class="lp-hero-title">
             全省庁統一資格申請<br>
-            <span style="color: #fbbf24;">完全無料</span>
+            <span style="color: #ea580c; text-shadow: 0 4px 12px rgba(234, 88, 12, 0.4);">無料</span>
         </h1>
         <p class="lp-hero-subtitle">
-            他社は資格取得のみ。当事務所は<strong>入札参加まで</strong>サポート！<br>
+            ※ただし、入札サポート（月額33,000円×6ヶ月）のご利用が条件となります<br>
             <strong>案件発見から入札手続きまでの完全フロー支援</strong>
         </p>
         
     <div class="lp-price-comparison">
     <div class="lp-price-old">他社：申請のみ（100,000円）</div>
-    <div class="lp-price-new">当事務所：申請無料 + 入札参加まで</div>
-    <div class="lp-price-support">案件発見から手続きまで完全サポート</div>
+    <div class="lp-price-new">当事務所：申請無料 + 継続サポート</div>
+    <div class="lp-price-support">月額33,000円×6ヶ月で入札参加まで完全サポート</div>
   </div>
         
         <div class="lp-cta-buttons">
@@ -591,7 +931,18 @@ permalink: /free-application/
     <div id="why-free"></div>
     
     <div style="background: #f8fafc; padding: 40px; border-radius: 20px; margin: 40px 0;">
-        <h3 style="color: #1e40af; margin-bottom: 20px; font-size: 1.5rem;">業界の課題を解決する独自アプローチ</h3>
+        <h3 style="color: #1e40af; margin-bottom: 20px; font-size: 1.5rem;">行政書士だからできる、安心の入札サポート</h3>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
+            <div style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                <h4 style="color: #059669; margin-bottom: 15px;">📋 法的手続きの専門家</h4>
+                <p style="color: #374151; margin: 0;">行政書士として、官公庁への申請手続きを熟知。確実で迅速な資格取得をお約束します。</p>
+            </div>
+            <div style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                <h4 style="color: #059669; margin-bottom: 15px;">🎯 入札業界の深い知見</h4>
+                <p style="color: #374151; margin: 0;">単なる資格取得ではなく、実際の入札参加まで見据えた戦略的サポートを提供します。</p>
+            </div>
+        </div>
         
         <div style="background: #fef2f2; padding: 25px; border-radius: 15px; margin: 30px 0; border-left: 4px solid #dc2626;">
             <h4 style="color: #dc2626; margin-bottom: 15px;">⚠️ 業界の問題</h4>
@@ -764,9 +1115,9 @@ permalink: /free-application/
 <!-- 料金セクション -->
 <section class="lp-pricing-section">
     <div class="lp-section">
-        <h2 class="lp-section-title">成功サポートプラン</h2>
+        <h2 class="lp-section-title">安心の継続サポートプラン</h2>
         <p class="lp-section-subtitle">
-            申請費用無料 + 成功まで完全サポートのパッケージ
+            まずは無料で資格取得。その後、入札参加への道筋をサポートします。
         </p>
         
         <div class="lp-pricing-card">
@@ -775,8 +1126,11 @@ permalink: /free-application/
             
             <div class="lp-pricing-main">
                 <div class="lp-pricing-free">申請費用：完全無料</div>
-                <div class="lp-pricing-monthly">月額 16,500円〜</div>
-                <div class="lp-pricing-note">（成功サポート・分割払いの場合）</div>
+                <div class="lp-pricing-monthly">月額 33,000円</div>
+                <div class="lp-pricing-note">（6ヶ月間の安心サポート）</div>
+                <div style="font-size: 0.9rem; color: #6b7280; margin-top: 10px;">
+                    ※分割払い対応（月額16,500円〜）
+                </div>
             </div>
             
             <ul class="lp-pricing-features">
