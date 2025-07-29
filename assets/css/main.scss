@@ -296,7 +296,7 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.3) !important;
   }
 
-  // モバイルメニューの表示
+  // モバイルメニューの表示（初期状態は非表示）
   .mobile-menu {
     position: fixed !important;
     top: 0 !important;
@@ -309,6 +309,13 @@ body {
     padding: 2rem 1rem !important;
     box-shadow: 2px 0 10px rgba(0,0,0,0.3) !important;
     overflow-y: auto !important;
+    display: none !important; // 初期状態で完全に非表示
+  }
+  
+  // メニューが開かれた時のみ表示
+  .mobile-menu.show {
+    display: block !important;
+    left: 0 !important;
   }
 
   .mobile-menu.active {
@@ -430,19 +437,5 @@ body {
   }
 }
 
-// 確認用マーカー（デバッグ用）
-@media (max-width: 768px) {
-  body::before {
-    content: "モバイル修正版 v3.0 - main.scss直接修正" !important;
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    background: #28a745 !important;
-    color: #fff !important;
-    padding: 0.25rem 0.5rem !important;
-    font-size: 0.75rem !important;
-    z-index: 10000 !important;
-    opacity: 0.8 !important;
-  }
-}
+// デバッグマーカーは削除済み - 本番環境用
 
