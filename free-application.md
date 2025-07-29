@@ -351,7 +351,12 @@ permalink: /free-application/
         <h1 class="hero-catchcopy">入札参加、もう迷わない</h1>
         <h2 class="hero-title">全省庁統一資格申請<br><span class="highlight">完全無料</span></h2>
         <p class="hero-subtitle">※ただし、入札サポート（月額33,000円×6ヶ月）のご利用が条件となります</p>
-        <a href="#contact" class="hero-cta">🚀 今すぐ無料相談を申し込む</a>
+        <a href="#contact" class="hero-cta">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style="display: inline-block; margin-right: 10px; vertical-align: middle;">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+            </svg>
+            今すぐ無料相談を申し込む
+        </a>
     </div>
 </section>
 
@@ -359,22 +364,38 @@ permalink: /free-application/
 <section class="trust-section">
     <div class="trust-grid">
         <div class="trust-item">
-            <div class="trust-icon">🏢</div>
+            <div class="trust-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                    <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+                </svg>
+            </div>
             <h3 class="trust-title">行政書士法人</h3>
             <p class="trust-desc">ふらっと法務事務所</p>
         </div>
         <div class="trust-item">
-            <div class="trust-icon">🔒</div>
+            <div class="trust-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                    <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM12 17c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM15.1 8H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+                </svg>
+            </div>
             <h3 class="trust-title">プライバシーマーク</h3>
             <p class="trust-desc">取得済み</p>
         </div>
         <div class="trust-item">
-            <div class="trust-icon">✅</div>
+            <div class="trust-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+            </div>
             <h3 class="trust-title">100%取得保証</h3>
             <p class="trust-desc">実績多数</p>
         </div>
         <div class="trust-item">
-            <div class="trust-icon">💳</div>
+            <div class="trust-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                    <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/>
+                </svg>
+            </div>
             <h3 class="trust-title">セゾンインボイス</h3>
             <p class="trust-desc">分割払い対応</p>
         </div>
@@ -388,12 +409,20 @@ permalink: /free-application/
     
     <div class="value-grid">
         <div class="value-card">
-            <div class="value-icon">📋</div>
+            <div class="value-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                    <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-5 2h2v3l-1-.75L9 7V4zm1 9c-1.25 0-2.25-1-2.25-2.25S8.75 10.5 10 10.5s2.25 1 2.25 2.25S11.25 15 10 15z"/>
+                </svg>
+            </div>
             <h3 class="value-title">完全無料申請</h3>
             <p class="value-desc">通常10万円かかる全省庁統一資格申請を完全無料で代行。書類作成から提出まで全てお任せください。</p>
         </div>
         <div class="value-card">
-            <div class="value-icon">🎯</div>
+            <div class="value-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+            </div>
             <h3 class="value-title">6ヶ月入札サポート</h3>
             <p class="value-desc">資格取得後の6ヶ月間、案件発見から入札手続きまで、入札参加に向けて徹底サポートします。</p>
         </div>
@@ -491,7 +520,10 @@ permalink: /free-application/
             </div>
             
             <button type="submit" style="width: 100%; background: linear-gradient(45deg, #ff6b35, #f7931e); color: white; padding: 20px; border: none; border-radius: 50px; font-size: 20px; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">
-                🚀 無料申請を申し込む
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style="display: inline-block; margin-right: 10px; vertical-align: middle;">
+                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                </svg>
+                無料申請を申し込む
             </button>
         </form>
     </div>
