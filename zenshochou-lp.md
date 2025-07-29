@@ -545,109 +545,38 @@ body_class: landing-page zenshochou-lp
     </div>
 </section>
 
-<section class="zenshochou-contact" id="contact-form">
+<section class="zenshochou-cta-banner">
     <div class="container">
-        <div class="contact-header">
-            <h2>全省庁統一資格申請のご相談</h2>
-            <p>無料相談実施中！お気軽にお問い合わせください</p>
+        <div class="cta-banner-content">
+            <div class="cta-text">
+                <h2>全省庁統一資格について詳しく相談したい方へ</h2>
+                <p>専門の行政書士が無料で詳しくご相談をお受けします</p>
+            </div>
+            <div class="cta-banner-image">
+                <a href="/lp1/">
+                    <img src="/assets/images/banners/banner_lp1_hero_horizontal_small_600x120.png" alt="全省庁統一資格申請 完全無料 - 毎月先着50組限定" loading="lazy">
+                </a>
+            </div>
         </div>
         
-        <div class="contact-content">
-            <div class="contact-info">
-                <h3>行政書士法人ふらっと法務事務所</h3>
+        <div class="contact-info-simple">
+            <div class="info-row">
+                <div class="info-item">
+                    <i class="fas fa-building"></i>
+                    <span>行政書士法人ふらっと法務事務所</span>
+                </div>
                 <div class="info-item">
                     <i class="fas fa-map-marker-alt"></i>
-                    <span>〒242-0024 神奈川県大和市福田2-3-1</span>
+                    <span>神奈川県大和市</span>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-phone"></i>
                     <span>046-204-7414</span>
                 </div>
                 <div class="info-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>mail@flat-legal.com</span>
-                </div>
-                <div class="info-item">
                     <i class="fas fa-clock"></i>
-                    <span>営業時間: 平日9:00-18:00</span>
+                    <span>平日9:00-18:00</span>
                 </div>
-                
-                <div class="contact-features">
-                    <div class="feature">
-                        <i class="fas fa-comments"></i>
-                        <span>初回相談無料</span>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>秘密厳守</span>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-handshake"></i>
-                        <span>丁寧なサポート</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="contact-form">
-                <form action="mailto:mail@flat-legal.com" method="post" enctype="text/plain">
-                    <div class="form-group">
-                        <label for="company">会社名・事業者名 <span class="required">*</span></label>
-                        <input type="text" id="company" name="company" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="name">お名前 <span class="required">*</span></label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">メールアドレス <span class="required">*</span></label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">電話番号</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="business-type">事業内容 <span class="required">*</span></label>
-                        <select id="business-type" name="business-type" required>
-                            <option value="">選択してください</option>
-                            <option value="manufacturing">物品の製造</option>
-                            <option value="sales">物品の販売</option>
-                            <option value="services">役務の提供</option>
-                            <option value="purchase">物品の買受</option>
-                            <option value="multiple">複数分野</option>
-                            <option value="other">その他</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="consultation-type">相談内容 <span class="required">*</span></label>
-                        <select id="consultation-type" name="consultation-type" required>
-                            <option value="">選択してください</option>
-                            <option value="new-application">新規申請について</option>
-                            <option value="renewal">更新手続きについて</option>
-                            <option value="grade-change">等級変更について</option>
-                            <option value="document-preparation">必要書類について</option>
-                            <option value="fees">料金について</option>
-                            <option value="other">その他</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">ご質問・ご相談内容</label>
-                        <textarea id="message" name="message" rows="5" placeholder="全省庁統一資格について、お気軽にご相談ください"></textarea>
-                    </div>
-                    
-                    <div class="form-submit">
-                        <button type="submit" class="btn-submit">
-                            <i class="fas fa-paper-plane"></i>
-                            無料相談を申し込む
-                        </button>
-                    </div>
-                </form>
             </div>
         </div>
     </div>
@@ -657,6 +586,92 @@ body_class: landing-page zenshochou-lp
 /* 全省庁統一資格LP専用スタイル */
 .zenshochou-lp {
     font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* CTAバナーセクション */
+.zenshochou-cta-banner {
+    background: #f8fafc;
+    padding: 3rem 0;
+    border-top: 1px solid #e2e8f0;
+}
+
+.cta-banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-text h2 {
+    font-size: 1.5rem;
+    color: #1e40af;
+    margin-bottom: 0.5rem;
+}
+
+.cta-text p {
+    color: #64748b;
+    font-size: 1rem;
+}
+
+.cta-banner-image a {
+    display: block;
+    transition: transform 0.3s;
+}
+
+.cta-banner-image a:hover {
+    transform: scale(1.05);
+}
+
+.cta-banner-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info-simple {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.info-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.contact-info-simple .info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: #374151;
+}
+
+.contact-info-simple .info-item i {
+    color: #1e40af;
+    width: 16px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .cta-banner-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .info-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .contact-info-simple .info-item {
+        justify-content: center;
+    }
 }
 
 .zenshochou-hero {
