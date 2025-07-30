@@ -505,27 +505,10 @@
 
 
 /* ========================================
-   キャッシュバスティング確認用スタイル
+   キャッシュバスティング確認 - 本番環境用
    ======================================== */
 
-/* このスタイルが適用されていれば修正が反映されています */
-@media (max-width: 768px) {
-    
-    /* 確認用の目印 */
-    body::before {
-        content: "モバイル修正版 v2.0 適用済み" !important;
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        background: #10b981 !important;
-        color: #ffffff !important;
-        padding: 0.25rem 0.5rem !important;
-        font-size: 10px !important;
-        z-index: 99999 !important;
-        opacity: 0.8 !important;
-        pointer-events: none !important;
-        border-radius: 0 0 4px 0 !important;
-    }
+/* デバッグマーカーは削除済み - 本番環境では表示されません */
     
     /* 追加の強制修正 */
     .content-cards-grid,
