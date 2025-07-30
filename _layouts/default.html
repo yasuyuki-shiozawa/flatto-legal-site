@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- キャッシュ制御（モバイル修正反映のため） -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <!-- 強力なキャッシュ制御（モバイル修正反映のため） -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate, max-age=0">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="{{ site.time | date_to_rfc822 }}">
+    <meta name="cache-control" content="no-cache">
+    <meta name="expires" content="0">
+    <meta name="pragma" content="no-cache">
     
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
@@ -66,12 +70,109 @@
     <!-- Critical CSS（インライン） -->
     <style>
     {% include critical.css %}
+    
+    /* 緊急モバイル修正 - インラインCSS（最高優先度） */
+    @media (max-width: 768px) {
+        /* デスクトップナビゲーションを強制非表示 */
+        .nav, .nav-list, .nav-item, .nav-link, 
+        .header-nav, .main-nav, .navigation, 
+        .navbar-nav, .desktop-nav, .header-content .nav,
+        .header-cta, .header-content .header-cta {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            width: 0 !important;
+            height: 0 !important;
+            overflow: hidden !important;
+            position: absolute !important;
+            left: -9999px !important;
+        }
+        
+        /* モバイルメニューを初期状態で完全非表示 */
+        .mobile-menu {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            left: -100% !important;
+            transform: translateX(-100%) !important;
+        }
+        
+        /* モバイルメニューオーバーレイも非表示 */
+        .mobile-menu-overlay {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+        }
+        
+        /* ヘッダーコンテンツの調整 */
+        .header-content {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            padding: 0.5rem 1rem !important;
+        }
+        
+        /* ロゴエリアの調整 */
+        .logo {
+            flex: 1 !important;
+            display: flex !important;
+            align-items: center !important;
+        }
+        
+        /* モバイルメニューボタンの確実な表示 */
+        .mobile-menu-btn {
+            display: flex !important;
+            position: relative !important;
+            top: auto !important;
+            left: auto !important;
+            margin-left: auto !important;
+            width: 44px !important;
+            height: 44px !important;
+            background-color: #3182ce !important;
+            color: #ffffff !important;
+            border: none !important;
+            border-radius: 6px !important;
+            align-items: center !important;
+            justify-content: center !important;
+            font-size: 1.25rem !important;
+            cursor: pointer !important;
+            z-index: 1000 !important;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+            touch-action: manipulation !important;
+        }
+        
+        /* ハンバーガーアイコンのスタイル */
+        .mobile-menu-btn span {
+            display: block !important;
+            width: 20px !important;
+            height: 2px !important;
+            background-color: #ffffff !important;
+            margin: 3px 0 !important;
+            transition: 0.3s !important;
+            border-radius: 1px !important;
+        }
+        
+        /* メニューが開いている場合のみ表示 */
+        .mobile-menu.active {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            left: 0 !important;
+            transform: translateX(0) !important;
+        }
+        
+        .mobile-menu-overlay.active {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+    }
     </style>
     
     <!-- メインCSS（SCSSからコンパイル） -->
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
-    <!-- 統合モバイルCSS（完全リセット版） -->
-    <link rel="stylesheet" href="{{ '/assets/css/mobile-unified.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}&bust={{ 'now' | date: '%Y%m%d%H%M%S' }}">
+    <!-- 統合モバイルCSS（完全リセット版・強力キャッシュバスティング） -->
+    <link rel="stylesheet" href="{{ '/assets/css/mobile-unified-202501302222.css' | relative_url }}?v={{ site.time | date: '%s' }}&bust={{ 'now' | date: '%Y%m%d%H%M%S' }}">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -212,10 +313,10 @@
     </script>
     
     <!-- 統合JavaScript（遅延読み込み） -->
-    <script src="{{ '/assets/js/main.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+    <script src="{{ '/assets/js/main.js' | relative_url }}?v={{ site.time | date: '%s' }}&bust={{ 'now' | date: '%Y%m%d%H%M%S' }}" defer></script>
     
-     <!-- 統合モバイルメニューJS（完全リセット版） -->
-    <script src="{{ '/assets/js/mobile-menu-unified.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+     <!-- 統合モバイルメニューJS（完全リセット版・強力キャッシュバスティング） -->
+    <script src="{{ '/assets/js/mobile-menu-unified-202501302222.js' | relative_url }}?v={{ site.time | date: '%s' }}&bust={{ 'now' | date: '%Y%m%d%H%M%S' }}"></script>
     
     <!-- Service Worker登録 -->
     <script>
