@@ -487,7 +487,104 @@
 }
 
 /* ========================================
-   8. ナビゲーションの最適化
+   8. デスクトップナビゲーションの完全非表示化
+   ======================================== */
+
+@media (max-width: 768px) {
+    
+    /* デスクトップナビゲーションを完全に非表示 */
+    .nav,
+    .nav-list,
+    .nav-item,
+    .nav-link,
+    .header-nav,
+    .main-nav,
+    .navigation,
+    .navbar-nav,
+    .desktop-nav,
+    .header-content .nav {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        position: absolute !important;
+        left: -9999px !important;
+    }
+    
+    /* ヘッダーCTAボタンも非表示 */
+    .header-cta,
+    .header-content .header-cta {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+    }
+    
+    /* ヘッダーコンテンツの調整 */
+    .header-content {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 0.5rem 1rem !important;
+    }
+    
+    /* ロゴエリアの調整 */
+    .logo {
+        flex: 1 !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+    
+    /* モバイルメニューボタンの表示確保 */
+    .mobile-menu-btn {
+        display: flex !important;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        margin-left: auto !important;
+        width: 44px !important;
+        height: 44px !important;
+        background-color: #3182ce !important;
+        color: #ffffff !important;
+        border: none !important;
+        border-radius: 6px !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 1.25rem !important;
+        cursor: pointer !important;
+        z-index: 1000 !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+        touch-action: manipulation !important;
+    }
+    
+    /* ハンバーガーアイコンのスタイル */
+    .mobile-menu-btn span {
+        display: block !important;
+        width: 20px !important;
+        height: 2px !important;
+        background-color: #ffffff !important;
+        margin: 3px 0 !important;
+        transition: 0.3s !important;
+        border-radius: 1px !important;
+    }
+    
+    /* アクティブ時のアニメーション */
+    .mobile-menu-btn.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px) !important;
+    }
+    
+    .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0 !important;
+    }
+    
+    .mobile-menu-btn.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px) !important;
+    }
+}
+
+/* ========================================
+   9. ナビゲーションの最適化
    ======================================== */
 
 @media (max-width: 768px) {
