@@ -91,3 +91,25 @@
 #   to = "/404.html"
 #   status = 404
 
+
+# ドメインリダイレクト設定
+# Netlifyサブドメインから正規ドメインへの301リダイレクト
+[[redirects]]
+  from = "https://flatto-legal-site.netlify.app/*"
+  to = "https://nyusatsu-map.com/:splat"
+  status = 301
+  force = true
+
+# HTTPからHTTPSへのリダイレクト（念のため）
+[[redirects]]
+  from = "http://nyusatsu-map.com/*"
+  to = "https://nyusatsu-map.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.nyusatsu-map.com/*"
+  to = "https://nyusatsu-map.com/:splat"
+  status = 301
+  force = true
+
