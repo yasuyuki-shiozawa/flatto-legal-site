@@ -1,6 +1,6 @@
 /* ========================================
-   モバイルナビゲーション修正（完全版）
-   レスポンシブデザインの確実な実装
+   モバイルナビゲーション修正（最強版）
+   CSSのみで確実なレスポンシブ実装
    ======================================== */
 
 /* PC版（769px以上）の設定 */
@@ -55,16 +55,20 @@
     }
 }
 
-/* モバイル版（768px以下）の設定 */
+/* モバイル版（768px以下）の設定 - 最強レベル */
 @media screen and (max-width: 768px) {
     
-    /* サイドメニューボタンを完全非表示 */
+    /* サイドメニューボタンを完全削除 - あらゆるセレクタで */
     .mobile-menu-btn,
     button.mobile-menu-btn,
     #mobileMenuBtn,
     [id="mobileMenuBtn"],
     .header .mobile-menu-btn,
-    .header-content .mobile-menu-btn {
+    .header-content .mobile-menu-btn,
+    header .mobile-menu-btn,
+    .container .mobile-menu-btn,
+    button[aria-label="メニューを開く"],
+    button[aria-label*="メニュー"] {
         display: none !important;
         visibility: hidden !important;
         opacity: 0 !important;
@@ -77,17 +81,25 @@
         overflow: hidden !important;
         z-index: -9999 !important;
         transform: scale(0) !important;
+        clip: rect(0, 0, 0, 0) !important;
+        border: 0 !important;
+        margin: -1px !important;
+        padding: 0 !important;
     }
     
-    /* サイドメニュー本体を完全非表示 */
+    /* サイドメニュー本体を完全削除 - あらゆるセレクタで */
     .mobile-menu,
     div.mobile-menu,
     #mobileMenu,
     [id="mobileMenu"],
     .header .mobile-menu,
+    .container .mobile-menu,
     .mobile-menu-header,
     .mobile-menu-body,
-    .mobile-nav-list {
+    .mobile-nav-list,
+    .mobile-menu ul,
+    .mobile-menu li,
+    .mobile-menu a {
         display: none !important;
         visibility: hidden !important;
         opacity: 0 !important;
@@ -100,9 +112,13 @@
         overflow: hidden !important;
         z-index: -9999 !important;
         transform: translateX(-100%) scale(0) !important;
+        clip: rect(0, 0, 0, 0) !important;
+        border: 0 !important;
+        margin: -1px !important;
+        padding: 0 !important;
     }
     
-    /* サイドメニューオーバーレイを完全非表示 */
+    /* サイドメニューオーバーレイを完全削除 */
     .mobile-menu-overlay,
     div.mobile-menu-overlay,
     #mobileMenuOverlay,
@@ -118,6 +134,10 @@
         height: 0 !important;
         overflow: hidden !important;
         z-index: -9999 !important;
+        clip: rect(0, 0, 0, 0) !important;
+        border: 0 !important;
+        margin: -1px !important;
+        padding: 0 !important;
     }
     
     /* PC版ナビゲーションをモバイルで非表示 */
@@ -216,6 +236,13 @@
     -ms-user-select: none !important;
     user-select: none !important;
     -webkit-tap-highlight-color: transparent !important;
+}
+
+/* サイドメニューの強制非表示（最終手段） */
+*[class*="mobile-menu"],
+*[id*="mobile-menu"],
+*[id*="mobileMenu"] {
+    display: none !important;
 }
 
 /* アクセシビリティ対応 */
