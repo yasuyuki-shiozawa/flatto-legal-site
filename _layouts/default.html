@@ -128,8 +128,10 @@
     <!-- モバイルサイドバー -->
     {% include mobile-sidebar.html %}
     
-    <!-- モバイル用固定CTA -->
+    <!-- モバイル用固定CTA（ボトムナビゲーション実装により無効化） -->
+    {% comment %}
     {% include mobile-fixed-cta.html %}
+    {% endcomment %}
     
     <!-- フローティングCTA -->
     <div class="floating-cta">

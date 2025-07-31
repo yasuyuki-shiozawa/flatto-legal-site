@@ -195,18 +195,18 @@ body.mobile-menu-open {
 }
 
 // ========================================
-// モバイルボトムナビゲーション（シンプル版）
+// モバイルボトムナビゲーション（統合版）
 // ========================================
 
 // PC版では非表示
-@media (min-width: 1024px) {
+@media (min-width: 769px) {
   .mobile-bottom-nav {
     display: none !important;
   }
 }
 
 // モバイル版のみ表示
-@media (max-width: 1023px) {
+@media (max-width: 768px) {
   
   // ボトムナビゲーション本体
   .mobile-bottom-nav {
@@ -219,6 +219,7 @@ body.mobile-menu-open {
     box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     padding: 0.5rem 0;
+    padding-bottom: env(safe-area-inset-bottom);
   }
   
   // ナビゲーションコンテナ
@@ -244,6 +245,9 @@ body.mobile-menu-open {
     min-width: 44px;
     min-height: 44px;
     justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
     
     i {
       font-size: 1.25rem;
@@ -307,19 +311,14 @@ body.mobile-menu-open {
     }
   }
   
-  // ボトムナビゲーション用のスペース確保
-  body {
-    padding-bottom: 70px;
-  }
-  
-  // フッターの調整
-  .footer {
-    margin-bottom: 70px;
-  }
-  
   // 既存のフローティングCTAを非表示
   .floating-cta {
-    display: none;
+    display: none !important;
+  }
+  
+  // 既存のスティッキーCTAを非表示
+  .sticky-cta-bar {
+    display: none !important;
   }
 }
 
