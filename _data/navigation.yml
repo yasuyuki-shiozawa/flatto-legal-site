@@ -19,7 +19,7 @@ main_nav:
     description: "入札関連用語の解説"
     
   - name: "最新動向"
-    url: "/latest-trends/"
+    url: "/trends/"
     icon: "fas fa-newspaper"
     description: "制度変更・最新動向"
     
