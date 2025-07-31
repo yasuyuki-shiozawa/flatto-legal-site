@@ -1,0 +1,7 @@
+# Netlifyサブドメインから正規ドメインへのリダイレクト
+https://flatto-legal-site.netlify.app/* https://nyusatsu-map.com/:splat 301!
+
+# HTTPからHTTPSへのリダイレクト
+http://nyusatsu-map.com/* https://nyusatsu-map.com/:splat 301!
+http://www.nyusatsu-map.com/* https://nyusatsu-map.com/:splat 301!
+
