@@ -78,6 +78,7 @@ include:
   - _pages
   - search-index.json
   - .htaccess
+  - _redirects
 
 # デフォルト設定
 defaults:
