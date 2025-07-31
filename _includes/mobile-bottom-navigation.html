@@ -45,12 +45,48 @@
 document.addEventListener('DOMContentLoaded', function() {
     // ボトムナビのメニューボタンと既存のモバイルメニューを連携
     const bottomMenuBtn = document.getElementById('mobileBottomMenuBtn');
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     
-    if (bottomMenuBtn && mobileMenuBtn) {
+    if (bottomMenuBtn) {
         bottomMenuBtn.addEventListener('click', function() {
-            // 既存のモバイルメニューボタンをクリック
-            mobileMenuBtn.click();
+            // 既存のモバイルメニューシステムを利用
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const overlay = document.querySelector('.mobile-menu-overlay');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            
+            if (mobileMenu && overlay) {
+                // メニューの開閉状態を確認
+                const isOpen = mobileMenu.classList.contains('active');
+                
+                if (isOpen) {
+                    // メニューを閉じる
+                    mobileMenu.classList.remove('active');
+                    overlay.classList.remove('active');
+                    document.body.classList.remove('mobile-menu-open');
+                    if (mobileMenuBtn) mobileMenuBtn.classList.remove('active');
+                } else {
+                    // メニューを開く
+                    mobileMenu.classList.add('active');
+                    overlay.classList.add('active');
+                    document.body.classList.add('mobile-menu-open');
+                    if (mobileMenuBtn) mobileMenuBtn.classList.add('active');
+                }
+            }
+        });
+    }
+    
+    // オーバーレイクリックでメニューを閉じる
+    const overlay = document.querySelector('.mobile-menu-overlay');
+    if (overlay) {
+        overlay.addEventListener('click', function() {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            
+            if (mobileMenu) {
+                mobileMenu.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.classList.remove('mobile-menu-open');
+                if (mobileMenuBtn) mobileMenuBtn.classList.remove('active');
+            }
         });
     }
 });
