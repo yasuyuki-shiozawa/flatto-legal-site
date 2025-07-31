@@ -1,0 +1,282 @@
+<!-- 診断ページ専用のイベントトラッキング -->
+<script>
+// 診断フォーム関連のイベントトラッキング
+if (document.body.classList.contains('diagnosis-page')) {
+    
+    // 診断開始トラッキング
+    document.addEventListener('DOMContentLoaded', function() {
+        gtag('event', 'diagnosis_page_view', {
+            event_category: 'diagnosis',
+            event_label: 'page_loaded'
+        });
+    });
+    
+    // 質問回答トラッキング
+    document.querySelectorAll('input[type="radio"]').forEach(function(radio) {
+        radio.addEventListener('change', function() {
+            gtag('event', 'diagnosis_question_answered', {
+                event_category: 'diagnosis',
+                event_label: this.name,
+                value: this.value
+            });
+        });
+    });
+    
+    // 診断完了トラッキング
+    document.getElementById('diagnosisForm').addEventListener('submit', function() {
+        gtag('event', 'diagnosis_completed', {
+            event_category: 'diagnosis',
+            event_label: 'form_submitted',
+            transport_type: 'beacon'
+        });
+    });
+    
+    // 診断結果表示トラッキング
+    function trackDiagnosisResult(result) {
+        gtag('event', 'diagnosis_result_shown', {
+            event_category: 'diagnosis',
+            event_label: result.level,
+            value: result.score
+        });
+    }
+    
+    // 診断後のCTAクリックトラッキング
+    document.addEventListener('click', function(e) {
+        if (e.target.closest('#diagnosisResult .btn')) {
+            const button = e.target.closest('.btn');
+            gtag('event', 'diagnosis_cta_click', {
+                event_category: 'diagnosis',
+                event_label: button.textContent.trim(),
+                transport_type: 'beacon'
+            });
+        }
+    });
+}
+
+// 資料ダウンロードページ専用のイベントトラッキング
+if (document.body.classList.contains('resources-page')) {
+    
+    // 資料ページビュートラッキング
+    document.addEventListener('DOMContentLoaded', function() {
+        gtag('event', 'resources_page_view', {
+            event_category: 'resources',
+            event_label: 'page_loaded'
+        });
+    });
+    
+    // タブ切り替えトラッキング
+    document.querySelectorAll('.tab-button').forEach(function(tab) {
+        tab.addEventListener('click', function() {
+            gtag('event', 'resource_category_viewed', {
+                event_category: 'resources',
+                event_label: this.dataset.category
+            });
+        });
+    });
+    
+    // 資料ダウンロードボタンクリックトラッキング
+    document.querySelectorAll('[data-resource]').forEach(function(button) {
+        button.addEventListener('click', function() {
+            gtag('event', 'resource_download_initiated', {
+                event_category: 'resources',
+                event_label: this.dataset.resource,
+                transport_type: 'beacon'
+            });
+        });
+    });
+    
+    // ダウンロードフォーム送信トラッキング
+    document.getElementById('resourceDownloadForm').addEventListener('submit', function() {
+        const resource = document.getElementById('selectedResource').value;
+        gtag('event', 'resource_download_completed', {
+            event_category: 'resources',
+            event_label: resource,
+            transport_type: 'beacon'
+        });
+    });
+    
+    // フォーム入力進捗トラッキング
+    let formFieldsCompleted = 0;
+    document.querySelectorAll('#resourceDownloadForm input, #resourceDownloadForm select').forEach(function(field) {
+        field.addEventListener('blur', function() {
+            if (this.value.trim() !== '') {
+                formFieldsCompleted++;
+                if (formFieldsCompleted === 1) {
+                    gtag('event', 'download_form_started', {
+                        event_category: 'resources',
+                        event_label: 'first_field_completed'
+                    });
+                }
+            }
+        });
+    });
+}
+
+// 問い合わせページ専用のイベントトラッキング
+if (document.body.classList.contains('contact-page') || window.location.pathname.includes('/contact/')) {
+    
+    // 問い合わせページビュートラッキング
+    document.addEventListener('DOMContentLoaded', function() {
+        gtag('event', 'contact_page_view', {
+            event_category: 'contact',
+            event_label: 'page_loaded'
+        });
+    });
+    
+    // 問い合わせフォーム入力開始トラッキング
+    let contactFormStarted = false;
+    document.querySelectorAll('form input, form textarea, form select').forEach(function(field) {
+        field.addEventListener('focus', function() {
+            if (!contactFormStarted) {
+                contactFormStarted = true;
+                gtag('event', 'contact_form_started', {
+                    event_category: 'contact',
+                    event_label: 'form_interaction_started'
+                });
+            }
+        });
+    });
+    
+    // 問い合わせフォーム送信トラッキング
+    document.querySelectorAll('form').forEach(function(form) {
+        form.addEventListener('submit', function() {
+            gtag('event', 'contact_form_submitted', {
+                event_category: 'contact',
+                event_label: 'form_submitted',
+                transport_type: 'beacon'
+            });
+        });
+    });
+}
+
+// 全ページ共通の拡張イベントトラッキング
+
+// ナビゲーションクリックトラッキング
+document.querySelectorAll('nav a, .navigation a').forEach(function(link) {
+    link.addEventListener('click', function() {
+        gtag('event', 'navigation_click', {
+            event_category: 'navigation',
+            event_label: this.textContent.trim(),
+            link_url: this.href
+        });
+    });
+});
+
+// サイドバーリンククリックトラッキング
+document.querySelectorAll('.sidebar a, .left-sidebar a, .right-sidebar a').forEach(function(link) {
+    link.addEventListener('click', function() {
+        gtag('event', 'sidebar_click', {
+            event_category: 'sidebar',
+            event_label: this.textContent.trim(),
+            link_url: this.href
+        });
+    });
+});
+
+// 検索機能使用トラッキング
+document.querySelectorAll('input[type="search"], .search-input').forEach(function(searchInput) {
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter' && this.value.trim() !== '') {
+            gtag('event', 'search_performed', {
+                event_category: 'search',
+                event_label: this.value.trim()
+            });
+        }
+    });
+});
+
+// ページ内アンカーリンククリックトラッキング
+document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function() {
+        gtag('event', 'anchor_link_click', {
+            event_category: 'navigation',
+            event_label: this.getAttribute('href'),
+            page_location: window.location.href
+        });
+    });
+});
+
+// 画像クリックトラッキング
+document.querySelectorAll('img').forEach(function(img) {
+    img.addEventListener('click', function() {
+        gtag('event', 'image_click', {
+            event_category: 'engagement',
+            event_label: this.alt || this.src,
+            image_url: this.src
+        });
+    });
+});
+
+// ビデオ再生トラッキング（もしビデオがある場合）
+document.querySelectorAll('video').forEach(function(video) {
+    video.addEventListener('play', function() {
+        gtag('event', 'video_play', {
+            event_category: 'media',
+            event_label: this.src || 'embedded_video'
+        });
+    });
+    
+    video.addEventListener('ended', function() {
+        gtag('event', 'video_complete', {
+            event_category: 'media',
+            event_label: this.src || 'embedded_video'
+        });
+    });
+});
+
+// エラー発生トラッキング
+window.addEventListener('error', function(e) {
+    gtag('event', 'javascript_error', {
+        event_category: 'errors',
+        event_label: e.message,
+        error_filename: e.filename,
+        error_lineno: e.lineno,
+        non_interaction: true
+    });
+});
+
+// ページ離脱前のエンゲージメント測定
+let maxScrollDepth = 0;
+let timeOnPage = 0;
+let startTime = Date.now();
+
+window.addEventListener('scroll', function() {
+    const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+    maxScrollDepth = Math.max(maxScrollDepth, scrollPercent);
+});
+
+window.addEventListener('beforeunload', function() {
+    timeOnPage = Math.round((Date.now() - startTime) / 1000);
+    
+    gtag('event', 'page_engagement', {
+        event_category: 'engagement',
+        max_scroll_depth: maxScrollDepth,
+        time_on_page: timeOnPage,
+        transport_type: 'beacon',
+        non_interaction: true
+    });
+});
+
+// カスタムディメンション設定
+gtag('config', 'GA_MEASUREMENT_ID', {
+    custom_map: {
+        'custom_parameter_1': 'page_type',
+        'custom_parameter_2': 'user_journey_stage',
+        'custom_parameter_3': 'content_category'
+    }
+});
+
+// ページタイプの設定
+let pageType = 'other';
+if (document.body.classList.contains('home-page')) pageType = 'home';
+else if (document.body.classList.contains('diagnosis-page')) pageType = 'diagnosis';
+else if (document.body.classList.contains('resources-page')) pageType = 'resources';
+else if (document.body.classList.contains('contact-page')) pageType = 'contact';
+else if (window.location.pathname.includes('/contact/')) pageType = 'contact';
+
+gtag('event', 'page_view', {
+    page_type: pageType,
+    page_category: document.body.className || 'default'
+});
+</script>
+

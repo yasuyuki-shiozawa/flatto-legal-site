@@ -1,0 +1,555 @@
+---
+layout: default
+title: 入札適性無料診断 | あなたの会社は入札に向いている？3分で診断
+description: 簡単な質問に答えるだけで、あなたの会社の入札適性を無料診断。業種、規模、経験に応じたカスタマイズされた提案をご提供します。
+permalink: /diagnosis/
+body_class: diagnosis-page
+---
+
+<div class="page-header">
+    <div class="container">
+        <h1>🎯 入札適性無料診断</h1>
+        <p>あなたの会社は入札に向いている？簡単な質問に答えるだけで3分で診断</p>
+    </div>
+</div>
+
+<div class="diagnosis-content">
+    <div class="container">
+        
+        <!-- 診断フォーム -->
+        <section class="diagnosis-form-section">
+            <div class="form-container">
+                <h2>📋 診断スタート</h2>
+                <p>以下の質問にお答えください。診断結果に基づいて、最適な入札戦略をご提案いたします。</p>
+                
+                <form id="diagnosisForm" class="diagnosis-form">
+                    
+                    <!-- 質問1: 業種 -->
+                    <div class="question-group">
+                        <h3>Q1. 御社の主な業種は？</h3>
+                        <div class="radio-group">
+                            <label><input type="radio" name="industry" value="construction"> 建設業</label>
+                            <label><input type="radio" name="industry" value="it"> IT・システム開発</label>
+                            <label><input type="radio" name="industry" value="consulting"> コンサルティング</label>
+                            <label><input type="radio" name="industry" value="manufacturing"> 製造業</label>
+                            <label><input type="radio" name="industry" value="service"> サービス業</label>
+                            <label><input type="radio" name="industry" value="other"> その他</label>
+                        </div>
+                    </div>
+
+                    <!-- 質問2: 会社規模 -->
+                    <div class="question-group">
+                        <h3>Q2. 御社の従業員数は？</h3>
+                        <div class="radio-group">
+                            <label><input type="radio" name="size" value="small"> 1-10名</label>
+                            <label><input type="radio" name="size" value="medium"> 11-50名</label>
+                            <label><input type="radio" name="size" value="large"> 51-100名</label>
+                            <label><input type="radio" name="size" value="xlarge"> 101名以上</label>
+                        </div>
+                    </div>
+
+                    <!-- 質問3: 入札経験 -->
+                    <div class="question-group">
+                        <h3>Q3. 入札への参加経験は？</h3>
+                        <div class="radio-group">
+                            <label><input type="radio" name="experience" value="none"> 全くない</label>
+                            <label><input type="radio" name="experience" value="little"> 少しある（1-2回）</label>
+                            <label><input type="radio" name="experience" value="some"> ある程度ある（3-10回）</label>
+                            <label><input type="radio" name="experience" value="much"> 豊富にある（10回以上）</label>
+                        </div>
+                    </div>
+
+                    <!-- 質問4: 資格保有状況 -->
+                    <div class="question-group">
+                        <h3>Q4. 入札参加資格の保有状況は？</h3>
+                        <div class="radio-group">
+                            <label><input type="radio" name="qualification" value="none"> 保有していない</label>
+                            <label><input type="radio" name="qualification" value="local"> 地方自治体のみ</label>
+                            <label><input type="radio" name="qualification" value="national"> 全省庁統一資格のみ</label>
+                            <label><input type="radio" name="qualification" value="both"> 両方保有</label>
+                        </div>
+                    </div>
+
+                    <!-- 質問5: 目標 -->
+                    <div class="question-group">
+                        <h3>Q5. 入札参加の主な目的は？</h3>
+                        <div class="radio-group">
+                            <label><input type="radio" name="goal" value="revenue"> 売上拡大</label>
+                            <label><input type="radio" name="goal" value="stability"> 経営安定化</label>
+                            <label><input type="radio" name="goal" value="expansion"> 事業拡大</label>
+                            <label><input type="radio" name="goal" value="reputation"> 信頼性向上</label>
+                        </div>
+                    </div>
+
+                    <!-- 質問6: 予算 -->
+                    <div class="question-group">
+                        <h3>Q6. 入札サポートの予算は？</h3>
+                        <div class="radio-group">
+                            <label><input type="radio" name="budget" value="low"> 10万円未満</label>
+                            <label><input type="radio" name="budget" value="medium"> 10-30万円</label>
+                            <label><input type="radio" name="budget" value="high"> 30-50万円</label>
+                            <label><input type="radio" name="budget" value="flexible"> 効果次第で柔軟に対応</label>
+                        </div>
+                    </div>
+
+                    <!-- 質問7: 緊急度 -->
+                    <div class="question-group">
+                        <h3>Q7. 入札参加を開始したい時期は？</h3>
+                        <div class="radio-group">
+                            <label><input type="radio" name="urgency" value="immediate"> すぐにでも</label>
+                            <label><input type="radio" name="urgency" value="month"> 1ヶ月以内</label>
+                            <label><input type="radio" name="urgency" value="quarter"> 3ヶ月以内</label>
+                            <label><input type="radio" name="urgency" value="flexible"> 時期は柔軟</label>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            🎯 診断結果を見る
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- 診断結果表示エリア -->
+        <section id="diagnosisResult" class="diagnosis-result-section" style="display: none;">
+            <div class="result-container">
+                <h2>📊 診断結果</h2>
+                <div id="resultContent"></div>
+                
+                <div class="next-actions">
+                    <h3>🚀 次のステップ</h3>
+                    <div class="action-buttons">
+                        <a href="/contact/" class="btn btn-primary btn-lg">
+                            📞 専門家に相談する
+                        </a>
+                        <a href="/resources/" class="btn btn-secondary">
+                            📄 詳細資料をダウンロード
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 診断の特徴 -->
+        <section class="diagnosis-features">
+            <h2>🎯 この診断の特徴</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>⚡ 3分で完了</h3>
+                    <p>簡単な質問に答えるだけで、すぐに結果が分かります</p>
+                </div>
+                <div class="feature-item">
+                    <h3>🎯 個別最適化</h3>
+                    <p>御社の状況に応じたカスタマイズされた提案</p>
+                </div>
+                <div class="feature-item">
+                    <h3>💡 具体的アドバイス</h3>
+                    <p>次に取るべき具体的なアクションを提示</p>
+                </div>
+                <div class="feature-item">
+                    <h3>🔒 完全無料</h3>
+                    <p>診断は完全無料、個人情報の入力も不要</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- よくある質問 -->
+        <section class="diagnosis-faq">
+            <h2>❓ よくある質問</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>Q. 診断結果はどの程度正確ですか？</h3>
+                    <p>A. 当診断は、これまでの豊富な支援実績に基づいて作成されており、高い精度で御社の入札適性を判定できます。ただし、より詳細な分析をご希望の場合は、個別相談をお勧めします。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Q. 診断後に営業電話がかかってきますか？</h3>
+                    <p>A. 診断だけでは個人情報をお聞きしていないため、営業電話をすることはありません。ご相談をご希望の場合のみ、お客様からお問い合わせください。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Q. 診断結果に納得できない場合は？</h3>
+                    <p>A. 診断は一般的な傾向に基づくものです。個別の事情により結果が変わる場合もありますので、詳細については無料相談でご確認ください。</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+<style>
+.diagnosis-page {
+    background-color: #faf8f5;
+}
+
+.diagnosis-form-section {
+    background: white;
+    padding: 40px 0;
+    margin: 40px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(26, 77, 58, 0.1);
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.question-group {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f5f1eb;
+    border-radius: 8px;
+    border-left: 4px solid #1a4d3a;
+}
+
+.question-group h3 {
+    color: #1a4d3a;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.radio-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background: white;
+    border: 2px solid #e8f5e8;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.radio-group label:hover {
+    border-color: #1a4d3a;
+    background: #e8f5e8;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #1a4d3a;
+}
+
+.radio-group label:has(input:checked) {
+    background: #1a4d3a;
+    color: white;
+    border-color: #1a4d3a;
+}
+
+.form-actions {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.diagnosis-result-section {
+    background: white;
+    padding: 40px 0;
+    margin: 40px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(26, 77, 58, 0.1);
+}
+
+.result-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.result-score {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.score-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+}
+
+.score-high { background: #1a4d3a; }
+.score-medium { background: #ff6b35; }
+.score-low { background: #e53e3e; }
+
+.result-details {
+    background: #f5f1eb;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.next-actions {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 30px 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(26, 77, 58, 0.1);
+}
+
+.feature-item h3 {
+    color: #1a4d3a;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 30px auto 0;
+}
+
+.faq-item {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(26, 77, 58, 0.1);
+}
+
+.faq-item h3 {
+    color: #1a4d3a;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.faq-item p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .radio-group {
+        grid-template-columns: 1fr;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<script>
+document.getElementById('diagnosisForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // フォームデータを取得
+    const formData = new FormData(this);
+    const answers = {};
+    for (let [key, value] of formData.entries()) {
+        answers[key] = value;
+    }
+    
+    // 診断ロジック
+    const result = calculateDiagnosisResult(answers);
+    
+    // 結果を表示
+    displayResult(result);
+    
+    // 結果セクションにスクロール
+    document.getElementById('diagnosisResult').scrollIntoView({ 
+        behavior: 'smooth' 
+    });
+});
+
+function calculateDiagnosisResult(answers) {
+    let score = 0;
+    let recommendations = [];
+    let nextSteps = [];
+    
+    // 業種による加点
+    const industryScores = {
+        'construction': 20,
+        'it': 18,
+        'consulting': 16,
+        'manufacturing': 15,
+        'service': 12,
+        'other': 10
+    };
+    score += industryScores[answers.industry] || 10;
+    
+    // 会社規模による加点
+    const sizeScores = {
+        'small': 10,
+        'medium': 15,
+        'large': 18,
+        'xlarge': 20
+    };
+    score += sizeScores[answers.size] || 10;
+    
+    // 経験による加点
+    const experienceScores = {
+        'none': 5,
+        'little': 10,
+        'some': 15,
+        'much': 20
+    };
+    score += experienceScores[answers.experience] || 5;
+    
+    // 資格による加点
+    const qualificationScores = {
+        'none': 5,
+        'local': 12,
+        'national': 15,
+        'both': 20
+    };
+    score += qualificationScores[answers.qualification] || 5;
+    
+    // 目標による加点
+    const goalScores = {
+        'revenue': 15,
+        'stability': 18,
+        'expansion': 20,
+        'reputation': 12
+    };
+    score += goalScores[answers.goal] || 12;
+    
+    // 予算による加点
+    const budgetScores = {
+        'low': 8,
+        'medium': 12,
+        'high': 16,
+        'flexible': 20
+    };
+    score += budgetScores[answers.budget] || 8;
+    
+    // 緊急度による加点
+    const urgencyScores = {
+        'immediate': 20,
+        'month': 15,
+        'quarter': 10,
+        'flexible': 8
+    };
+    score += urgencyScores[answers.urgency] || 8;
+    
+    // 結果判定
+    let level, message, advice;
+    
+    if (score >= 85) {
+        level = 'high';
+        message = '入札参加に非常に適しています！';
+        advice = '御社は入札参加に最適な条件が揃っています。すぐにでも入札参加を開始することをお勧めします。';
+        recommendations = [
+            '全省庁統一資格の申請（未取得の場合）',
+            '地方自治体資格の拡充',
+            '入札案件の積極的な情報収集',
+            '専門サポートによる戦略立案'
+        ];
+        nextSteps = [
+            '無料相談で具体的な戦略を立案',
+            '資格申請の代行依頼',
+            '入札案件の選定サポート'
+        ];
+    } else if (score >= 65) {
+        level = 'medium';
+        message = '入札参加に適しています';
+        advice = '基本的な条件は整っていますが、いくつかの準備を行うことで、より確実に成功できます。';
+        recommendations = [
+            '入札参加資格の取得',
+            '業界特有の要件の確認',
+            '実績作りのための小規模案件への参加',
+            '書類作成スキルの向上'
+        ];
+        nextSteps = [
+            '現状分析と課題の明確化',
+            '段階的な参加計画の策定',
+            '必要な準備の優先順位付け'
+        ];
+    } else {
+        level = 'low';
+        message = '準備を整えてから参加しましょう';
+        advice = '入札参加には準備が必要です。まずは基礎的な条件を整えることから始めましょう。';
+        recommendations = [
+            '入札制度の基礎知識習得',
+            '会社の体制整備',
+            '必要資格の取得計画',
+            '段階的な参加戦略の策定'
+        ];
+        nextSteps = [
+            '入札制度の基本学習',
+            '準備計画の策定',
+            '専門家による現状分析'
+        ];
+    }
+    
+    return {
+        score: score,
+        level: level,
+        message: message,
+        advice: advice,
+        recommendations: recommendations,
+        nextSteps: nextSteps,
+        answers: answers
+    };
+}
+
+function displayResult(result) {
+    const resultSection = document.getElementById('diagnosisResult');
+    const resultContent = document.getElementById('resultContent');
+    
+    resultContent.innerHTML = `
+        <div class="result-score">
+            <div class="score-circle score-${result.level}">
+                ${result.score}点
+            </div>
+            <h3>${result.message}</h3>
+        </div>
+        
+        <div class="result-details">
+            <h4>📋 診断結果の詳細</h4>
+            <p>${result.advice}</p>
+            
+            <h4>💡 おすすめのアクション</h4>
+            <ul>
+                ${result.recommendations.map(rec => `<li>${rec}</li>`).join('')}
+            </ul>
+            
+            <h4>🎯 具体的な次のステップ</h4>
+            <ul>
+                ${result.nextSteps.map(step => `<li>${step}</li>`).join('')}
+            </ul>
+        </div>
+    `;
+    
+    resultSection.style.display = 'block';
+}
+</script>
+

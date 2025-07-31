@@ -1,0 +1,191 @@
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'GA_MEASUREMENT_ID', {
+    // プライバシー設定
+    anonymize_ip: true,
+    allow_google_signals: false,
+    allow_ad_personalization_signals: false,
+    
+    // カスタム設定
+    custom_map: {
+      'custom_parameter_1': 'page_category',
+      'custom_parameter_2': 'user_type'
+    }
+  });
+</script>
+
+<!-- カスタムイベントトラッキング -->
+<script>
+// ページビュー拡張トラッキング
+gtag('event', 'page_view', {
+  page_title: document.title,
+  page_location: window.location.href,
+  page_category: document.body.className || 'default'
+});
+
+// スクロール深度トラッキング
+let scrollDepthTracked = [];
+window.addEventListener('scroll', function() {
+  const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+  
+  [25, 50, 75, 90].forEach(threshold => {
+    if (scrollPercent >= threshold && !scrollDepthTracked.includes(threshold)) {
+      scrollDepthTracked.push(threshold);
+      gtag('event', 'scroll_depth', {
+        event_category: 'engagement',
+        event_label: threshold + '%',
+        value: threshold
+      });
+    }
+  });
+});
+
+// 外部リンククリックトラッキング
+document.addEventListener('click', function(e) {
+  const link = e.target.closest('a');
+  if (link && link.hostname !== window.location.hostname) {
+    gtag('event', 'click', {
+      event_category: 'outbound_link',
+      event_label: link.href,
+      transport_type: 'beacon'
+    });
+  }
+});
+
+// ダウンロードリンクトラッキング
+document.addEventListener('click', function(e) {
+  const link = e.target.closest('a');
+  if (link && link.href.match(/\.(pdf|doc|docx|xls|xlsx|ppt|pptx|zip|rar)$/i)) {
+    gtag('event', 'file_download', {
+      event_category: 'downloads',
+      event_label: link.href,
+      transport_type: 'beacon'
+    });
+  }
+});
+
+// フォーム送信トラッキング
+document.addEventListener('submit', function(e) {
+  const form = e.target;
+  const formId = form.id || 'unknown_form';
+  
+  gtag('event', 'form_submit', {
+    event_category: 'forms',
+    event_label: formId,
+    transport_type: 'beacon'
+  });
+});
+
+// CTAボタンクリックトラッキング
+document.addEventListener('click', function(e) {
+  const button = e.target.closest('.btn');
+  if (button) {
+    const buttonText = button.textContent.trim();
+    const buttonClass = button.className;
+    
+    gtag('event', 'cta_click', {
+      event_category: 'cta_buttons',
+      event_label: buttonText,
+      button_class: buttonClass
+    });
+  }
+});
+
+// 電話番号クリックトラッキング
+document.addEventListener('click', function(e) {
+  const link = e.target.closest('a[href^="tel:"]');
+  if (link) {
+    gtag('event', 'phone_click', {
+      event_category: 'contact',
+      event_label: link.href.replace('tel:', ''),
+      transport_type: 'beacon'
+    });
+  }
+});
+
+// ページ滞在時間トラッキング
+let startTime = Date.now();
+let timeOnPageTracked = false;
+
+window.addEventListener('beforeunload', function() {
+  if (!timeOnPageTracked) {
+    const timeOnPage = Math.round((Date.now() - startTime) / 1000);
+    gtag('event', 'time_on_page', {
+      event_category: 'engagement',
+      event_label: 'seconds',
+      value: timeOnPage,
+      transport_type: 'beacon'
+    });
+    timeOnPageTracked = true;
+  }
+});
+
+// 30秒後の滞在時間トラッキング
+setTimeout(function() {
+  if (!timeOnPageTracked) {
+    gtag('event', 'engaged_session', {
+      event_category: 'engagement',
+      event_label: '30_seconds',
+      transport_type: 'beacon'
+    });
+  }
+}, 30000);
+</script>
+
+<!-- Facebook Pixel (オプション) -->
+<!-- 
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'YOUR_PIXEL_ID');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+/></noscript>
+-->
+
+<!-- Microsoft Clarity (オプション) -->
+<!--
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "YOUR_CLARITY_ID");
+</script>
+-->
+
+<!-- Hotjar (オプション) -->
+<!--
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:YOUR_HOTJAR_ID,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+-->
+

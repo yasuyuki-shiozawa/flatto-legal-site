@@ -351,7 +351,7 @@ permalink: /lp1/
         <h1 class="hero-catchcopy">入札参加、もう迷わない</h1>
         <h2 class="hero-title">全省庁統一資格申請<br><span class="highlight">完全無料</span></h2>
         <p class="hero-subtitle">※ただし、入札サポート（月額33,000円×6ヶ月）のご利用が条件となります</p>
-        <a href="mailto:mail@flat-legal.com?subject=LP1からのお問い合わせ&body=お名前：%0D%0A会社名：%0D%0A電話番号：%0D%0A%0D%0Aお問い合わせ内容：%0D%0A" class="hero-cta">
+        <a href="/contact/" class="hero-cta">
             <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style="display: inline-block; margin-right: 10px; vertical-align: middle;">
                 <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
             </svg>
@@ -453,7 +453,7 @@ permalink: /lp1/
             ※審査により分割回数が決定されます
         </p>
         
-        <a href="mailto:mail@flat-legal.com?subject=LP1からのお申し込み&body=お名前：%0D%0A会社名：%0D%0A電話番号：%0D%0A%0D%0A申し込み内容：全省庁統一資格申請+6ヶ月サポート%0D%0A%0D%0Aご質問・ご要望：%0D%0A" class="pricing-cta">今すぐ申し込む</a>
+        <a href="/contact/" class="pricing-cta">今すぐ申し込む</a>
     </div>
 </section>
 
@@ -562,7 +562,8 @@ document.querySelector('form').addEventListener('submit', function(e) {
     const body = `お名前：${name}%0D%0A会社名：${company}%0D%0A電話番号：${phone}%0D%0Aメールアドレス：${email}%0D%0A業種：${industry}%0D%0A相談内容：${consultationType}%0D%0A%0D%0Aご質問・ご相談内容：%0D%0A${message}`;
     
     // メールクライアントを開く
-    window.location.href = `mailto:mail@flat-legal.com?subject=${subject}&body=${body}`;
+    // 問い合わせフォームへのリダイレクト処理
+    window.location.href = '/contact/';
 });
 </script>
 

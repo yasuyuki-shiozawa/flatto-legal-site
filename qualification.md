@@ -191,7 +191,7 @@ body_class: qualification-page
                 </div>
                 
                 <div class="contact-info">
-                    <p>📧 メール相談：<a href="mailto:mail@flat-legal.com">mail@flat-legal.com</a></p>
+                    <p>📧 メール相談：<a href="/contact/">お問い合わせフォーム</a></p>
                     <p>⏰ 受付時間：平日9時〜17時（メールは24時間受付）</p>
                 </div>
             </div>

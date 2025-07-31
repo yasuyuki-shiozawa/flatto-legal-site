@@ -10,6 +10,9 @@
     <!-- Enhanced SEO Keywords -->
     <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}全省庁統一資格,入札参加資格,行政書士,入札制度,政府調達,地方自治体,競争入札,随意契約,プロポーザル,入札申請,資格申請代行,公共調達,入札書類作成,入札戦略,中小企業入札{% endif %}">
     
+    <!-- Analytics and Tracking -->
+    {% include analytics.html %}
+    
     <!-- Author and Publisher -->
     <meta name="author" content="行政書士法人ふらっと法務事務所">
     <meta name="publisher" content="行政書士法人ふらっと法務事務所">
@@ -90,6 +93,11 @@
     {% endif %}
 </head>
 <body data-page-url="{{ page.url }}" {% if page.body_class %}class="{{ page.body_class }}"{% endif %}>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
     {% include header.html %}
     
     <!-- キャンペーンバナー -->
@@ -118,10 +126,11 @@
             </aside>
             {% endunless %}
         </div>
-    </main>
+    </main>    {% include footer.html %}
     
-    {% include footer.html %}
-    
+    <!-- Enhanced Analytics and Event Tracking -->
+    {% include enhanced-analytics.html %}
+</body>   
     <!-- モバイルボトムナビゲーション -->
     {% include mobile-bottom-navigation.html %}
     
