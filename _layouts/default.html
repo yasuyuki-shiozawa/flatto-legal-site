@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-    
     <!-- Enhanced SEO Keywords -->
     <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}全省庁統一資格,入札参加資格,行政書士,入札制度,政府調達,地方自治体,競争入札,随意契約,プロポーザル,入札申請,資格申請代行,公共調達,入札書類作成,入札戦略,中小企業入札{% endif %}">
     
     <!-- Analytics and Tracking -->
     {% include analytics.html %}
     
-    <!-- Author and Publisher -->
+    <!-- Jekyll SEO Tag -->
+    {% seo %}
+    
+    <!-- Additional Custom Meta Tags -->
     <meta name="author" content="行政書士法人ふらっと法務事務所">
     <meta name="publisher" content="行政書士法人ふらっと法務事務所">
     
@@ -23,24 +23,7 @@
     <meta name="geo.position" content="35.4844;139.4578">
     <meta name="ICBM" content="35.4844, 139.4578">
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
-    <meta property="og:url" content="{{ page.url | absolute_url }}">
-    <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
-    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-    <meta property="og:image" content="{{ '/assets/images/og-image.webp' | absolute_url }}">
-    <meta property="og:site_name" content="{{ site.title }}">
-    <meta property="og:locale" content="ja_JP">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="{{ page.url | absolute_url }}">
-    <meta property="twitter:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
-    <meta property="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">    <meta property="twitter:image" content="{{ 
-'/assets/images/og-image.webp' | absolute_url }}">
-    
     <!-- Additional SEO -->
-    <meta name="author" content="行政書士法人ふらっと法務事務所">
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="pm0dB5OZdlVLMG0oY-Ot2QBGvDZ2pNd3TA_MPUJF3ig" />
     <link rel="canonical" href="{{ page.url | absolute_url }}">
