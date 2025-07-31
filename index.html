@@ -20,11 +20,21 @@ body_class: home-page
             わかりやすく解説する総合情報サイトです。
         </p>
         <div class="hero-actions">
-            <a href="/knowhow/" class="btn btn-primary btn-lg">
+            <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-lg">
+                <i class="fas fa-calendar-alt"></i>
+                無料相談を申し込む
+            </a>
+            <a href="tel:046-272-3357" class="btn btn-success btn-lg">
+                <i class="fas fa-phone"></i>
+                今すぐ電話相談
+            </a>
+        </div>
+        <div class="hero-secondary-actions">
+            <a href="/knowhow/" class="btn btn-outline-primary">
                 <i class="fas fa-graduation-cap"></i>
                 入札の基本を学ぶ
             </a>
-            <a href="/dictionary/" class="btn btn-outline-primary btn-lg">
+            <a href="/dictionary/" class="btn btn-outline-primary">
                 <i class="fas fa-book"></i>
                 用語集を見る
             </a>
