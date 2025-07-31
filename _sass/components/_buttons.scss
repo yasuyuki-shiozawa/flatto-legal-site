@@ -67,42 +67,46 @@
   }
 }
 
-// ボタンバリエーション
+// ボタンバリエーション（新しい自然な色調）
 .btn-primary {
-  background-color: #3b82f6;
-  border-color: #3b82f6;
-  color: white;
+  background-color: var(--color-orange-warm);
+  border-color: var(--color-orange-warm);
+  color: var(--color-text-inverse); // 白文字
   
   &:hover:not(:disabled) {
-    background-color: #2563eb;
-    border-color: #2563eb;
+    background-color: var(--color-orange-dark);
+    border-color: var(--color-orange-dark);
+    color: var(--color-text-inverse); // 白文字維持
     transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(59, 130, 246, 0.25);
+    box-shadow: var(--shadow-md);
   }
   
   &:active:not(:disabled) {
-    background-color: #1d4ed8;
-    border-color: #1d4ed8;
+    background-color: var(--color-orange-dark);
+    border-color: var(--color-orange-dark);
+    color: var(--color-text-inverse); // 白文字維持
     transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(59, 130, 246, 0.25);
+    box-shadow: var(--shadow-sm);
   }
 }
 
 .btn-secondary {
-  background-color: #f8fafc;
-  border-color: #e2e8f0;
-  color: #475569;
+  background-color: var(--color-forest-medium);
+  border-color: var(--color-forest-medium);
+  color: var(--color-text-inverse); // 白文字
   
   &:hover:not(:disabled) {
-    background-color: #f1f5f9;
-    border-color: #cbd5e1;
+    background-color: var(--color-forest-dark);
+    border-color: var(--color-forest-dark);
+    color: var(--color-text-inverse); // 白文字維持
     transform: translateY(-1px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-md);
   }
   
   &:active:not(:disabled) {
-    background-color: var(--color-secondary-400);
-    border-color: var(--color-secondary-400);
+    background-color: var(--color-forest-dark);
+    border-color: var(--color-forest-dark);
+    color: var(--color-text-inverse); // 白文字維持
     transform: translateY(0);
     box-shadow: var(--shadow-sm);
   }
@@ -110,19 +114,21 @@
 
 .btn-outline {
   background-color: transparent;
-  border-color: var(--color-primary-600);
-  color: var(--color-primary-600);
+  border-color: var(--color-forest-medium);
+  color: var(--color-forest-medium); // 森林緑文字
   
   &:hover:not(:disabled) {
-    background-color: var(--color-primary-600);
-    color: var(--color-white);
+    background-color: var(--color-forest-medium);
+    border-color: var(--color-forest-medium);
+    color: var(--color-text-inverse); // ホバー時は白文字
     transform: translateY(-1px);
     box-shadow: var(--shadow-md);
   }
   
   &:active:not(:disabled) {
-    background-color: var(--color-primary-700);
-    border-color: var(--color-primary-700);
+    background-color: var(--color-forest-dark);
+    border-color: var(--color-forest-dark);
+    color: var(--color-text-inverse); // アクティブ時は白文字
     transform: translateY(0);
     box-shadow: var(--shadow-sm);
   }
@@ -130,19 +136,21 @@
 
 .btn-outline-primary {
   background-color: transparent;
-  border-color: var(--color-primary-600);
-  color: var(--color-primary-600);
+  border-color: var(--color-forest-medium);
+  color: var(--color-forest-medium); // 森林緑文字
   
   &:hover:not(:disabled) {
-    background-color: var(--color-primary-600);
-    color: var(--color-white);
+    background-color: var(--color-forest-medium);
+    border-color: var(--color-forest-medium);
+    color: var(--color-text-inverse); // ホバー時は白文字
     transform: translateY(-1px);
     box-shadow: var(--shadow-md);
   }
   
   &:active:not(:disabled) {
-    background-color: var(--color-primary-700);
-    border-color: var(--color-primary-700);
+    background-color: var(--color-forest-dark);
+    border-color: var(--color-forest-dark);
+    color: var(--color-text-inverse); // アクティブ時は白文字
     transform: translateY(0);
     box-shadow: var(--shadow-sm);
   }

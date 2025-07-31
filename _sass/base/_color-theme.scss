@@ -1,39 +1,27 @@
 // 入札マップ独自のカラーテーマ
-// ティール・インディゴ・コーラルを中心とした配色
+// 「知識の森」コンセプトに基づく自然な色調
 
 :root {
-  // プライマリカラー（ティール系）
-  --color-primary-100: #e6fffa;
-  --color-primary-200: #b2f5ea;
-  --color-primary-300: #81e6d9;
-  --color-primary-400: #4fd1c5;
-  --color-primary-500: #38b2ac;
-  --color-primary-600: #16a085; // メインカラー
-  --color-primary-700: #2c7a7b;
-  --color-primary-800: #285e61;
-  --color-primary-900: #234e52;
+  // 森林緑系（信頼感・専門性）
+  --color-forest-dark: #1a4d3a;      // 深い森林緑 - メインテキスト、ヘッダー
+  --color-forest-medium: #2d5a3d;    // 中間の森林緑 - ボタン、リンク
+  --color-forest-light: #e8f5e8;     // 薄い森林緑 - 背景、カード
+  --color-forest-pale: #f4faf4;      // 極薄い森林緑 - セクション背景
   
-  // セカンダリカラー（インディゴ系）
-  --color-secondary-100: #e0e7ff;
-  --color-secondary-200: #c7d2fe;
-  --color-secondary-300: #a5b4fc;
-  --color-secondary-400: #818cf8;
-  --color-secondary-500: #6366f1;
-  --color-secondary-600: #6c5ce7; // メインカラー
-  --color-secondary-700: #5b21b6;
-  --color-secondary-800: #4c1d95;
-  --color-secondary-900: #3c1a78;
+  // ベージュ・クリーム系（温かみ・上品さ）
+  --color-beige-warm: #f5f1eb;       // 温かいベージュ - セクション背景
+  --color-cream-light: #faf8f5;      // 薄いクリーム - カード背景
+  --color-ivory: #fefcf9;            // アイボリー - 白の代替
   
-  // アクセントカラー（コーラル系）
-  --color-accent-100: #ffe4e6;
-  --color-accent-200: #fecdd3;
-  --color-accent-300: #fda4af;
-  --color-accent-400: #fb7185;
-  --color-accent-500: #f43f5e;
-  --color-accent-600: #fd79a8; // メインカラー
-  --color-accent-700: #be123c;
-  --color-accent-800: #9f1239;
-  --color-accent-900: #881337;
+  // オレンジ系（アクセント・活気）
+  --color-orange-warm: #ff6b35;      // 温かいオレンジ - CTAボタン
+  --color-orange-light: #fff4f0;     // 薄いオレンジ - ホバー効果
+  --color-orange-dark: #e55a2b;      // 深いオレンジ - テキスト、アイコン
+  
+  // 互換性のための旧カラー変数（段階的移行用）
+  --color-primary-600: #2d5a3d;      // 中間の森林緑
+  --color-secondary-600: #ff6b35;    // 温かいオレンジ
+  --color-accent-600: #1a4d3a;       // 深い森林緑
   
   // グレースケール
   --color-gray-50: #fafafa;
@@ -53,37 +41,38 @@
   --color-error: #ef4444;
   --color-info: #3b82f6;
   
-  // 背景色
-  --color-bg-primary: #ffffff;
-  --color-bg-secondary: #fafafa;
-  --color-bg-tertiary: #f3f4f6;
-  
   // テキストカラー
-  --color-text-primary: #18181b;
-  --color-text-secondary: #52525b;
-  --color-text-tertiary: #71717a;
-  --color-text-inverse: #ffffff;
+  --color-text-primary: #1a4d3a;     // プライマリテキスト（深い森林緑）
+  --color-text-secondary: #2d5a3d;   // セカンダリテキスト（中間の森林緑）
+  --color-text-tertiary: #6b7280;    // 薄いテキスト（グレー）
+  --color-text-inverse: #ffffff;     // 白文字（濃い背景用）
+  
+  // 背景色
+  --color-bg-primary: #ffffff;       // メイン背景（白）
+  --color-bg-secondary: #faf8f5;     // セクション背景（薄いクリーム）
+  --color-bg-tertiary: #f5f1eb;      // カード背景（温かいベージュ）
+  --color-bg-accent: #f4faf4;        // アクセント背景（極薄い森林緑）
   
   // ボーダーカラー
-  --color-border-light: #e4e4e7;
-  --color-border-medium: #d4d4d8;
-  --color-border-dark: #a1a1aa;
+  --color-border-light: #e8f5e8;     // 薄いボーダー（薄い森林緑）
+  --color-border-medium: #d1e7dd;    // 中間ボーダー
+  --color-border-dark: #2d5a3d;      // 濃いボーダー（中間の森林緑）
   
-  // シャドウ
-  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  // シャドウ（森林緑ベース）
+  --shadow-xs: 0 1px 2px 0 rgba(26, 77, 58, 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(26, 77, 58, 0.1), 0 1px 2px -1px rgba(26, 77, 58, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(26, 77, 58, 0.1), 0 2px 4px -2px rgba(26, 77, 58, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(26, 77, 58, 0.1), 0 4px 6px -4px rgba(26, 77, 58, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(26, 77, 58, 0.1), 0 8px 10px -6px rgba(26, 77, 58, 0.1);
   
-  // カード用シャドウ（独自）
-  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
-  --shadow-card-hover: 0 8px 16px rgba(0, 0, 0, 0.12);
+  // カード用シャドウ（森林緑ベース）
+  --shadow-card: 0 2px 8px rgba(26, 77, 58, 0.08);
+  --shadow-card-hover: 0 8px 16px rgba(26, 77, 58, 0.12);
   
-  // グラデーション
-  --gradient-primary: linear-gradient(135deg, var(--color-primary-500) 0%, var(--color-primary-700) 100%);
-  --gradient-secondary: linear-gradient(135deg, var(--color-secondary-500) 0%, var(--color-secondary-700) 100%);
-  --gradient-accent: linear-gradient(135deg, var(--color-accent-500) 0%, var(--color-accent-700) 100%);
+  // グラデーション（自然な色調）
+  --gradient-primary: linear-gradient(135deg, var(--color-forest-medium) 0%, var(--color-forest-dark) 100%);
+  --gradient-secondary: linear-gradient(135deg, var(--color-orange-warm) 0%, var(--color-orange-dark) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--color-forest-light) 0%, var(--color-beige-warm) 100%);
   
   // トランジション
   --transition-fast: 150ms ease;
@@ -98,15 +87,15 @@
   }
 }
 
-// カラーユーティリティクラス
-.text-primary { color: var(--color-primary-600); }
-.text-secondary { color: var(--color-secondary-600); }
-.text-accent { color: var(--color-accent-600); }
+// カラーユーティリティクラス（新しい色調）
+.text-primary { color: var(--color-forest-medium); }
+.text-secondary { color: var(--color-orange-warm); }
+.text-accent { color: var(--color-forest-dark); }
 
-.bg-primary { background-color: var(--color-primary-600); }
-.bg-secondary { background-color: var(--color-secondary-600); }
-.bg-accent { background-color: var(--color-accent-600); }
+.bg-primary { background-color: var(--color-forest-medium); }
+.bg-secondary { background-color: var(--color-orange-warm); }
+.bg-accent { background-color: var(--color-forest-light); }
 
-.border-primary { border-color: var(--color-primary-600); }
-.border-secondary { border-color: var(--color-secondary-600); }
-.border-accent { border-color: var(--color-accent-600); }
+.border-primary { border-color: var(--color-forest-medium); }
+.border-secondary { border-color: var(--color-orange-warm); }
+.border-accent { border-color: var(--color-forest-dark); }

@@ -1,16 +1,16 @@
 // モダンなカードデザイン
-// 既存のカードスタイルを拡張・改善
+// 「知識の森」コンセプトに基づく自然な色調
 
 // ========================================
 // モダンカードベース
 // ========================================
 .card-modern {
-  background: var(--color-white);
+  background: var(--color-bg-primary);
   border-radius: 16px;
   padding: 2rem;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow-card);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   
   // アクセントライン（上部）
@@ -21,7 +21,7 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(135deg, var(--color-primary-500), var(--color-primary-700));
+    background: var(--gradient-primary);
     opacity: 0;
     transition: opacity 0.3s ease;
   }
@@ -29,7 +29,7 @@
   // ホバー効果
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: var(--shadow-card-hover);
     
     &::before {
       opacity: 1;
@@ -38,16 +38,22 @@
   
   // カラーバリエーション
   &.card-primary {
+    background: var(--color-forest-light);
+    color: var(--color-text-primary);
+    
     &::before {
       opacity: 1;
-      background: linear-gradient(135deg, var(--color-primary-400), var(--color-primary-600));
+      background: var(--gradient-primary);
     }
   }
   
   &.card-secondary {
+    background: var(--color-cream-light);
+    color: var(--color-text-primary);
+    
     &::before {
       opacity: 1;
-      background: linear-gradient(135deg, var(--color-secondary-400), var(--color-secondary-600));
+      background: var(--gradient-secondary);
     }
   }
   

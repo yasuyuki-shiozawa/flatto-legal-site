@@ -4,9 +4,9 @@
 // ホームページ専用調整（削除）
 // .home-page スタイルは不要なので削除
 
-// ヒーローセクション
+// ヒーローセクション（新しい自然な色調）
 .hero-section {
-  background: linear-gradient(135deg, #f0fdfa 0%, #e6fffa 100%);
+  background: linear-gradient(135deg, var(--color-forest-pale) 0%, var(--color-cream-light) 100%);
   padding: 5rem 0;
   position: relative;
   overflow: hidden;
@@ -26,7 +26,7 @@
     right: -10%;
     width: 60%;
     height: 200%;
-    background: radial-gradient(circle, rgba(22, 160, 133, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(26, 77, 58, 0.1) 0%, transparent 70%);
     transform: rotate(45deg);
   }
   
@@ -42,7 +42,7 @@
   .hero-title {
     font-size: 2.5rem;
     font-weight: 600;
-    color: var(--color-primary-800);
+    color: var(--color-text-primary); // 深い森林緑
     margin-bottom: 1.25rem;
     line-height: 1.25;
     
@@ -59,7 +59,7 @@
     display: block;
     font-size: 1.125rem;
     font-weight: 400;
-    color: var(--color-primary-600);
+    color: var(--color-text-secondary); // 中間の森林緑
     margin-bottom: 0.5rem;
     
     @media (max-width: 767px) {
@@ -69,7 +69,7 @@
   
   .hero-description {
     font-size: 1rem;
-    color: var(--color-text-secondary);
+    color: var(--color-text-secondary); // 中間の森林緑
     margin-bottom: 1.75rem;
     line-height: 1.6;
   }
