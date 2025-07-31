@@ -17,14 +17,14 @@
   
   // プライマリCTA
   &.cta-primary {
-    background: linear-gradient(135deg, #bfdbfe 0%, #93c5fd 100%);
-    color: #1e40af;
-    box-shadow: 0 4px 15px rgba(147, 197, 253, 0.4);
+    background: linear-gradient(135deg, var(--color-orange-warm) 0%, var(--color-orange-dark) 100%);
+    color: var(--color-text-inverse);
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
     
     &:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(147, 197, 253, 0.5);
-      background: linear-gradient(135deg, #93c5fd 0%, #60a5fa 100%);
+      box-shadow: 0 6px 20px rgba(255, 107, 53, 0.5);
+      background: linear-gradient(135deg, var(--color-orange-dark) 0%, #d14d26 100%);
       
       &::after {
         transform: translateX(0);
@@ -46,16 +46,16 @@
   
   // セカンダリCTA
   &.cta-secondary {
-    background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
-    color: #c2410c;
-    border: 2px solid #fdba74;
-    box-shadow: 0 2px 10px rgba(253, 215, 170, 0.3);
+    background: linear-gradient(135deg, var(--color-forest-light) 0%, var(--color-beige-warm) 100%);
+    color: var(--color-forest-dark);
+    border: 2px solid var(--color-forest-medium);
+    box-shadow: 0 2px 10px rgba(26, 77, 58, 0.3);
     
     &:hover {
-      background: linear-gradient(135deg, #fdba74 0%, #fb923c 100%);
-      color: #9a3412;
+      background: linear-gradient(135deg, var(--color-beige-warm) 0%, var(--color-cream-light) 100%);
+      color: var(--color-forest-dark);
       transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(251, 146, 60, 0.4);
+      box-shadow: 0 4px 15px rgba(45, 90, 61, 0.4);
     }
   }
   
@@ -211,7 +211,7 @@
 
 // CTAセクション（ページ内）
 .cta-section {
-  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  background: linear-gradient(135deg, var(--color-forest-pale) 0%, var(--color-cream-light) 100%);
   padding: 4rem 2rem;
   text-align: center;
   position: relative;
@@ -224,7 +224,7 @@
     right: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(26, 77, 58, 0.1) 0%, transparent 70%);
     animation: rotate 30s linear infinite;
   }
   
@@ -243,7 +243,7 @@
   .cta-heading {
     font-size: 2.5rem;
     font-weight: 800;
-    color: #1f2937;
+    color: var(--color-forest-dark);
     margin-bottom: 1rem;
     
     @media (max-width: 767px) {
@@ -253,7 +253,7 @@
   
   .cta-subheading {
     font-size: 1.25rem;
-    color: #4b5563;
+    color: var(--color-forest-medium);
     margin-bottom: 2rem;
     
     @media (max-width: 767px) {

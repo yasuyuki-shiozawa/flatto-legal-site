@@ -1,0 +1,233 @@
+// CSS優先度の問題を解決するための上書きスタイル
+// 「知識の森」コンセプトの新しいカラーパレット強制適用
+
+// ヒーローセクションの強制上書き
+.hero-section {
+  background: linear-gradient(135deg, var(--color-forest-pale) 0%, var(--color-cream-light) 100%) !important;
+  
+  .hero-title {
+    color: var(--color-forest-dark) !important;
+  }
+  
+  .hero-subtitle,
+  .hero-description {
+    color: var(--color-forest-medium) !important;
+  }
+}
+
+// CTAボタンの強制上書き
+.cta-button,
+.btn-primary,
+.button-primary {
+  background: linear-gradient(135deg, var(--color-orange-warm) 0%, var(--color-orange-dark) 100%) !important;
+  color: var(--color-text-inverse) !important;
+  border-color: var(--color-orange-warm) !important;
+  
+  &:hover {
+    background: linear-gradient(135deg, var(--color-orange-dark) 0%, #d14d26 100%) !important;
+    border-color: var(--color-orange-dark) !important;
+  }
+}
+
+// セカンダリボタンの強制上書き
+.btn-secondary,
+.button-secondary {
+  background: linear-gradient(135deg, var(--color-forest-light) 0%, var(--color-beige-warm) 100%) !important;
+  color: var(--color-forest-dark) !important;
+  border-color: var(--color-forest-medium) !important;
+  
+  &:hover {
+    background: linear-gradient(135deg, var(--color-beige-warm) 0%, var(--color-cream-light) 100%) !important;
+  }
+}
+
+// ナビゲーションリンクの強制上書き
+.nav-link,
+.navigation a {
+  color: var(--color-forest-dark) !important;
+  
+  &:hover {
+    color: var(--color-orange-warm) !important;
+    background-color: var(--color-forest-light) !important;
+  }
+  
+  &.active {
+    color: var(--color-orange-warm) !important;
+    background-color: var(--color-forest-light) !important;
+  }
+}
+
+// カードコンポーネントの強制上書き
+.card,
+.content-card {
+  background-color: var(--color-bg-primary) !important;
+  border-color: var(--color-border-light) !important;
+  box-shadow: var(--shadow-card) !important;
+  
+  &:hover {
+    box-shadow: var(--shadow-card-hover) !important;
+  }
+}
+
+// サイドバーカードの強制上書き
+.sidebar-card {
+  background-color: var(--color-bg-tertiary) !important;
+  border-color: var(--color-border-light) !important;
+  
+  &.card-mint {
+    background-color: var(--color-forest-light) !important;
+  }
+  
+  &.card-beige {
+    background-color: var(--color-beige-warm) !important;
+  }
+  
+  &.card-cream {
+    background-color: var(--color-cream-light) !important;
+  }
+}
+
+// フォーム要素の強制上書き
+.form-input,
+.form-textarea,
+.form-select {
+  border-color: var(--color-border-medium) !important;
+  
+  &:focus {
+    border-color: var(--color-forest-medium) !important;
+    box-shadow: 0 0 0 3px rgba(45, 90, 61, 0.1) !important;
+  }
+}
+
+// チェックボックス・ラジオボタンの強制上書き
+.form-check-input:checked {
+  background-color: var(--color-forest-medium) !important;
+  border-color: var(--color-forest-medium) !important;
+}
+
+// スイッチの強制上書き
+.form-switch-input:checked {
+  background-color: var(--color-forest-medium) !important;
+}
+
+// アラート・通知の強制上書き
+.alert {
+  &.alert-success {
+    background-color: var(--color-forest-light) !important;
+    color: var(--color-forest-dark) !important;
+    border-color: var(--color-forest-medium) !important;
+  }
+  
+  &.alert-info {
+    background-color: var(--color-cream-light) !important;
+    color: var(--color-forest-dark) !important;
+    border-color: var(--color-beige-warm) !important;
+  }
+  
+  &.alert-warning {
+    background-color: var(--color-orange-light) !important;
+    color: var(--color-orange-dark) !important;
+    border-color: var(--color-orange-warm) !important;
+  }
+}
+
+// ブレッドクラムの強制上書き
+.breadcrumb {
+  background-color: var(--color-bg-secondary) !important;
+  
+  .breadcrumb-item {
+    color: var(--color-forest-medium) !important;
+    
+    &.active {
+      color: var(--color-forest-dark) !important;
+    }
+    
+    a {
+      color: var(--color-forest-medium) !important;
+      
+      &:hover {
+        color: var(--color-orange-warm) !important;
+      }
+    }
+  }
+}
+
+// フッターの強制上書き
+.footer {
+  background-color: var(--color-forest-dark) !important;
+  color: var(--color-text-inverse) !important;
+  
+  a {
+    color: var(--color-forest-light) !important;
+    
+    &:hover {
+      color: var(--color-orange-light) !important;
+    }
+  }
+}
+
+// テーブルの強制上書き
+.table {
+  th {
+    background-color: var(--color-forest-light) !important;
+    color: var(--color-forest-dark) !important;
+    border-color: var(--color-border-medium) !important;
+  }
+  
+  td {
+    border-color: var(--color-border-light) !important;
+  }
+  
+  &.table-striped tbody tr:nth-of-type(odd) {
+    background-color: var(--color-bg-secondary) !important;
+  }
+}
+
+// バッジ・ラベルの強制上書き
+.badge {
+  &.badge-primary {
+    background-color: var(--color-forest-medium) !important;
+    color: var(--color-text-inverse) !important;
+  }
+  
+  &.badge-secondary {
+    background-color: var(--color-orange-warm) !important;
+    color: var(--color-text-inverse) !important;
+  }
+  
+  &.badge-success {
+    background-color: var(--color-forest-light) !important;
+    color: var(--color-forest-dark) !important;
+  }
+}
+
+// プログレスバーの強制上書き
+.progress {
+  background-color: var(--color-bg-tertiary) !important;
+  
+  .progress-bar {
+    background-color: var(--color-forest-medium) !important;
+  }
+}
+
+// ドロップダウンの強制上書き
+.dropdown-menu {
+  background-color: var(--color-bg-primary) !important;
+  border-color: var(--color-border-medium) !important;
+  box-shadow: var(--shadow-lg) !important;
+  
+  .dropdown-item {
+    color: var(--color-forest-dark) !important;
+    
+    &:hover {
+      background-color: var(--color-forest-light) !important;
+      color: var(--color-forest-dark) !important;
+    }
+    
+    &.active {
+      background-color: var(--color-forest-medium) !important;
+      color: var(--color-text-inverse) !important;
+    }
+  }
+}
+

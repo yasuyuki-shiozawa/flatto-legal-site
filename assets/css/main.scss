@@ -12,6 +12,7 @@
 @import "base/typography-enhanced";
 @import "base/grid";
 @import "base/utilities";
+@import "base/override-priority"; // 色彩統一の優先度上書き
 
 // レイアウト
 @import "layout/core-layout"; // 統合されたコアレイアウト
