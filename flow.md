@@ -250,3 +250,170 @@ permalink: /flow/
     </div>
 </section>
 
+<!-- 関連ページ -->
+<section class="related-pages">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">関連ページ</h2>
+            <p class="section-subtitle">
+                入札成功のために、こちらのページもご確認ください
+            </p>
+        </div>
+        
+        <div class="related-grid">
+            <div class="related-card">
+                <div class="related-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3 class="related-title">
+                    <a href="{{ '/qualification/' | relative_url }}">入札参加資格取得支援</a>
+                </h3>
+                <p class="related-description">
+                    全省庁統一資格から地方自治体まで、入札参加に必要な資格取得を完全サポート
+                </p>
+                <a href="{{ '/qualification/' | relative_url }}" class="related-link">詳しく見る →</a>
+            </div>
+            
+            <div class="related-card">
+                <div class="related-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3 class="related-title">
+                    <a href="{{ '/case-studies/' | relative_url }}">成功事例研究</a>
+                </h3>
+                <p class="related-description">
+                    実際の入札成功事例を詳しく分析。成功のポイントと戦略を学べます
+                </p>
+                <a href="{{ '/case-studies/' | relative_url }}" class="related-link">詳しく見る →</a>
+            </div>
+            
+            <div class="related-card">
+                <div class="related-icon">
+                    <i class="fas fa-question-circle"></i>
+                </div>
+                <h3 class="related-title">
+                    <a href="{{ '/faq/' | relative_url }}">よくある質問</a>
+                </h3>
+                <p class="related-description">
+                    入札に関するよくある質問と回答。疑問点を事前に解決できます
+                </p>
+                <a href="{{ '/faq/' | relative_url }}" class="related-link">詳しく見る →</a>
+            </div>
+            
+            <div class="related-card">
+                <div class="related-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <h3 class="related-title">
+                    <a href="{{ '/glossary/' | relative_url }}">入札用語集</a>
+                </h3>
+                <p class="related-description">
+                    入札・公共調達に関する専門用語を分かりやすく解説
+                </p>
+                <a href="{{ '/glossary/' | relative_url }}" class="related-link">詳しく見る →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.related-pages {
+    background: #f8f9fa;
+    padding: 80px 0;
+    margin-top: 0;
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.related-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+}
+
+.related-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border-color: #2c5aa0;
+}
+
+.related-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #2c5aa0 0%, #1e3d72 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 1.8em;
+}
+
+.related-title {
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.related-title a {
+    color: #2c5aa0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.related-title a:hover {
+    color: #1e3d72;
+}
+
+.related-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 0.95em;
+}
+
+.related-link {
+    color: #2c5aa0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.related-link:hover {
+    color: #1e3d72;
+}
+
+@media (max-width: 768px) {
+    .related-pages {
+        padding: 60px 0;
+    }
+    
+    .related-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 30px;
+    }
+    
+    .related-card {
+        padding: 25px;
+    }
+    
+    .related-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5em;
+    }
+}
+</style>
+
