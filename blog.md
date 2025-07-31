@@ -97,7 +97,7 @@ body_class: blog-lp-page
             <strong>📊 無料診断実施中！</strong>
             <span>あなたの会社が入札に参加できるか、3分で診断します</span>
         </div>
-        <a href="/diagnosis/" class="cta-button cta-primary inline-cta-button">
+        <a href="/contact/?service=diagnosis" class="cta-button cta-primary inline-cta-button">
             <i class="fas fa-clipboard-check"></i>
             無料診断を受ける
         </a>
@@ -172,9 +172,9 @@ body_class: blog-lp-page
                 <i class="fas fa-comments"></i>
                 無料相談を申し込む
             </a>
-            <a href="/service/" class="secondary">
+            <a href="/flow/" class="secondary">
                 <i class="fas fa-list"></i>
-                サービス一覧を見る
+                サービスの流れを見る
             </a>
         </div>
     </div>
