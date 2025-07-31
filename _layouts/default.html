@@ -175,6 +175,8 @@
     <link rel="stylesheet" href="{{ '/assets/css/mobile-unified.css' | relative_url }}?v={{ site.time | date: '%s' }}&bust={{ 'now' | date: '%Y%m%d%H%M%S' }}">
     <!-- モバイルボトムナビゲーションCSS -->
     <link rel="stylesheet" href="{{ '/assets/css/mobile-bottom-navigation.css' | relative_url }}?v={{ site.time | date: '%s' }}&bust={{ 'now' | date: '%Y%m%d%H%M%S' }}">
+    <!-- モバイルナビゲーション修正CSS（最高優先度） -->
+    <link rel="stylesheet" href="{{ '/assets/css/mobile-navigation-fix.css' | relative_url }}?v={{ site.time | date: '%s' }}&bust={{ 'now' | date: '%Y%m%d%H%M%S' }}">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -325,6 +327,9 @@
     
     <!-- モバイルボトムナビゲーションJS -->
     <script src="{{ '/assets/js/mobile-bottom-navigation.js' | relative_url }}?v={{ site.time | date: '%s' }}&bust={{ 'now' | date: '%Y%m%d%H%M%S' }}" defer></script>
+    
+    <!-- モバイルサイドメニュー無効化JS（最高優先度） -->
+    <script src="{{ '/assets/js/mobile-navigation-disable.js' | relative_url }}?v={{ site.time | date: '%s' }}&bust={{ 'now' | date: '%Y%m%d%H%M%S' }}"></script>
     
     <!-- Service Worker登録 -->
     <script>
