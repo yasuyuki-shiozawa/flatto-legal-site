@@ -325,15 +325,18 @@
   }
   
   &.teal {
-    background: linear-gradient(135deg, #16a085 0%, #1abc9c 100%);
+    background: linear-gradient(135deg, #a7f3d0 0%, #6ee7b7 100%);
+    color: #065f46;
   }
   
   &.indigo {
-    background: linear-gradient(135deg, #6c5ce7 0%, #818cf8 100%);
+    background: linear-gradient(135deg, #c7d2fe 0%, #a5b4fc 100%);
+    color: #3730a3;
   }
   
   &.coral {
-    background: linear-gradient(135deg, #fd79a8 0%, #ff6b9d 100%);
+    background: linear-gradient(135deg, #fecaca 0%, #fbb6ce 100%);
+    color: #be185d;
   }
   
   .service-card-icon {
