@@ -49,12 +49,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
-# コレクション設定
-collections:
-  pages:
-    output: true
-    permalink: /:name/
-
 # 除外ファイル
 exclude:
   - .sass-cache/
@@ -75,7 +69,6 @@ exclude:
 
 # 含めるファイル
 include:
-  - _pages
   - search-index.json
   - .htaccess
   - _redirects
@@ -85,11 +78,6 @@ defaults:
   - scope:
       path: ""
       type: "posts"
-    values:
-      layout: "default"
-  - scope:
-      path: ""
-      type: "pages"
     values:
       layout: "default"
   - scope:
