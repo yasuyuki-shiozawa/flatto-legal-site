@@ -1,0 +1,237 @@
+/* ========================================
+   モバイルボトムナビゲーション修正版
+   既存のul/li構造に対応
+   ======================================== */
+
+/* ボトムナビゲーション - 強制表示 */
+.mobile-bottom-nav {
+    display: block !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    background-color: #ffffff !important;
+    border-top: 1px solid #e2e8f0 !important;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1) !important;
+    z-index: 1000 !important;
+    padding: 8px 0 calc(8px + env(safe-area-inset-bottom)) !important;
+    padding-bottom: max(8px, env(safe-area-inset-bottom)) !important;
+    transform: translateY(0) !important; /* 強制的に表示 */
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* ul要素のスタイル調整 */
+.mobile-bottom-nav ul {
+    display: flex !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 8px !important;
+    max-width: 100% !important;
+}
+
+/* li要素のスタイル調整 */
+.mobile-bottom-nav li {
+    display: flex !important;
+    flex: 1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+/* ナビゲーションアイテム（a要素） */
+.mobile-bottom-nav a {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+    color: #64748b !important;
+    transition: all 0.2s ease !important;
+    padding: 8px 4px !important;
+    border-radius: 8px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    position: relative !important;
+    width: 100% !important;
+}
+
+/* アクティブ状態 */
+.mobile-bottom-nav a.active {
+    color: #3182ce !important;
+    background-color: #ebf8ff !important;
+}
+
+/* CTA（お問い合わせ）ボタンの強調 */
+.mobile-bottom-nav .cta-item a,
+.mobile-bottom-nav a[href*="contact"] {
+    color: #ffffff !important;
+    background-color: #3182ce !important;
+    border-radius: 12px !important;
+    font-weight: 600 !important;
+}
+
+.mobile-bottom-nav .cta-item a:hover,
+.mobile-bottom-nav a[href*="contact"]:hover {
+    background-color: #2c5aa0 !important;
+}
+
+/* アイコン */
+.mobile-bottom-nav i {
+    font-size: 20px !important;
+    margin-bottom: 2px !important;
+    display: block !important;
+}
+
+/* ラベル */
+.mobile-bottom-nav span {
+    font-size: 10px !important;
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+}
+
+/* ホバー効果 */
+.mobile-bottom-nav a:hover:not(.cta-item a):not([href*="contact"]) {
+    color: #3182ce !important;
+    background-color: #f7fafc !important;
+}
+
+/* フローティングCTAボタン */
+.floating-cta-mobile {
+    position: fixed !important;
+    bottom: 80px !important;
+    right: 16px !important;
+    width: 56px !important;
+    height: 56px !important;
+    background-color: #10b981 !important;
+    color: #ffffff !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4) !important;
+    z-index: 999 !important;
+    transition: all 0.3s ease !important;
+    font-size: 24px !important;
+}
+
+.floating-cta-mobile:hover {
+    background-color: #059669 !important;
+    transform: scale(1.1) !important;
+    box-shadow: 0 6px 16px rgba(16, 185, 129, 0.5) !important;
+}
+
+/* メインコンテンツの下部マージン調整 */
+body {
+    padding-bottom: 70px !important;
+}
+
+/* フッターの調整 */
+.footer {
+    margin-bottom: 70px !important;
+}
+
+/* 既存のモバイルメニューを非表示 */
+.mobile-menu,
+.mobile-menu-overlay,
+.mobile-menu-btn {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* デスクトップナビゲーションをモバイルで非表示 */
+@media (max-width: 768px) {
+    .nav,
+    .nav-list,
+    .header-nav,
+    .main-nav,
+    .navigation {
+        display: none !important;
+    }
+    
+    /* ヘッダーの調整 */
+    .header {
+        padding: 1rem !important;
+    }
+    
+    .header-content {
+        justify-content: center !important;
+    }
+    
+    /* 既存のフローティングCTAを非表示 */
+    .floating-cta,
+    .sticky-cta-bar {
+        display: none !important;
+    }
+    
+    /* モバイル固定CTAを非表示（ボトムナビと競合するため） */
+    .mobile-fixed-cta {
+        display: none !important;
+    }
+}
+
+/* タブレット以上では非表示 */
+@media (min-width: 769px) {
+    .mobile-bottom-nav,
+    .floating-cta-mobile {
+        display: none !important;
+    }
+    
+    body {
+        padding-bottom: 0 !important;
+    }
+    
+    .footer {
+        margin-bottom: 0 !important;
+    }
+}
+
+/* アクセシビリティ対応 */
+@media (prefers-reduced-motion: reduce) {
+    .mobile-bottom-nav a,
+    .floating-cta-mobile {
+        transition: none !important;
+    }
+}
+
+/* ダークモード対応 */
+@media (prefers-color-scheme: dark) {
+    .mobile-bottom-nav {
+        background-color: #1a202c !important;
+        border-top-color: #2d3748 !important;
+    }
+    
+    .mobile-bottom-nav a {
+        color: #a0aec0 !important;
+    }
+    
+    .mobile-bottom-nav a.active {
+        color: #63b3ed !important;
+        background-color: #2a4365 !important;
+    }
+    
+    .mobile-bottom-nav a:hover:not(.cta-item a):not([href*="contact"]) {
+        color: #63b3ed !important;
+        background-color: #2d3748 !important;
+    }
+}
+
+/* 強制表示のための追加スタイル */
+.mobile-bottom-nav[style*="translateY(100%)"] {
+    transform: translateY(0) !important;
+}
+
+/* 全画面サイズで強制表示（デバッグ用） */
+@media (min-width: 1px) {
+    .mobile-bottom-nav {
+        display: block !important;
+    }
+}
+
