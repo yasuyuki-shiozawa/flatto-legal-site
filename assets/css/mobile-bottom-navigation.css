@@ -1,0 +1,199 @@
+/* ===================================
+   モバイル用ボトムナビゲーション
+   ================================== */
+
+/* ボトムナビゲーション本体 */
+.mobile-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none; /* デフォルトは非表示 */
+    padding: 8px 0 calc(8px + env(safe-area-inset-bottom));
+}
+
+/* モバイル表示時のみ表示 */
+@media (max-width: 768px) {
+    .mobile-bottom-nav {
+        display: flex;
+    }
+    
+    /* 既存のモバイルメニューを非表示 */
+    .mobile-menu-btn,
+    .mobile-menu,
+    .mobile-menu-overlay {
+        display: none !important;
+    }
+    
+    /* ボトムナビ分のスペースを確保 */
+    body {
+        padding-bottom: 70px;
+    }
+}
+
+/* ナビゲーションリスト */
+.mobile-bottom-nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* ナビゲーションアイテム */
+.mobile-bottom-nav li {
+    flex: 1;
+    text-align: center;
+}
+
+/* ナビゲーションリンク */
+.mobile-bottom-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px 4px;
+    text-decoration: none;
+    color: #666;
+    font-size: 11px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border-radius: 8px;
+    min-height: 44px; /* タップしやすいサイズ */
+    justify-content: center;
+}
+
+/* アイコン */
+.mobile-bottom-nav a i {
+    font-size: 20px;
+    margin-bottom: 2px;
+    transition: all 0.2s ease;
+}
+
+/* ホバー・アクティブ状態 */
+.mobile-bottom-nav a:hover,
+.mobile-bottom-nav a.active {
+    color: #2563eb;
+    background: rgba(37, 99, 235, 0.1);
+}
+
+.mobile-bottom-nav a:hover i,
+.mobile-bottom-nav a.active i {
+    transform: scale(1.1);
+}
+
+/* CTAボタン（お問い合わせ）を強調 */
+.mobile-bottom-nav .cta-item a {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    border-radius: 12px;
+    margin: 0 4px;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+}
+
+.mobile-bottom-nav .cta-item a:hover {
+    background: linear-gradient(135deg, #1d4ed8, #1e40af);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+/* アニメーション効果 */
+.mobile-bottom-nav a {
+    position: relative;
+    overflow: hidden;
+}
+
+.mobile-bottom-nav a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.mobile-bottom-nav a:active::before {
+    left: 100%;
+}
+
+/* フローティングCTAボタン */
+.floating-cta {
+    position: fixed;
+    bottom: 80px; /* ボトムナビの上 */
+    right: 16px;
+    z-index: 1001;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .floating-cta {
+        display: block;
+    }
+}
+
+.floating-cta-btn {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 16px rgba(16, 185, 129, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.floating-cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
+    background: linear-gradient(135deg, #059669, #047857);
+}
+
+.floating-cta-btn i {
+    font-size: 16px;
+}
+
+/* アクセシビリティ対応 */
+@media (prefers-reduced-motion: reduce) {
+    .mobile-bottom-nav a,
+    .floating-cta-btn {
+        transition: none;
+    }
+    
+    .mobile-bottom-nav a i {
+        transform: none !important;
+    }
+}
+
+/* ダークモード対応 */
+@media (prefers-color-scheme: dark) {
+    .mobile-bottom-nav {
+        background: rgba(31, 41, 55, 0.95);
+        border-top-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .mobile-bottom-nav a {
+        color: #d1d5db;
+    }
+    
+    .mobile-bottom-nav a:hover,
+    .mobile-bottom-nav a.active {
+        color: #60a5fa;
+        background: rgba(96, 165, 250, 0.1);
+    }
+}
+
