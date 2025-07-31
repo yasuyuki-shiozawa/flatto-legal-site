@@ -17,13 +17,14 @@
   
   // プライマリCTA
   &.cta-primary {
-    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-    color: white;
-    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+    background: linear-gradient(135deg, #bfdbfe 0%, #93c5fd 100%);
+    color: #1e40af;
+    box-shadow: 0 4px 15px rgba(147, 197, 253, 0.4);
     
     &:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+      box-shadow: 0 6px 20px rgba(147, 197, 253, 0.5);
+      background: linear-gradient(135deg, #93c5fd 0%, #60a5fa 100%);
       
       &::after {
         transform: translateX(0);
@@ -45,16 +46,16 @@
   
   // セカンダリCTA
   &.cta-secondary {
-    background: white;
-    color: #3b82f6;
-    border: 2px solid #3b82f6;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
+    color: #c2410c;
+    border: 2px solid #fdba74;
+    box-shadow: 0 2px 10px rgba(253, 215, 170, 0.3);
     
     &:hover {
-      background: #3b82f6;
-      color: white;
+      background: linear-gradient(135deg, #fdba74 0%, #fb923c 100%);
+      color: #9a3412;
       transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+      box-shadow: 0 4px 15px rgba(251, 146, 60, 0.4);
     }
   }
   
