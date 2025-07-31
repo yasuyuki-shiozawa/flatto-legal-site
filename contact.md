@@ -381,63 +381,72 @@ keywords: お問い合わせ,入札相談,公共調達相談,行政書士相談,
 
 /* ヒーローセクション */
 .hero-section {
-    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-    color: white;
-    padding: 4rem 0 3rem;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    color: #0f172a;
+    padding: 3rem 0 2.5rem;
     text-align: center;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .hero-title {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 2rem;
+    font-weight: 600;
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    color: #1e40af;
 }
 
 .hero-title .icon {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    color: #3b82f6;
 }
 
 .hero-description {
-    font-size: 1.1rem;
-    opacity: 0.9;
+    font-size: 1rem;
+    color: #64748b;
     line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 /* フォームセクション */
 .contact-form-section {
-    padding: 4rem 0;
-    background: #f3f4f6;
+    padding: 3rem 0;
+    background: #fafafa;
 }
 
 .form-wrapper {
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
-    background: #fafafa;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
     overflow: hidden;
 }
 
 .form-header {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-    color: white;
-    padding: 2rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    color: #1e293b;
+    padding: 1.5rem 2rem;
     text-align: center;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .form-header h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    font-weight: 600;
     margin-bottom: 0.5rem;
+    color: #1e40af;
 }
 
 .form-header p {
-    opacity: 0.9;
+    color: #64748b;
     line-height: 1.6;
+    font-size: 0.95rem;
 }
 
 /* フォームスタイル */
