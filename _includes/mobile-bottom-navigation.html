@@ -1,40 +1,58 @@
-<!-- モバイルボトムナビゲーション -->
-<nav class="mobile-bottom-nav" role="navigation" aria-label="モバイルメインナビゲーション">
+<!-- モバイルボトムナビゲーション（シンプル版） -->
+<nav class="mobile-bottom-nav">
     <div class="mobile-bottom-nav-container">
+        
         <!-- ホーム -->
-        <a href="/" class="mobile-nav-item" aria-label="ホーム">
-            <i class="fas fa-home" aria-hidden="true"></i>
+        <a href="{{ '/' | relative_url }}" class="mobile-nav-item {% if page.url == '/' %}active{% endif %}">
+            <i class="fas fa-home"></i>
             <span>ホーム</span>
         </a>
         
         <!-- 入札の基本 -->
-        <a href="/basics/" class="mobile-nav-item" aria-label="入札の基本">
-            <i class="fas fa-book" aria-hidden="true"></i>
+        <a href="{{ '/basics/' | relative_url }}" class="mobile-nav-item {% if page.url contains '/basics/' %}active{% endif %}">
+            <i class="fas fa-book"></i>
             <span>基本</span>
         </a>
         
         <!-- 用語集 -->
-        <a href="/glossary/" class="mobile-nav-item" aria-label="用語集">
-            <i class="fas fa-list-ul" aria-hidden="true"></i>
+        <a href="{{ '/glossary/' | relative_url }}" class="mobile-nav-item {% if page.url contains '/glossary/' %}active{% endif %}">
+            <i class="fas fa-list"></i>
             <span>用語集</span>
         </a>
         
-        <!-- お問い合わせ（CTA） -->
-        <a href="/contact/" class="mobile-nav-item cta" aria-label="お問い合わせ">
-            <i class="fas fa-envelope" aria-hidden="true"></i>
+        <!-- 相談（CTA強調） -->
+        <a href="{{ '/contact/' | relative_url }}" class="mobile-nav-item cta-primary {% if page.url contains '/contact/' %}active{% endif %}">
+            <i class="fas fa-comments"></i>
             <span>相談</span>
         </a>
         
-        <!-- その他メニュー -->
-        <a href="/menu/" class="mobile-nav-item" aria-label="その他メニュー">
-            <i class="fas fa-bars" aria-hidden="true"></i>
+        <!-- メニュー（サイドメニュー開く） -->
+        <button class="mobile-nav-item" id="mobileBottomMenuBtn" aria-label="メニューを開く">
+            <i class="fas fa-bars"></i>
             <span>メニュー</span>
-        </a>
+        </button>
+        
     </div>
 </nav>
 
-<!-- フローティング無料相談ボタン -->
-<a href="tel:046-272-3357" class="floating-cta-mobile" aria-label="電話で無料相談" title="電話で無料相談">
-    <i class="fas fa-phone" aria-hidden="true"></i>
+<!-- フローティング電話CTA -->
+<a href="tel:046-272-3357" class="floating-cta-mobile" aria-label="電話で相談">
+    <i class="fas fa-phone"></i>
 </a>
+
+<!-- ボトムナビゲーション用JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // ボトムナビのメニューボタンと既存のモバイルメニューを連携
+    const bottomMenuBtn = document.getElementById('mobileBottomMenuBtn');
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    
+    if (bottomMenuBtn && mobileMenuBtn) {
+        bottomMenuBtn.addEventListener('click', function() {
+            // 既存のモバイルメニューボタンをクリック
+            mobileMenuBtn.click();
+        });
+    }
+});
+</script>
 
