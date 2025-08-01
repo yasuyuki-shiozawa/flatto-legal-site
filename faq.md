@@ -36,6 +36,9 @@ faq_items:
     <!-- 検索・フィルター -->
     <section class="search-section">
         <div class="container">
+            <div class="section-header-main">
+                <h2>質問を検索・絞り込み</h2>
+            </div>
             <div class="search-wrapper">
                 <div class="search-box">
                     <input type="text" id="faqSearch" placeholder="質問内容を検索..." class="search-input">

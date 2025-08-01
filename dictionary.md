@@ -15,6 +15,9 @@ description: 入札・公共調達の専門用語辞典。一般競争入札、�
 <!-- 検索機能 -->
 <section class="dictionary-search">
     <div class="container">
+        <div class="section-header-main">
+            <h2>用語を検索・絞り込み</h2>
+        </div>
         <div class="search-box">
             <input type="text" id="termSearch" placeholder="用語を検索..." class="search-input">
             <button class="search-button">
@@ -44,7 +47,9 @@ description: 入札・公共調達の専門用語辞典。一般競争入札、�
         
         <!-- あ行 -->
         <div class="term-section" data-category="あ">
-            <h2 class="section-title">あ行</h2>
+            <div class="section-header-sub">
+                <h3>あ行</h3>
+            </div>
             
             <div class="term-card">
                 <h3 class="term-name">一般競争入札（いっぱんきょうそうにゅうさつ）</h3>

@@ -18,7 +18,9 @@ body_class: trends-page
         
         <!-- 2025年の重要トレンド -->
         <section class="key-trends-section">
-            <h2>2025年の重要トレンド</h2>
+            <div class="section-header-main">
+                <h2>2025年の重要トレンド</h2>
+            </div>
             <div class="trends-grid">
                 
                 <div class="trend-card">
