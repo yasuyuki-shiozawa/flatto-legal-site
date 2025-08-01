@@ -11,7 +11,11 @@ keywords: 無料相談,入札相談,公共調達相談,行政書士相談,入札
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    <span class="icon">🎯</span>
+                    <svg class="icon" width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="currentColor"/>
+                        <path d="M19 15L20.09 18.26L23 19L20.09 19.74L19 23L17.91 19.74L15 19L17.91 18.26L19 15Z" fill="currentColor"/>
+                        <path d="M5 15L6.09 18.26L9 19L6.09 19.74L5 23L3.91 19.74L1 19L3.91 18.26L5 15Z" fill="currentColor"/>
+                    </svg>
                     無料相談お申込み
                 </h1>
                 <p class="hero-subtitle">
@@ -35,27 +39,54 @@ keywords: 無料相談,入札相談,公共調達相談,行政書士相談,入札
             <h2 class="section-title">30分の無料相談で分かる5つのこと</h2>
             <div class="value-grid">
                 <div class="value-card">
-                    <div class="value-icon">💰</div>
+                    <div class="value-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L3.09 8.26L4 9L12 4L20 9L20.91 8.26L12 2Z" fill="#1a4d3a"/>
+                            <path d="M21 16V10.5L12 5.5L3 10.5V16C3 17.1 3.9 18 5 18H19C20.1 18 21 17.1 21 16Z" fill="#1a4d3a"/>
+                            <path d="M12 7L7 10V15H17V10L12 7Z" fill="#e8f5e8"/>
+                        </svg>
+                    </div>
                     <h3>投資対効果の診断</h3>
                     <p>あなたの会社の入札参加で期待できる<strong>ROI635%</strong>の可能性を具体的に診断</p>
                 </div>
                 <div class="value-card">
-                    <div class="value-icon">📋</div>
+                    <div class="value-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.89 22 5.99 22H18C19.1 22 20 21.1 20 20V8L14 2Z" fill="#1a4d3a"/>
+                            <path d="M14 2V8H20" fill="#e8f5e8"/>
+                            <path d="M16 11H8V13H16V11ZM16 15H8V17H16V15Z" fill="#e8f5e8"/>
+                        </svg>
+                    </div>
                     <h3>最適な参入戦略</h3>
                     <p>業種・規模に応じた<strong>勝てる入札戦略</strong>を具体的にご提案</p>
                 </div>
                 <div class="value-card">
-                    <div class="value-icon">⏱️</div>
+                    <div class="value-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" fill="#1a4d3a"/>
+                            <path d="M12 6V12L16 14" stroke="#e8f5e8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
                     <h3>必要な準備期間</h3>
                     <p>入札参加まで<strong>最短2週間</strong>の具体的なスケジュールをご提示</p>
                 </div>
                 <div class="value-card">
-                    <div class="value-icon">🎯</div>
+                    <div class="value-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="#1a4d3a"/>
+                            <circle cx="12" cy="12" r="3" fill="#e8f5e8"/>
+                        </svg>
+                    </div>
                     <h3>狙うべき案件</h3>
                     <p>あなたの会社が<strong>勝てる可能性の高い案件</strong>を具体的にご紹介</p>
                 </div>
                 <div class="value-card">
-                    <div class="value-icon">📈</div>
+                    <div class="value-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 13H5L7 7L17 17L19 11H21" stroke="#1a4d3a" stroke-width="2" fill="none"/>
+                            <path d="M18 8L22 12L18 16" stroke="#1a4d3a" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
                     <h3>売上向上の見込み</h3>
                     <p>入札参加による<strong>年間売上3.2倍向上</strong>の可能性を数値で診断</p>
                 </div>
@@ -94,27 +125,60 @@ keywords: 無料相談,入札相談,公共調達相談,行政書士相談,入札
             <h2 class="section-title">こんなお悩みありませんか？</h2>
             <div class="worries-grid">
                 <div class="worry-item">
-                    <div class="worry-icon">😰</div>
+                    <div class="worry-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" fill="#ef4444"/>
+                            <path d="M12 8V12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="12" cy="16" r="1" fill="white"/>
+                        </svg>
+                    </div>
                     <p>「入札って難しそう...本当に利益が出るの？」</p>
                 </div>
                 <div class="worry-item">
-                    <div class="worry-icon">🤔</div>
+                    <div class="worry-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" fill="#f59e0b"/>
+                            <path d="M12 8V12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="12" cy="16" r="1" fill="white"/>
+                        </svg>
+                    </div>
                     <p>「小さな会社でも入札に参加できるの？」</p>
                 </div>
                 <div class="worry-item">
-                    <div class="worry-icon">😵</div>
+                    <div class="worry-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" fill="#8b5cf6"/>
+                            <path d="M8 12L12 8L16 12" stroke="white" stroke-width="2" fill="none"/>
+                            <path d="M12 8V16" stroke="white" stroke-width="2"/>
+                        </svg>
+                    </div>
                     <p>「書類作成が複雑で時間がない...」</p>
                 </div>
                 <div class="worry-item">
-                    <div class="worry-icon">😟</div>
+                    <div class="worry-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" fill="#06b6d4"/>
+                            <path d="M12 8V12L16 14" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
                     <p>「デジタル化についていけるか不安...」</p>
                 </div>
                 <div class="worry-item">
-                    <div class="worry-icon">😨</div>
+                    <div class="worry-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" fill="#10b981"/>
+                            <path d="M9 12L11 14L15 10" stroke="white" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
                     <p>「官公庁との取引って大丈夫？」</p>
                 </div>
                 <div class="worry-item">
-                    <div class="worry-icon">😓</div>
+                    <div class="worry-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" fill="#f97316"/>
+                            <path d="M12 6V12L16 14" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
                     <p>「いつから始めればいいかわからない...」</p>
                 </div>
             </div>
@@ -183,7 +247,12 @@ keywords: 無料相談,入札相談,公共調達相談,行政書士相談,入札
                     <!-- 送信ボタン -->
                     <div class="form-submit">
                         <button type="submit" class="submit-btn" id="submitBtn">
-                            <span class="btn-text">🎯 今すぐ無料相談を申し込む</span>
+                            <span class="btn-text">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; margin-right: 8px;">
+                                    <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="currentColor"/>
+                                </svg>
+                                今すぐ無料相談を申し込む
+                            </span>
                         </button>
                         <p class="submit-note">
                             ※ 相談だけでも大歓迎です。無理な営業は一切いたしません。
@@ -199,27 +268,54 @@ keywords: 無料相談,入札相談,公共調達相談,行政書士相談,入札
         <div class="container">
             <div class="trust-grid">
                 <div class="trust-item">
-                    <div class="trust-icon">✅</div>
+                    <div class="trust-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" fill="#10b981"/>
+                            <path d="M9 12L11 14L15 10" stroke="white" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
                     <h3>相談だけでも大歓迎</h3>
                     <p>具体的な依頼がなくても、お気軽にご相談ください</p>
                 </div>
                 <div class="trust-item">
-                    <div class="trust-icon">🚫</div>
+                    <div class="trust-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" fill="#ef4444"/>
+                            <path d="M8 8L16 16M16 8L8 16" stroke="white" stroke-width="2"/>
+                        </svg>
+                    </div>
                     <h3>無理な営業は一切なし</h3>
                     <p>押し売りや強引な営業は絶対にいたしません</p>
                 </div>
                 <div class="trust-item">
-                    <div class="trust-icon">🔒</div>
+                    <div class="trust-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" fill="#1a4d3a"/>
+                            <path d="M12 1L15.09 8.26L23 9L17 14.74L18.18 22.5L12 19.77L5.82 22.5L7 14.74L1 9L8.91 8.26L12 1Z" fill="white"/>
+                        </svg>
+                    </div>
                     <h3>秘密厳守をお約束</h3>
                     <p>行政書士の守秘義務により、情報は厳重に保護されます</p>
                 </div>
                 <div class="trust-item">
-                    <div class="trust-icon">🌐</div>
+                    <div class="trust-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" fill="#3b82f6"/>
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="white"/>
+                            <path d="M2 17L12 22L22 17" stroke="white" stroke-width="2"/>
+                            <path d="M2 12L12 17L22 12" stroke="white" stroke-width="2"/>
+                        </svg>
+                    </div>
                     <h3>ZOOMで全国対応</h3>
                     <p>オンラインなので全国どこからでもご相談いただけます</p>
                 </div>
                 <div class="trust-item">
-                    <div class="trust-icon">⚡</div>
+                    <div class="trust-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" fill="#f59e0b"/>
+                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="white"/>
+                        </svg>
+                    </div>
                     <h3>24時間以内にご連絡</h3>
                     <p>お申込み後、24時間以内に日程調整のご連絡をいたします</p>
                 </div>
@@ -279,9 +375,19 @@ keywords: 無料相談,入札相談,公共調達相談,行政書士相談,入札
     <section class="emergency-contact-section">
         <div class="container">
             <div class="emergency-contact">
-                <h3>🔥 お急ぎの方は今すぐお電話を</h3>
+                <h3>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; margin-right: 8px;">
+                        <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="#ff6b35"/>
+                    </svg>
+                    お急ぎの方は今すぐお電話を
+                </h3>
                 <p>平日 9:00-17:00 | 土日祝も緊急時は対応可能</p>
-                <a href="tel:046-272-3357" class="phone-btn">📞 046-272-3357</a>
+                <a href="tel:046-272-3357" class="phone-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; margin-right: 8px;">
+                        <path d="M22 16.92V19.92C22 20.52 21.52 21 20.92 21C10.4 21 2 12.6 2 2.08C2 1.48 2.48 1 3.08 1H6.08C6.68 1 7.16 1.48 7.16 2.08C7.16 3.08 7.36 4.04 7.72 4.92C7.84 5.2 7.76 5.52 7.52 5.76L5.84 7.44C7.24 10.28 9.72 12.76 12.56 14.16L14.24 12.48C14.48 12.24 14.8 12.16 15.08 12.28C15.96 12.64 16.92 12.84 17.92 12.84C18.52 12.84 19 13.32 19 13.92V16.92C19 17.52 18.52 18 17.92 18H16.92C16.32 18 15.84 17.52 15.84 16.92Z" fill="currentColor"/>
+                    </svg>
+                    046-272-3357
+                </a>
                 <p class="phone-note">※ 電話でも無料相談を承っております</p>
             </div>
         </div>
@@ -310,26 +416,47 @@ keywords: 無料相談,入札相談,公共調達相談,行政書士相談,入札
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0.5rem;.hero-title .icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 0.5rem;
 }
 
-.hero-title .icon {
-    font-size: 2.2rem;
+.value-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
-.hero-subtitle {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-    color: #dbeafe;
+.value-icon svg {
+    width: 48px;
+    height: 48px;
 }
 
-.hero-description {
-    font-size: 1rem;
-    color: #bfdbfe;
-    margin-bottom: 2rem;
+.worry-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
 }
 
-.urgency-banner {
+.worry-icon svg {
+    width: 32px;
+    height: 32px;
+}
+
+.trust-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.trust-icon svg {
+    width: 40px;
+    height: 40px;
+}.urgency-banner {
     background: #ff6b35;
     color: white;
     padding: 0.75rem 1.5rem;
