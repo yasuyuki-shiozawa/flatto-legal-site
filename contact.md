@@ -1,43 +1,145 @@
 ---
 layout: default
-title: お問い合わせ | 入札・公共調達のご相談はふらっと法務事務所へ
-description: 入札・公共調達に関するご相談はこちらから。専門の行政書士が丁寧にお答えいたします。お気軽にお問い合わせください。
-keywords: お問い合わせ,入札相談,公共調達相談,行政書士相談,入札サポート
+title: 無料相談お申込み | 入札・公共調達の専門家による無料相談
+description: 入札・公共調達の専門家による無料相談を実施中。ZOOMで全国対応。30分で分かる入札参加の可能性を無料診断いたします。
+keywords: 無料相談,入札相談,公共調達相談,行政書士相談,入札サポート,ZOOM相談
 ---
 
-<div class="contact-page">
+<div class="consultation-page">
     <!-- ヒーローセクション -->
     <section class="hero-section">
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    <span class="icon">📞</span>
-                    お問い合わせ
+                    <span class="icon">🎯</span>
+                    無料相談お申込み
                 </h1>
-                <p class="hero-description">
-                    入札・公共調達に関するご相談はお気軽にどうぞ。<br>
-                    専門の行政書士が丁寧にお答えいたします。
+                <p class="hero-subtitle">
+                    入札・公共調達の専門家による<strong>完全無料相談</strong>を実施中
                 </p>
+                <p class="hero-description">
+                    ZOOMで全国対応 | 30分で分かる入札参加の可能性を無料診断
+                </p>
+                
+                <!-- 緊急性演出 -->
+                <div class="urgency-banner">
+                    <span class="urgency-text">⏰ 今月の無料相談枠 残り8名様</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- お問い合わせフォーム -->
-    <section class="contact-form-section">
+    <!-- 価値提示セクション -->
+    <section class="value-proposition-section">
+        <div class="container">
+            <h2 class="section-title">30分の無料相談で分かる5つのこと</h2>
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="value-icon">💰</div>
+                    <h3>投資対効果の診断</h3>
+                    <p>あなたの会社の入札参加で期待できる<strong>ROI635%</strong>の可能性を具体的に診断</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">📋</div>
+                    <h3>最適な参入戦略</h3>
+                    <p>業種・規模に応じた<strong>勝てる入札戦略</strong>を具体的にご提案</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">⏱️</div>
+                    <h3>必要な準備期間</h3>
+                    <p>入札参加まで<strong>最短2週間</strong>の具体的なスケジュールをご提示</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🎯</div>
+                    <h3>狙うべき案件</h3>
+                    <p>あなたの会社が<strong>勝てる可能性の高い案件</strong>を具体的にご紹介</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">📈</div>
+                    <h3>売上向上の見込み</h3>
+                    <p>入札参加による<strong>年間売上3.2倍向上</strong>の可能性を数値で診断</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 実績セクション -->
+    <section class="results-section">
+        <div class="container">
+            <h2 class="section-title">選ばれる理由</h2>
+            <div class="results-grid">
+                <div class="result-item">
+                    <div class="result-number">635%</div>
+                    <div class="result-label">平均ROI</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-number">98%</div>
+                    <div class="result-label">資格取得成功率</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-number">3.2倍</div>
+                    <div class="result-label">平均売上向上</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-number">2週間</div>
+                    <div class="result-label">最短参加期間</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 不安解消セクション -->
+    <section class="reassurance-section">
+        <div class="container">
+            <h2 class="section-title">こんなお悩みありませんか？</h2>
+            <div class="worries-grid">
+                <div class="worry-item">
+                    <div class="worry-icon">😰</div>
+                    <p>「入札って難しそう...本当に利益が出るの？」</p>
+                </div>
+                <div class="worry-item">
+                    <div class="worry-icon">🤔</div>
+                    <p>「小さな会社でも入札に参加できるの？」</p>
+                </div>
+                <div class="worry-item">
+                    <div class="worry-icon">😵</div>
+                    <p>「書類作成が複雑で時間がない...」</p>
+                </div>
+                <div class="worry-item">
+                    <div class="worry-icon">😟</div>
+                    <p>「デジタル化についていけるか不安...」</p>
+                </div>
+                <div class="worry-item">
+                    <div class="worry-icon">😨</div>
+                    <p>「官公庁との取引って大丈夫？」</p>
+                </div>
+                <div class="worry-item">
+                    <div class="worry-icon">😓</div>
+                    <p>「いつから始めればいいかわからない...」</p>
+                </div>
+            </div>
+            
+            <div class="solution-message">
+                <h3>そのお悩み、30分の無料相談ですべて解決します！</h3>
+                <p>専門家が一つひとつ丁寧にお答えし、あなたの会社に最適な戦略をご提案いたします。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 申し込みフォーム -->
+    <section class="application-form-section">
         <div class="container">
             <div class="form-wrapper">
                 <div class="form-header">
-                    <h2>ご相談フォーム</h2>
-                    <p>以下のフォームにご記入の上、送信してください。<br>
-                    <strong class="response-time">⏰ 通常1営業日以内（最短当日）にご回答いたします</strong></p>
+                    <h2>無料相談お申込み</h2>
+                    <p class="form-subtitle">
+                        <strong>30秒で申し込み完了</strong> | 24時間以内に日程調整のご連絡をいたします
+                    </p>
                 </div>
-                
-                <!-- 信頼性バッジ -->
-                {% include trust-badges.html %}
 
-                <form name="contact" method="POST" action="/thanks/" data-netlify="true" data-netlify-honeypot="bot-field" class="contact-form" id="contactForm">
+                <form name="consultation" method="POST" action="/thanks/" data-netlify="true" data-netlify-honeypot="bot-field" class="consultation-form" id="consultationForm">
                     <!-- Netlify Forms用の隠しフィールド -->
-                    <input type="hidden" name="form-name" value="contact" />
+                    <input type="hidden" name="form-name" value="consultation" />
                     
                     <!-- ハニーポット（スパム対策） -->
                     <div class="hidden">
@@ -59,7 +161,6 @@ keywords: お問い合わせ,入札相談,公共調達相談,行政書士相談,
                                 maxlength="50"
                                 placeholder="山田太郎"
                             />
-                            <div class="error-message" id="nameError"></div>
                         </div>
 
                         <!-- メールアドレス -->
@@ -76,388 +177,351 @@ keywords: お問い合わせ,入札相談,公共調達相談,行政書士相談,
                                 maxlength="100"
                                 placeholder="example@email.com"
                             />
-                            <div class="error-message" id="emailError"></div>
-                        </div>
-
-                        <!-- 電話番号 -->
-                        <div class="form-group">
-                            <label for="phone" class="form-label">
-                                電話番号 <span class="optional-mark">（任意）</span>
-                            </label>
-                            <input 
-                                type="tel" 
-                                id="phone" 
-                                name="phone" 
-                                class="form-input" 
-                                maxlength="15"
-                                placeholder="090-1234-5678"
-                            />
-                            <div class="error-message" id="phoneError"></div>
-                        </div>
-
-                        <!-- 会社名・団体名 -->
-                        <div class="form-group">
-                            <label for="company" class="form-label">
-                                会社名・団体名 <span class="optional-mark">（任意）</span>
-                            </label>
-                            <input 
-                                type="text" 
-                                id="company" 
-                                name="company" 
-                                class="form-input" 
-                                maxlength="100"
-                                placeholder="株式会社○○○"
-                            />
-                        </div>
-
-                        <!-- 相談カテゴリ -->
-                        <div class="form-group required full-width">
-                            <label for="category" class="form-label">
-                                相談カテゴリ <span class="required-mark">*</span>
-                            </label>
-                            <select id="category" name="category" class="form-select" required>
-                                <option value="">選択してください</option>
-                                <option value="初めて入札に参加したい">🔰 初めて入札に参加したい</option>
-                                <option value="入札参加資格を取得したい">📋 入札参加資格を取得したい</option>
-                                <option value="具体的な案件について相談したい">🎯 具体的な案件について相談したい</option>
-                                <option value="書類作成を依頼したい">📝 書類作成を依頼したい</option>
-                                <option value="電子入札について聞きたい">💻 電子入札について聞きたい</option>
-                                <option value="その他">その他</option>
-                            </select>
-                            <div class="error-message" id="categoryError"></div>
-                        </div>
-
-                        <!-- 希望連絡方法 -->
-                        <div class="form-group required full-width">
-                            <label class="form-label">
-                                希望連絡方法 <span class="required-mark">*</span>
-                            </label>
-                            <div class="radio-group">
-                                <label class="radio-label">
-                                    <input type="radio" name="contact-method" value="メール" required />
-                                    <span class="radio-custom"></span>
-                                    メール
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="contact-method" value="電話" required />
-                                    <span class="radio-custom"></span>
-                                    電話
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="contact-method" value="どちらでも可" required />
-                                    <span class="radio-custom"></span>
-                                    どちらでも可
-                                </label>
-                            </div>
-                            <div class="error-message" id="contactMethodError"></div>
-                        </div>
-
-                        <!-- 相談内容 -->
-                        <div class="form-group required full-width">
-                            <label for="message" class="form-label">
-                                相談内容 <span class="required-mark">*</span>
-                            </label>
-                            <textarea 
-                                id="message" 
-                                name="message" 
-                                class="form-textarea" 
-                                required 
-                                rows="6" 
-                                maxlength="2000"
-                                placeholder="ご相談内容を具体的にお書きください。&#10;&#10;例：&#10;・建設業の入札参加資格を取得したい&#10;・○○市の案件に応札を検討している&#10;・入札書類の作成方法を知りたい"
-                            ></textarea>
-                            <div class="char-count">
-                                <span id="charCount">0</span>/2000文字
-                            </div>
-                            <div class="error-message" id="messageError"></div>
-                        </div>
-
-                        <!-- プライバシーポリシー同意 -->
-                        <div class="form-group required full-width">
-                            <label class="checkbox-label">
-                                <input type="checkbox" id="privacy" name="privacy" required />
-                                <span class="checkbox-custom"></span>
-                                <a href="{{ '/privacy-policy/' | relative_url }}" target="_blank" class="privacy-link">プライバシーポリシー</a>に同意します <span class="required-mark">*</span>
-                            </label>
-                            <div class="error-message" id="privacyError"></div>
                         </div>
                     </div>
 
                     <!-- 送信ボタン -->
                     <div class="form-submit">
                         <button type="submit" class="submit-btn" id="submitBtn">
-                            <span class="btn-text">送信する</span>
-                            <span class="btn-loading hidden">送信中...</span>
+                            <span class="btn-text">🎯 今すぐ無料相談を申し込む</span>
                         </button>
+                        <p class="submit-note">
+                            ※ 相談だけでも大歓迎です。無理な営業は一切いたしません。
+                        </p>
                     </div>
                 </form>
+            </div>
+        </div>
+    </section>
 
-                <!-- 送信完了メッセージ -->
-                <div class="success-message hidden" id="successMessage">
-                    <div class="success-content">
-                        <div class="success-icon">✅</div>
-                        <h3>お問い合わせありがとうございます</h3>
-                        <p>
-                            お問い合わせを受け付けました。<br>
-                            通常1-2営業日以内にご回答いたします。<br>
-                            しばらくお待ちください。
-                        </p>
-                        <a href="{{ '/' | relative_url }}" class="back-home-btn">トップページに戻る</a>
+    <!-- 安心要素 -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <div class="trust-icon">✅</div>
+                    <h3>相談だけでも大歓迎</h3>
+                    <p>具体的な依頼がなくても、お気軽にご相談ください</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">🚫</div>
+                    <h3>無理な営業は一切なし</h3>
+                    <p>押し売りや強引な営業は絶対にいたしません</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">🔒</div>
+                    <h3>秘密厳守をお約束</h3>
+                    <p>行政書士の守秘義務により、情報は厳重に保護されます</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">🌐</div>
+                    <h3>ZOOMで全国対応</h3>
+                    <p>オンラインなので全国どこからでもご相談いただけます</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">⚡</div>
+                    <h3>24時間以内にご連絡</h3>
+                    <p>お申込み後、24時間以内に日程調整のご連絡をいたします</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 相談の流れ -->
+    <section class="flow-section">
+        <div class="container">
+            <h2 class="section-title">無料相談からご契約までの流れ</h2>
+            <div class="flow-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>無料相談お申込み</h3>
+                        <p>上記フォームから30秒で申し込み完了</p>
+                    </div>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>第1回無料相談（30分）</h3>
+                        <p>ZOOMでお客様のお仕事内容をヒアリング<br>入札参加の可能性を診断</p>
+                    </div>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>第2回打ち合わせ</h3>
+                        <p>実際の案件をベースに具体的な戦略をご提案</p>
+                    </div>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>お見積書送付</h3>
+                        <p>透明性の高い料金体系でお見積書をご提示</p>
+                    </div>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>電子契約</h3>
+                        <p>ご納得いただけましたら電子契約でスタート</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 成功事例 -->
-    <section class="success-stories-section">
+    <!-- 緊急連絡先 -->
+    <section class="emergency-contact-section">
         <div class="container">
-            <h2 class="section-title">お客様の声</h2>
-            <div class="stories-grid">
-                <div class="story-card">
-                    <div class="quote-icon">"</div>
-                    <p class="story-text">
-                        初めての入札で不安でしたが、丁寧にサポートしていただき、無事に落札できました。書類作成から入札まで、すべてお任せできて安心でした。
-                    </p>
-                    <div class="story-author">
-                        <strong>建設業 A社様</strong>
-                        <span>2024年10月に初落札</span>
-                    </div>
-                </div>
-                <div class="story-card">
-                    <div class="quote-icon">"</div>
-                    <p class="story-text">
-                        電子入札システムの使い方がわからず困っていましたが、画面共有でひとつひとつ教えていただけました。今では自信を持って入札できます。
-                    </p>
-                    <div class="story-author">
-                        <strong>IT企業 B社様</strong>
-                        <span>継続的にサポート利用中</span>
-                    </div>
-                </div>
-                <div class="story-card">
-                    <div class="quote-icon">"</div>
-                    <p class="story-text">
-                        複数の自治体への入札参加資格申請を代行していただきました。自社でやっていたら何週間もかかったと思います。本当に助かりました。
-                    </p>
-                    <div class="story-author">
-                        <strong>製造業 C社様</strong>
-                        <span>5つの自治体で資格取得</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 連絡先情報 -->
-    <section class="contact-info-section">
-        <div class="container">
-            <div class="contact-info-grid">
-                <div class="info-card">
-                    <div class="info-icon">📧</div>
-                    <h3>メールでのお問い合わせ</h3>
-                    <p>上記フォームまたは直接メールでお問い合わせください</p>
-                    <a href="mailto:mail@flat-legal.com" class="contact-link">mail@flat-legal.com</a>
-                </div>
-
-                <div class="info-card">
-                    <div class="info-icon">📞</div>
-                    <h3>お電話でのお問い合わせ</h3>
-                    <p>平日 9:00-17:00</p>
-                    <a href="tel:046-272-3357" class="contact-link">046-272-3357</a>
-                </div>
-
-                <div class="info-card">
-                    <div class="info-icon">⏰</div>
-                    <h3>営業時間</h3>
-                    <p>
-                        電話受付：平日 9:00-17:00<br>
-                        メール受付：24時間<br>
-                        土日祝：休業
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- よくある質問への誘導 -->
-    <section class="faq-cta-section">
-        <div class="container">
-            <div class="faq-cta">
-                <h3>よくある質問もご確認ください</h3>
-                <p>お問い合わせの前に、よくある質問で解決できる場合があります</p>
-                <a href="{{ '/faq/' | relative_url }}" class="faq-btn">よくある質問を見る</a>
+            <div class="emergency-contact">
+                <h3>🔥 お急ぎの方は今すぐお電話を</h3>
+                <p>平日 9:00-17:00 | 土日祝も緊急時は対応可能</p>
+                <a href="tel:046-272-3357" class="phone-btn">📞 046-272-3357</a>
+                <p class="phone-note">※ 電話でも無料相談を承っております</p>
             </div>
         </div>
     </section>
 </div>
 
 <style>
-/* 信頼性向上のためのスタイル */
-.response-time {
-    color: #dc2626;
-    font-size: 1.125rem;
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: #fef2f2;
-    border-radius: 8px;
-    margin-top: 0.5rem;
-}
+/* ===== 無料相談ページ専用スタイル ===== */
 
-/* 成功事例セクション */
-.success-stories-section {
-    background: #f8f9fa;
-    padding: 3rem 0;
-    margin: 3rem 0;
-}
-
-.stories-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.story-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    position: relative;
-}
-
-.quote-icon {
-    font-size: 3rem;
-    color: #3b82f6;
-    line-height: 1;
-    margin-bottom: 1rem;
-    font-family: Georgia, serif;
-}
-
-.story-text {
-    font-size: 1rem;
-    line-height: 1.8;
-    color: #4b5563;
-    margin-bottom: 1.5rem;
-}
-
-.story-author {
-    display: flex;
-    flex-direction: column;
-    border-top: 1px solid #e5e7eb;
-    padding-top: 1rem;
-}
-
-.story-author strong {
-    color: #1f2937;
-    margin-bottom: 0.25rem;
-}
-
-.story-author span {
-    font-size: 0.875rem;
-    color: #6b7280;
-}
-
-/* フォームの改善 */
-.form-select option[value*="初めて"] {
-    font-weight: bold;
-}
-
-/* 必須マークの強調 */
-.required-mark {
-    color: #dc2626;
-    font-weight: bold;
-}
-
-.optional-mark {
-    color: #6b7280;
-    font-size: 0.875rem;
-}
-
-/* ===== お問い合わせページ専用スタイル ===== */
-
-.contact-page {
+.consultation-page {
     min-height: 100vh;
 }
 
 /* ヒーローセクション */
 .hero-section {
-    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-    color: #0f172a;
-    padding: 3rem 0 2.5rem;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    color: white;
+    padding: 3rem 0;
     text-align: center;
-    border-bottom: 1px solid #e2e8f0;
 }
 
 .hero-title {
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 2.5rem;
+    font-weight: 700;
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    color: #1e40af;
 }
 
 .hero-title .icon {
-    font-size: 1.8rem;
-    color: #3b82f6;
+    font-size: 2.2rem;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #dbeafe;
 }
 
 .hero-description {
     font-size: 1rem;
-    color: #64748b;
-    line-height: 1.6;
-    max-width: 600px;
-    margin: 0 auto;
+    color: #bfdbfe;
+    margin-bottom: 2rem;
 }
 
-/* フォームセクション */
-.contact-form-section {
+.urgency-banner {
+    background: #ff6b35;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    display: inline-block;
+    font-weight: 600;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* 価値提示セクション */
+.value-proposition-section {
+    padding: 4rem 0;
+    background: #f8fafc;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    color: #1e293b;
+}
+
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.value-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+.value-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.value-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #1e293b;
+}
+
+.value-card p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* 実績セクション */
+.results-section {
     padding: 3rem 0;
-    background: #fafafa;
+    background: #1e293b;
+    color: white;
+}
+
+.results-section .section-title {
+    color: white;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.result-item {
+    padding: 1.5rem;
+}
+
+.result-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #3b82f6;
+    margin-bottom: 0.5rem;
+}
+
+.result-label {
+    font-size: 1rem;
+    color: #cbd5e1;
+}
+
+/* 不安解消セクション */
+.reassurance-section {
+    padding: 4rem 0;
+    background: white;
+}
+
+.worries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.worry-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: #fef2f2;
+    border-radius: 8px;
+    border-left: 4px solid #ef4444;
+}
+
+.worry-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.worry-item p {
+    margin: 0;
+    color: #7f1d1d;
+    font-weight: 500;
+}
+
+.solution-message {
+    text-align: center;
+    background: #f0f9ff;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid #3b82f6;
+}
+
+.solution-message h3 {
+    color: #1e40af;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.solution-message p {
+    color: #1e40af;
+    font-size: 1.1rem;
+}
+
+/* 申し込みフォーム */
+.application-form-section {
+    padding: 4rem 0;
+    background: #f8fafc;
 }
 
 .form-wrapper {
-    max-width: 700px;
+    max-width: 600px;
     margin: 0 auto;
     background: white;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
     overflow: hidden;
 }
 
 .form-header {
-    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-    color: #1e293b;
-    padding: 1.5rem 2rem;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    color: white;
+    padding: 2rem;
     text-align: center;
-    border-bottom: 1px solid #e2e8f0;
 }
 
 .form-header h2 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: #1e40af;
 }
 
-.form-header p {
-    color: #64748b;
-    line-height: 1.6;
-    font-size: 0.95rem;
+.form-subtitle {
+    font-size: 1rem;
+    color: #dbeafe;
 }
 
-/* フォームスタイル */
-.contact-form {
+.consultation-form {
     padding: 2rem;
 }
 
 .form-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .form-group {
@@ -465,373 +529,196 @@ keywords: お問い合わせ,入札相談,公共調達相談,行政書士相談,
     flex-direction: column;
 }
 
-.form-group.full-width {
-    grid-column: 1 / -1;
-}
-
 .form-label {
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: #333;
-    font-size: 0.95rem;
+    color: #1e293b;
 }
 
 .required-mark {
-    color: #e74c3c;
+    color: #ef4444;
     font-weight: 700;
 }
 
-.optional-mark {
-    color: #7f8c8d;
-    font-size: 0.85rem;
-}
-
-.form-input,
-.form-select,
-.form-textarea {
-    padding: 0.75rem;
+.form-input {
+    padding: 1rem;
     border: 2px solid #d1d5db;
     border-radius: 8px;
     font-size: 1rem;
-    transition: all 0.3s ease;
-    font-family: inherit;
-    background-color: #ffffff;
-    color: #1f2937;
+    transition: border-color 0.3s ease;
 }
 
-.form-input:hover,
-.form-select:hover,
-.form-textarea:hover {
-    border-color: #9ca3af;
-}
-
-.form-input:focus,
-.form-select:focus,
-.form-textarea:focus {
+.form-input:focus {
     outline: none;
     border-color: #3b82f6;
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-    background-color: #ffffff;
 }
 
-/* プレースホルダーのスタイル */
-.form-input::placeholder,
-.form-textarea::placeholder {
-    color: #9ca3af;
-    opacity: 1;
-}
-
-/* 選択されていないselectの文字色 */
-.form-select {
-    color: #1f2937;
-}
-
-.form-select option[value=""] {
-    color: #9ca3af;
-}
-
-.form-textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
-.char-count {
-    text-align: right;
-    font-size: 0.85rem;
-    color: #7f8c8d;
-    margin-top: 0.25rem;
-}
-
-/* ラジオボタン */
-.radio-group {
-    display: flex;
-    gap: 1.5rem;
-    margin-top: 0.5rem;
-}
-
-.radio-label {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    cursor: pointer;
-    font-size: 0.95rem;
-}
-
-.radio-label input[type="radio"] {
-    display: none;
-}
-
-.radio-custom {
-    width: 18px;
-    height: 18px;
-    border: 2px solid #ddd;
-    border-radius: 50%;
-    position: relative;
-    transition: all 0.3s ease;
-}
-
-.radio-label input[type="radio"]:checked + .radio-custom {
-    border-color: #4facfe;
-    background: #4facfe;
-}
-
-.radio-label input[type="radio"]:checked + .radio-custom::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 6px;
-    height: 6px;
-    background: white;
-    border-radius: 50%;
-}
-
-/* チェックボックス */
-.checkbox-label {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.5rem;
-    cursor: pointer;
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
-.checkbox-label input[type="checkbox"] {
-    display: none;
-}
-
-.checkbox-custom {
-    width: 18px;
-    height: 18px;
-    border: 2px solid #ddd;
-    border-radius: 4px;
-    position: relative;
-    transition: all 0.3s ease;
-    flex-shrink: 0;
-    margin-top: 2px;
-}
-
-.checkbox-label input[type="checkbox"]:checked + .checkbox-custom {
-    border-color: #4facfe;
-    background: #4facfe;
-}
-
-.checkbox-label input[type="checkbox"]:checked + .checkbox-custom::after {
-    content: '✓';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-.privacy-link {
-    color: #4facfe;
-    text-decoration: underline;
-}
-
-.privacy-link:hover {
-    color: #357abd;
-}
-
-/* エラーメッセージ */
-.error-message {
-    color: #e74c3c;
-    font-size: 0.85rem;
-    margin-top: 0.25rem;
-    min-height: 1.2rem;
-}
-
-.form-input.error,
-.form-select.error,
-.form-textarea.error {
-    border-color: #e74c3c;
-    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
-}
-
-/* 送信ボタン */
 .form-submit {
     text-align: center;
-    margin-top: 2rem;
 }
 
 .submit-btn {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%);
     color: white;
     border: none;
-    padding: 1rem 3rem;
-    border-radius: 50px;
+    padding: 1rem 2rem;
     font-size: 1.1rem;
     font-weight: 600;
+    border-radius: 50px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    min-width: 200px;
-}
-
-.submit-btn:hover:not(:disabled) {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
-}
-
-.submit-btn:disabled {
-    opacity: 0.7;
-    cursor: not-allowed;
-}
-
-.btn-loading {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* 成功メッセージ */
-.success-message {
-    text-align: center;
-    padding: 3rem 2rem;
-}
-
-.success-content {
+    transition: transform 0.3s ease;
+    width: 100%;
     max-width: 400px;
-    margin: 0 auto;
 }
 
-.success-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.success-content h3 {
-    color: #27ae60;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-}
-
-.success-content p {
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-}
-
-.back-home-btn {
-    display: inline-block;
-    background: #4facfe;
-    color: white;
-    padding: 0.75rem 2rem;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.back-home-btn:hover {
-    background: #357abd;
+.submit-btn:hover {
     transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
 }
 
-/* 連絡先情報セクション */
-.contact-info-section {
-    padding: 4rem 0;
+.submit-note {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+/* 安心要素 */
+.trust-section {
+    padding: 3rem 0;
     background: white;
 }
 
-.contact-info-grid {
+.trust-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    max-width: 900px;
-    margin: 0 auto;
 }
 
-.info-card {
+.trust-item {
     text-align: center;
-    padding: 2rem;
-    border-radius: 12px;
-    background: #f8f9fa;
-    transition: all 0.3s ease;
+    padding: 1.5rem;
 }
 
-.info-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-}
-
-.info-icon {
+.trust-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
-.info-card h3 {
-    color: #333;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-}
-
-.info-card p {
-    color: #666;
-    margin-bottom: 1rem;
-    line-height: 1.6;
-}
-
-.contact-link {
-    color: #4facfe;
-    text-decoration: none;
-    font-weight: 600;
+.trust-item h3 {
     font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1e293b;
 }
 
-.contact-link:hover {
-    color: #357abd;
-    text-decoration: underline;
+.trust-item p {
+    color: #64748b;
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
-/* FAQ誘導セクション */
-.faq-cta-section {
-    padding: 3rem 0;
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+/* 相談の流れ */
+.flow-section {
+    padding: 4rem 0;
+    background: #f8fafc;
+}
+
+.flow-steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.step {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 200px;
+    flex: 1;
+    min-width: 180px;
+}
+
+.step-number {
+    background: #3b82f6;
     color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin: 0 auto 1rem;
 }
 
-.faq-cta {
+.step h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1e293b;
+}
+
+.step p {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.4;
+}
+
+.step-arrow {
+    font-size: 1.5rem;
+    color: #3b82f6;
+    font-weight: 700;
+}
+
+/* 緊急連絡先 */
+.emergency-contact-section {
+    padding: 3rem 0;
+    background: #fef2f2;
+}
+
+.emergency-contact {
     text-align: center;
     max-width: 600px;
     margin: 0 auto;
 }
 
-.faq-cta h3 {
+.emergency-contact h3 {
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    color: #dc2626;
+    margin-bottom: 1rem;
 }
 
-.faq-cta p {
-    opacity: 0.9;
-    margin-bottom: 2rem;
-    line-height: 1.6;
+.emergency-contact p {
+    color: #7f1d1d;
+    margin-bottom: 1.5rem;
 }
 
-.faq-btn {
+.phone-btn {
     display: inline-block;
-    background: white;
-    color: #f5576c;
-    padding: 0.75rem 2rem;
-    border-radius: 25px;
+    background: #dc2626;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
 }
 
-.faq-btn:hover {
+.phone-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 20px rgba(220, 38, 38, 0.3);
 }
 
-/* ユーティリティクラス */
-.hidden {
-    display: none !important;
+.phone-note {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #991b1b;
 }
 
 /* レスポンシブ対応 */
@@ -840,217 +727,36 @@ keywords: お問い合わせ,入札相談,公共調達相談,行政書士相談,
         font-size: 2rem;
     }
     
-    .form-grid {
+    .value-grid {
         grid-template-columns: 1fr;
-        gap: 1rem;
     }
     
-    .form-group.full-width {
-        grid-column: 1;
+    .results-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
     
-    .radio-group {
+    .flow-steps {
         flex-direction: column;
-        gap: 1rem;
     }
     
-    .contact-info-grid {
+    .step-arrow {
+        transform: rotate(90deg);
+    }
+    
+    .worries-grid {
         grid-template-columns: 1fr;
     }
-    
-    .form-wrapper {
-        margin: 0 1rem;
-    }
-    
-    .contact-form {
-        padding: 1.5rem;
-    }
-    
-    .form-header {
-        padding: 1.5rem;
-    }
 }
 
-@media (max-width: 480px) {
-    .hero-section {
-        padding: 2rem 0;
-    }
-    
-    .hero-title {
-        font-size: 1.8rem;
-    }
-    
-    .submit-btn {
-        padding: 0.875rem 2rem;
-        font-size: 1rem;
-        min-width: 180px;
-    }
+/* ユーティリティ */
+.hidden {
+    display: none;
 }
-</style>
 
-<script>
-// お問い合わせフォームのJavaScript
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('contactForm');
-    const submitBtn = document.getElementById('submitBtn');
-    const btnText = submitBtn.querySelector('.btn-text');
-    const btnLoading = submitBtn.querySelector('.btn-loading');
-    const successMessage = document.getElementById('successMessage');
-    const messageTextarea = document.getElementById('message');
-    const charCount = document.getElementById('charCount');
-
-    // 文字数カウント
-    messageTextarea.addEventListener('input', function() {
-        const count = this.value.length;
-        charCount.textContent = count;
-        
-        if (count > 2000) {
-            charCount.style.color = '#e74c3c';
-        } else if (count > 1800) {
-            charCount.style.color = '#f39c12';
-        } else {
-            charCount.style.color = '#7f8c8d';
-        }
-    });
-
-    // フォームバリデーション
-    function validateForm() {
-        let isValid = true;
-        
-        // 名前のバリデーション
-        const name = document.getElementById('name');
-        const nameError = document.getElementById('nameError');
-        if (!name.value.trim()) {
-            showError(name, nameError, 'お名前を入力してください');
-            isValid = false;
-        } else if (name.value.trim().length < 2) {
-            showError(name, nameError, 'お名前は2文字以上で入力してください');
-            isValid = false;
-        } else {
-            clearError(name, nameError);
-        }
-
-        // メールアドレスのバリデーション
-        const email = document.getElementById('email');
-        const emailError = document.getElementById('emailError');
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!email.value.trim()) {
-            showError(email, emailError, 'メールアドレスを入力してください');
-            isValid = false;
-        } else if (!emailRegex.test(email.value)) {
-            showError(email, emailError, '正しいメールアドレスを入力してください');
-            isValid = false;
-        } else {
-            clearError(email, emailError);
-        }
-
-        // 電話番号のバリデーション（任意項目）
-        const phone = document.getElementById('phone');
-        const phoneError = document.getElementById('phoneError');
-        if (phone.value.trim()) {
-            const phoneRegex = /^[\d\-\(\)\+\s]+$/;
-            if (!phoneRegex.test(phone.value)) {
-                showError(phone, phoneError, '正しい電話番号を入力してください');
-                isValid = false;
-            } else {
-                clearError(phone, phoneError);
-            }
-        } else {
-            clearError(phone, phoneError);
-        }
-
-        // 相談カテゴリのバリデーション
-        const category = document.getElementById('category');
-        const categoryError = document.getElementById('categoryError');
-        if (!category.value) {
-            showError(category, categoryError, '相談カテゴリを選択してください');
-            isValid = false;
-        } else {
-            clearError(category, categoryError);
-        }
-
-        // 希望連絡方法のバリデーション
-        const contactMethod = document.querySelector('input[name="contact-method"]:checked');
-        const contactMethodError = document.getElementById('contactMethodError');
-        if (!contactMethod) {
-            contactMethodError.textContent = '希望連絡方法を選択してください';
-            isValid = false;
-        } else {
-            contactMethodError.textContent = '';
-        }
-
-        // 相談内容のバリデーション
-        const message = document.getElementById('message');
-        const messageError = document.getElementById('messageError');
-        if (!message.value.trim()) {
-            showError(message, messageError, '相談内容を入力してください');
-            isValid = false;
-        } else if (message.value.trim().length < 10) {
-            showError(message, messageError, '相談内容は10文字以上で入力してください');
-            isValid = false;
-        } else if (message.value.length > 2000) {
-            showError(message, messageError, '相談内容は2000文字以内で入力してください');
-            isValid = false;
-        } else {
-            clearError(message, messageError);
-        }
-
-        // プライバシーポリシー同意のバリデーション
-        const privacy = document.getElementById('privacy');
-        const privacyError = document.getElementById('privacyError');
-        if (!privacy.checked) {
-            privacyError.textContent = 'プライバシーポリシーに同意してください';
-            isValid = false;
-        } else {
-            privacyError.textContent = '';
-        }
-
-        return isValid;
-    }
-
-    function showError(input, errorElement, message) {
-        input.classList.add('error');
-        errorElement.textContent = message;
-    }
-
-    function clearError(input, errorElement) {
-        input.classList.remove('error');
-        errorElement.textContent = '';
-    }
-
-    // フォーム送信処理
-    form.addEventListener('submit', function(e) {
-        if (!validateForm()) {
-            e.preventDefault();
-            return;
-        }
-
-        // 送信中の状態に変更
-        submitBtn.disabled = true;
-        btnText.classList.add('hidden');
-        btnLoading.classList.remove('hidden');
-
-        // Google Analytics イベント送信（もしあれば）
-        if (typeof gtag !== 'undefined') {
-            gtag('event', 'form_submit', {
-                'event_category': 'Contact',
-                'event_label': 'Contact Form'
-            });
-        }
-
-        // フォームは通常通り送信される（Netlify Formsが処理）
-    });
-
-    // リアルタイムバリデーション
-    const inputs = form.querySelectorAll('input, select, textarea');
-    inputs.forEach(input => {
-        input.addEventListener('blur', function() {
-            if (this.hasAttribute('required') || this.value.trim()) {
-                validateForm();
-            }
-        });
-    });
-});
-</script>
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
 </style>
 

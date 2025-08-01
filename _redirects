@@ -1,7 +1,6 @@
-# 旧contactページから新しい無料相談ページへのリダイレクト
-/contact/ /consultation/ 301
+# Netlify redirects
+# 旧ページから新ページへのリダイレクト設定
 
-# 既存のリダイレクト設定
-/lp1/ /qualification/ 301
-/lp1.html /qualification/ 301
+# 404エラーページの処理
+/* /404.html 404
 
