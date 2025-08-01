@@ -5,7 +5,7 @@ date: 2025-08-01
 categories: [戦略ガイド]
 tags: [資金繰り, 経営改善, 融資制度, つなぎ融資, 中小企業支援]
 description: "2025年の政策変更を踏まえた資金繰り改善の実践的戦略。入札案件つなぎ融資制度の活用から新たな支援制度まで、経営難に直面する企業への具体的解決策を専門家が解説。"
-image: /assets/images/strategy-document.webp
+image: /assets/images/service-consulting.webp
 author: しおさん
 ---
 
