@@ -13,6 +13,11 @@ main_nav:
     icon: "fas fa-graduation-cap"
     description: "入札制度の基本から実践まで"
     
+  - name: "動画"
+    url: "/videos/"
+    icon: "fas fa-play-circle"
+    description: "動画で学ぶ入札・官公需"
+    
   - name: "用語集"
     url: "/dictionary/"
     icon: "fas fa-book"
