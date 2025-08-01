@@ -8,7 +8,7 @@
   color: white;
   padding: 1rem 1.5rem;
   margin: 2rem 0 1.5rem 0;
-  border-left: 4px solid var(--accent-primary);
+  border-left: 4px solid var(--accent-medium);
   border-radius: 4px;
   box-shadow: 0 2px 8px rgba(15, 23, 42, 0.1);
   
@@ -20,29 +20,18 @@
     color: white;
   }
   
-  // レスポンシブ対応（背景色は統一、文字の視認性のみ改善）
+  // シンプルなレスポンシブ対応
   @media (max-width: 768px) {
     padding: 0.875rem 1.25rem;
     margin: 1.5rem 0 1rem 0;
     border-left-width: 3px;
-    
-    h2, h3, h4 {
-      color: white;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); // より強いシャドウ
-      font-weight: 700; // より太く
-      letter-spacing: 0.025em; // 文字間隔を少し広く
-    }
   }
   
-  // 小さなモバイル画面での追加調整
   @media (max-width: 480px) {
     padding: 0.75rem 1rem;
     
     h2, h3, h4 {
       font-size: 1.1rem;
-      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6); // さらに強いシャドウ
-      font-weight: 800; // 最も太く
-      letter-spacing: 0.05em; // 文字間隔をより広く
     }
   }
 }
