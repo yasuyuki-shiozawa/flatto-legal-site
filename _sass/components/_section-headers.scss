@@ -22,9 +22,30 @@
   
   // レスポンシブ対応
   @media (max-width: 768px) {
+    // モバイルでのコントラスト改善
+    background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+    color: white;
     padding: 0.875rem 1.25rem;
     margin: 1.5rem 0 1rem 0;
     border-left-width: 3px;
+    border-left-color: #ff6b35;
+    
+    h2, h3, h4 {
+      color: white;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      font-weight: 700; // より太く
+    }
+  }
+  
+  // 小さなモバイル画面での追加調整
+  @media (max-width: 480px) {
+    background: #4a5568; // 単色でより明るく
+    padding: 0.75rem 1rem;
+    
+    h2, h3, h4 {
+      font-size: 1.1rem;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    }
   }
 }
 
