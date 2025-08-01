@@ -16,12 +16,11 @@ keywords: 入札サポート,行政書士,専門相談,入札支援,公共調達
 <!-- サポート概要 -->
 <section class="service-overview">
     <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">専門家による個別サポート</h2>
-            <p class="section-subtitle">
-                入札マップで学習した後、より専門的なサポートが必要な場合に。<br>
-                複雑な案件や個別の事情に応じた対応を行います。
-            </p>
+        <div class="section-header-main">
+            <h2>専門家による個別サポート</h2>
+        </div>
+        <div class="readable-content">
+            <p>入札マップで学習した後、より専門的なサポートが必要な場合に。複雑な案件や個別の事情に応じた対応を行います。</p>
         </div>
         
         <!-- しおさんの説明コメント -->

@@ -18,8 +18,12 @@ body_class: qualification-page
         
         <!-- 概要セクション -->
         <section class="overview-section">
-            <h2>入札参加資格取得支援サービス</h2>
-            <p>入札に参加するためには、まず「入札参加資格」を取得する必要があります。当事務所では、全省庁統一資格から各地方自治体の資格まで、幅広い入札参加資格の取得をサポートしています。</p>
+            <div class="section-header-main">
+                <h2>入札参加資格取得支援サービス</h2>
+            </div>
+            <div class="readable-content">
+                <p>入札に参加するためには、まず「入札参加資格」を取得する必要があります。当事務所では、全省庁統一資格から各地方自治体の資格まで、幅広い入札参加資格の取得をサポートしています。</p>
+            </div>
             
             <div class="service-features">
                 <div class="feature-item">
@@ -39,7 +43,9 @@ body_class: qualification-page
 
         <!-- 対応資格一覧 -->
         <section class="supported-qualifications">
-            <h2>対応している入札参加資格</h2>
+            <div class="section-header-main">
+                <h2>対応している入札参加資格</h2>
+            </div>
             
             <div class="qualification-categories">
                 <div class="category">
