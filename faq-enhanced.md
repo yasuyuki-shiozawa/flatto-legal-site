@@ -14,7 +14,7 @@ permalink: /faq-enhanced/
         
         <p class="text-center text-lg text-muted mb-8">
             入札・公共調達に関してよく寄せられる質問をまとめました。<br>
-            お探しの情報が見つからない場合は、<a href="/consultation/">お問い合わせ</a>ください。
+            お探しの情報が見つからない場合は、<a href="/contact/">お問い合わせ</a>ください。
         </p>
         
         {% include faq-accordion.html 
@@ -50,7 +50,7 @@ permalink: /faq-enhanced/
                     </div>
                 </a>
                 
-                <a href="/consultation/" class="card card-hover">
+                <a href="/contact/" class="card card-hover">
                     <div class="card-body">
                         <h3 class="font-medium mb-2">
                             <i class="fas fa-envelope"></i>
