@@ -463,74 +463,80 @@ permalink: /lp1/
         <h2 style="text-align: center; font-size: 42px; font-weight: 700; margin-bottom: 20px; color: #2d3748;">今すぐ始めませんか？</h2>
         <p style="text-align: center; font-size: 20px; color: #64748b; margin-bottom: 60px;">申請費用無料のこの機会をお見逃しなく。<br>あなたの事業拡大を全力でサポートいたします。</p>
         
-        <form name="lp1-contact" method="POST" data-netlify="true" action="/thanks/" style="background: #f8fafc; padding: 50px; border-radius: 20px; border: 2px solid #e2e8f0;">
-            <input type="hidden" name="form-name" value="lp1-contact">
-            <input type="hidden" name="subject" value="【入札マップ】LP1からの無料相談お申込み">
+        <div style="background: #f8fafc; padding: 50px; border-radius: 20px; border: 2px solid #e2e8f0;">
             <h3 style="font-size: 28px; font-weight: 600; margin-bottom: 30px; color: #2d3748; text-align: center;">無料相談申し込み</h3>
             
-            <div style="margin-bottom: 25px;">
-                <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #2d3748;">会社名 *</label>
-                <input type="text" name="company" required style="width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
-            </div>
-            
-            <div style="margin-bottom: 25px;">
-                <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #2d3748;">代表者名 *</label>
-                <input type="text" name="name" required style="width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
-            </div>
-            
-            <div style="margin-bottom: 25px;">
-                <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #2d3748;">メールアドレス *</label>
-                <input type="email" name="email" required style="width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
-            </div>
-            
-            <div style="margin-bottom: 25px;">
-                <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #2d3748;">電話番号 *</label>
-                <input type="tel" name="phone" required style="width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
-            </div>
-            
-            <div style="margin-bottom: 25px;">
-                <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #2d3748;">業種 *</label>
-                <select name="industry" required style="width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
-                    <option value="">選択してください</option>
-                    <option value="建設業">建設業</option>
-                    <option value="IT・システム">IT・システム</option>
-                    <option value="コンサルティング">コンサルティング</option>
-                    <option value="製造業">製造業</option>
-                    <option value="その他">その他</option>
-                </select>
-            </div>
-            
-            <div style="margin-bottom: 25px;">
-                <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #2d3748;">相談内容</label>
-                <select name="consultation_type" style="width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
-                    <option value="">選択してください（任意）</option>
-                    <option value="全省庁統一資格について">全省庁統一資格について</option>
-                    <option value="入札参加について">入札参加について</option>
-                    <option value="書類作成について">書類作成について</option>
-                    <option value="サポート内容について">サポート内容について</option>
-                    <option value="その他">その他</option>
-                </select>
-            </div>
-            
-            <div style="margin-bottom: 30px;">
-                <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #2d3748;">ご質問・ご相談内容</label>
-                <textarea name="message" rows="4" placeholder="どのようなことでお困りでしょうか？お気軽にご相談ください。" style="width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px; resize: vertical;"></textarea>
-            </div>
-            
-            <div style="margin-bottom: 30px;">
-                <label style="display: flex; align-items: center; font-size: 14px; color: #64748b;">
-                    <input type="checkbox" required style="margin-right: 10px;">
-                    <a href="#" style="color: #4299e1;">利用規約</a>および<a href="#" style="color: #4299e1;">プライバシーポリシー</a>に同意する
-                </label>
-            </div>
-            
-            <button type="submit" style="width: 100%; background: linear-gradient(45deg, #ff6b35, #f7931e); color: white; padding: 20px; border: none; border-radius: 50px; font-size: 20px; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">
-                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style="display: inline-block; margin-right: 10px; vertical-align: middle;">
-                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
-                </svg>
-                無料相談を申し込む
-            </button>
-        </form>
+            <form name="lp1-consultation" method="POST" action="/thanks/" data-netlify="true" data-netlify-honeypot="bot-field">
+                <!-- Netlify Forms用の隠しフィールド -->
+                <input type="hidden" name="form-name" value="lp1-consultation" />
+                <input type="hidden" name="_to" value="mail@flat-legal.com" />
+                <input type="hidden" name="_subject" value="【入札マップ】LP1からの無料相談お申込み" />
+                
+                <!-- ハニーポット（スパム対策） -->
+                <div style="display: none;">
+                    <label>このフィールドは入力しないでください: <input name="bot-field" /></label>
+                </div>
+
+                <!-- お名前 -->
+                <div style="margin-bottom: 25px;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #2d3748;">
+                        お名前 <span style="color: #e53e3e;">*</span>
+                    </label>
+                    <input 
+                        type="text" 
+                        name="name" 
+                        required 
+                        maxlength="50"
+                        placeholder="山田太郎"
+                        style="width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;"
+                    />
+                </div>
+
+                <!-- メールアドレス -->
+                <div style="margin-bottom: 25px;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #2d3748;">
+                        メールアドレス <span style="color: #e53e3e;">*</span>
+                    </label>
+                    <input 
+                        type="email" 
+                        name="email" 
+                        required 
+                        maxlength="100"
+                        placeholder="example@email.com"
+                        style="width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;"
+                    />
+                </div>
+
+                <!-- 自由記述欄 -->
+                <div style="margin-bottom: 30px;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #2d3748;">
+                        ご相談内容・ご質問など <span style="color: #64748b; font-weight: 400;">（任意）</span>
+                    </label>
+                    <textarea 
+                        name="message" 
+                        rows="4" 
+                        maxlength="1000"
+                        placeholder="例：小さな会社でも入札に参加できるか知りたい、どのような案件があるか教えてほしい、など"
+                        style="width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px; resize: vertical;"
+                    ></textarea>
+                    <div style="text-align: right; font-size: 14px; color: #64748b; margin-top: 5px;">
+                        <span id="charCount">0</span>/1000文字
+                    </div>
+                </div>
+
+                <!-- 送信ボタン -->
+                <button type="submit" style="width: 100%; background: linear-gradient(45deg, #ff6b35, #f7931e); color: white; padding: 20px; border: none; border-radius: 50px; font-size: 20px; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style="display: inline-block; margin-right: 10px; vertical-align: middle;">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                    </svg>
+                    今すぐ無料相談を申し込む
+                </button>
+                
+                <p style="text-align: center; font-size: 14px; color: #64748b; margin-top: 15px;">
+                    ※ 相談だけでも大歓迎です。無理な営業は一切いたしません。
+                </p>
+            </form>
+        </div>
     </div>
 </section>
 
@@ -543,6 +549,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             behavior: 'smooth'
         });
     });
+});
+
+// 文字数カウント機能
+document.addEventListener('DOMContentLoaded', function() {
+    const textarea = document.querySelector('textarea[name="message"]');
+    const charCount = document.getElementById('charCount');
+    
+    if (textarea && charCount) {
+        textarea.addEventListener('input', function() {
+            const count = this.value.length;
+            charCount.textContent = count;
+            
+            // 文字数制限に近づいたら色を変更
+            if (count > 900) {
+                charCount.style.color = '#e53e3e';
+            } else if (count > 800) {
+                charCount.style.color = '#f59e0b';
+            } else {
+                charCount.style.color = '#64748b';
+            }
+        });
+    }
 });
 </script>
 
