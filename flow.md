@@ -17,12 +17,11 @@ permalink: /flow/
 <!-- 流れの概要 -->
 <section class="flow-overview">
     <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">6ステップで入札成功をサポート</h2>
-            <p class="section-subtitle">
-                初めての方でも安心して入札に参加できるよう、<br>
-                段階的にサポートいたします。
-            </p>
+        <div class="section-header-main">
+            <h2>6ステップで入札成功をサポート</h2>
+        </div>
+        <div class="readable-content">
+            <p>初めての方でも安心して入札に参加できるよう、段階的にサポートいたします。</p>
         </div>
         
         <div class="flow-hero-image">
