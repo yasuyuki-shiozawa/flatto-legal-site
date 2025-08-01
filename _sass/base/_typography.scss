@@ -1,15 +1,15 @@
 // ========================================
-// 統一タイポグラフィシステム
-// 参考サイト基準の洗練されたデザイン
+// 統一タイポグラフィシステム（高コントラスト・読みやすさ重視）
 // ========================================
 
-// ベースタイポグラフィ
+// ベースタイポグラフィ（高コントラスト）
 body {
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-normal);
   line-height: var(--line-height-normal);
-  color: var(--text-primary);
+  color: #333333 !important;  // 高コントラストの濃いグレー
+  background-color: #ffffff;
   letter-spacing: var(--letter-spacing-normal);
 }
 
@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-base);
   font-weight: var(--font-weight-medium); // 太文字を控えめに
   line-height: var(--line-height-tight);
-  color: var(--text-primary);
+  color: #1a1a1a !important;  // 最も濃い色で強調
   margin: 0;
   letter-spacing: var(--letter-spacing-tight);
 }
@@ -65,7 +65,7 @@ p {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-normal); // 通常の太さに統一
   line-height: var(--line-height-normal);
-  color: var(--text-primary);
+  color: #333333 !important;  // 高コントラストの濃いグレー
   margin: 0 0 var(--space-4) 0;
   
   &:last-child {
@@ -92,18 +92,18 @@ p {
 // ========================================
 
 a {
-  color: var(--primary-medium);
+  color: #f39c12 !important;  // パステルオレンジ
   text-decoration: none;
   font-weight: var(--font-weight-normal); // 太文字を避ける
   transition: var(--transition-fast);
   
   &:hover {
-    color: var(--primary-dark);
+    color: #e67e22 !important;  // ホバー時は少し濃く
     text-decoration: underline;
   }
   
   &:focus {
-    outline: 2px solid var(--primary-light);
+    outline: 2px solid #f39c12;
     outline-offset: 2px;
   }
 }

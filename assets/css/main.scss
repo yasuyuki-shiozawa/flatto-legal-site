@@ -361,3 +361,105 @@ body {
   }
 }
 
+
+
+// ========================================
+// 高コントラスト色彩強制設定（読みやすさ最優先）
+// ========================================
+
+// 全体的なテキスト色の強制設定
+body, 
+.content-area,
+.post-content,
+.main-content,
+main,
+article,
+section {
+  color: #333333 !important;
+  background-color: #ffffff !important;
+}
+
+// 見出しの色彩強制
+h1, h2, h3, h4, h5, h6 {
+  color: #1a1a1a !important;
+}
+
+// 段落・リスト・テキスト要素の色彩強制
+p, li, span, div {
+  color: #333333 !important;
+}
+
+// リンクの色彩強制（パステルオレンジ）
+a {
+  color: #f39c12 !important;
+  
+  &:hover {
+    color: #e67e22 !important;
+  }
+}
+
+// カード・セクション背景の調整
+.card, .section {
+  background-color: #ffffff !important;
+  color: #333333 !important;
+}
+
+// フォーム要素の色彩調整
+input, textarea, select {
+  color: #333333 !important;
+  background-color: #ffffff !important;
+  border-color: #dee2e6 !important;
+}
+
+// ボタンの色彩調整
+.btn {
+  color: #ffffff !important;
+  
+  &.btn-primary {
+    background-color: #f39c12 !important;
+    border-color: #f39c12 !important;
+    
+    &:hover {
+      background-color: #e67e22 !important;
+      border-color: #e67e22 !important;
+    }
+  }
+}
+
+// ========================================
+// モバイル表示での追加調整
+// ========================================
+
+@media (max-width: 768px) {
+  body, 
+  .content-area,
+  .post-content,
+  .main-content,
+  main,
+  article,
+  section {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    color: #333333 !important;
+  }
+  
+  p {
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+    color: #333333 !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #1a1a1a !important;
+  }
+  
+  a {
+    color: #f39c12 !important;
+    
+    &:hover {
+      color: #e67e22 !important;
+    }
+  }
+}
+
