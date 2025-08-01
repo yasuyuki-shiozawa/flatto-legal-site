@@ -1,0 +1,211 @@
+// ========================================
+// セクション見出しデザイン（参考サイト風）
+// ========================================
+
+// メイン見出し（背景色付き）
+.section-header-main {
+  background: linear-gradient(135deg, var(--primary-darkest) 0%, var(--primary-dark) 100%);
+  color: white;
+  padding: 1rem 1.5rem;
+  margin: 2rem 0 1.5rem 0;
+  border-left: 4px solid var(--accent-primary);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.1);
+  
+  h2, h3, h4 {
+    margin: 0;
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    font-weight: 600;
+    line-height: 1.4;
+    color: white;
+  }
+  
+  // レスポンシブ対応
+  @media (max-width: 768px) {
+    padding: 0.875rem 1.25rem;
+    margin: 1.5rem 0 1rem 0;
+    border-left-width: 3px;
+  }
+}
+
+// サブ見出し（下線付き）
+.section-header-sub {
+  border-bottom: 2px solid var(--border-light);
+  padding-bottom: 0.75rem;
+  margin: 1.5rem 0 1rem 0;
+  
+  h3, h4, h5 {
+    margin: 0;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    font-weight: 600;
+    color: var(--primary-dark);
+    line-height: 1.4;
+  }
+  
+  @media (max-width: 768px) {
+    padding-bottom: 0.625rem;
+    margin: 1.25rem 0 0.875rem 0;
+    border-bottom-width: 1.5px;
+  }
+}
+
+// 小見出し（シンプル）
+.section-header-small {
+  margin: 1rem 0 0.75rem 0;
+  
+  h4, h5, h6 {
+    margin: 0;
+    font-size: clamp(0.95rem, 1.8vw, 1rem);
+    font-weight: 600;
+    color: var(--primary-medium);
+    line-height: 1.4;
+  }
+}
+
+// セクション区切り線
+.section-divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--border-light) 20%, var(--border-light) 80%, transparent 100%);
+  margin: 2rem 0;
+  
+  @media (max-width: 768px) {
+    margin: 1.5rem 0;
+  }
+}
+
+// コンテンツブロック
+.content-block {
+  margin: 1.5rem 0;
+  
+  p {
+    margin: 0 0 1rem 0;
+    line-height: var(--line-height-relaxed);
+    color: var(--text-secondary);
+  }
+  
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// 強調ブロック
+.highlight-block {
+  background: var(--bg-light);
+  border-left: 4px solid var(--accent-primary);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 4px 4px 0;
+  
+  p {
+    margin: 0;
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 1rem 1.25rem;
+    margin: 1.25rem 0;
+    border-left-width: 3px;
+  }
+}
+
+// 情報ボックス
+.info-box {
+  background: white;
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  
+  .info-box-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+    margin: 0 0 0.75rem 0;
+  }
+  
+  .info-box-content {
+    color: var(--text-secondary);
+    line-height: var(--line-height-relaxed);
+    
+    p {
+      margin: 0 0 0.75rem 0;
+    }
+    
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    padding: 1.25rem;
+    margin: 1.25rem 0;
+  }
+}
+
+// 読みやすい段落スタイル
+.readable-content {
+  p {
+    margin: 0 0 1.25rem 0;
+    line-height: var(--line-height-relaxed);
+    color: var(--text-secondary);
+    font-size: var(--font-size-base);
+  }
+  
+  p:last-child {
+    margin-bottom: 0;
+  }
+  
+  // 段落間の適切なスペーシング
+  p + p {
+    margin-top: 1.25rem;
+  }
+  
+  // 強調テキスト
+  strong, b {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+  
+  // リンク
+  a {
+    color: var(--accent-primary);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+    
+    &:hover {
+      border-bottom-color: var(--accent-primary);
+    }
+  }
+}
+
+// 箇条書きの代替（必要最小限の場合のみ）
+.minimal-list {
+  margin: 1rem 0;
+  
+  li {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: var(--line-height-normal);
+    color: var(--text-secondary);
+    
+    &::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--accent-primary);
+      font-weight: 600;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    li {
+      padding-left: 1.25rem;
+    }
+  }
+}
+
