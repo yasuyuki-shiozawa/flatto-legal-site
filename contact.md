@@ -204,6 +204,8 @@ keywords: 無料相談,入札相談,公共調達相談,行政書士相談,入札
                 <form name="consultation" method="POST" action="/thanks/" data-netlify="true" data-netlify-honeypot="bot-field" class="consultation-form" id="consultationForm">
                     <!-- Netlify Forms用の隠しフィールド -->
                     <input type="hidden" name="form-name" value="consultation" />
+                    <input type="hidden" name="_to" value="mail@flat-legal.com" />
+                    <input type="hidden" name="_subject" value="【入札マップ】無料相談お申込み" />
                     
                     <!-- ハニーポット（スパム対策） -->
                     <div class="hidden">
@@ -241,6 +243,25 @@ keywords: 無料相談,入札相談,公共調達相談,行政書士相談,入札
                                 maxlength="100"
                                 placeholder="example@email.com"
                             />
+                        </div>
+                    </div>
+
+                    <!-- 自由記述欄 -->
+                    <div class="form-group">
+                        <label for="message" class="form-label">
+                            ご相談内容・ご質問など
+                            <span class="optional-mark">（任意）</span>
+                        </label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            class="form-textarea" 
+                            rows="4"
+                            maxlength="1000"
+                            placeholder="例：小さな会社でも入札に参加できるか知りたい、どのような案件があるか教えてほしい、など"
+                        ></textarea>
+                        <div class="char-count">
+                            <span id="charCount">0</span>/1000文字
                         </div>
                     </div>
 
@@ -681,6 +702,36 @@ keywords: 無料相談,入札相談,公共調達相談,行政書士相談,入札
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
+.form-textarea {
+    padding: 1rem;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 100px;
+    transition: border-color 0.3s ease;
+}
+
+.form-textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.optional-mark {
+    color: #64748b;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.char-count {
+    text-align: right;
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-top: 0.25rem;
+}
+
 .form-submit {
     text-align: center;
 }
@@ -886,4 +937,48 @@ keywords: 無料相談,入札相談,公共調達相談,行政書士相談,入札
     padding: 0 1rem;
 }
 </style>
+
+
+
+<script>
+// 文字数カウント機能
+document.addEventListener('DOMContentLoaded', function() {
+    const messageTextarea = document.getElementById('message');
+    const charCount = document.getElementById('charCount');
+    
+    if (messageTextarea && charCount) {
+        messageTextarea.addEventListener('input', function() {
+            const currentLength = this.value.length;
+            charCount.textContent = currentLength;
+            
+            // 文字数制限に近づいたら色を変更
+            if (currentLength > 900) {
+                charCount.style.color = '#ef4444';
+            } else if (currentLength > 800) {
+                charCount.style.color = '#f59e0b';
+            } else {
+                charCount.style.color = '#64748b';
+            }
+        });
+    }
+    
+    // フォーム送信時の処理
+    const form = document.getElementById('consultationForm');
+    const submitBtn = document.getElementById('submitBtn');
+    
+    if (form && submitBtn) {
+        form.addEventListener('submit', function(e) {
+            // 送信ボタンを無効化（重複送信防止）
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="btn-text">送信中...</span>';
+            
+            // 3秒後に再度有効化（エラー時のため）
+            setTimeout(function() {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<span class="btn-text"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; margin-right: 8px;"><path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="currentColor"/></svg>今すぐ無料相談を申し込む</span>';
+            }, 3000);
+        });
+    }
+});
+</script>
 
