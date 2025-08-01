@@ -1,387 +1,1030 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>無料相談 | 行政書士法人ふらっと法務事務所</title>
-    <meta name="description" content="入札参加3年で6,000万円落札。実際に成功している事務所が、あなたの入札成功をサポートします。無料相談実施中。">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/consultation.css">
-</head>
-<body>
-    <!-- ヘッダー -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="/assets/images/logo.webp" alt="行政書士法人ふらっと法務事務所" class="logo-img">
-                    </a>
-                </div>
-                <nav class="nav">
-                    <ul class="nav-list">
-                        <li><a href="index.html">ホーム</a></li>
-                        <li><a href="about.html">会社案内</a></li>
-                        <li><a href="knowhow.html">入札ノウハウ</a></li>
-                        <li><a href="cases.html">成功事例</a></li>
-                        <li><a href="contact.html">お問い合わせ</a></li>
-                    </ul>
-                </nav>
-            </div>
+---
+layout: default
+title: "無料相談お申込み | 入札参加の可能性を30分で診断"
+description: "入札参加の可能性を30分で無料診断。ZOOMで気軽に相談可能。名前とメールだけで簡単申し込み。相談だけでも大歓迎です。"
+permalink: /consultation/
+---
+
+<style>
+/* 無料相談ページ専用スタイル */
+.consultation-page {
+  background: linear-gradient(135deg, #f5f1eb 0%, #faf8f5 100%);
+  min-height: 100vh;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #1a4d3a 0%, #2d5a3d 100%);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero-headline {
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-headline .highlight {
+  color: #ff6b35;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-subheadline {
+  font-size: 20px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.urgency-message {
+  background: rgba(255, 107, 53, 0.9);
+  padding: 15px 25px;
+  border-radius: 25px;
+  display: inline-block;
+  font-weight: bold;
+  animation: pulse 2s infinite;
+}
+
+.remaining-slots {
+  color: #fff;
+  font-size: 24px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.section {
+  padding: 60px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #1a4d3a;
+}
+
+.section-title .icon {
+  font-size: 36px;
+  margin-right: 10px;
+}
+
+.concerns-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.concern-item {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.concern-item:hover {
+  transform: translateY(-2px);
+}
+
+.check-icon {
+  color: #ff6b35;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.concern-text {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.empathy-message {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  background: #e8f5e8;
+  padding: 30px;
+  border-radius: 15px;
+  border-left: 5px solid #1a4d3a;
+}
+
+.value-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.value-item {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.value-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.value-content h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #1a4d3a;
+}
+
+.value-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+}
+
+.achievement-stats {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 48px;
+  font-weight: bold;
+  color: #ff6b35;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 16px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.success-stories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.story-item {
+  background: #e8f5e8;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  border: 2px solid #1a4d3a;
+}
+
+.story-result {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1a4d3a;
+  margin-bottom: 10px;
+}
+
+.story-company {
+  font-size: 14px;
+  color: #666;
+}
+
+.form-section {
+  background: white;
+  padding: 60px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  margin: 40px 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #1a4d3a;
+}
+
+.form-title .icon {
+  font-size: 32px;
+  margin-right: 10px;
+}
+
+.form-subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+.consultation-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #1a4d3a;
+}
+
+.required {
+  color: #ff6b35;
+}
+
+.form-input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #1a4d3a;
+  box-shadow: 0 0 0 3px rgba(26, 77, 58, 0.1);
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+.cta-button {
+  width: 100%;
+  background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%);
+  color: white;
+  border: none;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(255, 107, 53, 0.3);
+}
+
+.button-text {
+  display: block;
+  font-size: 18px;
+}
+
+.button-subtitle {
+  display: block;
+  font-size: 14px;
+  opacity: 0.9;
+  margin-top: 5px;
+}
+
+.reassurance-section {
+  background: #e8f5e8;
+  padding: 40px;
+  border-radius: 15px;
+  margin: 40px 0;
+}
+
+.reassurance-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1a4d3a;
+}
+
+.reassurance-title .icon {
+  font-size: 28px;
+  margin-right: 10px;
+}
+
+.reassurance-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.reassurance-item {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.reassurance-icon {
+  color: #1a4d3a;
+  font-size: 18px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.phone-cta-section {
+  background: #1a4d3a;
+  color: white;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.phone-cta-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.phone-number {
+  display: inline-block;
+  font-size: 32px;
+  font-weight: bold;
+  color: #ff6b35;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.phone-hours {
+  font-size: 16px;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+.phone-note {
+  font-size: 14px;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+.consultation-flow {
+  margin: 60px 0;
+}
+
+.flow-title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #1a4d3a;
+}
+
+.flow-title .icon {
+  font-size: 32px;
+  margin-right: 10px;
+}
+
+.flow-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.flow-step {
+  text-align: center;
+  position: relative;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: #ff6b35;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 auto 20px;
+}
+
+.step-content h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #1a4d3a;
+}
+
+.step-content p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.faq-section {
+  margin: 60px 0;
+}
+
+.faq-title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #1a4d3a;
+}
+
+.faq-title .icon {
+  font-size: 32px;
+  margin-right: 10px;
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: white;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.faq-question {
+  background: #e8f5e8;
+  padding: 20px;
+  font-weight: bold;
+  color: #1a4d3a;
+  cursor: pointer;
+}
+
+.faq-answer {
+  padding: 20px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.final-cta {
+  background: linear-gradient(135deg, #1a4d3a 0%, #2d5a3d 100%);
+  color: white;
+  padding: 60px 40px;
+  border-radius: 20px;
+  text-align: center;
+  margin: 60px 0;
+}
+
+.final-cta-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.final-cta-text {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.final-note {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: 20px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .hero-headline {
+    font-size: 28px;
+  }
+  
+  .hero-subheadline {
+    font-size: 16px;
+  }
+  
+  .section {
+    padding: 40px 15px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+  }
+  
+  .concerns-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .value-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .achievement-stats {
+    gap: 30px;
+  }
+  
+  .stat-number {
+    font-size: 36px;
+  }
+  
+  .form-section {
+    padding: 40px 20px;
+    margin: 20px 10px;
+  }
+  
+  .flow-steps {
+    grid-template-columns: 1fr;
+  }
+  
+  .phone-number {
+    font-size: 24px;
+  }
+  
+  .final-cta {
+    padding: 40px 20px;
+    margin: 40px 10px;
+  }
+  
+  .final-cta-title {
+    font-size: 24px;
+  }
+}
+</style>
+
+<div class="consultation-page">
+  <!-- ヒーローセクション -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-headline">
+        入札参加の可能性を30分で診断<br>
+        <span class="highlight">今すぐ無料相談</span>をお申込みください
+      </h1>
+      <p class="hero-subheadline">
+        ZOOMで気軽に相談可能 | 相談だけでも大歓迎 | 全国対応
+      </p>
+      <div class="urgency-message">
+        ⏰ 今月の無料相談枠 残り<span class="remaining-slots">8</span>名様<br>
+        24時間以内に日程調整のご連絡をいたします
+      </div>
+    </div>
+  </section>
+
+  <!-- 悩み共感セクション -->
+  <section class="section">
+    <h2 class="section-title">
+      <span class="icon">😰</span> こんなお悩みはありませんか？
+    </h2>
+    
+    <div class="concerns-list">
+      <div class="concern-item">
+        <span class="check-icon">✓</span>
+        <span class="concern-text">入札に参加したいけど、何から始めればいいか分からない</span>
+      </div>
+      <div class="concern-item">
+        <span class="check-icon">✓</span>
+        <span class="concern-text">自社でも本当に受注できるのか不安</span>
+      </div>
+      <div class="concern-item">
+        <span class="check-icon">✓</span>
+        <span class="concern-text">投資した費用に見合う利益が出るか心配</span>
+      </div>
+      <div class="concern-item">
+        <span class="check-icon">✓</span>
+        <span class="concern-text">競合が多くて勝てるか分からない</span>
+      </div>
+      <div class="concern-item">
+        <span class="check-icon">✓</span>
+        <span class="concern-text">手続きが複雑で時間がない</span>
+      </div>
+      <div class="concern-item">
+        <span class="check-icon">✓</span>
+        <span class="concern-text">どの案件に応札すべきか判断できない</span>
+      </div>
+    </div>
+    
+    <p class="empathy-message">
+      そのお悩み、よく分かります。<br>
+      多くの企業様が同じような不安を抱えていらっしゃいます。<br>
+      <strong>まずは無料相談で、あなたの会社の可能性を一緒に確認してみませんか？</strong>
+    </p>
+  </section>
+
+  <!-- 無料相談の価値セクション -->
+  <section class="section">
+    <h2 class="section-title">
+      <span class="icon">🎯</span> 30分の無料相談で分かること
+    </h2>
+    
+    <div class="value-list">
+      <div class="value-item">
+        <div class="value-icon">🎯</div>
+        <div class="value-content">
+          <h3>あなたの会社の入札参加可能性</h3>
+          <p>業種・規模・実績を踏まえた具体的な参加可能案件をご提示</p>
         </div>
-    </header>
-
-    <!-- メインコンテンツ -->
-    <main class="consultation-main">
-        <!-- ファーストビュー -->
-        <section class="hero-section">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1 class="hero-title">
-                            <span class="highlight">入札のプロフェッショナルが</span><br>
-                            あなたの成功への<br>
-                            最短ルートをご案内します
-                        </h1>
-                        <p class="hero-subtitle">
-                            豊富な経験と実践的なノウハウ。<br>
-                            専門家として、あなたの成功を本気でサポートします。
-                        </p>
-                        <div class="hero-cta">
-                            <a href="#consultation-form" class="cta-button primary">
-                                <span class="cta-icon">📞</span>
-                                今すぐ無料相談を申し込む
-                            </a>
-                            <p class="cta-note">相談は完全無料・秘密厳守です</p>
-                        </div>
-                    </div>
-                    <div class="hero-image">
-                        <div class="achievement-card">
-                            <h3>専門性</h3>
-                            <div class="achievement-item">
-                                <span class="number">行政書士</span>
-                                <span class="label">国家資格保有</span>
-                            </div>
-                            <div class="achievement-item">
-                                <span class="number">豊富な経験</span>
-                                <span class="label">入札サポート実績</span>
-                            </div>
-                            <div class="achievement-item">
-                                <span class="number">全国対応</span>
-                                <span class="label">オンライン相談可</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 3つの強み -->
-        <section class="strengths-section">
-            <div class="container">
-                <h2 class="section-title">他の事務所では絶対に真似できない3つの強み</h2>
-                <div class="strengths-grid">
-                    <div class="strength-card">
-                        <div class="strength-icon">🎯</div>
-                        <h3>実践的な専門知識とサポート</h3>
-                        <p>
-                            行政書士として豊富な入札サポート経験を持つ専門家が対応。
-                            入札の難しさも成功のポイントも、すべて熟知しています。
-                        </p>
-                        <div class="strength-detail">
-                            <strong>✓ 行政書士による専門的サポート</strong><br>
-                            <strong>✓ 豊富な入札サポート実績</strong><br>
-                            <strong>✓ 実践的なノウハウの提供</strong>
-                        </div>
-                    </div>
-                    
-                    <div class="strength-card">
-                        <div class="strength-icon">💰</div>
-                        <h3>入札から事業拡大まで一貫サポート</h3>
-                        <p>
-                            落札はゴールではなく、事業成長のスタートです。私たちは資金調達のノウハウも豊富に持っており、
-                            落札後の事業拡大まで一貫してサポートできます。
-                        </p>
-                        <div class="strength-detail">
-                            <strong>✓ 資金調達の実践的ノウハウ</strong><br>
-                            <strong>✓ 落札後の事業拡大支援</strong><br>
-                            <strong>✓ 長期的な成長戦略立案</strong>
-                        </div>
-                    </div>
-                    
-                    <div class="strength-card">
-                        <div class="strength-icon">🤝</div>
-                        <h3>同じ事業者として寄り添う伴走型支援</h3>
-                        <p>
-                            私たちは支援者である前に、あなたと同じ事業者です。だからこそ、あなたの立場や気持ちを本当に理解できます。
-                            一度きりの関係ではなく、長期的なパートナーとして成長を共にします。
-                        </p>
-                        <div class="strength-detail">
-                            <strong>✓ 同じ事業者としての共感</strong><br>
-                            <strong>✓ 長期的なパートナーシップ</strong><br>
-                            <strong>✓ 個別最適化されたサポート</strong>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- 無料相談で分かること -->
-        <section class="consultation-benefits-section">
-            <div class="container">
-                <h2 class="section-title">無料相談でわかること</h2>
-                <div class="benefits-grid">
-                    <div class="benefit-card">
-                        <div class="benefit-icon">📋</div>
-                        <h3>成功する入札の具体的戦略</h3>
-                        <p>豊富な経験から導き出された効果的な戦略を、実際の事例を交えて詳しくお伝えします。</p>
-                    </div>
-                    
-                    <div class="benefit-card">
-                        <div class="benefit-icon">⚡</div>
-                        <h3>最短で成果を出すための実践的手法</h3>
-                        <p>遠回りせずに効率的に入札成功を実現するための、実体験に基づく具体的な方法をお教えします。</p>
-                    </div>
-                    
-                    <div class="benefit-card">
-                        <div class="benefit-icon">💡</div>
-                        <h3>あなたの事業に最適な入札戦略</h3>
-                        <p>業種や規模、強みに応じて、あなたの会社に最も適した入札戦略を一緒に考えます。</p>
-                    </div>
-                    
-                    <div class="benefit-card">
-                        <div class="benefit-icon">💰</div>
-                        <h3>落札後の資金調達・事業拡大方法</h3>
-                        <p>落札はスタート地点。その後の事業拡大や資金調達についても、実体験を基にアドバイスします。</p>
-                    </div>
-                    
-                    <div class="benefit-card">
-                        <div class="benefit-icon">⚠️</div>
-                        <h3>失敗を避けるための注意点</h3>
-                        <p>私たちが実際に経験した失敗や困難から学んだ、入札で避けるべきポイントをお伝えします。</p>
-                    </div>
-                    
-                    <div class="benefit-card">
-                        <div class="benefit-icon">🎯</div>
-                        <h3>長期的な事業成長プラン</h3>
-                        <p>単発の落札ではなく、継続的な成長を実現するための長期戦略を一緒に描きます。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 3つの安心 -->
-        <section class="assurance-section">
-            <div class="container">
-                <h2 class="section-title">3つの安心</h2>
-                <div class="assurance-grid">
-                    <div class="assurance-card">
-                        <div class="assurance-icon">🆓</div>
-                        <h3>完全無料</h3>
-                        <p>相談料は一切いただきません。お気軽にご相談ください。</p>
-                    </div>
-                    
-                    <div class="assurance-card">
-                        <div class="assurance-icon">👨‍💼</div>
-                        <h3>専門家対応</h3>
-                        <p>入札の実践経験豊富な行政書士が直接対応いたします。</p>
-                    </div>
-                    
-                    <div class="assurance-card">
-                        <div class="assurance-icon">🔒</div>
-                        <h3>秘密厳守</h3>
-                        <p>相談内容は完全に秘匿いたします。プライバシーマーク取得事務所です。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- お申し込みフォーム -->
-        <section class="form-section" id="consultation-form">
-            <div class="container">
-                <h2 class="section-title">無料相談お申し込み</h2>
-                <div class="form-container">
-                    <div class="form-intro">
-                        <h3>まずはお気軽にご相談ください</h3>
-                        <p>入札成功への第一歩を、私たちと一緒に踏み出しましょう。</p>
-                    </div>
-                    
-                    <form class="consultation-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                        <input type="hidden" name="_subject" value="無料相談お申し込み">
-                        <input type="hidden" name="_next" value="https://flatto-legal-site.netlify.app/thanks.html">
-                        <input type="hidden" name="_language" value="ja">
-                        <div class="form-group">
-                            <label for="company-name">会社名・事業者名 <span class="required">必須</span></label>
-                            <input type="text" id="company-name" name="company-name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="representative-name">代表者名・ご担当者名 <span class="required">必須</span></label>
-                            <input type="text" id="representative-name" name="representative-name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">メールアドレス <span class="required">必須</span></label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">電話番号 <span class="required">必須</span></label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="business-type">業種 <span class="required">必須</span></label>
-                            <select id="business-type" name="business-type" required>
-                                <option value="">選択してください</option>
-                                <option value="construction">建設業</option>
-                                <option value="it">IT・システム開発</option>
-                                <option value="consulting">コンサルティング</option>
-                                <option value="cleaning">清掃・メンテナンス</option>
-                                <option value="manufacturing">製造業</option>
-                                <option value="logistics">物流・運送</option>
-                                <option value="other">その他</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="consultation-method">相談方法 <span class="required">必須</span></label>
-                            <div class="radio-group">
-                                <label class="radio-label">
-                                    <input type="radio" name="consultation-method" value="phone" required>
-                                    <span class="radio-custom"></span>
-                                    電話相談
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="consultation-method" value="online" required>
-                                    <span class="radio-custom"></span>
-                                    オンライン相談（Zoom等）
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="consultation-method" value="visit" required>
-                                    <span class="radio-custom"></span>
-                                    対面相談（事務所訪問）
-                                </label>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="inquiry-content">相談内容・ご質問</label>
-                            <textarea id="inquiry-content" name="inquiry-content" rows="5" placeholder="入札に関するご質問や、現在の状況などをお聞かせください"></textarea>
-                        </div>
-                        
-                        <div class="form-group checkbox-group">
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="privacy-agreement" required>
-                                <span class="checkbox-custom"></span>
-                                <a href="#" target="_blank">プライバシーポリシー</a>に同意します
-                            </label>
-                        </div>
-                        
-                        <div class="form-submit">
-                            <button type="submit" class="submit-button">
-                                <span class="submit-icon">📧</span>
-                                無料相談を申し込む
-                            </button>
-                            <p class="submit-note">
-                                送信後、24時間以内にご連絡いたします
-                            </p>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <!-- 代表メッセージ -->
-        <section class="message-section">
-            <div class="container">
-                <div class="message-content">
-                    <div class="message-text">
-                        <h2>代表からのメッセージ</h2>
-                        <div class="message-body">
-                            <p>
-                                入札参加は複雑で難しいと感じられるかもしれません。
-                                手続きの複雑さ、競合の多さ、失敗への不安...多くの企業様が同じ悩みを抱えています。
-                            </p>
-                            <p>
-                                しかし、正しい戦略と適切なサポートがあれば、必ず成功への道は開けます。
-                                私たちの豊富な経験とノウハウが、あなたの強力な武器となります。
-                            </p>
-                            <p>
-                                あなたも必ず成功できます。専門家として全力でサポートいたします。
-                                まずは無料相談で、お気軽にお話しください。
-                            </p>
-                        </div>
-                        <div class="message-signature">
-                            <p><strong>行政書士法人ふらっと法務事務所</strong></p>
-                            <p><strong>代表 行政書士 塩澤 康幸</strong></p>
-                        </div>
-                    </div>
-                    <div class="message-image">
-                        <div class="representative-card">
-                            <div class="rep-icon">👨‍💼</div>
-                            <h4>塩澤 康幸</h4>
-                            <p>代表行政書士</p>
-                            <div class="rep-achievements">
-                                <div class="rep-item">行政書士</div>
-                                <div class="rep-item">入札専門家</div>
-                                <div class="rep-item">資金調達支援</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 最終CTA -->
-        <section class="final-cta-section">
-            <div class="container">
-                <div class="final-cta-content">
-                    <h2>入札成功への第一歩を、今すぐ踏み出しませんか？</h2>
-                    <p>実際に成功している事務所だからこそ提供できる、生きたノウハウがあります。</p>
-                    <div class="final-cta-buttons">
-                        <a href="#consultation-form" class="cta-button primary large">
-                            <span class="cta-icon">📞</span>
-                            無料相談を申し込む
-                        </a>
-                        <a href="tel:046-272-3357" class="cta-button secondary large">
-                            <span class="cta-icon">📱</span>
-                            今すぐ電話で相談
-                        </a>
-                    </div>
-                    <p class="final-note">
-                        相談は完全無料・秘密厳守です。お気軽にお問い合わせください。
-                    </p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- フッター -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3>行政書士法人ふらっと法務事務所</h3>
-                    <p>〒242-0006 神奈川県大和市南林間6丁目4番26号 1F</p>
-                    <p>TEL: 046-272-3357 | Email: mail@flat-legal.com</p>
-                </div>
-                <div class="footer-links">
-                    <ul>
-                        <li><a href="index.html">ホーム</a></li>
-                        <li><a href="about.html">会社案内</a></li>
-                        <li><a href="knowhow.html">入札ノウハウ</a></li>
-                        <li><a href="cases.html">成功事例</a></li>
-                        <li><a href="contact.html">お問い合わせ</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 行政書士法人ふらっと法務事務所. All rights reserved.</p>
-            </div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">📊</div>
+        <div class="value-content">
+          <h3>投資対効果の具体的試算</h3>
+          <p>初期費用・ランニングコスト・期待収益を数字で明確化</p>
         </div>
-    </footer>
-</body>
-</html>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">🏆</div>
+        <div class="value-content">
+          <h3>勝てる案件の見つけ方</h3>
+          <p>競合分析と勝率の高い案件選定のコツをお教えします</p>
+        </div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">📋</div>
+        <div class="value-content">
+          <h3>必要な手続きと期間</h3>
+          <p>資格取得から初回受注までの具体的なロードマップ</p>
+        </div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">💰</div>
+        <div class="value-content">
+          <h3>詳細な費用見積もり</h3>
+          <p>サポート内容別の料金体系と支払いスケジュール</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 実績・信頼性セクション -->
+  <section class="section">
+    <div class="achievement-stats">
+      <div class="stat-item">
+        <div class="stat-number">635%</div>
+        <div class="stat-label">平均投資対効果</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">98%</div>
+        <div class="stat-label">資格取得成功率</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">3.2倍</div>
+        <div class="stat-label">平均売上向上率</div>
+      </div>
+    </div>
+    
+    <div class="success-stories">
+      <div class="story-item">
+        <div class="story-result">年間売上 2,400万円増加</div>
+        <div class="story-company">建設業 A社様（従業員15名）</div>
+      </div>
+      <div class="story-item">
+        <div class="story-result">初年度から 1,800万円受注</div>
+        <div class="story-company">IT企業 B社様（従業員8名）</div>
+      </div>
+      <div class="story-item">
+        <div class="story-result">3年で売上 5倍に成長</div>
+        <div class="story-company">製造業 C社様（従業員25名）</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 申し込みフォーム -->
+  <section class="section">
+    <div class="form-section" id="consultationForm">
+      <h2 class="form-title">
+        <span class="icon">📝</span> 30秒で申し込み完了
+      </h2>
+      <p class="form-subtitle">
+        お名前とメールアドレスだけで申し込み完了！<br>
+        詳しいお話は無料相談でお聞きします。
+      </p>
+      
+      <form class="consultation-form" action="https://formspree.io/f/your-form-id" method="POST">
+        <div class="form-group">
+          <label for="name" class="form-label">
+            お名前 <span class="required">*</span>
+          </label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            class="form-input" 
+            placeholder="山田太郎" 
+            required
+          >
+        </div>
+        
+        <div class="form-group">
+          <label for="email" class="form-label">
+            メールアドレス <span class="required">*</span>
+          </label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            class="form-input" 
+            placeholder="example@email.com" 
+            required
+          >
+        </div>
+        
+        <div class="form-group checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" name="privacy" required>
+            <a href="/privacy/" target="_blank">プライバシーポリシー</a>に同意します
+          </label>
+        </div>
+        
+        <button type="submit" class="cta-button primary">
+          <span class="button-text">今すぐ無料相談を申し込む</span>
+          <span class="button-subtitle">（30秒で完了・24時間以内にご連絡）</span>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- 安心要素セクション -->
+  <section class="section">
+    <div class="reassurance-section">
+      <h3 class="reassurance-title">
+        <span class="icon">🛡️</span> 安心してご相談ください
+      </h3>
+      
+      <div class="reassurance-list">
+        <div class="reassurance-item">
+          <span class="reassurance-icon">✅</span>
+          <span class="reassurance-text">相談だけでも大歓迎です</span>
+        </div>
+        <div class="reassurance-item">
+          <span class="reassurance-icon">✅</span>
+          <span class="reassurance-text">無理な営業は一切いたしません</span>
+        </div>
+        <div class="reassurance-item">
+          <span class="reassurance-icon">✅</span>
+          <span class="reassurance-text">秘密厳守をお約束します</span>
+        </div>
+        <div class="reassurance-item">
+          <span class="reassurance-icon">✅</span>
+          <span class="reassurance-text">ZOOMで全国どこからでも参加可能</span>
+        </div>
+        <div class="reassurance-item">
+          <span class="reassurance-icon">✅</span>
+          <span class="reassurance-text">国家資格者（行政書士）が直接対応</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 緊急時電話誘導セクション -->
+  <section class="section">
+    <div class="phone-cta-section">
+      <h3 class="phone-cta-title">
+        お急ぎの方は今すぐお電話を
+      </h3>
+      
+      <a href="tel:046-272-3357" class="phone-number">
+        📞 046-272-3357
+      </a>
+      <p class="phone-hours">平日 9:00-17:00</p>
+      
+      <p class="phone-note">
+        お電話でも同様の無料相談を承っております。<br>
+        「ホームページを見た」とお伝えください。
+      </p>
+    </div>
+  </section>
+
+  <!-- 無料相談の流れセクション -->
+  <section class="section">
+    <div class="consultation-flow">
+      <h3 class="flow-title">
+        <span class="icon">🔄</span> 無料相談から契約までの流れ
+      </h3>
+      
+      <div class="flow-steps">
+        <div class="flow-step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h4>無料相談お申込み</h4>
+            <p>フォーム送信後、24時間以内に日程調整のご連絡</p>
+          </div>
+        </div>
+        
+        <div class="flow-step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h4>第1回無料相談（30分）</h4>
+            <p>ZOOMでお客様の状況をヒアリング・可能性診断</p>
+          </div>
+        </div>
+        
+        <div class="flow-step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h4>第2回打ち合わせ</h4>
+            <p>実際の案件をベースにした具体的な戦略提案</p>
+          </div>
+        </div>
+        
+        <div class="flow-step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h4>お見積書送付</h4>
+            <p>詳細なサポート内容と料金のご提示</p>
+          </div>
+        </div>
+        
+        <div class="flow-step">
+          <div class="step-number">5</div>
+          <div class="step-content">
+            <h4>電子契約締結</h4>
+            <p>ご納得いただけましたら正式契約・サポート開始</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- よくある質問セクション -->
+  <section class="section">
+    <div class="faq-section">
+      <h3 class="faq-title">
+        <span class="icon">❓</span> よくある質問
+      </h3>
+      
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">
+            Q. 本当に無料ですか？後から費用を請求されませんか？
+          </div>
+          <div class="faq-answer">
+            A. 無料相談は完全無料です。相談後に費用が発生することは一切ありません。サポートをご希望の場合のみ、事前にお見積書をお渡しします。
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            Q. 小さな会社でも入札に参加できますか？
+          </div>
+          <div class="faq-answer">
+            A. はい、可能です。従業員数名の企業様でも多数の受注実績があります。むしろ小規模企業向けの案件も豊富にあります。
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            Q. 相談だけで終わっても大丈夫ですか？
+          </div>
+          <div class="faq-answer">
+            A. もちろんです。相談の結果、今は時期ではないと判断されても全く問題ありません。将来的にご検討いただければ十分です。
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            Q. どのくらいの期間で受注できますか？
+          </div>
+          <div class="faq-answer">
+            A. 資格取得から初回受注まで、通常3-6ヶ月程度です。お客様の業種や希望する案件によって異なりますので、詳しくは無料相談でご説明します。
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 最終CTA -->
+  <section class="section">
+    <div class="final-cta">
+      <h3 class="final-cta-title">
+        入札参加で売上アップを実現しませんか？
+      </h3>
+      
+      <p class="final-cta-text">
+        多くの企業様が入札参加により大幅な売上向上を実現されています。<br>
+        あなたの会社の可能性を、まずは無料相談で確認してみてください。
+      </p>
+      
+      <a href="#consultationForm" class="cta-button primary large" onclick="scrollToForm()">
+        <span class="button-text">今すぐ無料相談を申し込む</span>
+        <span class="button-subtitle">残り8名様・24時間以内にご連絡</span>
+      </a>
+      
+      <p class="final-note">
+        ※ 申し込み後のキャンセルも可能です。お気軽にお申し込みください。
+      </p>
+    </div>
+  </section>
+</div>
+
+<script>
+// スムーズスクロール
+function scrollToForm() {
+  document.getElementById('consultationForm').scrollIntoView({
+    behavior: 'smooth'
+  });
+}
+
+// フォーム送信処理
+document.querySelector('.consultation-form').addEventListener('submit', function(e) {
+  // Google Analytics イベント追跡
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'form_submit', {
+      'event_category': 'consultation',
+      'event_label': 'free_consultation_form'
+    });
+  }
+  
+  // 送信ボタンの状態変更
+  const submitButton = this.querySelector('button[type="submit"]');
+  submitButton.innerHTML = '<span class="button-text">送信中...</span>';
+  submitButton.disabled = true;
+});
+
+// スクロール時のアニメーション
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver(function(entries) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, observerOptions);
+
+// アニメーション対象要素の設定
+document.addEventListener('DOMContentLoaded', function() {
+  const animateElements = document.querySelectorAll('.concern-item, .value-item, .story-item, .flow-step, .faq-item');
+  
+  animateElements.forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+  });
+});
+</script>
 

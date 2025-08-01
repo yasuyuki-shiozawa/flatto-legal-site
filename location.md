@@ -164,7 +164,7 @@ body_class: location-page
             <p>事前にご予約いただければ、待ち時間なくご相談いただけます。<br>
             オンライン相談も承っておりますので、遠方の方もお気軽にご相談ください。</p>
             <div class="cta-buttons">
-                <a href="/contact/" class="btn btn-primary">
+                <a href="/consultation/" class="btn btn-primary">
                     <i class="fas fa-calendar-check"></i>
                     相談予約をする
                 </a>

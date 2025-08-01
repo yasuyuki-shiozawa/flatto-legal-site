@@ -168,7 +168,7 @@ body_class: blog-lp-page
         <h2>入札参加で売上アップを実現しませんか？</h2>
         <p>今なら初回相談無料。専門家があなたの疑問にお答えします。</p>
         <div class="cta-buttons">
-            <a href="/contact/" class="primary">
+            <a href="/consultation/" class="primary">
                 <i class="fas fa-comments"></i>
                 無料相談を申し込む
             </a>
