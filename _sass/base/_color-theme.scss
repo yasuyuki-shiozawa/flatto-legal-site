@@ -1,78 +1,78 @@
-// 参考サイト基準の洗練されたカラーテーマ
-// 濃淡を活用した階層的なデザインシステム
+// 読みやすさ重視の改善されたカラーテーマ
+// 高コントラスト・パステルアクセント
 
 :root {
   // ========================================
-  // プライマリカラー（ネイビー系・濃淡5段階）
+  // プライマリカラー（読みやすさ重視）
   // ========================================
-  --primary-darkest: #374151;        // 最も濃い - 重要な見出し（全デバイス対応）
-  --primary-dark: #4b5563;           // 濃い - メインテキスト、ヘッダー
-  --primary-medium: #6b7280;         // 中間 - サブテキスト、ボタン
-  --primary-light: #9ca3af;          // 薄い - 説明文、アイコン
-  --primary-lightest: #d1d5db;       // 最も薄い - 補助テキスト
+  --primary-darkest: #1a1a1a;           // 最も濃い - 重要な見出し
+  --primary-dark: #333333;              // 濃い - メインテキスト
+  --primary-medium: #555555;            // 中間 - サブテキスト
+  --primary-light: #777777;             // 薄い - 説明文
+  --primary-lightest: #999999;          // 最も薄い - 補助テキスト
   
   // ========================================
-  // 背景色（グレー系・濃淡5段階）
+  // 背景色（明るく清潔感のある設計）
   // ========================================
-  --bg-darkest: #f1f5f9;            // 最も濃い - セクション区切り
-  --bg-dark: #f8fafc;               // 濃い - カード背景
-  --bg-medium: #ffffff;             // 中間 - メイン背景
-  --bg-light: #fefefe;              // 薄い - 入力フィールド
-  --bg-lightest: #fdfdfd;           // 最も薄い - ホバー効果
+  --bg-darkest: #f0f2f5;               // 最も濃い - セクション区切り
+  --bg-dark: #f8f9fa;                  // 濃い - カード背景
+  --bg-medium: #ffffff;                // 中間 - メイン背景
+  --bg-light: #fefefe;                 // 薄い - 入力フィールド
+  --bg-lightest: #fdfdfd;              // 最も薄い - ホバー効果
   
   // ========================================
-  // アクセントカラー（オレンジ系・濃淡3段階）
+  // アクセントカラー（パステル系・優しい印象）
   // ========================================
-  --accent-dark: #ea580c;           // 濃い - アクティブ状態
-  --accent-medium: #f59e0b;         // 中間 - CTAボタン、リンク
-  --accent-light: #fef3c7;          // 薄い - ホバー背景
+  --accent-dark: #e67e22;              // 濃い - アクティブ状態
+  --accent-medium: #f39c12;            // 中間 - CTAボタン、リンク
+  --accent-light: #fef5e7;             // 薄い - ホバー背景
   
   // ========================================
-  // セカンダリカラー（グリーン系・濃淡3段階）
+  // セカンダリカラー（パステルグリーン）
   // ========================================
-  --secondary-dark: #059669;        // 濃い - 成功状態
-  --secondary-medium: #10b981;      // 中間 - 成功メッセージ
-  --secondary-light: #d1fae5;       // 薄い - 成功背景
+  --secondary-dark: #27ae60;           // 濃い - 成功状態
+  --secondary-medium: #2ecc71;         // 中間 - 成功メッセージ
+  --secondary-light: #e8f8f5;          // 薄い - 成功背景
   
   // ========================================
-  // テキストカラー（階層的）
+  // テキストカラー（高コントラスト）
   // ========================================
-  --text-primary: var(--primary-dark);      // メインテキスト
-  --text-secondary: var(--primary-medium);  // サブテキスト
-  --text-tertiary: var(--primary-light);    // 補助テキスト
-  --text-muted: var(--primary-lightest);    // 薄いテキスト
-  --text-inverse: #ffffff;                  // 白文字
+  --text-primary: #333333;             // メインテキスト（高コントラスト）
+  --text-secondary: #555555;           // サブテキスト
+  --text-tertiary: #777777;            // 補助テキスト
+  --text-muted: #999999;               // 薄いテキスト
+  --text-inverse: #ffffff;             // 白文字
   
   // ========================================
-  // ボーダーカラー（濃淡3段階）
+  // ボーダーカラー（優しい印象）
   // ========================================
-  --border-light: #e2e8f0;          // 薄いボーダー
-  --border-medium: #cbd5e1;         // 中間ボーダー
-  --border-dark: var(--primary-light); // 濃いボーダー
+  --border-light: #e9ecef;             // 薄いボーダー
+  --border-medium: #dee2e6;            // 中間ボーダー
+  --border-dark: #ced4da;              // 濃いボーダー
   
   // ========================================
-  // 状態カラー
+  // 状態カラー（パステル調整）
   // ========================================
-  --color-success: var(--secondary-medium);
-  --color-warning: #f59e0b;
-  --color-error: #ef4444;
-  --color-info: #3b82f6;
+  --color-success: #2ecc71;
+  --color-warning: #f39c12;
+  --color-error: #e74c3c;
+  --color-info: #3498db;
   
   // ========================================
-  // シャドウ（統一された濃淡）
+  // シャドウ（優しい印象）
   // ========================================
-  --shadow-xs: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
-  --shadow-sm: 0 1px 3px 0 rgba(15, 23, 42, 0.1), 0 1px 2px -1px rgba(15, 23, 42, 0.1);
-  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.1), 0 2px 4px -2px rgba(15, 23, 42, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.1), 0 4px 6px -4px rgba(15, 23, 42, 0.1);
-  --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.1);
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
   
   // カード用シャドウ
-  --shadow-card: 0 2px 8px rgba(15, 23, 42, 0.08);
-  --shadow-card-hover: 0 8px 16px rgba(15, 23, 42, 0.12);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-card-hover: 0 8px 16px rgba(0, 0, 0, 0.12);
   
   // ========================================
-  // グラデーション（洗練された濃淡）
+  // グラデーション（パステル調整）
   // ========================================
   --gradient-primary: linear-gradient(135deg, var(--primary-medium) 0%, var(--primary-dark) 100%);
   --gradient-secondary: linear-gradient(135deg, var(--accent-medium) 0%, var(--accent-dark) 100%);
