@@ -13,7 +13,7 @@ $wide: 1280px;
     display: grid;
     grid-template-columns: 1fr;
     gap: 0;
-    padding: 0 1rem;
+    padding: 0 0.5rem; // モバイルでのパディングを縮小
     
     @media (min-width: $tablet) {
       padding: 0 1.5rem;
@@ -72,12 +72,12 @@ $wide: 1280px;
   @media (max-width: $desktop - 1px) {
     grid-column: 1;
     width: 100%;
-    padding: 1.5rem;
+    padding: 1rem 0.75rem; // 左右のパディングを縮小
     margin-bottom: 2rem;
   }
   
   @media (max-width: $mobile) {
-    padding: 1rem;
+    padding: 0.75rem 0.5rem; // さらに縮小してテキスト幅を拡張
     margin-bottom: 1.5rem;
   }
 }
@@ -181,12 +181,12 @@ $wide: 1280px;
 // テキストの可読性向上
 @media (max-width: $tablet) {
   .main-content {
-    // 最適な行長さ
+    // 最適な行長さ（幅を拡張）
     p,
     li {
-      max-width: 65ch;
-      margin-left: auto;
-      margin-right: auto;
+      max-width: 100%; // 制限を解除してより広く使用
+      margin-left: 0;
+      margin-right: 0;
     }
     
     // 見出しのサイズ調整
