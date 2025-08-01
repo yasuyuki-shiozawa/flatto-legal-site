@@ -7,68 +7,24 @@
     <!-- Enhanced SEO Keywords -->
     <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}全省庁統一資格,入札参加資格,行政書士,入札制度,政府調達,地方自治体,競争入札,随意契約,プロポーザル,入札申請,資格申請代行,公共調達,入札書類作成,入札戦略,中小企業入札{% endif %}">
     
-    <!-- Analytics and Tracking -->
-    <!-- {% include analytics.html %} -->
-    
     <!-- Jekyll SEO Tag -->
     {% seo %}
     
-    <!-- カスタムSEOタグ -->
-    <!-- {% include custom-seo.html %} -->
-    
     <!-- Additional Custom Meta Tags -->
     <meta name="author" content="行政書士法人ふらっと法務事務所">
-    <meta name="publisher" content="行政書士法人ふらっと法務事務所">
-    
-    <!-- Geo Location -->
-    <meta name="geo.region" content="JP-14">
-    <meta name="geo.placename" content="神奈川県大和市">
-    <meta name="geo.position" content="35.4844;139.4578">
-    <meta name="ICBM" content="35.4844, 139.4578">
-    
-    <!-- Additional SEO -->
     <meta name="robots" content="index, follow">
-    <meta name="google-site-verification" content="pm0dB5OZdlVLMG0oY-Ot2QBGvDZ2pNd3TA_MPUJF3ig" />
-    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <meta name="googlebot" content="index, follow">
     
-    <!-- Hreflang tags for Japanese market -->
-    <link rel="alternate" hreflang="ja-JP" href="{{ page.url | absolute_url }}" />
-    <link rel="alternate" hreflang="x-default" href="{{ page.url | absolute_url }}" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     
-    <!-- SEO -->
-    {% seo %}
-    
-    <!-- Enhanced SEO and Structured Data -->
-    {% include seo-enhancements.html %}
-    
-    <!-- FAQ Structured Data -->
-    {% include faq-structured-data.html %}
-    
-    <!-- Performance Optimization -->
-    {% include performance-optimization.html %}
-    
-    <!-- Critical CSS（インライン） -->
-    <style>
-    {% include critical.css %}
-    </style>
-    
-    <!-- メインCSS（SCSSからコンパイル） -->
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <!-- 重要なリソースのプリロード -->
-    <link rel="preload" href="/assets/images/logo.webp" as="image">
-    <link rel="preload" href="/assets/images/hero-character.webp" as="image">    
     <!-- Google Analytics 4 (GA4) -->
     {% if site.google_analytics %}
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -78,135 +34,27 @@
     </script>
     {% endif %}
 </head>
-<body data-page-url="{{ page.url }}" {% if page.body_class %}class="{{ page.body_class }}"{% endif %}>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+
+<body class="{% if page.layout %}{{ page.layout }}{% endif %} {% if page.url %}{{ page.url | replace: '/', ' ' | strip }}{% endif %}">
     
+    <!-- Header -->
     {% include header.html %}
     
-    <!-- キャンペーンバナー -->
-    {% if page.url != '/thanks/' %}
-    {% include campaign-banner.html %}
-    {% endif %}
+    <!-- Main Content -->
+    <main>
+        {{ content }}
+    </main>
     
-    <!-- パンくずリスト -->
-    {% include breadcrumb.html %}
+    <!-- Footer -->
+    {% include footer.html %}
     
-    <main class="main-container">
-        <div class="content-wrapper three-column">
-            {% unless page.hide_left_sidebar %}
-            <aside class="left-sidebar">
-                {% include left-sidebar.html %}
-            </aside>
-            {% endunless %}
-            
-            <div class="main-content">
-                {{ content }}
-            </div>
-            
-            {% unless page.hide_right_sidebar %}
-            <aside class="right-sidebar">
-                {% include sidebar.html %}
-            </aside>
-            {% endunless %}
-        </div>
-    </main>    {% include footer.html %}
-    
-    <!-- Enhanced Analytics and Event Tracking -->
-    {% include enhanced-analytics.html %}
-</body>   
-    <!-- モバイルボトムナビゲーション -->
+    <!-- Mobile Bottom Navigation -->
     {% include mobile-bottom-navigation.html %}
     
-    <!-- モバイルサイドバー -->
+    <!-- Mobile Sidebar -->
     {% include mobile-sidebar.html %}
     
-    <!-- モバイル用固定CTA（ボトムナビゲーション実装により無効化） -->
-    {% comment %}
-    {% include mobile-fixed-cta.html %}
-    {% endcomment %}
-    
-    <!-- フローティングCTA -->
-    <div class="floating-cta">
-        <a href="tel:046-272-3357" class="floating-cta-button">
-            <i class="fas fa-phone"></i>
-        </a>
-        <div class="floating-cta-tooltip">
-            お電話でのご相談はこちら
-        </div>
-    </div>
-    
-    <!-- スティッキーCTAバー -->
-    <div class="sticky-cta-bar" id="stickyCTA">
-        <div class="sticky-cta-content">
-            <div class="sticky-cta-text">
-                <h4>お問い合わせ</h4>
-                <p>入札に関するご質問はお気軽にどうぞ</p>
-            </div>
-            <div class="sticky-cta-actions">
-                <a href="/contact/" class="cta-button cta-primary">
-                    <i class="fas fa-envelope"></i>
-                    メールで問い合わせ
-                </a>
-                <a href="tel:046-272-3357" class="cta-button cta-secondary">
-                    <i class="fas fa-phone"></i>
-                    電話で問い合わせ
-                </a>
-            </div>
-        </div>
-    </div>
-    
-    <!-- 条件付きスクリプト読み込み -->
-    {% if page.use_toc %}
-    <!-- 目次機能 -->
-    <script src="{{ '/assets/js/optimized/toc.js' | relative_url }}?v=20250613_01" defer></script>
-    {% endif %}
-    
-    {% if page.use_search %}
-    <!-- Lunr.js検索ライブラリ -->
-    <script src="https://unpkg.com/lunr/lunr.min.js" defer></script>
-    <!-- 検索機能 -->
-    <script src="{{ '/assets/js/optimized/search.js' | relative_url }}?v=20250613_01" defer></script>
-    {% endif %}
-    
-    <!-- 検索オーバーレイ -->
-    {% include search-overlay.html %}
-    
-    <!-- Google Tag Manager (noscript) -->
-    {% if site.google_tag_manager %}
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    {% endif %}
-    
-    <!-- 画像遅延読み込みスクリプト -->
-    <script>
-        // 画像の遅延読み込み
-        document.addEventListener('DOMContentLoaded', function() {
-            const images = document.querySelectorAll('img:not([loading])');
-            images.forEach(img => {
-                // ヒーロー画像やロゴなど重要な画像は除外
-                if (!img.classList.contains('hero-img') && 
-                    !img.classList.contains('logo-img') && 
-                    !img.src.includes('logo.webp')) {
-                    img.setAttribute('loading', 'lazy');
-                }
-            });
-        });
-    </script>
-    
-    <!-- フローティング電話ボタン -->
-    <div class="floating-phone-cta">
-        <a href="tel:046-272-3357" class="phone-btn" title="電話で相談する">
-            <i class="fas fa-phone"></i>
-            <span class="phone-text">電話相談</span>
-        </a>
-    </div>
-
-    <!-- 統合JavaScript（遅延読み込み） -->
-    <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+    <!-- JavaScript -->
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>
-
-
