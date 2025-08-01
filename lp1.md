@@ -463,7 +463,9 @@ permalink: /lp1/
         <h2 style="text-align: center; font-size: 42px; font-weight: 700; margin-bottom: 20px; color: #2d3748;">今すぐ始めませんか？</h2>
         <p style="text-align: center; font-size: 20px; color: #64748b; margin-bottom: 60px;">申請費用無料のこの機会をお見逃しなく。<br>あなたの事業拡大を全力でサポートいたします。</p>
         
-        <form style="background: #f8fafc; padding: 50px; border-radius: 20px; border: 2px solid #e2e8f0;">
+        <form name="lp1-contact" method="POST" data-netlify="true" action="/thanks/" style="background: #f8fafc; padding: 50px; border-radius: 20px; border: 2px solid #e2e8f0;">
+            <input type="hidden" name="form-name" value="lp1-contact">
+            <input type="hidden" name="subject" value="【入札マップ】LP1からの無料相談お申込み">
             <h3 style="font-size: 28px; font-weight: 600; margin-bottom: 30px; color: #2d3748; text-align: center;">無料相談申し込み</h3>
             
             <div style="margin-bottom: 25px;">
@@ -541,29 +543,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             behavior: 'smooth'
         });
     });
-});
-
-// フォーム送信処理
-document.querySelector('form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // フォームデータを取得
-    const formData = new FormData(this);
-    const company = formData.get('company') || '';
-    const name = formData.get('name') || '';
-    const email = formData.get('email') || '';
-    const phone = formData.get('phone') || '';
-    const industry = formData.get('industry') || '';
-    const consultationType = formData.get('consultation_type') || '';
-    const message = formData.get('message') || '';
-    
-    // メール本文を作成
-    const subject = 'LP1からの無料相談申し込み';
-    const body = `お名前：${name}%0D%0A会社名：${company}%0D%0A電話番号：${phone}%0D%0Aメールアドレス：${email}%0D%0A業種：${industry}%0D%0A相談内容：${consultationType}%0D%0A%0D%0Aご質問・ご相談内容：%0D%0A${message}`;
-    
-    // メールクライアントを開く
-    // 問い合わせフォームへのリダイレクト処理
-    window.location.href = '/contact/';
 });
 </script>
 
