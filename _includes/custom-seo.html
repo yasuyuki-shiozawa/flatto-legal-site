@@ -1,0 +1,74 @@
+<!-- カスタムSEOタグ -->
+
+<!-- Open Graph Tags -->
+<meta property="og:site_name" content="入札マップ">
+<meta property="og:locale" content="ja_JP">
+
+{% if page.image %}
+<meta property="og:image" content="{{ page.image | absolute_url }}">
+{% elsif site.defaults[0].values.image %}
+<meta property="og:image" content="{{ site.defaults[0].values.image | absolute_url }}">
+{% else %}
+<meta property="og:image" content="{{ '/assets/images/og-image.webp' | absolute_url }}">
+{% endif %}
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/webp">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:site" content="@{{ site.twitter.username }}">
+<meta name="twitter:creator" content="@{{ site.twitter.username }}">
+
+{% if page.title %}
+<meta name="twitter:title" content="{{ page.title }}">
+{% else %}
+<meta name="twitter:title" content="{{ site.title }}">
+{% endif %}
+
+{% if page.description %}
+<meta name="twitter:description" content="{{ page.description | truncate: 160 }}">
+{% elsif page.excerpt %}
+<meta name="twitter:description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
+{% else %}
+<meta name="twitter:description" content="{{ site.description | truncate: 160 }}">
+{% endif %}
+
+{% if page.image %}
+<meta name="twitter:image" content="{{ page.image | absolute_url }}">
+{% elsif site.defaults[0].values.image %}
+<meta name="twitter:image" content="{{ site.defaults[0].values.image | absolute_url }}">
+{% else %}
+<meta name="twitter:image" content="{{ '/assets/images/og-image.webp' | absolute_url }}">
+{% endif %}
+
+<!-- Additional Meta Tags -->
+<meta name="theme-color" content="#2563eb">
+<meta name="msapplication-TileColor" content="#2563eb">
+
+<!-- Favicon and Icons -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- Additional SEO Meta Tags -->
+<meta name="format-detection" content="telephone=no">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="入札マップ">
+
+<!-- Preconnect for Performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+
+<!-- DNS Prefetch -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//fonts.gstatic.com">
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+<link rel="dns-prefetch" href="//www.googletagmanager.com">
+

@@ -24,13 +24,32 @@ twitter:
   username: flatto_legal
   card: summary_large_image
 
+# Open Graph / Social Media設定
+social:
+  name: "入札マップ"
+  links:
+    - "https://twitter.com/flatto_legal"
+
 # デフォルト設定
 defaults:
+  - scope:
+      path: ""
+    values:
+      image: "/assets/images/og-image.webp"
   - scope:
       path: "_posts"
       type: "posts"
     values:
       image: "/assets/images/blog/default-blog-image.jpg"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
 
 # ビルド設定
 markdown: kramdown
@@ -48,42 +67,6 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
-
-# 除外ファイル
-exclude:
-  - .sass-cache/
-  - .jekyll-cache/
-  - gemfiles/
-  - Gemfile
-  - Gemfile.lock
-  - node_modules/
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-  - README.md
-  - LICENSE
-  - CHANGELOG.md
-  - "*.tmp"
-  - "*.bak"
-
-# 含めるファイル
-include:
-  - search-index.json
-  - .htaccess
-  - _redirects
-
-# デフォルト設定
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "default"
-  - scope:
-      path: ""
-    values:
-      layout: "default"
 
 # Sass設定
 sass:
