@@ -208,13 +208,35 @@ input, textarea, select {
 
 @media (max-width: 768px) {
   body {
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-base); // モバイルでも基本サイズを維持（16px）
+    line-height: var(--line-height-relaxed); // 行間を広げて可読性向上
   }
   
-  h1 { font-size: var(--font-size-2xl); }
-  h2 { font-size: var(--font-size-xl); }
-  h3 { font-size: var(--font-size-lg); }
-  h4 { font-size: var(--font-size-base); }
-  h5, h6 { font-size: var(--font-size-sm); }
+  h1 { 
+    font-size: var(--font-size-2xl); 
+    line-height: var(--line-height-tight);
+  }
+  h2 { 
+    font-size: var(--font-size-xl); 
+    line-height: var(--line-height-tight);
+  }
+  h3 { 
+    font-size: var(--font-size-lg); 
+    line-height: var(--line-height-snug);
+  }
+  h4 { 
+    font-size: var(--font-size-base); 
+    line-height: var(--line-height-snug);
+  }
+  h5, h6 { 
+    font-size: var(--font-size-sm); 
+    line-height: var(--line-height-snug);
+  }
+  
+  p {
+    font-size: var(--font-size-base); // 本文は16pxを維持
+    line-height: var(--line-height-relaxed); // 1.7で読みやすく
+    margin-bottom: var(--space-5); // 段落間隔を広げる
+  }
 }
 
