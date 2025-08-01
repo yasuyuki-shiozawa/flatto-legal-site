@@ -1,0 +1,313 @@
+// ========================================
+// アイコン削除・テキストベースデザイン
+// 参考サイト基準の洗練されたスタイル
+// ========================================
+
+// ========================================
+// 絵文字・アイコンの完全削除
+// ========================================
+
+// 絵文字を含む要素を非表示
+.emoji-icon,
+.icon-emoji {
+  display: none !important;
+}
+
+// FontAwesome アイコンを最小限に
+.fas, .far, .fab, .fal {
+  display: none !important;
+  
+  // 必要最小限のアイコンのみ表示
+  &.fa-arrow-right,
+  &.fa-external-link-alt,
+  &.fa-phone,
+  &.fa-envelope {
+    display: inline !important;
+    font-size: 0.875rem;
+    opacity: 0.7;
+  }
+}
+
+// ========================================
+// 見出しのテキストベースデザイン
+// ========================================
+
+// セクション見出し
+.section-title {
+  position: relative;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+  margin-bottom: var(--space-6);
+  padding-left: var(--space-4);
+  
+  // 左側のアクセントライン
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+  }
+  
+  // アイコンを削除してテキストのみに
+  i, svg {
+    display: none !important;
+  }
+}
+
+// カード見出し
+.content-card-title,
+.value-card h3 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+  line-height: var(--line-height-snug);
+  margin-bottom: var(--space-3);
+  
+  // アイコンを削除
+  i, svg {
+    display: none !important;
+  }
+}
+
+// ========================================
+// ボタンのテキストベースデザイン
+// ========================================
+
+.btn, .submit-btn, .content-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-inverse);
+  background: var(--gradient-primary);
+  border: none;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: var(--transition-base);
+  box-shadow: var(--shadow-sm);
+  
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+    color: var(--text-inverse);
+  }
+  
+  &:focus {
+    outline: 2px solid var(--accent-medium);
+    outline-offset: 2px;
+  }
+  
+  // アイコンを矢印記号に置換
+  i.fa-arrow-right {
+    display: none !important;
+  }
+  
+  &::after {
+    content: '→';
+    font-size: var(--font-size-lg);
+    opacity: 0.8;
+  }
+}
+
+// アクセントボタン
+.btn-accent {
+  background: var(--gradient-secondary);
+  
+  &:hover {
+    background: var(--accent-dark);
+  }
+}
+
+// ========================================
+// カードのテキストベースデザイン
+// ========================================
+
+.content-card, .value-card {
+  background: var(--bg-dark);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-card);
+  transition: var(--transition-base);
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card-hover);
+  }
+  
+  // アイコン部分を削除
+  .content-card-image,
+  .value-icon {
+    display: none !important;
+  }
+  
+  // カテゴリーラベル（アイコンの代替）
+  &::before {
+    content: attr(data-category);
+    display: inline-block;
+    padding: var(--space-1) var(--space-3);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    color: var(--accent-dark);
+    background: var(--accent-light);
+    border-radius: var(--radius-full);
+    margin-bottom: var(--space-4);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+  }
+}
+
+// ========================================
+// リストのテキストベースデザイン
+// ========================================
+
+// 特徴リスト
+.features-list,
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  
+  li {
+    position: relative;
+    padding-left: var(--space-6);
+    margin-bottom: var(--space-4);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-relaxed);
+    
+    // チェックマーク風の装飾
+    &::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: var(--space-5);
+      height: var(--space-5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-bold);
+      color: var(--text-inverse);
+      background: var(--secondary-medium);
+      border-radius: 50%;
+    }
+    
+    // 絵文字アイコンを削除
+    i, svg {
+      display: none !important;
+    }
+  }
+}
+
+// ========================================
+// 統計・数値のテキストベースデザイン
+// ========================================
+
+.stats-grid,
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-6);
+  margin: var(--space-8) 0;
+  
+  .stat-item {
+    text-align: center;
+    padding: var(--space-6);
+    background: var(--bg-dark);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-light);
+    
+    .stat-number {
+      display: block;
+      font-size: var(--font-size-3xl);
+      font-weight: var(--font-weight-bold);
+      color: var(--accent-medium);
+      line-height: 1;
+      margin-bottom: var(--space-2);
+    }
+    
+    .stat-label {
+      font-size: var(--font-size-sm);
+      color: var(--text-secondary);
+      font-weight: var(--font-weight-medium);
+    }
+    
+    // アイコンを削除
+    i, svg {
+      display: none !important;
+    }
+  }
+}
+
+// ========================================
+// フォームのテキストベースデザイン
+// ========================================
+
+.form-group {
+  margin-bottom: var(--space-5);
+  
+  .form-label {
+    display: block;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+    margin-bottom: var(--space-2);
+    
+    // アイコンを削除
+    i, svg {
+      display: none !important;
+    }
+  }
+  
+  .form-input,
+  .form-textarea {
+    width: 100%;
+    padding: var(--space-3);
+    font-size: var(--font-size-base);
+    color: var(--text-primary);
+    background: var(--bg-light);
+    border: 1px solid var(--border-medium);
+    border-radius: var(--radius-md);
+    transition: var(--transition-fast);
+    
+    &:focus {
+      outline: none;
+      border-color: var(--accent-medium);
+      box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+    }
+  }
+}
+
+// ========================================
+// レスポンシブ調整
+// ========================================
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: var(--font-size-xl);
+    padding-left: var(--space-3);
+    
+    &::before {
+      width: 2px;
+    }
+  }
+  
+  .btn, .submit-btn, .content-card-link {
+    padding: var(--space-2-5) var(--space-4);
+    font-size: var(--font-size-sm);
+  }
+  
+  .stats-grid,
+  .metrics-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+}
+

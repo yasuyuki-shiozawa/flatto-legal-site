@@ -1,234 +1,152 @@
-// タイポグラフィシステム
-// 統一された文字スタイルの定義
+// ========================================
+// 統一タイポグラフィシステム
+// 参考サイト基準の洗練されたデザイン
+// ========================================
 
 // ベースタイポグラフィ
 body {
-  font-family: var(--font-family-sans);
+  font-family: var(--font-family-base);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-normal);
   line-height: var(--line-height-normal);
-  color: var(--color-text-primary);
+  color: var(--text-primary);
   letter-spacing: var(--letter-spacing-normal);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-// 見出しスタイル
+// ========================================
+// 見出しシステム（階層的・統一的）
+// ========================================
+
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: var(--space-4);
-  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-medium); // 太文字を控えめに
   line-height: var(--line-height-tight);
-  color: var(--color-text-primary);
+  color: var(--text-primary);
+  margin: 0;
+  letter-spacing: var(--letter-spacing-tight);
 }
 
 h1 {
-  font-size: var(--font-size-4xl);
-  letter-spacing: var(--letter-spacing-tighter);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold); // H1のみ太文字
   margin-bottom: var(--space-6);
-  
-  @media (max-width: 768px) {
-    font-size: var(--font-size-3xl);
-  }
 }
 
 h2 {
-  font-size: var(--font-size-3xl);
-  letter-spacing: var(--letter-spacing-tight);
+  font-size: var(--font-size-2xl);
   margin-bottom: var(--space-5);
-  
-  @media (max-width: 768px) {
-    font-size: var(--font-size-2xl);
-  }
 }
 
 h3 {
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-xl);
   margin-bottom: var(--space-4);
-  
-  @media (max-width: 768px) {
-    font-size: var(--font-size-xl);
-  }
 }
 
 h4 {
-  font-size: var(--font-size-xl);
-  margin-bottom: var(--space-3);
-}
-
-h5 {
   font-size: var(--font-size-lg);
   margin-bottom: var(--space-3);
 }
 
-h6 {
+h5 {
   font-size: var(--font-size-base);
   margin-bottom: var(--space-2);
 }
 
-// 段落
+h6 {
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--space-2);
+}
+
+// ========================================
+// 本文・段落システム
+// ========================================
+
 p {
-  margin-top: 0;
-  margin-bottom: var(--space-4);
-  line-height: var(--line-height-relaxed);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal); // 通常の太さに統一
+  line-height: var(--line-height-normal);
+  color: var(--text-primary);
+  margin: 0 0 var(--space-4) 0;
   
   &:last-child {
     margin-bottom: 0;
   }
 }
 
-// リード文
-.lead {
+// 大きめの段落（リード文など）
+.text-lead {
   font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-light);
   line-height: var(--line-height-relaxed);
-  color: var(--color-text-secondary);
+  color: var(--text-secondary);
   margin-bottom: var(--space-6);
 }
 
-// 小さいテキスト
-small,
-.small {
+// 小さめの段落（注釈など）
+.text-small {
   font-size: var(--font-size-sm);
-  line-height: var(--line-height-normal);
+  color: var(--text-tertiary);
 }
 
-// 強調
-strong,
-b {
-  font-weight: var(--font-weight-bold);
-}
+// ========================================
+// リンクシステム
+// ========================================
 
-em,
-i {
-  font-style: italic;
-}
-
-// コード
-code {
-  font-family: var(--font-family-mono);
-  font-size: 0.875em;
-  background-color: var(--color-bg-tertiary);
-  padding: 0.125em 0.25em;
-  border-radius: var(--radius-sm);
-  color: var(--color-error);
-}
-
-pre {
-  font-family: var(--font-family-mono);
-  font-size: var(--font-size-sm);
-  background-color: var(--color-gray-900);
-  color: var(--color-gray-100);
-  padding: var(--space-4);
-  border-radius: var(--radius-md);
-  overflow-x: auto;
-  margin-bottom: var(--space-4);
-  
-  code {
-    background-color: transparent;
-    padding: 0;
-    color: inherit;
-  }
-}
-
-// 引用
-blockquote {
-  margin: var(--space-6) 0;
-  padding-left: var(--space-4);
-  border-left: 4px solid var(--color-primary-500);
-  font-style: italic;
-  color: var(--color-text-secondary);
-  
-  p {
-    margin-bottom: var(--space-2);
-  }
-  
-  cite {
-    display: block;
-    font-size: var(--font-size-sm);
-    font-style: normal;
-    color: var(--color-text-muted);
-    margin-top: var(--space-2);
-    
-    &:before {
-      content: "— ";
-    }
-  }
-}
-
-// リスト
-ul,
-ol {
-  margin-top: 0;
-  margin-bottom: var(--space-4);
-  padding-left: var(--space-6);
-  
-  li {
-    margin-bottom: var(--space-2);
-    line-height: var(--line-height-relaxed);
-    
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-  
-  ul,
-  ol {
-    margin-top: var(--space-2);
-    margin-bottom: 0;
-  }
-}
-
-dl {
-  margin-top: 0;
-  margin-bottom: var(--space-4);
-  
-  dt {
-    font-weight: var(--font-weight-bold);
-    margin-bottom: var(--space-1);
-  }
-  
-  dd {
-    margin-left: 0;
-    margin-bottom: var(--space-3);
-    
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-}
-
-// リンク
 a {
-  color: var(--color-primary-600);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  transition: color var(--transition-fast);
+  color: var(--primary-medium);
+  text-decoration: none;
+  font-weight: var(--font-weight-normal); // 太文字を避ける
+  transition: var(--transition-fast);
   
   &:hover {
-    color: var(--color-primary-700);
-    text-decoration-thickness: 2px;
+    color: var(--primary-dark);
+    text-decoration: underline;
   }
   
   &:focus {
-    outline: 2px solid var(--color-primary-500);
+    outline: 2px solid var(--primary-light);
     outline-offset: 2px;
-    border-radius: var(--radius-sm);
   }
+}
+
+// ========================================
+// リストシステム
+// ========================================
+
+ul, ol {
+  margin: 0 0 var(--space-4) 0;
+  padding-left: var(--space-6);
   
-  &:visited {
-    color: var(--color-primary-800);
+  li {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--line-height-normal);
+    margin-bottom: var(--space-2);
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
-// 区切り線
-hr {
-  margin: var(--space-8) 0;
-  border: 0;
-  border-top: 1px solid var(--color-border);
+// ========================================
+// 強調テキスト（最小限の使用）
+// ========================================
+
+strong, b {
+  font-weight: var(--font-weight-medium); // 過度に太くしない
+  color: var(--text-primary);
 }
 
-// テキストユーティリティクラス
+em, i {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+// ========================================
+// ユーティリティクラス
+// ========================================
+
+// フォントサイズ
 .text-xs { font-size: var(--font-size-xs); }
 .text-sm { font-size: var(--font-size-sm); }
 .text-base { font-size: var(--font-size-base); }
@@ -238,29 +156,65 @@ hr {
 .text-3xl { font-size: var(--font-size-3xl); }
 .text-4xl { font-size: var(--font-size-4xl); }
 
+// フォントウェイト
 .font-light { font-weight: var(--font-weight-light); }
 .font-normal { font-weight: var(--font-weight-normal); }
 .font-medium { font-weight: var(--font-weight-medium); }
 .font-bold { font-weight: var(--font-weight-bold); }
 
-.text-left { text-align: left; }
-.text-center { text-align: center; }
-.text-right { text-align: right; }
-.text-justify { text-align: justify; }
-
-.text-primary { color: var(--color-text-primary); }
-.text-secondary { color: var(--color-text-secondary); }
-.text-muted { color: var(--color-text-muted); }
-.text-white { color: var(--color-white); }
-
+// 行間
 .leading-tight { line-height: var(--line-height-tight); }
 .leading-snug { line-height: var(--line-height-snug); }
 .leading-normal { line-height: var(--line-height-normal); }
 .leading-relaxed { line-height: var(--line-height-relaxed); }
 .leading-loose { line-height: var(--line-height-loose); }
 
-.tracking-tighter { letter-spacing: var(--letter-spacing-tighter); }
-.tracking-tight { letter-spacing: var(--letter-spacing-tight); }
-.tracking-normal { letter-spacing: var(--letter-spacing-normal); }
-.tracking-wide { letter-spacing: var(--letter-spacing-wide); }
-.tracking-wider { letter-spacing: var(--letter-spacing-wider); }
+// テキストカラー
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-tertiary { color: var(--text-tertiary); }
+.text-muted { color: var(--text-muted); }
+
+// ========================================
+// 特殊要素のリセット
+// ========================================
+
+// 太文字の乱用を防ぐ
+.no-bold,
+.content-area strong,
+.content-area b {
+  font-weight: var(--font-weight-normal) !important;
+}
+
+// 統一されたボタンテキスト
+.btn {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-snug);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+// 統一されたフォームテキスト
+input, textarea, select {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+// ========================================
+// レスポンシブ調整
+// ========================================
+
+@media (max-width: 768px) {
+  body {
+    font-size: var(--font-size-sm);
+  }
+  
+  h1 { font-size: var(--font-size-2xl); }
+  h2 { font-size: var(--font-size-xl); }
+  h3 { font-size: var(--font-size-lg); }
+  h4 { font-size: var(--font-size-base); }
+  h5, h6 { font-size: var(--font-size-sm); }
+}
+

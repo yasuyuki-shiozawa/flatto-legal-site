@@ -8,6 +8,7 @@
 // ベース（変数とタイポグラフィ）
 @import "base/variables";
 @import "base/color-theme";
+@import "base/typography"; // 新しい統一タイポグラフィ
 @import "base/typography-simplified";
 @import "base/typography-enhanced";
 @import "base/grid";
@@ -54,6 +55,7 @@
 @import "components/character-placement";
 @import "components/cta-sections";
 @import "components/cta-character";
+@import "components/icon-replacement"; // アイコン削除・テキストベースデザイン
 
 // ページ固有スタイル
 @import "pages/home";

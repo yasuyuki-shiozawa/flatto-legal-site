@@ -27,7 +27,7 @@ keywords: 無料相談,入札相談,公共調達相談,行政書士相談,入札
                 
                 <!-- 緊急性演出 -->
                 <div class="urgency-banner">
-                    <span class="urgency-text">⏰ 今月の無料相談枠 残り8名様</span>
+                    <span class="urgency-text">今月の無料相談枠 残り8名様</span>
                 </div>
             </div>
         </div>
