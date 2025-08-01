@@ -1,43 +1,48 @@
 ---
 layout: default
-title: 動画で学ぶ入札・官公需
-description: フラット法務事務所の入札・官公需に関する動画コンテンツをご覧いただけます。実践的なノウハウから基礎知識まで、わかりやすく解説しています。
-keywords: 入札, 官公需, 動画, 解説, ノウハウ, 実践, 基礎知識
+title: 動画で学ぶ入札・官公需 | 行政書士法人ふらっと法務事務所
+description: 入札・官公需に関する実践的なノウハウを動画でわかりやすく解説。初心者向けから上級者まで、全省庁統一資格や役務案件について詳しく学べます。全国Zoom対応で無料相談も実施中。
+keywords: 入札, 官公需, 動画, 解説, ノウハウ, 実践, 基礎知識, 全省庁統一資格, 役務案件, YouTube, 初心者向け
 permalink: /videos/
 ---
 
-<div class="videos-page">
+<!-- 最新動画セクション -->
+<section class="hero-section">
   <div class="container">
-    <!-- ページヘッダー -->
-    <div class="page-header">
-      <h1 class="page-title">
-        <i class="fas fa-play-circle"></i>
-        動画で学ぶ入札・官公需
-      </h1>
-      <p class="page-description">
-        入札・官公需の実践的なノウハウから基礎知識まで、動画でわかりやすく解説しています。<br>
-        実際の事例を交えながら、中小企業の皆様が官公需に参入するためのポイントをお伝えします。
-      </p>
-    </div>
-
-    <!-- 最新動画セクション -->
-    <section class="latest-video-section">
-      <h2 class="section-title">最新動画</h2>
-      <div class="video-container featured-video">
-        <div class="video-wrapper">
-          <!-- 動画URLは後で更新予定 -->
-          <iframe 
-            src="https://www.youtube.com/embed/PLACEHOLDER_VIDEO_ID" 
-            title="最新の入札・官公需解説動画" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen
-            loading="lazy">
-          </iframe>
-        </div>
-        <div class="video-info">
-          <h3 class="video-title">動画タイトル（後で更新）</h3>
-          <p class="video-description">
+    <div class="row align-items-center">
+      <div class="col-lg-8 mx-auto text-center">
+        <h1 class="display-4 fw-bold text-primary mb-4">
+          <i class="fas fa-play-circle me-3"></i>入札ノウハウ動画
+        </h1>
+        <p class="lead mb-5">
+          入札・官公需に関する実践的なノウハウを動画でわかりやすく解説。<br>
+          初心者から上級者まで、段階的に学べるコンテンツをお届けします。
+        </p>
+        
+        <!-- 注目動画 -->
+        <div class="featured-video mb-5">
+          <div class="video-container">
+            <iframe 
+              src="https://www.youtube.com/embed/V12UxUXUbXM" 
+              title="入札ってなに？やさしく解説するゆるっと入札講座！" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen
+              loading="lazy">
+            </iframe>
+          </div>
+          <div class="video-info mt-3">
+            <h3 class="h4 fw-bold">入札ってなに？やさしく解説するゆるっと入札講座！</h3>
+            <p class="text-muted">入札は建設工事だけじゃない！役務案件と全省庁統一資格について初心者向けに解説</p>
+            <div class="video-meta d-flex justify-content-between align-items-center mt-2">
+              <span class="badge bg-primary">初心者向け</span>
+              <span class="text-muted small">
+                <i class="fas fa-calendar me-1"></i>2025年1月
+                <i class="fas fa-clock ms-3 me-1"></i>約16分
+              </span>
+            </div>
+          </div>
+        </div>eo-description">
             動画の説明文がここに入ります。内容の概要や学べるポイントなどを記載します。
           </p>
           <div class="video-meta">
@@ -53,28 +58,30 @@ permalink: /videos/
       <h2 class="section-title">動画一覧</h2>
       <div class="video-grid">
         <!-- 動画カード1 -->
-        <div class="video-card">
-          <div class="video-thumbnail">
-            <div class="video-wrapper">
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
               <iframe 
-                src="https://www.youtube.com/embed/PLACEHOLDER_VIDEO_ID" 
-                title="入札・官公需解説動画" 
+                src="https://www.youtube.com/embed/V12UxUXUbXM" 
+                title="入札ってなに？やさしく解説するゆるっと入札講座！" 
                 frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen
                 loading="lazy">
               </iframe>
             </div>
-          </div>
-          <div class="video-card-content">
-            <h3 class="video-card-title">動画タイトル</h3>
-            <p class="video-card-description">動画の概要説明</p>
-            <div class="video-card-meta">
-              <span class="video-date">2025年1月</span>
-              <span class="video-duration">10分</span>
+            <div class="video-card-body">
+              <h5 class="video-title">入札ってなに？やさしく解説するゆるっと入札講座！</h5>
+              <p class="video-description">
+                入札は建設工事だけじゃない！コンサルティング、調査、物品納入などの「役務」案件について解説。全省庁統一資格の取得方法と新規事業者でも参入できるポイントをお伝えします。
+              </p>
+              <div class="video-meta">
+                <span class="badge bg-primary me-2">初心者向け</span>
+                <span class="text-muted small">2025年1月 • 約16分</span>
+              </div>
             </div>
           </div>
-        </div>
+        </div>v>
 
         <!-- 今後の動画用のプレースホルダー -->
         <div class="video-card coming-soon">
