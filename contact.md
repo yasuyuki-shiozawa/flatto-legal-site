@@ -36,7 +36,9 @@ keywords: 無料相談,入札相談,公共調達相談,行政書士相談,入札
     <!-- 価値提示セクション -->
     <section class="value-proposition-section">
         <div class="container">
-            <h2 class="section-title">30分の無料相談で分かる5つのこと</h2>
+            <div class="section-header-main">
+                <h2>30分の無料相談で分かる5つのこと</h2>
+            </div>
             <div class="value-grid">
                 <div class="value-card">
                     <div class="value-icon">
@@ -97,7 +99,9 @@ keywords: 無料相談,入札相談,公共調達相談,行政書士相談,入札
     <!-- 実績セクション -->
     <section class="results-section">
         <div class="container">
-            <h2 class="section-title">選ばれる理由</h2>
+            <div class="section-header-main">
+                <h2>選ばれる理由</h2>
+            </div>
             <div class="results-grid">
                 <div class="result-item">
                     <div class="result-number">635%</div>
@@ -122,7 +126,9 @@ keywords: 無料相談,入札相談,公共調達相談,行政書士相談,入札
     <!-- 不安解消セクション -->
     <section class="reassurance-section">
         <div class="container">
-            <h2 class="section-title">こんなお悩みありませんか？</h2>
+            <div class="section-header-main">
+                <h2>こんなお悩みありませんか？</h2>
+            </div>
             <div class="worries-grid">
                 <div class="worry-item">
                     <div class="worry-icon">
@@ -195,7 +201,9 @@ keywords: 無料相談,入札相談,公共調達相談,行政書士相談,入札
         <div class="container">
             <div class="form-wrapper">
                 <div class="form-header">
-                    <h2>無料相談お申込み</h2>
+                    <div class="section-header-main">
+                        <h2>無料相談お申込み</h2>
+                    </div>
                     <p class="form-subtitle">
                         <strong>30秒で申し込み完了</strong> | 24時間以内に日程調整のご連絡をいたします
                     </p>
