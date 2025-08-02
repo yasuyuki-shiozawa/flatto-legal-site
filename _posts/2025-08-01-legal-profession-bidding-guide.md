@@ -15,19 +15,11 @@ description: "士業向け入札案件の実態を徹底解説。弁護士の顧
 
 実は、**士業向けの入札案件は想像以上に豊富で、適切な戦略があれば中小事務所でも十分に参入可能**なのです。
 
+{% include video-cta-blog.html %}
+
 今回は、弁護士・司法書士・税理士・行政書士・社労士等の士業向け入札案件について、具体的な事例から参加条件、成功戦略まで、同業者の皆様に役立つ実践的な情報をお届けします。
 
-<!-- 動画で学ぶ -->
-<div class="video-cta-blog">
-  <div class="video-cta-header">
-    <i class="fab fa-youtube text-danger"></i>
-    <span class="video-cta-label">関連動画で学ぶ</span>
-  </div>
-  <div class="video-cta-body">
-    <h4 class="video-cta-title">入札ってなに？やさしく解説するゆるっと入札講座！</h4>
-    <p class="video-cta-description">
-      この記事の内容をより詳しく動画で解説しています。士業の方にも関連する入札の基本から役務案件まで、わかりやすく説明します。
-    </p>
+{% include cta-banner-free-application.html %}
     <div class="video-cta-meta">
       <span class="video-duration">
         <i class="fas fa-clock me-1"></i>16分

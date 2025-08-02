@@ -15,19 +15,11 @@ description: 個人事業主が官公需案件に参加するための完全ガ�
 
 しかし実際には、**個人事業主でも参加可能な官公需案件は数多く存在**しており、適切な準備と戦略があれば十分に成功することができます。
 
+{% include video-cta-blog.html %}
+
 今回は、個人事業主の官公需参入について、参加条件から成功事例、実践的なノウハウまで詳しく解説いたします。
 
-<!-- 動画で学ぶ -->
-<div class="video-cta-blog">
-  <div class="video-cta-header">
-    <i class="fab fa-youtube text-danger"></i>
-    <span class="video-cta-label">関連動画で学ぶ</span>
-  </div>
-  <div class="video-cta-body">
-    <h4 class="video-cta-title">入札ってなに？やさしく解説するゆるっと入札講座！</h4>
-    <p class="video-cta-description">
-      この記事の内容をより詳しく動画で解説しています。入札の基本から役務案件まで、初心者にもわかりやすく説明します。
-    </p>
+{% include cta-banner-free-application.html %}
     <div class="video-cta-meta">
       <span class="video-duration">
         <i class="fas fa-clock me-1"></i>16分

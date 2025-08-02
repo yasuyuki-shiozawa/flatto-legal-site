@@ -12,7 +12,11 @@ image: /assets/images/service-consulting.webp
 
 中小企業の経営者にとって、限られた予算をどこに投資するかは死活問題です。特に「広告費に投資して新規顧客を獲得するか」「官公庁入札案件に参加して安定収益を確保するか」という選択は、多くの経営者が直面する重要な判断です。
 
+{% include video-cta-blog.html %}
+
 本記事では、実際の統計データと論理的分析に基づいて、両者の投資効果を徹底的に比較検証します。
+
+{% include cta-banner-free-application.html %}
 
 ## 1. 投資効果の基本的な考え方
 
