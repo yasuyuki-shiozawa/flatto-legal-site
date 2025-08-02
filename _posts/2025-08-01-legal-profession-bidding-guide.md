@@ -18,7 +18,136 @@ description: "士業向け入札案件の実態を徹底解説。弁護士の顧
 今回は、弁護士・司法書士・税理士・行政書士・社労士等の士業向け入札案件について、具体的な事例から参加条件、成功戦略まで、同業者の皆様に役立つ実践的な情報をお届けします。
 
 <!-- 動画で学ぶ -->
-{% include video-cta-blog.html %}
+<div class="video-cta-blog">
+  <div class="video-cta-header">
+    <i class="fab fa-youtube text-danger"></i>
+    <span class="video-cta-label">関連動画で学ぶ</span>
+  </div>
+  <div class="video-cta-body">
+    <h4 class="video-cta-title">入札ってなに？やさしく解説するゆるっと入札講座！</h4>
+    <p class="video-cta-description">
+      この記事の内容をより詳しく動画で解説しています。士業の方にも関連する入札の基本から役務案件まで、わかりやすく説明します。
+    </p>
+    <div class="video-cta-meta">
+      <span class="video-duration">
+        <i class="fas fa-clock me-1"></i>16分
+      </span>
+      <span class="video-level">
+        <i class="fas fa-user-graduate me-1"></i>初心者向け
+      </span>
+    </div>
+  </div>
+  <div class="video-cta-action">
+    <a href="/videos/" class="btn btn-outline-primary btn-sm">
+      <i class="fas fa-play me-1"></i>動画を見る
+    </a>
+  </div>
+</div>
+
+<style>
+.video-cta-blog {
+  background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+  border: 1px solid #fecaca;
+  border-left: 4px solid #ef4444;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin: 2rem 0;
+  transition: all 0.3s ease;
+}
+
+.video-cta-blog:hover {
+  border-color: #f87171;
+  box-shadow: 0 4px 8px rgba(239, 68, 68, 0.1);
+  transform: translateY(-1px);
+}
+
+.video-cta-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.video-cta-header .fab.fa-youtube {
+  font-size: 1.25rem;
+}
+
+.video-cta-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.video-cta-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.video-cta-description {
+  font-size: 0.9375rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.video-cta-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.video-duration,
+.video-level {
+  font-size: 0.8125rem;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+}
+
+.video-cta-action .btn {
+  border-color: #3b82f6;
+  color: #3b82f6;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.video-cta-action .btn:hover {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .video-cta-blog {
+    padding: 1rem;
+    margin: 1.5rem 0;
+  }
+  
+  .video-cta-title {
+    font-size: 1rem;
+  }
+  
+  .video-cta-description {
+    font-size: 0.875rem;
+  }
+  
+  .video-cta-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .video-cta-action .btn {
+    width: 100%;
+  }
+}
+</style>
 
 ## 士業向け入札案件の全体像
 

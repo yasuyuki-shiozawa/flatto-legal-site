@@ -8,7 +8,116 @@ keywords: 入札 やり方,公共調達 参加方法,入札参加資格 取得,�
 # 入札の基本から実践まで - 完全ガイド
 
 <!-- 控えめな動画導線 -->
-{% include video-cta-subtle.html %}
+<div class="video-cta-subtle">
+  <div class="video-cta-content">
+    <div class="video-icon">
+      <i class="fab fa-youtube"></i>
+    </div>
+    <div class="video-info">
+      <span class="video-label">関連動画</span>
+      <span class="video-title">入札の基本をやさしく解説</span>
+      <span class="video-duration">16分</span>
+    </div>
+    <a href="/videos/" class="video-link" aria-label="動画を見る">
+      <i class="fas fa-chevron-right"></i>
+    </a>
+  </div>
+</div>
+
+<style>
+.video-cta-subtle {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin: 1.5rem 0;
+  transition: all 0.3s ease;
+  max-width: 400px;
+}
+
+.video-cta-subtle:hover {
+  background: #e9ecef;
+  border-color: #dee2e6;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.video-cta-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.video-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  background: #ff0000;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1rem;
+}
+
+.video-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.video-label {
+  font-size: 0.75rem;
+  color: #6c757d;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.video-title {
+  font-size: 0.875rem;
+  color: #2c3e50;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.video-duration {
+  font-size: 0.75rem;
+  color: #6c757d;
+}
+
+.video-link {
+  flex-shrink: 0;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.3s ease;
+}
+
+.video-link:hover {
+  color: #0056b3;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .video-cta-subtle {
+    margin: 1rem 0;
+    padding: 0.625rem 0.875rem;
+  }
+  
+  .video-cta-content {
+    gap: 0.625rem;
+  }
+  
+  .video-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 0.875rem;
+  }
+}
+</style>
 
 <div class="quick-links">
   <h2>よく読まれている記事</h2>
