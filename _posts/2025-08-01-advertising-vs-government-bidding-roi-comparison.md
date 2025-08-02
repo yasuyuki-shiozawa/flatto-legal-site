@@ -283,6 +283,33 @@ image: /assets/images/service-consulting.webp
 
 限られた予算を最大限に活用するためには、まず入札案件への参加から始め、実績と収益を積み上げながら段階的に広告投資を拡大していく戦略が最も合理的です。
 
+<!-- さらに詳しく動画で学ぶ -->
+<div class="video-cta-blog end-of-article">
+  <div class="video-cta-header">
+    <i class="fab fa-youtube text-danger"></i>
+    <span class="video-cta-label">さらに詳しく動画で学ぶ</span>
+  </div>
+  <div class="video-cta-body">
+    <h4 class="video-cta-title">入札ってなに？やさしく解説するゆるっと入札講座！</h4>
+    <p class="video-cta-description">
+      この記事で解説した入札の基本について、動画でより詳しく解説しています。投資効果の高い入札案件への参加方法を具体的に学べます。
+    </p>
+    <div class="video-cta-meta">
+      <span class="video-duration">
+        <i class="fas fa-clock me-1"></i>16分
+      </span>
+      <span class="video-level">
+        <i class="fas fa-user-graduate me-1"></i>初心者向け
+      </span>
+    </div>
+  </div>
+  <div class="video-cta-action">
+    <a href="{{ '/videos/' | relative_url }}" class="btn btn-outline-primary btn-sm">
+      <i class="fas fa-play me-1"></i>動画を見る
+    </a>
+  </div>
+</div>
+
 ---
 
 **入札参加資格の取得や戦略的な投資配分についてのご相談は、当事務所までお気軽にお問い合わせください。実際のデータに基づいた最適な投資戦略をご提案いたします。**

@@ -7,6 +7,9 @@ keywords: 入札 やり方,公共調達 参加方法,入札参加資格 取得,�
 
 # 入札の基本から実践まで - 完全ガイド
 
+<!-- 控えめな動画導線 -->
+{% include video-cta-subtle.html %}
+
 <div class="quick-links">
   <h2>よく読まれている記事</h2>
   <div class="quick-links-grid">
