@@ -41,8 +41,27 @@
     {% include header.html %}
     
     <!-- Main Content -->
-    <main>
-        {{ content }}
+    <main class="main-container">
+        <div class="content-wrapper three-column">
+            <!-- Left Sidebar -->
+            <aside class="left-sidebar">
+                <div class="left-sidebar-content">
+                    {% include left-sidebar.html %}
+                </div>
+            </aside>
+            
+            <!-- Main Content -->
+            <div class="main-content">
+                {{ content }}
+            </div>
+            
+            <!-- Right Sidebar -->
+            <aside class="right-sidebar">
+                <div class="right-sidebar-content">
+                    {% include sidebar.html %}
+                </div>
+            </aside>
+        </div>
     </main>
     
     <!-- Footer -->
