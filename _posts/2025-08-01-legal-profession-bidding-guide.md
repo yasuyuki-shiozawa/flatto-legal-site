@@ -15,133 +15,29 @@ description: "士業向け入札案件の実態を徹底解説。弁護士の顧
 
 実は、**士業向けの入札案件は想像以上に豊富で、適切な戦略があれば中小事務所でも十分に参入可能**なのです。
 
-{% include video-cta-blog.html %}
-
 今回は、弁護士・司法書士・税理士・行政書士・社労士等の士業向け入札案件について、具体的な事例から参加条件、成功戦略まで、同業者の皆様に役立つ実践的な情報をお届けします。
 
-{% include cta-banner-free-application.html %}
-    <div class="video-cta-meta">
-      <span class="video-duration">
-        <i class="fas fa-clock me-1"></i>16分
-      </span>
-      <span class="video-level">
-        <i class="fas fa-user-graduate me-1"></i>初心者向け
-      </span>
-    </div>
-  </div>
-  <div class="video-cta-action">
-    <a href="/videos/" class="btn btn-outline-primary btn-sm">
-      <i class="fas fa-play me-1"></i>動画を見る
-    </a>
-  </div>
-</div>
+## 1. 士業向け入札案件の全体像
 
-<style>
-.video-cta-blog {
-  background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
-  border: 1px solid #fecaca;
-  border-left: 4px solid #ef4444;
-  border-radius: 8px;
-  padding: 1.25rem;
-  margin: 2rem 0;
-  transition: all 0.3s ease;
-}
+### 主要な案件カテゴリー
 
-.video-cta-blog:hover {
-  border-color: #f87171;
-  box-shadow: 0 4px 8px rgba(239, 68, 68, 0.1);
-  transform: translateY(-1px);
-}
+士業向けの入札案件は、大きく以下の4つのカテゴリーに分類されます。
 
-.video-cta-header {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.75rem;
-}
+{% include video-cta-small.html %}
 
-.video-cta-header .fab.fa-youtube {
-  font-size: 1.25rem;
-}
+**1. 法務・顧問業務**
+- 自治体法務顧問契約
+- 債権回収業務
+- 法的文書作成・チェック
+- 議会運営支援
 
-.video-cta-label {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: #374151;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
+**2. 登記・手続き業務**
+- 不動産登記業務
+- 商業登記業務
+- 成年後見関連業務
+- 各種許認可申請代行
 
-.video-cta-title {
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: #1f2937;
-  margin-bottom: 0.5rem;
-  line-height: 1.4;
-}
-
-.video-cta-description {
-  font-size: 0.9375rem;
-  color: #6b7280;
-  margin-bottom: 1rem;
-  line-height: 1.5;
-}
-
-.video-cta-meta {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.video-duration,
-.video-level {
-  font-size: 0.8125rem;
-  color: #6b7280;
-  display: flex;
-  align-items: center;
-}
-
-.video-cta-action .btn {
-  border-color: #3b82f6;
-  color: #3b82f6;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.video-cta-action .btn:hover {
-  background-color: #3b82f6;
-  border-color: #3b82f6;
-  color: white;
-  transform: translateY(-1px);
-}
-
-/* レスポンシブ対応 */
-@media (max-width: 768px) {
-  .video-cta-blog {
-    padding: 1rem;
-    margin: 1.5rem 0;
-  }
-  
-  .video-cta-title {
-    font-size: 1rem;
-  }
-  
-  .video-cta-description {
-    font-size: 0.875rem;
-  }
-  
-  .video-cta-meta {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-  .video-cta-action .btn {
-    width: 100%;
-  }
-}
-</style>
-
-## 士業向け入札案件の全体像
+**3. 税務・会計業務**
 
 ### 市場規模と成長性
 
@@ -510,4 +406,6 @@ description: "士業向け入札案件の実態を徹底解説。弁護士の顧
 **入札参加や戦略策定でお困りの際は、お気軽にご相談ください。**
 
 士業の先生方の入札参加を全力でサポートいたします。
+
+{% include cta-banner-small.html %}
 

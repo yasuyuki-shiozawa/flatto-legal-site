@@ -15,137 +15,23 @@ description: 個人事業主が官公需案件に参加するための完全ガ�
 
 しかし実際には、**個人事業主でも参加可能な官公需案件は数多く存在**しており、適切な準備と戦略があれば十分に成功することができます。
 
-{% include video-cta-blog.html %}
-
 今回は、個人事業主の官公需参入について、参加条件から成功事例、実践的なノウハウまで詳しく解説いたします。
 
-{% include cta-banner-free-application.html %}
-    <div class="video-cta-meta">
-      <span class="video-duration">
-        <i class="fas fa-clock me-1"></i>16分
-      </span>
-      <span class="video-level">
-        <i class="fas fa-user-graduate me-1"></i>初心者向け
-      </span>
-    </div>
-  </div>
-  <div class="video-cta-action">
-    <a href="/videos/" class="btn btn-outline-primary btn-sm">
-      <i class="fas fa-play me-1"></i>動画を見る
-    </a>
-  </div>
-</div>
+## 1. 個人事業主が参加可能な官公需案件の実態
 
-<style>
-.video-cta-blog {
-  background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
-  border: 1px solid #fecaca;
-  border-left: 4px solid #ef4444;
-  border-radius: 8px;
-  padding: 1.25rem;
-  margin: 2rem 0;
-  transition: all 0.3s ease;
-}
+### 参加可能な主要分野
 
-.video-cta-blog:hover {
-  border-color: #f87171;
-  box-shadow: 0 4px 8px rgba(239, 68, 68, 0.1);
-  transform: translateY(-1px);
-}
+個人事業主でも参加しやすい官公需案件は、以下のような分野に集中しています。
 
-.video-cta-header {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.75rem;
-}
+{% include video-cta-small.html %}
 
-.video-cta-header .fab.fa-youtube {
-  font-size: 1.25rem;
-}
+**1. 専門サービス業**
+- Webデザイン・制作
+- 翻訳・通訳業務
+- 写真撮影・動画制作
+- コンサルティング業務
 
-.video-cta-label {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: #374151;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.video-cta-title {
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: #1f2937;
-  margin-bottom: 0.5rem;
-  line-height: 1.4;
-}
-
-.video-cta-description {
-  font-size: 0.9375rem;
-  color: #6b7280;
-  margin-bottom: 1rem;
-  line-height: 1.5;
-}
-
-.video-cta-meta {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.video-duration,
-.video-level {
-  font-size: 0.8125rem;
-  color: #6b7280;
-  display: flex;
-  align-items: center;
-}
-
-.video-cta-action .btn {
-  border-color: #3b82f6;
-  color: #3b82f6;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.video-cta-action .btn:hover {
-  background-color: #3b82f6;
-  border-color: #3b82f6;
-  color: white;
-  transform: translateY(-1px);
-}
-
-/* レスポンシブ対応 */
-@media (max-width: 768px) {
-  .video-cta-blog {
-    padding: 1rem;
-    margin: 1.5rem 0;
-  }
-  
-  .video-cta-title {
-    font-size: 1rem;
-  }
-  
-  .video-cta-description {
-    font-size: 0.875rem;
-  }
-  
-  .video-cta-meta {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-  .video-cta-action .btn {
-    width: 100%;
-  }
-}
-</style>
-
-## 個人事業主でも参加できる官公需の実態
-
-### 官公需における個人事業主の位置づけ
-
-官公需法（中小企業者に関する国等の契約の方針）では、**個人事業主も中小企業者として位置づけられており**、受注機会の増大が図られています。
+**2. 軽作業・メンテナンス**
 
 **中小企業者の定義（個人事業主）:**
 - 製造業等：従業員20人以下
@@ -615,5 +501,5 @@ description: 個人事業主が官公需案件に参加するための完全ガ�
 
 入札参加資格の取得から案件選定、提案書作成まで、個人事業主の官公需参入をトータルでサポートいたします。まずはお気軽にご相談ください。
 
-[お問い合わせはこちら](/contact/)
+{% include cta-banner-small.html %}
 

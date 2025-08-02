@@ -15,17 +15,15 @@ description: "官公需適格組合の制度概要、設立要件・手続き、
 
 この制度を活用すれば、中小企業が力を合わせて大型の官公需案件を受注することが可能になります。特に近年注目されているのが、**ドローン関連の組合**です。
 
-{% include video-cta-blog.html %}
-
 今回は、官公需適格組合の制度概要から設立手続き、実際のドローン組合事例まで、実践的な情報をお届けします。
-
-{% include cta-banner-free-application.html %}
 
 ## 官公需適格組合とは？制度の基本を理解しよう
 
 ### 制度の概要
 
 **官公需適格組合**とは、中小企業等協同組合法等に基づいて設立された組合のうち、官公需の受注に関して一定の要件を満たすものとして、中小企業庁が証明する制度です。
+
+{% include video-cta-small.html %}
 
 **参考**: [中小企業庁「官公需適格組合制度について」](https://www.chusho.meti.go.jp/keiei/torihiki/kankouju/kankojutekikaku.pdf)
 
@@ -456,4 +454,6 @@ description: "官公需適格組合の制度概要、設立要件・手続き、
 - [敵を知るべし！入札の参入障壁とは？中小企業が知っておくべき7つの壁と突破法]({% post_url 2025-08-01-bidding-entry-barriers-analysis %})
 
 **お問い合わせ**: 官公需適格組合の設立や入札戦略についてご相談がございましたら、お気軽にお問い合わせください。
+
+{% include cta-banner-small.html %}
 

@@ -12,11 +12,7 @@ image: /assets/images/service-consulting.webp
 
 中小企業の経営者にとって、限られた予算をどこに投資するかは死活問題です。特に「広告費に投資して新規顧客を獲得するか」「官公庁入札案件に参加して安定収益を確保するか」という選択は、多くの経営者が直面する重要な判断です。
 
-{% include video-cta-blog.html %}
-
 本記事では、実際の統計データと論理的分析に基づいて、両者の投資効果を徹底的に比較検証します。
-
-{% include cta-banner-free-application.html %}
 
 ## 1. 投資効果の基本的な考え方
 
@@ -27,6 +23,8 @@ image: /assets/images/service-consulting.webp
 1. **ROI（投資対効果）**: 投資額に対してどれだけのリターンが得られるか
 2. **リスク**: 投資が失敗する可能性とその影響度
 3. **持続性**: 一度の投資でどれだけ長期間効果が続くか
+
+{% include video-cta-small.html %}
 
 これらの観点から、広告費投下と官公庁入札案件への参加を比較していきます。
 
@@ -317,4 +315,6 @@ image: /assets/images/service-consulting.webp
 ---
 
 **入札参加資格の取得や戦略的な投資配分についてのご相談は、当事務所までお気軽にお問い合わせください。実際のデータに基づいた最適な投資戦略をご提案いたします。**
+
+{% include cta-banner-small.html %}
 
