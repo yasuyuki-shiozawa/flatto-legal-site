@@ -92,25 +92,27 @@ body_class: home-page
       </div>
       <div class="col-lg-6">
         <div class="video-hero-thumbnail">
-          <div class="video-thumbnail-container">
-            <div class="video-thumbnail">
-              <img src="https://img.youtube.com/vi/V12UxUXUbXM/maxresdefault.jpg" 
-                   alt="入札ってなに？やさしく解説するゆるっと入札講座！" 
-                   class="img-fluid">
-              <div class="play-button-overlay">
-                <div class="play-button">
-                  <i class="fas fa-play"></i>
+          <a href="/videos/" class="video-thumbnail-link">
+            <div class="video-thumbnail-container">
+              <div class="video-thumbnail">
+                <img src="https://img.youtube.com/vi/V12UxUXUbXM/maxresdefault.jpg" 
+                     alt="入札ってなに？やさしく解説するゆるっと入札講座！" 
+                     class="img-fluid">
+                <div class="play-button-overlay">
+                  <div class="play-button">
+                    <i class="fas fa-play"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="video-info-overlay">
+                <h4 class="video-overlay-title">入札ってなに？やさしく解説するゆるっと入札講座！</h4>
+                <div class="video-overlay-meta">
+                  <span class="duration">16:00</span>
+                  <span class="views">ふらっと法務事務所</span>
                 </div>
               </div>
             </div>
-            <div class="video-info-overlay">
-              <h4 class="video-overlay-title">入札ってなに？やさしく解説するゆるっと入札講座！</h4>
-              <div class="video-overlay-meta">
-                <span class="duration">16:00</span>
-                <span class="views">ふらっと法務事務所</span>
-              </div>
-            </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -205,6 +207,17 @@ body_class: home-page
   color: #6c757d;
   font-size: 0.875rem;
   margin: 0;
+}
+
+.video-thumbnail-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.video-thumbnail-link:hover {
+  text-decoration: none;
+  color: inherit;
 }
 
 .video-thumbnail-container {
