@@ -42,7 +42,8 @@ permalink: /videos/
               </span>
             </div>
           </div>
-        </div>eo-description">
+        </div>
+        <p class="video-description">
             動画の説明文がここに入ります。内容の概要や学べるポイントなどを記載します。
           </p>
           <div class="video-meta">
