@@ -1,0 +1,332 @@
+<!-- ブログ記事専用のアナリティクス設定 -->
+<script>
+// ブログページ専用のイベントトラッキング
+(function() {
+    'use strict';
+    
+    // ページタイプの判定
+    const isPostPage = document.body.classList.contains('post-page') || 
+                      window.location.pathname.match(/\/\d{4}\/\d{2}\/\d{2}\//);
+    const isBlogListPage = window.location.pathname === '/blog/' || 
+                          window.location.pathname === '/blog/index.html';
+    
+    if (!isPostPage && !isBlogListPage) return;
+    
+    // 共通変数
+    let readingStartTime = Date.now();
+    let maxScrollDepth = 0;
+    let hasReachedEnd = false;
+    let engagementTracked = false;
+    
+    // ページ読み込み完了時の初期化
+    document.addEventListener('DOMContentLoaded', function() {
+        if (isPostPage) {
+            initBlogPostTracking();
+        } else if (isBlogListPage) {
+            initBlogListTracking();
+        }
+        
+        initCommonBlogTracking();
+    });
+    
+    // ブログ記事ページ専用のトラッキング
+    function initBlogPostTracking() {
+        // 記事閲覧開始
+        gtag('event', 'blog_post_view_start', {
+            event_category: 'blog_engagement',
+            event_label: document.title,
+            article_title: document.title,
+            page_location: window.location.href
+        });
+        
+        // 記事の基本情報を取得
+        const articleInfo = getArticleInfo();
+        
+        // 記事メタデータの送信
+        gtag('event', 'blog_post_metadata', {
+            event_category: 'blog_content',
+            article_category: articleInfo.category,
+            article_word_count: articleInfo.wordCount,
+            estimated_read_time: articleInfo.readTime,
+            non_interaction: true
+        });
+        
+        // スクロール深度の計測
+        initScrollDepthTracking();
+        
+        // 記事内リンククリックの計測
+        initArticleLinkTracking();
+        
+        // 記事完読の計測
+        initReadCompletionTracking();
+        
+        // 記事内CTAボタンの計測
+        initArticleCTATracking();
+    }
+    
+    // ブログ一覧ページ専用のトラッキング
+    function initBlogListTracking() {
+        // ブログ一覧ページ閲覧
+        gtag('event', 'blog_list_view', {
+            event_category: 'blog_navigation',
+            event_label: 'blog_index_page'
+        });
+        
+        // 記事カードクリックの計測
+        document.querySelectorAll('.featured-post-card a, .post-card a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                const card = this.closest('.featured-post-card, .post-card');
+                const title = card.querySelector('h3, .post-title')?.textContent?.trim() || 'Unknown';
+                
+                gtag('event', 'blog_article_click', {
+                    event_category: 'blog_navigation',
+                    event_label: title,
+                    article_title: title,
+                    click_position: getCardPosition(card),
+                    transport_type: 'beacon'
+                });
+            });
+        });
+        
+        // カテゴリフィルターの計測
+        document.querySelectorAll('.articles-filter button').forEach(function(button) {
+            button.addEventListener('click', function() {
+                gtag('event', 'blog_category_filter', {
+                    event_category: 'blog_navigation',
+                    event_label: this.textContent.trim(),
+                    filter_value: this.getAttribute('data-filter')
+                });
+            });
+        });
+    }
+    
+    // 共通のブログトラッキング
+    function initCommonBlogTracking() {
+        // ニュースレター購読フォームの計測
+        const newsletterForm = document.querySelector('.newsletter-form');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', function() {
+                gtag('event', 'newsletter_subscription', {
+                    event_category: 'blog_conversion',
+                    event_label: 'newsletter_signup',
+                    transport_type: 'beacon'
+                });
+            });
+        }
+        
+        // ブログ内検索の計測
+        document.querySelectorAll('.blog-search input, .search-input').forEach(function(searchInput) {
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter' && this.value.trim() !== '') {
+                    gtag('event', 'blog_search', {
+                        event_category: 'blog_engagement',
+                        event_label: this.value.trim(),
+                        search_term: this.value.trim()
+                    });
+                }
+            });
+        });
+    }
+    
+    // 記事情報の取得
+    function getArticleInfo() {
+        const content = document.querySelector('.post-content, .article-content, main');
+        const category = document.querySelector('.post-category, .article-category')?.textContent?.trim() || 'uncategorized';
+        const wordCount = content ? content.textContent.split(/\s+/).length : 0;
+        const readTime = Math.ceil(wordCount / 200); // 1分間に200語として計算
+        
+        return {
+            category: category,
+            wordCount: wordCount,
+            readTime: readTime
+        };
+    }
+    
+    // スクロール深度の計測
+    function initScrollDepthTracking() {
+        const milestones = [25, 50, 75, 90, 100];
+        const trackedMilestones = new Set();
+        
+        function trackScrollDepth() {
+            const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+            maxScrollDepth = Math.max(maxScrollDepth, scrollPercent);
+            
+            milestones.forEach(function(milestone) {
+                if (scrollPercent >= milestone && !trackedMilestones.has(milestone)) {
+                    trackedMilestones.add(milestone);
+                    
+                    gtag('event', 'blog_scroll_depth', {
+                        event_category: 'blog_engagement',
+                        event_label: milestone + '%',
+                        scroll_depth: milestone,
+                        article_title: document.title
+                    });
+                    
+                    // 100%到達時は記事完読とみなす
+                    if (milestone === 100) {
+                        hasReachedEnd = true;
+                        trackReadCompletion();
+                    }
+                }
+            });
+        }
+        
+        // スクロールイベントの最適化
+        let ticking = false;
+        function requestTick() {
+            if (!ticking) {
+                window.requestAnimationFrame(trackScrollDepth);
+                ticking = true;
+                setTimeout(() => { ticking = false; }, 100);
+            }
+        }
+        
+        window.addEventListener('scroll', requestTick);
+    }
+    
+    // 記事内リンククリックの計測
+    function initArticleLinkTracking() {
+        const articleContent = document.querySelector('.post-content, .article-content, main');
+        if (!articleContent) return;
+        
+        articleContent.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                const isInternal = this.hostname === window.location.hostname;
+                const linkText = this.textContent.trim();
+                
+                gtag('event', 'blog_article_link_click', {
+                    event_category: 'blog_engagement',
+                    event_label: linkText,
+                    link_url: this.href,
+                    link_type: isInternal ? 'internal' : 'external',
+                    article_title: document.title,
+                    transport_type: 'beacon'
+                });
+            });
+        });
+    }
+    
+    // 記事完読の計測
+    function initReadCompletionTracking() {
+        // 時間ベースの完読判定（推定読了時間の80%以上滞在）
+        const articleInfo = getArticleInfo();
+        const minReadTime = Math.max(articleInfo.readTime * 0.8 * 60 * 1000, 30000); // 最低30秒
+        
+        setTimeout(function() {
+            if (!engagementTracked) {
+                trackReadCompletion();
+            }
+        }, minReadTime);
+    }
+    
+    // 記事完読の記録
+    function trackReadCompletion() {
+        if (engagementTracked) return;
+        
+        const readingTime = Math.round((Date.now() - readingStartTime) / 1000);
+        const articleInfo = getArticleInfo();
+        
+        gtag('event', 'blog_article_read_complete', {
+            event_category: 'blog_engagement',
+            event_label: document.title,
+            article_title: document.title,
+            reading_time: readingTime,
+            max_scroll_depth: maxScrollDepth,
+            reached_end: hasReachedEnd,
+            article_category: articleInfo.category,
+            transport_type: 'beacon'
+        });
+        
+        engagementTracked = true;
+    }
+    
+    // 記事内CTAボタンの計測
+    function initArticleCTATracking() {
+        // 記事内の問い合わせボタンを特定
+        const ctaSelectors = [
+            'a[href*="/contact"]',
+            'a[href*="問い合わせ"]',
+            '.cta-button',
+            '.btn-primary',
+            '.contact-btn',
+            'a[href*="consultation"]',
+            'a[href*="相談"]'
+        ];
+        
+        const articleContent = document.querySelector('.post-content, .article-content, main');
+        if (!articleContent) return;
+        
+        ctaSelectors.forEach(function(selector) {
+            articleContent.querySelectorAll(selector).forEach(function(button) {
+                button.addEventListener('click', function() {
+                    gtag('event', 'blog_article_cta_click', {
+                        event_category: 'blog_conversion',
+                        event_label: this.textContent.trim(),
+                        button_text: this.textContent.trim(),
+                        button_url: this.href,
+                        article_title: document.title,
+                        source_page: window.location.href,
+                        transport_type: 'beacon'
+                    });
+                });
+            });
+        });
+    }
+    
+    // カードの位置を取得
+    function getCardPosition(card) {
+        const cards = Array.from(document.querySelectorAll('.featured-post-card, .post-card'));
+        return cards.indexOf(card) + 1;
+    }
+    
+    // ページ離脱時のエンゲージメント記録
+    window.addEventListener('beforeunload', function() {
+        if (isPostPage && !engagementTracked) {
+            trackReadCompletion();
+        }
+        
+        // ブログページ全体のエンゲージメント記録
+        const timeOnPage = Math.round((Date.now() - readingStartTime) / 1000);
+        
+        gtag('event', 'blog_page_engagement', {
+            event_category: 'blog_engagement',
+            time_on_page: timeOnPage,
+            max_scroll_depth: maxScrollDepth,
+            page_type: isPostPage ? 'article' : 'list',
+            transport_type: 'beacon',
+            non_interaction: true
+        });
+    });
+    
+    // Intersection Observer を使用した可視性ベースの計測
+    if ('IntersectionObserver' in window) {
+        // 記事の主要セクションの可視性を計測
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+                    const sectionTitle = entry.target.textContent.substring(0, 50) + '...';
+                    
+                    gtag('event', 'blog_section_view', {
+                        event_category: 'blog_engagement',
+                        event_label: sectionTitle,
+                        section_title: sectionTitle,
+                        article_title: document.title,
+                        non_interaction: true
+                    });
+                    
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        });
+        
+        // 記事内の見出しを監視対象に追加
+        document.querySelectorAll('h2, h3, .section-header').forEach(function(heading) {
+            observer.observe(heading);
+        });
+    }
+})();
+</script>
+

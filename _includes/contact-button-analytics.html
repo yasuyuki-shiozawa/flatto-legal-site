@@ -1,0 +1,336 @@
+<!-- 問い合わせボタンの詳細計測設定 -->
+<script>
+// 問い合わせボタンの詳細計測
+(function() {
+    'use strict';
+    
+    // ページ読み込み完了時に初期化
+    document.addEventListener('DOMContentLoaded', function() {
+        initContactButtonTracking();
+        initFormSubmissionTracking();
+        initUserJourneyTracking();
+    });
+    
+    // 問い合わせボタンクリックの詳細計測
+    function initContactButtonTracking() {
+        // 問い合わせボタンのセレクター（包括的に対応）
+        const contactButtonSelectors = [
+            'a[href*="/contact"]',
+            'a[href*="contact"]',
+            'a[href*="問い合わせ"]',
+            'a[href*="相談"]',
+            'a[href*="consultation"]',
+            '.contact-btn',
+            '.consultation-btn',
+            '.cta-button',
+            '.btn-contact',
+            '.btn-consultation',
+            'button[data-contact]',
+            'a[data-contact]',
+            // 特定のテキストを含むボタン
+            'a:contains("問い合わせ")',
+            'a:contains("相談")',
+            'a:contains("申し込")',
+            'button:contains("問い合わせ")',
+            'button:contains("相談")',
+            'button:contains("申し込")'
+        ];
+        
+        // 各セレクターでボタンを検索して計測を設定
+        contactButtonSelectors.forEach(function(selector) {
+            try {
+                document.querySelectorAll(selector).forEach(function(button) {
+                    // 重複計測を防ぐためのチェック
+                    if (button.hasAttribute('data-analytics-tracked')) return;
+                    button.setAttribute('data-analytics-tracked', 'true');
+                    
+                    button.addEventListener('click', function(e) {
+                        trackContactButtonClick(this, e);
+                    });
+                });
+            } catch (error) {
+                // CSS セレクターエラーを無視（:contains は標準ではないため）
+            }
+        });
+        
+        // テキスト内容で問い合わせボタンを検出（フォールバック）
+        document.querySelectorAll('a, button').forEach(function(element) {
+            if (element.hasAttribute('data-analytics-tracked')) return;
+            
+            const text = element.textContent.trim();
+            const contactKeywords = [
+                '問い合わせ', '相談', '申し込', '申込', 'お問い合わせ', 'ご相談',
+                '無料相談', '無料診断', 'contact', 'consultation', 'inquiry'
+            ];
+            
+            const isContactButton = contactKeywords.some(keyword => 
+                text.toLowerCase().includes(keyword.toLowerCase())
+            );
+            
+            if (isContactButton) {
+                element.setAttribute('data-analytics-tracked', 'true');
+                element.addEventListener('click', function(e) {
+                    trackContactButtonClick(this, e);
+                });
+            }
+        });
+    }
+    
+    // 問い合わせボタンクリックの記録
+    function trackContactButtonClick(button, event) {
+        const buttonInfo = analyzeContactButton(button);
+        
+        gtag('event', 'contact_button_click', {
+            event_category: 'conversion',
+            event_label: buttonInfo.text,
+            button_text: buttonInfo.text,
+            button_position: buttonInfo.position,
+            button_type: buttonInfo.type,
+            source_page: window.location.pathname,
+            source_page_title: document.title,
+            button_url: buttonInfo.url,
+            user_journey_stage: getUserJourneyStage(),
+            page_scroll_depth: getCurrentScrollDepth(),
+            time_on_page: getTimeOnPage(),
+            transport_type: 'beacon'
+        });
+        
+        // 特別なボタンタイプの追加計測
+        if (buttonInfo.isSpecialCTA) {
+            gtag('event', 'special_cta_click', {
+                event_category: 'conversion',
+                event_label: buttonInfo.specialType,
+                cta_type: buttonInfo.specialType,
+                source_page: window.location.pathname,
+                transport_type: 'beacon'
+            });
+        }
+    }
+    
+    // ボタン情報の分析
+    function analyzeContactButton(button) {
+        const text = button.textContent.trim();
+        const url = button.href || button.getAttribute('data-url') || '';
+        
+        // ボタンの位置を特定
+        const position = getButtonPosition(button);
+        
+        // ボタンのタイプを特定
+        const type = getButtonType(button);
+        
+        // 特別なCTAかどうかを判定
+        const specialCTA = analyzeSpecialCTA(button, text);
+        
+        return {
+            text: text,
+            url: url,
+            position: position,
+            type: type,
+            isSpecialCTA: specialCTA.isSpecial,
+            specialType: specialCTA.type
+        };
+    }
+    
+    // ボタンの位置を特定
+    function getButtonPosition(button) {
+        // 親要素から位置を推定
+        const header = button.closest('header, .header, nav, .navigation');
+        const footer = button.closest('footer, .footer');
+        const sidebar = button.closest('.sidebar, .left-sidebar, .right-sidebar');
+        const hero = button.closest('.hero, .hero-section, .banner');
+        const article = button.closest('article, .post-content, .article-content, main');
+        const cta = button.closest('.cta, .cta-section, .call-to-action');
+        
+        if (header) return 'header';
+        if (footer) return 'footer';
+        if (sidebar) return 'sidebar';
+        if (hero) return 'hero';
+        if (cta) return 'cta_section';
+        if (article) return 'article_content';
+        
+        // スクロール位置から推定
+        const rect = button.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+        
+        if (rect.top < viewportHeight * 0.3) return 'above_fold';
+        if (rect.top < viewportHeight * 0.7) return 'middle_fold';
+        return 'below_fold';
+    }
+    
+    // ボタンのタイプを特定
+    function getButtonType(button) {
+        const classList = button.className.toLowerCase();
+        const text = button.textContent.toLowerCase();
+        
+        if (classList.includes('primary') || classList.includes('btn-primary')) return 'primary';
+        if (classList.includes('secondary') || classList.includes('btn-secondary')) return 'secondary';
+        if (classList.includes('cta')) return 'cta';
+        if (text.includes('無料')) return 'free_consultation';
+        if (text.includes('診断')) return 'diagnosis';
+        if (text.includes('資料')) return 'resource_download';
+        if (text.includes('電話')) return 'phone_consultation';
+        
+        return 'standard';
+    }
+    
+    // 特別なCTAの分析
+    function analyzeSpecialCTA(button, text) {
+        const specialTypes = {
+            '全省庁統一資格申請': 'zenshochou_application',
+            '無料診断': 'free_diagnosis',
+            '資料ダウンロード': 'resource_download',
+            '電話相談': 'phone_consultation',
+            'ZOOM相談': 'zoom_consultation',
+            'メルマガ': 'newsletter_signup',
+            'ニュースレター': 'newsletter_signup'
+        };
+        
+        for (const [keyword, type] of Object.entries(specialTypes)) {
+            if (text.includes(keyword)) {
+                return { isSpecial: true, type: type };
+            }
+        }
+        
+        return { isSpecial: false, type: null };
+    }
+    
+    // フォーム送信の詳細計測
+    function initFormSubmissionTracking() {
+        document.querySelectorAll('form').forEach(function(form) {
+            // 重複計測を防ぐ
+            if (form.hasAttribute('data-form-tracked')) return;
+            form.setAttribute('data-form-tracked', 'true');
+            
+            form.addEventListener('submit', function(e) {
+                trackFormSubmission(this, e);
+            });
+        });
+    }
+    
+    // フォーム送信の記録
+    function trackFormSubmission(form, event) {
+        const formInfo = analyzeForm(form);
+        
+        gtag('event', 'form_submission', {
+            event_category: 'conversion',
+            event_label: formInfo.type,
+            form_type: formInfo.type,
+            form_id: formInfo.id,
+            form_fields_count: formInfo.fieldsCount,
+            source_page: window.location.pathname,
+            source_page_title: document.title,
+            user_journey_stage: getUserJourneyStage(),
+            time_to_submit: getTimeOnPage(),
+            transport_type: 'beacon'
+        });
+        
+        // 問い合わせフォームの場合は特別な計測
+        if (formInfo.isContactForm) {
+            gtag('event', 'contact_form_conversion', {
+                event_category: 'conversion',
+                event_label: 'contact_form_submitted',
+                conversion_type: 'contact_form',
+                source_page: window.location.pathname,
+                referrer: document.referrer,
+                transport_type: 'beacon'
+            });
+        }
+    }
+    
+    // フォーム情報の分析
+    function analyzeForm(form) {
+        const action = form.action || '';
+        const id = form.id || '';
+        const className = form.className || '';
+        const fieldsCount = form.querySelectorAll('input, textarea, select').length;
+        
+        // フォームタイプの判定
+        let type = 'unknown';
+        const isContactForm = action.includes('contact') || 
+                             id.includes('contact') || 
+                             className.includes('contact') ||
+                             form.querySelector('[name*="contact"]') ||
+                             form.querySelector('[name*="message"]');
+        
+        if (isContactForm) type = 'contact';
+        else if (action.includes('newsletter') || id.includes('newsletter')) type = 'newsletter';
+        else if (action.includes('download') || id.includes('download')) type = 'download';
+        else if (action.includes('diagnosis') || id.includes('diagnosis')) type = 'diagnosis';
+        
+        return {
+            type: type,
+            id: id,
+            fieldsCount: fieldsCount,
+            isContactForm: isContactForm
+        };
+    }
+    
+    // ユーザージャーニーの追跡
+    function initUserJourneyTracking() {
+        // セッションストレージを使用してユーザーの行動を追跡
+        const journeyKey = 'user_journey_' + Date.now();
+        let journey = JSON.parse(sessionStorage.getItem('user_journey') || '[]');
+        
+        // 現在のページ訪問を記録
+        journey.push({
+            page: window.location.pathname,
+            title: document.title,
+            timestamp: Date.now(),
+            referrer: document.referrer
+        });
+        
+        // 最新の10ページのみ保持
+        if (journey.length > 10) {
+            journey = journey.slice(-10);
+        }
+        
+        sessionStorage.setItem('user_journey', JSON.stringify(journey));
+    }
+    
+    // ユーザージャーニーステージの取得
+    function getUserJourneyStage() {
+        const journey = JSON.parse(sessionStorage.getItem('user_journey') || '[]');
+        const currentPath = window.location.pathname;
+        
+        if (journey.length === 1) return 'first_visit';
+        if (journey.length <= 3) return 'early_exploration';
+        if (journey.length <= 6) return 'active_exploration';
+        if (currentPath.includes('contact')) return 'conversion_intent';
+        return 'deep_engagement';
+    }
+    
+    // 現在のスクロール深度を取得
+    function getCurrentScrollDepth() {
+        const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+        return Math.min(scrollPercent, 100);
+    }
+    
+    // ページ滞在時間を取得
+    function getTimeOnPage() {
+        const startTime = sessionStorage.getItem('page_start_time') || Date.now();
+        return Math.round((Date.now() - startTime) / 1000);
+    }
+    
+    // ページ開始時間を記録
+    sessionStorage.setItem('page_start_time', Date.now());
+    
+    // 離脱時のコンバージョンファネル分析
+    window.addEventListener('beforeunload', function() {
+        const journey = JSON.parse(sessionStorage.getItem('user_journey') || '[]');
+        const timeOnSite = journey.length > 0 ? Date.now() - journey[0].timestamp : 0;
+        
+        gtag('event', 'session_summary', {
+            event_category: 'user_behavior',
+            pages_visited: journey.length,
+            time_on_site: Math.round(timeOnSite / 1000),
+            final_page: window.location.pathname,
+            conversion_occurred: window.location.pathname.includes('thank') || 
+                               window.location.pathname.includes('success'),
+            transport_type: 'beacon',
+            non_interaction: true
+        });
+    });
+    
+})();
+</script>
+

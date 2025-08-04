@@ -180,6 +180,10 @@ body_class: blog-lp-page
     </div>
 </section>
 
+<!-- ブログページ専用アナリティクス -->
+{% include blog-analytics.html %}
+{% include contact-button-analytics.html %}
+
 <script>
 // 記事フィルター機能
 document.addEventListener('DOMContentLoaded', function() {
