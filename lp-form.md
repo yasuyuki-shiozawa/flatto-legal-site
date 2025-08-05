@@ -508,7 +508,11 @@ permalink: /lp-form/
                 お気軽にお問い合わせください
             </p>
 
-            <form id="contactForm" action="#" method="POST">
+            <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="contact" />
+                <div style="display: none;">
+                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                </div>
                 <div class="form-group">
                     <label for="name" class="form-label">お名前<span class="required">*</span></label>
                     <input type="text" id="name" name="name" class="form-input" required>
@@ -604,23 +608,50 @@ permalink: /lp-form/
         submitBtn.disabled = true;
         submitBtn.textContent = '送信中...';
         
-        // 実際の送信処理をここに実装
-        // 現在はデモ用の処理
-        setTimeout(function() {
-            // 成功メッセージを表示
-            successMessage.classList.add('show');
-            
-            // フォームをリセット
-            contactForm.reset();
-            charCount.textContent = '0';
-            
+        // フォームデータを収集
+        const formData = new FormData(contactForm);
+        const data = {
+            name: formData.get('name'),
+            company: formData.get('company'),
+            email: formData.get('email'),
+            phone: formData.get('phone'),
+            industry: formData.get('industry'),
+            message: formData.get('message')
+        };
+        
+        // Netlify Forms を使用してメール送信
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams({
+                'form-name': 'contact',
+                ...data
+            }).toString()
+        })
+        .then(response => {
+            if (response.ok) {
+                // 成功メッセージを表示
+                successMessage.classList.add('show');
+                
+                // フォームをリセット
+                contactForm.reset();
+                charCount.textContent = '0';
+                
+                // 成功メッセージまでスクロール
+                successMessage.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                throw new Error('送信に失敗しました');
+            }
+        })
+        .catch(error => {
+            alert('送信に失敗しました。しばらく時間をおいて再度お試しください。');
+            console.error('Error:', error);
+        })
+        .finally(() => {
             // ボタンを元に戻す
             submitBtn.disabled = false;
             submitBtn.textContent = '無料相談を申し込む';
-            
-            // 成功メッセージまでスクロール
-            successMessage.scrollIntoView({ behavior: 'smooth' });
-        }, 2000);
+        });
     });
 
     // スムーススクロール
