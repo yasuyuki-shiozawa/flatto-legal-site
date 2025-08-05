@@ -107,7 +107,7 @@ permalink: /videos/
         <p>入札・官公需に関するご質問やご相談は、お気軽にお問い合わせください。<br>
         全国どこからでもZoomでのオンライン相談が可能です。</p>
         <div class="cta-buttons">
-          <a href="/contact/" class="btn btn-primary">
+          <a href="/lp-form/" class="btn btn-primary">
             <i class="fas fa-comments"></i>
             無料相談のお申し込み
           </a>
