@@ -19,21 +19,7 @@ keywords: 入札参加サポート,全省庁統一資格,入札代行,公共調�
                     申請から業務完了まで<strong>完全サポート</strong>
                 </p>
                 
-                <!-- 実績バナー -->
-                <div class="achievement-banner">
-                    <div class="achievement-item">
-                        <span class="achievement-number">2,715万円</span>
-                        <span class="achievement-label">落札実績</span>
-                    </div>
-                    <div class="achievement-item">
-                        <span class="achievement-number">17件</span>
-                        <span class="achievement-label">契約実績</span>
-                    </div>
-                    <div class="achievement-item">
-                        <span class="achievement-number">月額33,000円</span>
-                        <span class="achievement-label">全サービス込み</span>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
