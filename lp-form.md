@@ -508,14 +508,17 @@ permalink: /lp-form/
                 お気軽にお問い合わせください
             </p>
 
-                  <form id="contactForm" name="contact" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field">
-                <input type="hidden" name="form-name" value="contact" />
+            <form id="contactForm" name="bidding-support" method="POST" action="/thanks/" data-netlify="true" data-netlify-honeypot="bot-field">
+                <!-- Netlify Forms用の隠しフィールド -->
+                <input type="hidden" name="form-name" value="bidding-support" />
+                <input type="hidden" name="_to" value="mail@flat-legal.com" />
+                <input type="hidden" name="_subject" value="【入札マップ】入札参加完全サポートお申込み" />
                 
-                <!-- スパム対策用の隠しフィールド -->
-                <p style="display: none;">
-                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-                </p>>
+                <!-- ハニーポット（スパム対策） -->
+                <div class="hidden">
+                    <label>このフィールドは入力しないでください: <input name="bot-field" /></label>
                 </div>
+
                 <div class="form-group">
                     <label for="name" class="form-label">お名前<span class="required">*</span></label>
                     <input type="text" id="name" name="name" class="form-input" required>
