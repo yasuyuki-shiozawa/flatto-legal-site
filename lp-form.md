@@ -508,11 +508,13 @@ permalink: /lp-form/
                 お気軽にお問い合わせください
             </p>
 
-            <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/lp-form/?success=true">
+                  <form id="contactForm" name="contact" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field">
                 <input type="hidden" name="form-name" value="contact" />
-                <input type="hidden" name="subject" value="【入札参加サポート】新しいお問い合わせ" />
-                <div style="display: none;">
+                
+                <!-- スパム対策用の隠しフィールド -->
+                <p style="display: none;">
                     <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                </p>>
                 </div>
                 <div class="form-group">
                     <label for="name" class="form-label">お名前<span class="required">*</span></label>
@@ -595,64 +597,6 @@ permalink: /lp-form/
         } else {
             charCount.style.color = '#666';
         }
-    });
-
-    // フォーム送信処理
-    const contactForm = document.getElementById('contactForm');
-    const submitBtn = document.getElementById('submitBtn');
-    const successMessage = document.getElementById('successMessage');
-
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // ボタンを無効化
-        submitBtn.disabled = true;
-        submitBtn.textContent = '送信中...';
-        
-        // フォームデータを収集
-        const formData = new FormData(contactForm);
-        const data = {
-            name: formData.get('name'),
-            company: formData.get('company'),
-            email: formData.get('email'),
-            phone: formData.get('phone'),
-            industry: formData.get('industry'),
-            message: formData.get('message')
-        };
-        
-        // Netlify Forms を使用してメール送信
-        fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: new URLSearchParams({
-                'form-name': 'contact',
-                ...data
-            }).toString()
-        })
-        .then(response => {
-            if (response.ok) {
-                // 成功メッセージを表示
-                successMessage.classList.add('show');
-                
-                // フォームをリセット
-                contactForm.reset();
-                charCount.textContent = '0';
-                
-                // 成功メッセージまでスクロール
-                successMessage.scrollIntoView({ behavior: 'smooth' });
-            } else {
-                throw new Error('送信に失敗しました');
-            }
-        })
-        .catch(error => {
-            alert('送信に失敗しました。しばらく時間をおいて再度お試しください。');
-            console.error('Error:', error);
-        })
-        .finally(() => {
-            // ボタンを元に戻す
-            submitBtn.disabled = false;
-            submitBtn.textContent = '無料相談を申し込む';
-        });
     });
 
     // スムーススクロール
