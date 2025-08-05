@@ -113,3 +113,11 @@
   status = 301
   force = true
 
+
+# フォーム送信時のメール通知設定
+[forms]
+  # 管理者への通知メール設定
+  [forms.settings]
+    to = "info@flatto-legal.com"
+    subject = "【入札参加サポート】新しいお問い合わせ"
+

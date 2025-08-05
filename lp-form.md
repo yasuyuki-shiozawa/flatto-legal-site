@@ -508,8 +508,9 @@ permalink: /lp-form/
                 お気軽にお問い合わせください
             </p>
 
-            <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/lp-form/?success=true">
                 <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="subject" value="【入札参加サポート】新しいお問い合わせ" />
                 <div style="display: none;">
                     <label>Don't fill this out if you're human: <input name="bot-field" /></label>
                 </div>
