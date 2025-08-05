@@ -1,8 +1,8 @@
 ---
 layout: default
 title: 動画で学ぶ入札・官公需 | 行政書士法人ふらっと法務事務所
-description: 入札・官公需に関する実践的なノウハウを動画でわかりやすく解説。初心者向けから上級者まで、全省庁統一資格や役務案件について詳しく学べます。全国Zoom対応で無料相談も実施中。
-keywords: 入札, 官公需, 動画, 解説, ノウハウ, 実践, 基礎知識, 全省庁統一資格, 役務案件, YouTube, 初心者向け
+description: 入札・官公需に関する実践的なノウハウを動画でわかりやすく解説。基礎知識から実体験に基づく参入の困難と解決策まで、初心者向けから上級者まで段階的に学べます。全省庁統一資格や役務案件について詳しく学べます。全国Zoom対応で無料相談も実施中。
+keywords: 入札, 官公需, 動画, 解説, ノウハウ, 実践, 基礎知識, 全省庁統一資格, 役務案件, YouTube, 初心者向け, 実体験, 参入障壁, 落札実績, 公共調達, 入札参入
 permalink: /videos/
 ---
 
@@ -16,7 +16,7 @@ permalink: /videos/
         </h1>
         <p class="lead mb-5">
           入札・官公需に関する実践的なノウハウを動画でわかりやすく解説。<br>
-          初心者から上級者まで、段階的に学べるコンテンツをお届けします。
+          基礎知識から実体験に基づく参入の困難と解決策まで、段階的に学べるコンテンツをお届けします。
         </p>
         
         <!-- 注目動画 -->
@@ -82,7 +82,33 @@ permalink: /videos/
               </div>
             </div>
           </div>
-        </div>v>
+        </div>
+
+        <!-- 動画カード2 -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/r7OrykS2xO8" 
+                title="私たちが入札で最初にぶつかった壁" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">私たちが入札で最初にぶつかった壁</h5>
+              <p class="video-description">
+                入札参入の実体験談。最初の落札案件「北関東防衛局 公共事業労務費調査」（約65万円）を獲得するまでの1年間の苦労と、実績がない状態での案件探しの困難さを赤裸々に語ります。参入から3案件落札まで2年近くかかった現実的な体験談です。
+              </p>
+              <div class="video-meta">
+                <span class="badge bg-warning me-2">実体験</span>
+                <span class="text-muted small">2025年8月 • 約5分</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <!-- 今後の動画用のプレースホルダー -->
         <div class="video-card coming-soon">
