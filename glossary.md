@@ -294,11 +294,16 @@ document.addEventListener('DOMContentLoaded', function() {
     padding: 4rem 0;
     text-align: center;
 }
-
 .page-header h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: #ffffff;
 }
+.page-header p {
+    color: #ffffff;
+    opacity: 1;
+    font-size: 1.2rem;
+}}
 
 .glossary-content {
     padding: 4rem 0;

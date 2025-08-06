@@ -593,18 +593,19 @@ keywords: 入札参加サポート,全省庁統一資格,入札代行,公共調�
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.3;
+    color: #ffffff;
 }
-
 .hero-title .highlight {
     color: #fbbf24;
     display: block;
     margin-top: 10px;
 }
-
 .hero-subtitle {
     font-size: 1.2rem;
     margin-bottom: 40px;
-    opacity: 0.9;
+    color: #ffffff;
+    opacity: 1;
+}
 }
 
 .achievement-banner {

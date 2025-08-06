@@ -43,11 +43,14 @@ permalink: /lp-form/
     .hero .subtitle {
         font-size: 1.2rem;
         margin-bottom: 30px;
-        opacity: 0.9;
+        color: #ffffff;
+        opacity: 1;
     }
 
     .hero .features {
         font-size: 1.1rem;
+        color: #ffffff;
+        opacity: 1;
         margin-bottom: 40px;
     }
 
@@ -111,7 +114,7 @@ permalink: /lp-form/
         margin-bottom: 20px;
     }
     .solution-box {
-        background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+        background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
         border-radius: 15px;
         padding: 25px;
         margin-top: 20px;
@@ -120,13 +123,14 @@ permalink: /lp-form/
     .solution-title {
         font-size: 1.2rem;
         font-weight: 600;
-        color: #0d47a1;
+        color: #ffffff;
         margin-bottom: 15px;
     }
 
     .solution-text {
-        color: #1565c0;
+        color: #ffffff;
         line-height: 1.6;
+        opacity: 0.95;
     }
 
     /* フォームセクション */
