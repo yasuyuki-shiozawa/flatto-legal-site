@@ -37,3 +37,29 @@ default:
   image: /assets/images/blog-default.svg
   alt: 入札ガイド記事
   color: "#6b7280"  # グレー
+# 入札関連カテゴリ
+入札:
+  image: /assets/images/blog/procurement-notice-guide.jpg
+  alt: 入札・公示書ガイドのイメージ
+  color: "#3b82f6"  # 青色（入札）
+
+公示書:
+  image: /assets/images/blog/procurement-notice-guide.jpg
+  alt: 公示書解説のイメージ
+  color: "#1e40af"  # 濃い青色（公示書）
+
+役務案件:
+  image: /assets/images/blog/procurement-notice-guide.jpg
+  alt: 役務案件ガイドのイメージ
+  color: "#2563eb"  # 青色（役務）
+
+入札基礎知識:
+  image: /assets/images/blog/procurement-notice-guide.jpg
+  alt: 入札基礎知識のイメージ
+  color: "#1d4ed8"  # 青色（基礎知識）
+
+入札戦略:
+  image: /assets/images/blog/procurement-notice-guide.jpg
+  alt: 入札戦略のイメージ
+  color: "#1e3a8a"  # 濃い青色（戦略）
+
