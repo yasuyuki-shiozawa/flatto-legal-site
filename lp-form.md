@@ -110,7 +110,6 @@ permalink: /lp-form/
         color: #888;
         margin-bottom: 20px;
     }
-
     .solution-box {
         background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
         border-radius: 15px;
@@ -121,14 +120,13 @@ permalink: /lp-form/
     .solution-title {
         font-size: 1.2rem;
         font-weight: 600;
-        color: #1976d2;
+        color: #0d47a1;
         margin-bottom: 15px;
-        text-align: center;
     }
 
     .solution-text {
-        color: #424242;
-        line-height: 1.8;
+        color: #1565c0;
+        line-height: 1.6;
     }
 
     /* フォームセクション */
