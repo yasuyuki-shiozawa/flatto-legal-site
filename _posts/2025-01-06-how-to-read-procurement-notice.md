@@ -13,11 +13,11 @@ image: "/assets/images/blog/procurement-notice-guide.jpg"
 
 公共調達への参入を検討している事業者にとって、公示書を正しく読み解くことは成功への第一歩です。特に役務案件では、建設工事とは異なる独特の要件や評価基準があり、これらを理解せずに応札すると思わぬ失敗を招く可能性があります。
 
-本記事では、厚生労働省が実際に公告した「年収の壁・支援強化パッケージに係るコールセンター運営業務等一式」[1]を具体例として、役務案件の公示書を体系的に読み解く方法を詳しく解説します。この案件は役務案件の典型的な構造を持ち、多くの企業が参入可能な内容であることから、学習教材として最適です。
+本記事では、厚生労働省が実際に公告した[「年収の壁・支援強化パッケージに係るコールセンター運営業務等一式」](https://www.mhlw.go.jp/stf/shinsei_boshu/choutatsujouhou/chotatu/e-gp-nyusatu/newpage_09145.html)[1]を具体例として、役務案件の公示書を体系的に読み解く方法を詳しく解説します。この案件は役務案件の典型的な構造を持ち、多くの企業が参入可能な内容であることから、学習教材として最適です。
 
 ## 公示書とは何か - 入札参加の出発点
 
-公示書は、国や地方自治体が調達を行う際に、その内容や条件を広く事業者に知らせるための正式な文書です。デジタル庁の調達手続マニュアル[2]によると、役務案件では100万円を超える契約が一般競争入札の対象となり、1,500万円以上の案件はWTO政府調達協定の適用を受けます。
+公示書は、国や地方自治体が調達を行う際に、その内容や条件を広く事業者に知らせるための正式な文書です。[デジタル庁の調達手続マニュアル](https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/e98a2d2e-f6da-4dce-a3c3-360a38616d8d/ddb5e27b/20220915_procurement_manual_04.pdf)[2]によると、役務案件では100万円を超える契約が一般競争入札の対象となり、1,500万円以上の案件はWTO政府調達協定の適用を受けます。
 
 公示書には入札に参加するために必要なすべての情報が記載されており、これを正確に理解することで、自社が応札すべきかどうかを適切に判断できます。また、公示書の読み方を習得することで、入札参加後の手続きもスムーズに進められるようになります。
 
@@ -182,9 +182,9 @@ A等級の格付けを受けるためには、年間売上高や従業員数、�
 
 ## 参考文献
 
-[1] 厚生労働省「入札公告（「年収の壁・支援強化パッケージ」に係るコールセンター運営業務等一式）」https://www.mhlw.go.jp/stf/shinsei_boshu/choutatsujouhou/chotatu/e-gp-nyusatu/newpage_09145.html
+[1] [厚生労働省「入札公告（「年収の壁・支援強化パッケージ」に係るコールセンター運営業務等一式）」](https://www.mhlw.go.jp/stf/shinsei_boshu/choutatsujouhou/chotatu/e-gp-nyusatu/newpage_09145.html)
 
-[2] デジタル庁「デジタル庁調達手続マニュアル概要」https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/e98a2d2e-f6da-4dce-a3c3-360a38616d8d/ddb5e27b/20220915_procurement_manual_04.pdf
+[2] [デジタル庁「デジタル庁調達手続マニュアル概要」](https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/e98a2d2e-f6da-4dce-a3c3-360a38616d8d/ddb5e27b/20220915_procurement_manual_04.pdf)
 
 ---
 
