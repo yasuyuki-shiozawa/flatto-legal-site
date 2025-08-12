@@ -46,7 +46,12 @@ permalink: /lp-form/
         margin-bottom: 30px;
         color: #ffffff;
         opacity: 1;
-        text-align: center;
+        text-align: center !important;
+    }
+
+    .hero .subtitle strong {
+        text-align: center !important;
+        display: inline;
     }
 
     .hero .features {
