@@ -185,6 +185,7 @@ permalink: /lp-form/
         font-size: 2.2rem;
         font-weight: 700;
         margin-bottom: 40px;
+        color: white !important;
     }
 
     .push-reasons {
@@ -541,7 +542,7 @@ permalink: /lp-form/
 <!-- 最終プッシュセクション -->
 <section class="final-push">
     <div class="container">
-        <h2 style="color: white !important; font-weight: 700;">💡 今すぐ無料相談を申し込む3つの理由</h2>
+        <h2 style="color: white !important; font-weight: 700 !important;">💡 今すぐ無料相談を申し込む3つの理由</h2>
         
         <div class="push-reasons">
             <div class="push-reason">
