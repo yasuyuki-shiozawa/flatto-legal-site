@@ -196,10 +196,10 @@ permalink: /lp-form/
     }
 
     .push-reason {
-        background: rgba(255, 255, 255, 0.1);
+        background: white;
         border-radius: 15px;
         padding: 30px;
-        backdrop-filter: blur(10px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
 
     .push-reason h3 {
@@ -211,7 +211,7 @@ permalink: /lp-form/
 
     .push-reason p {
         line-height: 1.6;
-        opacity: 0.9;
+        color: #333;
     }
 
     /* 問題提起セクション */
@@ -541,7 +541,7 @@ permalink: /lp-form/
 <!-- 最終プッシュセクション -->
 <section class="final-push">
     <div class="container">
-        <h2>🔥 今すぐ無料相談を申し込む3つの理由</h2>
+        <h2>⭐ 今すぐ無料相談を申し込む3つの理由</h2>
         
         <div class="push-reasons">
             <div class="push-reason">
