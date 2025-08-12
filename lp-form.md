@@ -504,7 +504,7 @@ permalink: /lp-form/
 <section class="hero">
     <div class="container">
         <h1>「入札参加資格は取れたけど...<br>その後どうすればいいの？」</h1>
-        <p class="subtitle" style="text-align: center !important;">他社では8-12万円かかる申請が<br><strong>【完全無料】</strong></p>
+        <p class="subtitle" style="text-align: center !important; display: flex !important; justify-content: center !important; align-items: center !important; flex-direction: column !important;">他社では8-12万円かかる申請が<br><strong>【完全無料】</strong></p>
         <div class="features">
             月額33,000円で事前調査から業務完了まで<br>
             全省庁統一資格申請は無料
