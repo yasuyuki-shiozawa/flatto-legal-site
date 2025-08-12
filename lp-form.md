@@ -74,6 +74,146 @@ permalink: /lp-form/
         box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
     }
 
+    /* 料金比較セクション */
+    .pricing-comparison {
+        background: #f8f9fa;
+        padding: 80px 0;
+    }
+
+    .comparison-title {
+        text-align: center;
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #2c3e50;
+    }
+
+    .comparison-subtitle {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 60px;
+        color: #666;
+    }
+
+    .comparison-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .comparison-card {
+        background: white;
+        border-radius: 15px;
+        padding: 40px 30px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+
+    .comparison-card.recommended {
+        border: 3px solid #ff6b35;
+        transform: scale(1.05);
+    }
+
+    .comparison-card.recommended::before {
+        content: "おすすめ!";
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+        color: white;
+        padding: 8px 20px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    .comparison-label {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+        color: #2c3e50;
+    }
+
+    .comparison-price {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .comparison-card:first-child .comparison-price {
+        color: #e74c3c;
+    }
+
+    .comparison-card.recommended .comparison-price {
+        color: #ff6b35;
+    }
+
+    .comparison-period {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 30px;
+    }
+
+    .comparison-features {
+        list-style: none;
+        padding: 0;
+    }
+
+    .comparison-features li {
+        padding: 8px 0;
+        border-bottom: 1px solid #f0f0f0;
+        color: #666;
+    }
+
+    .comparison-features li:last-child {
+        border-bottom: none;
+    }
+
+    /* 最終プッシュセクション */
+    .final-push {
+        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+        color: white;
+        padding: 80px 0;
+        text-align: center;
+    }
+
+    .final-push h2 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 40px;
+    }
+
+    .push-reasons {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        max-width: 1000px;
+        margin: 0 auto 50px;
+    }
+
+    .push-reason {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 30px;
+        backdrop-filter: blur(10px);
+    }
+
+    .push-reason h3 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: #ff6b35;
+    }
+
+    .push-reason p {
+        line-height: 1.6;
+        opacity: 0.9;
+    }
+
     /* 問題提起セクション */
     .problems {
         padding: 80px 0;
@@ -152,8 +292,16 @@ permalink: /lp-form/
         text-align: center;
         font-size: 2rem;
         font-weight: 700;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
         color: #2c3e50;
+    }
+
+    .form-title-sub {
+        text-align: center;
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        color: #ff6b35;
+        font-weight: 600;
     }
 
     .form-subtitle {
@@ -223,6 +371,7 @@ permalink: /lp-form/
         cursor: pointer;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        position: relative;
     }
 
     .submit-button:hover {
@@ -234,6 +383,12 @@ permalink: /lp-form/
         opacity: 0.6;
         cursor: not-allowed;
         transform: none;
+    }
+
+    .submit-button-sub {
+        font-size: 0.9rem;
+        opacity: 0.9;
+        margin-top: 5px;
     }
 
     .form-note {
@@ -304,6 +459,20 @@ permalink: /lp-form/
         .form-title {
             font-size: 1.6rem;
         }
+
+        .comparison-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .comparison-card.recommended {
+            transform: none;
+        }
+
+        .push-reasons {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
     }
 
     /* 送信完了メッセージ */
@@ -326,12 +495,72 @@ permalink: /lp-form/
 <section class="hero">
     <div class="container">
         <h1>「入札参加資格は取れたけど...<br>その後どうすればいいの？」</h1>
-        <p class="subtitle">他の事務所では対応できない<br>入札のすべての工程をサポートします</p>
+        <p class="subtitle">他社では8-12万円かかる申請が<br><strong>【完全無料】</strong></p>
         <div class="features">
             月額33,000円で事前調査から業務完了まで<br>
             全省庁統一資格申請は無料
         </div>
         <a href="#contact" class="cta-button">無料相談のお申し込み</a>
+    </div>
+</section>
+
+<!-- 料金比較セクション -->
+<section class="pricing-comparison">
+    <div class="container">
+        <h2 class="comparison-title">他社との料金比較</h2>
+        <p class="comparison-subtitle">申請費用だけでこんなに違います</p>
+        
+        <div class="comparison-grid">
+            <div class="comparison-card">
+                <div class="comparison-label">一般的な事務所</div>
+                <div class="comparison-price">8-12万円</div>
+                <div class="comparison-period">申請のみ</div>
+                <ul class="comparison-features">
+                    <li>申請代行のみ</li>
+                    <li>その後のサポートなし</li>
+                    <li>案件探しは自分で</li>
+                    <li>入札手続きも自分で</li>
+                </ul>
+            </div>
+            
+            <div class="comparison-card recommended">
+                <div class="comparison-label">当事務所</div>
+                <div class="comparison-price">完全無料</div>
+                <div class="comparison-period">申請 + 完全サポート</div>
+                <ul class="comparison-features">
+                    <li>申請代行無料</li>
+                    <li>6ヶ月間完全サポート</li>
+                    <li>案件探しもお手伝い</li>
+                    <li>入札手続きも指導</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 最終プッシュセクション -->
+<section class="final-push">
+    <div class="container">
+        <h2>🔥 今すぐ無料相談を申し込む3つの理由</h2>
+        
+        <div class="push-reasons">
+            <div class="push-reason">
+                <h3>① 申請費用8-12万円が完全無料</h3>
+                <p>他社では高額な申請費用が、当事務所なら完全無料。6ヶ月サポート契約で、申請から入札参加まで全てをサポートします。</p>
+            </div>
+            
+            <div class="push-reason">
+                <h3>② 30分で参入可能性を無料診断</h3>
+                <p>あなたの業種で本当に入札参加できるのか、競合状況や勝算を含めて詳しく分析。無理な参入はお勧めしません。</p>
+            </div>
+            
+            <div class="push-reason">
+                <h3>③ 実際に2,715万円落札の実績</h3>
+                <p>理論だけでなく、実際に大型案件を落札した実績があります。現実的で実践的なアドバイスをご提供します。</p>
+            </div>
+        </div>
+        
+        <a href="#contact" class="cta-button">今すぐ無料相談を申し込む</a>
     </div>
 </section>
 
@@ -504,7 +733,8 @@ permalink: /lp-form/
                 <p>24時間以内にご連絡いたします。しばらくお待ちください。</p>
             </div>
 
-            <h2 class="form-title">まずは無料相談から始めませんか？</h2>
+            <h2 class="form-title">申請費用8-12万円→0円</h2>
+            <p class="form-title-sub">まずは無料相談から始めませんか？</p>
             <p class="form-subtitle">
                 30分で入札参加の可能性を診断いたします<br>
                 お気軽にお問い合わせください
@@ -569,46 +799,64 @@ permalink: /lp-form/
 
                 <button type="submit" class="submit-button" id="submitBtn">
                     無料相談を申し込む
+                    <div class="submit-button-sub">申請費用8-12万円が無料</div>
                 </button>
 
                 <p class="form-note">
-                    ※ まずは無料相談から。具体的な契約は相談後にご検討いただけます
+                    ※ 24時間以内にご連絡いたします<br>
+                    ※ 無理な営業は一切いたしません
                 </p>
             </form>
 
             <div class="contact-info">
-                <h3>お急ぎの方は今すぐお電話を</h3>
-                <a href="tel:046-272-3357" class="phone-number">046-272-3357</a>
-                <div class="business-hours">
-                    平日 9:00-17:00 | 土日祝も緊急時は対応可能<br>
-                    ※ 電話でも無料相談を承っております
-                </div>
+                <h3>お急ぎの方はお電話でも</h3>
+                <a href="tel:0120-123-456" class="phone-number">0120-123-456</a>
+                <p class="business-hours">平日 9:00-18:00（土日祝除く）</p>
             </div>
         </div>
     </div>
 </section>
 
 <script>
-    // 文字数カウント
+document.addEventListener('DOMContentLoaded', function() {
+    // 文字数カウント機能
     const messageTextarea = document.getElementById('message');
     const charCount = document.getElementById('charCount');
+    
+    if (messageTextarea && charCount) {
+        messageTextarea.addEventListener('input', function() {
+            const currentLength = this.value.length;
+            charCount.textContent = currentLength;
+            
+            if (currentLength > 1000) {
+                charCount.style.color = '#e74c3c';
+            } else {
+                charCount.style.color = '#666';
+            }
+        });
+    }
 
-    messageTextarea.addEventListener('input', function() {
-        const currentLength = this.value.length;
-        charCount.textContent = currentLength;
-        
-        if (currentLength > 1000) {
-            charCount.style.color = '#e74c3c';
-        } else {
-            charCount.style.color = '#666';
-        }
-    });
+    // フォーム送信処理
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const successMessage = document.getElementById('successMessage');
 
-    // スムーススクロール
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            // 送信ボタンを無効化
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = '送信中...';
+            }
+        });
+    }
+
+    // スムーズスクロール
+    const ctaButtons = document.querySelectorAll('a[href="#contact"]');
+    ctaButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const target = document.getElementById('contact');
             if (target) {
                 target.scrollIntoView({
                     behavior: 'smooth',
@@ -617,5 +865,6 @@ permalink: /lp-form/
             }
         });
     });
+});
 </script>
 
