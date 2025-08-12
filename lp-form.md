@@ -38,6 +38,7 @@ permalink: /lp-form/
         font-weight: 700;
         margin-bottom: 20px;
         line-height: 1.2;
+        text-align: center;
     }
 
     .hero .subtitle {
@@ -45,6 +46,7 @@ permalink: /lp-form/
         margin-bottom: 30px;
         color: #ffffff;
         opacity: 1;
+        text-align: center;
     }
 
     .hero .features {
@@ -52,6 +54,7 @@ permalink: /lp-form/
         color: #ffffff;
         opacity: 1;
         margin-bottom: 40px;
+        text-align: center;
     }
 
     .cta-button {
