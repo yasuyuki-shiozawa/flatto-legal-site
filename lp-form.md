@@ -33,6 +33,14 @@ permalink: /lp-form/
         text-align: center;
     }
 
+    .hero .container {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
     .hero h1 {
         font-size: 2.5rem;
         font-weight: 700;
