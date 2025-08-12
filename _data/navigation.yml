@@ -38,10 +38,10 @@ main_nav:
     icon: "fas fa-question-circle"
     description: "入札に関するよくある質問"
     
-  - name: "ブログ"
+  - name: "解説記事"
     url: "/blog/"
-    icon: "fas fa-blog"
-    description: "入札ノウハウ・最新情報"
+    icon: "fas fa-file-alt"
+    description: "入札ノウハウ・専門解説"
 
 # フッター専用ナビゲーション（営業要素・補助情報）
 footer_only_nav:
