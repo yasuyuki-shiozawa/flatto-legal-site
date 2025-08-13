@@ -29,11 +29,9 @@ body_class: home-page
         
         <div class="hero-visual">
             <div class="illustration-container">
-                <div class="family-illustration">
-                    <div class="family-member dad">👨‍💼</div>
-                    <div class="family-member mom">👩‍💼</div>
-                    <div class="family-member child">👶</div>
-                </div>
+                <img src="/assets/images/existing/flat-legal-hero-consultation.jpeg" 
+                     alt="行政書士による入札相談の様子" 
+                     class="consultation-image">
                 
                 <div class="illustration-text">
                     みんなで学ぶ入札の世界
@@ -140,42 +138,14 @@ body_class: home-page
     display: block !important;
 }
 
-.family-illustration {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 20px !important;
+.consultation-image {
+    width: 100% !important;
+    max-width: 400px !important;
+    height: auto !important;
+    border-radius: 15px !important;
     margin-bottom: 20px !important;
-    padding: 20px !important;
-}
-
-.family-member {
-    font-size: 3rem !important;
-    animation: bounce 2s infinite !important;
-}
-
-.family-member.dad {
-    animation-delay: 0s !important;
-}
-
-.family-member.mom {
-    animation-delay: 0.3s !important;
-}
-
-.family-member.child {
-    animation-delay: 0.6s !important;
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0) !important;
-    }
-    40% {
-        transform: translateY(-10px) !important;
-    }
-    60% {
-        transform: translateY(-5px) !important;
-    }
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2)) !important;
+    object-fit: cover !important;
 }
 
 .illustration-text {
