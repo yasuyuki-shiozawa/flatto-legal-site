@@ -8,209 +8,304 @@ hide_right_sidebar: false
 body_class: home-page
 ---
 
-<!-- 革新的ヒーローセクション -->
-<section class="hero-section-new">
-    <div class="hero-particles"></div>
+<!-- 既存イラスト活用ヒーローセクション -->
+<section class="hero-section">
+    <div class="floating-elements">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+    </div>
+    
     <div class="hero-container">
-        <div class="hero-content-new">
-            <h1 class="hero-title-new">
-                <span class="hero-highlight">入札マップ</span>
-            </h1>
-            <p class="hero-description-new">
-                公共調達・入札参加に関する総合情報サイト
+        <div class="hero-content">
+            <div class="hero-badge">📚 公共調達の総合情報サイト</div>
+            <h1 class="hero-title">入札マップ</h1>
+            <p class="hero-subtitle">
+                初心者から経験者まで、入札参加に必要な知識と情報を<br>
+                分かりやすく体系的にお届けします
             </p>
-            
-            <!-- メインCTA -->
-            <div class="hero-cta-container">
-                <a href="/knowhow/" class="hero-main-cta">
-                    入札の基本を学ぶ
-                </a>
+            <a href="/knowhow/" class="hero-cta">入札の基本を学ぶ</a>
+        </div>
+        
+        <div class="hero-visual">
+            <div class="illustration-container">
+                <!-- 既存の家族イラストをSVGで再現 -->
+                <svg class="family-illustration" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                    <!-- お父さん -->
+                    <circle cx="80" cy="80" r="25" fill="#fdbcb4" stroke="#333" stroke-width="2"/>
+                    <rect x="65" y="105" width="30" height="40" rx="5" fill="#4a90e2" stroke="#333" stroke-width="2"/>
+                    <circle cx="75" cy="75" r="2" fill="#333"/>
+                    <circle cx="85" cy="75" r="2" fill="#333"/>
+                    <path d="M75 85 Q80 90 85 85" stroke="#333" stroke-width="2" fill="none"/>
+                    <rect x="70" y="60" width="20" height="15" rx="10" fill="#8b4513"/>
+                    
+                    <!-- お母さん -->
+                    <circle cx="150" cy="80" r="25" fill="#fdbcb4" stroke="#333" stroke-width="2"/>
+                    <rect x="135" y="105" width="30" height="40" rx="5" fill="#e74c3c" stroke="#333" stroke-width="2"/>
+                    <circle cx="145" cy="75" r="2" fill="#333"/>
+                    <circle cx="155" cy="75" r="2" fill="#333"/>
+                    <path d="M145 85 Q150 90 155 85" stroke="#333" stroke-width="2" fill="none"/>
+                    <path d="M130 70 Q150 50 170 70" stroke="#333" stroke-width="3" fill="none"/>
+                    
+                    <!-- 子供 -->
+                    <circle cx="220" cy="90" r="20" fill="#fdbcb4" stroke="#333" stroke-width="2"/>
+                    <rect x="208" y="110" width="24" height="35" rx="4" fill="#f39c12" stroke="#333" stroke-width="2"/>
+                    <circle cx="215" cy="85" r="2" fill="#333"/>
+                    <circle cx="225" cy="85" r="2" fill="#333"/>
+                    <path d="M215 95 Q220 100 225 95" stroke="#333" stroke-width="2" fill="none"/>
+                    <rect x="210" y="70" width="20" height="12" rx="8" fill="#8b4513"/>
+                    
+                    <!-- 手をつなぐ線 -->
+                    <line x1="95" y1="120" x2="135" y2="120" stroke="#333" stroke-width="3"/>
+                    <line x1="165" y1="120" x2="208" y2="125" stroke="#333" stroke-width="3"/>
+                    
+                    <!-- ハート -->
+                    <path d="M150 30 C145 25, 135 25, 135 35 C135 25, 125 25, 120 30 C125 40, 150 55, 150 55 C150 55, 175 40, 180 30 C175 25, 165 25, 165 35 C165 25, 155 25, 150 30 Z" fill="#e74c3c" opacity="0.8"/>
+                </svg>
+                
+                <div class="illustration-text">
+                    みんなで学ぶ入札の世界
+                </div>
+                <div class="illustration-subtext">
+                    家族経営の企業様から大手企業様まで<br>
+                    それぞれに最適な入札戦略をサポート
+                </div>
             </div>
-            
-
         </div>
     </div>
 </section>
 
 <style>
-/* 革新的ヒーローセクション */
-.hero-section-new {
+/* 既存イラスト活用ヒーローセクション */
+.hero-section {
+    min-height: 70vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     position: relative;
-    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #3b82f6 100%);
-    min-height: 80vh;
     display: flex;
     align-items: center;
     overflow: hidden;
-    color: white;
-}
-
-/* パーティクル効果 */
-.hero-particles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: 
-        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.1) 1px, transparent 1px),
-        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 1px, transparent 1px),
-        radial-gradient(circle at 40% 60%, rgba(255,255,255,0.05) 1px, transparent 1px);
-    background-size: 100px 100px, 150px 150px, 200px 200px;
-    animation: float 20s infinite linear;
-    pointer-events: none;
-}
-
-@keyframes float {
-    0% { transform: translateY(0px) translateX(0px); }
-    25% { transform: translateY(-10px) translateX(5px); }
-    50% { transform: translateY(0px) translateX(10px); }
-    75% { transform: translateY(10px) translateX(5px); }
-    100% { transform: translateY(0px) translateX(0px); }
 }
 
 .hero-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 60px;
     align-items: center;
     position: relative;
     z-index: 2;
 }
 
-/* バッジ */
+.hero-content {
+    color: white;
+    animation: slideInLeft 1s ease-out;
+}
+
 .hero-badge {
     display: inline-block;
-    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 50px;
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
-    animation: pulse-badge 3s infinite;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out 0.2s both;
 }
 
-@keyframes pulse-badge {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-}
-
-/* タイトル */
-.hero-title-new {
-    font-size: 3.5rem;
-    font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-}
-
-.hero-highlight {
-    color: #fbbf24;
-    text-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
-}
-
-.hero-number {
-    color: #10b981;
-    text-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
-}
-
-/* 説明文 */
-.hero-description-new {
-    font-size: 1.25rem;
-    line-height: 1.6;
-    margin-bottom: 2.5rem;
-    opacity: 0.95;
-}
-
-/* メインCTA */
-.hero-cta-container {
-    margin-bottom: 3rem;
-}
-
-.hero-main-cta {
-    display: inline-block;
-    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-    color: white;
-    padding: 1.5rem 3rem;
-    border-radius: 15px;
-    font-size: 1.25rem;
+.hero-title {
+    font-size: 3rem;
     font-weight: 700;
-    text-decoration: none;
-    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
-    transition: all 0.3s ease;
-    animation: pulse-cta 2s infinite;
-    position: relative;
-    overflow: hidden;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out 0.4s both;
 }
 
-.hero-main-cta::before {
-    content: '';
+.hero-subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.hero-cta {
+    display: inline-block;
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+    animation: fadeInUp 1s ease-out 0.8s both;
+}
+
+.hero-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
+}
+
+.hero-visual {
+    position: relative;
+    animation: slideInRight 1s ease-out;
+}
+
+.illustration-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.family-illustration {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+}
+
+.illustration-text {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.illustration-subtext {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.floating-elements {
     position: absolute;
     top: 0;
-    left: -100%;
+    left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    transition: left 0.5s;
+    pointer-events: none;
+    z-index: 1;
 }
 
-.hero-main-cta:hover::before {
-    left: 100%;
+.floating-element {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
 }
 
-.hero-main-cta:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 12px 35px rgba(255, 107, 107, 0.6);
+.floating-element:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
 }
 
-.cta-subtitle {
-    display: block;
-    font-size: 0.9rem;
-    font-weight: 400;
-    opacity: 0.9;
-    margin-top: 0.25rem;
+.floating-element:nth-child(2) {
+    width: 60px;
+    height: 60px;
+    top: 60%;
+    left: 80%;
+    animation-delay: 2s;
 }
 
-@keyframes pulse-cta {
-    0%, 100% { box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4); }
-    50% { box-shadow: 0 8px 35px rgba(255, 107, 107, 0.6); }
+.floating-element:nth-child(3) {
+    width: 40px;
+    height: 40px;
+    top: 80%;
+    left: 20%;
+    animation-delay: 4s;
 }
 
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
     .hero-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
         text-align: center;
     }
-    
-    .hero-title-new {
-        font-size: 2.5rem;
+
+    .hero-title {
+        font-size: 2.2rem;
     }
-    
-    .hero-main-cta {
-        padding: 1.25rem 2rem;
-        font-size: 1.1rem;
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .illustration-container {
+        padding: 30px 20px;
+    }
+
+    .family-illustration {
+        max-width: 250px;
     }
 }
 
 @media (max-width: 480px) {
-    .hero-title-new {
-        font-size: 2rem;
+    .hero-title {
+        font-size: 1.8rem;
     }
-    
-    .hero-description-new {
-        font-size: 1.1rem;
+
+    .hero-cta {
+        padding: 12px 24px;
+        font-size: 1rem;
     }
-    
-    .trust-indicators {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.75rem;
+
+    .illustration-container {
+        padding: 20px 15px;
     }
 }
 </style>
