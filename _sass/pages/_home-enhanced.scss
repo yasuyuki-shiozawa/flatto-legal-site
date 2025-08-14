@@ -205,15 +205,18 @@
   }
   
   &.teal {
-    background: linear-gradient(135deg, #16a085 0%, #1abc9c 100%);
+    background: linear-gradient(135deg, #A8E6CF 0%, #81C784 100%);
+    color: #2E7D32;
   }
   
   &.indigo {
-    background: linear-gradient(135deg, #6c5ce7 0%, #818cf8 100%);
+    background: linear-gradient(135deg, #A8E6CF 0%, #C8E6C9 100%);
+    color: #2E7D32;
   }
   
   &.coral {
-    background: linear-gradient(135deg, #fd79a8 0%, #ff6b9d 100%);
+    background: linear-gradient(135deg, #FFB74D 0%, #FFCC80 100%);
+    color: #F57C00;
   }
   
   // 上部のリボンバッジ
