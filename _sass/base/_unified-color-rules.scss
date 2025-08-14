@@ -1,5 +1,6 @@
 // 統一色使いルール - ふらっと法務事務所
 // グリーン=構造・枠、オレンジ=アクション・強調、グレー=補助・情報
+// 濃淡に応じたテキスト色の統一ルール
 
 // ===== カラーパレット定義 =====
 
@@ -18,10 +19,62 @@ $info-gray-light: #F5F5F5;          // ライトグレー（明）
 $info-gray-medium: #E0E0E0;         // ミディアムグレー（中）
 $info-gray-dark: #616161;           // ダークグレー（濃）
 
-// テキストカラー
+// テキストカラー（濃淡対応）
+$text-on-light: #333333;            // 淡い背景用（黒系）
+$text-on-dark: #FFFFFF;             // 濃い背景用（白系）
 $text-primary: #2c3e50;             // メインテキスト
 $text-secondary: #6c757d;           // サブテキスト
 $text-muted: #adb5bd;               // 薄いテキスト
+
+// ===== 濃淡対応テキスト色統一ルール =====
+
+// 淡い背景 → 黒系テキスト
+.bg-light-green { 
+  background-color: $structure-green-light; 
+  color: $text-on-light; 
+}
+
+.bg-light-orange { 
+  background-color: $action-orange-light; 
+  color: $text-on-light; 
+}
+
+.bg-light-gray { 
+  background-color: $info-gray-light; 
+  color: $text-on-light; 
+}
+
+// 中間背景 → 補色テキスト（コントラスト重視）
+.bg-medium-green { 
+  background-color: $structure-green-medium; 
+  color: $action-orange-dark; // グリーン背景にオレンジテキスト
+}
+
+.bg-medium-orange { 
+  background-color: $action-orange-medium; 
+  color: $structure-green-dark; // オレンジ背景にグリーンテキスト
+}
+
+.bg-medium-gray { 
+  background-color: $info-gray-medium; 
+  color: $text-on-light; 
+}
+
+// 濃い背景 → 白系テキスト
+.bg-dark-green { 
+  background-color: $structure-green-dark; 
+  color: $text-on-dark; 
+}
+
+.bg-dark-orange { 
+  background-color: $action-orange-dark; 
+  color: $text-on-dark; 
+}
+
+.bg-dark-gray { 
+  background-color: $info-gray-dark; 
+  color: $text-on-dark; 
+}
 
 // ===== 統一ルール適用クラス =====
 
@@ -41,17 +94,20 @@ $text-muted: #adb5bd;               // 薄いテキスト
   // ヘッダー背景
   &.header-bg {
     background: linear-gradient(135deg, $structure-green-light 0%, $structure-green-medium 100%);
+    color: $text-on-dark; // 濃い背景なので白テキスト
   }
   
   // サイドバー背景
   &.sidebar-bg {
     background: linear-gradient(135deg, $structure-green-light 0%, lighten($structure-green-light, 5%) 100%);
+    color: $text-on-light; // 淡い背景なので黒テキスト
   }
   
   // ナビゲーション枠
   &.nav-container {
     border: 1px solid rgba($structure-green-light, 0.3);
     background: rgba($structure-green-light, 0.1);
+    color: $text-on-light; // 淡い背景なので黒テキスト
   }
 }
 
@@ -77,12 +133,12 @@ $text-muted: #adb5bd;               // 薄いテキスト
   // CTAボタン
   &.cta-button {
     background: linear-gradient(135deg, $action-orange-light 0%, $action-orange-medium 100%);
-    color: $action-orange-dark;
+    color: $structure-green-dark; // オレンジ背景にグリーンテキスト
     border: 2px solid transparent;
     
     &:hover {
       background: linear-gradient(135deg, $action-orange-medium 0%, $action-orange-dark 100%);
-      color: white;
+      color: $text-on-dark; // 濃い背景なので白テキスト
       border-color: $action-orange-dark;
     }
   }
@@ -96,7 +152,7 @@ $text-muted: #adb5bd;               // 薄いテキスト
   // バッジ・ラベル
   &.badge {
     background: $action-orange-medium;
-    color: $action-orange-dark;
+    color: $structure-green-dark; // オレンジ背景にグリーンテキスト
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
     font-size: 0.875rem;
@@ -121,6 +177,7 @@ $text-muted: #adb5bd;               // 薄いテキスト
   // 補助背景
   &.support-bg {
     background: $info-gray-light;
+    color: $text-on-light; // 淡い背景なので黒テキスト
     border: 1px solid $info-gray-medium;
   }
   
@@ -132,6 +189,7 @@ $text-muted: #adb5bd;               // 薄いテキスト
   // 情報カード
   &.info-card {
     background: white;
+    color: $text-on-light; // 白背景なので黒テキスト
     border: 1px solid $info-gray-medium;
     box-shadow: 0 2px 4px rgba($info-gray-dark, 0.1);
   }
@@ -146,6 +204,7 @@ $text-muted: #adb5bd;               // 薄いテキスト
     border-radius: 12px;
   } @else if $type == 'background' {
     background: linear-gradient(135deg, $structure-green-light 0%, $structure-green-medium 100%);
+    color: $action-orange-dark; // グリーン背景にオレンジテキスト
   } @else if $type == 'divider' {
     border-top: 3px solid $structure-green-medium;
   }
@@ -155,7 +214,7 @@ $text-muted: #adb5bd;               // 薄いテキスト
 @mixin action-style($type: 'default') {
   @if $type == 'button' {
     background: linear-gradient(135deg, $action-orange-light 0%, $action-orange-medium 100%);
-    color: $action-orange-dark;
+    color: $structure-green-dark; // オレンジ背景にグリーンテキスト
     border: 2px solid transparent;
     padding: 0.75rem 1.5rem;
     border-radius: 8px;
@@ -164,7 +223,7 @@ $text-muted: #adb5bd;               // 薄いテキスト
     
     &:hover {
       background: linear-gradient(135deg, $action-orange-medium 0%, $action-orange-dark 100%);
-      color: white;
+      color: $text-on-dark; // 濃い背景なので白テキスト
       border-color: $action-orange-dark;
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba($action-orange-dark, 0.3);
@@ -190,6 +249,7 @@ $text-muted: #adb5bd;               // 薄いテキスト
     font-size: 0.9rem;
   } @else if $type == 'background' {
     background: $info-gray-light;
+    color: $text-on-light; // 淡い背景なので黒テキスト
     border: 1px solid $info-gray-medium;
   }
 }
@@ -200,6 +260,7 @@ $text-muted: #adb5bd;               // 薄いテキスト
 .sidebar-card-unified {
   @include structure-style('border');
   background: white;
+  color: $text-on-light; // 白背景なので黒テキスト
   margin-bottom: 1.5rem;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -215,10 +276,10 @@ $text-muted: #adb5bd;               // 薄いテキスト
     border-bottom: 2px solid $structure-green-light;
     
     h3 {
-      @include info-style('text');
       margin: 0;
       font-size: 1.125rem;
       font-weight: 600;
+      color: $action-orange-dark; // グリーン背景にオレンジテキスト
     }
     
     i {
@@ -243,9 +304,9 @@ $text-muted: #adb5bd;               // 薄いテキスト
     background: rgba($structure-green-light, 0.1);
     
     span {
-      @include info-style('text');
       font-weight: 500;
       white-space: nowrap;
+      color: $text-on-light; // 淡い背景なので黒テキスト
     }
     
     i {
@@ -260,7 +321,7 @@ $text-muted: #adb5bd;               // 薄いテキスト
       box-shadow: 0 2px 8px rgba($structure-green-medium, 0.2);
       
       span {
-        color: $structure-green-dark;
+        color: $action-orange-dark; // グリーン背景にオレンジテキスト
       }
       
       i {
@@ -292,10 +353,10 @@ $text-muted: #adb5bd;               // 薄いテキスト
   margin-bottom: 1rem;
   
   h4 {
-    @include info-style('text');
     margin-bottom: 0.75rem;
     font-size: 1.125rem;
     font-weight: 600;
+    color: $text-on-light; // 淡い背景なので黒テキスト
   }
   
   p {
@@ -305,6 +366,36 @@ $text-muted: #adb5bd;               // 薄いテキスト
   
   .highlight {
     @include action-style('highlight');
+  }
+}
+
+// ===== アクセシビリティ対応 =====
+
+// 高コントラストモード対応
+@media (prefers-contrast: high) {
+  .bg-medium-green { 
+    color: darken($action-orange-dark, 20%); 
+  }
+  
+  .bg-medium-orange { 
+    color: darken($structure-green-dark, 20%); 
+  }
+  
+  .action-element.cta-button {
+    border: 2px solid $text-on-dark;
+  }
+}
+
+// 動きを減らす設定対応
+@media (prefers-reduced-motion: reduce) {
+  .sidebar-card-unified,
+  .cta-button-unified,
+  .sidebar-nav-link {
+    transition: none;
+    
+    &:hover {
+      transform: none;
+    }
   }
 }
 
