@@ -17,24 +17,24 @@
     border-color: #81C784;
   }
   
-  // カードヘッダー - 統一色使いルール適用
+  // カードヘッダー - 統一色使いルール適用（優先度強制）
   .sidebar-card-header {
     padding: 1rem 1.25rem;
     display: flex;
     align-items: center;
     gap: 0.75rem;
     
-    // 統一ルール: 全て同じパステルグリーン背景
+    // 統一ルール: 全て同じパステルグリーン背景（!important で強制）
     &.primary,
     &.secondary,
     &.accent {
-      background: linear-gradient(135deg, #A8E6CF 0%, #C8E6C9 100%);
-      color: #2E7D32; // 淡いグリーン背景に濃いグリーンテキスト
+      background: linear-gradient(135deg, #A8E6CF 0%, #C8E6C9 100%) !important;
+      color: #2E7D32 !important; // 淡いグリーン背景に濃いグリーンテキスト
     }
     
     i {
       font-size: 1.25rem;
-      color: #F57C00; // 統一ルール: オレンジアイコン（アクション要素）
+      color: #F57C00 !important; // 統一ルール: オレンジアイコン（アクション要素）
     }
     
     h3 {
@@ -42,7 +42,7 @@
       font-size: 1.125rem;
       font-weight: 600;
       letter-spacing: 0.02em;
-      color: #2E7D32; // 統一ルール: 濃いグリーンテキスト
+      color: #2E7D32 !important; // 統一ルール: 濃いグリーンテキスト
     }
   }
   
@@ -112,13 +112,13 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem 1rem;
-  color: #333333; // 統一ルール: 淡い背景に黒系テキスト
+  color: #333333 !important; // 統一ルール: 淡い背景に黒系テキスト
   text-decoration: none;
   border-radius: 8px;
   transition: all 0.2s ease;
   font-weight: 500;
-  border: 1px solid rgba(168, 230, 207, 0.3); // 統一ルール: グリーン枠
-  background: rgba(168, 230, 207, 0.1); // 統一ルール: 淡いグリーン背景
+  border: 1px solid rgba(168, 230, 207, 0.3) !important; // 統一ルール: グリーン枠
+  background: rgba(168, 230, 207, 0.1) !important; // 統一ルール: 淡いグリーン背景
   margin-bottom: 0.5rem;
   
   span {
@@ -126,44 +126,44 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: #333333; // 統一ルール: 淡い背景に黒系テキスト
+    color: #333333 !important; // 統一ルール: 淡い背景に黒系テキスト
   }
   
   i {
-    color: #F57C00; // 統一ルール: オレンジアイコン（アクション要素）
+    color: #F57C00 !important; // 統一ルール: オレンジアイコン（アクション要素）
     font-size: 0.875rem;
     transition: transform 0.2s ease;
   }
   
   &:hover {
-    background: linear-gradient(135deg, #A8E6CF 0%, #C8E6C9 100%); // 統一ルール: グリーン背景
-    color: #F57C00; // 統一ルール: グリーン背景にオレンジテキスト
-    border-color: #81C784;
+    background: linear-gradient(135deg, #A8E6CF 0%, #C8E6C9 100%) !important; // 統一ルール: グリーン背景
+    color: #F57C00 !important; // 統一ルール: グリーン背景にオレンジテキスト
+    border-color: #81C784 !important;
     transform: translateY(-1px);
     box-shadow: 0 2px 8px rgba(168, 230, 207, 0.2);
     
     span {
-      color: #F57C00; // 統一ルール: グリーン背景にオレンジテキスト
+      color: #F57C00 !important; // 統一ルール: グリーン背景にオレンジテキスト
     }
     
     i {
-      color: #F57C00;
+      color: #F57C00 !important;
       transform: translateX(3px);
     }
   }
   
   &.active {
-    background: linear-gradient(135deg, #81C784 0%, #66BB6A 100%); // 統一ルール: 濃いグリーン背景
-    color: #FFFFFF; // 統一ルール: 濃い背景に白テキスト
+    background: linear-gradient(135deg, #81C784 0%, #66BB6A 100%) !important; // 統一ルール: 濃いグリーン背景
+    color: #FFFFFF !important; // 統一ルール: 濃い背景に白テキスト
     font-weight: 600;
-    border-color: #4CAF50;
+    border-color: #4CAF50 !important;
     
     span {
-      color: #FFFFFF; // 統一ルール: 濃い背景に白テキスト
+      color: #FFFFFF !important; // 統一ルール: 濃い背景に白テキスト
     }
     
     i {
-      color: #FFE0B2; // 統一ルール: 濃い背景に淡いオレンジアイコン
+      color: #FFE0B2 !important; // 統一ルール: 濃い背景に淡いオレンジアイコン
     }
   }
 }
