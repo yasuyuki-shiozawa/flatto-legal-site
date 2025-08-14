@@ -832,8 +832,8 @@ permalink: /lp-form/
 
             <div class="contact-info">
                 <h3>お急ぎの方はお電話でも</h3>
-                <a href="tel:0120-123-456" class="phone-number">0120-123-456</a>
-                <p class="business-hours">平日 9:00-18:00（土日祝除く）</p>
+                <a href="tel:046-272-3357" class="phone-number">046-272-3357</a>
+                <p class="business-hours">9:00～17:00</p>
             </div>
         </div>
     </div>
