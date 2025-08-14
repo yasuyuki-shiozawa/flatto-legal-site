@@ -1,0 +1,154 @@
+<!-- 画像最適化スクリプト -->
+<script>
+// 遅延読み込み（Lazy Loading）の実装
+document.addEventListener('DOMContentLoaded', function() {
+    // Intersection Observer APIをサポートしているかチェック
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    
+                    // data-src属性から実際のsrcに変更
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                    }
+                    
+                    // data-srcset属性がある場合も処理
+                    if (img.dataset.srcset) {
+                        img.srcset = img.dataset.srcset;
+                        img.removeAttribute('data-srcset');
+                    }
+                    
+                    // loading="lazy"属性を削除
+                    img.removeAttribute('loading');
+                    
+                    // 読み込み完了後にクラスを追加
+                    img.onload = function() {
+                        img.classList.add('loaded');
+                    };
+                    
+                    // 監視を停止
+                    observer.unobserve(img);
+                }
+            });
+        }, {
+            // 画像がビューポートに入る50px前から読み込み開始
+            rootMargin: '50px 0px',
+            threshold: 0.01
+        });
+
+        // 遅延読み込み対象の画像を監視
+        const lazyImages = document.querySelectorAll('img[data-src], img[loading="lazy"]');
+        lazyImages.forEach(img => {
+            imageObserver.observe(img);
+        });
+    } else {
+        // Intersection Observer APIが使えない場合のフォールバック
+        const lazyImages = document.querySelectorAll('img[data-src]');
+        lazyImages.forEach(img => {
+            if (img.dataset.src) {
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+            }
+        });
+    }
+});
+
+// WebP対応チェックと画像形式の最適化
+function supportsWebP() {
+    return new Promise((resolve) => {
+        const webP = new Image();
+        webP.onload = webP.onerror = function () {
+            resolve(webP.height === 2);
+        };
+        webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+    });
+}
+
+// 画像の最適化処理
+document.addEventListener('DOMContentLoaded', async function() {
+    const webpSupported = await supportsWebP();
+    
+    if (webpSupported) {
+        // WebP対応ブラウザの場合、JPEG/PNG画像をWebPに置換
+        const images = document.querySelectorAll('img[src$=".jpg"], img[src$=".jpeg"], img[src$=".png"]');
+        images.forEach(img => {
+            const webpSrc = img.src.replace(/\.(jpg|jpeg|png)$/i, '.webp');
+            
+            // WebP画像が存在するかチェック
+            const testImg = new Image();
+            testImg.onload = function() {
+                img.src = webpSrc;
+            };
+            testImg.src = webpSrc;
+        });
+    }
+});
+
+// 画像の読み込みエラー処理
+document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+        img.onerror = function() {
+            // 画像読み込みエラー時のフォールバック
+            if (this.src.includes('.webp')) {
+                // WebPが失敗した場合、元の形式に戻す
+                this.src = this.src.replace('.webp', '.jpg');
+            } else if (!this.src.includes('default-image')) {
+                // デフォルト画像に置換
+                this.src = '/assets/images/default-image.svg';
+            }
+        };
+    });
+});
+</script>
+
+<!-- 画像最適化用CSS -->
+<style>
+/* 遅延読み込み中の画像スタイル */
+img[data-src] {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+img.loaded {
+    opacity: 1;
+}
+
+/* 画像読み込み中のプレースホルダー */
+img[data-src]::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* レスポンシブ画像の最適化 */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 重要な画像（Above the fold）は即座に読み込み */
+.hero img,
+.logo img,
+img[data-priority="high"] {
+    opacity: 1 !important;
+}
+</style>
+

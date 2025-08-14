@@ -10,6 +10,9 @@
     <!-- Jekyll SEO Tag -->
     {% seo %}
     
+    <!-- 構造化データ -->
+    {% include structured-data.html %}
+    
     <!-- Additional Custom Meta Tags -->
     <meta name="author" content="行政書士法人ふらっと法務事務所">
     <meta name="robots" content="index, follow">
@@ -33,6 +36,9 @@
       gtag('config', '{{ site.google_analytics }}');
     </script>
     {% endif %}
+    
+    <!-- パフォーマンス最適化 -->
+    {% include performance-optimization.html %}
 </head>
 
 <body class="{% if page.layout %}{{ page.layout }}{% endif %} {% if page.url %}{{ page.url | replace: '/', ' ' | strip }}{% endif %}">
@@ -75,6 +81,9 @@
     
     <!-- JavaScript -->
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+    
+    <!-- 画像最適化 -->
+    {% include optimized-images.html %}
     
     <!-- 問い合わせボタン詳細計測（全ページ共通） -->
     {% include contact-button-analytics.html %}
