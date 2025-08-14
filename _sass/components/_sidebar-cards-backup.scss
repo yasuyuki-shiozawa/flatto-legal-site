@@ -24,6 +24,33 @@
     align-items: center;
     gap: 0.75rem;
   }
+}
+
+// 最高優先度で統一色使いルールを強制適用
+.left-sidebar-content .sidebar-card .sidebar-card-header.primary,
+.left-sidebar-content .sidebar-card .sidebar-card-header.secondary,
+.left-sidebar-content .sidebar-card .sidebar-card-header.accent,
+.sidebar-card .sidebar-card-header.primary,
+.sidebar-card .sidebar-card-header.secondary,
+.sidebar-card .sidebar-card-header.accent {
+  background: linear-gradient(135deg, #A8E6CF 0%, #C8E6C9 100%) !important;
+  color: #2E7D32 !important;
+}
+
+.left-sidebar-content .sidebar-card .sidebar-card-header i,
+.sidebar-card .sidebar-card-header i {
+  font-size: 1.25rem;
+  color: #F57C00 !important; // 統一ルール: オレンジアイコン（アクション要素）
+}
+
+.left-sidebar-content .sidebar-card .sidebar-card-header h3,
+.sidebar-card .sidebar-card-header h3 {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #2E7D32 !important; // 統一ルール: 濃いグリーンテキスト
+}
   
   // カードボディ
   .sidebar-card-body {
@@ -69,32 +96,6 @@
       }
     }
   }
-}
-
-// 最高優先度で統一色使いルールを強制適用
-.left-sidebar-content .sidebar-card .sidebar-card-header.primary,
-.left-sidebar-content .sidebar-card .sidebar-card-header.secondary,
-.left-sidebar-content .sidebar-card .sidebar-card-header.accent,
-.sidebar-card .sidebar-card-header.primary,
-.sidebar-card .sidebar-card-header.secondary,
-.sidebar-card .sidebar-card-header.accent {
-  background: linear-gradient(135deg, #A8E6CF 0%, #C8E6C9 100%) !important;
-  color: #2E7D32 !important;
-}
-
-.left-sidebar-content .sidebar-card .sidebar-card-header i,
-.sidebar-card .sidebar-card-header i {
-  font-size: 1.25rem;
-  color: #F57C00 !important; // 統一ルール: オレンジアイコン（アクション要素）
-}
-
-.left-sidebar-content .sidebar-card .sidebar-card-header h3,
-.sidebar-card .sidebar-card-header h3 {
-  margin: 0;
-  font-size: 1.125rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: #2E7D32 !important; // 統一ルール: 濃いグリーンテキスト
 }
 
 // 左サイドバー ナビゲーションリスト
@@ -472,4 +473,3 @@
 }
 
 /* Force deploy Thu Aug 14 03:10:11 EDT 2025 */
-

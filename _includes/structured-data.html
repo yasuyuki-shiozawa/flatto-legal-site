@@ -206,3 +206,11 @@
 }
 </script>
 
+<!-- Twitter Card設定 -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@flatto_legal">
+<meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta name="twitter:image" content="{{ site.url }}{% if page.image %}{{ page.image }}{% else %}/assets/images/og-image.webp{% endif %}">
+<meta name="twitter:image:alt" content="{% if page.title %}{{ page.title }}{% else %}入札マップ - 公共調達の入門から実践まで{% endif %}">
+
