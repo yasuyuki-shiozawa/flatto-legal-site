@@ -1,0 +1,228 @@
+// アクセシブルで読みやすいボタンスタイル
+// WCAG基準を満たすコントラスト比とパステル調デザイン
+
+// 基本ボタンスタイル
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  
+  &:focus {
+    outline: 2px solid #4A90E2;
+    outline-offset: 2px;
+  }
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+// プライマリボタン（読みやすいパステルオレンジ）
+.btn-primary {
+  background: linear-gradient(135deg, #FFE0B2 0%, #FFCC80 100%);
+  color: #BF360C !important;
+  border-color: #FFCC80;
+  box-shadow: 0 2px 4px rgba(191, 54, 12, 0.1);
+  
+  &:hover {
+    background: linear-gradient(135deg, #FFCC80 0%, #FFB74D 100%);
+    color: #BF360C !important;
+    border-color: #FFB74D;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(191, 54, 12, 0.15);
+  }
+  
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(191, 54, 12, 0.2);
+  }
+}
+
+// セカンダリボタン（読みやすいパステルグリーン）
+.btn-secondary {
+  background: linear-gradient(135deg, #E8F5E8 0%, #C8E6C9 100%);
+  color: #2E7D32 !important;
+  border-color: #C8E6C9;
+  box-shadow: 0 2px 4px rgba(46, 125, 50, 0.1);
+  
+  &:hover {
+    background: linear-gradient(135deg, #C8E6C9 0%, #A5D6A7 100%);
+    color: #2E7D32 !important;
+    border-color: #A5D6A7;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(46, 125, 50, 0.15);
+  }
+  
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(46, 125, 50, 0.2);
+  }
+}
+
+// アウトラインボタン
+.btn-outline-primary {
+  background: transparent;
+  color: #BF360C !important;
+  border-color: #FFCC80;
+  
+  &:hover {
+    background: #FFCC80;
+    color: #BF360C !important;
+    border-color: #FFCC80;
+  }
+}
+
+.btn-outline-secondary {
+  background: transparent;
+  color: #2E7D32 !important;
+  border-color: #C8E6C9;
+  
+  &:hover {
+    background: #C8E6C9;
+    color: #2E7D32 !important;
+    border-color: #C8E6C9;
+  }
+}
+
+// サイズバリエーション
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.btn-lg {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  
+  i {
+    margin-right: 0.5rem;
+  }
+}
+
+// 特殊ボタン（動画ボタン）
+.video-hero-btn {
+  background: linear-gradient(135deg, #FFE0B2 0%, #FFCC80 100%) !important;
+  color: #BF360C !important;
+  border-color: #FFCC80 !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 12px rgba(191, 54, 12, 0.15) !important;
+  
+  &:hover {
+    background: linear-gradient(135deg, #FFCC80 0%, #FFB74D 100%) !important;
+    color: #BF360C !important;
+    border-color: #FFB74D !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(191, 54, 12, 0.2) !important;
+  }
+  
+  &:active {
+    transform: translateY(0) !important;
+    box-shadow: 0 4px 12px rgba(191, 54, 12, 0.25) !important;
+  }
+  
+  i {
+    color: #BF360C !important;
+  }
+}
+
+// CTAボタン（ヒーローセクション）
+.hero-cta {
+  background: linear-gradient(135deg, #FFE0B2 0%, #FFCC80 100%) !important;
+  color: #BF360C !important;
+  border: 2px solid #FFCC80 !important;
+  font-weight: 600 !important;
+  padding: 1rem 2rem !important;
+  font-size: 1.125rem !important;
+  border-radius: 50px !important;
+  box-shadow: 0 4px 12px rgba(191, 54, 12, 0.15) !important;
+  text-decoration: none !important;
+  
+  &:hover {
+    background: linear-gradient(135deg, #FFCC80 0%, #FFB74D 100%) !important;
+    color: #BF360C !important;
+    border-color: #FFB74D !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(191, 54, 12, 0.2) !important;
+    text-decoration: none !important;
+  }
+  
+  &:active {
+    transform: translateY(0) !important;
+    box-shadow: 0 4px 12px rgba(191, 54, 12, 0.25) !important;
+  }
+}
+
+// ボタングループ
+.btn-group {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  
+  @media (max-width: 767px) {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+// ローディング状態
+.btn-loading {
+  position: relative;
+  color: transparent !important;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    border: 2px solid transparent;
+    border-top-color: currentColor;
+    border-radius: 50%;
+    animation: btn-spin 1s linear infinite;
+  }
+}
+
+@keyframes btn-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+// アクセシビリティ強化
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+  
+  .btn-loading::after {
+    animation: none;
+  }
+}
+
+// ハイコントラストモード対応
+@media (prefers-contrast: high) {
+  .btn-primary {
+    background: #FF9800 !important;
+    color: #000000 !important;
+    border-color: #000000 !important;
+  }
+  
+  .btn-secondary {
+    background: #4CAF50 !important;
+    color: #000000 !important;
+    border-color: #000000 !important;
+  }
+}
+

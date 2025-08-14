@@ -19,13 +19,15 @@
 .cta-button,
 .btn-primary,
 .button-primary {
-  background: linear-gradient(135deg, var(--color-orange-warm) 0%, var(--color-orange-dark) 100%) !important;
-  color: var(--color-text-inverse) !important;
-  border-color: var(--color-orange-warm) !important;
+  background: linear-gradient(135deg, var(--accent-medium) 0%, var(--accent-dark) 100%) !important;
+  color: #FFFFFF !important;
+  border-color: var(--accent-medium) !important;
+  font-weight: 600 !important;
   
   &:hover {
-    background: linear-gradient(135deg, var(--color-orange-dark) 0%, #d14d26 100%) !important;
-    border-color: var(--color-orange-dark) !important;
+    background: linear-gradient(135deg, var(--accent-dark) 0%, #BF360C 100%) !important;
+    border-color: var(--accent-dark) !important;
+    color: #FFFFFF !important;
   }
 }
 
