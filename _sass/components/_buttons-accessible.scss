@@ -28,45 +28,45 @@
   }
 }
 
-// プライマリボタン（読みやすいパステルオレンジ）
+// プライマリボタン（統一パステルオレンジ）
 .btn-primary {
-  background: linear-gradient(135deg, #FFE0B2 0%, #FFCC80 100%);
+  background: linear-gradient(135deg, #FFE0B2 0%, #FFCC80 100%) !important;
   color: #BF360C !important;
-  border-color: #FFCC80;
-  box-shadow: 0 2px 4px rgba(191, 54, 12, 0.1);
+  border-color: #FFCC80 !important;
+  box-shadow: 0 2px 4px rgba(191, 54, 12, 0.1) !important;
   
   &:hover {
-    background: linear-gradient(135deg, #FFCC80 0%, #FFB74D 100%);
+    background: linear-gradient(135deg, #FFCC80 0%, #FFB74D 100%) !important;
     color: #BF360C !important;
-    border-color: #FFB74D;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(191, 54, 12, 0.15);
+    border-color: #FFB74D !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(191, 54, 12, 0.15) !important;
   }
   
   &:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(191, 54, 12, 0.2);
+    transform: translateY(0) !important;
+    box-shadow: 0 2px 4px rgba(191, 54, 12, 0.2) !important;
   }
 }
 
-// セカンダリボタン（読みやすいパステルグリーン）
+// セカンダリボタン（パステルグリーン）
 .btn-secondary {
-  background: linear-gradient(135deg, #E8F5E8 0%, #C8E6C9 100%);
+  background: linear-gradient(135deg, #E8F5E8 0%, #C8E6C9 100%) !important;
   color: #2E7D32 !important;
-  border-color: #C8E6C9;
-  box-shadow: 0 2px 4px rgba(46, 125, 50, 0.1);
+  border-color: #C8E6C9 !important;
+  box-shadow: 0 2px 4px rgba(46, 125, 50, 0.1) !important;
   
   &:hover {
-    background: linear-gradient(135deg, #C8E6C9 0%, #A5D6A7 100%);
+    background: linear-gradient(135deg, #C8E6C9 0%, #A5D6A7 100%) !important;
     color: #2E7D32 !important;
-    border-color: #A5D6A7;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(46, 125, 50, 0.15);
+    border-color: #A5D6A7 !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(46, 125, 50, 0.15) !important;
   }
   
   &:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(46, 125, 50, 0.2);
+    transform: translateY(0) !important;
+    box-shadow: 0 2px 4px rgba(46, 125, 50, 0.2) !important;
   }
 }
 
