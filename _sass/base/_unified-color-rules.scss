@@ -1,0 +1,310 @@
+// 統一色使いルール - ふらっと法務事務所
+// グリーン=構造・枠、オレンジ=アクション・強調、グレー=補助・情報
+
+// ===== カラーパレット定義 =====
+
+// グリーン系（構造・枠組み）
+$structure-green-light: #A8E6CF;    // パステルグリーン（明）
+$structure-green-medium: #81C784;   // パステルグリーン（中）
+$structure-green-dark: #2E7D32;     // ダークグリーン（濃）
+
+// オレンジ系（アクション・強調）
+$action-orange-light: #FFE0B2;      // パステルオレンジ（明）
+$action-orange-medium: #FFCC80;     // パステルオレンジ（中）
+$action-orange-dark: #F57C00;       // ダークオレンジ（濃）
+
+// グレー系（補助・情報）
+$info-gray-light: #F5F5F5;          // ライトグレー（明）
+$info-gray-medium: #E0E0E0;         // ミディアムグレー（中）
+$info-gray-dark: #616161;           // ダークグレー（濃）
+
+// テキストカラー
+$text-primary: #2c3e50;             // メインテキスト
+$text-secondary: #6c757d;           // サブテキスト
+$text-muted: #adb5bd;               // 薄いテキスト
+
+// ===== 統一ルール適用クラス =====
+
+// 構造・枠組み（グリーン）
+.structure-element {
+  // カードの枠線
+  &.card-border {
+    border: 2px solid $structure-green-light;
+    border-radius: 12px;
+  }
+  
+  // セクション区切り線
+  &.section-divider {
+    border-top: 3px solid $structure-green-medium;
+  }
+  
+  // ヘッダー背景
+  &.header-bg {
+    background: linear-gradient(135deg, $structure-green-light 0%, $structure-green-medium 100%);
+  }
+  
+  // サイドバー背景
+  &.sidebar-bg {
+    background: linear-gradient(135deg, $structure-green-light 0%, lighten($structure-green-light, 5%) 100%);
+  }
+  
+  // ナビゲーション枠
+  &.nav-container {
+    border: 1px solid rgba($structure-green-light, 0.3);
+    background: rgba($structure-green-light, 0.1);
+  }
+}
+
+// アクション・強調（オレンジ）
+.action-element {
+  // アイコン
+  &.icon {
+    color: $action-orange-dark;
+    background: rgba($action-orange-light, 0.2);
+    border-radius: 8px;
+    padding: 0.5rem;
+  }
+  
+  // プログレスバー
+  &.progress-bar {
+    background: $action-orange-light;
+    
+    .progress-fill {
+      background: linear-gradient(90deg, $action-orange-medium 0%, $action-orange-dark 100%);
+    }
+  }
+  
+  // CTAボタン
+  &.cta-button {
+    background: linear-gradient(135deg, $action-orange-light 0%, $action-orange-medium 100%);
+    color: $action-orange-dark;
+    border: 2px solid transparent;
+    
+    &:hover {
+      background: linear-gradient(135deg, $action-orange-medium 0%, $action-orange-dark 100%);
+      color: white;
+      border-color: $action-orange-dark;
+    }
+  }
+  
+  // 強調テキスト
+  &.highlight-text {
+    color: $action-orange-dark;
+    font-weight: 600;
+  }
+  
+  // バッジ・ラベル
+  &.badge {
+    background: $action-orange-medium;
+    color: $action-orange-dark;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+}
+
+// 補助・情報（グレー）
+.info-element {
+  // 本文テキスト
+  &.body-text {
+    color: $text-primary;
+    line-height: 1.6;
+  }
+  
+  // サブテキスト
+  &.sub-text {
+    color: $text-secondary;
+    font-size: 0.9rem;
+  }
+  
+  // 補助背景
+  &.support-bg {
+    background: $info-gray-light;
+    border: 1px solid $info-gray-medium;
+  }
+  
+  // 細い境界線
+  &.thin-border {
+    border: 1px solid $info-gray-medium;
+  }
+  
+  // 情報カード
+  &.info-card {
+    background: white;
+    border: 1px solid $info-gray-medium;
+    box-shadow: 0 2px 4px rgba($info-gray-dark, 0.1);
+  }
+}
+
+// ===== 統一ルール適用ミックスイン =====
+
+// 構造要素のスタイル
+@mixin structure-style($type: 'default') {
+  @if $type == 'border' {
+    border: 2px solid $structure-green-light;
+    border-radius: 12px;
+  } @else if $type == 'background' {
+    background: linear-gradient(135deg, $structure-green-light 0%, $structure-green-medium 100%);
+  } @else if $type == 'divider' {
+    border-top: 3px solid $structure-green-medium;
+  }
+}
+
+// アクション要素のスタイル
+@mixin action-style($type: 'default') {
+  @if $type == 'button' {
+    background: linear-gradient(135deg, $action-orange-light 0%, $action-orange-medium 100%);
+    color: $action-orange-dark;
+    border: 2px solid transparent;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background: linear-gradient(135deg, $action-orange-medium 0%, $action-orange-dark 100%);
+      color: white;
+      border-color: $action-orange-dark;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba($action-orange-dark, 0.3);
+    }
+  } @else if $type == 'icon' {
+    color: $action-orange-dark;
+    background: rgba($action-orange-light, 0.2);
+    border-radius: 8px;
+    padding: 0.5rem;
+  } @else if $type == 'highlight' {
+    color: $action-orange-dark;
+    font-weight: 600;
+  }
+}
+
+// 情報要素のスタイル
+@mixin info-style($type: 'default') {
+  @if $type == 'text' {
+    color: $text-primary;
+    line-height: 1.6;
+  } @else if $type == 'subtext' {
+    color: $text-secondary;
+    font-size: 0.9rem;
+  } @else if $type == 'background' {
+    background: $info-gray-light;
+    border: 1px solid $info-gray-medium;
+  }
+}
+
+// ===== 統一ルール適用例 =====
+
+// 左サイドバーカードの統一ルール適用
+.sidebar-card-unified {
+  @include structure-style('border');
+  background: white;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba($structure-green-medium, 0.2);
+  }
+  
+  .sidebar-card-header {
+    @include structure-style('background');
+    padding: 1.25rem;
+    border-bottom: 2px solid $structure-green-light;
+    
+    h3 {
+      @include info-style('text');
+      margin: 0;
+      font-size: 1.125rem;
+      font-weight: 600;
+    }
+    
+    i {
+      @include action-style('icon');
+      font-size: 1.5rem;
+      margin-right: 0.75rem;
+    }
+  }
+  
+  .sidebar-nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.875rem 1.125rem;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    transition: all 0.2s ease;
+    
+    // 構造要素（グリーン）
+    border: 1px solid $structure-green-light;
+    background: rgba($structure-green-light, 0.1);
+    
+    span {
+      @include info-style('text');
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    
+    i {
+      @include action-style('highlight');
+      font-size: 0.75rem;
+    }
+    
+    &:hover {
+      @include structure-style('background');
+      border-color: $structure-green-medium;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba($structure-green-medium, 0.2);
+      
+      span {
+        color: $structure-green-dark;
+      }
+      
+      i {
+        color: $action-orange-dark;
+        transform: translateX(3px);
+      }
+    }
+  }
+}
+
+// CTAボタンの統一ルール適用
+.cta-button-unified {
+  @include action-style('button');
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  
+  i {
+    font-size: 1rem;
+  }
+}
+
+// 情報カードの統一ルール適用
+.info-card-unified {
+  @include info-style('background');
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  
+  h4 {
+    @include info-style('text');
+    margin-bottom: 0.75rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+  
+  p {
+    @include info-style('subtext');
+    margin-bottom: 0;
+  }
+  
+  .highlight {
+    @include action-style('highlight');
+  }
+}
+

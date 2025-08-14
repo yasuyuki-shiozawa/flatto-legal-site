@@ -8,6 +8,7 @@
 // ベース（変数とタイポグラフィ）
 @import "base/variables";
 @import "base/color-theme";
+@import "base/unified-color-rules"; // 統一色使いルール
 @import "base/typography"; // 新しい統一タイポグラフィ
 @import "base/typography-simplified";
 @import "base/typography-enhanced";
