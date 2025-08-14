@@ -186,6 +186,71 @@ permalink: /knowhow/
 
 ---
 
+<div class="knowledge-banner">
+  <div class="banner-content">
+    <div class="banner-header">
+      <div class="banner-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0118 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+        </svg>
+      </div>
+      <div>
+        <div class="banner-title">入札制度の基本をさらに深く学ぶ</div>
+        <div class="banner-subtitle">基本知識を身につけたら、次は実践的な専門知識へ</div>
+      </div>
+    </div>
+
+    <div class="banner-description">
+      入札の基本的な流れを理解したあなたへ。より具体的な手続きや戦略的なアプローチについて、詳しい解説記事をご用意しています。
+    </div>
+
+    <div class="articles-grid">
+      <a href="/blog/bidding-service-types/" class="article-card">
+        <div class="article-header">
+          <div class="article-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
+            </svg>
+          </div>
+          <div class="article-title">入札案件の役務を学ぼう</div>
+        </div>
+        <div class="article-description">建設だけじゃない47.5兆円市場の全貌</div>
+        <div class="article-meta">
+          <span>2025年1月</span>
+          <span class="article-level">初心者</span>
+        </div>
+      </a>
+
+      <a href="/blog/competitive-bidding-types/" class="article-card">
+        <div class="article-header">
+          <div class="article-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
+            </svg>
+          </div>
+          <div class="article-title">指名競争入札vs一般競争入札</div>
+        </div>
+        <div class="article-description">それぞれの特徴と参加方法を徹底比較</div>
+        <div class="article-meta">
+          <span>2024年7月</span>
+          <span class="article-level">初心者</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="view-more">
+      <a href="/blog/?category=basics" class="view-more-link">
+        基本知識の記事をすべて見る
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+---
+
 ## 電子入札システムの活用
 
 現在、多くの公的機関で電子入札システムが導入されており、従来の紙ベースの手続きから電子化が進んでいます。
