@@ -1,0 +1,210 @@
+// ========================================
+// フッター専用CSS - 根本的解決
+// ========================================
+// 
+// このファイルはフッターの視認性問題を根本的に解決するために作成されました。
+// 他のCSSファイルとの競合を避け、フッター専用のスタイルを最高優先度で適用します。
+//
+// 作成日: 2025年8月15日
+// 目的: フッター内の全テキストを白色で統一表示
+//
+
+// フッター全体の基本設定
+.footer {
+  // 背景色の確保（暗いグレー）
+  background-color: #2d3748 !important;
+  
+  // 基本テキスト色を白に設定
+  color: #ffffff !important;
+  
+  // フッター内の全テキスト要素を白色に強制
+  * {
+    color: #ffffff !important;
+  }
+  
+  // 段落要素
+  p {
+    color: #ffffff !important;
+  }
+  
+  // 見出し要素
+  h1, h2, h3, h4, h5, h6 {
+    color: #ffffff !important;
+  }
+  
+  // リスト要素
+  li {
+    color: #ffffff !important;
+  }
+  
+  // インライン要素
+  span, div {
+    color: #ffffff !important;
+  }
+  
+  // リンク要素（特別な処理）
+  a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    
+    &:hover {
+      color: #e2e8f0 !important;
+      text-decoration: underline !important;
+    }
+    
+    &:visited {
+      color: #ffffff !important;
+    }
+    
+    &:active {
+      color: #ffffff !important;
+    }
+  }
+}
+
+// フッター内の具体的なクラスに対する強制設定
+.footer {
+  // 説明文
+  .footer-description {
+    color: #ffffff !important;
+  }
+  
+  // サイト運営者情報
+  .footer-operated {
+    color: #ffffff !important;
+  }
+  
+  // CTA（行動喚起）テキスト
+  .footer-cta-text {
+    color: #ffffff !important;
+  }
+  
+  // コピーライト
+  .copyright {
+    color: #ffffff !important;
+  }
+  
+  // フッター注記
+  .footer-note {
+    color: #ffffff !important;
+  }
+  
+  // 住所情報
+  .footer-address {
+    color: #ffffff !important;
+  }
+  
+  // 営業時間
+  .footer-hours {
+    color: #ffffff !important;
+  }
+  
+  // プライバシーマーク関連
+  .privacy-text {
+    color: #ffffff !important;
+  }
+  
+  // フッタータイトル
+  .footer-title {
+    color: #ffffff !important;
+  }
+  
+  // フッター情報
+  .footer-info {
+    color: #ffffff !important;
+    
+    * {
+      color: #ffffff !important;
+    }
+  }
+  
+  // フッターセクション
+  .footer-section {
+    color: #ffffff !important;
+    
+    * {
+      color: #ffffff !important;
+    }
+  }
+  
+  // フッターナビゲーション
+  .footer-nav {
+    li {
+      color: #ffffff !important;
+    }
+    
+    a {
+      color: #ffffff !important;
+      
+      &:hover {
+        color: #e2e8f0 !important;
+      }
+    }
+  }
+  
+  // フッターボトム
+  .footer-bottom {
+    color: #ffffff !important;
+    
+    * {
+      color: #ffffff !important;
+    }
+  }
+  
+  // フッターボトムコンテンツ
+  .footer-bottom-content {
+    color: #ffffff !important;
+    
+    * {
+      color: #ffffff !important;
+    }
+  }
+  
+  // フッター左側
+  .footer-left {
+    color: #ffffff !important;
+    
+    * {
+      color: #ffffff !important;
+    }
+  }
+  
+  // フッター右側
+  .footer-right {
+    color: #ffffff !important;
+    
+    * {
+      color: #ffffff !important;
+    }
+  }
+  
+  // フッター詳細
+  .footer-details {
+    color: #ffffff !important;
+    
+    * {
+      color: #ffffff !important;
+    }
+  }
+}
+
+// アイコンの色設定
+.footer {
+  i, .fas, .far, .fab {
+    color: #ffffff !important;
+  }
+}
+
+// 最終的な全要素強制設定（最高優先度）
+.footer,
+.footer *,
+.footer *::before,
+.footer *::after {
+  color: #ffffff !important;
+}
+
+// ========================================
+// 重要: このファイルは他のCSSファイルの後に読み込まれる必要があります
+// main.scss で @import "components/footer-override"; を最後に追加してください
+// ========================================
+
