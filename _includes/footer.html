@@ -1,25 +1,25 @@
 <footer class="footer">
-    <div class="container">
+    <div class="footer-container">
         <div class="footer-content">
             <!-- サイト情報 -->
             <div class="footer-section">
                 <h3 class="footer-title">入札マップについて</h3>
                 <div class="footer-info">
-                    <p class="footer-description">
+                    <div class="footer-description">
                         公共調達の知識をナビゲートするポータルサイト。入札制度の基本から実践まで、体系的に学べる情報を提供しています。
-                    </p>
-                    <p class="footer-operated">
+                    </div>
+                    <div class="footer-operated">
                         <i class="fas fa-info-circle"></i>
                         サイト運営：{{ site.company.name }}
-                    </p>
-                    <p class="footer-tel">
+                    </div>
+                    <div class="footer-tel">
                         <i class="fas fa-phone"></i>
                         <a href="tel:{{ site.company.phone | replace: '-', '' }}">{{ site.company.phone }}</a>
-                    </p>
-                    <p class="footer-email">
+                    </div>
+                    <div class="footer-email">
                         <i class="fas fa-envelope"></i>
                         <a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>
-                    </p>
+                    </div>
                 </div>
             </div>
             
@@ -56,7 +56,7 @@
             <!-- 専門家への相談 -->
             <div class="footer-section">
                 <h3 class="footer-title">専門家への相談</h3>
-                <p class="footer-cta-text">入札に関するご質問やご相談がございましたら、お気軽にお声がけください。</p>
+                <div class="footer-cta-text">入札に関するご質問やご相談がございましたら、お気軽にお声がけください。</div>
                 <div class="footer-cta-buttons">
                     <a href="{{ site.data.navigation.cta.primary.url | relative_url }}" 
                        class="btn btn-primary"
@@ -96,27 +96,27 @@
         <div class="footer-bottom">
             <div class="footer-bottom-content">
                 <div class="footer-left">
-                    <p class="copyright">
+                    <div class="copyright">
                         &copy; {{ 'now' | date: "%Y" }} 入札マップ（運営：{{ site.company.name }}）. All rights reserved.
-                    </p>
-                    <p class="footer-note">
+                    </div>
+                    <div class="footer-note">
                         公共調達の知識をナビゲートするポータルサイトです。
-                    </p>
+                    </div>
                 </div>
                 <div class="footer-right">
                     <div class="privacy-mark">
                         <img src="{{ '/assets/images/existing/flat-legal-privacy-mark.webp' | relative_url }}" alt="プライバシーマーク" class="privacy-mark-img" loading="lazy">
-                        <p class="privacy-text">{{ site.company.privacy_mark }}<br>個人情報保護に取り組んでいます</p>
+                        <div class="privacy-text">{{ site.company.privacy_mark }}<br>個人情報保護に取り組んでいます</div>
                     </div>
                     <div class="footer-details">
-                        <p class="footer-address">
+                        <div class="footer-address">
                             <i class="fas fa-map-marker-alt"></i>
                             {{ site.company.address }}
-                        </p>
-                        <p class="footer-hours">
+                        </div>
+                        <div class="footer-hours">
                             <i class="fas fa-clock"></i>
                             {{ site.company.hours }}
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>
