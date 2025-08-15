@@ -731,3 +731,14 @@ footer.footer i,
     color: #ffffff !important;
 }
 
+// 完全解決：div要素もフッターを除外
+div:not(.footer *) {
+    color: #333333 !important;
+}
+
+// フッター内のdiv要素を白色に
+footer.footer div,
+.footer.footer div {
+    color: #ffffff !important;
+}
+
