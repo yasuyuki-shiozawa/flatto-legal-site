@@ -28,6 +28,11 @@ main_nav:
     icon: "fas fa-newspaper"
     description: "制度変更・最新動向"
     
+  - name: "会社概要"
+    url: "/company/"
+    icon: "fas fa-building"
+    description: "運営会社について"
+    
   - name: "事例研究"
     url: "/cases/"
     icon: "fas fa-search"
