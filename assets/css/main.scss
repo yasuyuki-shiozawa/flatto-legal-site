@@ -410,24 +410,7 @@ main a, .content-area a, .post-content a, header a, nav a {
   }
 }
 
-// フッター内の全テキストを白色に統一（根本的解決）
-.footer {
-  color: #ffffff !important;
-  
-  // 全てのテキスト要素を白色に
-  p, div, span, h1, h2, h3, h4, h5, h6, li {
-    color: #ffffff !important;
-  }
-  
-  // リンクも白色に統一
-  a {
-    color: #ffffff !important;
-    
-    &:hover {
-      color: #e2e8f0 !important;
-    }
-  }
-}
+// 古いフッター設定は削除（末尾の最新設定を使用）
 
 // カード・セクション背景の調整
 .card, .section {
