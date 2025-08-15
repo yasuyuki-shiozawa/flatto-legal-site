@@ -1,4 +1,65 @@
 <footer class="footer">
+    <!-- フッター専用インラインCSS（確実な白色表示） -->
+    <style>
+        .footer,
+        .footer *,
+        .footer p,
+        .footer div,
+        .footer span,
+        .footer h1,
+        .footer h2,
+        .footer h3,
+        .footer h4,
+        .footer h5,
+        .footer h6,
+        .footer li {
+            color: #ffffff !important;
+        }
+        
+        .footer a {
+            color: #ffffff !important;
+            text-decoration: none !important;
+        }
+        
+        .footer a:hover {
+            color: #e2e8f0 !important;
+            text-decoration: underline !important;
+        }
+        
+        .footer a:visited {
+            color: #ffffff !important;
+        }
+        
+        .footer i {
+            color: #ffffff !important;
+        }
+        
+        /* 具体的なクラスへの強制適用 */
+        .footer .footer-description,
+        .footer .footer-operated,
+        .footer .footer-cta-text,
+        .footer .copyright,
+        .footer .footer-note,
+        .footer .footer-address,
+        .footer .footer-hours,
+        .footer .privacy-text,
+        .footer .footer-title,
+        .footer .footer-info,
+        .footer .footer-section,
+        .footer .footer-bottom,
+        .footer .footer-bottom-content,
+        .footer .footer-left,
+        .footer .footer-right,
+        .footer .footer-details {
+            color: #ffffff !important;
+        }
+        
+        /* 最終的な全要素強制設定 */
+        .footer *::before,
+        .footer *::after {
+            color: #ffffff !important;
+        }
+    </style>
     <div class="container">
         <div class="footer-content">
             <!-- サイト情報 -->
