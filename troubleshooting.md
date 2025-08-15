@@ -12,6 +12,25 @@ body_class: troubleshooting-page
 
 全省庁統一資格申請や入札参加資格でお困りの方のために、よくあるトラブルと解決方法をまとめました。
 
+<!-- 関連ページへの誘導リンク -->
+<div class="related-articles">
+  <h4><i class="fas fa-link"></i> 関連情報</h4>
+  <div class="related-article-grid">
+    <div class="related-article-item">
+      <a href="/success-stories/" class="related-article-link">
+        <i class="fas fa-trophy"></i>
+        成功実績98.5%の申請代行事例を見る
+      </a>
+    </div>
+    <div class="related-article-item">
+      <a href="/lp-form/" class="related-article-link">
+        <i class="fas fa-phone"></i>
+        無料相談で解決方法を確認する
+      </a>
+    </div>
+  </div>
+</div>
+
 ## 🚨 緊急度別トラブル対応
 
 ### 🔥 **緊急度：高**（すぐに対応が必要）

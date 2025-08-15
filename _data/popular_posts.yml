@@ -4,6 +4,14 @@
 
 # 優先的に読んでもらいたい記事リスト
 posts:
+  - post_url: "troubleshooting"
+    custom_title: "申請でお困りの方へ - トラブル解決ガイド"
+    custom_excerpt: "申請方法がわからない、失敗したくない方へ。緊急対応も可能！"
+    
+  - post_url: "success-stories"
+    custom_title: "申請代行成功実績98.5% - 豊富な実績紹介"
+    custom_excerpt: "200件以上の申請代行実績。業種別成功事例を詳しくご紹介"
+    
   - post_url: "nyusatsu-shikaku-guide"
     custom_title: "入札参加資格の取得方法【完全ガイド】"
     custom_excerpt: "初めて入札に参加する方必見！資格取得の手順を分かりやすく解説"
@@ -15,11 +23,3 @@ posts:
   - post_url: "chusho-kigyo-nyusatsu"
     custom_title: "中小企業が入札で勝つための戦略"
     custom_excerpt: "大企業に負けない！中小企業ならではの強みを活かす方法"
-    
-  - post_url: "sougou-hyouka-hosiki"
-    custom_title: "総合評価方式の攻略法"
-    custom_excerpt: "価格以外でも勝負できる！技術提案のポイントを解説"
-    
-  - post_url: "haken-nyusatsu-guide"
-    custom_title: "人材派遣の入札案件ガイド"
-    custom_excerpt: "派遣事業者必見！公共機関の派遣案件を獲得する方法"

@@ -12,6 +12,25 @@ body_class: success-stories-page
 
 当事務所では、これまで多くの企業様の全省庁統一資格申請を成功に導いてまいりました。豊富な申請代行実績をご紹介します。
 
+<!-- 関連ページへの誘導リンク -->
+<div class="related-articles">
+  <h4><i class="fas fa-link"></i> 関連情報</h4>
+  <div class="related-article-grid">
+    <div class="related-article-item">
+      <a href="/troubleshooting/" class="related-article-link">
+        <i class="fas fa-exclamation-triangle"></i>
+        申請でお困りの方へ - 解決ガイド
+      </a>
+    </div>
+    <div class="related-article-item">
+      <a href="/lp-form/" class="related-article-link">
+        <i class="fas fa-comments"></i>
+        無料相談で成功への道筋を確認
+      </a>
+    </div>
+  </div>
+</div>
+
 ## 📊 **申請代行実績サマリー**
 
 ### 圧倒的な成功実績
