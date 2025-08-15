@@ -3,7 +3,7 @@ layout: default-simple
 title: "入札参加資格 無料相談お申込み | 行政書士法人ふらっと法務事務所 - 神奈川県大和市"
 description: "入札参加資格取得の無料相談を承っております。月額33,000円で事前調査から業務完了まで全工程をサポート。神奈川県大和市の行政書士法人ふらっと法務事務所が全国対応。"
 keywords: 入札参加資格 無料相談,入札参加資格 申込み,無料相談 フォーム,行政書士 無料相談,入札サポート 申込み,神奈川県 行政書士,大和市 行政書士
-permalink: /contact/?utm_source=page/lp-form/utm_medium=cta/lp-form/utm_campaign=conversion
+permalink: /contact/?utm_source=page&utm_medium=cta&utm_campaign=conversion
 ---
 
 <style>

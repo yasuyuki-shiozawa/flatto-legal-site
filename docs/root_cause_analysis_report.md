@@ -35,7 +35,7 @@ bundle exec jekyll build
 
 #### 3. 生成されたHTMLの検証
 ```css
-/* ローカルビルド結果（_site/contact/?utm_source=page/lp-form/utm_medium=cta/lp-form/utm_campaign=conversionindex.html） */
+/* ローカルビルド結果（_site/contact/?utm_source=page&utm_medium=cta&utm_campaign=conversionindex.html） */
 .hero .container {
     text-align: center !important;
     display: flex !important;
@@ -159,7 +159,7 @@ bundle exec jekyll build
 cd /home/ubuntu/flatto-legal-site
 export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
 bundle exec jekyll build
-grep -n "hero.*container" _site/contact/?utm_source=page/lp-form/utm_medium=cta/lp-form/utm_campaign=conversionindex.html
+grep -n "hero.*container" _site/contact/?utm_source=page&utm_medium=cta&utm_campaign=conversionindex.html
 ```
 
 ---

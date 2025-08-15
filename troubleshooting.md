@@ -23,7 +23,7 @@ body_class: troubleshooting-page
       </a>
     </div>
     <div class="related-article-item">
-      <a href="/contact/?utm_source=page/lp-form/utm_medium=cta/lp-form/utm_campaign=conversion" class="related-article-link">
+      <a href="/contact/?utm_source=page&utm_medium=cta&utm_campaign=conversion" class="related-article-link">
         <i class="fas fa-phone"></i>
         無料相談で解決方法を確認する
       </a>
