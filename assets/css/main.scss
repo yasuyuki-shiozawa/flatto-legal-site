@@ -699,38 +699,52 @@ input, textarea, select {
 
 
 // ========================================
-// フッター専用CSS（安全で確実な解決）
+// フッター専用CSS（最高特異性で確実な解決）
 // ========================================
 
-/* フッター内の全要素を白色に設定 */
-.footer p,
-.footer div,
-.footer span,
-.footer h1,
-.footer h2,
-.footer h3,
-.footer h4,
-.footer h5,
-.footer h6,
-.footer li {
+/* 最高特異性でフッター内の全要素を白色に設定 */
+footer.footer p,
+footer.footer div,
+footer.footer span,
+footer.footer h1,
+footer.footer h2,
+footer.footer h3,
+footer.footer h4,
+footer.footer h5,
+footer.footer h6,
+footer.footer li,
+.footer.footer p,
+.footer.footer div,
+.footer.footer span,
+.footer.footer h1,
+.footer.footer h2,
+.footer.footer h3,
+.footer.footer h4,
+.footer.footer h5,
+.footer.footer h6,
+.footer.footer li {
     color: #ffffff !important;
 }
 
-.footer a {
+footer.footer a,
+.footer.footer a {
     color: #ffffff !important;
     text-decoration: none;
 }
 
-.footer a:hover {
+footer.footer a:hover,
+.footer.footer a:hover {
     color: #e2e8f0 !important;
     text-decoration: underline;
 }
 
-.footer a:visited {
+footer.footer a:visited,
+.footer.footer a:visited {
     color: #ffffff !important;
 }
 
-.footer i {
+footer.footer i,
+.footer.footer i {
     color: #ffffff !important;
 }
 
