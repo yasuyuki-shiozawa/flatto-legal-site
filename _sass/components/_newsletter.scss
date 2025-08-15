@@ -1,0 +1,224 @@
+/**
+ * ニュースレター購読フォームのスタイル
+ * ブログページのメール購読セクション専用CSS
+ */
+
+.blog-newsletter {
+    background: linear-gradient(135deg, #FFF8E1 0%, #FFF3C4 100%);
+    padding: 4rem 2rem;
+    margin: 4rem 0;
+    border-radius: 16px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23F59E0B' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+        pointer-events: none;
+    }
+    
+    .newsletter-content {
+        position: relative;
+        z-index: 1;
+        max-width: 600px;
+        margin: 0 auto;
+        
+        h2 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #1E293B;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            
+            @media (max-width: 768px) {
+                font-size: 1.875rem;
+            }
+        }
+        
+        > p {
+            font-size: 1.125rem;
+            color: #64748B;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            
+            @media (max-width: 768px) {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto 1.5rem;
+    
+    @media (max-width: 640px) {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    input[type="email"] {
+        flex: 1;
+        padding: 1rem 1.25rem;
+        border: 2px solid #E2E8F0;
+        border-radius: 50px;
+        font-size: 1rem;
+        background: white;
+        transition: all 0.3s ease;
+        
+        &:focus {
+            outline: none;
+            border-color: #3B82F6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        &::placeholder {
+            color: #94A3B8;
+        }
+        
+        @media (max-width: 640px) {
+            border-radius: 12px;
+        }
+    }
+    
+    button[type="submit"] {
+        padding: 1rem 2rem;
+        background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+        
+        &:hover:not(:disabled) {
+            background: linear-gradient(135deg, #D97706 0%, #B45309 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+        }
+        
+        &:active:not(:disabled) {
+            transform: translateY(0);
+        }
+        
+        &:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        @media (max-width: 640px) {
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+        }
+    }
+}
+
+.newsletter-message {
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    margin: 1rem 0;
+    font-weight: 500;
+    text-align: center;
+    animation: slideIn 0.3s ease-out;
+    
+    &.success {
+        background: #DCFCE7;
+        color: #166534;
+        border: 1px solid #BBF7D0;
+        
+        &::before {
+            content: '✓ ';
+            font-weight: bold;
+        }
+    }
+    
+    &.error {
+        background: #FEF2F2;
+        color: #DC2626;
+        border: 1px solid #FECACA;
+        
+        &::before {
+            content: '⚠ ';
+            font-weight: bold;
+        }
+    }
+    
+    &.info {
+        background: #EFF6FF;
+        color: #1D4ED8;
+        border: 1px solid #DBEAFE;
+        
+        &::before {
+            content: 'ℹ ';
+            font-weight: bold;
+        }
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.newsletter-privacy {
+    font-size: 0.875rem;
+    color: #6B7280;
+    margin-top: 1.5rem;
+    line-height: 1.5;
+    
+    i {
+        color: #10B981;
+        margin-right: 0.5rem;
+    }
+    
+    a {
+        color: #3B82F6;
+        text-decoration: none;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+// レスポンシブ対応
+@media (max-width: 768px) {
+    .blog-newsletter {
+        padding: 3rem 1.5rem;
+        margin: 3rem 1rem;
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-newsletter {
+        padding: 2rem 1rem;
+        margin: 2rem 0.5rem;
+    }
+    
+    .newsletter-form {
+        input[type="email"],
+        button[type="submit"] {
+            padding: 0.875rem 1rem;
+            font-size: 0.9rem;
+        }
+    }
+}
+

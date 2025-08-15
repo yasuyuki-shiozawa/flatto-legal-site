@@ -9,6 +9,9 @@ body_class: blog-lp-page
 <!-- 緊急修正CSS読み込み -->
 <link rel="stylesheet" href="{{ '/assets/css/blog-emergency-fix.css' | relative_url }}?v={{ 'now' | date: '%Y%m%d%H%M%S' }}">
 
+<!-- ニュースレター機能JavaScript読み込み -->
+<script src="{{ '/assets/js/newsletter.js' | relative_url }}" defer></script>
+
 <!-- ブログヒーローセクション -->
 <section class="blog-hero">
     <div class="blog-hero-content">
@@ -110,10 +113,11 @@ body_class: blog-lp-page
     <div class="newsletter-content">
         <h2>入札成功のヒントを毎週お届け</h2>
         <p>最新の入札情報、法改正、成功事例など、実務に役立つ情報を無料でお送りします</p>
-        <form class="newsletter-form" action="/subscribe/" method="post">
-            <input type="email" name="email" placeholder="メールアドレスを入力" required>
-            <button type="submit">無料購読する</button>
+        <form id="newsletter-form" class="newsletter-form">
+            <input type="email" id="newsletter-email" name="email" placeholder="メールアドレスを入力" required>
+            <button type="submit" id="newsletter-submit">無料購読する</button>
         </form>
+        <div id="newsletter-message" class="newsletter-message" style="display: none;"></div>
         <p class="newsletter-privacy">
             <i class="fas fa-lock"></i> 個人情報は厳重に管理し、第三者に提供することはありません。
             <a href="/privacy/">プライバシーポリシー</a>
