@@ -62,6 +62,7 @@
 @import "components/icon-replacement"; // アイコン削除・テキストベースデザイン
 @import "components/section-headers"; // 参考サイト風見出しデザイン
 @import "components/internal-links"; // 内部リンク強化スタイル
+@import "components/newsletter"; // ニュースレター購読フォームスタイル
 
 // ページ固有スタイル
 @import "pages/home";
@@ -401,6 +402,15 @@ a {
   
   &:hover {
     color: #e67e22 !important;
+  }
+}
+
+// フッター内のリンクは明るい色に設定（暗い背景用）
+.footer a {
+  color: #e2e8f0 !important;
+  
+  &:hover {
+    color: #ffffff !important;
   }
 }
 
