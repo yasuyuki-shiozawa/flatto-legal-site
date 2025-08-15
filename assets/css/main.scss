@@ -433,6 +433,18 @@ a {
   color: #ffffff !important;
 }
 
+// フッター内の具体的なクラスに対して白色を強制適用
+.footer-description,
+.footer-operated,
+.footer-cta-text,
+.copyright,
+.footer-note,
+.footer-address,
+.footer-hours,
+.privacy-text {
+  color: #ffffff !important;
+}
+
 // カード・セクション背景の調整
 .card, .section {
   background-color: #ffffff !important;
