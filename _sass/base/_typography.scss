@@ -61,11 +61,11 @@ h6 {
 // 本文・段落システム
 // ========================================
 
-p {
+p:not(.footer *) {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-normal); // 通常の太さに統一
   line-height: var(--line-height-normal);
-  color: #333333 !important;  // 高コントラストの濃いグレー
+  color: #333333 !important;  // 高コントラストの濃いグレー（フッター除外）
   margin: 0 0 var(--space-4) 0;
   
   &:last-child {
