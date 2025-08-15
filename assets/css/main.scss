@@ -391,16 +391,17 @@ h1, h2, h3, h4, h5, h6 {
   color: #1a1a1a !important;
 }
 
-// 段落・リスト・テキスト要素の色彩強制（フッターを除外）
-p:not(.footer p):not(.footer *), 
-li:not(.footer li):not(.footer *), 
-span:not(.footer span):not(.footer *), 
-div:not(.footer div):not(.footer *) {
+// メインコンテンツエリアの色彩強制（フッターは除外）
+main p, main li, main span, main div,
+.content-area p, .content-area li, .content-area span, .content-area div,
+.post-content p, .post-content li, .post-content span, .post-content div,
+header p, header li, header span, header div,
+nav p, nav li, nav span, nav div {
   color: #333333 !important;
 }
 
-// リンクの色彩強制（フッターを除外）
-a:not(.footer a):not(.footer *) {
+// メインコンテンツエリアのリンク色彩強制（フッターは除外）
+main a, .content-area a, .post-content a, header a, nav a {
   color: #f39c12 !important;
   
   &:hover {
