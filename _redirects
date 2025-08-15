@@ -1,6 +1,10 @@
 # Netlify redirects
 # 旧ページから新ページへのリダイレクト設定
 
+# lp-form から contact へのリダイレクト
+/lp-form/ /contact/ 301
+/lp-form /contact/ 301
+
 # 404エラーページの処理
 /* /404.html 404
 
