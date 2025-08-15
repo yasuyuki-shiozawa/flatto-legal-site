@@ -13,7 +13,7 @@ sitemap: false
 
 ### 確認されたフォーム
 - **お問い合わせページ**: `/contact/` - 実際のフォームを確認
-- **無料相談申込み**: `/lp-form/` - CTAボタンのみ確認
+- **無料相談申込み**: `/contact/?utm_source=page/lp-form/utm_medium=cta/lp-form/utm_campaign=conversion` - CTAボタンのみ確認
 
 ### 現在のセキュリティ状況
 - **reCAPTCHA**: 未実装の可能性が高い

@@ -198,7 +198,7 @@ body_class: qualification-page
                 </div>
                 
                 <div class="contact-info">
-                    <p>📧 メール相談：<a href="/lp-form/">お問い合わせフォーム</a></p>
+                    <p>📧 メール相談：<a href="/contact/?utm_source=page/lp-form/utm_medium=cta/lp-form/utm_campaign=conversion">お問い合わせフォーム</a></p>
                     <p>⏰ 受付時間：平日9時〜17時（メールは24時間受付）</p>
                 </div>
             </div>

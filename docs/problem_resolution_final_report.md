@@ -43,7 +43,7 @@ bundle install
 bundle exec jekyll build
 
 # 生成されたCSSの確認
-grep -n "hero.*container" _site/lp-form/index.html
+grep -n "hero.*container" _site/contact/?utm_source=page/lp-form/utm_medium=cta/lp-form/utm_campaign=conversionindex.html
 ```
 
 **結果**: ローカルビルドでは正しいCSSが生成されることを確認
