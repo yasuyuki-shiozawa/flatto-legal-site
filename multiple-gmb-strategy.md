@@ -1,4 +1,13 @@
-# 複数のGoogleビジネスプロフィール戦略
+---
+layout: default
+title: 入札 複数Googleビジネスプロフィール戦略 | 地域SEO拡張戦略 - 行政書士法人ふらっと法務事務所
+description: 入札関連サービスの複数Googleビジネスプロフィール戦略。地域SEO拡張・複数拠点展開・サービス特化型プロフィール設定方法。神奈川県大和市の行政書士法人ふらっと法務事務所。
+keywords: 入札 複数Googleビジネスプロフィール,複数GMB戦略,地域SEO拡張,複数拠点 SEO,サービス特化 GMB,行政書士 複数プロフィール,神奈川県,大和市
+permalink: /multiple-gmb-strategy/
+sitemap: false
+---
+
+# 入札サービス 複数Googleビジネスプロフィール戦略
 
 ## 現実的な選択肢
 

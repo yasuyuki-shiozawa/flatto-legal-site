@@ -1,7 +1,8 @@
 ---
 layout: default
-title: お問い合わせありがとうございます | 入札マップ
-description: お問い合わせを受け付けました。通常1-2営業日以内にご回答いたします。
+title: 入札参加資格 申込完了 | お問い合わせありがとうございます - 行政書士法人ふらっと法務事務所
+description: 入札参加資格のお問い合わせを受け付けました。通常1-2営業日以内に行政書士からご回答いたします。神奈川県大和市の行政書士法人ふらっと法務事務所。
+keywords: 入札参加資格 申込完了,お問い合わせ完了,入札参加資格 相談受付,全省庁統一資格 申込,行政書士 問い合わせ完了,神奈川県,大和市
 permalink: /thanks/
 sitemap: false
 ---
@@ -12,10 +13,10 @@ sitemap: false
         <div class="container">
             <div class="thanks-content">
                 <div class="thanks-icon">✅</div>
-                <h1 class="thanks-title">お問い合わせありがとうございます</h1>
+                <h1 class="thanks-title">入札参加資格 申込完了 - ありがとうございます</h1>
                 <p class="thanks-message">
-                    お問い合わせを受け付けました。<br>
-                    通常1-2営業日以内に、ご指定いただいた連絡方法でご連絡いたします。
+                    入札参加資格のお問い合わせを受け付けました。<br>
+                    通常1-2営業日以内に、行政書士からご指定いただいた連絡方法でご連絡いたします。
                 </p>
                 
                 <div class="next-steps">

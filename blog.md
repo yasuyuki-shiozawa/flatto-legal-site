@@ -1,7 +1,8 @@
 ---
 layout: default
-title: 入札成功への完全ガイド | 行政書士が教える公共調達の極意
-description: 年間16兆円の公共調達市場に参入するための実践的ノウハウを、経験豊富な行政書士が徹底解説。初心者でも安心して入札に参加できる方法をご紹介します。
+title: 入札 ブログ | 行政書士が教える公共調達成功の極意 - 神奈川県大和市
+description: 入札・公共調達のブログ。年間16兆円の公共調達市場参入のための実践的ノウハウを、経験豊富な行政書士が徹底解説。初心者でも安心して入札に参加できる方法をご紹介。神奈川県大和市から全国対応。
+keywords: 入札 ブログ,入札ノウハウ,公共調達 ブログ,入札成功法,入札参加資格 ブログ,全省庁統一資格 ブログ,入札 コツ,行政書士 ブログ,神奈川県,大和市
 permalink: /blog/
 body_class: blog-lp-page
 ---
@@ -16,10 +17,10 @@ body_class: blog-lp-page
 <section class="blog-hero">
     <div class="blog-hero-content">
         <h1 class="blog-hero-title">
-            入札成功への完全ガイド
+            入札 ブログ - 公共調達成功の極意
         </h1>
         <p class="blog-hero-subtitle">
-            年間16兆円の公共調達市場で、あなたのビジネスを成長させる方法
+            年間16兆円の公共調達市場で、行政書士があなたのビジネス成長をサポート
         </p>
         <a href="#value-props" class="blog-hero-cta">
             <i class="fas fa-arrow-down"></i>

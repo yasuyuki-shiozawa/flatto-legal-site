@@ -1,15 +1,16 @@
 ---
 layout: default
-title: お役立ちリンク集
-description: 入札・公共調達に関する公式サイトや関連情報をまとめたリンク集。入札参加に必要な情報収集にお役立てください。
+title: 入札 関連リンク集 | 公式サイト・関連情報を行政書士が厳選 - 神奈川県大和市
+description: 入札・公共調達の関連リンク集。国・地方自治体の公式サイト、入札情報サイト等を行政書士が厳選してご紹介。入札参加に必要な情報収集にお役立てください。神奈川県大和市から全国対応。
+keywords: 入札 関連リンク,入札 公式サイト,公共調達 リンク集,調達ポータル,入札情報サイト,全省庁統一資格 リンク,地方自治体 入札サイト,行政書士,神奈川県,大和市
 permalink: /links/
 ---
 
 <!-- ページヘッダー -->
 <section class="page-header">
     <div class="container">
-        <h1 class="page-title">お役立ちリンク集</h1>
-        <p class="page-subtitle">入札・公共調達に関する公式サイト・関連情報</p>
+        <h1 class="page-title">入札 関連リンク集</h1>
+        <p class="page-subtitle">入札・公共調達の公式サイト・関連情報を行政書士が厳選</p>
     </div>
 </section>
 

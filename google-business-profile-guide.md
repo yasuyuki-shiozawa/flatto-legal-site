@@ -1,4 +1,13 @@
-# Google ビジネスプロフィール最適化ガイド
+---
+layout: default
+title: 入札 Googleビジネスプロフィール最適化ガイド | 地域SEO対策 - 行政書士法人ふらっと法務事務所
+description: 入札関連サービスのGoogleビジネスプロフィール最適化ガイド。地域SEO対策・ローカル検索上位表示のための設定方法。神奈川県大和市の行政書士法人ふらっと法務事務所。
+keywords: 入札 Googleビジネスプロフィール,地域SEO,ローカル検索,Googleマイビジネス,行政書士 地域SEO,神奈川県 行政書士,大和市 行政書士,入札サービス 地域検索
+permalink: /google-business-profile-guide/
+sitemap: false
+---
+
+# 入札サービス Googleビジネスプロフィール最適化ガイド
 
 ## プロフィール情報の最適化
 

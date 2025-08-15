@@ -1,8 +1,8 @@
 ---
 layout: default
-title: 全省庁統一資格申請代行｜行政書士が完全サポート【申請費用無料】
-description: 全省庁統一資格の申請代行を神奈川県の行政書士法人が完全サポート。申請費用無料、有効期間3年、全省庁対応。煩雑な手続きを専門家が代行し、確実な資格取得を実現します。
-keywords: 全省庁統一資格,全省庁統一資格申請,全省庁統一資格申請代行,入札参加資格,行政書士,神奈川県,大和市,申請費用無料,資格申請代行
+title: 全省庁統一資格 申請代行 | 行政書士が完全サポート【申請費用無料】- 神奈川県大和市
+description: 全省庁統一資格の申請代行を神奈川県の行政書士法人が完全サポート。申請費用無料・有効期間3年・全省庁対応。煩雑な手続きを専門家が代行し、確実な資格取得を実現。神奈川県大和市から全国対応。
+keywords: 全省庁統一資格 申請代行,全省庁統一資格申請,全省庁統一資格 代行,入札参加資格 代行,行政書士 申請代行,神奈川県 行政書士,大和市 行政書士,申請費用無料,資格申請代行
 hide_left_sidebar: true
 hide_right_sidebar: true
 body_class: landing-page zenshochou-lp
@@ -15,8 +15,8 @@ body_class: landing-page zenshochou-lp
                 <span class="badge-text">申請費用完全無料</span>
             </div>
             <h1 class="hero-title">
-                <span class="title-main">全省庁統一資格</span>
-                <span class="title-sub">申請代行サービス</span>
+                <span class="title-main">全省庁統一資格 申請代行</span>
+                <span class="title-sub">行政書士が完全サポート</span>
             </h1>
             <p class="hero-description">
                 神奈川県の行政書士法人が<strong>全省庁統一資格の申請を完全代行</strong><br>

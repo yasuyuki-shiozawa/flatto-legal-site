@@ -1,7 +1,8 @@
 ---
 layout: default
-title: アクセス・事務所案内 | 行政書士法人ふらっと法務事務所
-description: 神奈川県大和市南林間の行政書士法人ふらっと法務事務所へのアクセス方法。小田急線南林間駅から徒歩7分。入札・公共調達の専門家が対面でご相談をお受けします。
+title: 入札参加資格 神奈川 | 大和市の行政書士法人ふらっと法務事務所へのアクセス
+description: 神奈川県の入札参加資格申請なら大和市の行政書士法人ふらっと法務事務所へ。小田急線南林間駅から徒歩7分。入札・公共調達の専門家が神奈川県内の企業様を対面でサポート。全省庁統一資格・地方自治体資格に対応。
+keywords: 入札参加資格 神奈川,入札参加資格 大和市,神奈川県 行政書士,大和市 行政書士,南林間 行政書士,入札申請代行 神奈川,全省庁統一資格 神奈川,公共調達 神奈川,入札サポート 神奈川
 permalink: /location/
 body_class: location-page
 ---
@@ -10,8 +11,8 @@ body_class: location-page
 
 <section class="location-hero">
     <div class="container">
-        <h1 class="page-title">事務所へのアクセス</h1>
-        <p class="page-subtitle">入札・公共調達のご相談は、お気軽にお越しください</p>
+        <h1 class="page-title">入札参加資格 神奈川 - 事務所へのアクセス</h1>
+        <p class="page-subtitle">神奈川県の入札・公共調達のご相談は、お気軽にお越しください</p>
     </div>
 </section>
 

@@ -1,4 +1,13 @@
-# Meta Descriptions Update Summary
+---
+layout: default
+title: 入札サイト メタディスクリプション更新サマリー | SEO最適化レポート - 行政書士法人ふらっと法務事務所
+description: 入札マップサイトのメタディスクリプション更新サマリー。全ページSEO最適化・検索エンジン対策・メタデータ改善の詳細レポート。神奈川県大和市の行政書士法人ふらっと法務事務所。
+keywords: 入札サイト メタディスクリプション,SEO最適化レポート,メタデータ更新,検索エンジン対策,サイトSEO改善,行政書士 SEO,神奈川県,大和市
+permalink: /meta-descriptions-update-summary/
+sitemap: false
+---
+
+# 入札サイト メタディスクリプション更新サマリー
 
 ## Updated Pages
 

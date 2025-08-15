@@ -1,7 +1,8 @@
 ---
 layout: default
-title: サイト分析 | ふらっと法務事務所
-description: 入札マップのアクセス解析・ユーザー行動分析ダッシュボード。ページ別訪問数、ユーザー属性、人気コンテンツなどのパフォーマンス指標を表示。データに基づいたサイト改善で入札情報の提供品質を向上させます。
+title: 入札 分析 | サイトアクセス解析・ユーザー行動分析ダッシュボード - 行政書士法人ふらっと法務事務所
+description: 入札マップのアクセス解析・ユーザー行動分析ダッシュボード。ページ別訪問数・ユーザー属性・人気コンテンツ等のパフォーマンス指標を表示。データに基づいた入札情報提供品質の向上。神奈川県大和市。
+keywords: 入札 分析,サイト分析,アクセス解析,ユーザー行動分析,入札サイト分析,公共調達サイト分析,ダッシュボード,パフォーマンス指標,行政書士,神奈川県,大和市
 permalink: /analytics/
 ---
 
@@ -9,7 +10,7 @@ permalink: /analytics/
     <div class="container">
         <!-- ダッシュボードヘッダー -->
         <div class="analytics-header">
-            <h2>サイト分析ダッシュボード</h2>
+            <h2>入札 分析ダッシュボード</h2>
             <div class="analytics-controls">
                 <select class="form-control" id="date-range">
                     <option value="today">今日</option>
