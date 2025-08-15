@@ -396,8 +396,9 @@ main p, main li, main span, main div,
 .content-area p, .content-area li, .content-area span, .content-area div,
 .post-content p, .post-content li, .post-content span, .post-content div,
 header p, header li, header span, header div,
-nav p, nav li, nav span, nav div {
-  color: #333333 !important;
+nav p, nav li, nav span, nav div,
+.sidebar p, .sidebar li, .sidebar span, .sidebar div {
+    color: #333333 !important;
 }
 
 // メインコンテンツエリアのリンク色彩強制（フッターは除外）
@@ -698,41 +699,38 @@ input, textarea, select {
 
 
 // ========================================
-// フッター専用CSS（根本的解決）
+// フッター専用CSS（安全で確実な解決）
 // ========================================
 
-/* フッター専用クラスで白色表示 */
-.footer-container,
-.footer-description,
-.footer-operated,
-.footer-cta-text,
-.footer-note,
-.footer-address,
-.footer-hours,
-.privacy-text,
-.copyright {
-    color: #ffffff;
-}
-
-.footer-container * {
-    color: #ffffff;
+/* フッター内の全要素を白色に設定 */
+.footer p,
+.footer div,
+.footer span,
+.footer h1,
+.footer h2,
+.footer h3,
+.footer h4,
+.footer h5,
+.footer h6,
+.footer li {
+    color: #ffffff !important;
 }
 
 .footer a {
-    color: #ffffff;
+    color: #ffffff !important;
     text-decoration: none;
 }
 
 .footer a:hover {
-    color: #e2e8f0;
+    color: #e2e8f0 !important;
     text-decoration: underline;
 }
 
 .footer a:visited {
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 .footer i {
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
