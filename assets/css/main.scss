@@ -698,7 +698,66 @@ input, textarea, select {
 
 
 // ========================================
-// フッター専用CSS（根本的解決）
+// フッター専用CSS（確実な永続的解決）
 // ========================================
-@import "components/footer-override";
+
+/* フッター内の全要素を白色に強制設定 */
+.footer,
+.footer *,
+.footer p,
+.footer div,
+.footer span,
+.footer h1,
+.footer h2,
+.footer h3,
+.footer h4,
+.footer h5,
+.footer h6,
+.footer li {
+    color: #ffffff !important;
+}
+
+.footer a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.footer a:hover {
+    color: #e2e8f0 !important;
+    text-decoration: underline !important;
+}
+
+.footer a:visited {
+    color: #ffffff !important;
+}
+
+.footer i {
+    color: #ffffff !important;
+}
+
+/* 具体的なクラスへの強制適用 */
+.footer .footer-description,
+.footer .footer-operated,
+.footer .footer-cta-text,
+.footer .copyright,
+.footer .footer-note,
+.footer .footer-address,
+.footer .footer-hours,
+.footer .privacy-text,
+.footer .footer-title,
+.footer .footer-info,
+.footer .footer-section,
+.footer .footer-bottom,
+.footer .footer-bottom-content,
+.footer .footer-left,
+.footer .footer-right,
+.footer .footer-details {
+    color: #ffffff !important;
+}
+
+/* 最終的な全要素強制設定 */
+.footer *::before,
+.footer *::after {
+    color: #ffffff !important;
+}
 
