@@ -391,13 +391,16 @@ h1, h2, h3, h4, h5, h6 {
   color: #1a1a1a !important;
 }
 
-// 段落・リスト・テキスト要素の色彩強制
-p, li, span, div {
+// 段落・リスト・テキスト要素の色彩強制（フッターを除外）
+p:not(.footer p):not(.footer *), 
+li:not(.footer li):not(.footer *), 
+span:not(.footer span):not(.footer *), 
+div:not(.footer div):not(.footer *) {
   color: #333333 !important;
 }
 
-// リンクの色彩強制（パステルオレンジ）
-a {
+// リンクの色彩強制（フッターを除外）
+a:not(.footer a):not(.footer *) {
   color: #f39c12 !important;
   
   &:hover {
@@ -405,7 +408,7 @@ a {
   }
 }
 
-// フッター内の全テキストを白色に統一（暗い背景用）
+// フッター内の全テキストを白色に統一（根本的解決）
 .footer {
   color: #ffffff !important;
   
@@ -422,27 +425,6 @@ a {
       color: #e2e8f0 !important;
     }
   }
-}
-
-// より具体的なセレクターでフッター内の全要素を強制的に白色に
-.footer * {
-  color: #ffffff !important;
-}
-
-.footer a * {
-  color: #ffffff !important;
-}
-
-// フッター内の具体的なクラスに対して白色を強制適用
-.footer-description,
-.footer-operated,
-.footer-cta-text,
-.copyright,
-.footer-note,
-.footer-address,
-.footer-hours,
-.privacy-text {
-  color: #ffffff !important;
 }
 
 // カード・セクション背景の調整
