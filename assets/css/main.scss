@@ -405,12 +405,22 @@ a {
   }
 }
 
-// フッター内のリンクは明るい色に設定（暗い背景用）
-.footer a {
-  color: #e2e8f0 !important;
+// フッター内の全テキストを白色に統一（暗い背景用）
+.footer {
+  color: #ffffff !important;
   
-  &:hover {
+  // 全てのテキスト要素を白色に
+  p, div, span, h1, h2, h3, h4, h5, h6, li {
     color: #ffffff !important;
+  }
+  
+  // リンクも白色に統一
+  a {
+    color: #ffffff !important;
+    
+    &:hover {
+      color: #e2e8f0 !important;
+    }
   }
 }
 
