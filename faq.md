@@ -27,7 +27,8 @@ faq_items:
                 </h1>
                 <p class="hero-description">
                     入札参加資格の申請方法がわからない方の疑問を<br>
-                    行政書士が分かりやすく解説
+                    行政書士が分かりやすく解説<br>
+                    <small>入札制度の基本については<a href="/knowhow/" style="color: #fff; text-decoration: underline;">入札の始め方ガイド</a>もご覧ください</small>
                 </p>
             </div>
         </div>

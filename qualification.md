@@ -24,6 +24,7 @@ body_class: qualification-page
             </div>
             <div class="readable-content">
                 <p>入札に参加するためには、まず「入札参加資格」を取得する必要があります。当事務所では、全省庁統一資格から各地方自治体の資格まで、幅広い入札参加資格の取得をサポートしています。</p>
+                <p>入札制度の基本的な仕組みについては、<a href="/knowhow/">入札の始め方ガイド</a>で詳しく解説していますので、併せてご覧ください。</p>
             </div>
             
             <div class="service-features">

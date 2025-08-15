@@ -22,6 +22,7 @@ body_class: case-studies-page
             <div class="overview-content">
                 <h2>なぜ事例研究が重要なのか</h2>
                 <p>入札の成功には、理論だけでなく実践的な知識が不可欠です。実際の成功事例を分析することで、勝率を高める具体的な戦略を学ぶことができます。</p>
+                <p>入札制度の基本的な仕組みについては、<a href="/knowhow/">入札の始め方ガイド</a>で詳しく解説していますので、併せてご覧ください。</p>
                 
                 <div class="stats-grid">
                     <div class="stat-item">
