@@ -424,6 +424,15 @@ a {
   }
 }
 
+// より具体的なセレクターでフッター内の全要素を強制的に白色に
+.footer * {
+  color: #ffffff !important;
+}
+
+.footer a * {
+  color: #ffffff !important;
+}
+
 // カード・セクション背景の調整
 .card, .section {
   background-color: #ffffff !important;
