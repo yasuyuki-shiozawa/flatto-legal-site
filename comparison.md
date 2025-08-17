@@ -8,6 +8,11 @@ permalink: /comparison/
 
 <div class="comparison-page">
     <div class="container">
+        <div class="page-intro">
+            <h2>入札案件比較ツール</h2>
+            <p>複数の入札案件を効率的に比較し、最適な案件を選定できるツールです。入札の基本的な仕組みについては<a href="/knowhow/">入札の始め方ガイド</a>で詳しく解説していますので、併せてご覧ください。</p>
+        </div>
+        
         <!-- 比較ツールコンテナ -->
         <div id="comparison-container" class="comparison-container">
             <!-- 比較ツールはJavaScriptで動的に生成されます -->
@@ -256,7 +261,7 @@ permalink: /comparison/
             </div>
             <div class="step-item" data-step="4">
                 <h4>分析結果確認</h4>
-                <p>自動生成される分析結果とランキングを確認します</p>
+                <p>自動生成される分析結果とランキングを確認します。詳しいサポートの流れについては<a href="/flow/">ご利用の流れ</a>もご覧ください。</p>
             </div>
         </div>
     </div>
@@ -269,7 +274,7 @@ permalink: /comparison/
                     <h4>入札案件比較</h4>
                 </div>
                 <div class="example-content">
-                    <p>複数の入札案件を詳細比較し、参加すべき案件を効率的に選択</p>
+                    <p>複数の入札案件を詳細比較し、参加すべき案件を効率的に選択。参加条件の詳細については<a href="/qualification/">入札参加資格の取得方法</a>をご確認ください。</p>
                     <ul class="comparison-fields">
                         <li>予算額・応札期限</li>
                         <li>参加条件・評価方式</li>
@@ -284,7 +289,7 @@ permalink: /comparison/
                     <h4>事業者比較</h4>
                 </div>
                 <div class="example-content">
-                    <p>競合事業者の実績・能力を比較し、自社の競争力を分析</p>
+                    <p>競合事業者の実績・能力を比較し、自社の競争力を分析。競合分析の事例については<a href="/case-studies/">事例研究</a>をご参照ください。</p>
                     <ul class="comparison-fields">
                         <li>資本金・従業員数</li>
                         <li>実績年数・落札率</li>
@@ -299,7 +304,7 @@ permalink: /comparison/
                     <h4>契約条件比較</h4>
                 </div>
                 <div class="example-content">
-                    <p>契約条件・価格を詳細比較し、最適な契約を選択</p>
+                    <p>契約条件・価格を詳細比較し、最適な契約を選択。契約トラブルの回避方法については<a href="/troubleshooting/">トラブル解決ガイド</a>もご参照ください。</p>
                     <ul class="comparison-fields">
                         <li>契約金額・期間</li>
                         <li>支払条件・保証期間</li>
@@ -313,6 +318,7 @@ permalink: /comparison/
     
     <div class="features-section">
         <h3>主な機能</h3>
+        <p>最新の入札動向については<a href="/trends/">最新情報</a>を、専門用語の詳細については<a href="/dictionary/">用語集</a>もご参照ください。</p>
         <div class="features-list">
             <div class="feature-item">最大10件まで同時比較</div>
             <div class="feature-item">視覚的な比較テーブル</div>
@@ -323,6 +329,7 @@ permalink: /comparison/
             <div class="feature-item">比較結果の保存</div>
             <div class="feature-item">CSV形式でエクスポート</div>
         </div>
+        <p>当事務所のサービス全体については<a href="/service/">サービス紹介</a>をご覧ください。</p>
     </div>
 </div>
 

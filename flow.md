@@ -21,7 +21,7 @@ permalink: /flow/
             <h2>6ステップで入札成功をサポート</h2>
         </div>
         <div class="readable-content">
-            <p>初めての方でも安心して入札に参加できるよう、段階的にサポートいたします。</p>
+            <p>初めての方でも安心して入札に参加できるよう、段階的にサポートいたします。入札制度の基本的な仕組みについては<a href="/knowhow/">入札の始め方ガイド</a>で詳しく解説していますので、併せてご覧ください。</p>
         </div>
         
         <div class="flow-hero-image">
@@ -34,7 +34,7 @@ permalink: /flow/
                 <div class="step-content">
                     <h3 class="step-title">無料相談・ヒアリング</h3>
                     <p class="step-description">
-                        お客様の事業内容、強み、目標をしっかりとヒアリング。入札参加の目的や期待する成果を明確にします。
+                        お客様の事業内容、強み、目標をしっかりとヒアリング。入札参加の目的や期待する成果を明確にします。入札の基本的な知識については<a href="/knowhow/">入札の始め方ガイド</a>で詳しく解説しています。
                     </p>
                     <div class="step-details">
                         <h4>実施内容</h4>
@@ -57,7 +57,7 @@ permalink: /flow/
                 <div class="step-content">
                     <h3 class="step-title">案件調査・分析</h3>
                     <p class="step-description">
-                        お客様の事業に適した入札案件を調査・分析。競合状況や市場動向も含めて詳細に分析し、最適な案件をご提案します。
+                        お客様の事業に適した入札案件を調査・分析。競合状況や市場動向も含めて詳細に分析し、最適な案件をご提案します。最新の業界動向については<a href="/trends/">最新情報</a>もご参照ください。
                     </p>
                     <div class="step-details">
                         <h4>実施内容</h4>
@@ -80,7 +80,7 @@ permalink: /flow/
                 <div class="step-content">
                     <h3 class="step-title">入札戦略立案</h3>
                     <p class="step-description">
-                        調査結果を基に、お客様の強みを活かした入札戦略を立案。価格戦略から技術提案まで、総合的な戦略をご提案します。
+                        調査結果を基に、お客様の強みを活かした入札戦略を立案。価格戦略から技術提案まで、総合的な戦略をご提案します。具体的な成功事例については<a href="/case-studies/">事例研究</a>をご覧ください。
                     </p>
                     <div class="step-details">
                         <h4>実施内容</h4>
@@ -103,7 +103,7 @@ permalink: /flow/
                 <div class="step-content">
                     <h3 class="step-title">書類作成・申請</h3>
                     <p class="step-description">
-                        入札参加に必要な各種書類の作成から申請まで、専門家が代行。複雑な手続きも安心してお任せください。
+                        入札参加に必要な各種書類の作成から申請まで、専門家が代行。複雑な手続きも安心してお任せください。入札参加資格の詳細については<a href="/qualification/">入札参加資格の取得方法</a>をご確認ください。
                     </p>
                     <div class="step-details">
                         <h4>実施内容</h4>
@@ -126,7 +126,7 @@ permalink: /flow/
                 <div class="step-content">
                     <h3 class="step-title">入札実施・結果確認</h3>
                     <p class="step-description">
-                        入札当日のサポートから結果確認まで、最後まで責任を持ってサポート。落札・落選に関わらず、詳細な分析をご提供します。
+                        入札当日のサポートから結果確認まで、最後まで責任を持ってサポート。落札・落選に関わらず、詳細な分析をご提供します。入札に関するトラブル対応については<a href="/troubleshooting/">トラブル解決ガイド</a>もご参照ください。
                     </p>
                     <div class="step-details">
                         <h4>実施内容</h4>
@@ -149,7 +149,7 @@ permalink: /flow/
                 <div class="step-content">
                     <h3 class="step-title">契約・フォローアップ</h3>
                     <p class="step-description">
-                        落札後の契約手続きから業務開始後のフォローアップまで、継続的にサポート。長期的な成功をお約束します。
+                        落札後の契約手続きから業務開始後のフォローアップまで、継続的にサポート。長期的な成功をお約束します。当事務所のサービス詳細については<a href="/service/">サービス紹介</a>をご覧ください。
                     </p>
                     <div class="step-details">
                         <h4>実施内容</h4>
@@ -304,12 +304,12 @@ permalink: /flow/
                     <i class="fas fa-book"></i>
                 </div>
                 <h3 class="related-title">
-                    <a href="{{ '/glossary/' | relative_url }}">入札用語集</a>
+                    <a href="{{ '/dictionary/' | relative_url }}">入札用語集</a>
                 </h3>
                 <p class="related-description">
                     入札・公共調達に関する専門用語を分かりやすく解説
                 </p>
-                <a href="{{ '/glossary/' | relative_url }}" class="related-link">詳しく見る →</a>
+                <a href="{{ '/dictionary/' | relative_url }}" class="related-link">詳しく見る →</a>
             </div>
         </div>
     </div>

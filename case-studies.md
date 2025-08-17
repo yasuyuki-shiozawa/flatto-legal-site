@@ -22,7 +22,7 @@ body_class: case-studies-page
             <div class="overview-content">
                 <h2>なぜ事例研究が重要なのか</h2>
                 <p>入札の成功には、理論だけでなく実践的な知識が不可欠です。実際の成功事例を分析することで、勝率を高める具体的な戦略を学ぶことができます。</p>
-                <p>入札制度の基本的な仕組みについては、<a href="/knowhow/">入札の始め方ガイド</a>で詳しく解説していますので、併せてご覧ください。</p>
+                <p>入札制度の基本的な仕組みについては、<a href="/knowhow/">入札の始め方ガイド</a>で詳しく解説していますので、併せてご覧ください。また、申請でお困りの場合は<a href="/troubleshooting/">トラブル解決ガイド</a>を、入札の専門用語については<a href="/dictionary/">用語集</a>を、最新の業界動向については<a href="/trends/">最新情報</a>を、サポートの流れについては<a href="/flow/">ご利用の流れ</a>を、案件の比較検討については<a href="/comparison/">比較ツール</a>もご参照ください。</p>
                 
                 <div class="stats-grid">
                     <div class="stat-item">
@@ -322,6 +322,10 @@ body_class: case-studies-page
                     <a href="/flow/" class="secondary">
                         <i class="fas fa-list"></i>
                         サービスの流れを見る
+                    </a>
+                    <a href="/service/" class="secondary">
+                        <i class="fas fa-cogs"></i>
+                        専門サポートサービス
                     </a>
                 </div>
             </div>

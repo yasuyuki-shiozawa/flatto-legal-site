@@ -28,7 +28,7 @@ faq_items:
                 <p class="hero-description">
                     入札参加資格の申請方法がわからない方の疑問を<br>
                     行政書士が分かりやすく解説<br>
-                    <small>入札制度の基本については<a href="/knowhow/" style="color: #fff; text-decoration: underline;">入札の始め方ガイド</a>もご覧ください</small>
+                    <small>入札制度の基本については<a href="/knowhow/" style="color: #fff; text-decoration: underline;">入札の始め方ガイド</a>もご覧ください。専門的なサポートが必要な場合は<a href="/service/" style="color: #fff; text-decoration: underline;">専門サポートサービス</a>もご利用いただけます</small>
                 </p>
             </div>
         </div>
@@ -1234,12 +1234,25 @@ function searchFAQ() {
                     <i class="fas fa-book"></i>
                 </div>
                 <h3 class="related-title">
-                    <a href="{{ '/glossary/' | relative_url }}">入札用語集</a>
+                    <a href="{{ '/dictionary/' | relative_url }}">入札用語集</a>
                 </h3>
                 <p class="related-description">
                     入札・公共調達に関する専門用語を分かりやすく解説
                 </p>
-                <a href="{{ '/glossary/' | relative_url }}" class="related-link">詳しく見る →</a>
+                <a href="{{ '/dictionary/' | relative_url }}" class="related-link">詳しく見る →</a>
+            </div>
+            
+            <div class="related-card">
+                <div class="related-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h3 class="related-title">
+                    <a href="{{ '/service/' | relative_url }}">専門サポートサービス</a>
+                </h3>
+                <p class="related-description">
+                    より専門的なサポートが必要な場合の個別対応サービス
+                </p>
+                <a href="{{ '/service/' | relative_url }}" class="related-link">詳しく見る →</a>
             </div>
             
             <div class="related-card">

@@ -56,7 +56,7 @@ keywords: 入札 用語集,入札用語辞典,公共調達 用語,入札専門�
                 <h3 class="term-name">一般競争入札（いっぱんきょうそうにゅうさつ）</h3>
                 <div class="term-content">
                     <p class="term-definition">
-                        発注者が公告により不特定多数の者の参加を求め、入札により契約の相手方を決定する方式。最も競争性が高く、透明性・公正性が確保される入札方式です。
+                        発注者が公告により不特定多数の者の参加を求め、入札により契約の相手方を決定する方式。最も競争性が高く、透明性・公正性が確保される入札方式です。詳しい仕組みや参加方法については<a href="/knowhow/">入札の始め方ガイド</a>を、申請でお困りの場合は<a href="/troubleshooting/">トラブル解決ガイド</a>を、最新の動向については<a href="/trends/">最新情報</a>を、案件の比較検討については<a href="/comparison/">比較ツール</a>をご覧ください。
                     </p>
                     <div class="term-details">
                         <h4>特徴</h4>
@@ -100,7 +100,7 @@ keywords: 入札 用語集,入札用語辞典,公共調達 用語,入札専門�
                 <h3 class="term-name">競争参加資格（きょうそうさんかしかく）</h3>
                 <div class="term-content">
                     <p class="term-definition">
-                        入札に参加するために必要な資格要件。技術力、財務状況、実績などが審査され、適格と認められた者のみが入札に参加できます。
+                        入札に参加するために必要な資格要件。技術力、財務状況、実績などが審査され、適格と認められた者のみが入札に参加できます。資格取得の詳細な手続きについては<a href="/qualification/">入札参加資格の取得方法</a>で詳しく解説しています。
                     </p>
                     <div class="term-details">
                         <h4>審査項目</h4>
@@ -140,7 +140,7 @@ keywords: 入札 用語集,入札用語辞典,公共調達 用語,入札専門�
                 <h3 class="term-name">指名競争入札（しめいきょうそうにゅうさつ）</h3>
                 <div class="term-content">
                     <p class="term-definition">
-                        発注者が資格を有する者の中から適当と認める特定の者を指名し、その者の間で競争入札を行う方式です。
+                        発注者が資格を有する者の中から適当と認める特定の者を指名し、その者の間で競争入札を行う方式です。入札制度全般の詳しい解説は<a href="/knowhow/">入札の始め方ガイド</a>をご覧ください。
                     </p>
                     <div class="term-details">
                         <h4>メリット</h4>
@@ -162,7 +162,7 @@ keywords: 入札 用語集,入札用語辞典,公共調達 用語,入札専門�
                 <h3 class="term-name">総合評価方式（そうごうひょうかほうしき）</h3>
                 <div class="term-content">
                     <p class="term-definition">
-                        価格だけでなく、技術力や品質、環境配慮等を総合的に評価して落札者を決定する方式。価格と技術の両面から最適な提案を選定します。
+                        価格だけでなく、技術力や品質、環境配慮等を総合的に評価して落札者を決定する方式。価格と技術の両面から最適な提案を選定します。実践的な活用方法については<a href="/knowhow/">入札の始め方ガイド</a>で詳しく解説しています。
                     </p>
                     <div class="term-details">
                         <h4>評価項目例</h4>
@@ -188,7 +188,7 @@ keywords: 入札 用語集,入札用語辞典,公共調達 用語,入札専門�
                 <h3 class="term-name">電子入札（でんしにゅうさつ）</h3>
                 <div class="term-content">
                     <p class="term-definition">
-                        インターネットを利用して入札手続きを行うシステム。入札書の提出から開札まで、すべてオンラインで実施されます。
+                        インターネットを利用して入札手続きを行うシステム。入札書の提出から開札まで、すべてオンラインで実施されます。システムの詳細な利用方法については<a href="/denshi-nyusatsu/">電子入札システムの活用方法</a>をご参照ください。
                     </p>
                     <div class="term-details">
                         <h4>メリット</h4>
@@ -206,7 +206,7 @@ keywords: 入札 用語集,入札用語辞典,公共調達 用語,入札専門�
                 <h3 class="term-name">低入札価格調査制度（ていにゅうさつかかくちょうさせいど）</h3>
                 <div class="term-content">
                     <p class="term-definition">
-                        予定価格に対して著しく低い価格で入札があった場合、その価格での契約履行が可能かを調査する制度です。
+                        予定価格に対して著しく低い価格で入札があった場合、その価格での契約履行が可能かを調査する制度です。関連するトラブル対応については<a href="/troubleshooting/">入札トラブル解決ガイド</a>をご参照ください。
                     </p>
                     <div class="term-details">
                         <h4>調査内容</h4>
@@ -228,7 +228,7 @@ keywords: 入札 用語集,入札用語辞典,公共調達 用語,入札専門�
                 <h3 class="term-name">プロポーザル方式（プロポーザルほうしき）</h3>
                 <div class="term-content">
                     <p class="term-definition">
-                        技術提案を重視し、価格以外の要素（技術力、創意工夫等）を総合的に評価して契約相手を選定する方式です。
+                        技術提案を重視し、価格以外の要素（技術力、創意工夫等）を総合的に評価して契約相手を選定する方式です。実際の成功事例については<a href="/case-studies/">事例研究</a>をご参照ください。
                     </p>
                     <div class="term-details">
                         <h4>適用分野</h4>
@@ -307,7 +307,7 @@ keywords: 入札 用語集,入札用語辞典,公共調達 用語,入札専門�
                 <h3 class="term-name">WTO政府調達協定</h3>
                 <div class="term-content">
                     <p class="term-definition">
-                        世界貿易機関（WTO）の政府調達に関する協定。一定金額以上の政府調達について、国際競争入札の実施を義務付けています。
+                        世界貿易機関（WTO）の政府調達に関する協定。一定金額以上の政府調達について、国際競争入札の実施を義務付けています。最新の動向については<a href="/trends/">公共調達の最新動向</a>をご覧ください。
                     </p>
                     <div class="term-details">
                         <h4>対象</h4>
@@ -372,6 +372,10 @@ keywords: 入札 用語集,入札用語辞典,公共調達 用語,入札専門�
                 <a href="{{ '/knowhow/' | relative_url }}" class="btn btn-outline btn-large">
                     <i class="fas fa-lightbulb"></i>
                     ノウハウを学ぶ
+                </a>
+                <a href="{{ '/service/' | relative_url }}" class="btn btn-outline btn-large">
+                    <i class="fas fa-cogs"></i>
+                    専門サポートサービス
                 </a>
             </div>
         </div>
