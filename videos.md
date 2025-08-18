@@ -58,7 +58,85 @@ permalink: /videos/
     <section class="video-list-section">
       <h2 class="section-title">動画一覧</h2>
       <div class="video-grid">
-        <!-- 動画カード1 -->
+        <!-- 新動画1: 最新動画 -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/QF-I5G-SUuQ" 
+                title="入札に参加したいすべての方へ" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">入札に参加したいすべての方へ</h5>
+              <p class="video-description">
+                入札参加を検討している全ての事業者に向けた包括的なガイド。入札の基本から参加までの流れ、必要な準備について分かりやすく解説します。
+              </p>
+              <div class="video-meta">
+                <span class="badge bg-primary me-2">初心者向け</span>
+                <span class="text-muted small">2025年8月 • 約5分</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 新動画2: 企業体制見直し -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/WpeevLA_VKc" 
+                title="入札を通して自社の体制を見直そう！" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">入札を通して自社の体制を見直そう！</h5>
+              <p class="video-description">
+                入札参加を機に企業体制を強化する方法について解説。入札要件を満たすための組織づくりと業務プロセスの改善ポイントをお伝えします。
+              </p>
+              <div class="video-meta">
+                <span class="badge bg-success me-2">企業改善</span>
+                <span class="text-muted small">2025年8月 • 約5分</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 新動画3: 企業成長 -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/emY4vGoRpoo" 
+                title="あなたの会社をよりよくするために" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">あなたの会社をよりよくするために</h5>
+              <p class="video-description">
+                企業成長を目指す事業者に向けた総合的なアドバイス。入札参加を含めた事業拡大の戦略と、持続可能な成長のためのポイントを解説します。
+              </p>
+              <div class="video-meta">
+                <span class="badge bg-warning me-2">企業成長</span>
+                <span class="text-muted small">2025年8月 • 約5分</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 動画カード1: 既存動画 -->
         <div class="col-md-6 mb-4">
           <div class="video-card h-100">
             <div class="video-thumbnail">
@@ -84,7 +162,7 @@ permalink: /videos/
           </div>
         </div>
 
-        <!-- 動画カード2 -->
+        <!-- 動画カード4: 実体験動画 -->
         <div class="col-md-6 mb-4">
           <div class="video-card h-100">
             <div class="video-thumbnail">
@@ -110,19 +188,32 @@ permalink: /videos/
           </div>
         </div>
 
-        <!-- 今後の動画用のプレースホルダー -->
-        <div class="video-card coming-soon">
-          <div class="video-thumbnail">
-            <div class="coming-soon-placeholder">
-              <i class="fas fa-video"></i>
-              <p>新しい動画を<br>準備中です</p>
+        <!-- 動画カード5: 基礎講座 -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/V12UxUXUbXM" 
+                title="入札ってなに？やさしく解説するゆるっと入札講座！" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">入札ってなに？やさしく解説するゆるっと入札講座！</h5>
+              <p class="video-description">
+                入札は建設工事だけじゃない！コンサルティング、調査、物品納入などの「役務」案件について解説。全省庁統一資格の取得方法と新規事業者でも参入できるポイントをお伝えします。
+              </p>
+              <div class="video-meta">
+                <span class="badge bg-primary me-2">初心者向け</span>
+                <span class="text-muted small">2025年1月 • 約16分</span>
+              </div>
             </div>
           </div>
-          <div class="video-card-content">
-            <h3 class="video-card-title">次回動画をお楽しみに</h3>
-            <p class="video-card-description">入札・官公需に関する新しい動画を制作中です。</p>
-          </div>
         </div>
+
       </div>
     </section>
 
