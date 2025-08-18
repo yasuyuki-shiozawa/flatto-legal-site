@@ -1,0 +1,213 @@
+<!-- 強化されたCTAバナー -->
+<div class="cta-banner-enhanced" style="
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 50%, #991b1b 100%);
+  border-radius: 16px;
+  padding: 28px;
+  margin: 40px 0;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(220, 38, 38, 0.25);
+  border: 2px solid rgba(220, 38, 38, 0.3);
+  position: relative;
+  overflow: hidden;
+">
+  <!-- 背景装飾 -->
+  <div style="
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+  "></div>
+  
+  <!-- 緊急性バッジ -->
+  <div style="
+    background: #fbbf24;
+    color: #92400e;
+    border-radius: 20px;
+    padding: 6px 16px;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    animation: pulse 2s infinite;
+    position: relative;
+    z-index: 1;
+  ">
+    ⚡ 申請期限まであと{{ include.days_left | default: "30" }}日！
+  </div>
+  
+  <h3 style="
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0 0 16px 0;
+    line-height: 1.3;
+    position: relative;
+    z-index: 1;
+  ">
+    {{ include.title | default: "今すぐ申請を始めませんか？" }}
+  </h3>
+  
+  <p style="
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 18px;
+    margin: 0 0 24px 0;
+    line-height: 1.6;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+  ">
+    {{ include.description | default: "行政書士による専門サポートで、確実な資格取得を実現します" }}
+  </p>
+  
+  <!-- 特徴リスト -->
+  <div style="
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 1;
+  ">
+    <span style="
+      background: rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+      padding: 8px 16px;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: 600;
+      backdrop-filter: blur(10px);
+    ">✓ 成功率99.8%</span>
+    <span style="
+      background: rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+      padding: 8px 16px;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: 600;
+      backdrop-filter: blur(10px);
+    ">✓ 最短7日で完了</span>
+    <span style="
+      background: rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+      padding: 8px 16px;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: 600;
+      backdrop-filter: blur(10px);
+    ">✓ 全国対応</span>
+  </div>
+  
+  <!-- メインCTAボタン -->
+  <a href="{{ include.link | default: '/contact/?utm_source=enhanced_cta&utm_medium=banner&utm_campaign=urgent' }}" style="
+    background: #ffffff;
+    color: #dc2626;
+    padding: 16px 40px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 18px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+    margin-bottom: 16px;
+  " onmouseover="this.style.transform='translateY(-3px) scale(1.05)'; this.style.boxShadow='0 8px 24px rgba(0, 0, 0, 0.3)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 4px 16px rgba(0, 0, 0, 0.2)'">
+    {{ include.button_text | default: "🚀 今すぐ無料相談を申し込む" }}
+  </a>
+  
+  <!-- サブCTAボタン -->
+  <div style="position: relative; z-index: 1;">
+    <a href="tel:046-272-3357" style="
+      background: transparent;
+      color: #ffffff;
+      padding: 12px 24px;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      display: inline-block;
+      margin: 0 8px;
+      transition: all 0.3s ease;
+    " onmouseover="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.borderColor='#ffffff'" onmouseout="this.style.background='transparent'; this.style.borderColor='rgba(255, 255, 255, 0.5)'">
+      📞 今すぐ電話相談
+    </a>
+  </div>
+  
+  <!-- 安心要素 -->
+  <div style="
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    z-index: 1;
+  ">
+    <p style="
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 14px;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    ">
+      <span>🔒 個人情報保護</span>
+      <span>💯 相談完全無料</span>
+      <span>⏰ 24時間受付</span>
+    </p>
+  </div>
+</div>
+
+<!-- アニメーション定義 -->
+<style>
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+  .cta-banner-enhanced {
+    margin: 32px 0 !important;
+    padding: 24px 20px !important;
+  }
+  
+  .cta-banner-enhanced h3 {
+    font-size: 20px !important;
+  }
+  
+  .cta-banner-enhanced p {
+    font-size: 16px !important;
+  }
+  
+  .cta-banner-enhanced a {
+    padding: 14px 28px !important;
+    font-size: 16px !important;
+    display: block !important;
+    margin: 8px 0 !important;
+  }
+  
+  .cta-banner-enhanced div[style*="flex"] {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+}
+
+/* ダークモード対応 */
+@media (prefers-color-scheme: dark) {
+  .cta-banner-enhanced {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+  }
+}
+</style>
+

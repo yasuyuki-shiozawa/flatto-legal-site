@@ -5,6 +5,8 @@ description: 入札参加資格の申請代行を初心者にも分かりやす�
 keywords: 入札参加資格,入札参加資格申請,入札参加資格代行,入札参加資格初心者,入札参加資格取得方法,入札参加資格やり方,全省庁統一資格,地方自治体入札参加資格,行政書士,神奈川県,大和市,申請代行,入札参加資格申請方法
 permalink: /qualification/
 body_class: qualification-page
+breadcrumb_parent: "申請・手続き"
+breadcrumb_parent_url: "/"
 ---
 
 <div class="page-header">
@@ -25,6 +27,17 @@ body_class: qualification-page
             <div class="readable-content">
                 <p>入札に参加するためには、まず「入札参加資格」を取得する必要があります。当事務所では、全省庁統一資格から各地方自治体の資格まで、幅広い入札参加資格の取得をサポートしています。</p>
                 <p>入札制度の基本的な仕組みについては、<a href="/knowhow/">入札の始め方ガイド</a>で詳しく解説していますので、併せてご覧ください。また、申請でお困りの場合は<a href="/troubleshooting/">トラブル解決ガイド</a>を、専門用語については<a href="/dictionary/">用語集</a>を、最新の制度変更については<a href="/trends/">最新情報</a>を、申請手続きの詳しい流れについては<a href="/flow/">ご利用の流れ</a>を、案件の比較検討については<a href="/comparison/">比較ツール</a>もご参照ください。</p>
+                
+                <div style="margin: 2rem 0; padding: 1rem; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 4px solid #007bff; border-radius: 8px;">
+                  <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <div style="font-size: 1.2rem;">📹</div>
+                    <div style="flex: 1;">
+                      <div style="font-size: 0.9rem; font-weight: 600; color: #495057; margin-bottom: 0.25rem;">動画で詳しく学ぶ</div>
+                      <div style="font-size: 0.8rem; color: #6c757d;">入札参加資格の基本をやさしく解説 (約5分)</div>
+                    </div>
+                    <a href="/videos/" style="background: #007bff; color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: background-color 0.3s;">動画を見る</a>
+                  </div>
+                </div>
             </div>
             
             <div class="service-features">
@@ -208,6 +221,141 @@ body_class: qualification-page
         <!-- 関連ページ -->
         <section class="related-pages">
             <h2>関連ページ</h2>
+            
+            <!-- 動画CTA（Call to Action）ブロック -->
+            <div class="video-cta-block">
+              <div class="video-cta-container">
+                <div class="row align-items-center">
+                  <div class="col-md-8">
+                    <div class="video-cta-content">
+                      <h3 class="video-cta-title">
+                        <i class="fas fa-play-circle text-primary me-2"></i>
+                        動画でもっと詳しく学ぶ
+                      </h3>
+                      <p class="video-cta-description">
+                        入札参加資格について、動画でわかりやすく解説しています。<br>
+                        申請の流れや注意点を実体験を交えてお伝えします。
+                      </p>
+                      <div class="video-cta-features">
+                        <span class="feature-badge">
+                          <i class="fas fa-clock me-1"></i>約5分
+                        </span>
+                        <span class="feature-badge">
+                          <i class="fas fa-user-graduate me-1"></i>初心者向け
+                        </span>
+                        <span class="feature-badge">
+                          <i class="fas fa-mobile-alt me-1"></i>スマホ対応
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 text-center">
+                    <div class="video-cta-actions">
+                      <a href="{{ '/videos/' | relative_url }}" class="btn btn-primary btn-lg video-cta-btn">
+                        <i class="fas fa-play me-2"></i>動画を見る
+                      </a>
+                      <p class="video-cta-note mt-2">
+                        <small class="text-muted">
+                          <i class="fas fa-youtube text-danger me-1"></i>
+                          YouTubeで視聴できます
+                        </small>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 動画CTAブロック用CSS -->
+            <style>
+            .video-cta-block {
+              background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+              border: 2px solid #dee2e6;
+              border-radius: 12px;
+              padding: 2rem;
+              margin: 2rem 0;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .video-cta-block:hover {
+              transform: translateY(-2px);
+              box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+            }
+
+            .video-cta-title {
+              color: #2c3e50;
+              font-size: 1.5rem;
+              font-weight: 700;
+              margin-bottom: 1rem;
+            }
+
+            .video-cta-description {
+              color: #6c757d;
+              font-size: 1rem;
+              line-height: 1.6;
+              margin-bottom: 1rem;
+            }
+
+            .video-cta-features {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 0.5rem;
+              margin-bottom: 1rem;
+            }
+
+            .feature-badge {
+              background-color: #e3f2fd;
+              color: #1976d2;
+              padding: 0.25rem 0.75rem;
+              border-radius: 20px;
+              font-size: 0.875rem;
+              font-weight: 500;
+            }
+
+            .video-cta-btn {
+              background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+              border: none;
+              border-radius: 8px;
+              padding: 0.75rem 2rem;
+              font-weight: 600;
+              text-transform: none;
+              box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+              transition: all 0.3s ease;
+            }
+
+            .video-cta-btn:hover {
+              background: linear-gradient(135deg, #0056b3 0%, #004085 100%);
+              transform: translateY(-1px);
+              box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4);
+            }
+
+            .video-cta-note {
+              margin-top: 0.5rem;
+            }
+
+            /* レスポンシブ対応 */
+            @media (max-width: 768px) {
+              .video-cta-block {
+                padding: 1.5rem;
+                margin: 1.5rem 0;
+              }
+              
+              .video-cta-title {
+                font-size: 1.25rem;
+              }
+              
+              .video-cta-features {
+                justify-content: center;
+              }
+              
+              .video-cta-btn {
+                width: 100%;
+                margin-bottom: 1rem;
+              }
+            }
+            </style>
+            
             <div class="related-links">
                 <a href="/flow/" class="related-link">
                     <h3>サービスの流れ</h3>

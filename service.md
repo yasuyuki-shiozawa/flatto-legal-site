@@ -3,6 +3,8 @@ layout: default
 title: "専門サポートサービス | 入札参加資格申請から落札まで行政書士が完全サポート"
 description: 入札参加資格の代行サービスなら実績豊富な行政書士にお任せ。全省庁統一資格・地方自治体資格の申請代行から入札参加サポートまで。複雑な案件や個別対応も専門的にサポート。神奈川県大和市から全国対応。
 keywords: 入札参加資格 代行サービス,入札参加資格 申請代行,全省庁統一資格 代行,入札サポート,公共調達 代行,行政書士 代行サービス,入札支援,入札手続き代行,神奈川県,大和市
+breadcrumb_parent: "サービス一覧"
+breadcrumb_parent_url: "/"
 ---
 
 <!-- ページヘッダー -->
@@ -21,6 +23,140 @@ keywords: 入札参加資格 代行サービス,入札参加資格 申請代行,
         </div>
         <div class="readable-content">
             <p>入札マップで学習した後、より専門的なサポートが必要な場合に。複雑な案件や個別の事情に応じた対応を行います。基本的な入札の仕組みについては<a href="/knowhow/">入札の始め方ガイド</a>で詳しく解説していますので、併せてご覧ください。サポートの詳しい流れについては<a href="/flow/">ご利用の流れ</a>もご参照ください。</p>
+            
+            <!-- 動画CTA（Call to Action）ブロック -->
+            <div class="video-cta-block">
+              <div class="video-cta-container">
+                <div class="row align-items-center">
+                  <div class="col-md-8">
+                    <div class="video-cta-content">
+                      <h3 class="video-cta-title">
+                        <i class="fas fa-play-circle text-primary me-2"></i>
+                        サービスの想いを動画で
+                      </h3>
+                      <p class="video-cta-description">
+                        なぜ入札サポートを始めたのか、どのような想いでサービスを提供しているのか。<br>
+                        代表の想いと入札参加への熱意を動画でお伝えします。
+                      </p>
+                      <div class="video-cta-features">
+                        <span class="feature-badge">
+                          <i class="fas fa-clock me-1"></i>約5分
+                        </span>
+                        <span class="feature-badge">
+                          <i class="fas fa-heart me-1"></i>想いを込めて
+                        </span>
+                        <span class="feature-badge">
+                          <i class="fas fa-mobile-alt me-1"></i>スマホ対応
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 text-center">
+                    <div class="video-cta-actions">
+                      <a href="{{ '/videos/' | relative_url }}" class="btn btn-primary btn-lg video-cta-btn">
+                        <i class="fas fa-play me-2"></i>動画を見る
+                      </a>
+                      <p class="video-cta-note mt-2">
+                        <small class="text-muted">
+                          <i class="fas fa-youtube text-danger me-1"></i>
+                          YouTubeで視聴できます
+                        </small>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 動画CTAブロック用CSS -->
+            <style>
+            .video-cta-block {
+              background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+              border: 2px solid #dee2e6;
+              border-radius: 12px;
+              padding: 2rem;
+              margin: 2rem 0;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .video-cta-block:hover {
+              transform: translateY(-2px);
+              box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+            }
+
+            .video-cta-title {
+              color: #2c3e50;
+              font-size: 1.5rem;
+              font-weight: 700;
+              margin-bottom: 1rem;
+            }
+
+            .video-cta-description {
+              color: #6c757d;
+              font-size: 1rem;
+              line-height: 1.6;
+              margin-bottom: 1rem;
+            }
+
+            .video-cta-features {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 0.5rem;
+              margin-bottom: 1rem;
+            }
+
+            .feature-badge {
+              background-color: #e3f2fd;
+              color: #1976d2;
+              padding: 0.25rem 0.75rem;
+              border-radius: 20px;
+              font-size: 0.875rem;
+              font-weight: 500;
+            }
+
+            .video-cta-btn {
+              background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+              border: none;
+              border-radius: 8px;
+              padding: 0.75rem 2rem;
+              font-weight: 600;
+              text-transform: none;
+              box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+              transition: all 0.3s ease;
+            }
+
+            .video-cta-btn:hover {
+              background: linear-gradient(135deg, #0056b3 0%, #004085 100%);
+              transform: translateY(-1px);
+              box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4);
+            }
+
+            .video-cta-note {
+              margin-top: 0.5rem;
+            }
+
+            /* レスポンシブ対応 */
+            @media (max-width: 768px) {
+              .video-cta-block {
+                padding: 1.5rem;
+                margin: 1.5rem 0;
+              }
+              
+              .video-cta-title {
+                font-size: 1.25rem;
+              }
+              
+              .video-cta-features {
+                justify-content: center;
+              }
+              
+              .video-cta-btn {
+                width: 100%;
+                margin-bottom: 1rem;
+              }
+            }
+            </style>
         </div>
         
         <!-- しおさんの説明コメント -->
@@ -289,4 +425,12 @@ keywords: 入札参加資格 代行サービス,入札参加資格 申請代行,
     }
 }
 </style>
+
+<!-- 強化されたCTAバナー -->
+{% include cta-banner-enhanced.html 
+   title="専門サポートで確実な入札参加を実現"
+   description="行政書士による個別対応で、あなたの事業成長をサポートします"
+   button_text="💼 専門サポートを申し込む"
+   days_left="15"
+%}
 

@@ -1,0 +1,411 @@
+<!-- サイト内検索コンポーネント -->
+<div class="search-component" id="searchComponent">
+    <div class="search-container">
+        <div class="search-input-wrapper">
+            <input 
+                type="text" 
+                id="searchInput" 
+                class="search-input" 
+                placeholder="サイト内を検索..."
+                autocomplete="off"
+                aria-label="サイト内検索"
+            >
+            <button class="search-button" id="searchButton" aria-label="検索実行">
+                <i class="fas fa-search"></i>
+            </button>
+            <button class="search-clear" id="searchClear" aria-label="検索クリア" style="display: none;">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <!-- 検索候補 -->
+        <div class="search-suggestions" id="searchSuggestions" style="display: none;">
+            <div class="suggestions-header">
+                <span>検索候補</span>
+            </div>
+            <ul class="suggestions-list" id="suggestionsList">
+                <!-- 動的に生成 -->
+            </ul>
+        </div>
+        
+        <!-- 人気検索キーワード -->
+        <div class="popular-searches" id="popularSearches">
+            <div class="popular-header">
+                <span>人気の検索キーワード</span>
+            </div>
+            <div class="popular-tags">
+                <button class="popular-tag" data-search="入札参加資格">入札参加資格</button>
+                <button class="popular-tag" data-search="全省庁統一資格">全省庁統一資格</button>
+                <button class="popular-tag" data-search="申請方法">申請方法</button>
+                <button class="popular-tag" data-search="必要書類">必要書類</button>
+                <button class="popular-tag" data-search="電子入札">電子入札</button>
+                <button class="popular-tag" data-search="随意契約">随意契約</button>
+                <button class="popular-tag" data-search="行政書士">行政書士</button>
+                <button class="popular-tag" data-search="代行サービス">代行サービス</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 検索結果 -->
+    <div class="search-results" id="searchResults" style="display: none;">
+        <div class="results-header">
+            <h3 id="resultsTitle">検索結果</h3>
+            <span class="results-count" id="resultsCount"></span>
+        </div>
+        <div class="results-filters">
+            <button class="filter-btn active" data-filter="all">すべて</button>
+            <button class="filter-btn" data-filter="pages">ページ</button>
+            <button class="filter-btn" data-filter="articles">記事</button>
+            <button class="filter-btn" data-filter="guides">ガイド</button>
+        </div>
+        <div class="results-list" id="resultsList">
+            <!-- 動的に生成 -->
+        </div>
+        <div class="no-results" id="noResults" style="display: none;">
+            <i class="fas fa-search"></i>
+            <h4>検索結果が見つかりませんでした</h4>
+            <p>別のキーワードでお試しください</p>
+        </div>
+    </div>
+</div>
+
+<style>
+.search-component {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.search-container {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.search-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.search-input-wrapper:focus-within {
+    border-color: #3b82f6;
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.2);
+}
+
+.search-input {
+    flex: 1;
+    padding: 16px 20px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+    border-radius: 12px;
+}
+
+.search-input::placeholder {
+    color: #9ca3af;
+}
+
+.search-button, .search-clear {
+    padding: 12px;
+    border: none;
+    background: transparent;
+    color: #6b7280;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin-right: 8px;
+}
+
+.search-button:hover, .search-clear:hover {
+    background: #f3f4f6;
+    color: #3b82f6;
+}
+
+.search-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    margin-top: 4px;
+}
+
+.suggestions-header {
+    padding: 12px 16px;
+    border-bottom: 1px solid #f3f4f6;
+    font-size: 14px;
+    font-weight: 600;
+    color: #6b7280;
+}
+
+.suggestions-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.suggestion-item {
+    padding: 12px 16px;
+    cursor: pointer;
+    border-bottom: 1px solid #f9fafb;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.suggestion-item:hover, .suggestion-item.active {
+    background: #f3f4f6;
+}
+
+.suggestion-item i {
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+.popular-searches {
+    margin-top: 16px;
+    padding: 16px;
+    background: #f9fafb;
+    border-radius: 8px;
+}
+
+.popular-header {
+    font-size: 14px;
+    font-weight: 600;
+    color: #6b7280;
+    margin-bottom: 12px;
+}
+
+.popular-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.popular-tag {
+    padding: 6px 12px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #6b7280;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.popular-tag:hover {
+    background: #3b82f6;
+    color: white;
+    border-color: #3b82f6;
+}
+
+.search-results {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.results-header {
+    padding: 20px;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.results-header h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #1f2937;
+}
+
+.results-count {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.results-filters {
+    padding: 16px 20px;
+    border-bottom: 1px solid #f3f4f6;
+    display: flex;
+    gap: 8px;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border: 1px solid #e5e7eb;
+    background: white;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #6b7280;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: #3b82f6;
+    color: white;
+    border-color: #3b82f6;
+}
+
+.results-list {
+    padding: 20px;
+}
+
+.result-item {
+    padding: 16px 0;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #3b82f6;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.result-title:hover {
+    text-decoration: underline;
+}
+
+.result-excerpt {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.result-meta {
+    display: flex;
+    gap: 16px;
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+.result-category {
+    background: #f3f4f6;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+.no-results {
+    text-align: center;
+    padding: 40px 20px;
+    color: #6b7280;
+}
+
+.no-results i {
+    font-size: 48px;
+    margin-bottom: 16px;
+    opacity: 0.5;
+}
+
+.no-results h4 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+}
+
+.no-results p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+    .search-input {
+        padding: 14px 16px;
+        font-size: 16px; /* iOS zoom prevention */
+    }
+    
+    .popular-tags {
+        gap: 6px;
+    }
+    
+    .popular-tag {
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+    
+    .results-filters {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    .filter-btn {
+        flex-shrink: 0;
+    }
+    
+    .result-meta {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* ダークモード対応 */
+@media (prefers-color-scheme: dark) {
+    .search-input-wrapper {
+        background: #1f2937;
+        border-color: #374151;
+    }
+    
+    .search-input {
+        color: white;
+    }
+    
+    .search-input::placeholder {
+        color: #9ca3af;
+    }
+    
+    .search-suggestions, .search-results {
+        background: #1f2937;
+        border-color: #374151;
+    }
+    
+    .popular-searches {
+        background: #111827;
+    }
+    
+    .popular-tag {
+        background: #374151;
+        border-color: #4b5563;
+        color: #d1d5db;
+    }
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.search-suggestions, .search-results {
+    animation: fadeIn 0.3s ease-out;
+}
+</style>
+

@@ -4,6 +4,8 @@ title: "入札のやり方完全ガイド | 初心者向け入札の始め方を
 description: "入札の始め方を初心者にも分かりやすく完全解説。入札のやり方・参加方法・必要な手続きを行政書士が基本から実践まで詳しく解説。公共調達への参加方法が分からない方も安心。神奈川県大和市から全国サポート。"
 keywords: "入札 始め方,入札 やり方,入札 初心者,入札参加方法,入札手続き,公共調達,入札参加資格,一般競争入札,指名競争入札,随意契約,行政書士,神奈川県,大和市,入札サポート"
 permalink: /knowhow/
+breadcrumb_parent: "ノウハウ・ガイド"
+breadcrumb_parent_url: "/"
 ---
 
 # 入札の始め方 - 初心者向け完全ガイド
@@ -43,6 +45,17 @@ permalink: /knowhow/
 **経済性**とは、最も有利な条件での契約締結を目指すことです。単純な最低価格だけでなく、品質や履行能力も含めた総合的な評価により、最適な契約相手を選定します。
 
 地方自治法第234条第2項では、[随意契約](/zuii-keiyaku/)は政令で定める場合に該当するときに限って認められるとされており、入札が原則となっています。
+
+<div style="margin: 2rem 0; padding: 1rem; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 4px solid #007bff; border-radius: 8px;">
+  <div style="display: flex; align-items: center; gap: 0.75rem;">
+    <div style="font-size: 1.2rem;">📹</div>
+    <div style="flex: 1;">
+      <div style="font-size: 0.9rem; font-weight: 600; color: #495057; margin-bottom: 0.25rem;">動画で詳しく学ぶ</div>
+      <div style="font-size: 0.8rem; color: #6c757d;">入札の基本をやさしく解説 (約5分)</div>
+    </div>
+    <a href="/videos/" style="background: #007bff; color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: background-color 0.3s;">動画を見る</a>
+  </div>
+</div>
 
 ---
 
@@ -294,6 +307,140 @@ permalink: /knowhow/
 **契約交渉・履行**では、契約締結から履行までの全過程をサポートし、適切な契約履行を確保いたします。
 
 詳細については、[サービス案内ページ](/service/)をご覧ください。より専門的なサポートが必要な場合は、[専門サポートサービス](/service/)もご利用いただけます。
+
+<!-- 動画CTA（Call to Action）ブロック -->
+<div class="video-cta-block">
+  <div class="video-cta-container">
+    <div class="row align-items-center">
+      <div class="col-md-8">
+        <div class="video-cta-content">
+          <h3 class="video-cta-title">
+            <i class="fas fa-play-circle text-primary me-2"></i>
+            動画でもっと詳しく学ぶ
+          </h3>
+          <p class="video-cta-description">
+            入札・官公需について、動画でわかりやすく解説しています。<br>
+            初心者の方にも理解しやすい内容で、実践的なノウハウをお伝えします。
+          </p>
+          <div class="video-cta-features">
+            <span class="feature-badge">
+              <i class="fas fa-clock me-1"></i>約5分
+            </span>
+            <span class="feature-badge">
+              <i class="fas fa-user-graduate me-1"></i>初心者向け
+            </span>
+            <span class="feature-badge">
+              <i class="fas fa-mobile-alt me-1"></i>スマホ対応
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="video-cta-actions">
+          <a href="{{ '/videos/' | relative_url }}" class="btn btn-primary btn-lg video-cta-btn">
+            <i class="fas fa-play me-2"></i>動画を見る
+          </a>
+          <p class="video-cta-note mt-2">
+            <small class="text-muted">
+              <i class="fas fa-youtube text-danger me-1"></i>
+              YouTubeで視聴できます
+            </small>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 動画CTAブロック用CSS -->
+<style>
+.video-cta-block {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 2px solid #dee2e6;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-cta-block:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.video-cta-title {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.video-cta-description {
+  color: #6c757d;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.video-cta-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-badge {
+  background-color: #e3f2fd;
+  color: #1976d2;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.video-cta-btn {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  text-transform: none;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.video-cta-btn:hover {
+  background: linear-gradient(135deg, #0056b3 0%, #004085 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4);
+}
+
+.video-cta-note {
+  margin-top: 0.5rem;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .video-cta-block {
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .video-cta-title {
+    font-size: 1.25rem;
+  }
+  
+  .video-cta-features {
+    justify-content: center;
+  }
+  
+  .video-cta-btn {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+</style>
 
 ---
 

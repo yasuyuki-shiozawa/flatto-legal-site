@@ -250,6 +250,142 @@ keywords: "電子入札 やり方,電子入札 初心者,電子入札システ�
 
 より専門的なサポートが必要な場合は、<a href="/service/">専門サポートサービス</a>もご利用いただけます。また、サポートの詳しい流れについては<a href="/flow/">ご利用の流れ</a>もご参照ください。
 
+<!-- 控えめな動画導線コンポーネント -->
+<div class="video-cta-subtle">
+  <div class="video-cta-content">
+    <div class="video-icon">
+      <i class="fab fa-youtube"></i>
+    </div>
+    <div class="video-info">
+      <span class="video-label">関連動画</span>
+      <span class="video-title">実際の入札体験談を動画で</span>
+      <span class="video-duration">5分</span>
+    </div>
+    <a href="{{ '/videos/' | relative_url }}" class="video-link" aria-label="動画を見る">
+      <i class="fas fa-chevron-right"></i>
+    </a>
+  </div>
+</div>
+
+<!-- 控えめな動画導線用CSS -->
+<style>
+.video-cta-subtle {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin: 1.5rem 0;
+  transition: all 0.3s ease;
+  max-width: 400px;
+}
+
+.video-cta-subtle:hover {
+  background: #e9ecef;
+  border-color: #dee2e6;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.video-cta-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.video-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  background: #ff0000;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1rem;
+}
+
+.video-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.video-label {
+  font-size: 0.75rem;
+  color: #6c757d;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.video-title {
+  font-size: 0.875rem;
+  color: #2c3e50;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.video-duration {
+  font-size: 0.75rem;
+  color: #6c757d;
+}
+
+.video-link {
+  flex-shrink: 0;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.3s ease;
+}
+
+.video-link:hover {
+  color: #0056b3;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .video-cta-subtle {
+    margin: 1rem 0;
+    padding: 0.625rem 0.875rem;
+  }
+  
+  .video-cta-content {
+    gap: 0.625rem;
+  }
+  
+  .video-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 0.875rem;
+  }
+}
+
+/* サイドバー用のより小さいバージョン */
+.video-cta-subtle.sidebar {
+  max-width: none;
+  margin: 1rem 0;
+}
+
+.video-cta-subtle.sidebar .video-title {
+  font-size: 0.8125rem;
+}
+
+/* インライン用のさらに控えめなバージョン */
+.video-cta-subtle.inline {
+  background: transparent;
+  border: 1px solid #dee2e6;
+  padding: 0.5rem 0.75rem;
+  margin: 1rem 0;
+  border-radius: 6px;
+}
+
+.video-cta-subtle.inline:hover {
+  background: #f8f9fa;
+}
+</style>
+
 ## 関連リンク
 
 - [政府調達ポータル](https://www.p-portal.go.jp/)

@@ -1,0 +1,338 @@
+<!-- 強化されたフローティングCTA -->
+<div class="floating-cta-enhanced" id="floatingCTAEnhanced">
+    <div class="floating-cta-content">
+        <!-- 閉じるボタン -->
+        <button class="floating-cta-close" onclick="hideFloatingCTA()" aria-label="閉じる">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <!-- メインコンテンツ -->
+        <div class="floating-cta-main">
+            <div class="floating-cta-icon">
+                <i class="fas fa-rocket"></i>
+            </div>
+            <div class="floating-cta-text">
+                <h4>申請期限が迫っています！</h4>
+                <p>今すぐ専門家にご相談ください</p>
+            </div>
+        </div>
+        
+        <!-- アクションボタン -->
+        <div class="floating-cta-actions">
+            <a href="/contact/?utm_source=floating_cta&utm_medium=popup&utm_campaign=urgent" class="floating-cta-button primary">
+                <i class="fas fa-envelope"></i>
+                無料相談予約
+            </a>
+            <a href="tel:046-272-3357" class="floating-cta-button secondary">
+                <i class="fas fa-phone"></i>
+                今すぐ電話
+            </a>
+        </div>
+        
+        <!-- 信頼要素 -->
+        <div class="floating-cta-trust">
+            <span><i class="fas fa-shield-alt"></i> 相談無料</span>
+            <span><i class="fas fa-clock"></i> 24時間受付</span>
+        </div>
+    </div>
+</div>
+
+<style>
+.floating-cta-enhanced {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(59, 130, 246, 0.3);
+    z-index: 1000;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.floating-cta-enhanced.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.floating-cta-enhanced.hide {
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.floating-cta-content {
+    padding: 20px;
+    position: relative;
+}
+
+.floating-cta-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.floating-cta-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.floating-cta-main {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.floating-cta-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    animation: bounce 2s infinite;
+}
+
+.floating-cta-icon i {
+    font-size: 20px;
+    color: white;
+}
+
+.floating-cta-text h4 {
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+    line-height: 1.3;
+}
+
+.floating-cta-text p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.floating-cta-actions {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.floating-cta-button {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.floating-cta-button.primary {
+    background: white;
+    color: #3b82f6;
+}
+
+.floating-cta-button.primary:hover {
+    background: #f8fafc;
+    transform: translateY(-1px);
+}
+
+.floating-cta-button.secondary {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.floating-cta-button.secondary:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+}
+
+.floating-cta-trust {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.floating-cta-trust span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.floating-cta-trust i {
+    font-size: 10px;
+}
+
+/* アニメーション */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-8px);
+    }
+    60% {
+        transform: translateY(-4px);
+    }
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+    .floating-cta-enhanced {
+        width: calc(100% - 40px);
+        right: 20px;
+        left: 20px;
+        bottom: 90px; /* モバイル固定CTAの上に配置 */
+    }
+    
+    .floating-cta-content {
+        padding: 16px;
+    }
+    
+    .floating-cta-text h4 {
+        font-size: 15px;
+    }
+    
+    .floating-cta-text p {
+        font-size: 13px;
+    }
+    
+    .floating-cta-button {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+}
+
+/* タブレット対応 */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .floating-cta-enhanced {
+        width: 280px;
+    }
+}
+
+/* ダークモード対応 */
+@media (prefers-color-scheme: dark) {
+    .floating-cta-enhanced {
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    }
+}
+</style>
+
+<script>
+// フローティングCTAの表示制御
+let floatingCTAShown = false;
+let floatingCTAHidden = false;
+
+function showFloatingCTA() {
+    if (floatingCTAHidden) return;
+    
+    const floatingCTA = document.getElementById('floatingCTAEnhanced');
+    if (floatingCTA && !floatingCTAShown) {
+        floatingCTA.classList.add('show');
+        floatingCTAShown = true;
+        
+        // 10秒後に自動で少し透明にする
+        setTimeout(() => {
+            if (floatingCTA.classList.contains('show')) {
+                floatingCTA.style.opacity = '0.8';
+            }
+        }, 10000);
+    }
+}
+
+function hideFloatingCTA() {
+    const floatingCTA = document.getElementById('floatingCTAEnhanced');
+    if (floatingCTA) {
+        floatingCTA.classList.remove('show');
+        floatingCTA.classList.add('hide');
+        floatingCTAHidden = true;
+        floatingCTAShown = false;
+        
+        // ローカルストレージに非表示状態を保存
+        localStorage.setItem('floatingCTAHidden', 'true');
+    }
+}
+
+// ページ読み込み時の初期化
+document.addEventListener('DOMContentLoaded', function() {
+    // 以前に非表示にされていたかチェック
+    if (localStorage.getItem('floatingCTAHidden') === 'true') {
+        floatingCTAHidden = true;
+        return;
+    }
+    
+    // スクロール量に応じて表示
+    let scrollThreshold = 300;
+    let timeThreshold = 5000; // 5秒後
+    
+    // 時間ベースの表示
+    setTimeout(() => {
+        if (window.scrollY > 100) {
+            showFloatingCTA();
+        }
+    }, timeThreshold);
+    
+    // スクロールベースの表示
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > scrollThreshold) {
+            showFloatingCTA();
+        }
+    });
+    
+    // 離脱意図の検出（マウスが上部に移動）
+    document.addEventListener('mouseleave', function(e) {
+        if (e.clientY <= 0) {
+            showFloatingCTA();
+        }
+    });
+    
+    // モバイルでのタッチ操作検出
+    let touchStartY = 0;
+    document.addEventListener('touchstart', function(e) {
+        touchStartY = e.touches[0].clientY;
+    });
+    
+    document.addEventListener('touchmove', function(e) {
+        const touchY = e.touches[0].clientY;
+        const deltaY = touchY - touchStartY;
+        
+        // 上方向にスワイプした場合
+        if (deltaY < -50 && window.scrollY > 200) {
+            showFloatingCTA();
+        }
+    });
+});
+
+// ページ離脱前の最後のチャンス
+window.addEventListener('beforeunload', function() {
+    if (!floatingCTAShown && !floatingCTAHidden) {
+        showFloatingCTA();
+    }
+});
+</script>
+
