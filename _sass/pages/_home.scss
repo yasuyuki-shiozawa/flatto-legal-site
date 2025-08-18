@@ -327,17 +327,17 @@
   
   &.teal {
     background: linear-gradient(135deg, #A8E6CF 0%, #81C784 100%);
-    color: #2E7D32;
+    color: #1B5E20; // より濃い緑色でコントラスト向上
   }
   
   &.indigo {
     background: linear-gradient(135deg, #A8E6CF 0%, #C8E6C9 100%);
-    color: #2E7D32;
+    color: #1B5E20; // より濃い緑色でコントラスト向上
   }
   
   &.coral {
     background: linear-gradient(135deg, #FFB74D 0%, #FFCC80 100%);
-    color: #F57C00;
+    color: #E65100; // より濃いオレンジ色でコントラスト向上
   }
   
   .service-card-icon {

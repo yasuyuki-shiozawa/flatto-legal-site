@@ -54,18 +54,18 @@
   gap: 0.5rem;
   padding: 0.5rem 1rem;
   background: rgba(var(--primary-rgb), 0.1);
-  color: var(--primary-color);
+  color: #1B5E20; // より濃い緑色でコントラスト向上
   text-decoration: none;
   border-radius: 20px;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 600; // フォントウェイトを太くして視認性向上
   transition: all 0.3s ease;
   border: 1px solid rgba(var(--primary-rgb), 0.2);
 }
 
 .content-link:hover {
   background: rgba(var(--primary-rgb), 0.2);
-  color: var(--primary-dark);
+  color: #0D4E14; // ホバー時はさらに濃い色
   text-decoration: none;
   transform: translateY(-1px);
   box-shadow: 0 2px 4px rgba(var(--primary-rgb), 0.2);
