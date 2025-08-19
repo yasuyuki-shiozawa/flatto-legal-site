@@ -333,22 +333,32 @@ description: 2025年建築基準法改正による新たな事業機会。ドロ
   border-radius: 8px;
 }
 
-.contact-button {
-  display: inline-block;
-  background: #F5A623;
-  color: white;
-  padding: 1rem 2rem;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: background-color 0.3s ease;
+.contact-section .contact-button {
+  display: inline-block !important;
+  background: #F5A623 !important;
+  color: white !important;
+  padding: 1rem 2rem !important;
+  border-radius: 5px !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+  font-size: 1.1rem !important;
+  transition: background-color 0.3s ease !important;
+  line-height: 1.4 !important;
+  text-align: center !important;
 }
 
-.contact-button:hover {
-  background: #e6941f;
-  text-decoration: none;
-  color: white;
+.contact-section .contact-button:hover {
+  background: #e6941f !important;
+  text-decoration: none !important;
+  color: white !important;
+}
+
+.contact-section .contact-button:visited {
+  color: white !important;
+}
+
+.contact-section .contact-button:link {
+  color: white !important;
 }
 
 .contact-note {
