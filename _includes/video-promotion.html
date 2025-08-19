@@ -1,0 +1,169 @@
+<!-- 動画誘導コンポーネント -->
+<div class="video-promotion-box">
+  <div class="video-promotion-header">
+    <div class="video-promotion-icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 5v14l11-7z" fill="currentColor"/>
+      </svg>
+    </div>
+    <h3 class="video-promotion-title">動画で学ぶ</h3>
+  </div>
+  
+  <div class="video-promotion-content">
+    <p class="video-promotion-description">
+      入札の基本を分かりやすく動画で解説しています。初心者の方にもおすすめです。
+    </p>
+    
+    <div class="video-promotion-stats">
+      <span class="video-stat">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+          <polyline points="12,6 12,12 16,14" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        約16分
+      </span>
+      <span class="video-stat">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/>
+          <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        初心者向け
+      </span>
+    </div>
+    
+    <a href="/#video-section" class="video-promotion-button">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 5v14l11-7z" fill="currentColor"/>
+      </svg>
+      今すぐ動画を見る
+    </a>
+  </div>
+</div>
+
+<style>
+.video-promotion-box {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-promotion-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.video-promotion-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.video-promotion-icon {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 0.5rem;
+  margin-right: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-promotion-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: white;
+}
+
+.video-promotion-content {
+  margin-top: 1rem;
+}
+
+.video-promotion-description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.video-promotion-stats {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.video-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+.video-stat svg {
+  opacity: 0.8;
+}
+
+.video-promotion-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.video-promotion-button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.video-promotion-button svg {
+  transition: transform 0.3s ease;
+}
+
+.video-promotion-button:hover svg {
+  transform: translateX(2px);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .video-promotion-box {
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+  }
+  
+  .video-promotion-title {
+    font-size: 1.125rem;
+  }
+  
+  .video-promotion-description {
+    font-size: 0.9rem;
+  }
+  
+  .video-promotion-stats {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .video-promotion-button {
+    width: 100%;
+    justify-content: center;
+    padding: 0.875rem 1rem;
+  }
+}
+</style>
+

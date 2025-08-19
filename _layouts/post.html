@@ -60,6 +60,9 @@ layout: default
             <main class="article-content">
                 {{ content }}
                 
+                <!-- 動画誘導コンポーネント（記事内） -->
+                {% include video-promotion.html %}
+                
                 <!-- 内部リンク最適化 -->
                 {% if site.internal_links %}
                 {% include internal-links.html %}
