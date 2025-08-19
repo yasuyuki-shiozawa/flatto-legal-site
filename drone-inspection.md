@@ -166,7 +166,7 @@ description: 2025年建築基準法改正による新たな事業機会。ドロ
 ドローン法定点検事業についてのご相談は、お気軽にお問い合わせください。
 
 <div class="contact-section">
-  <a href="/contact/" class="contact-button">無料相談のお申し込み</a>
+  <a href="/contact/" style="display: inline-block; background: #F5A623; color: white !important; padding: 1rem 2rem; border-radius: 5px; text-decoration: none !important; font-weight: bold; font-size: 1.1rem; text-align: center; min-width: 200px;">無料相談のお申し込み</a>
   <p class="contact-note">初回相談は無料です。事業計画から補助金活用まで、専門スタッフが丁寧にご相談に応じます。</p>
 </div>
 
