@@ -140,6 +140,27 @@ description: 2025年建築基準法改正による新たな事業機会。ドロ
   </div>
 </div>
 
+## 関連記事
+
+ドローン法定点検事業についてより詳しく知りたい方は、こちらの記事もご覧ください。
+
+<div class="related-articles">
+  <div class="article-card">
+    <h4><a href="/入札ノウハウ/新技術活用/市場分析/2025/08/18/drone-infrared-sensor-business-opportunities/">ドローン・赤外線センサー業務で年商1億円も夢じゃない！実際の落札金額から見る新市場参入ガイド</a></h4>
+    <p>実際の落札事例から見るドローン・赤外線センサー業務の市場機会と参入戦略を詳しく解説しています。</p>
+  </div>
+  
+  <div class="article-card">
+    <h4><a href="/blog/kankoujyu-tekikaku-kumiai/">官公需適格組合とは？力を合わせて入札案件を獲得！中小企業の共同受注戦略</a></h4>
+    <p>中小企業が力を合わせて大型入札案件を獲得する方法と、ドローン組合の成功事例を紹介しています。</p>
+  </div>
+  
+  <div class="article-card">
+    <h4><a href="/blog/sougyo-jiki-nyusatsu-senryaku/">創業時の新戦略！日本政策金融公庫の融資で入札参加資格を武器にする革新的アプローチ</a></h4>
+    <p>創業時から入札参加資格を戦略的に活用し、新事業を成功させるためのアプローチを解説しています。</p>
+  </div>
+</div>
+
 ## お問い合わせ
 
 ドローン法定点検事業についてのご相談は、お気軽にお問い合わせください。
@@ -336,6 +357,44 @@ description: 2025年建築基準法改正による新たな事業機会。ドロ
   font-size: 0.9rem;
 }
 
+.related-articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.article-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-left: 4px solid #F5A623;
+}
+
+.article-card h4 {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+}
+
+.article-card h4 a {
+  color: #2E86AB;
+  text-decoration: none;
+  line-height: 1.4;
+}
+
+.article-card h4 a:hover {
+  color: #F5A623;
+  text-decoration: underline;
+}
+
+.article-card p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
 @media (max-width: 768px) {
   .hero-banner {
     margin: -1rem -1rem 1rem -1rem;
@@ -362,6 +421,11 @@ description: 2025年建築基準法改正による新たな事業機会。ドロ
   
   .contact-section {
     padding: 1.5rem;
+  }
+  
+  .related-articles {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
 </style>
