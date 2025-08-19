@@ -43,6 +43,22 @@ description: 行政書士法人ふらっと法務事務所の事業支援サー�
     </div>
   </div>
 
+  <div class="service-card">
+    <div class="service-banner">
+      <img src="/assets/images/establishment_card_banner_400x300.png" alt="許認可・資格取得支援" class="service-image">
+    </div>
+    <div class="service-content">
+      <h3>許認可・資格取得支援</h3>
+      <p>プライバシーマーク、ISO認証、ISMS等の戦略的取得により参入障壁を突破。高付加価値案件への参入を実現し、競争倍率を大幅緩和、案件単価を最大5倍向上させます。</p>
+      <div class="service-features">
+        <span class="feature-tag">NEW</span>
+        <span class="feature-tag">戦略的取得</span>
+        <span class="feature-tag">参入障壁突破</span>
+      </div>
+      <a href="/license-certification/" class="service-link">詳細を見る</a>
+    </div>
+  </div>
+
   <div class="service-card coming-soon">
     <div class="service-content">
       <h3>その他のサービス</h3>
