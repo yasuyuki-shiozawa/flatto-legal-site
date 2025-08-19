@@ -401,8 +401,12 @@ nav p, nav li, nav span, nav div,
     color: #333333 !important;
 }
 
-// メインコンテンツエリアのリンク色彩強制（フッターは除外）
-main a, .content-area a, .post-content a, header a, nav a {
+// メインコンテンツエリアのリンク色彩強制（フッターとボタンは除外）
+main a:not(.btn):not(.contact-button):not(.button), 
+.content-area a:not(.btn):not(.contact-button):not(.button), 
+.post-content a:not(.btn):not(.contact-button):not(.button), 
+header a:not(.btn):not(.contact-button):not(.button), 
+nav a:not(.btn):not(.contact-button):not(.button) {
   color: #f39c12 !important;
   
   &:hover {
