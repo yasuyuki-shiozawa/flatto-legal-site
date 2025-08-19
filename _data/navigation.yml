@@ -28,16 +28,6 @@ main_nav:
     icon: "fas fa-newspaper"
     description: "制度変更・最新動向"
     
-  - name: "事業支援サービス"
-    url: "/services/"
-    icon: "fas fa-briefcase"
-    description: "ドローン事業・資金調達・法人設立等の支援"
-    
-  - name: "会社概要"
-    url: "/company/"
-    icon: "fas fa-building"
-    description: "運営会社について"
-    
   - name: "事例研究"
     url: "/cases/"
     icon: "fas fa-search"
@@ -52,6 +42,16 @@ main_nav:
     url: "/blog/"
     icon: "fas fa-file-alt"
     description: "入札ノウハウ・専門解説"
+    
+  - name: "事業支援サービス"
+    url: "/services/"
+    icon: "fas fa-briefcase"
+    description: "ドローン事業・資金調達・法人設立等の支援"
+    
+  - name: "会社概要"
+    url: "/company/"
+    icon: "fas fa-building"
+    description: "運営会社について"
 
 # フッター専用ナビゲーション（営業要素・補助情報）
 footer_only_nav:
