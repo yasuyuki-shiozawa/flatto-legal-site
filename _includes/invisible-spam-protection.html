@@ -1,0 +1,192 @@
+<!-- 透明スパム対策システム - お客様には一切見えない -->
+<style>
+/* ハニーポット: ボットが自動入力するが人間には見えないフィールド */
+.honeypot-field {
+    position: absolute !important;
+    left: -9999px !important;
+    width: 1px !important;
+    height: 1px !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    tabindex: -1 !important;
+}
+
+/* スパム対策の状態表示（開発環境のみ） */
+.spam-protection-status {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    z-index: 9999;
+}
+
+/* localhost環境でのみ表示 */
+body[data-env="development"] .spam-protection-status {
+    display: block;
+}
+</style>
+
+<!-- ハニーポット: ボットが入力するが人間には見えない -->
+<input type="text" name="website" class="honeypot-field" autocomplete="off" tabindex="-1">
+<input type="email" name="email_confirm" class="honeypot-field" autocomplete="off" tabindex="-1">
+<input type="text" name="company_url" class="honeypot-field" autocomplete="off" tabindex="-1">
+
+<!-- 開発環境での状態表示 -->
+<div class="spam-protection-status" id="spamStatus">
+    🛡️ スパム対策: 待機中
+</div>
+
+<script>
+(function() {
+    'use strict';
+    
+    // 開発環境の検出
+    const isDevelopment = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    if (isDevelopment) {
+        document.body.setAttribute('data-env', 'development');
+    }
+    
+    // スパム対策システム
+    const SpamProtection = {
+        // 初期化時刻
+        initTime: Date.now(),
+        
+        // ユーザー行動の追跡
+        userActivity: {
+            mouseMovement: false,
+            keyboardInput: false,
+            scrollActivity: false,
+            focusEvents: false
+        },
+        
+        // 初期化
+        init: function() {
+            this.setupEventListeners();
+            this.updateStatus('🛡️ スパム対策: アクティブ');
+        },
+        
+        // イベントリスナーの設定
+        setupEventListeners: function() {
+            // マウス移動の検出
+            document.addEventListener('mousemove', () => {
+                this.userActivity.mouseMovement = true;
+                this.updateStatus('🛡️ マウス操作: 検出');
+            }, { once: true });
+            
+            // キーボード入力の検出
+            document.addEventListener('keydown', () => {
+                this.userActivity.keyboardInput = true;
+                this.updateStatus('🛡️ キーボード: 検出');
+            }, { once: true });
+            
+            // スクロールの検出
+            document.addEventListener('scroll', () => {
+                this.userActivity.scrollActivity = true;
+                this.updateStatus('🛡️ スクロール: 検出');
+            }, { once: true });
+            
+            // フォーカスイベントの検出
+            document.addEventListener('focusin', () => {
+                this.userActivity.focusEvents = true;
+                this.updateStatus('🛡️ フォーカス: 検出');
+            }, { once: true });
+            
+            // フォーム送信の検証
+            this.setupFormValidation();
+        },
+        
+        // フォーム送信検証の設定
+        setupFormValidation: function() {
+            // 全てのフォームに対して検証を追加
+            document.addEventListener('submit', (e) => {
+                if (!this.validateSubmission(e.target)) {
+                    e.preventDefault();
+                    this.updateStatus('❌ スパム検出: 送信ブロック');
+                    
+                    // 開発環境でのみアラート表示
+                    if (isDevelopment) {
+                        alert('スパム対策により送信がブロックされました（開発環境のみの表示）');
+                    }
+                    
+                    return false;
+                }
+                this.updateStatus('✅ 正常送信: 許可');
+            });
+        },
+        
+        // 送信検証
+        validateSubmission: function(form) {
+            const now = Date.now();
+            const timeSinceInit = now - this.initTime;
+            
+            // 1. ハニーポット検証
+            const honeypotFields = form.querySelectorAll('.honeypot-field');
+            for (let field of honeypotFields) {
+                if (field.value.trim() !== '') {
+                    console.log('スパム検出: ハニーポット入力');
+                    return false;
+                }
+            }
+            
+            // 2. 時間ベース検証（5秒未満は疑わしい）
+            if (timeSinceInit < 5000) {
+                console.log('スパム検出: 送信が早すぎる');
+                return false;
+            }
+            
+            // 3. 時間ベース検証（30分以上は疑わしい）
+            if (timeSinceInit > 1800000) { // 30分
+                console.log('スパム検出: セッション時間が長すぎる');
+                return false;
+            }
+            
+            // 4. ユーザー行動検証（最低限の人間らしい操作）
+            const activityCount = Object.values(this.userActivity).filter(Boolean).length;
+            if (activityCount < 2) {
+                console.log('スパム検出: 人間らしい操作が不足');
+                return false;
+            }
+            
+            // 5. 日本時間帯検証（深夜2-6時は要注意）
+            const hour = new Date().getHours();
+            if (hour >= 2 && hour <= 6) {
+                // 深夜時間帯は追加検証
+                if (activityCount < 3) {
+                    console.log('スパム検出: 深夜時間帯での疑わしい操作');
+                    return false;
+                }
+            }
+            
+            return true;
+        },
+        
+        // 状態表示の更新（開発環境のみ）
+        updateStatus: function(message) {
+            if (isDevelopment) {
+                const statusElement = document.getElementById('spamStatus');
+                if (statusElement) {
+                    statusElement.textContent = message;
+                }
+            }
+        }
+    };
+    
+    // ページ読み込み完了後に初期化
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => SpamProtection.init());
+    } else {
+        SpamProtection.init();
+    }
+    
+    // グローバルに公開（デバッグ用）
+    if (isDevelopment) {
+        window.SpamProtection = SpamProtection;
+    }
+})();
+</script>
+
