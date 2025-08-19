@@ -27,10 +27,26 @@ description: 行政書士法人ふらっと法務事務所の事業支援サー�
     </div>
   </div>
 
+  <div class="service-card">
+    <div class="service-banner">
+      <img src="/assets/images/funding_card_banner_400x300.png" alt="資金調達支援" class="service-image">
+    </div>
+    <div class="service-content">
+      <h3>資金調達支援</h3>
+      <p>創業時から入札参加資格を戦略的に活用した革新的な資金調達支援。日本政策金融公庫の最新制度を活用し、公共事業参入による安定した収益基盤の構築をサポートします。</p>
+      <div class="service-features">
+        <span class="feature-tag">NEW</span>
+        <span class="feature-tag">創業融資</span>
+        <span class="feature-tag">戦略的活用</span>
+      </div>
+      <a href="/funding-support/" class="service-link">詳細を見る</a>
+    </div>
+  </div>
+
   <div class="service-card coming-soon">
     <div class="service-content">
       <h3>その他のサービス</h3>
-      <p>資金調達支援、法人設立支援、補助金申請支援など、事業成長に必要な様々なサービスを準備中です。</p>
+      <p>法人設立支援、補助金申請支援など、事業成長に必要な様々なサービスを準備中です。</p>
       <div class="service-features">
         <span class="feature-tag coming-soon-tag">準備中</span>
       </div>
