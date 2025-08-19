@@ -42,6 +42,12 @@
     
     <!-- パフォーマンス最適化 -->
     {% include performance-optimization.html %}
+    
+    <!-- A/Bテスト管理システム -->
+    {% include ab-test-manager.html %}
+    
+    <!-- 分析ダッシュボード -->
+    {% include analytics-dashboard.html %}
 </head>
 
 <body class="{% if page.layout %}{{ page.layout }}{% endif %} {% if page.url %}{{ page.url | replace: '/', ' ' | strip }}{% endif %}">
@@ -387,4 +393,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+
+<!-- 日本語名前検証機能 -->
+{% include japanese-name-validator.html %}
 

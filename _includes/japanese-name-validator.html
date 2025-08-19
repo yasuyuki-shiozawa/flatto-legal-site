@@ -1,0 +1,224 @@
+<!-- 日本語名前検証機能 -->
+<script>
+// 日本語名前検証システム
+class JapaneseNameValidator {
+    constructor() {
+        this.init();
+    }
+
+    init() {
+        // DOMが読み込まれた後に実行
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => this.setupValidation());
+        } else {
+            this.setupValidation();
+        }
+    }
+
+    setupValidation() {
+        // 名前入力フィールドを取得
+        const nameInputs = document.querySelectorAll('input[type="text"]');
+        
+        nameInputs.forEach(input => {
+            // ラベルテキストで名前フィールドを特定
+            const label = this.findLabelForInput(input);
+            if (label && (label.textContent.includes('名前') || label.textContent.includes('お名前'))) {
+                this.attachValidationToInput(input);
+            }
+        });
+    }
+
+    findLabelForInput(input) {
+        // 直前のlabel要素を探す
+        let prevElement = input.previousElementSibling;
+        while (prevElement) {
+            if (prevElement.tagName === 'LABEL') {
+                return prevElement;
+            }
+            prevElement = prevElement.previousElementSibling;
+        }
+        
+        // for属性でリンクされたlabelを探す
+        if (input.id) {
+            return document.querySelector(`label[for="${input.id}"]`);
+        }
+        
+        return null;
+    }
+
+    attachValidationToInput(input) {
+        // エラーメッセージ要素を作成
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'japanese-name-error';
+        errorDiv.style.cssText = `
+            color: #dc3545;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 4px;
+            padding: 8px 12px;
+        `;
+        
+        // 入力フィールドの後に挿入
+        input.parentNode.insertBefore(errorDiv, input.nextSibling);
+
+        // 成功メッセージ要素を作成
+        const successDiv = document.createElement('div');
+        successDiv.className = 'japanese-name-success';
+        successDiv.style.cssText = `
+            color: #155724;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 4px;
+            padding: 8px 12px;
+        `;
+        successDiv.innerHTML = '✓ 正しい日本語のお名前です';
+        
+        // エラーメッセージの後に挿入
+        errorDiv.parentNode.insertBefore(successDiv, errorDiv.nextSibling);
+
+        // リアルタイム検証
+        input.addEventListener('input', (e) => {
+            this.validateJapaneseName(e.target, errorDiv, successDiv);
+        });
+
+        // フォーカス時の説明表示
+        input.addEventListener('focus', () => {
+            this.showInputGuide(input, errorDiv);
+        });
+
+        // フォーム送信時の検証
+        const form = input.closest('form');
+        if (form) {
+            form.addEventListener('submit', (e) => {
+                if (!this.validateJapaneseName(input, errorDiv, successDiv)) {
+                    e.preventDefault();
+                    input.focus();
+                }
+            });
+        }
+    }
+
+    validateJapaneseName(input, errorDiv, successDiv) {
+        const value = input.value.trim();
+        
+        // 空の場合
+        if (!value) {
+            this.hideMessages(errorDiv, successDiv);
+            return false;
+        }
+
+        // 日本語文字の正規表現
+        // ひらがな: \u3040-\u309F
+        // カタカナ: \u30A0-\u30FF
+        // 漢字: \u4E00-\u9FAF
+        // 全角スペース: \u3000
+        const japaneseRegex = /^[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FAF\u3000\s]+$/;
+        
+        // 最低限の日本語文字が含まれているかチェック
+        const hasJapanese = /[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FAF]/.test(value);
+        
+        if (!hasJapanese) {
+            this.showError(errorDiv, successDiv, 
+                'お名前は日本語（ひらがな・カタカナ・漢字）で入力してください。<br>' +
+                '例: 田中太郎、たなか たろう、タナカ タロウ'
+            );
+            input.style.borderColor = '#dc3545';
+            return false;
+        }
+
+        if (!japaneseRegex.test(value)) {
+            this.showError(errorDiv, successDiv, 
+                'お名前に使用できない文字が含まれています。<br>' +
+                '日本語（ひらがな・カタカナ・漢字）のみ使用してください。'
+            );
+            input.style.borderColor = '#dc3545';
+            return false;
+        }
+
+        // 長さチェック（1文字以上50文字以下）
+        if (value.length < 1 || value.length > 50) {
+            this.showError(errorDiv, successDiv, 
+                'お名前は1文字以上50文字以下で入力してください。'
+            );
+            input.style.borderColor = '#dc3545';
+            return false;
+        }
+
+        // 検証成功
+        this.showSuccess(errorDiv, successDiv);
+        input.style.borderColor = '#28a745';
+        return true;
+    }
+
+    showError(errorDiv, successDiv, message) {
+        errorDiv.innerHTML = message;
+        errorDiv.style.display = 'block';
+        successDiv.style.display = 'none';
+    }
+
+    showSuccess(errorDiv, successDiv) {
+        errorDiv.style.display = 'none';
+        successDiv.style.display = 'block';
+    }
+
+    hideMessages(errorDiv, successDiv) {
+        errorDiv.style.display = 'none';
+        successDiv.style.display = 'none';
+    }
+
+    showInputGuide(input, errorDiv) {
+        if (!input.value.trim()) {
+            errorDiv.innerHTML = 
+                '💡 <strong>入力のヒント:</strong><br>' +
+                '• ひらがな: たなか たろう<br>' +
+                '• カタカナ: タナカ タロウ<br>' +
+                '• 漢字: 田中太郎<br>' +
+                '• 組み合わせ: 田中 たろう';
+            errorDiv.style.cssText = errorDiv.style.cssText.replace('color: #dc3545', 'color: #6c757d');
+            errorDiv.style.cssText = errorDiv.style.cssText.replace('background: #f8d7da', 'background: #f8f9fa');
+            errorDiv.style.cssText = errorDiv.style.cssText.replace('border: 1px solid #f5c6cb', 'border: 1px solid #dee2e6');
+            errorDiv.style.display = 'block';
+        }
+    }
+}
+
+// 初期化
+new JapaneseNameValidator();
+</script>
+
+<style>
+/* 日本語名前検証のスタイル */
+.japanese-name-error,
+.japanese-name-success {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 入力フィールドのフォーカス時スタイル */
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+    transition: box-shadow 0.15s ease-in-out;
+}
+
+/* エラー時のスタイル */
+input[style*="border-color: #dc3545"] {
+    box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.25) !important;
+}
+
+/* 成功時のスタイル */
+input[style*="border-color: #28a745"] {
+    box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.25) !important;
+}
+</style>
+
