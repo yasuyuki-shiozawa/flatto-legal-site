@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "士業が214万円受注！相続人調査業務委託の実態と参入戦略"
-date: 2025-08-20 00:00:00 +0900
+date: 2025-08-20 04:30:00 -0400
 categories: [case-study, legal-profession, inheritance-investigation]
 tags: [豊橋市, ほの国法律事務所, 214万円, 落札事例, 士業参入戦略]
 description: "豊橋市で214万円落札の実例から学ぶ士業向け相続人調査業務委託の参入戦略。ほの国法律事務所の成功要因と他の士業が参入するための具体的方法を詳しく解説します。"
