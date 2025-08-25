@@ -90,5 +90,7 @@ google_tag_manager: ""
 google_site_verification: ""
 
 
-# Minor change to trigger rebuild - 2025-07-31
+# Minor change to trigger rebuild - 2025-08-25
+# Force sitemap regeneration
+sitemap_regenerate: true
 
