@@ -1,12 +1,15 @@
 ---
 layout: post
-title: "補助金活用で入札を制す！事業計画書に国の仕事・自治体の仕事を組み込む収益計画とドローン設備投資戦略"
+title: "補助金と入札の相乗効果｜事業計画書に公共調達を組み込む戦略"
 description: "補助金の事業計画書に入札案件を盛り込んで実現可能性を高め、ドローン等の設備投資補助金で官公庁案件への参入を成功させる戦略を詳しく解説。ものづくり補助金、IT導入補助金を活用した収益計画の立て方から、4,000件超のドローン入札案件事例まで実践的な情報を提供します。"
 date: 2025-08-21 09:00:00 +0900
 categories: [guide, subsidy, bidding-strategy]
 tags: [入札, 補助金, 国の仕事, 自治体の仕事, 収益計画, 事業計画書, ドローン, 設備投資, ものづくり補助金, 公共調達, 中小企業, 資金調達, 販路開拓]
 author: Manus AI
 image: /assets/images/hojokin/hojokin-nyusatsu-strategy.jpg
+permalink: /blog/subsidy-bidding-strategy-guide/
+redirect_from:
+  - /guide/subsidy/bidding-strategy/2025/08/21/hojokin-nyusatsu-senryaku-guide/
 ---
 
 ## はじめに：補助金と入札の相乗効果で事業を加速させる

@@ -30,6 +30,15 @@ social:
   links:
     - "https://twitter.com/flatto_legal"
 
+# URL設定
+permalink: /blog/:title/
+
+# プラグイン設定
+plugins:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
 # デフォルト設定
 defaults:
   - scope:

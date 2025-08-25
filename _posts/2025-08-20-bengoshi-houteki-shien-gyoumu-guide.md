@@ -1,10 +1,13 @@
 ---
 layout: post
-title: "弁護士向け入札案件！1,000万円超の法的支援業務で落札を目指す入札参加完全ガイド"
+title: "弁護士向け入札案件｜1,000万円超の法的支援業務で落札する方法"
 date: 2025-08-20 16:30:00 +0900
 categories: [guide, lawyer, public-procurement, legal-support]
 tags: [弁護士, 入札, 落札, 公告, 仕様書, 入札参加資格, 全省庁統一資格, 予定価格, 競争入札, 法的支援業務, 厚生労働省, JICA, 日本弁護士連合会, 公共調達]
 description: "弁護士向け入札案件を実際の公告・仕様書付きで詳細解説。1,000万円超の法的支援業務から入札参加資格取得まで、落札を目指す弁護士のための入札参加戦略を完全ガイド。"
+permalink: /blog/lawyer-legal-support-bidding-guide/
+redirect_from:
+  - /guide/lawyer/public-procurement/legal-support/2025/08/20/bengoshi-houteki-shien-gyoumu-guide/
 ---
 
 ## 弁護士向け入札案件！1,000万円超の法的支援業務で落札を目指す入札参加完全ガイド
