@@ -30,6 +30,15 @@ social:
   links:
     - "https://twitter.com/flatto_legal"
 
+# URL設定
+permalink: /blog/:title/
+
+# プラグイン設定
+plugins:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
 # デフォルト設定
 defaults:
   - scope:
@@ -90,5 +99,7 @@ google_tag_manager: ""
 google_site_verification: ""
 
 
-# Minor change to trigger rebuild - 2025-07-31
+# Minor change to trigger rebuild - 2025-08-25
+# Force sitemap regeneration
+sitemap_regenerate: true
 
