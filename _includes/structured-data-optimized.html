@@ -1,0 +1,190 @@
+<!-- 最適化された構造化データ（JSON-LD形式） -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{ site.url }}/#organization",
+      "name": "{{ site.company.name }}",
+      "url": "{{ site.url }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ site.url }}/assets/images/logo.webp",
+        "width": 713,
+        "height": 591
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "{{ site.company.phone }}",
+        "contactType": "customer service",
+        "email": "{{ site.company.email }}",
+        "availableLanguage": "Japanese"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{ site.company.address }}",
+        "addressLocality": "大和市",
+        "addressRegion": "神奈川県",
+        "postalCode": "242-0006",
+        "addressCountry": "JP"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.5167,
+        "longitude": 139.4500
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "塩澤康幸"
+      },
+      "foundingDate": "2021-04-09",
+      "numberOfEmployees": "6",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Japan"
+      },
+      "serviceType": [
+        "入札参加資格申請サポート",
+        "全省庁統一資格申請",
+        "公共調達コンサルティング",
+        "行政書士業務"
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday", 
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "17:00"
+      },
+      "priceRange": "$$",
+      "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+      "currenciesAccepted": "JPY",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "入札サポートサービス",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "全省庁統一資格申請サポート",
+              "description": "国の機関への入札参加に必要な全省庁統一資格の申請を完全サポート"
+            }
+          },
+          {
+            "@type": "Offer", 
+            "itemOffered": {
+              "@type": "Service",
+              "name": "地方自治体入札参加資格申請",
+              "description": "各自治体の入札参加資格申請手続きを代行"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service", 
+              "name": "入札参加完全サポート",
+              "description": "申請から業務完了まで月額33,000円で全工程をサポート"
+            },
+            "price": "33000",
+            "priceCurrency": "JPY"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
+      "url": "{{ site.url }}",
+      "name": "入札マップ",
+      "description": "{{ site.description }}",
+      "publisher": {
+        "@id": "{{ site.url }}/#organization"
+      },
+      "inLanguage": "ja-JP"
+    }
+    {% if page.layout == 'post' or page.layout == 'article' %},
+    {
+      "@type": "Article",
+      "@id": "{{ site.url }}{{ page.url }}#article",
+      "headline": "{{ page.title }}",
+      "description": "{{ page.description | default: page.excerpt | strip_html | truncate: 160 }}",
+      "image": {
+        "@type": "ImageObject",
+        "url": "{{ site.url }}{{ page.image | default: '/assets/images/default-image.svg' }}",
+        "width": 1200,
+        "height": 630
+      },
+      "author": {
+        "@type": "Person",
+        "name": "{{ page.author | default: site.author }}"
+      },
+      "publisher": {
+        "@id": "{{ site.url }}/#organization"
+      },
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ site.url }}{{ page.url }}"
+      },
+      "articleSection": "{{ page.category | default: '入札・公共調達' }}",
+      "keywords": "{{ page.tags | join: ', ' }}",
+      "inLanguage": "ja-JP"
+    }
+    {% endif %}
+    {% unless page.url == '/' %},
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ site.url }}{{ page.url }}#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ホーム",
+          "item": "{{ site.url }}"
+        }
+        {% assign url_parts = page.url | split: '/' %}
+        {% assign url_build = '' %}
+        {% for part in url_parts %}
+          {% unless part == '' %}
+            {% assign url_build = url_build | append: '/' | append: part %}
+            {% assign position = forloop.index %}
+            {% if forloop.last %}
+        ,{
+          "@type": "ListItem",
+          "position": {{ position | plus: 1 }},
+          "name": "{{ page.title }}",
+          "item": "{{ site.url }}{{ url_build }}"
+        }
+            {% else %}
+        ,{
+          "@type": "ListItem", 
+          "position": {{ position | plus: 1 }},
+          "name": "{{ part | capitalize }}",
+          "item": "{{ site.url }}{{ url_build }}"
+        }
+            {% endif %}
+          {% endunless %}
+        {% endfor %}
+      ]
+    }
+    {% endunless %}
+  ]
+}
+</script>
+
+<!-- Twitter Card設定 -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@flatto_legal">
+<meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta name="twitter:image" content="{{ site.url }}{% if page.image %}{{ page.image }}{% else %}/assets/images/og-image.webp{% endif %}">
+<meta name="twitter:image:alt" content="{% if page.title %}{{ page.title }}{% else %}入札マップ - 公共調達の入門から実践まで{% endif %}">
+
