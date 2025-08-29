@@ -5,53 +5,68 @@ sitemap: false
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  <!-- ホームページ（最重要） -->
+
+  <!-- ホームページ -->
   <url>
     <loc>{{ site.url }}/</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-  
-  <!-- 重要な固定ページ（優先順位高） -->
-  {% assign important_pages = "/knowhow/,/flow/,/nyusatsu-shikaku/,/service/,/contact/,/blog/,/blog-lp/" | split: "," %}
-  {% for important_url in important_pages %}
-  <url>
-    <loc>{{ site.url }}{{ important_url }}</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>{% if important_url contains 'knowhow' or important_url contains 'flow' or important_url contains 'nyusatsu-shikaku' %}0.9{% else %}0.8{% endif %}</priority>
-  </url>
-  {% endfor %}
-  
-  <!-- ブログ記事（画像情報付き） -->
-  {% for post in site.posts %}
-  <url>
-    <loc>{{ post.url | absolute_url }}</loc>
-    <lastmod>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    {% if post.image %}
-    <image:image>
-      <image:loc>{{ post.image | absolute_url }}</image:loc>
-      <image:title>{{ post.title | xml_escape }}</image:title>
-      <image:caption>{{ post.excerpt | strip_html | truncate: 160 | xml_escape }}</image:caption>
-    </image:image>
+
+  <!-- カテゴリページ -->
+  {% for page in site.pages %}
+    {% if page.layout == 'category' %}
+      <url>
+        <loc>{{ page.url | absolute_url }}</loc>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+      </url>
     {% endif %}
-  </url>
   {% endfor %}
-  
+
+  <!-- 重要な固定ページ -->
+  {% assign important_pages = "/knowhow/,/flow/,/nyusatsu-shikaku/,/service/,/contact/,/blog/,/blog-lp/" | split: "," %}
+  {% for p in site.pages %}
+    {% if important_pages contains p.url %}
+      <url>
+        <loc>{{ p.url | absolute_url }}</loc>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+      </url>
+    {% endif %}
+  {% endfor %}
+
+  <!-- ブログ記事 -->
+  {% for post in site.posts %}
+    <url>
+      <loc>{{ post.url | absolute_url }}</loc>
+      <lastmod>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+      {% if post.image %}
+        <image:image>
+          <image:loc>{{ post.image | absolute_url }}</image:loc>
+          <image:title>{{ post.title | xml_escape }}</image:title>
+          <image:caption>{{ post.excerpt | strip_html | truncate: 160 | xml_escape }}</image:caption>
+        </image:image>
+      {% endif %}
+    </url>
+  {% endfor %}
+
   <!-- その他のページ -->
   {% for page in site.pages %}
-    {% unless page.sitemap == false or page.url contains '.xml' or page.url contains '.txt' or page.url contains '.json' or page.url contains '.css' or page.url contains '.js' %}
-    {% unless important_pages contains page.url or page.url == "/" %}
-    <url>
-      <loc>{{ page.url | absolute_url }}</loc>
-      <lastmod>{{ page.last_modified_at | default: site.time | date_to_xmlschema }}</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.5</priority>
-    </url>
-    {% endunless %}
+    {% unless page.sitemap == false or page.url contains '.xml' or page.url contains '.txt' or page.url contains '.json' or page.url contains '.css' or page.url contains '.js' or page.layout == 'category' or important_pages contains page.url or page.url == "/" %}
+      <url>
+        <loc>{{ page.url | absolute_url }}</loc>
+        <lastmod>{{ page.last_modified_at | default: site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
     {% endunless %}
   {% endfor %}
+
 </urlset>
+
