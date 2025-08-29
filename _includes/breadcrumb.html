@@ -3,6 +3,7 @@
   使用方法: {% include breadcrumb.html %}
   
   URLパスを自動的に解析して、すべての階層を表示します。
+  ファイル名部分は除外し、カテゴリ階層のみを表示します。
 {% endcomment %}
 
 {% if page.url != "/" %}
@@ -20,20 +21,24 @@
         </a>
       </li>
       
-      <!-- 中間階層を動的に生成 -->
+      <!-- 中間階層を動的に生成（ファイル名部分を除外） -->
       {% for part in url_parts %}
-        {% if part != "" and part != page.url | split: '/' | last %}
+        {% if part != "" %}
           {% assign breadcrumb_path = breadcrumb_path | append: "/" | append: part %}
           
-          <!-- 日付部分（年月日）をスキップ -->
+          <!-- 日付部分（年月日）とファイル名をスキップ -->
           {% assign is_date = false %}
+          {% assign is_filename = false %}
+          
           {% if part.size == 4 and part contains "20" %}
             {% assign is_date = true %}
           {% elsif part.size == 2 %}
             {% assign is_date = true %}
+          {% elsif forloop.last %}
+            {% assign is_filename = true %}
           {% endif %}
           
-          {% unless is_date %}
+          {% unless is_date or is_filename %}
             <li class="breadcrumb-item">
               <a href="{{ breadcrumb_path | relative_url }}">
                 {% case part %}
@@ -76,18 +81,22 @@
     {% assign position = 2 %}
     {% assign breadcrumb_path = "" %}
     {% for part in url_parts %}
-      {% if part != "" and part != page.url | split: '/' | last %}
+      {% if part != "" %}
         {% assign breadcrumb_path = breadcrumb_path | append: "/" | append: part %}
         
-        <!-- 日付部分をスキップ -->
+        <!-- 日付部分とファイル名をスキップ -->
         {% assign is_date = false %}
+        {% assign is_filename = false %}
+        
         {% if part.size == 4 and part contains "20" %}
           {% assign is_date = true %}
         {% elsif part.size == 2 %}
           {% assign is_date = true %}
+        {% elsif forloop.last %}
+          {% assign is_filename = true %}
         {% endif %}
         
-        {% unless is_date %}
+        {% unless is_date or is_filename %}
           ,{
             "@type": "ListItem", 
             "position": {{ position }},
