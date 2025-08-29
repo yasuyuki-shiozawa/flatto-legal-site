@@ -1,44 +1,58 @@
 # robots.txt for nyusatsu-map.com
-# 最終更新: 2025年8月25日 - インデックス問題解決のため更新
+# 最終更新: 2025年8月29日 - SEO最適化とインデックス改善のため更新
 
-# すべての検索エンジンに対する設定
+# すべての検索エンジンに対する基本設定
 User-agent: *
 Allow: /
+
+# 管理・システムファイルのみ制限（最小限）
 Disallow: /admin/
 Disallow: /private/
 Disallow: /_site/
 Disallow: /.git/
 Disallow: /node_modules/
 Disallow: /vendor/
-Disallow: /search?
+
+# 重要: 検索機能は許可（SEO価値あり）
+# Disallow: /search? を削除
+
+# エラーページと一時ファイルのみ制限
 Disallow: /404.html
 Disallow: /*.tmp$
+
+# クロール速度を適度に設定
 Crawl-delay: 1
 
-# Googlebot専用設定（高速クロール許可）
+# Googlebot専用設定（最優先・高速クロール）
 User-agent: Googlebot
 Allow: /
 Disallow: /admin/
 Disallow: /private/
 Crawl-delay: 0
 
-# 画像ファイルは許可
-Allow: /assets/images/
+# Bingbot専用設定（Bing対策強化）
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Crawl-delay: 1
+
+# 重要なアセットファイルを明示的に許可
+Allow: /assets/
+Allow: /images/
+Allow: /css/
+Allow: /js/
 Allow: /*.jpg$
 Allow: /*.jpeg$
 Allow: /*.png$
 Allow: /*.gif$
 Allow: /*.svg$
 Allow: /*.webp$
-
-# CSS/JSファイルは許可
-Allow: /assets/css/
-Allow: /assets/js/
 Allow: /*.css$
 Allow: /*.js$
 
-# サイトマップの場所
+# サイトマップの場所（重要）
 Sitemap: https://nyusatsu-map.com/sitemap.xml
 
-# ホスト指定（優先ドメイン）
+# 優先ドメイン指定
 Host: https://nyusatsu-map.com
