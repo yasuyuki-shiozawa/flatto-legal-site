@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<div class="container my-5">
+  <header class="mb-4">
+    <h1 class="display-4">{{ page.title }}</h1>
+    {% if page.description %}
+      <p class="lead">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  <div class="row">
+    {% for post in site.posts %}
+      {% if post.categories contains page.category_name %}
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            {% if post.image %}
+              <a href="{{ post.url | relative_url }}">
+                <img src="{{ post.image | relative_url }}" class="card-img-top" alt="{{ post.title }}">
+              </a>
+            {% endif %}
+            <div class="card-body">
+              <h5 class="card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h5>
+              <p class="card-text">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+              <small class="text-muted">{{ post.date | date: "%Y年%m月%d日" }}</small>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
