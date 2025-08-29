@@ -1,16 +1,18 @@
 {% comment %}
-  パンくずリストコンポーネント
+  パンくずリストコンポーネント（自動階層生成版）
   使用方法: {% include breadcrumb.html %}
   
-  ページのfront matterで以下を設定可能:
-  - breadcrumb_parent: 親ページのタイトル
-  - breadcrumb_parent_url: 親ページのURL
+  URLパスを自動的に解析して、すべての階層を表示します。
 {% endcomment %}
 
 {% if page.url != "/" %}
+{% assign url_parts = page.url | split: '/' %}
+{% assign breadcrumb_path = "" %}
+
 <nav class="breadcrumb" aria-label="パンくずリスト">
   <div class="container">
     <ol class="breadcrumb-list">
+      <!-- ホーム -->
       <li class="breadcrumb-item">
         <a href="{{ '/' | relative_url }}">
           <i class="fas fa-home"></i>
@@ -18,14 +20,39 @@
         </a>
       </li>
       
-      {% if page.breadcrumb_parent %}
-      <li class="breadcrumb-item">
-        <a href="{{ page.breadcrumb_parent_url | relative_url }}">
-          {{ page.breadcrumb_parent }}
-        </a>
-      </li>
-      {% endif %}
+      <!-- 中間階層を動的に生成 -->
+      {% for part in url_parts %}
+        {% if part != "" and part != page.url | split: '/' | last %}
+          {% assign breadcrumb_path = breadcrumb_path | append: "/" | append: part %}
+          
+          <!-- 日付部分（年月日）をスキップ -->
+          {% assign is_date = false %}
+          {% if part.size == 4 and part contains "20" %}
+            {% assign is_date = true %}
+          {% elsif part.size == 2 %}
+            {% assign is_date = true %}
+          {% endif %}
+          
+          {% unless is_date %}
+            <li class="breadcrumb-item">
+              <a href="{{ breadcrumb_path | relative_url }}">
+                {% case part %}
+                  {% when "guide" %}ガイド
+                  {% when "legal-profession" %}士業
+                  {% when "inheritance-investigation" %}相続調査
+                  {% when "case-study" %}事例研究
+                  {% when "blog" %}ブログ
+                  {% when "service" %}サービス
+                  {% when "faq" %}よくある質問
+                  {% else %}{{ part | replace: "-", " " | capitalize }}
+                {% endcase %}
+              </a>
+            </li>
+          {% endunless %}
+        {% endif %}
+      {% endfor %}
       
+      <!-- 現在のページ -->
       <li class="breadcrumb-item active" aria-current="page">
         {{ page.title }}
       </li>
@@ -38,32 +65,47 @@
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
+  "@id": "{{ site.url }}{{ page.url | relative_url }}#breadcrumb",
   "itemListElement": [
     {
       "@type": "ListItem",
       "position": 1,
       "name": "ホーム",
-      "item": "{{ site.url }}{{ '/' | relative_url }}"
-    }{% if page.breadcrumb_parent %},
-    {
+      "item": "{{ site.url }}"
+    }
+    {% assign position = 2 %}
+    {% assign breadcrumb_path = "" %}
+    {% for part in url_parts %}
+      {% if part != "" and part != page.url | split: '/' | last %}
+        {% assign breadcrumb_path = breadcrumb_path | append: "/" | append: part %}
+        
+        <!-- 日付部分をスキップ -->
+        {% assign is_date = false %}
+        {% if part.size == 4 and part contains "20" %}
+          {% assign is_date = true %}
+        {% elsif part.size == 2 %}
+          {% assign is_date = true %}
+        {% endif %}
+        
+        {% unless is_date %}
+          ,{
+            "@type": "ListItem", 
+            "position": {{ position }},
+            "name": "{% case part %}{% when "guide" %}ガイド{% when "legal-profession" %}士業{% when "inheritance-investigation" %}相続調査{% when "case-study" %}事例研究{% when "blog" %}ブログ{% when "service" %}サービス{% when "faq" %}よくある質問{% else %}{{ part | replace: "-", " " | capitalize }}{% endcase %}",
+            "item": "{{ site.url }}{{ breadcrumb_path }}"
+          }
+          {% assign position = position | plus: 1 %}
+        {% endunless %}
+      {% endif %}
+    {% endfor %}
+    ,{
       "@type": "ListItem",
-      "position": 2,
-      "name": "{{ page.breadcrumb_parent }}",
-      "item": "{{ site.url }}{{ page.breadcrumb_parent_url | relative_url }}"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
+      "position": {{ position }},
       "name": "{{ page.title }}",
       "item": "{{ site.url }}{{ page.url | relative_url }}"
-    }{% else %},
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "{{ page.title }}",
-      "item": "{{ site.url }}{{ page.url | relative_url }}"
-    }{% endif %}
+    }
   ]
 }
 </script>
 {% endif %}
+
