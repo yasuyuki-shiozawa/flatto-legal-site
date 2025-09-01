@@ -11,7 +11,9 @@
     {% seo %}
     
     <!-- 最適化された構造化データ -->
+    {% unless page.disable_structured_data %}
     {% include structured-data-optimized.html %}
+    {% endunless %}
     
     <!-- Additional Custom Meta Tags -->
     <meta name="author" content="行政書士法人ふらっと法務事務所">

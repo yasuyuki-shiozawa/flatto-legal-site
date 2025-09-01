@@ -6,7 +6,31 @@ keywords: 全省庁統一資格 申請代行,全省庁統一資格申請,全省�
 hide_left_sidebar: true
 hide_right_sidebar: true
 body_class: landing-page zenshochou-lp
+disable_structured_data: true
 ---
+
+<!-- 緊急修正：正しい構造化データ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": "https://nyusatsu-map.com/zenshochou-lp/#breadcrumb",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://nyusatsu-map.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "全省庁統一資格申請代行",
+      "item": "https://nyusatsu-map.com/zenshochou-lp/"
+    }
+  ]
+}
+</script>
 
 <div class="zenshochou-hero">
     <div class="hero-container">
