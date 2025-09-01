@@ -13,6 +13,11 @@ main_nav:
     icon: "fas fa-graduation-cap"
     description: "入札制度の基本から実践まで"
 
+  - name: "解説記事"
+    url: "/blog/"
+    icon: "fas fa-file-alt"
+    description: "入札ノウハウ・専門解説"
+
   - name: "資格取得"
     url: "/nyusatsu-shikaku/"
     icon: "fas fa-certificate"
