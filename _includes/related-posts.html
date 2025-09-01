@@ -6,35 +6,27 @@
     </h2>
     
     <div class="related-posts-grid">
-        {% comment %} カテゴリベースの関連記事 {% endcomment %}
-        {% assign current_categories = page.categories %}
-        {% assign related_posts = site.posts | where_exp: "post", "post.url != page.url" %}
-        {% assign posts_by_relevance = "" | split: "" %}
-        
-        {% for post in related_posts %}
-            {% assign relevance_score = 0 %}
-            
-            {% comment %} カテゴリの一致をチェック {% endcomment %}
-            {% for cat in post.categories %}
-                {% if current_categories contains cat %}
-                    {% assign relevance_score = relevance_score | plus: 2 %}
-                {% endif %}
-            {% endfor %}
-            
-            {% comment %} タグの一致をチェック {% endcomment %}
+        {% assign max_related = 6 %}
+        {% assign min_tags = 1 %}
+        {% assign related_posts = "" | split: "" %}
+
+        {% for post in site.posts %}
+            {% if post.url == page.url %}{% continue %}{% endif %}
+            {% assign same_tags = 0 %}
             {% for tag in post.tags %}
                 {% if page.tags contains tag %}
-                    {% assign relevance_score = relevance_score | plus: 1 %}
+                    {% assign same_tags = same_tags | plus: 1 %}
                 {% endif %}
             {% endfor %}
-            
-            {% if relevance_score > 0 %}
-                {% assign posts_by_relevance = posts_by_relevance | push: post %}
+
+            {% if same_tags >= min_tags %}
+                {% assign related_posts = related_posts | push: post %}
             {% endif %}
         {% endfor %}
-        
-        {% comment %} 関連記事を表示（最大3件） {% endcomment %}
-        {% for post in posts_by_relevance limit: 3 %}
+
+        {% assign related_posts = related_posts | sort: "date" | reverse %}
+
+        {% for post in related_posts limit: max_related %}
         <article class="related-post-card">
             <div class="related-post-content">
                 <h3 class="related-post-title">
@@ -48,65 +40,16 @@
                         <i class="fas fa-calendar"></i>
                         {{ post.date | date: "%Y年%m月%d日" }}
                     </span>
-                    {% if post.categories.size > 0 %}
+                    {% if post.category %}
                     <span class="post-category">
                         <i class="fas fa-folder"></i>
-                        {{ post.categories | first }}
+                        {{ post.category }}
                     </span>
                     {% endif %}
                 </div>
             </div>
         </article>
         {% endfor %}
-        
-        {% comment %} 関連記事が見つからない場合は人気記事を表示 {% endcomment %}
-        {% if posts_by_relevance.size == 0 %}
-            {% assign popular_posts = site.posts | where_exp: "post", "post.popular_rank" | sort: "popular_rank" %}
-            {% for post in popular_posts limit: 3 %}
-            {% if post.url != page.url %}
-            <article class="related-post-card">
-                <div class="related-post-content">
-                    <span class="popular-badge">人気記事</span>
-                    <h3 class="related-post-title">
-                        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-                    </h3>
-                    <p class="related-post-excerpt">
-                        {{ post.excerpt | strip_html | truncate: 100 }}
-                    </p>
-                    <div class="related-post-meta">
-                        <span class="post-date">
-                            <i class="fas fa-calendar"></i>
-                            {{ post.date | date: "%Y年%m月%d日" }}
-                        </span>
-                    </div>
-                </div>
-            </article>
-            {% endif %}
-            {% endfor %}
-        {% endif %}
-    </div>
-    
-    <!-- カテゴリ別の記事一覧へのリンク -->
-    <div class="category-links">
-        <h3 class="category-links-title">カテゴリ別記事一覧</h3>
-        <div class="category-links-grid">
-            <a href="{{ '/knowhow/#basics' | relative_url }}" class="category-link">
-                <i class="fas fa-graduation-cap"></i>
-                入札基礎知識
-            </a>
-            <a href="{{ '/knowhow/#qualification' | relative_url }}" class="category-link">
-                <i class="fas fa-id-card"></i>
-                資格取得ガイド
-            </a>
-            <a href="{{ '/knowhow/#bidding-strategy' | relative_url }}" class="category-link">
-                <i class="fas fa-chess"></i>
-                入札戦略
-            </a>
-            <a href="{{ '/knowhow/#electronic' | relative_url }}" class="category-link">
-                <i class="fas fa-laptop"></i>
-                電子入札
-            </a>
-        </div>
     </div>
 </section>
 
