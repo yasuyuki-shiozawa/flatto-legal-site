@@ -12,6 +12,11 @@ main_nav:
     url: "/knowhow/"
     icon: "fas fa-graduation-cap"
     description: "入札制度の基本から実践まで"
+
+  - name: "資格取得"
+    url: "/nyusatsu-shikaku/"
+    icon: "fas fa-certificate"
+    description: "入札参加資格の取得方法を詳しく解説"
     
   - name: "動画"
     url: "/videos/"
@@ -38,16 +43,11 @@ main_nav:
     icon: "fas fa-question-circle"
     description: "入札に関するよくある質問"
     
-  - name: "解説記事"
-    url: "/blog/"
-    icon: "fas fa-file-alt"
-    description: "入札ノウハウ・専門解説"
-    
-  - name: "事業支援サービス"
-    url: "/services/"
-    icon: "fas fa-briefcase"
-    description: "ドローン事業・資金調達・法人設立等の支援"
-    
+  - name: "専門サポート"
+    url: "/service/"
+    icon: "fas fa-hands-helping"
+    description: "専門家によるサポートサービス"
+
   - name: "会社概要"
     url: "/company/"
     icon: "fas fa-building"
@@ -55,20 +55,20 @@ main_nav:
 
 # フッター専用ナビゲーション（営業要素・補助情報）
 footer_only_nav:
-  - name: "入札参加資格取得"
-    url: "/nyusatsu-shikaku/"
-    icon: "fas fa-certificate"
-    description: "入札参加資格の取得方法を詳しく解説"
-    
+  - name: "解説記事"
+    url: "/blog/"
+    icon: "fas fa-file-alt"
+    description: "入札ノウハウ・専門解説"
+
+  - name: "事業支援サービス"
+    url: "/services/"
+    icon: "fas fa-briefcase"
+    description: "ドローン事業・資金調達・法人設立等の支援"
+
   - name: "随意契約について"
     url: "/zuii-keiyaku/"
     icon: "fas fa-file-contract"
     description: "随意契約の要件・手続きを解説"
-    
-  - name: "専門サポートについて"
-    url: "/service/"
-    icon: "fas fa-hands-helping"
-    description: "専門家によるサポートサービス"
     
   - name: "サイトについて"
     url: "/about/"
