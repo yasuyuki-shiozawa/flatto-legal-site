@@ -97,30 +97,13 @@
           "position": 1,
           "name": "ホーム",
           "item": "{{ site.url }}"
-        }
-        {% assign url_parts = page.url | split: '/' %}
-        {% assign url_build = '' %}
-        {% for part in url_parts %}
-          {% unless part == '' %}
-            {% assign url_build = url_build | append: '/' | append: part %}
-            {% assign position = forloop.index %}
-            {% if forloop.last %}
-        ,{
+        },
+        {
           "@type": "ListItem",
-          "position": {{ position | plus: 1 }},
-          "name": "{{ page.title }}",
-          "item": "{{ site.url }}{{ url_build }}"
+          "position": 2,
+          "name": "{{ page.title | truncate: 60 }}",
+          "item": "{{ site.url }}{{ page.url }}"
         }
-            {% else %}
-        ,{
-          "@type": "ListItem", 
-          "position": {{ position | plus: 1 }},
-          "name": "{{ part | capitalize }}",
-          "item": "{{ site.url }}{{ url_build }}"
-        }
-            {% endif %}
-          {% endunless %}
-        {% endfor %}
       ]
     }
     {% endunless %}
