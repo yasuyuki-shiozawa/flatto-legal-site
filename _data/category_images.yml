@@ -3,63 +3,58 @@
 
 # メインカテゴリ
 実務ガイド:
-  image: /assets/images/service-document.webp
+  image: /assets/images/blog/default-article-image.webp
   alt: 実務ガイドのイメージ
   color: "#3b82f6"  # 青色（実務的）
 
 制度解説:
-  image: /assets/images/knowhow-icon.webp
+  image: /assets/images/blog/default-article-image.webp
   alt: 制度解説のイメージ
   color: "#10b981"  # 緑色（知識）
 
 戦略ガイド:
-  image: /assets/images/service-consulting.webp
+  image: /assets/images/blog/default-article-image.webp
   alt: 戦略ガイドのイメージ
   color: "#f59e0b"  # オレンジ（戦略）
 
 最新動向:
-  image: /assets/images/flow-process.webp
+  image: /assets/images/blog/default-article-image.webp
   alt: 最新動向のイメージ
   color: "#ef4444"  # 赤色（最新）
 
 入門ガイド:
-  image: /assets/images/knowhow-expertise.webp
+  image: /assets/images/blog/default-article-image.webp
   alt: 入門ガイドのイメージ
   color: "#8b5cf6"  # 紫色（初心者向け）
 
 地域別ガイド:
-  image: /assets/images/hero-business-partnership.webp
+  image: /assets/images/blog/default-article-image.webp
   alt: 地域別ガイドのイメージ
   color: "#06b6d4"  # シアン（地域）
 
+guide:
+  image: /assets/images/blog/guide-article-image.webp
+  alt: ガイド記事のイメージ
+  color: "#3b82f6"  # 青色（ガイド）
+
+legal-profession:
+  image: /assets/images/blog/legal-profession-clean.webp
+  alt: 士業関連記事のイメージ
+  color: "#1e40af"  # 濃い青色（士業）
+
+business-matching:
+  image: /assets/images/blog/guide-article-image.webp
+  alt: ビジネスマッチング記事のイメージ
+  color: "#10b981"  # 緑色（マッチング）
+
+public-procurement:
+  image: /assets/images/blog/default-article-image.webp
+  alt: 公共調達記事のイメージ
+  color: "#3b82f6"  # 青色（公共調達）
+
 # デフォルト（カテゴリが設定されていない場合）
 default:
-  image: /assets/images/blog-default.svg
+  image: /assets/images/blog/default-article-image.webp
   alt: 入札ガイド記事
   color: "#6b7280"  # グレー
-# 入札関連カテゴリ
-入札:
-  image: /assets/images/blog/procurement-notice-guide.jpg
-  alt: 入札・公示書ガイドのイメージ
-  color: "#3b82f6"  # 青色（入札）
-
-公示書:
-  image: /assets/images/blog/procurement-notice-guide.jpg
-  alt: 公示書解説のイメージ
-  color: "#1e40af"  # 濃い青色（公示書）
-
-役務案件:
-  image: /assets/images/blog/procurement-notice-guide.jpg
-  alt: 役務案件ガイドのイメージ
-  color: "#2563eb"  # 青色（役務）
-
-入札基礎知識:
-  image: /assets/images/blog/procurement-notice-guide.jpg
-  alt: 入札基礎知識のイメージ
-  color: "#1d4ed8"  # 青色（基礎知識）
-
-入札戦略:
-  image: /assets/images/blog/procurement-notice-guide.jpg
-  alt: 入札戦略のイメージ
-  color: "#1e3a8a"  # 濃い青色（戦略）
 

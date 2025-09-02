@@ -5,6 +5,7 @@ date: 2025-08-21 11:00:00 +0900
 categories: [guide, business-matching, public-procurement]
 tags: [ビジネスチャンス・ナビ, 中小企業, マッチングサイト, 入札, 販路開拓, 無料, 東京都, 官民連携, ビジネスマッチング]
 description: "中小企業必見！50,000社が登録する官民マッチングサイト「ビジネスチャンス・ナビ」の完全活用ガイド。無料で使える機能から戦略的活用術、成功事例まで、販路開拓の全情報を徹底解説。"
+image: /assets/images/blog/guide-article-image.webp
 ---
 
 ## はじめに：新たな販路開拓の切り札「ビジネスチャンス・ナビ」とは？
