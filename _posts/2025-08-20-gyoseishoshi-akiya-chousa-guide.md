@@ -5,7 +5,7 @@ date: 2025-08-20 14:00:00 +0900
 categories: [guide, administrative-scrivener, public-procurement, vacant-house]
 tags: [行政書士, 入札, 落札, 公告, 仕様書, 入札参加資格, 全省庁統一資格, 予定価格, 競争入札, 空き家調査, 所有者調査, 業務委託, 京都府行政書士会, 公共調達]
 description: "行政書士向け入札案件で2,600万円超の落札も！実際の公告・落札実績を基に、空き家所有者調査業務の入札参加資格から戦略までを完全ガイド。公共調達で安定収益と社会貢献を実現する方法とは？"
-image: /assets/images/gyoseishoshi/akiya-chousa-guide.jpg
+image: /assets/images/blog/legal-profession-clean.webp
 ---
 
 ## 行政書士向け入札案件！2,600万円超の空き家所有者調査業務で落札を目指す入札参加ガイド

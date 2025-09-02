@@ -5,7 +5,7 @@ date: 2025-08-20 15:00:00 +0900
 categories: [guide, tax-accountant, public-procurement, consultation]
 tags: [税理士, 入札, 落札, 公告, 仕様書, 入札参加資格, 全省庁統一資格, 予定価格, 競争入札, 確定申告, 電話相談センター, 国税庁, 業務委託, 公共調達]
 description: "税理士必見！1,400万円規模の入札案件「確定申告電話相談センター業務」で安定収益を目指しませんか？実際の公告・落札実績を基に、業務内容から参加資格、成功戦略までを完全ガイド。"
-image: /assets/images/zeirishi/denwa-soudan-center-guide.jpg
+image: /assets/images/blog/legal-profession-clean.webp
 permalink: /blog/tax-accountant-consultation-center-guide/
 redirect_from:
   - /guide/tax-accountant/public-procurement/consultation/2025/08/20/zeirishi-denwa-soudan-center-guide/

@@ -6,7 +6,7 @@ date: 2025-08-21 09:00:00 +0900
 categories: [guide, subsidy, bidding-strategy]
 tags: [入札, 補助金, 国の仕事, 自治体の仕事, 収益計画, 事業計画書, ドローン, 設備投資, ものづくり補助金, 公共調達, 中小企業, 資金調達, 販路開拓]
 author: Manus AI
-image: /assets/images/hojokin/hojokin-nyusatsu-strategy.jpg
+image: /assets/images/blog/guide-article-image.webp
 permalink: /blog/subsidy-bidding-strategy-guide/
 redirect_from:
   - /guide/subsidy/bidding-strategy/2025/08/21/hojokin-nyusatsu-senryaku-guide/
