@@ -11,7 +11,7 @@ body_class: blog-lp-page
 <link rel="stylesheet" href="{{ '/assets/css/blog-emergency-fix.css' | relative_url }}?v={{ 'now' | date: '%Y%m%d%H%M%S' }}">
 
 <!-- ニュースレター機能JavaScript読み込み -->
-<script src="{{ '/assets/js/newsletter.js' | relative_url }}" defer></script>
+<!-- Netlify Formsを使用するため、newsletter.jsは不要 -->
 
 <!-- ブログヒーローセクション -->
 <section class="blog-hero">
@@ -117,7 +117,11 @@ body_class: blog-lp-page
     <div class="newsletter-content">
         <h2>入札成功のヒントを毎週お届け</h2>
         <p>最新の入札情報、法改正、成功事例など、実務に役立つ情報を無料でお送りします</p>
-        <form id="newsletter-form" class="newsletter-form">
+        <form id="newsletter-form" class="newsletter-form" name="newsletter-subscription" method="POST" action="/newsletter-thanks/" data-netlify="true" data-netlify-honeypot="bot-field">
+            <!-- スパム対策用の隠しフィールド -->
+            <input type="hidden" name="bot-field" />
+            <input type="hidden" name="form-name" value="newsletter-subscription" />
+            
             <input type="email" id="newsletter-email" name="email" placeholder="メールアドレスを入力" required>
             <button type="submit" id="newsletter-submit">無料購読する</button>
         </form>
