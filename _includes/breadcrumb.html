@@ -84,7 +84,7 @@
       {% if part != "" %}
         {% assign breadcrumb_path = breadcrumb_path | append: "/" | append: part %}
         
-        <!-- 日付部分とファイル名をスキップ -->
+        {% comment %}日付部分とファイル名をスキップ{% endcomment %}
         {% assign is_date = false %}
         {% assign is_filename = false %}
         
