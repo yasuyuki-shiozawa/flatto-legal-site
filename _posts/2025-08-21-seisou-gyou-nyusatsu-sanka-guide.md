@@ -5,6 +5,7 @@ date: 2025-08-21 10:00:00 +0900
 categories: [guide, cleaning-business, public-procurement]
 tags: [清掃業, 入札, 建築物清掃業登録, 公共調達, 参入障壁, 全省庁統一資格, ビルクリーニング技能士, 安定収益]
 description: "清掃業者が公共調達で安定収益を確保する完全ガイド。建築物清掃業登録から数億円規模の入札案件まで、参入障壁の突破戦略を実例と共に解説。"
+image: /assets/images/blog/guide-article-image.webp
 ---
 
 ## はじめに：清掃業における公共調達の可能性

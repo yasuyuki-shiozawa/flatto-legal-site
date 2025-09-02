@@ -6,6 +6,7 @@ author: "しおさん"
 categories: [実務ガイド, 制度解説]
 tags: [共同企業体, JV, 特定JV, 経常JV, 地域維持型JV]
 description: "共同企業体(JV)での入札参加を完全ガイド。特定JV・経常JV等の種類、組成から申請までの手順、成功のポイントを国土交通省の基準に基づき専門家が解説。初心者でも分かる実践的な内容です。"
+image: /assets/images/blog/default-article-image.webp
 ---
 
 ## 共同企業体（JV）とは

@@ -6,6 +6,7 @@ categories: [case-study, legal-profession, inheritance-investigation]
 tags: [豊橋市, ほの国法律事務所, 214万円, 落札事例, 士業参入戦略]
 description: "豊橋市で214万円落札！士業向け相続人調査業務委託の参入戦略を、ほの国法律事務所の成功事例から徹底解説。公共調達で安定収益を目指すための具体的方法とは？"
 excerpt: "愛知県豊橋市で実際に公告された「相続人調査等業務委託」で、ほの国法律事務所が214万5千円で落札。士業が公共調達で成功するための戦略を実例から徹底分析します。"
+image: /assets/images/blog/legal-profession-clean.webp
 ---
 
 ## はじめに

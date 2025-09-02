@@ -7,6 +7,7 @@ tags: [制度改革, DX, 最新トレンド, 2024年]
 author: いまいさん
 excerpt: "デジタル化の推進、働き方改革への対応、SDGsの重視など、2024年の入札制度における重要な変化とトレンドを解説します。"
 description: "2024年の入札制度改革、5つの重要トレンドを専門家が徹底解説。電子入札の完全移行、総合評価方式の見直し、中小企業支援策の拡充、働き方改革への対応、透明性向上など、最新動向と企業が取るべき対策を具体的に紹介します。"
+image: /assets/images/blog/default-article-image.webp
 ---
 
 <div class="section-header-main">

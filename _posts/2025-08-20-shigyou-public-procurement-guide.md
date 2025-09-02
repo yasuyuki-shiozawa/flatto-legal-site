@@ -5,6 +5,7 @@ date: 2025-08-20 12:00:00 +0900
 categories: [guide, legal-profession, public-procurement]
 tags: [士業, 公共調達, 入札, 弁護士, 司法書士, 行政書士, 税理士, 社労士, 相続登記, 空き家調査]
 description: "弁護士、司法書士、行政書士、税理士、社労士必見！公共調達で安定収益を目指すための案件分析と参入戦略を完全ガイド。1,000万円超の大規模案件から具体的なデータと事例で徹底解説します。"
+image: /assets/images/blog/guide-article-image.webp
 ---
 
 # 士業のための公共調達ガイド：安定収益を目指すための案件分析と参入戦略

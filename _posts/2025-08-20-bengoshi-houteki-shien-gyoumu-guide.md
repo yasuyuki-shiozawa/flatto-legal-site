@@ -8,6 +8,7 @@ description: "弁護士向け入札案件で1,000万円超の落札を目指す�
 permalink: /blog/lawyer-legal-support-bidding-guide/
 redirect_from:
   - /guide/lawyer/public-procurement/legal-support/2025/08/20/bengoshi-houteki-shien-gyoumu-guide/
+image: /assets/images/blog/guide-article-image.webp
 ---
 
 ## 弁護士向け入札案件！1,000万円超の法的支援業務で落札を目指す入札参加完全ガイド

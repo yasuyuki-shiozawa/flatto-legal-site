@@ -6,6 +6,7 @@ categories: [guide, legal-profession, inheritance-investigation]
 tags: [相続登記義務化, 空家対策, 士業参入, 業務委託, 全国事例]
 description: "相続登記義務化で急増中！士業向け相続人調査業務委託の全貌と参入戦略を、横浜市、長崎市、豊橋市など全国の事例から徹底解説。安定収益を目指すためのロードマップとは？"
 excerpt: "2024年4月の相続登記義務化を背景に、全国の自治体で「相続人調査業務委託」が急増。士業にとって新たなビジネスチャンスとなるこの分野の全貌を解説します。"
+image: /assets/images/blog/guide-article-image.webp
 ---
 
 ## はじめに

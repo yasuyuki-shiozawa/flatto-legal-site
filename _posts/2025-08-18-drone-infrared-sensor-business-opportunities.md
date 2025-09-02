@@ -5,6 +5,7 @@ date: 2025-08-18
 categories: [入札ノウハウ, 新技術活用, 市場分析]
 tags: [ドローン測量, 赤外線センサー, 公共事業, 落札金額, 技術要件, RTK-GNSS, LiDAR]
 description: "ドローンや赤外線センサー事業で年商1億円を目指す！実際の落札額は800万円超。国土地理院の基準から航空法、測量業登録まで、行政書士が公共事業への参入方法と成功戦略を完全ガイド。"
+image: /assets/images/blog/default-article-image.webp
 ---
 
 <div class="container">
