@@ -1,5 +1,5 @@
 ---
-layout: default-simple
+layout: default
 title: "ニュースレター購読ありがとうございます | 行政書士法人ふらっと法務事務所"
 description: "ニュースレターの購読申し込みを受け付けました。入札成功のヒントを毎週お届けいたします。"
 permalink: /newsletter-thanks/
