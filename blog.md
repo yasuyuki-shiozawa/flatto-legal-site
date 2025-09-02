@@ -77,7 +77,7 @@ body_class: blog-lp-page
                 <span class="post-category" style="background-color: {{ site.data.category_images[post.categories.first].color | default: '#6b7280' }}">{{ post.categories | first }}</span>
             </div>
             <div class="post-content">
-                <h3>{{ post.title | truncate: 50 }}</h3>
+                <h3>{{ post.title | default: "タイトルなし" | truncate: 50 }}</h3>
                 <p>{{ post.excerpt | strip_html | truncate: 80 }}</p>
                 <div class="post-meta">
                     <span><i class="fas fa-clock"></i> {{ post.content | number_of_words | divided_by: 200 }}分で読める</span>
@@ -151,7 +151,7 @@ body_class: blog-lp-page
                 <span class="post-category" style="background-color: {{ site.data.category_images[post.categories.first].color | default: '#6b7280' }}">{{ post.categories | first }}</span>
             </div>
             <div class="post-content">
-                <h3>{{ post.title | truncate: 50 }}</h3>
+                <h3>{{ post.title | default: "タイトルなし" | truncate: 50 }}</h3>
                 <p>{{ post.excerpt | strip_html | truncate: 80 }}</p>
                 <div class="post-meta">
                     <span><i class="fas fa-calendar"></i> {{ post.date | date: "%Y年%m月%d日" }}</span>
