@@ -1,0 +1,236 @@
+<!-- ソーシャルシェアボタン -->
+<div class="social-share-section">
+    <div class="social-share-container">
+        <h3 class="social-share-title">この記事をシェア</h3>
+        <div class="social-share-buttons">
+            <!-- Twitter -->
+            <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url | url_encode }}&text={{ page.title | url_encode }}" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="social-share-btn twitter-btn"
+               aria-label="Twitterでシェア">
+                <i class="fab fa-twitter"></i>
+                <span>Twitter</span>
+            </a>
+            
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="social-share-btn facebook-btn"
+               aria-label="Facebookでシェア">
+                <i class="fab fa-facebook-f"></i>
+                <span>Facebook</span>
+            </a>
+            
+            <!-- LINE -->
+            <a href="https://social-plugins.line.me/lineit/share?url={{ page.url | absolute_url | url_encode }}" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="social-share-btn line-btn"
+               aria-label="LINEでシェア">
+                <i class="fab fa-line"></i>
+                <span>LINE</span>
+            </a>
+            
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | url_encode }}" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="social-share-btn linkedin-btn"
+               aria-label="LinkedInでシェア">
+                <i class="fab fa-linkedin-in"></i>
+                <span>LinkedIn</span>
+            </a>
+            
+            <!-- URLコピー -->
+            <button class="social-share-btn copy-btn" 
+                    onclick="copyToClipboard('{{ page.url | absolute_url }}')"
+                    aria-label="URLをコピー">
+                <i class="fas fa-link"></i>
+                <span>URLコピー</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<style>
+.social-share-section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.social-share-container {
+    max-width: 100%;
+}
+
+.social-share-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.social-share-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+}
+
+.social-share-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    min-width: 100px;
+    justify-content: center;
+}
+
+.social-share-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.twitter-btn {
+    background: #1da1f2;
+    color: white;
+}
+
+.twitter-btn:hover {
+    background: #1a91da;
+    color: white;
+}
+
+.facebook-btn {
+    background: #4267b2;
+    color: white;
+}
+
+.facebook-btn:hover {
+    background: #365899;
+    color: white;
+}
+
+.line-btn {
+    background: #00b900;
+    color: white;
+}
+
+.line-btn:hover {
+    background: #009900;
+    color: white;
+}
+
+.linkedin-btn {
+    background: #0077b5;
+    color: white;
+}
+
+.linkedin-btn:hover {
+    background: #005885;
+    color: white;
+}
+
+.copy-btn {
+    background: #64748b;
+    color: white;
+}
+
+.copy-btn:hover {
+    background: #475569;
+    color: white;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 640px) {
+    .social-share-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .social-share-btn {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+/* コピー成功時のフィードバック */
+.copy-success {
+    background: #10b981 !important;
+}
+
+.copy-success span::after {
+    content: " ✓";
+}
+</style>
+
+<script>
+function copyToClipboard(url) {
+    if (navigator.clipboard && window.isSecureContext) {
+        // モダンブラウザ用
+        navigator.clipboard.writeText(url).then(function() {
+            showCopySuccess();
+        }).catch(function(err) {
+            console.error('URLのコピーに失敗しました:', err);
+            fallbackCopyTextToClipboard(url);
+        });
+    } else {
+        // フォールバック
+        fallbackCopyTextToClipboard(url);
+    }
+}
+
+function fallbackCopyTextToClipboard(text) {
+    var textArea = document.createElement("textarea");
+    textArea.value = text;
+    
+    // 画面外に配置
+    textArea.style.top = "0";
+    textArea.style.left = "0";
+    textArea.style.position = "fixed";
+    
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    
+    try {
+        var successful = document.execCommand('copy');
+        if (successful) {
+            showCopySuccess();
+        } else {
+            console.error('URLのコピーに失敗しました');
+        }
+    } catch (err) {
+        console.error('URLのコピーに失敗しました:', err);
+    }
+    
+    document.body.removeChild(textArea);
+}
+
+function showCopySuccess() {
+    var copyBtn = document.querySelector('.copy-btn');
+    if (copyBtn) {
+        copyBtn.classList.add('copy-success');
+        var originalText = copyBtn.querySelector('span').textContent;
+        copyBtn.querySelector('span').textContent = 'コピー完了';
+        
+        setTimeout(function() {
+            copyBtn.classList.remove('copy-success');
+            copyBtn.querySelector('span').textContent = originalText;
+        }, 2000);
+    }
+}
+</script>
+
