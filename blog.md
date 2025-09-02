@@ -82,6 +82,9 @@ body_class: blog-lp-page
                 <div class="post-meta">
                     <span><i class="fas fa-clock"></i> {{ post.content | number_of_words | divided_by: 200 }}分で読める</span>
                     <span><i class="fas fa-calendar"></i> {{ post.date | date: "%Y年%m月%d日" }}</span>
+                    {% if post.categories and post.categories.size > 0 %}
+                    <span><i class="fas fa-tag"></i> {{ post.categories | join: ', ' }}</span>
+                    {% endif %}
                 </div>
             </div>
             <div class="post-cta">
@@ -155,6 +158,9 @@ body_class: blog-lp-page
                 <p>{{ post.excerpt | strip_html | truncate: 80 }}</p>
                 <div class="post-meta">
                     <span><i class="fas fa-calendar"></i> {{ post.date | date: "%Y年%m月%d日" }}</span>
+                    {% if post.categories and post.categories.size > 0 %}
+                    <span><i class="fas fa-tag"></i> {{ post.categories | join: ', ' }}</span>
+                    {% endif %}
                 </div>
             </div>
             <div class="post-cta">
