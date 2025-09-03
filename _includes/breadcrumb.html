@@ -41,7 +41,8 @@
           {% unless is_date or is_filename %}
             <li class="breadcrumb-item">
               <a href="{{ breadcrumb_path | relative_url }}">
-                {% case part %}
+                {% assign decoded_part = part | url_decode %}
+                {% case decoded_part %}
                   {% when "guide" %}ガイド
                   {% when "legal-profession" %}士業
                   {% when "inheritance-investigation" %}相続調査
@@ -49,7 +50,19 @@
                   {% when "blog" %}ブログ
                   {% when "service" %}サービス
                   {% when "faq" %}よくある質問
-                  {% else %}{{ part | replace: "-", " " | capitalize }}
+                  {% when "入札の基本" %}入札の基本
+                  {% when "解説記事" %}解説記事
+                  {% when "最新動向" %}最新動向
+                  {% when "事例研究" %}事例研究
+                  {% when "よくある質問" %}よくある質問
+                  {% when "資格取得支援" %}資格取得支援
+                  {% when "随意契約" %}随意契約
+                  {% when "官民連携" %}官民連携
+                  {% when "ビジネスマッチング" %}ビジネスマッチング
+                  {% when "public-procurement" %}公共調達
+                  {% when "business-matching" %}ビジネスマッチング
+                  {% when "cleaning-business" %}清掃業
+                  {% else %}{{ decoded_part | replace: "-", " " | capitalize }}
                 {% endcase %}
               </a>
             </li>
@@ -100,7 +113,7 @@
           ,{
             "@type": "ListItem", 
             "position": {{ position }},
-            "name": "{% case part %}{% when "guide" %}ガイド{% when "legal-profession" %}士業{% when "inheritance-investigation" %}相続調査{% when "case-study" %}事例研究{% when "blog" %}ブログ{% when "service" %}サービス{% when "faq" %}よくある質問{% else %}{{ part | replace: "-", " " | capitalize }}{% endcase %}",
+            "name": "{% assign decoded_part = part | url_decode %}{% case decoded_part %}{% when "guide" %}ガイド{% when "legal-profession" %}士業{% when "inheritance-investigation" %}相続調査{% when "case-study" %}事例研究{% when "blog" %}ブログ{% when "service" %}サービス{% when "faq" %}よくある質問{% when "入札の基本" %}入札の基本{% when "解説記事" %}解説記事{% when "最新動向" %}最新動向{% when "事例研究" %}事例研究{% when "よくある質問" %}よくある質問{% when "資格取得支援" %}資格取得支援{% when "随意契約" %}随意契約{% when "官民連携" %}官民連携{% when "ビジネスマッチング" %}ビジネスマッチング{% when "public-procurement" %}公共調達{% when "business-matching" %}ビジネスマッチング{% when "cleaning-business" %}清掃業{% else %}{{ decoded_part | replace: "-", " " | capitalize }}{% endcase %}",
             "item": "{{ site.url }}{{ breadcrumb_path }}"
           }
           {% assign position = position | plus: 1 %}
