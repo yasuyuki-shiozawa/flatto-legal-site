@@ -2,7 +2,7 @@
 layout: post
 title: "許認可やプライバシーマーク等取得の入札戦略策定 - 参入障壁を突破して案件獲得を拡大する実践ガイド"
 date: 2025-01-06
-categories: [入札, 戦略, 許認可, 資格]
+categories: [bidding, strategy, licensing, qualifications]
 tags: [プライバシーマーク, ISO認証, ISMS, 入札参加資格, 参入障壁]
 image: "/assets/images/blog/procurement-notice-guide.jpg"
 description: "許認可やプライバシーマーク、ISO認証等の戦略的取得で入札の参入障壁を突破する方法を専門家が解説。参加可能案件を拡大し、競争優位性を確立して収益向上を実現する実践的ガイド。"

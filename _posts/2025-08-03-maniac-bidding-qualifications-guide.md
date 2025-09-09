@@ -2,7 +2,7 @@
 layout: post
 title: "マニアックな入札参加資格(狙い目) - 独立行政法人やJRA、URの知られざる世界"
 date: 2025-08-03
-categories: [入札戦略, 独立行政法人, 競争参加資格]
+categories: [bidding-strategy, independent-agencies, qualification-requirements]
 tags: [JRA, UR, NEDO, JAXA, 独立行政法人, 入札参加資格, 狙い目案件]
 description: "JRA、UR、NEDO、JAXAなど、独立行政法人のマニアックな入札参加資格は競争が少なく狙い目！知る人ぞ知る特殊案件でビジネスチャンスを掴む方法を解説。専門性を活かして安定収益を確保する戦略とは？"
 image: /assets/images/blog/default-article-image.webp
