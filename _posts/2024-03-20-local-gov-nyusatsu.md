@@ -2,12 +2,13 @@
 layout: post
 title: "地方自治体の入札攻略法：都道府県・市町村別の特徴と対策"
 date: 2024-03-20
-categories: [地域別ガイド, 戦略]
+categories: [regional-guide, strategy]
 tags: [地方自治体, 都道府県, 市町村, 地域特性]
 author: しおさん
 excerpt: "地方自治体の入札は、それぞれ独自のルールや慣習があります。都道府県・市町村別の特徴を理解し、効果的な入札戦略を立てましょう。"
 description: "地方自治体の入札攻略法を、都道府県・市町村別に専門家が徹底解説。各自治体の入札制度の特徴、地域要件、評価方式の違い、参加資格のポイントを分析。地元企業優遇や地域貢献度評価への対策も紹介します。"
 image: /assets/images/blog/default-article-image.webp
+
 ---
 
 ## 地方自治体入札の特徴

@@ -2,12 +2,13 @@
 layout: post
 title: "電子入札システム完全ガイド：初めての方でも安心の使い方【2024年最新版】"
 date: 2024-03-15
-categories: [実務ガイド, デジタル化]
+categories: [practical-guide, digitalization]
 tags: [電子入札, システム操作, ICカード, GEPS, 政府調達]
 author: さおりさん
 excerpt: "日本の主要な電子入札システム（GEPS、国交省、MEXT等）の使い方から、ICカードの取得、実際の入札手順、トラブル対処法まで実践的に解説します。"
 description: "【2024年最新】電子入札システムの完全ガイド。政府電子調達(GEPS)から地方自治体まで、ICカード取得、使い方、トラブル対処法を専門家が解説。初心者でも安心して電子入札を始められます。"
 image: /assets/images/blog/digital-transformation.jpg
+
 ---
 
 ## 電子入札システムとは

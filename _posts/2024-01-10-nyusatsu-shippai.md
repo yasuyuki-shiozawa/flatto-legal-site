@@ -2,12 +2,13 @@
 layout: post
 title: "入札でよくある失敗パターン10選とその対策"
 date: 2024-01-10
-categories: [実務ガイド, 失敗事例]
+categories: [practical-guide, failure-cases]
 tags: [失敗事例, 注意点, トラブル対策]
 author: あきら君
 excerpt: "入札での失敗は避けたいもの。よくある失敗パターンを事前に知っておくことで、リスクを大幅に減らせます。"
 description: "入札でよくある失敗10パターンと、それを防ぐための効果的な対策を専門家が徹底解説。書類不備、期限遅れ、資格要件の見落とし、価格設定ミス、技術提案書の質不足など、実際の失敗例から学ぶ予防策と成功のポイントを具体的に紹介します。"
 image: /assets/images/blog/default-article-image.webp
+
 ---
 
 ## はじめに

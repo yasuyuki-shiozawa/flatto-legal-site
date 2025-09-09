@@ -2,13 +2,14 @@
 layout: post
 title: "【完全版】入札参加資格の取得ガイド：初心者でも分かる申請手順"
 date: 2024-03-01
-categories: [入門ガイド, 資格取得]
+categories: [beginner-guide, qualification]
 tags: [入札参加資格, 申請手順, 初心者向け]
 author: しおさん
 excerpt: "入札参加資格の取得は、公共調達に参加するための第一歩です。本記事では、申請に必要な書類から具体的な手順まで、初心者の方でも理解できるよう詳しく解説します。"
 description: "【2024年最新】入札参加資格の取得方法を完全ガイド。国・地方自治体の申請手順、必要書類一覧、納税証明書や登記簿謄本の取得方法、申請期限、更新手続きまで、行政書士が初心者向けに分かりやすく解説。失敗しないためのポイントも紹介します。"
 popular_rank: 1
 image: /assets/images/blog/default-article-image.webp
+
 ---
 
 ## はじめに

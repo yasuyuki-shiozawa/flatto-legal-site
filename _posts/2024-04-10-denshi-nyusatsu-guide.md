@@ -3,10 +3,11 @@ layout: post
 title: "電子入札システムの基本と使い方：国・自治体別の導入ガイド"
 date: 2024-04-10
 author: "しおさん"
-categories: [実務ガイド, デジタル化]
+categories: [practical-guide, digitalization]
 tags: [電子入札, e-BISC, GEPS, ICカード, 電子証明書]
 description: "電子入札システムの基本と使い方を、国交省(e-BISC)や政府(GEPS)の公式情報に基づき専門家が解説。ICカード取得から操作方法、トラブル対処法まで、初心者でも安心して始められる実践的ガイドです。"
 image: /assets/images/blog/default-article-image.webp
+
 ---
 
 ## 電子入札システムとは

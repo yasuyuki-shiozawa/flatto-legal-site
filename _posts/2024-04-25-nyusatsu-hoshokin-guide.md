@@ -3,10 +3,11 @@ layout: post
 title: "入札保証金と契約保証金の完全ガイド：免除条件から返還まで徹底解説"
 date: 2024-04-25
 author: "しおさん"
-categories: [制度解説, 実務ガイド]
+categories: [system-explanation, practical-guide]
 tags: [入札保証金, 契約保証金, 会計法, 地方自治法, 保証制度]
 description: "入札保証金と契約保証金の全てを専門家が解説。法的根拠、金額、免除条件、納付方法、返還まで、公的情報に基づき実務で役立つ知識を初心者にも分かりやすく説明します。リスク軽減と費用最適化のための実践的ガイドです。"
 image: /assets/images/blog/default-article-image.webp
+
 ---
 
 ## 入札保証金・契約保証金とは

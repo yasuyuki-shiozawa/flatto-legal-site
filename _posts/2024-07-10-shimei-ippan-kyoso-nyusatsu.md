@@ -3,10 +3,11 @@ layout: post
 title: "指名競争入札vs一般競争入札：それぞれの特徴と参加方法を徹底比較"
 date: 2024-07-10
 author: "しおさん"
-categories: [制度解説, 入門ガイド]
+categories: [system-explanation, beginner-guide]
 tags: [一般競争入札, 指名競争入札, 会計法, 地方自治法, 入札方式]
 description: "一般競争入札と指名競争入札の違いを専門家が徹底比較。会計法・地方自治法の規定から実務での参加方法、成功戦略まで、初心者にも分かりやすく解説します。企業規模や業種に応じた最適な方式選択のヒントを提供します。"
 image: /assets/images/blog/default-article-image.webp
+
 ---
 
 ## 公共調達における入札方式の基本

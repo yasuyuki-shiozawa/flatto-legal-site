@@ -2,10 +2,11 @@
 layout: post
 title: "仕様書の読み方を学ぼう - 実践的解読テクニックで入札成功率を上げる"
 date: 2025-01-06
-categories: [入札基礎知識, 仕様書, 実務ガイド]
+categories: [bidding-basics, specifications, practical-guide]
 tags: [仕様書, 調達仕様書, 入札, 読み方, 解読テクニック, 実践ガイド]
 description: "入札で最も重要な「仕様書」を正しく読み解く方法を専門家が解説。環境省の実際の調達仕様書を教材に、見落としがちなポイントから応札判断まで実践的なテクニックをご紹介。初心者でも理解できる入札成功率向上ガイドです。"
 image: "/assets/images/blog/procurement-notice-guide.jpg"
+
 ---
 
 # 仕様書の読み方を学ぼう - 実践的解読テクニックで入札成功率を上げる

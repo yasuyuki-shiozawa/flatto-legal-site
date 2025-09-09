@@ -3,10 +3,11 @@ layout: post
 title: "人材派遣事業者のための入札案件ガイド：参入方法と成功のポイント"
 date: 2024-04-01
 author: "しおさん"
-categories: [入札知識]
+categories: [bidding-knowledge]
 tags: [人材派遣, 労働者派遣事業, 入札参加資格, 派遣契約]
 description: "人材派遣の入札案件で勝つ方法を専門家が解説。時給相場1,540円～の実例、労働者派遣事業許可の活用法、落札のポイント、コンプライアンス対応まで、公共調達で安定収益を確保する戦略を網羅します。"
 image: /assets/images/blog/default-article-image.webp
+
 ---
 
 ## 派遣の入札案件とは
