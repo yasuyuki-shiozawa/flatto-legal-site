@@ -2,7 +2,7 @@
 layout: post
 title: "公示書の読み方を学ぼう - 役務案件への参入を成功させる実践ガイド"
 date: 2025-01-06
-categories: [入札, 公示書, 役務案件]
+categories: [bidding, procurement-notice, service-contracts]
 tags: [公示書, 入札参加, 役務契約, 政府調達, 実践ガイド]
 author: "行政書士法人フラット"
 description: "役務案件の公示書を正しく読み解く方法を専門家が実例で詳しく解説。厚生労働省のコールセンター運営業務を具体例に、入札参加成功への第一歩となる公示書の構造理解から応札判断まで、初心者にも分かりやすく説明します。"

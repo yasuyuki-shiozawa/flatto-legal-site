@@ -3,7 +3,7 @@ layout: post
 title: "入札不調・不落の対処法：原因分析から再入札戦略まで完全解説"
 date: 2024-06-20
 author: "しおさん"
-categories: [実務ガイド, 入札戦略]
+categories: [practical-guide, bidding-strategy]
 tags: [入札不調, 入札不落, 再入札, 不落随意契約, 応札者なし]
 description: "入札不調・不落の対処法を専門家が解説。原因分析から再入札戦略、不落随意契約まで、会計法に基づき実践的にガイドします。発注者・受注者双方の視点で効果的な対応を提案し、次回入札の成功確率を高めます。"
 image: /assets/images/blog/default-article-image.webp

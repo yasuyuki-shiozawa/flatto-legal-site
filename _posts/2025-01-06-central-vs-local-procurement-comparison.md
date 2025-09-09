@@ -2,7 +2,7 @@
 layout: post
 title: "中央官庁と地方の入札案件比較 - データで見る参入戦略の違い"
 date: 2025-01-06
-categories: [入札, 比較分析, 入札戦略]
+categories: [bidding, comparative-analysis, bidding-strategy]
 tags: [中央官庁, 地方自治体, 入札案件, 政府調達, 参入戦略]
 author: Manus AI
 description: "中央官庁と地方自治体の入札案件をデータで徹底比較。市場規模、競争性、透明性の違いから、最適な参入戦略を専門家が解説。企業の戦略的選択を支援する実践的ガイドです。"

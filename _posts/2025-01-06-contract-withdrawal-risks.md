@@ -2,7 +2,7 @@
 layout: post
 title: "入札案件を落札後に辞退をしたらどうなる？ - 知っておくべきリスクと対処法"
 date: 2025-01-06
-categories: [入札, 契約, リスク管理]
+categories: [bidding, contract, risk-management]
 tags: [落札後辞退, 指名停止, 損害賠償, 入札参加資格, 契約違反]
 author: Manus AI
 description: "落札後の契約辞退がもたらす深刻なペナルティと法的リスクを専門家が解説。指名停止、損害賠償、資格取消など実際の処分事例とともに詳しく解説。知らないでは済まされない重要な情報と適切な対処法をお届けします。"

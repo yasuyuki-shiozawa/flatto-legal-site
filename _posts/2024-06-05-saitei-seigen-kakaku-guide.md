@@ -3,7 +3,7 @@ layout: post
 title: "最低制限価格制度の仕組みと対策：計算方法から入札戦略まで"
 date: 2024-06-05
 author: "しおさん"
-categories: [制度解説, 入札戦略]
+categories: [system-guide, bidding-strategy]
 tags: [最低制限価格, ダンピング対策, 地方自治法, 低入札価格調査]
 description: "最低制限価格制度の仕組みを専門家が徹底解説。計算方法、設定率、2024年改正情報、効果的な対策まで、公的情報に基づき実践的にガイドします。ダンピング対策を理解し、適正価格での入札戦略で受注成功率を高めましょう。"
 image: /assets/images/blog/default-article-image.webp
