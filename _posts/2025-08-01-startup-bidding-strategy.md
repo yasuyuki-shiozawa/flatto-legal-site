@@ -5,9 +5,10 @@ description: "創業時から入札参加資格を取得し、未来のビジネ
 keywords: "創業時,入札参加資格,全省庁統一資格,スタートアップ,プライバシーマーク,実績要件,参入障壁,戦略的準備"
 date: 2025-08-01
 author: "行政書士法人ふらっと法務事務所"
-categories: [実務ガイド]
+categories: [practical-guide]
 tags: [創業支援, 入札参加資格, 戦略的準備, スタートアップ支援]
 image: "/assets/images/service-document.webp"
+
 ---
 
 # 創業時の新常識！入札参加資格の取得で未来を切り拓く戦略的アプローチ

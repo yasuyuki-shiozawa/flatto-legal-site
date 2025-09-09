@@ -2,11 +2,12 @@
 layout: post
 title: "経営難を救う。資金繰りの新戦略"
 date: 2025-08-01
-categories: [戦略ガイド]
+categories: [strategy-guide]
 tags: [資金繰り, 経営改善, 融資制度, つなぎ融資, 中小企業支援]
 description: "【2025年最新】資金繰りに悩む経営者必見。本記事では、入札案件つなぎ融資や新設された支援制度など、経営難を乗り越えるための具体的な資金調達戦略を専門家が徹底解説します。"
 image: /assets/images/service-consulting.webp
 author: しおさん
+
 ---
 
 # 経営難を救う。資金繰りの新戦略

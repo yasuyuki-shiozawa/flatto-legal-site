@@ -5,9 +5,10 @@ description: "【2025年最新】全省庁統一資格の等級制度、点数�
 keywords: "全省庁統一資格,等級制度,付与点数,令和7年度,申請方法,必要書類,行政書士,入札参加資格"
 date: 2025-01-15
 author: "行政書士法人ふらっと法務事務所"
-categories: [実務ガイド]
+categories: [practical-guide]
 tags: [全省庁統一資格, 入札参加資格, 申請代行, 等級制度]
 image: "/assets/images/service-document.webp"
+
 ---
 
 # 【2025年最新版】全省庁統一資格完全ガイド

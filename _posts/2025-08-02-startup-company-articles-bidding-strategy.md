@@ -2,12 +2,13 @@
 layout: post
 title: "会社定款と入札案件(創業時戦略) - 創業時に知っておくべき入札参加への道筋"
 date: 2025-08-02
-categories: [戦略ガイド]
+categories: [strategy-guide]
 tags: [創業, 定款, 入札参加資格, 会社設立, 戦略]
 author: しおさん
 thumbnail: /assets/images/service-consulting.webp
 description: "創業時の定款作成が入札参加の成否を分ける！新設法人が知るべき戦略的ポイントを法的根拠と共に解説。事業目的の記載方法から資本金設定まで、将来の入札案件獲得を見据えた定款作成の秘訣を公開します。"
 image: /assets/images/blog/default-article-image.webp
+
 ---
 
 創業時における会社設立は、将来の事業展開を左右する重要な局面です。特に、官公庁の入札案件への参加を視野に入れている場合、定款の作成段階から戦略的な準備が必要となります。

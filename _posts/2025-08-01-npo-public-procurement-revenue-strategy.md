@@ -2,11 +2,12 @@
 layout: post
 title: "NPO法人の収益源に公共調達を活用する実践的戦略ガイド"
 date: 2025-08-01
-categories: [実務ガイド]
+categories: [practical-guide]
 tags: [NPO法人, 公共調達, 入札, 収益源, 非営利法人]
 author: しおさん
 description: "NPO法人が公共調達を収益源として活用するための具体的な戦略と成功事例を専門家が詳しく解説。入札参加から契約獲得による収益向上まで、社会貢献と持続可能な経営を両立させるための実践的ガイドです。"
 image: /assets/images/service-document.webp
+
 ---
 
 # NPO法人の収益源に公共調達を活用する実践的戦略ガイド
