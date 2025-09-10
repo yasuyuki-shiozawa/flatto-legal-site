@@ -27,7 +27,7 @@ sitemap: false
   {% endfor %}
 
   <!-- 重要な固定ページ -->
-  {% assign important_pages = "/knowhow/,/flow/,/nyusatsu-shikaku/,/service/,/contact/,/blog/,/blog-lp/" | split: "," %}
+  {% assign important_pages = "/knowhow/,/flow/,/nyusatsu-shikaku/,/service/,/contact/,/blog/,/blog-lp/,/lp1/" | split: "," %}
   {% for p in site.pages %}
     {% if important_pages contains p.url %}
       <url>
