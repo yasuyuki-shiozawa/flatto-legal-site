@@ -45,20 +45,24 @@ defaults:
       path: ""
     values:
       image: "/assets/images/og-image.webp"
+      sitemap: true
   - scope:
       path: "_posts"
       type: "posts"
     values:
       image: "/assets/images/blog/default-blog-image.jpg"
+      sitemap: true
   - scope:
       path: ""
       type: "posts"
     values:
       layout: "default"
+      sitemap: true
   - scope:
       path: ""
     values:
       layout: "default"
+      sitemap: true
 
 # ビルド設定
 markdown: kramdown

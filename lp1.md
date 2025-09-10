@@ -7,6 +7,10 @@ hide_left_sidebar: true
 hide_right_sidebar: true
 body_class: free-application-page
 permalink: /lp1/
+sitemap: true
+robots: index, follow
+seo:
+  robots: index, follow
 ---
 
 <style>
