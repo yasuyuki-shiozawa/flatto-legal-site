@@ -77,19 +77,24 @@
 .left-sidebar-content .sidebar-card .sidebar-card-header.accent,
 .sidebar-card .sidebar-card-header.primary,
 .sidebar-card .sidebar-card-header.secondary,
-.sidebar-card .sidebar-card-header.accent {
+.sidebar-card .sidebar-card-header.accent,
+.sidebar-card-header.primary,
+.sidebar-card-header.secondary,
+.sidebar-card-header.accent {
   background: linear-gradient(135deg, #FF9800 0%, #FFB74D 100%) !important; // オレンジ背景
   color: #FFFFFF !important; // 白テキスト
 }
 
 .left-sidebar-content .sidebar-card .sidebar-card-header i,
-.sidebar-card .sidebar-card-header i {
+.sidebar-card .sidebar-card-header i,
+.sidebar-card-header i {
   font-size: 1.25rem;
   color: #FFFFFF !important; // 白アイコン
 }
 
 .left-sidebar-content .sidebar-card .sidebar-card-header h3,
-.sidebar-card .sidebar-card-header h3 {
+.sidebar-card .sidebar-card-header h3,
+.sidebar-card-header h3 {
   margin: 0;
   font-size: 1.125rem;
   font-weight: 600;

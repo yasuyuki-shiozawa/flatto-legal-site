@@ -24,6 +24,7 @@
 // コンポーネント
 @import "components/breadcrumb";
 @import "components/header";
+@import "components/header-two-tier"; // 2段階ヘッダースタイル
 @import "components/footer";
 @import "components/mobile-menu";
 @import "components/mobile-sidebar";
@@ -32,8 +33,10 @@
 @import "components/cards";
 // @import "components/sidebar-cards";
 @import "components/cards-modern";
-@import "components/sidebar-cards-enhanced";
-@import "components/sidebar-cards-pastel";
+// @import "components/sidebar-cards-enhanced";
+// @import "components/sidebar-cards-pastel";
+@import "components/sidebar-cards-orange"; // オレンジベースのサイドバースタイル
+@import "components/sidebar-cards-force-orange"; // 強制オレンジ適用
 @import "components/sidebar-cards-unified"; // 右サイドバー統一スタイル
 @import "components/quick-links";
 @import "components/forms";
