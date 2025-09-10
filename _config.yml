@@ -63,6 +63,14 @@ defaults:
     values:
       layout: "default"
       sitemap: true
+  - scope:
+      path: "_headers"
+    values:
+      sitemap: false
+  - scope:
+      path: "_redirects"  
+    values:
+      sitemap: false
 
 # ビルド設定
 markdown: kramdown
@@ -116,6 +124,12 @@ sass:
 # ビルド最適化
 incremental: true    # インクリメンタルビルドを有効化
 profile: false       # プロファイリングを無効化（本番環境）
+
+# 含める設定（Netlify機能用ファイル）
+include:
+  - _headers
+  - _redirects
+  - robots.txt
 
 # 除外設定（ビルド時間短縮）
 exclude:
