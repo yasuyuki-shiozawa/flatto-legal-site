@@ -26,27 +26,6 @@
     }
   }
   
-  // 学習するセクション
-  .sidebar-card:nth-child(1) .sidebar-card-header,
-  .card:nth-child(1) .card-header {
-    background: linear-gradient(135deg, #FF9800 0%, #FFB74D 100%) !important;
-    color: #FFFFFF !important;
-  }
-  
-  // 実践するセクション  
-  .sidebar-card:nth-child(2) .sidebar-card-header,
-  .card:nth-child(2) .card-header {
-    background: linear-gradient(135deg, #FF9800 0%, #FFB74D 100%) !important;
-    color: #FFFFFF !important;
-  }
-  
-  // サービスセクション
-  .sidebar-card:nth-child(3) .sidebar-card-header,
-  .card:nth-child(3) .card-header {
-    background: linear-gradient(135deg, #FF9800 0%, #FFB74D 100%) !important;
-    color: #FFFFFF !important;
-  }
-  
   // ナビゲーションリンク
   .sidebar-nav-link {
     background: rgba(255, 224, 178, 0.2) !important;
@@ -66,27 +45,6 @@
     
     i {
       color: #4CAF50 !important; // 緑のアクセント
-    }
-  }
-}
-
-// 右サイドバーも統一
-.right-sidebar,
-.right-sidebar-content,
-.sidebar-right {
-  
-  .sidebar-card-header,
-  .card-header,
-  .section-header {
-    background: linear-gradient(135deg, #FF9800 0%, #FFB74D 100%) !important;
-    color: #FFFFFF !important;
-    
-    h3, h4, h5, .title, .heading {
-      color: #FFFFFF !important;
-    }
-    
-    i, .icon {
-      color: #FFFFFF !important;
     }
   }
 }

@@ -103,3 +103,61 @@ google_site_verification: ""
 # Force sitemap regeneration
 sitemap_regenerate: true
 
+
+# パフォーマンス最適化設定
+sass:
+  style: compressed  # CSS圧縮を有効化
+  sourcemap: never   # ソースマップを無効化（本番環境）
+
+# ビルド最適化
+incremental: true    # インクリメンタルビルドを有効化
+profile: false       # プロファイリングを無効化（本番環境）
+
+# 除外設定（ビルド時間短縮）
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - README.md
+  - LICENSE
+  - CHANGELOG.md
+  - assets/css/main-backup.scss
+  - assets/css/main-optimized.scss
+
+# キャッシュ設定
+keep_files:
+  - .git
+  - .svn
+
+# 圧縮設定
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blanklines: false
+  profile: false
+
+# 画像最適化設定
+picture:
+  source: "assets/images"
+  output: "assets/images/optimized"
+  markup: "picture"
+  presets:
+    default:
+      ppi: [1, 1.5, 2]
+      source_lossless: webp
+      source_lossy: webp
+      fallback_format: original
+      fallback_presets:
+        webp: 85
+        jpg: 75
+        png: 65
+

@@ -1,0 +1,775 @@
+---
+# Jekyll用のフロントマター
+---
+
+// メインスタイルシート
+// SCSSファイルをインポート
+
+// ベース（変数とタイポグラフィ）
+@import "base/variables";
+@import "base/color-theme";
+@import "base/unified-color-rules"; // 統一色使いルール
+@import "base/typography"; // 新しい統一タイポグラフィ
+@import "base/typography-simplified";
+@import "base/typography-enhanced";
+@import "base/grid";
+@import "base/utilities";
+@import "base/override-priority"; // 色彩統一の優先度上書き
+
+// レイアウト
+@import "layout/core-layout"; // 統合されたコアレイアウト
+// @import "layout/three-column"; // core-layoutに統合
+// @import "layout/mobile-responsive"; // core-layoutに統合
+
+// コンポーネント
+@import "components/breadcrumb";
+@import "components/header";
+@import "components/header-two-tier"; // 2段階ヘッダースタイル
+@import "components/footer";
+@import "components/mobile-menu";
+@import "components/mobile-sidebar";
+@import "components/buttons";
+@import "components/buttons-accessible";
+@import "components/cards";
+// @import "components/sidebar-cards";
+@import "components/cards-modern";
+// @import "components/sidebar-cards-enhanced";
+// @import "components/sidebar-cards-pastel";
+@import "components/sidebar-cards-orange"; // オレンジベースのサイドバースタイル
+@import "components/sidebar-cards-force-orange"; // 強制オレンジ適用
+@import "components/sidebar-cards-unified"; // 右サイドバー統一スタイル
+@import "components/quick-links";
+@import "components/forms";
+@import "components/alerts";
+@import "components/images";
+@import "components/content-images";
+@import "components/optimized-images";
+@import "components/touch";
+
+@import "components/toc";
+@import "components/progress";
+@import "components/content-templates";
+@import "components/form-validation";
+@import "components/accessibility";
+@import "components/accessibility-enhanced";
+@import "components/user-feedback";
+@import "components/personalization";
+@import "components/dashboard";
+@import "components/report-generator";
+@import "components/comparison-tools";
+@import "components/site-analytics";
+@import "components/popular-posts";
+@import "components/character-placement";
+@import "components/cta-sections";
+@import "components/cta-character";
+@import "components/icon-replacement"; // アイコン削除・テキストベースデザイン
+@import "components/section-headers"; // 参考サイト風見出しデザイン
+@import "components/internal-links"; // 内部リンク強化スタイル
+@import "components/newsletter"; // ニュースレター購読フォームスタイル
+
+// ページ固有スタイル
+@import "pages/home";
+@import "pages/home-enhanced";
+@import "pages/home-horizontal-cards"; // 横長カードデザイン
+@import "pages/blog";
+@import "pages/blog-enhanced";
+@import "pages/blog-lp";
+@import "pages/blog-fix";
+@import "pages/post-article";
+
+// モバイルファーストのリセット
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// レスポンシブコンテナ
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+  
+  @media (min-width: 640px) {
+    max-width: 640px;
+  }
+  
+  @media (min-width: 768px) {
+    max-width: 768px;
+    padding: 0 var(--space-6);
+  }
+  
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+  }
+  
+  @media (min-width: 1280px) {
+    max-width: 1280px;
+  }
+  
+  @media (min-width: 1536px) {
+    max-width: 1400px;
+  }
+}
+
+// セーフエリア対応
+@supports (padding: max(0px)) {
+  .container {
+    padding-left: max(var(--space-4), env(safe-area-inset-left));
+    padding-right: max(var(--space-4), env(safe-area-inset-right));
+  }
+}
+
+// ビューポートユニット対応
+.vh-100 {
+  height: 100vh;
+  height: 100dvh; // Dynamic viewport height
+}
+
+// セクションスペーシング
+.section {
+  padding: var(--space-8) 0;
+  
+  @media (min-width: 768px) {
+    padding: var(--space-12) 0;
+  }
+  
+  @media (min-width: 1024px) {
+    padding: var(--space-16) 0;
+  }
+}
+
+// 印刷スタイル
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+  
+  a {
+    text-decoration: underline;
+  }
+  
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+  }
+}
+
+// ========================================
+// モバイル最適化（統合版）
+// ========================================
+
+// モバイル版でのボトムナビゲーション用スペース確保
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 80px;
+  }
+}
+
+
+
+// ========================================
+// フローティング電話ボタン
+// ========================================
+
+.floating-phone-cta {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  
+  @media (max-width: 768px) {
+    bottom: 100px; // モバイルボトムナビゲーションの上に配置
+    right: 15px;
+  }
+}
+
+.phone-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+  transition: all 0.3s ease;
+  font-size: 1.2em;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.6);
+    color: white;
+    text-decoration: none;
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+  
+  .phone-text {
+    display: none;
+  }
+  
+  @media (min-width: 769px) {
+    width: auto;
+    height: 50px;
+    padding: 0 20px;
+    border-radius: 25px;
+    
+    .phone-text {
+      display: inline;
+      margin-left: 8px;
+      font-weight: 600;
+      font-size: 0.9em;
+    }
+  }
+}
+
+// アニメーション効果
+@keyframes phoneRing {
+  0%, 100% { transform: rotate(0deg); }
+  10%, 30%, 50%, 70%, 90% { transform: rotate(-10deg); }
+  20%, 40%, 60%, 80% { transform: rotate(10deg); }
+}
+
+.phone-btn:hover i {
+  animation: phoneRing 0.8s ease-in-out;
+}
+
+// アクセシビリティ対応
+@media (prefers-reduced-motion: reduce) {
+  .phone-btn {
+    transition: none;
+  }
+  
+  .phone-btn:hover i {
+    animation: none;
+  }
+}
+
+
+
+// ========================================
+// モバイル表示最適化（追加改善）
+// ========================================
+
+@media (max-width: 768px) {
+  // コンテンツエリアの最適化
+  .content-area,
+  .main-content,
+  article {
+    font-size: var(--font-size-base) !important; // 16px強制適用
+    line-height: var(--line-height-relaxed) !important; // 1.7
+    
+    p, div, span {
+      font-size: inherit !important;
+      line-height: inherit !important;
+    }
+  }
+  
+  // リストの可読性向上
+  ul, ol {
+    li {
+      font-size: var(--font-size-base) !important;
+      line-height: var(--line-height-relaxed) !important;
+      margin-bottom: var(--space-3) !important;
+    }
+  }
+  
+  // カードコンテンツの最適化
+  .card, .sidebar-card {
+    p, div, span {
+      font-size: var(--font-size-base) !important;
+      line-height: var(--line-height-relaxed) !important;
+    }
+  }
+  
+  // ボタンテキストの最適化
+  .btn, button, a.button {
+    font-size: var(--font-size-base) !important;
+    padding: var(--space-3) var(--space-4) !important;
+    line-height: var(--line-height-snug) !important;
+  }
+  
+  // フォームの最適化
+  input, textarea, select {
+    font-size: var(--font-size-base) !important;
+    line-height: var(--line-height-normal) !important;
+    padding: var(--space-3) !important;
+  }
+  
+  // テーブルの最適化
+  table {
+    font-size: var(--font-size-sm) !important; // テーブルは少し小さめ
+    
+    th, td {
+      padding: var(--space-2) var(--space-3) !important;
+      line-height: var(--line-height-snug) !important;
+    }
+  }
+  
+  // ナビゲーションの最適化
+  nav, .navigation {
+    a {
+      font-size: var(--font-size-base) !important;
+      padding: var(--space-3) var(--space-4) !important;
+      line-height: var(--line-height-snug) !important;
+    }
+  }
+}
+
+// 極小画面（iPhone SE等）での追加最適化
+@media (max-width: 375px) {
+  body {
+    font-size: var(--font-size-base) !important; // 16px維持
+  }
+  
+  .container {
+    padding: 0 var(--space-3) !important; // 左右余白を少し狭く
+  }
+  
+  h1 { font-size: var(--font-size-xl) !important; }
+  h2 { font-size: var(--font-size-lg) !important; }
+  h3 { font-size: var(--font-size-base) !important; }
+}
+
+// タッチデバイス用の最適化
+@media (hover: none) and (pointer: coarse) {
+  // タップターゲットのサイズ確保
+  a, button, .btn {
+    min-height: 44px !important;
+    min-width: 44px !important;
+  }
+  
+  // フォーム要素のタップしやすさ向上
+  input, textarea, select {
+    min-height: 44px !important;
+  }
+}
+
+
+
+// ========================================
+// 高コントラスト色彩強制設定（読みやすさ最優先）
+// ========================================
+
+// 全体的なテキスト色の強制設定
+body, 
+.content-area,
+.post-content,
+.main-content,
+main,
+article,
+section {
+  color: #333333 !important;
+  background-color: #ffffff !important;
+}
+
+// 見出しの色彩強制
+h1, h2, h3, h4, h5, h6 {
+  color: #1a1a1a !important;
+}
+
+// メインコンテンツエリアの色彩強制（フッターは除外）
+main p, main li, main span, main div,
+.content-area p, .content-area li, .content-area span, .content-area div,
+.post-content p, .post-content li, .post-content span, .post-content div,
+header p, header li, header span, header div,
+nav p, nav li, nav span, nav div,
+.sidebar p, .sidebar li, .sidebar span, .sidebar div {
+    color: #333333 !important;
+}
+
+// メインコンテンツエリアのリンク色彩強制（フッターとボタンは除外）
+main a:not(.btn):not(.contact-button):not(.button), 
+.content-area a:not(.btn):not(.contact-button):not(.button), 
+.post-content a:not(.btn):not(.contact-button):not(.button), 
+header a:not(.btn):not(.contact-button):not(.button), 
+nav a:not(.btn):not(.contact-button):not(.button) {
+  color: #f39c12 !important;
+  
+  &:hover {
+    color: #e67e22 !important;
+  }
+}
+
+// 古いフッター設定は削除（末尾の最新設定を使用）
+
+// カード・セクション背景の調整
+.card, .section {
+  background-color: #ffffff !important;
+  color: #333333 !important;
+}
+
+// フォーム要素の色彩調整
+input, textarea, select {
+  color: #333333 !important;
+  background-color: #ffffff !important;
+  border-color: #dee2e6 !important;
+}
+
+// ボタンの色彩調整
+.btn {
+  color: #ffffff !important;
+  
+  &.btn-primary {
+    background-color: #f39c12 !important;
+    border-color: #f39c12 !important;
+    
+    &:hover {
+      background-color: #e67e22 !important;
+      border-color: #e67e22 !important;
+    }
+  }
+}
+
+// ========================================
+// モバイル表示での追加調整
+// ========================================
+
+@media (max-width: 768px) {
+  body, 
+  .content-area,
+  .post-content,
+  .main-content,
+  main,
+  article,
+  section {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    color: #333333 !important;
+  }
+  
+  p {
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+    color: #333333 !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #1a1a1a !important;
+  }
+  
+  a {
+    color: #f39c12 !important;
+    
+    &:hover {
+      color: #e67e22 !important;
+    }
+  }
+}
+
+/* Force CSS update: Sat Aug  2 13:26:27 EDT 2025 */
+
+
+// ========================================
+// Knowledge Banner Styles
+// ========================================
+
+.knowledge-banner {
+  max-width: 800px;
+  margin: 1.5rem auto;
+  background: linear-gradient(135deg, #A8E6CF 0%, #81C784 100%);
+  border-radius: 12px;
+  padding: 20px;
+  color: #2E7D32;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(46,125,50,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.3;
+  }
+
+  .banner-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .banner-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  .banner-icon {
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    backdrop-filter: blur(10px);
+    flex-shrink: 0;
+    
+    svg {
+      width: 16px;
+      height: 16px;
+      stroke: white;
+    }
+  }
+
+  .banner-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: white !important;
+  }
+
+  .banner-subtitle {
+    font-size: 14px;
+    opacity: 0.9;
+    color: white !important;
+  }
+
+  .banner-description {
+    font-size: 16px;
+    opacity: 0.95;
+    margin-bottom: 32px;
+    line-height: 1.6;
+    color: white !important;
+  }
+
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .article-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 16px;
+    text-decoration: none;
+    color: white !important;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(10px);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+      text-decoration: none;
+      color: white !important;
+    }
+  }
+
+  .article-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .article-icon {
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      stroke: white;
+    }
+  }
+
+  .article-title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: white !important;
+  }
+
+  .banner-description {
+    font-size: 14px;
+    opacity: 0.9;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    color: white !important;
+  }
+
+  .articles-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    opacity: 0.8;
+    color: white !important;
+  }
+
+  .article-level {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 4px 8px;
+    border-radius: 6px;
+    color: white !important;
+  }
+
+  .view-more {
+    text-align: center;
+  }
+
+  .view-more-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white !important;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.3);
+      text-decoration: none;
+      color: white !important;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+      stroke: white;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 16px;
+    margin: 1rem auto;
+
+    .banner-title {
+      font-size: 18px;
+    }
+
+    .articles-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+
+// ========================================
+// フッター専用CSS（最高特異性で確実な解決）
+// ========================================
+
+/* 最高特異性でフッター内の全要素を白色に設定 */
+footer.footer p,
+footer.footer div,
+footer.footer span,
+footer.footer h1,
+footer.footer h2,
+footer.footer h3,
+footer.footer h4,
+footer.footer h5,
+footer.footer h6,
+footer.footer li,
+.footer.footer p,
+.footer.footer div,
+.footer.footer span,
+.footer.footer h1,
+.footer.footer h2,
+.footer.footer h3,
+.footer.footer h4,
+.footer.footer h5,
+.footer.footer h6,
+.footer.footer li {
+    color: #ffffff !important;
+}
+
+footer.footer a,
+.footer.footer a {
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+footer.footer a:hover,
+.footer.footer a:hover {
+    color: #e2e8f0 !important;
+    text-decoration: underline;
+}
+
+footer.footer a:visited,
+.footer.footer a:visited {
+    color: #ffffff !important;
+}
+
+footer.footer i,
+.footer.footer i {
+    color: #ffffff !important;
+}
+
+// 完全解決：全要素をフッターから除外
+p:not(.footer *),
+li:not(.footer *),
+span:not(.footer *),
+div:not(.footer *),
+h1:not(.footer *),
+h2:not(.footer *),
+h3:not(.footer *),
+h4:not(.footer *),
+h5:not(.footer *),
+h6:not(.footer *) {
+    color: #333333 !important;
+}
+
+// フッター内の全要素を白色に（最高特異性）
+footer.footer *,
+.footer.footer * {
+    color: #ffffff !important;
+}
+
+// フッターリンクの特別設定
+footer.footer a,
+.footer.footer a {
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+footer.footer a:hover,
+.footer.footer a:hover {
+    color: #e2e8f0 !important;
+    text-decoration: underline;
+}
+
+// 根本的解決実行 - 2025-08-15 06:28
+

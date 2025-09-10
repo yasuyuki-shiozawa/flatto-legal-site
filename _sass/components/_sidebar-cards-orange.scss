@@ -478,3 +478,74 @@
 
 /* Orange-based design implementation */
 
+
+
+// ===== 強制適用ルール（統合版） =====
+// 最高優先度でキャッシュ問題を回避
+
+// 左サイドバー全体に強制適用
+.left-sidebar,
+.left-sidebar-content,
+.sidebar-left {
+  
+  // すべてのサイドバーカードヘッダーを強制的にオレンジに
+  .sidebar-card-header,
+  .card-header,
+  .section-header {
+    background: linear-gradient(135deg, #FF9800 0%, #FFB74D 100%) !important;
+    color: #FFFFFF !important;
+    border-bottom: 1px solid rgba(255, 152, 0, 0.3) !important;
+    
+    h3, h4, h5, .title, .heading {
+      color: #FFFFFF !important;
+      margin: 0 !important;
+    }
+    
+    i, .icon {
+      color: #FFFFFF !important;
+    }
+  }
+  
+  // ナビゲーションリンク
+  .sidebar-nav-link {
+    background: rgba(255, 224, 178, 0.2) !important;
+    border: 1px solid rgba(255, 152, 0, 0.5) !important;
+    color: #333333 !important;
+    
+    &:hover {
+      background: linear-gradient(135deg, #FFE0B2 0%, #FFCC80 100%) !important;
+      color: #E65100 !important;
+      border-color: #FF9800 !important;
+    }
+    
+    &.active {
+      background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%) !important;
+      color: #FFFFFF !important;
+    }
+    
+    i {
+      color: #4CAF50 !important; // 緑のアクセント
+    }
+  }
+}
+
+// 全体的な強制適用
+body .sidebar-card .sidebar-card-header,
+body .card .card-header,
+body .section .section-header {
+  background: linear-gradient(135deg, #FF9800 0%, #FFB74D 100%) !important;
+  color: #FFFFFF !important;
+}
+
+body .sidebar-card .sidebar-card-header h3,
+body .card .card-header h3,
+body .section .section-header h3 {
+  color: #FFFFFF !important;
+}
+
+body .sidebar-card .sidebar-card-header i,
+body .card .card-header i,
+body .section .section-header i {
+  color: #FFFFFF !important;
+}
+

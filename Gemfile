@@ -32,3 +32,7 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 # JRuby用
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
+
+# パフォーマンス最適化プラグイン
+# HTML圧縮は_config.ymlのcompress_html設定を使用
+

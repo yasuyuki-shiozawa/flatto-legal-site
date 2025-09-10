@@ -1,0 +1,73 @@
+---
+# Jekyll用のフロントマター
+---
+
+// 最適化されたメインスタイルシート
+// パフォーマンス向上のため統合・最適化済み
+
+// ベース（必須のみ）
+@import "base/variables";
+@import "base/color-theme";
+@import "base/unified-color-rules"; // 統一色使いルール
+@import "base/typography-simplified"; // 軽量版タイポグラフィ
+@import "base/grid";
+@import "base/utilities";
+
+// レイアウト（統合版のみ）
+@import "layout/core-layout"; // 統合されたコアレイアウト
+
+// コンポーネント（必須のみ）
+@import "components/header-two-tier"; // 2段階ヘッダースタイル
+@import "components/footer";
+@import "components/mobile-menu";
+@import "components/buttons-accessible"; // アクセシブルボタン
+@import "components/cards-modern"; // モダンカード
+@import "components/sidebar-cards-orange"; // オレンジベースのサイドバースタイル
+@import "components/sidebar-cards-unified"; // 右サイドバー統一スタイル
+@import "components/forms";
+@import "components/optimized-images"; // 最適化画像
+@import "components/touch"; // タッチ対応
+
+// 必要最小限のコンポーネント
+@import "components/toc";
+@import "components/progress";
+
+// パフォーマンス最適化用の追加スタイル
+.performance-optimized {
+  // CSS Grid レイアウトの最適化
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    will-change: transform; // GPU加速
+  }
+  
+  // 画像の遅延読み込み対応
+  img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    
+    &.loaded {
+      opacity: 1;
+    }
+  }
+  
+  // CSSアニメーションの最適化
+  * {
+    will-change: auto; // 不要なGPU使用を避ける
+  }
+  
+  // 重要でない要素の最適化
+  .non-critical {
+    contain: layout style paint;
+  }
+}
+
+// 重複除去：以下のファイルは統合済みのため除外
+// - typography（複数版） → typography-simplified に統合
+// - buttons（複数版） → buttons-accessible に統合  
+// - cards（複数版） → cards-modern に統合
+// - sidebar-cards-force-orange → sidebar-cards-orange に統合
+// - 未使用のレイアウトファイル群
+// - 重複するコンポーネントファイル群
+
