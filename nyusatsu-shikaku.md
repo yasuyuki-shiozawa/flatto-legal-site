@@ -8,6 +8,7 @@ sitemap: true
 robots: index, follow
 seo:
   robots: index, follow
+  type: article
 ---
 
 # 入札参加資格の取得方法 | 申請から更新まで完全ガイド
