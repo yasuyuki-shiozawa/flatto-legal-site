@@ -58,7 +58,7 @@
   transition: opacity 0.3s ease, visibility 0.3s ease;
   z-index: 999;
   
-  &.active {
+  &.open {
     opacity: 1;
     visibility: visible;
   }
@@ -78,7 +78,7 @@
   z-index: 1001;
   overflow-y: auto;
   
-  &.active {
+  &.open {
     right: 0;
   }
   

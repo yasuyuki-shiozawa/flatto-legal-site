@@ -69,14 +69,14 @@
 
         function openMobileMenu() {
             mobileMenu.classList.add('open');
-            if (overlay) overlay.classList.add('active');
+            if (overlay) overlay.classList.add('open');
             body.style.overflow = 'hidden';
             menuToggle.setAttribute('aria-expanded', 'true');
         }
 
         function closeMobileMenu() {
             mobileMenu.classList.remove('open');
-            if (overlay) overlay.classList.remove('active');
+            if (overlay) overlay.classList.remove('open');
             body.style.overflow = '';
             menuToggle.setAttribute('aria-expanded', 'false');
         }
