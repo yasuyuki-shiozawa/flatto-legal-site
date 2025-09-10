@@ -39,7 +39,7 @@
 
     // モバイルメニュー機能
     function initMobileMenu() {
-        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const menuToggle = document.querySelector('.mobile-menu-btn');
         const mobileMenu = document.querySelector('.mobile-menu');
         const overlay = document.querySelector('.mobile-menu-overlay');
         const body = document.body;
