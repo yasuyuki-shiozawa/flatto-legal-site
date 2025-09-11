@@ -58,6 +58,110 @@ permalink: /videos/
     <section class="video-list-section">
       <h2 class="section-title">動画一覧</h2>
       <div class="video-grid">
+        <!-- 最新動画1: 入札サポートvol.1 -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/2jy4LwYKEAk" 
+                title="【入札サポート】vol.1 事業者インタビュー!!事業者様としおざわさんが赤裸々にお話します。" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">【入札サポート】vol.1 事業者インタビュー!!</h5>
+              <p class="video-description">
+                実際に入札サポートを受けている事業者様へのインタビュー。大竹塗工の大竹様から、しおざわさんとの出会いから会社の整備まで、リアルな体験談をお話いただきます。
+              </p>
+              <div class="video-meta">
+                <span class="badge bg-danger me-2">最新</span>
+                <span class="text-muted small">2025年9月 • 約4分</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 最新動画2: 案件紹介最終回 -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/yHC5htac4UI" 
+                title="【国の仕事を受注したいあなたへ】あっくんによる案件紹介いよいよ最終回です！" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">【国の仕事を受注したいあなたへ】案件紹介最終回</h5>
+              <p class="video-description">
+                あっくんによる案件紹介シリーズの最終回。様々な業種に対応した国の仕事の案件を紹介し、入札参加の可能性を広げるヒントをお伝えします。
+              </p>
+              <div class="video-meta">
+                <span class="badge bg-info me-2">案件紹介</span>
+                <span class="text-muted small">2025年9月 • 約2分</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 最新動画3: おもしろネーミング案件 -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/wT3x8RD_dp0" 
+                title="【国の仕事を受注したいあなたへ】ラストスパート！おもしろネーミングの案件を深掘り!!" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">【国の仕事を受注したいあなたへ】おもしろネーミング案件深掘り</h5>
+              <p class="video-description">
+                ユニークなネーミングの案件を詳しく解説。一見難しそうに見える案件でも、内容を理解すれば参入可能な案件があることを具体例で説明します。
+              </p>
+              <div class="video-meta">
+                <span class="badge bg-warning me-2">案件解説</span>
+                <span class="text-muted small">2025年9月 • 約3分</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 最新動画4: ネーミングは難しそうだけど -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/3ql2bsJgJ_Y" 
+                title="【国の仕事を受注したいあなたへ】ネーミングは難しそうだけど内容は簡単！？あっくんが分かりやすく解説!!" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">【国の仕事を受注したいあなたへ】ネーミングは難しそうだけど内容は簡単</h5>
+              <p class="video-description">
+                複雑そうなネーミングの案件でも、実際の内容は意外とシンプルな場合があります。あっくんが具体例を使って分かりやすく解説します。
+              </p>
+              <div class="video-meta">
+                <span class="badge bg-success me-2">解説動画</span>
+                <span class="text-muted small">2025年9月 • 約4分</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- 新動画1: 最新動画 -->
         <div class="col-md-6 mb-4">
           <div class="video-card h-100">
