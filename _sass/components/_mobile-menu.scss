@@ -80,8 +80,15 @@
   overflow-y: auto;
   
   &.open {
-    right: 0;
+    right: 0 !important;
   }
+}
+
+// 追加の強制スタイル（優先度を最大化）
+.mobile-menu.open {
+  right: 0 !important;
+  transform: translateX(0) !important;
+}
   
   // メニューヘッダー
   .mobile-menu-header {
