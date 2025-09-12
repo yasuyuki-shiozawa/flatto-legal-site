@@ -199,29 +199,25 @@ body.mobile-menu-open {
 // モバイルボトムナビゲーション（統合版）
 // ========================================
 
-// PC版では非表示
-@media (min-width: 769px) {
-  .mobile-bottom-nav {
+// ボトムナビゲーション本体（デフォルトで表示）
+.mobile-bottom-nav {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 0.5rem 0;
+  padding-bottom: env(safe-area-inset-bottom);
+  
+  // PC版では非表示
+  @media (min-width: 769px) {
     display: none !important;
   }
 }
-
-// モバイル版のみ表示
-@media (max-width: 768px) {
-  
-  // ボトムナビゲーション本体
-  .mobile-bottom-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #ffffff;
-    border-top: 1px solid #e5e7eb;
-    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    padding: 0.5rem 0;
-    padding-bottom: env(safe-area-inset-bottom);
-  }
   
   // ナビゲーションコンテナ
   .mobile-bottom-nav-container {
