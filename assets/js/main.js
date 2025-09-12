@@ -45,11 +45,22 @@
         const overlay = document.querySelector('.mobile-menu-overlay');
         const body = document.body;
 
-        if (!mobileMenu) return;
+        console.log('モバイルメニュー初期化:', {
+            menuToggle: !!menuToggle,
+            mobileBottomMenuBtn: !!mobileBottomMenuBtn,
+            mobileMenu: !!mobileMenu,
+            overlay: !!overlay
+        });
+
+        if (!mobileMenu) {
+            console.log('モバイルメニュー要素が見つかりません');
+            return;
+        }
 
         // 上部ハンバーガーメニューボタンの処理
         if (menuToggle) {
             menuToggle.addEventListener('click', function() {
+                console.log('上部メニューボタンがクリックされました');
                 const isOpen = mobileMenu.classList.contains('open');
                 
                 if (isOpen) {
@@ -58,11 +69,13 @@
                     openMobileMenu();
                 }
             });
+            console.log('上部メニューボタンのイベントリスナーを追加しました');
         }
 
         // 下部モバイルメニューボタンの処理
         if (mobileBottomMenuBtn) {
             mobileBottomMenuBtn.addEventListener('click', function() {
+                console.log('下部メニューボタンがクリックされました');
                 const isOpen = mobileMenu.classList.contains('open');
                 
                 if (isOpen) {
@@ -71,6 +84,9 @@
                     openMobileMenu();
                 }
             });
+            console.log('下部メニューボタンのイベントリスナーを追加しました');
+        } else {
+            console.log('下部メニューボタンが見つかりません');
         }
 
         if (overlay) {
@@ -85,19 +101,23 @@
         });
 
         function openMobileMenu() {
+            console.log('openMobileMenu関数が呼び出されました');
             mobileMenu.classList.add('open');
             if (overlay) overlay.classList.add('open');
             body.style.overflow = 'hidden';
             if (menuToggle) menuToggle.setAttribute('aria-expanded', 'true');
             if (mobileBottomMenuBtn) mobileBottomMenuBtn.setAttribute('aria-expanded', 'true');
+            console.log('メニューを開きました。クラス:', mobileMenu.className);
         }
 
         function closeMobileMenu() {
+            console.log('closeMobileMenu関数が呼び出されました');
             mobileMenu.classList.remove('open');
             if (overlay) overlay.classList.remove('open');
             body.style.overflow = '';
             if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
             if (mobileBottomMenuBtn) mobileBottomMenuBtn.setAttribute('aria-expanded', 'false');
+            console.log('メニューを閉じました。クラス:', mobileMenu.className);
         }
     }
 
