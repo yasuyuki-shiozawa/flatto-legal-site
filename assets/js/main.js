@@ -40,21 +40,38 @@
     // モバイルメニュー機能
     function initMobileMenu() {
         const menuToggle = document.querySelector('.mobile-menu-btn');
+        const mobileBottomMenuBtn = document.getElementById('mobileBottomMenuBtn');
         const mobileMenu = document.querySelector('.mobile-menu');
         const overlay = document.querySelector('.mobile-menu-overlay');
         const body = document.body;
 
-        if (!menuToggle || !mobileMenu) return;
+        if (!mobileMenu) return;
 
-        menuToggle.addEventListener('click', function() {
-            const isOpen = mobileMenu.classList.contains('open');
-            
-            if (isOpen) {
-                closeMobileMenu();
-            } else {
-                openMobileMenu();
-            }
-        });
+        // 上部ハンバーガーメニューボタンの処理
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function() {
+                const isOpen = mobileMenu.classList.contains('open');
+                
+                if (isOpen) {
+                    closeMobileMenu();
+                } else {
+                    openMobileMenu();
+                }
+            });
+        }
+
+        // 下部モバイルメニューボタンの処理
+        if (mobileBottomMenuBtn) {
+            mobileBottomMenuBtn.addEventListener('click', function() {
+                const isOpen = mobileMenu.classList.contains('open');
+                
+                if (isOpen) {
+                    closeMobileMenu();
+                } else {
+                    openMobileMenu();
+                }
+            });
+        }
 
         if (overlay) {
             overlay.addEventListener('click', closeMobileMenu);
@@ -71,14 +88,16 @@
             mobileMenu.classList.add('open');
             if (overlay) overlay.classList.add('open');
             body.style.overflow = 'hidden';
-            menuToggle.setAttribute('aria-expanded', 'true');
+            if (menuToggle) menuToggle.setAttribute('aria-expanded', 'true');
+            if (mobileBottomMenuBtn) mobileBottomMenuBtn.setAttribute('aria-expanded', 'true');
         }
 
         function closeMobileMenu() {
             mobileMenu.classList.remove('open');
             if (overlay) overlay.classList.remove('open');
             body.style.overflow = '';
-            menuToggle.setAttribute('aria-expanded', 'false');
+            if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+            if (mobileBottomMenuBtn) mobileBottomMenuBtn.setAttribute('aria-expanded', 'false');
         }
     }
 
