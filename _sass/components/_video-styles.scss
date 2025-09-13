@@ -1,0 +1,272 @@
+// 動画ページ専用スタイル
+// YouTube埋め込み動画の表示改善
+
+// 動画一覧セクション
+.video-list-section {
+  padding: 4rem 0;
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+  }
+}
+
+// 動画グリッド
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+// 動画カード
+.video-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  }
+}
+
+// 動画サムネイル
+.video-thumbnail {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background: #f3f4f6;
+  
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+  }
+  
+  // フォールバック用のプレースホルダー
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    opacity: 0.1;
+    z-index: -1;
+  }
+}
+
+// 動画カードボディ
+.video-card-body {
+  padding: 1.5rem;
+  
+  .video-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    
+    // 長いタイトルの省略
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .video-description {
+    color: #6b7280;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    
+    // 長い説明文の省略
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .video-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    
+    .badge {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-weight: 500;
+    }
+    
+    .text-muted {
+      font-size: 0.875rem;
+      color: #9ca3af;
+    }
+  }
+}
+
+// 注目動画セクション
+.featured-video {
+  max-width: 800px;
+  margin: 0 auto;
+  
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%; // 16:9 aspect ratio
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  }
+  
+  .video-info {
+    text-align: center;
+    
+    h3 {
+      color: #1f2937;
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      color: #6b7280;
+      margin-bottom: 1rem;
+    }
+    
+    .video-meta {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      
+      @media (max-width: 576px) {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  }
+}
+
+// YouTubeチャンネルセクション
+.youtube-channel-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+  margin-top: 4rem;
+  
+  h2 {
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+  
+  .btn {
+    background: white;
+    color: #667eea;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-2px);
+      color: #667eea;
+    }
+  }
+}
+
+// レスポンシブ対応
+@media (max-width: 992px) {
+  .video-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+    padding: 0 0.5rem;
+  }
+  
+  .video-thumbnail {
+    height: 200px;
+  }
+  
+  .video-card-body {
+    padding: 1rem;
+  }
+  
+  .featured-video .video-info .video-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+// 動画読み込み中のスタイル
+.video-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  background: #f9fafb;
+  color: #6b7280;
+  
+  &::before {
+    content: '動画を読み込み中...';
+    font-size: 0.875rem;
+  }
+}
+
+// アクセシビリティ対応
+@media (prefers-reduced-motion: reduce) {
+  .video-card {
+    transition: none;
+    
+    &:hover {
+      transform: none;
+    }
+  }
+  
+  .youtube-channel-section .btn:hover {
+    transform: none;
+  }
+}
+
