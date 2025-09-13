@@ -89,6 +89,15 @@
   right: 0 !important;
   transform: translateX(0) !important;
 }
+
+// さらに強力な優先度でメニューを強制表示
+@media (max-width: 1023px) {
+  .mobile-menu.open {
+    right: 0 !important;
+    transform: translateX(0) !important;
+    display: block !important;
+  }
+}
   
   // メニューヘッダー
   .mobile-menu-header {
