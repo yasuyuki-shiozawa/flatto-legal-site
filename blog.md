@@ -13,18 +13,18 @@ body_class: blog-lp-page
 <!-- ニュースレター機能JavaScript読み込み -->
 <!-- Netlify Formsを使用するため、newsletter.jsは不要 -->
 
-<!-- ブログヒーローセクション -->
-<section class="blog-hero">
-    <div class="blog-hero-content">
-        <h1 class="blog-hero-title">
-            入札 ブログ - 公共調達成功の極意
-        </h1>
-        <p class="blog-hero-subtitle">
-            年間16兆円の公共調達市場で、行政書士があなたのビジネス成長をサポート
-        </p>
-        <a href="#value-props" class="blog-hero-cta">
-            <i class="fas fa-arrow-down"></i>
-            成功の秘訣を見る
+<!-- ブログヒーローセクション - 学習コミュニティ型 -->
+<section class="blog-hero-community">
+    <div class="hero-background">
+        <img src="{{ '/assets/images/learning_community_hero.png' | relative_url }}" alt="みんなで学ぶ入札の世界">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="hero-title">みんなで学ぶ入札ナレッジセンター</h1>
+        <p class="hero-subtitle">仲間と一緒に成長する学習コミュニティ。基礎から実践まで、あなたのペースで入札の全てを学べます</p>
+        <a href="#value-props" class="hero-cta">
+            <i class="fas fa-graduation-cap"></i>
+            学習を始める
         </a>
     </div>
 </section>
