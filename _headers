@@ -2,8 +2,8 @@
 # 入札マップサイトのセキュリティ強化
 
 /*
-  # Content Security Policy - 一時的に緩和（YouTube埋め込み対応）
-  Content-Security-Policy: default-src 'self' 'unsafe-inline' 'unsafe-eval' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; font-src 'self' data: https:; img-src 'self' data: https:; connect-src 'self' https:; frame-src 'self' https:; frame-ancestors 'none'
+  # Content Security Policy - YouTube埋め込み対応
+  Content-Security-Policy: default-src 'self' 'unsafe-inline' 'unsafe-eval' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: *.youtube.com *.ytimg.com *.googlevideo.com; style-src 'self' 'unsafe-inline' https: *.youtube.com; font-src 'self' data: https: *.gstatic.com *.googleapis.com cdnjs.cloudflare.com; img-src 'self' data: https: *.youtube.com *.ytimg.com *.googlevideo.com; connect-src 'self' https: *.youtube.com *.googlevideo.com; frame-src 'self' https: *.youtube.com *.youtube-nocookie.com; frame-ancestors 'none'
   
   # X-Frame-Options - クリックジャッキング攻撃防止
   X-Frame-Options: DENY
