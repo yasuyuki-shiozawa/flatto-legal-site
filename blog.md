@@ -20,8 +20,8 @@ body_class: blog-lp-page
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-        <h1 class="hero-title">みんなで学ぶ入札ナレッジセンター</h1>
-        <p class="hero-subtitle">仲間と一緒に成長する学習コミュニティ。基礎から実践まで、あなたのペースで入札の全てを学べます</p>
+        <h1 class="hero-title">入札の実践的専門知識</h1>
+        <p class="hero-subtitle">業界最高レベルの実践的ノウハウを公開。基礎から高度な実務まで、プロレベルの知識を体系的に学べます</p>
         <a href="#value-props" class="hero-cta">
             <i class="fas fa-graduation-cap"></i>
             学習を始める

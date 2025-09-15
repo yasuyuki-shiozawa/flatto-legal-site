@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
 
   // 背景画像
   .hero-background {
@@ -34,8 +34,8 @@
     height: 100%;
     background: linear-gradient(
       135deg,
-      rgba(30, 58, 138, 0.8) 0%,
-      rgba(59, 130, 246, 0.6) 100%
+      rgba(234, 88, 12, 0.7) 0%,
+      rgba(194, 65, 12, 0.5) 100%
     );
     z-index: 2;
   }
