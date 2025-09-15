@@ -20,26 +20,11 @@ seo:
 
 # 入札参加資格の取得方法 | 申請から更新まで完全ガイド
 
-<div class="hero-section">
-  <p class="hero-tag">🎯 資格取得</p>
-  
-  <h1 class="hero-title">入札参加資格の<br>取得方法を完全解説</h1>
-  
-  <p class="hero-description">申請書類の準備から審査通過まで、ステップバイステップで解説</p>
-  
-  <div class="hero-features">
-    <div class="hero-feature">
-      <div class="hero-feature-icon">📋</div>
-      <div class="hero-feature-text">必要書類チェックリスト</div>
-    </div>
-    <div class="hero-feature">
-      <div class="hero-feature-icon">⏰</div>
-      <div class="hero-feature-text">申請スケジュール管理</div>
-    </div>
-    <div class="hero-feature">
-      <div class="hero-feature-icon">✅</div>
-      <div class="hero-feature-text">審査基準クリアのコツ</div>
-    </div>
+<div class="simple-hero-section">
+  <div class="simple-hero-content">
+    <h1 class="simple-hero-title">入札参加資格の取得方法</h1>
+    <p class="simple-hero-subtitle">申請から更新まで完全ガイド</p>
+    <p class="simple-hero-description">申請書類の準備から審査通過まで、ステップバイステップで解説します</p>
   </div>
 </div>
 
