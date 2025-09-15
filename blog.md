@@ -180,7 +180,7 @@ body_class: blog-lp-page
 <!-- 最終CTA -->
 <section class="blog-final-cta">
     <div class="cta-content">
-        <h2>入札参加で売上アップを実現しませんか？</h2>
+        <h2>実践的な入札ノウハウで競争力を高めませんか？</h2>
         <p>今なら初回相談無料。専門家があなたの疑問にお答えします。</p>
         <div class="cta-buttons">
             <a href="/contact/" class="primary">

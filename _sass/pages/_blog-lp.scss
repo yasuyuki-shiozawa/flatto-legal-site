@@ -434,8 +434,8 @@
 
 // 最終CTA（ブログ用）
 .blog-final-cta {
-  background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
-  color: white;
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  color: #451a03;
   padding: 5rem 2rem;
   text-align: center;
   position: relative;
@@ -447,7 +447,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+    background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23451a03' fill-opacity='0.05'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
   }
   
   .cta-content {
@@ -459,6 +459,8 @@
     h2 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
+      color: #451a03;
+      text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
       
       @media (max-width: 767px) {
         font-size: 1.875rem;
@@ -468,6 +470,7 @@
     p {
       font-size: 1.25rem;
       margin-bottom: 2rem;
+      color: #78350f;
       opacity: 0.95;
     }
     
@@ -485,23 +488,24 @@
         transition: all 0.3s ease;
         
         &.primary {
-          background: white;
-          color: #1e3a8a;
+          background: #f97316;
+          color: white;
           
           &:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(249, 115, 22, 0.3);
+            background: #ea580c;
           }
         }
         
         &.secondary {
           background: transparent;
-          color: white;
-          border: 2px solid white;
+          color: #451a03;
+          border: 2px solid #451a03;
           
           &:hover {
-            background: white;
-            color: #1e3a8a;
+            background: #451a03;
+            color: white;
           }
         }
       }
