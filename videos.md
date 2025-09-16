@@ -6,6 +6,8 @@ keywords: 入札 動画解説,入札 動画,入札ノウハウ 動画,入札 You
 permalink: /videos/
 ---
 
+{% include video-schema.html %}
+
 <!-- 最新動画セクション -->
 <section class="hero-section">
   <div class="container">
