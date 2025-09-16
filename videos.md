@@ -58,13 +58,13 @@ permalink: /videos/
     <section class="video-list-section">
       <h2 class="section-title">動画一覧</h2>
       <div class="video-grid">
-        <!-- 最新動画1: 入札サポートvol.1 -->
+        <!-- 最新動画1: 入札サポートvol.2 -->
         <div class="col-md-6 mb-4">
           <div class="video-card h-100">
             <div class="video-thumbnail">
               <iframe 
-                src="https://www.youtube.com/embed/2jy4LwYKEAk" 
-                title="【入札サポート】vol.1 事業者インタビュー!!事業者様としおざわさんが赤裸々にお話します。" 
+                src="https://www.youtube.com/embed/Lt3yzgmPgpk" 
+                title="【入札サポート】vol.2 事業者インタビュー!!事業者様としおざわさんが赤裸々にお話します。" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen
@@ -72,12 +72,38 @@ permalink: /videos/
               </iframe>
             </div>
             <div class="video-card-body">
-              <h5 class="video-title">【入札サポート】vol.1 事業者インタビュー!!</h5>
+              <h5 class="video-title">【入札サポート】vol.2 事業者インタビュー!!</h5>
               <p class="video-description">
-                実際に入札サポートを受けている事業者様へのインタビュー。大竹塗工の大竹様から、しおざわさんとの出会いから会社の整備まで、リアルな体験談をお話いただきます。
+                前回に引き続き、大竹さまにお話を聞いていきます！会社の整備をどう行って入札、落札に向かっていったかを話していきます。実際の入札参加から落札までの具体的なプロセスを詳しく解説します。
               </p>
               <div class="video-meta">
                 <span class="badge bg-danger me-2">最新</span>
+                <span class="text-muted small">2025年9月 • 約2分</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 最新動画2: 入札サポートvol.1 -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/UBTtUW-rwKE" 
+                title="※再投稿【入札サポート】vol.1 事業者インタビュー!!事業者様としおざわさんが赤裸々にお話します。" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">※再投稿【入札サポート】vol.1 事業者インタビュー!!</h5>
+              <p class="video-description">
+                今回は大竹塗工の大竹様からお話をお伺いいたします！しおざわさんと出会って、会社の整備をどう行っていったかを話していきます。実際の入札参加体験談をリアルにお聞きします。
+              </p>
+              <div class="video-meta">
+                <span class="badge bg-info me-2">事業者インタビュー</span>
                 <span class="text-muted small">2025年9月 • 約4分</span>
               </div>
             </div>
