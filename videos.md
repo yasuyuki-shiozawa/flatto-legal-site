@@ -26,8 +26,8 @@ permalink: /videos/
               src="https://www.youtube.com/embed/V12UxUXUbXM" 
               title="入札ってなに？やさしく解説するゆるっと入札講座！" 
               frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowfullscreen
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+              allowfullscreen="true"
               loading="lazy">
             </iframe>
           </div>
@@ -66,8 +66,8 @@ permalink: /videos/
                 src="https://www.youtube.com/embed/Lt3yzgmPgpk" 
                 title="【入札サポート】vol.2 事業者インタビュー!!事業者様としおざわさんが赤裸々にお話します。" 
                 frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
                 loading="lazy">
               </iframe>
             </div>
@@ -92,8 +92,8 @@ permalink: /videos/
                 src="https://www.youtube.com/embed/UBTtUW-rwKE" 
                 title="※再投稿【入札サポート】vol.1 事業者インタビュー!!事業者様としおざわさんが赤裸々にお話します。" 
                 frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
                 loading="lazy">
               </iframe>
             </div>
@@ -118,8 +118,8 @@ permalink: /videos/
                 src="https://www.youtube.com/embed/yHC5htac4UI" 
                 title="【国の仕事を受注したいあなたへ】あっくんによる案件紹介いよいよ最終回です！" 
                 frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
                 loading="lazy">
               </iframe>
             </div>
@@ -144,8 +144,8 @@ permalink: /videos/
                 src="https://www.youtube.com/embed/wT3x8RD_dp0" 
                 title="【国の仕事を受注したいあなたへ】ラストスパート！おもしろネーミングの案件を深掘り!!" 
                 frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
                 loading="lazy">
               </iframe>
             </div>
@@ -170,8 +170,8 @@ permalink: /videos/
                 src="https://www.youtube.com/embed/3ql2bsJgJ_Y" 
                 title="【国の仕事を受注したいあなたへ】ネーミングは難しそうだけど内容は簡単！？あっくんが分かりやすく解説!!" 
                 frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
                 loading="lazy">
               </iframe>
             </div>
@@ -196,8 +196,8 @@ permalink: /videos/
                 src="https://www.youtube.com/embed/QF-I5G-SUuQ" 
                 title="入札に参加したいすべての方へ" 
                 frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
                 loading="lazy">
               </iframe>
             </div>
@@ -222,8 +222,8 @@ permalink: /videos/
                 src="https://www.youtube.com/embed/WpeevLA_VKc" 
                 title="入札を通して自社の体制を見直そう！" 
                 frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
                 loading="lazy">
               </iframe>
             </div>
@@ -248,8 +248,8 @@ permalink: /videos/
                 src="https://www.youtube.com/embed/emY4vGoRpoo" 
                 title="あなたの会社をよりよくするために" 
                 frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
                 loading="lazy">
               </iframe>
             </div>
@@ -274,8 +274,8 @@ permalink: /videos/
                 src="https://www.youtube.com/embed/V12UxUXUbXM" 
                 title="入札ってなに？やさしく解説するゆるっと入札講座！" 
                 frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
                 loading="lazy">
               </iframe>
             </div>
@@ -300,8 +300,8 @@ permalink: /videos/
                 src="https://www.youtube.com/embed/r7OrykS2xO8" 
                 title="私たちが入札で最初にぶつかった壁" 
                 frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
                 loading="lazy">
               </iframe>
             </div>
@@ -326,8 +326,8 @@ permalink: /videos/
                 src="https://www.youtube.com/embed/V12UxUXUbXM" 
                 title="入札ってなに？やさしく解説するゆるっと入札講座！" 
                 frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
                 loading="lazy">
               </iframe>
             </div>
