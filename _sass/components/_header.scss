@@ -25,7 +25,7 @@
       display: flex !important;
       align-items: center !important;
       justify-content: space-between !important;
-      height: 72px !important; // 60px × 1.2
+      height: 80px !important; // 72px → 80px に拡大（ロゴサイズに合わせて）
       
       .logo-section {
         display: flex !important;
@@ -37,7 +37,7 @@
           flex-shrink: 0 !important;
           
           .logo-img {
-            height: 48px !important; // 40px × 1.2
+            height: 56px !important; // 48px → 56px に拡大
             width: auto !important;
           }
         }
@@ -217,7 +217,7 @@
   .mobile-menu {
     display: none !important;
     position: fixed !important;
-    top: 72px !important; // 60px → 72px
+    top: 80px !important; // 72px → 80px
     left: 0 !important;
     right: 0 !important;
     background: #ffffff !important;
@@ -290,10 +290,10 @@
 
 // ボディのパディング調整（2段ヘッダー用）
 body {
-  padding-top: 132px !important; // 72px + 60px（推定）
+  padding-top: 140px !important; // 80px + 60px（推定）
   
   @media (max-width: 768px) {
-    padding-top: 72px !important; // モバイルでは1段目のみ
+    padding-top: 80px !important; // モバイルでは1段目のみ
   }
 }
 
