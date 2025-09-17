@@ -27,12 +27,57 @@
       justify-content: space-between !important;
       height: 72px !important; // 60px × 1.2
       
-      .logo {
+      .logo-section {
+        display: flex !important;
+        align-items: center !important;
+        gap: 1.5rem !important;
         flex-shrink: 0 !important;
         
-        .logo-img {
-          height: 48px !important; // 40px × 1.2
-          width: auto !important;
+        .logo {
+          flex-shrink: 0 !important;
+          
+          .logo-img {
+            height: 48px !important; // 40px × 1.2
+            width: auto !important;
+          }
+        }
+        
+        .site-tagline {
+          display: flex !important;
+          align-items: center !important;
+          gap: 0.5rem !important;
+          font-size: 0.875rem !important;
+          color: #374151 !important;
+          
+          .tagline-text {
+            font-weight: 500 !important;
+            color: #6b7280 !important;
+          }
+          
+          .tagline-separator {
+            color: #d1d5db !important;
+            font-weight: 300 !important;
+          }
+          
+          .site-name {
+            font-weight: 600 !important;
+            color: #d97706 !important;
+            font-size: 1rem !important;
+          }
+          
+          // タブレット表示
+          @media (max-width: 1024px) {
+            font-size: 0.75rem !important;
+            
+            .site-name {
+              font-size: 0.875rem !important;
+            }
+          }
+          
+          // モバイル表示では非表示
+          @media (max-width: 768px) {
+            display: none !important;
+          }
         }
       }
       
