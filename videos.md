@@ -60,13 +60,13 @@ permalink: /videos/
     <section class="video-list-section">
       <h2 class="section-title">動画一覧</h2>
       <div class="video-grid">
-        {% for video in site.data.videos %}
+        <!-- 最新動画1: 入札サポート理由 -->
         <div class="col-md-6 mb-4">
           <div class="video-card h-100">
             <div class="video-thumbnail">
               <iframe 
-                src="https://www.youtube.com/embed/{{ video.videoId }}" 
-                title="{{ video.name }}" 
+                src="https://www.youtube.com/embed/rvuPxjmJAAg" 
+                title="【入札サポート】ふらっと法務事務所がサポートを始めた理由" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
                 allowfullscreen="true"
@@ -74,20 +74,330 @@ permalink: /videos/
               </iframe>
             </div>
             <div class="video-card-body">
-              <h5 class="video-title">{{ video.name }}</h5>
+              <h5 class="video-title">【入札サポート】ふらっと法務事務所がサポートを始めた理由</h5>
               <p class="video-description">
-                {{ video.description }}
+                今回は、ふらっと法務事務所ってどんな事務所？ってことを少しでも知ってもらうべく！入札サポートを事業として行おうと思った経緯についてしおざわさんに語っていただきます☆
               </p>
               <div class="video-meta">
-                {% if video.category %}
-                <span class="badge bg-{% if video.category == '最新' %}danger{% elsif video.category == '事業者インタビュー' %}info{% elsif video.category == '案件紹介' %}info{% elsif video.category == '案件解説' %}warning{% elsif video.category == '解説動画' %}success{% elsif video.category == '初心者向け' %}primary{% elsif video.category == '企業改善' %}success{% elsif video.category == '企業成長' %}warning{% elsif video.category == '実体験' %}warning{% else %}secondary{% endif %} me-2">{{ video.category }}</span>
-                {% endif %}
-                <span class="text-muted small">{{ video.uploadDate | date: "%Y年%m月" }} • 約{{ video.duration }}分</span>
+                <span class="badge bg-danger me-2">最新</span>
+                <span class="text-muted small">2025年9月 • 約3分</span>
               </div>
             </div>
           </div>
         </div>
-        {% endfor %}
+
+        <!-- 最新動画2: 入札サポートvol.3 -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/xEvtdG6RFtk" 
+                title="【入札サポート】vol.3 最終回！事業者インタビュー!!" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">【入札サポート】vol.3 最終回！事業者インタビュー!!</h5>
+              <p class="video-description">
+                いよいよ最終回です！！大竹さまにお話を聞いていきます！事業者様としおざわさんが赤裸々にお話します。
+              </p>
+              <div class="video-meta">
+                <span class="badge bg-danger me-2">最新</span>
+                <span class="text-muted small">2025年9月 • 約2分</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 最新動画3: 入札サポートvol.2 -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/Lt3yzgmPgpk" 
+                title="【入札サポート】vol.2 事業者インタビュー!!事業者様としおざわさんが赤裸々にお話します。" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">【入札サポート】vol.2 事業者インタビュー!!</h5>
+              <p class="video-description">
+                前回に引き続き、大竹さまにお話を聞いていきます！会社の整備をどう行って入札、落札に向かっていったかを話していきます。実際の入札参加から落札までの具体的なプロセスを詳しく解説します。
+              </p>
+              <div class="video-meta">
+                <span class="badge bg-danger me-2">最新</span>
+                <span class="text-muted small">2025年9月 • 約2分</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 最新動画2: 入札サポートvol.1 -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/UBTtUW-rwKE" 
+                title="※再投稿【入札サポート】vol.1 事業者インタビュー!!事業者様としおざわさんが赤裸々にお話します。" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">※再投稿【入札サポート】vol.1 事業者インタビュー!!</h5>
+              <p class="video-description">
+                今回は大竹塗工の大竹様からお話をお伺いいたします！しおざわさんと出会って、会社の整備をどう行っていったかを話していきます。実際の入札参加体験談をリアルにお聞きします。
+              </p>
+              <div class="video-meta">
+                <span class="badge bg-info me-2">事業者インタビュー</span>
+                <span class="text-muted small">2025年9月 • 約4分</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 最新動画2: 案件紹介最終回 -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/yHC5htac4UI" 
+                title="【国の仕事を受注したいあなたへ】あっくんによる案件紹介いよいよ最終回です！" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">【国の仕事を受注したいあなたへ】案件紹介最終回</h5>
+              <p class="video-description">
+                あっくんによる案件紹介シリーズの最終回。様々な業種に対応した国の仕事の案件を紹介し、入札参加の可能性を広げるヒントをお伝えします。
+              </p>
+              <div class="video-meta">
+                <span class="badge bg-info me-2">案件紹介</span>
+                <span class="text-muted small">2025年9月 • 約2分</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 最新動画3: おもしろネーミング案件 -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/wT3x8RD_dp0" 
+                title="【国の仕事を受注したいあなたへ】ラストスパート！おもしろネーミングの案件を深掘り!!" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">【国の仕事を受注したいあなたへ】おもしろネーミング案件深掘り</h5>
+              <p class="video-description">
+                ユニークなネーミングの案件を詳しく解説。一見難しそうに見える案件でも、内容を理解すれば参入可能な案件があることを具体例で説明します。
+              </p>
+              <div class="video-meta">
+                <span class="badge bg-warning me-2">案件解説</span>
+                <span class="text-muted small">2025年9月 • 約3分</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 最新動画4: ネーミングは難しそうだけど -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/3ql2bsJgJ_Y" 
+                title="【国の仕事を受注したいあなたへ】ネーミングは難しそうだけど内容は簡単！？あっくんが分かりやすく解説!!" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">【国の仕事を受注したいあなたへ】ネーミングは難しそうだけど内容は簡単</h5>
+              <p class="video-description">
+                複雑そうなネーミングの案件でも、実際の内容は意外とシンプルな場合があります。あっくんが具体例を使って分かりやすく解説します。
+              </p>
+              <div class="video-meta">
+                <span class="badge bg-success me-2">解説動画</span>
+                <span class="text-muted small">2025年9月 • 約4分</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 新動画1: 最新動画 -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/QF-I5G-SUuQ" 
+                title="入札に参加したいすべての方へ" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">入札に参加したいすべての方へ</h5>
+              <p class="video-description">
+                入札参加を検討している全ての事業者に向けた包括的なガイド。入札の基本から参加までの流れ、必要な準備について分かりやすく解説します。
+              </p>
+              <div class="video-meta">
+                <span class="badge bg-primary me-2">初心者向け</span>
+                <span class="text-muted small">2025年8月 • 約5分</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 新動画2: 企業体制見直し -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/WpeevLA_VKc" 
+                title="入札を通して自社の体制を見直そう！" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">入札を通して自社の体制を見直そう！</h5>
+              <p class="video-description">
+                入札参加を機に企業体制を強化する方法について解説。入札要件を満たすための組織づくりと業務プロセスの改善ポイントをお伝えします。
+              </p>
+              <div class="video-meta">
+                <span class="badge bg-success me-2">企業改善</span>
+                <span class="text-muted small">2025年8月 • 約5分</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 新動画3: 企業成長 -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/emY4vGoRpoo" 
+                title="あなたの会社をよりよくするために" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">あなたの会社をよりよくするために</h5>
+              <p class="video-description">
+                企業成長を目指す事業者に向けた総合的なアドバイス。入札参加を含めた事業拡大の戦略と、持続可能な成長のためのポイントを解説します。
+              </p>
+              <div class="video-meta">
+                <span class="badge bg-warning me-2">企業成長</span>
+                <span class="text-muted small">2025年8月 • 約5分</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 動画カード1: 既存動画 -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/V12UxUXUbXM" 
+                title="入札ってなに？やさしく解説するゆるっと入札講座！" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">入札ってなに？やさしく解説するゆるっと入札講座！</h5>
+              <p class="video-description">
+                入札は建設工事だけじゃない！コンサルティング、調査、物品納入などの「役務」案件について解説。全省庁統一資格の取得方法と新規事業者でも参入できるポイントをお伝えします。
+              </p>
+              <div class="video-meta">
+                <span class="badge bg-primary me-2">初心者向け</span>
+                <span class="text-muted small">2025年1月 • 約16分</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 動画カード4: 実体験動画 -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/r7OrykS2xO8" 
+                title="私たちが入札で最初にぶつかった壁" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">私たちが入札で最初にぶつかった壁</h5>
+              <p class="video-description">
+                入札参入の実体験談。最初の落札案件「北関東防衛局 公共事業労務費調査」（約65万円）を獲得するまでの1年間の苦労と、実績がない状態での案件探しの困難さを赤裸々に語ります。参入から3案件落札まで2年近くかかった現実的な体験談です。
+              </p>
+              <div class="video-meta">
+                <span class="badge bg-warning me-2">実体験</span>
+                <span class="text-muted small">2025年8月 • 約5分</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 動画カード5: 基礎講座 -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/V12UxUXUbXM" 
+                title="入札ってなに？やさしく解説するゆるっと入札講座！" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">入札ってなに？やさしく解説するゆるっと入札講座！</h5>
+              <p class="video-description">
+                入札は建設工事だけじゃない！コンサルティング、調査、物品納入などの「役務」案件について解説。全省庁統一資格の取得方法と新規事業者でも参入できるポイントをお伝えします。
+              </p>
+              <div class="video-meta">
+                <span class="badge bg-primary me-2">初心者向け</span>
+                <span class="text-muted small">2025年1月 • 約16分</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
