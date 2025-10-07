@@ -19,7 +19,7 @@ categories: [カテゴリ1, カテゴリ2]
 tags: [タグ1, タグ2, タグ3]
 author: 著者名
 excerpt: "記事の要約文"
-description: SEO用の詳細な説明文
+description: 入札マップサイトのブログシステム技術情報。Jekyll構成・記事管理・カテゴリ構造・SEO設定の詳細仕様。神奈川県大和市の行政書士法人ふらっと法務事務所。
 ---
 ```
 
