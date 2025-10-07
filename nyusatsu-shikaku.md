@@ -22,7 +22,7 @@ seo:
 
 <div class="simple-hero-section">
   <div class="simple-hero-content">
-    <h1 class="simple-hero-title">入札参加資格の取得方法</h1>
+    <div class="simple-hero-title">入札参加資格の取得方法</div>
     <p class="simple-hero-subtitle">申請から更新まで完全ガイド</p>
     <p class="simple-hero-description">申請書類の準備から審査通過まで、ステップバイステップで解説します</p>
   </div>

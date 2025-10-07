@@ -235,7 +235,7 @@ keywords: 資金調達支援, 日本政策金融公庫, 創業融資, 入札参�
 
 <div class="hero-banner">
   <div class="hero-content">
-    <h1>資金調達支援</h1>
+    <div class="hero-title">資金調達支援</div>
     <div class="subtitle">創業時から入札参加資格を戦略的に活用</div>
     <div class="description">日本政策金融公庫の最新制度を活用し、公共事業参入による安定した収益基盤の構築をサポート</div>
   </div>

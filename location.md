@@ -11,7 +11,7 @@ body_class: location-page
 
 <section class="location-hero">
     <div class="container">
-        <h1 class="page-title">入札参加資格 神奈川 - 事務所へのアクセス</h1>
+        <div class="page-title">入札参加資格 神奈川 - 事務所へのアクセス</div>
         <p class="page-subtitle">神奈川県の入札・公共調達のご相談は、お気軽にお越しください</p>
     </div>
 </section>

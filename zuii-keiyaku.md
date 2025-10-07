@@ -11,7 +11,7 @@ permalink: /zuii-keiyaku/
 <div class="hero-section">
   <p class="hero-tag">📋 制度解説</p>
   
-  <h1 class="hero-title">随意契約とは<br>初心者向け完全解説</h1>
+  <div class="hero-title">随意契約とは<br>初心者向け完全解説</div>
   
   <p class="hero-description">適用要件から手続きまで、行政書士が分かりやすく解説</p>
   
