@@ -353,13 +353,13 @@ seo:
 <section class="hero-section">
     <div class="hero-content">
         <h1 class="hero-catchcopy">入札参加、もう迷わない</h1>
-        <h2 class="hero-title">全省庁統一資格申請<br><span class="highlight">完全無料</span></h2>
-        <p class="hero-subtitle">※ただし、入札サポート（月額33,000円×6ヶ月）のご利用が条件となります</p>
+        <h2 class="hero-title">全省庁統一資格申請<br><span class="highlight">専門サポート</span></h2>
+        <p class="hero-subtitle">行政書士法人による確実な資格取得サポート<br>入札参加から受注まで、あなたの事業拡大をトータルサポート</p>
         <a href="/contact/" class="hero-cta">
             <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style="display: inline-block; margin-right: 10px; vertical-align: middle;">
                 <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
             </svg>
-            今すぐ無料相談を申し込む
+            今すぐ相談を申し込む
         </a>
     </div>
 </section>
@@ -408,8 +408,8 @@ seo:
 
 <!-- 価値提案セクション -->
 <section class="value-section">
-    <h2 class="section-title">なぜ申請費用が無料なのか？</h2>
-    <p class="section-subtitle">6ヶ月間の入札サポートをご契約いただくことで、申請費用を完全無料でご提供いたします</p>
+    <h2 class="section-title">なぜ私たちを選ぶのか？</h2>
+    <p class="section-subtitle">豊富な実績と専門知識で、あなたの入札参加を成功に導きます</p>
     
     <div class="value-grid">
         <div class="value-card">
@@ -418,8 +418,8 @@ seo:
                     <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-5 2h2v3l-1-.75L9 7V4zm1 9c-1.25 0-2.25-1-2.25-2.25S8.75 10.5 10 10.5s2.25 1 2.25 2.25S11.25 15 10 15z"/>
                 </svg>
             </div>
-            <h3 class="value-title">完全無料申請</h3>
-            <p class="value-desc">通常10万円かかる全省庁統一資格申請を完全無料で代行。書類作成から提出まで全てお任せください。</p>
+            <h3 class="value-title">確実な資格取得</h3>
+            <p class="value-desc">豊富な実績を持つ行政書士法人が全省庁統一資格申請を代行。書類作成から提出まで全てお任せください。</p>
         </div>
         <div class="value-card">
             <div class="value-icon">
@@ -427,37 +427,9 @@ seo:
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                 </svg>
             </div>
-            <h3 class="value-title">6ヶ月入札サポート</h3>
-            <p class="value-desc">資格取得後の6ヶ月間、案件発見から入札手続きまで、入札参加に向けて徹底サポートします。</p>
+            <h3 class="value-title">継続的な入札サポート</h3>
+            <p class="value-desc">資格取得後も継続的にサポート。案件発見から入札手続きまで、入札参加に向けて徹底サポートします。</p>
         </div>
-    </div>
-</section>
-
-<!-- 料金セクション -->
-<section class="pricing-section">
-    <div class="pricing-card">
-        <div class="pricing-badge">最もお得</div>
-        <h3 class="pricing-title">全省庁統一資格申請 + 6ヶ月サポート</h3>
-        <div class="pricing-price">月額33,000円</div>
-        <p class="pricing-note">6ヶ月契約（一括払い198,000円）</p>
-        
-        <div class="pricing-features">
-            <div class="pricing-feature">全省庁統一資格申請代行（通常10万円 → 無料）</div>
-            <div class="pricing-feature">書類作成・提出代行</div>
-            <div class="pricing-feature">6ヶ月間の入札案件紹介</div>
-            <div class="pricing-feature">入札手続きサポート</div>
-            <div class="pricing-feature">専任担当者による個別サポート</div>
-            <div class="pricing-feature">メール・電話サポート無制限</div>
-            <div class="pricing-feature">100%取得保証</div>
-        </div>
-        
-        <p style="font-size: 14px; color: #64748b; margin-bottom: 30px;">
-            <strong>セゾンインボイス分割払い対応</strong><br>
-            月額16,500円〜（12回払いの場合）<br>
-            ※審査により分割回数が決定されます
-        </p>
-        
-        <a href="/contact/" class="pricing-cta">今すぐ申し込む</a>
     </div>
 </section>
 
@@ -465,16 +437,16 @@ seo:
 <section id="contact" style="background: white; padding: 100px 0;">
     <div style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
         <h2 style="text-align: center; font-size: 42px; font-weight: 700; margin-bottom: 20px; color: #2d3748;">今すぐ始めませんか？</h2>
-        <p style="text-align: center; font-size: 20px; color: #64748b; margin-bottom: 60px;">申請費用無料のこの機会をお見逃しなく。<br>あなたの事業拡大を全力でサポートいたします。</p>
+        <p style="text-align: center; font-size: 20px; color: #64748b; margin-bottom: 60px;">まずはお気軽にご相談ください。<br>あなたの事業拡大を全力でサポートいたします。</p>
         
         <div style="background: #f8fafc; padding: 50px; border-radius: 20px; border: 2px solid #e2e8f0;">
-            <h3 style="font-size: 28px; font-weight: 600; margin-bottom: 30px; color: #2d3748; text-align: center;">無料相談申し込み</h3>
+            <h3 style="font-size: 28px; font-weight: 600; margin-bottom: 30px; color: #2d3748; text-align: center;">相談申し込み</h3>
             
             <form name="lp1-consultation" method="POST" action="/thanks/" data-netlify="true" data-netlify-honeypot="bot-field">
                 <!-- Netlify Forms用の隠しフィールド -->
                 <input type="hidden" name="form-name" value="lp1-consultation" />
                 <input type="hidden" name="_to" value="mail@flat-legal.com" />
-                <input type="hidden" name="_subject" value="【入札マップ】LP1からの無料相談お申込み" />
+                <input type="hidden" name="_subject" value="【入札マップ】LP1からの相談お申込み" />
                 
                 <!-- ハニーポット（スパム対策） -->
                 <div style="display: none;">
@@ -533,11 +505,11 @@ seo:
                     <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style="display: inline-block; margin-right: 10px; vertical-align: middle;">
                         <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
                     </svg>
-                    今すぐ無料相談を申し込む
+                    今すぐ相談を申し込む
                 </button>
                 
                 <p style="text-align: center; font-size: 14px; color: #64748b; margin-top: 15px;">
-                    ※ 相談だけでも大歓迎です。無理な営業は一切いたしません。
+                    ※ まずはお気軽にご相談ください。無理な営業は一切いたしません。
                 </p>
             </form>
         </div>
