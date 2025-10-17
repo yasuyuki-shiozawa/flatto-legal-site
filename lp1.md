@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "全省庁統一資格 無料申請 | 6ヶ月入札サポート付き完全無料プラン - 行政書士法人ふらっと法務事務所"
-description: "全省庁統一資格申請が完全無料！通常10万円の申請費用が0円、6ヶ月間の入札サポート付きで確実に資格取得。行政書士法人ふらっと法務事務所の特別プラン。神奈川県大和市から全国対応。"
-keywords: 全省庁統一資格 無料申請,全省庁統一資格 無料,入札サポート 無料,行政書士 無料申請,公共調達 無料,入札参加資格 無料,代行申請 無料,神奈川県,大和市
+title: "全省庁統一資格 申請サポート | 6ヶ月入札サポート付き - 行政書士法人ふらっと法務事務所"
+description: "全省币統一資格申請を専門家が完全サポート！6ヶ月間の入札サポート付きで確実に資格取得。行政書士法人ふらっと法務事務所の特別プラン。神奈川県大和市から全国対応。"
+keywords: 全省庁統一資格 申請,全省庁統一資格 サポート,入札サポート,行政書士 申請,公共調達,入札参加資格,代行申請,神奈川県,大和市
 hide_left_sidebar: true
 hide_right_sidebar: true
-body_class: free-application-page
+body_class: application-support-page
 permalink: /lp1/
 sitemap: true
 robots: index, follow
@@ -17,7 +17,7 @@ seo:
 /* 洗練されたデザインシステム */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;800&display=swap');
 
-.free-application-page {
+.application-support-page {
     font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     background: #ffffff;
     line-height: 1.7;
