@@ -1,8 +1,8 @@
 ---
 layout: default
-title: 全省庁統一資格 申請代行 | 行政書士が完全サポート【申請費用無料】- 神奈川県大和市
-description: 全省庁統一資格の申請代行を行政書士が完全サポート。申請費用無料・有効期間3年で確実な資格取得を実現。全国対応。
-keywords: 全省庁統一資格 申請代行,全省庁統一資格申請,全省庁統一資格 代行,入札参加資格 代行,行政書士 申請代行,神奈川県 行政書士,大和市 行政書士,申請費用無料,資格申請代行
+title: 全省庁統一資格 申請代行 | 行政書士が完全サポート - 神奈川県大和市
+description: 全省庁統一資格の申請代行を行政書士が完全サポート。有効期間3年で確実な資格取得を実現。全国対応。
+keywords: 全省庁統一資格 申請代行,全省庁統一資格申請,全省庁統一資格 代行,入札参加資格 代行,行政書士 申請代行,神奈川県 行政書士,大和市 行政書士,資格申請代行
 hide_left_sidebar: true
 hide_right_sidebar: true
 body_class: landing-page zenshochou-lp
@@ -36,7 +36,7 @@ disable_structured_data: true
     <div class="hero-container">
         <div class="hero-content">
             <div class="hero-badge">
-                <span class="badge-text">申請費用完全無料</span>
+                <span class="badge-text">専門家が完全サポート</span>
             </div>
             <h1 class="hero-title">
                 <span class="title-main">全省庁統一資格 申請代行</span>
@@ -48,8 +48,8 @@ disable_structured_data: true
             </p>
             <div class="hero-features">
                 <div class="feature-item">
-                    <i class="fas fa-yen-sign"></i>
-                    <span>申請費用無料</span>
+                    <i class="fas fa-user-tie"></i>
+                    <span>専門家が代行</span>
                 </div>
                 <div class="feature-item">
                     <i class="fas fa-calendar-alt"></i>
@@ -67,7 +67,7 @@ disable_structured_data: true
             <div class="hero-cta">
                 <a href="#contact-form" class="btn-primary-large">
                     <i class="fas fa-phone"></i>
-                    今すぐ無料相談
+                    今すぐご相談
                 </a>
                 <a href="#zenshochou-details" class="btn-outline-large">
                     <i class="fas fa-info-circle"></i>
@@ -99,8 +99,8 @@ disable_structured_data: true
                         <p>内閣府、総務省、法務省、外務省、財務省、文部科学省、厚生労働省、農林水産省、経済産業省、国土交通省、環境省、防衛省など、全ての省庁の入札に参加可能</p>
                     </div>
                     <div class="point-item">
-                        <h4><i class="fas fa-check-circle"></i> 申請費用は完全無料</h4>
-                        <p>国への申請費用は一切かかりません。必要なのは書類準備のみです</p>
+                        <h4><i class="fas fa-check-circle"></i> 国への申請実費は不要</h4>
+                        <p>国への申請実費はかかりません。必要なのは書類準備のみです</p>
                     </div>
                     <div class="point-item">
                         <h4><i class="fas fa-check-circle"></i> 有効期間は最長3年</h4>
@@ -493,7 +493,7 @@ disable_structured_data: true
                     </ul>
                 </div>
                 <div class="pricing-note">
-                    <p>※国への申請費用は無料です</p>
+                    <p>※国への申請実費はかかりません</p>
                     <p>※書類取得費用は別途実費</p>
                 </div>
             </div>
@@ -508,11 +508,11 @@ disable_structured_data: true
         <div class="faq-list">
             <div class="faq-item">
                 <div class="faq-question">
-                    <h3>全省庁統一資格の申請費用はかかりますか？</h3>
+                    <h3>全省庁統一資格の申請実費はかかりますか？</h3>
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    <p>国への申請費用は一切かかりません。完全無料です。ただし、必要書類（登記事項証明書、納税証明書など）の取得費用は別途必要です。</p>
+                    <p>国への申請実費は一切かかりません。ただし、必要書類（登記事項証明書、納税証明書など）の取得費用は別途必要です。</p>
                 </div>
             </div>
             
@@ -574,11 +574,11 @@ disable_structured_data: true
         <div class="cta-banner-content">
             <div class="cta-text">
                 <h2>全省庁統一資格について詳しく相談したい方へ</h2>
-                <p>専門の行政書士が無料で詳しくご相談をお受けします</p>
+                <p>専門の行政書士が詳しくご相談をお受けします</p>
             </div>
             <div class="cta-banner-image">
                 <a href="/lp1/">
-                    <img src="/assets/images/banners/banner_lp1_hero_horizontal_small_600x120.png" alt="全省庁統一資格申請 完全無料 - 毎月先着50組限定" loading="lazy">
+                    <img src="/assets/images/banners/banner_lp1_hero_horizontal_small_600x120.png" alt="全省庁統一資格申請 専門家がサポート" loading="lazy">
                 </a>
             </div>
         </div>
