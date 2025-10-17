@@ -1,0 +1,1089 @@
+[
+  {
+    "page": "index.html",
+    "status": "success",
+    "file_size": 4013,
+    "line_count": 81,
+    "price_findings": [],
+    "free_application_findings": [],
+    "has_issues": false
+  },
+  {
+    "page": "about.md",
+    "status": "success",
+    "file_size": 16351,
+    "line_count": 370,
+    "price_findings": [],
+    "free_application_findings": [],
+    "has_issues": false
+  },
+  {
+    "page": "company.md",
+    "status": "success",
+    "file_size": 9457,
+    "line_count": 365,
+    "price_findings": [],
+    "free_application_findings": [],
+    "has_issues": false
+  },
+  {
+    "page": "contact.md",
+    "status": "success",
+    "file_size": 30516,
+    "line_count": 894,
+    "price_findings": [
+      {
+        "pattern": "\\d{1,3}(?:,\\d{3})+円",
+        "match": "33,000円",
+        "line": 4,
+        "context": "事務所 - 神奈川県大和市\" description: \"入札参加資格取得の無料相談を承ります。月額33,000円で全工程をサポート。行政書士が全国対応。\" keywords: 入札参加資格 無料相談,入札参加資格"
+      },
+      {
+        "pattern": "\\d{1,3}(?:,\\d{3})+円",
+        "match": "33,000円",
+        "line": 523,
+        "context": "</p>         <div class=\"features\">             月額33,000円で事前調査から業務完了まで<br>             全省庁統一資格申請は無料        "
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "12万円",
+        "line": 521,
+        "context": "どうすればいいの？」</h1>         <p class=\"subtitle\">他社では8-12万円かかる申請が<br><strong>【完全無料】</strong></p>         <div"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "12万円",
+        "line": 539,
+        "context": ">                 <div class=\"comparison-price\">8-12万円</div>                 <div class=\"comparison-peri"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "12万円",
+        "line": 571,
+        "context": " class=\"push-reason\">                 <h3>① 申請費用8-12万円が完全無料</h3>                 <p>他社では高額な申請費用が、当事務所なら完"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "715万円",
+        "line": 581,
+        "context": "v class=\"push-reason\">                 <h3>③ 実際に2,715万円落札の実績</h3>                 <p>理論だけでなく、実際に大型案件を落札した"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "12万円",
+        "line": 759,
+        "context": " </div>              <h2 class=\"form-title\">申請費用8-12万円→0円</h2>             <p class=\"form-title-sub\">まずは"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "12万円",
+        "line": 825,
+        "context": "             <div class=\"submit-button-sub\">申請費用8-12万円が無料</div>                 </button>               "
+      }
+    ],
+    "free_application_findings": [
+      {
+        "pattern": "完全無料",
+        "match": "完全無料",
+        "line": 521,
+        "context": " <p class=\"subtitle\">他社では8-12万円かかる申請が<br><strong>【完全無料】</strong></p>         <div class=\"features\">     "
+      },
+      {
+        "pattern": "完全無料",
+        "match": "完全無料",
+        "line": 551,
+        "context": "iv>                 <div class=\"comparison-price\">完全無料</div>                 <div class=\"comparison-peri"
+      },
+      {
+        "pattern": "完全無料",
+        "match": "完全無料",
+        "line": 571,
+        "context": "s=\"push-reason\">                 <h3>① 申請費用8-12万円が完全無料</h3>                 <p>他社では高額な申請費用が、当事務所なら完全無料。6"
+      },
+      {
+        "pattern": "完全無料",
+        "match": "完全無料",
+        "line": 572,
+        "context": "円が完全無料</h3>                 <p>他社では高額な申請費用が、当事務所なら完全無料。6ヶ月サポート契約で、申請から入札参加まで全てをサポートします。</p>             "
+      },
+      {
+        "pattern": "無料で申請",
+        "match": "無料で申請",
+        "line": 609,
+        "context": "っかりと指導いたします。<br>                     全省庁統一資格については、無料で申請代行いたします。                 </div>             </div>"
+      }
+    ],
+    "has_issues": true
+  },
+  {
+    "page": "service.md",
+    "status": "success",
+    "file_size": 17910,
+    "line_count": 437,
+    "price_findings": [],
+    "free_application_findings": [],
+    "has_issues": false
+  },
+  {
+    "page": "services.md",
+    "status": "success",
+    "file_size": 6809,
+    "line_count": 238,
+    "price_findings": [
+      {
+        "pattern": "\\d{1,3}(?:,\\d{3})+円",
+        "match": "33,000円",
+        "line": 70,
+        "context": "ce-features\">         <span class=\"feature-tag\">月額33,000円</span>         <span class=\"feature-tag\">全額返金保証</"
+      }
+    ],
+    "free_application_findings": [],
+    "has_issues": true
+  },
+  {
+    "page": "qualification.md",
+    "status": "success",
+    "file_size": 22547,
+    "line_count": 677,
+    "price_findings": [
+      {
+        "pattern": "\\d{1,3}(?:,\\d{3})+円",
+        "match": "88,000円",
+        "line": 143,
+        "context": "庁統一資格</h3>                     <div class=\"price\">88,000円<span>（税込）</span></div>                     <ul>  "
+      },
+      {
+        "pattern": "\\d{1,3}(?:,\\d{3})+円",
+        "match": "55,000円",
+        "line": 154,
+        "context": "自治体資格</h3>                     <div class=\"price\">55,000円<span>（税込）</span></div>                     <ul>  "
+      }
+    ],
+    "free_application_findings": [],
+    "has_issues": true
+  },
+  {
+    "page": "bidding-support.md",
+    "status": "success",
+    "file_size": 20546,
+    "line_count": 669,
+    "price_findings": [
+      {
+        "pattern": "\\d{1,3}(?:,\\d{3})+円",
+        "match": "33,000円",
+        "line": 4,
+        "context": "一資格申請から入札参加まで完全サポート。事前診断・全額返金保証付きで安心してチャレンジできます。月額33,000円で入札参加の全工程をサポートいたします。 ---  <style> /* 入札サポートサービス専用C"
+      },
+      {
+        "pattern": "\\d{1,3}(?:,\\d{3})+円",
+        "match": "33,000円",
+        "line": 566,
+        "context": "ート</h4>       <p class=\"service-desc\">申請から業務完了まで月額33,000円で全工程サポート</p>       <a href=\"tel:046-272-3357\" clas"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "800万円",
+        "line": 496,
+        "context": "<div class=\"card-info\">             <span>予定価格: 2,800万円</span>             <span>公告日: 2025/08/20</span>  "
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "500万円",
+        "line": 508,
+        "context": "<div class=\"card-info\">             <span>予定価格: 1,500万円</span>             <span>公告日: 2025/08/19</span>  "
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "200万円",
+        "line": 520,
+        "context": "<div class=\"card-info\">             <span>予定価格: 3,200万円</span>             <span>公告日: 2025/08/18</span>  "
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "15万円",
+        "line": 536,
+        "context": "省庁統一資格申請が無料！</h3>       <p class=\"benefit-desc\">通常15万円の申請費用が完全無料。サポート申し込みと同時に資格取得をスタートできます。</p>       <d"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "15万円",
+        "line": 537,
+        "context": "資格取得をスタートできます。</p>       <div class=\"price-tag\">通常15万円 → 0円</div>     </div>     <div class=\"benefit-ite"
+      }
+    ],
+    "free_application_findings": [
+      {
+        "pattern": "完全無料",
+        "match": "完全無料",
+        "line": 536,
+        "context": "料！</h3>       <p class=\"benefit-desc\">通常15万円の申請費用が完全無料。サポート申し込みと同時に資格取得をスタートできます。</p>       <div class=\""
+      }
+    ],
+    "has_issues": true
+  },
+  {
+    "page": "denshi-nyusatsu.md",
+    "status": "success",
+    "file_size": 15469,
+    "line_count": 398,
+    "price_findings": [
+      {
+        "pattern": "\\d+万円",
+        "match": "2万円",
+        "line": 92,
+        "context": "- サービス名：法人認証カードサービス    - 各地方法務局で取り扱い  **費用**: 年額1〜2万円程度（有効期間1〜3年から選択可能）   **申請期間**: 10〜14日程度   **注意**: "
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "1万円",
+        "line": 105,
+        "context": "ストールが必要  ### 3. ICカードリーダーの準備 - 接触型ICカードリーダー - 価格：約1万円程度 - 認証局推奨の機種を選択することを推奨  ### 初期費用の目安 - **ICカード発行費用"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "2万円",
+        "line": 109,
+        "context": "局推奨の機種を選択することを推奨  ### 初期費用の目安 - **ICカード発行費用**：年額1～2万円 - **ICカードリーダー**：約1万円（初回のみ） - **初期費用合計**：約2～3万円  #"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "1万円",
+        "line": 110,
+        "context": " 初期費用の目安 - **ICカード発行費用**：年額1～2万円 - **ICカードリーダー**：約1万円（初回のみ） - **初期費用合計**：約2～3万円  ## 電子入札システムの利用手順  ### "
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "3万円",
+        "line": 111,
+        "context": "額1～2万円 - **ICカードリーダー**：約1万円（初回のみ） - **初期費用合計**：約2～3万円  ## 電子入札システムの利用手順  ### ステップ1：利用者登録 1. 各機関の電子入札システ"
+      }
+    ],
+    "free_application_findings": [],
+    "has_issues": true
+  },
+  {
+    "page": "drone-inspection.md",
+    "status": "success",
+    "file_size": 11168,
+    "line_count": 443,
+    "price_findings": [
+      {
+        "pattern": "\\d+万円",
+        "match": "500万円",
+        "line": 55,
+        "context": "  <ul>     <li><strong>ものづくり補助金</strong>：設備投資に最大2,500万円</li>     <li><strong>IT導入補助金</strong>：システム導入に最大45"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "450万円",
+        "line": 56,
+        "context": "万円</li>     <li><strong>IT導入補助金</strong>：システム導入に最大450万円</li>     <li><strong>小規模事業者持続化補助金</strong>：販路開拓に最"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "200万円",
+        "line": 57,
+        "context": "/li>     <li><strong>小規模事業者持続化補助金</strong>：販路開拓に最大200万円</li>     <li><strong>事業再構築補助金</strong>：新分野展開に最大8,"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "000万円",
+        "line": 58,
+        "context": "</li>     <li><strong>事業再構築補助金</strong>：新分野展開に最大8,000万円</li>   </ul> </div>  ## 事業の特徴  ### 市場の成長性  <div c"
+      }
+    ],
+    "free_application_findings": [],
+    "has_issues": true
+  },
+  {
+    "page": "funding-support.md",
+    "status": "success",
+    "file_size": 12995,
+    "line_count": 405,
+    "price_findings": [
+      {
+        "pattern": "\\d+万円",
+        "match": "200万円",
+        "line": 289,
+        "context": "### 日本政策金融公庫  #### 新規開業・スタートアップ支援資金 - **融資限度額**：7,200万円（うち運転資金4,800万円） - **返済期間**：設備資金20年以内、運転資金10年以内 - *"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "800万円",
+        "line": 289,
+        "context": "#### 新規開業・スタートアップ支援資金 - **融資限度額**：7,200万円（うち運転資金4,800万円） - **返済期間**：設備資金20年以内、運転資金10年以内 - **利率**：基準利率から特別"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "500万円",
+        "line": 340,
+        "context": "v> </div>  ## 成功事例  ### IT関連サービス業 A社 - **調達資金**：1,500万円（日本政策金融公庫） - **特別利率適用**：基準利率から0.9％引下げ - **成果**：創業6"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "800万円",
+        "line": 342,
+        "context": "別利率適用**：基準利率から0.9％引下げ - **成果**：創業6ヶ月で初回公共事業受注（年間契約800万円）  ### 建設コンサルタント B社 - **調達資金**：2,800万円（制度融資併用） - *"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "800万円",
+        "line": 345,
+        "context": "回公共事業受注（年間契約800万円）  ### 建設コンサルタント B社 - **調達資金**：2,800万円（制度融資併用） - **資格取得**：全省庁統一資格、建設コンサルタント登録 - **成果**：創"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "800万円",
+        "line": 350,
+        "context": "：創業1年目で複数の測量・設計業務を受注  ### 清掃・メンテナンス C社 - **調達資金**：800万円（女性起業家支援資金） - **特別条件**：無担保・無保証人、特別利率適用 - **成果**：地方"
+      }
+    ],
+    "free_application_findings": [],
+    "has_issues": true
+  },
+  {
+    "page": "license-certification.md",
+    "status": "success",
+    "file_size": 19543,
+    "line_count": 364,
+    "price_findings": [
+      {
+        "pattern": "\\d+万円",
+        "match": "500万円",
+        "line": 27,
+        "context": "<p style=\"margin: 0.5rem 0; color: #666;\">平均契約金額: 500万円</p>     <p style=\"margin: 0.5rem 0; font-weight: "
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "800万円",
+        "line": 34,
+        "context": "<p style=\"margin: 0.5rem 0; color: #666;\">平均契約金額: 800万円</p>     <p style=\"margin: 0.5rem 0; font-weight: "
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "200万円",
+        "line": 41,
+        "context": " style=\"margin: 0.5rem 0; color: #666;\">平均契約金額: 1,200万円</p>     <p style=\"margin: 0.5rem 0; font-weight: "
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "500万円",
+        "line": 48,
+        "context": " style=\"margin: 0.5rem 0; color: #666;\">平均契約金額: 1,500万円</p>     <p style=\"margin: 0.5rem 0; font-weight: "
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "500万円",
+        "line": 55,
+        "context": " style=\"margin: 0.5rem 0; color: #666;\">平均契約金額: 2,500万円</p>     <p style=\"margin: 0.5rem 0; font-weight: "
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "300万円",
+        "line": 260,
+        "context": "       <li>参加可能案件: 年間50件</li>         <li>平均受注金額: 300万円</li>         <li>競争倍率: 12倍</li>       </ul>     <"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "200万円",
+        "line": 268,
+        "context": "    <li>参加可能案件: 年間180件</li>         <li>平均受注金額: 1,200万円</li>         <li>競争倍率: 4倍</li>       </ul>     </"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "500万円",
+        "line": 273,
+        "context": "nter; color: #28a745; font-size: 1.1rem;\">年間売上: 1,500万円 → 6,000万円（4倍増加）</p> </div>  ### 建設コンサルタントB社  <div"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "000万円",
+        "line": 273,
+        "context": "r: #28a745; font-size: 1.1rem;\">年間売上: 1,500万円 → 6,000万円（4倍増加）</p> </div>  ### 建設コンサルタントB社  <div style=\"ba"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "800万円",
+        "line": 286,
+        "context": "        <li>大型案件受注: 年間2件</li>         <li>平均受注金額: 800万円</li>       </ul>     </div>     <div>       <h5 s"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "200万円",
+        "line": 294,
+        "context": "      <li>大型案件受注: 年間8件</li>         <li>平均受注金額: 2,200万円</li>       </ul>     </div>   </div>   <p style=\""
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "200万円",
+        "line": 298,
+        "context": "nter; color: #856404; font-size: 1.1rem;\">年間売上: 3,200万円 → 8,800万円（2.75倍増加）</p> </div>  ## よくある質問  <div st"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "800万円",
+        "line": 298,
+        "context": "r: #856404; font-size: 1.1rem;\">年間売上: 3,200万円 → 8,800万円（2.75倍増加）</p> </div>  ## よくある質問  <div style=\"backg"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "300万円",
+        "line": 312,
+        "context": ". 認証機関への費用、コンサルティング費用、社内体制構築費用等を含めて、プライバシーマークで150-300万円、ISO認証で200-500万円程度が目安です。詳細はお見積りいたします。</p>   </div>"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "500万円",
+        "line": 312,
+        "context": "ィング費用、社内体制構築費用等を含めて、プライバシーマークで150-300万円、ISO認証で200-500万円程度が目安です。詳細はお見積りいたします。</p>   </div>      <div style"
+      }
+    ],
+    "free_application_findings": [],
+    "has_issues": true
+  },
+  {
+    "page": "zuii-keiyaku.md",
+    "status": "success",
+    "file_size": 13247,
+    "line_count": 480,
+    "price_findings": [
+      {
+        "pattern": "\\d+万円",
+        "match": "400万円",
+        "line": 56,
+        "context": "------------|----------|----------| | 工事又は製造の請負 | 400万円以下 | 250万円以下 | | 財産の買入れ | 300万円以下 | 160万円以下 | | 物件"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "250万円",
+        "line": 56,
+        "context": "--|----------|----------| | 工事又は製造の請負 | 400万円以下 | 250万円以下 | | 財産の買入れ | 300万円以下 | 160万円以下 | | 物件の借入れ | 150"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "300万円",
+        "line": 57,
+        "context": "---| | 工事又は製造の請負 | 400万円以下 | 250万円以下 | | 財産の買入れ | 300万円以下 | 160万円以下 | | 物件の借入れ | 150万円以下 | 80万円以下 | | 財産の"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "160万円",
+        "line": 57,
+        "context": "は製造の請負 | 400万円以下 | 250万円以下 | | 財産の買入れ | 300万円以下 | 160万円以下 | | 物件の借入れ | 150万円以下 | 80万円以下 | | 財産の売払い | 100万"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "150万円",
+        "line": 58,
+        "context": "0万円以下 | | 財産の買入れ | 300万円以下 | 160万円以下 | | 物件の借入れ | 150万円以下 | 80万円以下 | | 財産の売払い | 100万円以下 | 50万円以下 | | 物件の貸"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "80万円",
+        "line": 58,
+        "context": "財産の買入れ | 300万円以下 | 160万円以下 | | 物件の借入れ | 150万円以下 | 80万円以下 | | 財産の売払い | 100万円以下 | 50万円以下 | | 物件の貸付け | 50万円"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "100万円",
+        "line": 59,
+        "context": "60万円以下 | | 物件の借入れ | 150万円以下 | 80万円以下 | | 財産の売払い | 100万円以下 | 50万円以下 | | 物件の貸付け | 50万円以下 | 30万円以下 | | その他 |"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "50万円",
+        "line": 59,
+        "context": " 物件の借入れ | 150万円以下 | 80万円以下 | | 財産の売払い | 100万円以下 | 50万円以下 | | 物件の貸付け | 50万円以下 | 30万円以下 | | その他 | 200万円以下 "
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "50万円",
+        "line": 60,
+        "context": "80万円以下 | | 財産の売払い | 100万円以下 | 50万円以下 | | 物件の貸付け | 50万円以下 | 30万円以下 | | その他 | 200万円以下 | 100万円以下 |  #### 地方"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "30万円",
+        "line": 60,
+        "context": "| 財産の売払い | 100万円以下 | 50万円以下 | | 物件の貸付け | 50万円以下 | 30万円以下 | | その他 | 200万円以下 | 100万円以下 |  #### 地方公共団体の場合（地"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "200万円",
+        "line": 61,
+        "context": "下 | 50万円以下 | | 物件の貸付け | 50万円以下 | 30万円以下 | | その他 | 200万円以下 | 100万円以下 |  #### 地方公共団体の場合（地方自治法施行令別表第5） **都道府"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "100万円",
+        "line": 61,
+        "context": " | | 物件の貸付け | 50万円以下 | 30万円以下 | | その他 | 200万円以下 | 100万円以下 |  #### 地方公共団体の場合（地方自治法施行令別表第5） **都道府県・政令指定都市**"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "400万円",
+        "line": 67,
+        "context": " 基準額上限 | |------------|-----------| | 工事又は製造の請負 | 400万円 | | 財産の買入れ | 300万円 | | 物件の借入れ | 150万円 | | 財産の売払い "
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "300万円",
+        "line": 68,
+        "context": "---|-----------| | 工事又は製造の請負 | 400万円 | | 財産の買入れ | 300万円 | | 物件の借入れ | 150万円 | | 財産の売払い | 100万円 | | 物件の貸付け "
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "150万円",
+        "line": 69,
+        "context": "工事又は製造の請負 | 400万円 | | 財産の買入れ | 300万円 | | 物件の借入れ | 150万円 | | 財産の売払い | 100万円 | | 物件の貸付け | 50万円 | | その他 | 20"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "100万円",
+        "line": 70,
+        "context": " | 財産の買入れ | 300万円 | | 物件の借入れ | 150万円 | | 財産の売払い | 100万円 | | 物件の貸付け | 50万円 | | その他 | 200万円 |  **政令市を除く市区町村"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "50万円",
+        "line": 71,
+        "context": " | 物件の借入れ | 150万円 | | 財産の売払い | 100万円 | | 物件の貸付け | 50万円 | | その他 | 200万円 |  **政令市を除く市区町村** | 契約の種類 | 基準額上限"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "200万円",
+        "line": 72,
+        "context": "万円 | | 財産の売払い | 100万円 | | 物件の貸付け | 50万円 | | その他 | 200万円 |  **政令市を除く市区町村** | 契約の種類 | 基準額上限 | |------------"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "200万円",
+        "line": 77,
+        "context": " 基準額上限 | |------------|-----------| | 工事又は製造の請負 | 200万円 | | 財産の買入れ | 150万円 | | 物件の借入れ | 80万円 | | 財産の売払い |"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "150万円",
+        "line": 78,
+        "context": "---|-----------| | 工事又は製造の請負 | 200万円 | | 財産の買入れ | 150万円 | | 物件の借入れ | 80万円 | | 財産の売払い | 50万円 | | 物件の貸付け | "
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "80万円",
+        "line": 79,
+        "context": "工事又は製造の請負 | 200万円 | | 財産の買入れ | 150万円 | | 物件の借入れ | 80万円 | | 財産の売払い | 50万円 | | 物件の貸付け | 30万円 | | その他 | 100"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "50万円",
+        "line": 80,
+        "context": "| | 財産の買入れ | 150万円 | | 物件の借入れ | 80万円 | | 財産の売払い | 50万円 | | 物件の貸付け | 30万円 | | その他 | 100万円 |  ※地方自治体は各自治体の"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "30万円",
+        "line": 81,
+        "context": " | | 物件の借入れ | 80万円 | | 財産の売払い | 50万円 | | 物件の貸付け | 30万円 | | その他 | 100万円 |  ※地方自治体は各自治体の規則で定める額（上記を上限）  ##"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "100万円",
+        "line": 82,
+        "context": "0万円 | | 財産の売払い | 50万円 | | 物件の貸付け | 30万円 | | その他 | 100万円 |  ※地方自治体は各自治体の規則で定める額（上記を上限）  ### 2. 性質又は目的により競争"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "250万円",
+        "line": 171,
+        "context": "2:** 2025年4月1日に約半世紀ぶりに改正されました。物価高騰を背景に、国の工事・製造の請負は250万円から400万円に、財産の買入れは160万円から300万円に引き上げられました。地方自治体も同様の基準"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "400万円",
+        "line": 171,
+        "context": "25年4月1日に約半世紀ぶりに改正されました。物価高騰を背景に、国の工事・製造の請負は250万円から400万円に、財産の買入れは160万円から300万円に引き上げられました。地方自治体も同様の基準が適用されます"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "160万円",
+        "line": 171,
+        "context": "に改正されました。物価高騰を背景に、国の工事・製造の請負は250万円から400万円に、財産の買入れは160万円から300万円に引き上げられました。地方自治体も同様の基準が適用されますが、各自治体の規則で定める必"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "300万円",
+        "line": 171,
+        "context": "た。物価高騰を背景に、国の工事・製造の請負は250万円から400万円に、財産の買入れは160万円から300万円に引き上げられました。地方自治体も同様の基準が適用されますが、各自治体の規則で定める必要があります。"
+      }
+    ],
+    "free_application_findings": [],
+    "has_issues": true
+  },
+  {
+    "page": "lp1.md",
+    "status": "success",
+    "file_size": 17923,
+    "line_count": 553,
+    "price_findings": [
+      {
+        "pattern": "\\d+万円",
+        "match": "10万円",
+        "line": 4,
+        "context": "- 行政書士法人ふらっと法務事務所\" description: \"全省庁統一資格申請が完全無料！通常10万円の申請費用が0円、6ヶ月間の入札サポート付きで確実に資格取得。行政書士法人ふらっと法務事務所の特別プ"
+      }
+    ],
+    "free_application_findings": [
+      {
+        "pattern": "完全無料",
+        "match": "完全無料",
+        "line": 3,
+        "context": "layout: default title: \"全省庁統一資格 無料申請 | 6ヶ月入札サポート付き完全無料プラン - 行政書士法人ふらっと法務事務所\" description: \"全省庁統一資格申請が完全無"
+      },
+      {
+        "pattern": "完全無料",
+        "match": "完全無料",
+        "line": 4,
+        "context": "全無料プラン - 行政書士法人ふらっと法務事務所\" description: \"全省庁統一資格申請が完全無料！通常10万円の申請費用が0円、6ヶ月間の入札サポート付きで確実に資格取得。行政書士法人ふらっと法務"
+      },
+      {
+        "pattern": "無料申請",
+        "match": "無料申請",
+        "line": 3,
+        "context": "--- layout: default title: \"全省庁統一資格 無料申請 | 6ヶ月入札サポート付き完全無料プラン - 行政書士法人ふらっと法務事務所\" descripti"
+      },
+      {
+        "pattern": "無料申請",
+        "match": "無料申請",
+        "line": 5,
+        "context": "ふらっと法務事務所の特別プラン。神奈川県大和市から全国対応。\" keywords: 全省庁統一資格 無料申請,全省庁統一資格 無料,入札サポート 無料,行政書士 無料申請,公共調達 無料,入札参加資格 無料,"
+      },
+      {
+        "pattern": "無料申請",
+        "match": "無料申請",
+        "line": 5,
+        "context": " keywords: 全省庁統一資格 無料申請,全省庁統一資格 無料,入札サポート 無料,行政書士 無料申請,公共調達 無料,入札参加資格 無料,代行申請 無料,神奈川県,大和市 hide_left_side"
+      }
+    ],
+    "has_issues": true
+  },
+  {
+    "page": "zenshochou-lp.md",
+    "status": "success",
+    "file_size": 33276,
+    "line_count": 904,
+    "price_findings": [
+      {
+        "pattern": "\\d{1,3}(?:,\\d{3})+円",
+        "match": "88,000円",
+        "line": 482,
+        "context": "                       <span class=\"price-amount\">88,000円</span>                         <span class=\"price"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "000万円",
+        "line": 393,
+        "context": " 20名～100名</li>                         <li>資本金: 1,000万円～1億円</li>                     </ul>               "
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "000万円",
+        "line": 408,
+        "context": "        <ul>                         <li>年間売上高: 1,000万円～1億円</li>                         <li>従業員数: 5名～20名"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "100万円",
+        "line": 410,
+        "context": "業員数: 5名～20名</li>                         <li>資本金: 100万円～1,000万円</li>                     </ul>           "
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "000万円",
+        "line": 410,
+        "context": "20名</li>                         <li>資本金: 100万円～1,000万円</li>                     </ul>                   "
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "000万円",
+        "line": 425,
+        "context": "        <ul>                         <li>年間売上高: 1,000万円未満</li>                         <li>従業員数: 5名未満</li"
+      }
+    ],
+    "free_application_findings": [
+      {
+        "pattern": "完全無料",
+        "match": "完全無料",
+        "line": 39,
+        "context": "ge\">                 <span class=\"badge-text\">申請費用完全無料</span>             </div>             <h1 class=\""
+      },
+      {
+        "pattern": "完全無料",
+        "match": "完全無料",
+        "line": 102,
+        "context": "     <h4><i class=\"fas fa-check-circle\"></i> 申請費用は完全無料</h4>                         <p>国への申請費用は一切かかりません。"
+      },
+      {
+        "pattern": "完全無料",
+        "match": "完全無料",
+        "line": 515,
+        "context": "-answer\">                     <p>国への申請費用は一切かかりません。完全無料です。ただし、必要書類（登記事項証明書、納税証明書など）の取得費用は別途必要です。</p>     "
+      },
+      {
+        "pattern": "完全無料",
+        "match": "完全無料",
+        "line": 581,
+        "context": "hero_horizontal_small_600x120.png\" alt=\"全省庁統一資格申請 完全無料 - 毎月先着50組限定\" loading=\"lazy\">                 </a>"
+      },
+      {
+        "pattern": "申請費用無料",
+        "match": "申請費用無料",
+        "line": 3,
+        "context": "layout: default title: 全省庁統一資格 申請代行 | 行政書士が完全サポート【申請費用無料】- 神奈川県大和市 description: 全省庁統一資格の申請代行を行政書士が完全サポート。申"
+      },
+      {
+        "pattern": "申請費用無料",
+        "match": "申請費用無料",
+        "line": 4,
+        "context": "料】- 神奈川県大和市 description: 全省庁統一資格の申請代行を行政書士が完全サポート。申請費用無料・有効期間3年で確実な資格取得を実現。全国対応。 keywords: 全省庁統一資格 申請代行,全省"
+      },
+      {
+        "pattern": "申請費用無料",
+        "match": "申請費用無料",
+        "line": 5,
+        "context": "全省庁統一資格 代行,入札参加資格 代行,行政書士 申請代行,神奈川県 行政書士,大和市 行政書士,申請費用無料,資格申請代行 hide_left_sidebar: true hide_right_sidebar"
+      },
+      {
+        "pattern": "申請費用無料",
+        "match": "申請費用無料",
+        "line": 52,
+        "context": "=\"fas fa-yen-sign\"></i>                     <span>申請費用無料</span>                 </div>                 <di"
+      },
+      {
+        "pattern": "申請費用完全無料",
+        "match": "申請費用完全無料",
+        "line": 39,
+        "context": "-badge\">                 <span class=\"badge-text\">申請費用完全無料</span>             </div>             <h1 class=\""
+      }
+    ],
+    "has_issues": true
+  },
+  {
+    "page": "zenshochou-toitsu-shikaku.md",
+    "status": "success",
+    "file_size": 8631,
+    "line_count": 267,
+    "price_findings": [],
+    "free_application_findings": [
+      {
+        "pattern": "完全無料",
+        "match": "完全無料",
+        "line": 156,
+        "context": "よくある質問  ### Q1. 申請費用はかかりますか？ **A.** 申請費用は一切かかりません。完全無料です。  ### Q2. 申請から認定までどのくらいかかりますか？ **A.** 通常2-3ヶ月程度"
+      },
+      {
+        "pattern": "完全無料",
+        "match": "完全無料",
+        "line": 247,
+        "context": "請手続きは複雑ですが、適切に準備すれば確実に取得できます。  ### 重要なポイント - **申請は完全無料** - **有効期間は最長3年** - **更新手続きを忘れずに** - **専門家のサポートが有"
+      }
+    ],
+    "has_issues": true
+  },
+  {
+    "page": "knowhow.md",
+    "status": "success",
+    "file_size": 26817,
+    "line_count": 469,
+    "price_findings": [
+      {
+        "pattern": "\\d+万円",
+        "match": "500万円",
+        "line": 112,
+        "context": "。  **予定価格**は上限価格として設定され、これを超える入札は無効となります。例えば、予定価格が500万円の場合、501万円の入札は失格となります。  **最低制限価格**は下限価格として設定され、品質確保"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "501万円",
+        "line": 112,
+        "context": "**は上限価格として設定され、これを超える入札は無効となります。例えば、予定価格が500万円の場合、501万円の入札は失格となります。  **最低制限価格**は下限価格として設定され、品質確保のため過度な安値を"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "400万円",
+        "line": 114,
+        "context": "低制限価格**は下限価格として設定され、品質確保のため過度な安値を防止します。例えば、最低制限価格が400万円の場合、399万円の入札は失格となります。  具体例として建設工事の入札を考えると、A社が450万円"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "399万円",
+        "line": 114,
+        "context": "限価格として設定され、品質確保のため過度な安値を防止します。例えば、最低制限価格が400万円の場合、399万円の入札は失格となります。  具体例として建設工事の入札を考えると、A社が450万円で入札した場合は予"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "450万円",
+        "line": 116,
+        "context": "400万円の場合、399万円の入札は失格となります。  具体例として建設工事の入札を考えると、A社が450万円で入札した場合は予定価格内かつ最低制限価格以上のため落札となりますが、B社が380万円（最低制限価格"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "380万円",
+        "line": 116,
+        "context": "えると、A社が450万円で入札した場合は予定価格内かつ最低制限価格以上のため落札となりますが、B社が380万円（最低制限価格未満）やC社が520万円（予定価格超過）で入札した場合は失格となります。  ### 指"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "520万円",
+        "line": 116,
+        "context": "は予定価格内かつ最低制限価格以上のため落札となりますが、B社が380万円（最低制限価格未満）やC社が520万円（予定価格超過）で入札した場合は失格となります。  ### 指名競争入札  指名競争入札は、発注機関"
+      }
+    ],
+    "free_application_findings": [],
+    "has_issues": true
+  },
+  {
+    "page": "faq.md",
+    "status": "success",
+    "file_size": 59721,
+    "line_count": 1388,
+    "price_findings": [
+      {
+        "pattern": "\\d{1,3}(?:,\\d{3})+円",
+        "match": "7,900円",
+        "line": 541,
+        "context": ">                                 <li>商業登記電子証明書：年額7,900円</li>                                 <li>民間認証局：年額"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "500万円",
+        "line": 425,
+        "context": "    <ul>                                 <li>少額契約（500万円未満等）</li>                                 <li>国・地方"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "3万円",
+        "line": 542,
+        "context": "li>                                 <li>民間認証局：年額1-3万円程度</li>                             </ul>         "
+      }
+    ],
+    "free_application_findings": [],
+    "has_issues": true
+  },
+  {
+    "page": "flow.md",
+    "status": "success",
+    "file_size": 17227,
+    "line_count": 419,
+    "price_findings": [],
+    "free_application_findings": [],
+    "has_issues": false
+  },
+  {
+    "page": "cases.md",
+    "status": "success",
+    "file_size": 9893,
+    "line_count": 242,
+    "price_findings": [
+      {
+        "pattern": "\\d+万円",
+        "match": "800万円",
+        "line": 28,
+        "context": " 業種：土木工事業 - 従業員数：15名 - 所在地：群馬県 - 案件：市道改修工事（契約金額：2,800万円）  **制度的背景** この事例は**<a href=\"{{ '/knowhow/' | rela"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "500万円",
+        "line": 109,
+        "context": "テム開発 - 従業員数：25名 - 所在地：東京都 - 案件：自治体基幹システム更新（契約金額：8,500万円）  **制度的背景** IT関連の公共調達では**企画競争入札（プロポーザル方式）**が多用されま"
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "200万円",
+        "line": 188,
+        "context": "の戦略策定  **結果** - **初回入札で落札**（落札率：88.2%） - 契約金額：**1,200万円** - 継続契約により**3年間の安定収入**確保  **お客様の声** > 「公共案件は競争が激"
+      }
+    ],
+    "free_application_findings": [],
+    "has_issues": true
+  },
+  {
+    "page": "case-studies.md",
+    "status": "success",
+    "file_size": 24517,
+    "line_count": 670,
+    "price_findings": [
+      {
+        "pattern": "\\d+万円",
+        "match": "000万円",
+        "line": 170,
+        "context": "ング</div>                     <h3>行政改革支援コンサルティングで8,000万円受注</h3>                     <div class=\"case-meta\""
+      },
+      {
+        "pattern": "\\d+万円",
+        "match": "000万円",
+        "line": 172,
+        "context": "\"case-meta\">                         <span>受注額: 8,000万円</span>                         <span>期間: 18ヶ月</sp"
+      }
+    ],
+    "free_application_findings": [],
+    "has_issues": true
+  },
+  {
+    "page": "success-stories.md",
+    "status": "success",
+    "file_size": 14298,
+    "line_count": 461,
+    "price_findings": [],
+    "free_application_findings": [],
+    "has_issues": false
+  },
+  {
+    "page": "videos.md",
+    "status": "success",
+    "file_size": 26576,
+    "line_count": 709,
+    "price_findings": [
+      {
+        "pattern": "\\d+万円",
+        "match": "65万円",
+        "line": 365,
+        "context": "             入札参入の実体験談。最初の落札案件「北関東防衛局 公共事業労務費調査」（約65万円）を獲得するまでの1年間の苦労と、実績がない状態での案件探しの困難さを赤裸々に語ります。参入から3案"
+      }
+    ],
+    "free_application_findings": [],
+    "has_issues": true
+  },
+  {
+    "page": "blog.md",
+    "status": "success",
+    "file_size": 18840,
+    "line_count": 458,
+    "price_findings": [],
+    "free_application_findings": [],
+    "has_issues": false
+  },
+  {
+    "page": "newsletter.md",
+    "status": "success",
+    "file_size": 25862,
+    "line_count": 870,
+    "price_findings": [],
+    "free_application_findings": [],
+    "has_issues": false
+  },
+  {
+    "page": "downloads.md",
+    "status": "success",
+    "file_size": 30209,
+    "line_count": 850,
+    "price_findings": [],
+    "free_application_findings": [],
+    "has_issues": false
+  },
+  {
+    "page": "resources.html",
+    "status": "success",
+    "file_size": 25816,
+    "line_count": 703,
+    "price_findings": [],
+    "free_application_findings": [],
+    "has_issues": false
+  },
+  {
+    "page": "links.md",
+    "status": "success",
+    "file_size": 40342,
+    "line_count": 801,
+    "price_findings": [],
+    "free_application_findings": [],
+    "has_issues": false
+  },
+  {
+    "page": "glossary.md",
+    "status": "success",
+    "file_size": 17153,
+    "line_count": 483,
+    "price_findings": [],
+    "free_application_findings": [],
+    "has_issues": false
+  },
+  {
+    "page": "dictionary.md",
+    "status": "success",
+    "file_size": 19342,
+    "line_count": 385,
+    "price_findings": [],
+    "free_application_findings": [],
+    "has_issues": false
+  },
+  {
+    "page": "trends.md",
+    "status": "success",
+    "file_size": 35257,
+    "line_count": 1031,
+    "price_findings": [],
+    "free_application_findings": [],
+    "has_issues": false
+  },
+  {
+    "page": "comparison.md",
+    "status": "success",
+    "file_size": 16995,
+    "line_count": 548,
+    "price_findings": [],
+    "free_application_findings": [],
+    "has_issues": false
+  },
+  {
+    "page": "troubleshooting.md",
+    "status": "success",
+    "file_size": 13823,
+    "line_count": 466,
+    "price_findings": [
+      {
+        "pattern": "\\d{1,3}(?:,\\d{3})+円",
+        "match": "11,000円",
+        "line": 386,
+        "context": "ト（相談中心） - 現状分析と対応方針の提案 - 必要書類の説明 - 申請方法の指導 - **料金：11,000円〜**  #### スタンダードサポート（部分代行） - 申請書類の作成代行 - 必要書類の取得代行"
+      },
+      {
+        "pattern": "\\d{1,3}(?:,\\d{3})+円",
+        "match": "55,000円",
+        "line": 392,
+        "context": "部分代行） - 申請書類の作成代行 - 必要書類の取得代行 - 申請手続きのサポート - **料金：55,000円〜**  #### フルサポート（完全代行） - 申請から完了まで全て代行 - 継続的なフォロー -"
+      },
+      {
+        "pattern": "\\d{1,3}(?:,\\d{3})+円",
+        "match": "110,000円",
+        "line": 398,
+        "context": "（完全代行） - 申請から完了まで全て代行 - 継続的なフォロー - 更新時期の管理 - **料金：110,000円〜**  ### 継続サポートサービス  **年間管理サービス：** - 更新時期の事前通知 - 変"
+      },
+      {
+        "pattern": "\\d{1,3}(?:,\\d{3})+円",
+        "match": "11,000円",
+        "line": 407,
+        "context": "更新時期の事前通知 - 変更届出のサポート - 入札情報の提供 - 各種相談対応 - **料金：月額11,000円**  ---  ## 📞 **今すぐ相談したい方へ**  ### 無料相談の流れ  1. **お問"
+      }
+    ],
+    "free_application_findings": [],
+    "has_issues": true
+  },
+  {
+    "page": "nyusatsu-shikaku.md",
+    "status": "success",
+    "file_size": 11975,
+    "line_count": 435,
+    "price_findings": [],
+    "free_application_findings": [],
+    "has_issues": false
+  },
+  {
+    "page": "terms.md",
+    "status": "success",
+    "file_size": 3780,
+    "line_count": 100,
+    "price_findings": [],
+    "free_application_findings": [],
+    "has_issues": false
+  }
+]
