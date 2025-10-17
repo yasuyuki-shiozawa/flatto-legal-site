@@ -1,8 +1,8 @@
 ---
 layout: default-simple
-title: "入札参加資格 無料相談お申込み | 行政書士法人ふらっと法務事務所 - 神奈川県大和市"
-description: "入札参加資格取得の無料相談を承ります。月額33,000円で全工程をサポート。行政書士が全国対応。"
-keywords: 入札参加資格 無料相談,入札参加資格 申込み,無料相談 フォーム,行政書士 無料相談,入札サポート 申込み,神奈川県 行政書士,大和市 行政書士
+title: "入札参加資格 ご相談お申込み | 行政書士法人ふらっと法務事務所 - 神奈川県大和市"
+description: "入札参加資格取得のご相談を承ります。専門家が全工程をサポート。行政書士が全国対応。"
+keywords: 入札参加資格 相談,入札参加資格 申込み,相談 フォーム,行政書士 相談,入札サポート 申込み,神奈川県 行政書士,大和市 行政書士
 permalink: /contact/
 ---
 
@@ -518,26 +518,26 @@ permalink: /contact/
 <section class="hero">
     <div class="container">
         <h1>「入札参加資格は取れたけど...<br>その後どうすればいいの？」</h1>
-        <p class="subtitle">他社では8-12万円かかる申請が<br><strong>【完全無料】</strong></p>
+        <p class="subtitle">専門家が申請から入札参加まで<br><strong>完全サポート</strong></p>
         <div class="features">
-            月額33,000円で事前調査から業務完了まで<br>
-            全省庁統一資格申請は無料
+            事前調査から業務完了まで一貫サポート<br>
+            全省庁統一資格申請も対応
         </div>
-        <a href="#contact" class="cta-button">無料相談のお申し込み</a>
+        <a href="#contact" class="cta-button">まずはご相談ください</a>
     </div>
 </section>
 
-<!-- 料金比較セクション -->
+<!-- サービス比較セクション -->
 <section class="pricing-comparison">
     <div class="container">
-        <h2 class="comparison-title">他社との料金比較</h2>
-        <p class="comparison-subtitle">申請費用だけでこんなに違います</p>
+        <h2 class="comparison-title">他社とのサービス比較</h2>
+        <p class="comparison-subtitle">当事務所の特徴</p>
         
         <div class="comparison-grid">
             <div class="comparison-card">
                 <div class="comparison-label">一般的な事務所</div>
-                <div class="comparison-price">8-12万円</div>
-                <div class="comparison-period">申請のみ</div>
+                <div class="comparison-price">申請代行のみ</div>
+                <div class="comparison-period">申請完了で終了</div>
                 <ul class="comparison-features">
                     <li>申請代行のみ</li>
                     <li>その後のサポートなし</li>
@@ -548,10 +548,10 @@ permalink: /contact/
             
             <div class="comparison-card recommended">
                 <div class="comparison-label">当事務所</div>
-                <div class="comparison-price">完全無料</div>
-                <div class="comparison-period">申請 + 完全サポート</div>
+                <div class="comparison-price">完全サポート</div>
+                <div class="comparison-period">申請 + 入札参加まで</div>
                 <ul class="comparison-features">
-                    <li>申請代行無料</li>
+                    <li>申請代行対応</li>
                     <li>6ヶ月間完全サポート</li>
                     <li>案件探しもお手伝い</li>
                     <li>入札手続きも指導</li>
@@ -564,16 +564,16 @@ permalink: /contact/
 <!-- 最終プッシュセクション -->
 <section class="final-push">
     <div class="container">
-        <h2 style="color: white !important; font-weight: 700 !important;">💡 今すぐ無料相談を申し込む3つの理由</h2>
+        <h2 style="color: white !important; font-weight: 700 !important;">💡 今すぐご相談いただく3つの理由</h2>
         
         <div class="push-reasons">
             <div class="push-reason">
-                <h3>① 申請費用8-12万円が完全無料</h3>
-                <p>他社では高額な申請費用が、当事務所なら完全無料。6ヶ月サポート契約で、申請から入札参加まで全てをサポートします。</p>
+                <h3>① 申請から入札参加まで完全サポート</h3>
+                <p>申請代行だけではなく、6ヶ月間の完全サポートで、申請から入札参加まで全てをサポートします。</p>
             </div>
             
             <div class="push-reason">
-                <h3>② 30分で参入可能性を無料診断</h3>
+                <h3>② 30分で参入可能性を診断</h3>
                 <p>あなたの業種で本当に入札参加できるのか、競合状況や勝算を含めて詳しく分析。無理な参入はお勧めしません。</p>
             </div>
             
@@ -606,7 +606,7 @@ permalink: /contact/
                     どの資格が必要なのか、お客様と一緒に確認いたします。<br>
                     面倒な算出作業も、最初は丁寧にお手伝いしながら、<br>
                     次回はお客様ご自身でできるよう、しっかりと指導いたします。<br>
-                    全省庁統一資格については、無料で申請代行いたします。
+                    全省庁統一資格についても、申請代行いたします。
                 </div>
             </div>
         </div>
@@ -756,8 +756,8 @@ permalink: /contact/
                 <p>24時間以内にご連絡いたします。しばらくお待ちください。</p>
             </div>
 
-            <h2 class="form-title">申請費用8-12万円→0円</h2>
-            <p class="form-title-sub">まずは無料相談から始めませんか？</p>
+            <h2 class="form-title">入札参加資格取得サポート</h2>
+            <p class="form-title-sub">まずは専門家にご相談ください</p>
             <p class="form-subtitle">
                 30分で入札参加の可能性を診断いたします<br>
                 お気軽にお問い合わせください
@@ -821,8 +821,8 @@ permalink: /contact/
                 </div>
 
                 <button type="submit" class="submit-button" id="submitBtn">
-                    無料相談を申し込む
-                    <div class="submit-button-sub">申請費用8-12万円が無料</div>
+                    ご相談を申し込む
+                    <div class="submit-button-sub">専門家が完全サポート</div>
                 </button>
 
                 <p class="form-note">
