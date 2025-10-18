@@ -231,7 +231,7 @@ disable_structured_data: true
             <div class="process-step">
                 <div class="step-number">1</div>
                 <div class="step-content">
-                    <h3>無料相談・ヒアリング</h3>
+                    <h3>ご相談・ヒアリング</h3>
                     <p>お客様の事業内容を詳しくお聞きし、最適な営業品目をご提案いたします</p>
                     <div class="step-duration">所要時間: 30分～1時間</div>
                 </div>
@@ -489,7 +489,7 @@ disable_structured_data: true
                         <li><i class="fas fa-check"></i> 進捗管理・報告</li>
                         <li><i class="fas fa-check"></i> 更新時期通知</li>
                         <li><i class="fas fa-check"></i> 入札参加サポート</li>
-                        <li><i class="fas fa-check"></i> 無料相談（初回）</li>
+                        <li><i class="fas fa-check"></i> ご相談（初回）</li>
                     </ul>
                 </div>
                 <div class="pricing-note">
