@@ -60,6 +60,686 @@ permalink: /videos/
     <section class="video-list-section">
       <h2 class="section-title">動画一覧</h2>
       <div class="video-grid">
+
+        <!-- 新規追加: 【官公庁入札】入札時の失敗パターン10選！Vol.2 -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/2U_wvgc84gs" 
+                title="【官公庁入札】入札時の失敗パターン10選！Vol.2" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">【官公庁入札】入札時の失敗パターン10選！Vol.2</h5>
+              <p class="video-description">
+                官公庁の入札の際の気を付けてほしいことを失敗パターンに交えてお話します！
+
+わたしたちふらっと法務事務所も、たくさんの失敗を重ねてきました、、、(苦笑)
+だからこそ私たちにサポートさせてほしいと強く願っています！
+
+
+
+
+
+入札マップはこちら↓
+https://nyusatsu-map.com/​
+...
+              </p>
+              <div class="video-meta">
+                <span class="badge bg-danger me-2">最新</span>
+                <span class="badge bg-info me-2">ノウハウ</span>
+                <span class="text-muted small">2025年10月</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 新規追加: 【官公庁入札】入札時の失敗パターン10選！ -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/_j6PjLUpcs4" 
+                title="【官公庁入札】入札時の失敗パターン10選！" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">【官公庁入札】入札時の失敗パターン10選！</h5>
+              <p class="video-description">
+                官公庁の入札の際の気を付けてほしいことを失敗パターンに交えてお話します！
+
+わたしたちふらっと法務事務所も、たくさんの失敗を重ねてきました、、、(苦笑)
+だからこそ私たちにサポートさせてほしいと強く願っています！
+
+
+
+
+
+入札マップはこちら↓
+https://nyusatsu-map.com/​
+...
+              </p>
+              <div class="video-meta">
+                <span class="badge bg-danger me-2">最新</span>
+                <span class="badge bg-info me-2">ノウハウ</span>
+                <span class="text-muted small">2025年10月</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 新規追加: 【融資】落札した案件で融資が受けれる！！ -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/lZPLJMsXTsw" 
+                title="【融資】落札した案件で融資が受けれる！！" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">【融資】落札した案件で融資が受けれる！！</h5>
+              <p class="video-description">
+                官公庁との取引で唯一困ることと言えば、入金に時間がかかること！
+
+そんなときは、事前に金融機関に相談したほうがいい？？
+
+のんびりまったりしおざわさんと天の声さおりがお話していきます！
+
+
+
+
+入札マップはこちら↓
+https://nyusatsu-map.com/​
+
+ふらっと法務事務所のホームペ...
+              </p>
+              <div class="video-meta">
+                <span class="badge bg-danger me-2">最新</span>
+                <span class="badge bg-info me-2">資金調達</span>
+                <span class="text-muted small">2025年10月</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 新規追加: 【創業したい方必見!!】入札参加資格で日本政策金融公庫での融資を有利に!!vol.4 -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/EasoUphROpQ" 
+                title="【創業したい方必見!!】入札参加資格で日本政策金融公庫での融資を有利に!!vol.4" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">【創業したい方必見!!】入札参加資格で日本政策金融公庫での融資を有利に!!vol.4</h5>
+              <p class="video-description">
+                しおざわさんと天の声さおりのテーマトークVol.4！
+
+入札参加資格って創業時の融資にも有利に働くことをご存知でしたか？
+
+
+今回は、創業する方に向けて、入札参加資格取得することが日本政策金融公庫の融資にも有利となる！
+をテーマに、しおざわさんと天の声さおりが話をしていきます！
+
+
+
+入札マップはこ...
+              </p>
+              <div class="video-meta">
+                
+                <span class="badge bg-info me-2">資金調達</span>
+                <span class="text-muted small">2025年10月</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 新規追加: 【創業したい方必見!!】入札参加資格で日本政策金融公庫での融資を有利に!!vol.3 -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/sdfsVxBk7m0" 
+                title="【創業したい方必見!!】入札参加資格で日本政策金融公庫での融資を有利に!!vol.3" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">【創業したい方必見!!】入札参加資格で日本政策金融公庫での融資を有利に!!vol.3</h5>
+              <p class="video-description">
+                しおざわさんと天の声さおりのテーマトークVol.3！
+
+入札参加資格って創業時の融資にも有利に働くことをご存知でしたか？
+
+
+今回は、創業する方に向けて、入札参加資格取得することが日本政策金融公庫の融資にも有利となる！
+をテーマに、しおざわさんと天の声さおりが話をしていきます！
+
+
+
+入札マップはこ...
+              </p>
+              <div class="video-meta">
+                
+                <span class="badge bg-info me-2">資金調達</span>
+                <span class="text-muted small">2025年10月</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 新規追加: 【創業したい方必見!!】入札参加資格で日本政策金融公庫での融資を有利に!! -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/SlGuzbZvWlQ" 
+                title="【創業したい方必見!!】入札参加資格で日本政策金融公庫での融資を有利に!!" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">【創業したい方必見!!】入札参加資格で日本政策金融公庫での融資を有利に!!</h5>
+              <p class="video-description">
+                しおざわさんと天の声さおりのテーマトークVol.2！
+
+入札参加資格って創業時の融資にも有利に働くことをご存知でしたか？
+
+
+今回は、創業する方に向けて、入札参加資格取得することが日本政策金融公庫の融資にも有利となる！
+をテーマに、しおざわさんと天の声さおりが話をしていきます！
+
+
+
+入札マップはこ...
+              </p>
+              <div class="video-meta">
+                
+                <span class="badge bg-info me-2">資金調達</span>
+                <span class="text-muted small">2025年10月</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 新規追加: 【創業したい方必見!!】入札参加資格で日本政策金融公庫での融資を有利に!! -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/4JICZalNs78" 
+                title="【創業したい方必見!!】入札参加資格で日本政策金融公庫での融資を有利に!!" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">【創業したい方必見!!】入札参加資格で日本政策金融公庫での融資を有利に!!</h5>
+              <p class="video-description">
+                10日ほどお休みいただきました！おまたせしました！
+入札参加資格って創業時の融資にも有利に働くことをご存知でしたか？
+
+
+今回は、創業する方に向けて、入札参加資格取得することが日本政策金融公庫の融資にも有利となる！
+をテーマに、しおざわさんと天の声さおりが話をしていきます！
+
+
+
+入札マップはこちら...
+              </p>
+              <div class="video-meta">
+                
+                <span class="badge bg-info me-2">資金調達</span>
+                <span class="text-muted small">2025年10月</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 新規追加: 【入札サポート】ふらっと法務事務所がサポートを始めた理由！ラストでーす！ -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/Hrdzp-ohgWo" 
+                title="【入札サポート】ふらっと法務事務所がサポートを始めた理由！ラストでーす！" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">【入札サポート】ふらっと法務事務所がサポートを始めた理由！ラストでーす！</h5>
+              <p class="video-description">
+                ラストになります！！
+今回もふらっと法務事務所ってどんな事務所？ってことを少しでも知ってもらうべく！
+
+入札サポートを事業として行おうと思った経緯についてしおざわさんとあっくん、そしてさおりが語っていただきます☆
+
+私たちスタッフの共通点は【人が好き】。
+経営者の孤独に寄り添いたい。本気で思っていま...
+              </p>
+              <div class="video-meta">
+                
+                <span class="badge bg-info me-2">事務所紹介</span>
+                <span class="text-muted small">2025年09月</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 新規追加: 【入札サポート】ふらっと法務事務所がサポートを始めた理由vol.2 -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/roRUQ_0hAYs" 
+                title="【入札サポート】ふらっと法務事務所がサポートを始めた理由vol.2" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">【入札サポート】ふらっと法務事務所がサポートを始めた理由vol.2</h5>
+              <p class="video-description">
+                今回も、ふらっと法務事務所ってどんな事務所？ってことを少しでも知ってもらうべく！
+
+入札サポートを事業として行おうと思った経緯についてしおざわさんに語っていただきます☆
+
+
+入札マップはこちら↓
+https://nyusatsu-map.com/
+
+ふらっと法務事務所のホームページ↓
+https:/...
+              </p>
+              <div class="video-meta">
+                
+                <span class="badge bg-info me-2">事務所紹介</span>
+                <span class="text-muted small">2025年09月</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 新規追加: 【官公庁入札】入札時の失敗パターン10選！Vol.2 -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/2U_wvgc84gs" 
+                title="【官公庁入札】入札時の失敗パターン10選！Vol.2" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">【官公庁入札】入札時の失敗パターン10選！Vol.2</h5>
+              <p class="video-description">
+                官公庁の入札の際の気を付けてほしいことを失敗パターンに交えてお話します！
+
+わたしたちふらっと法務事務所も、たくさんの失敗を重ねてきました、、、(苦笑)
+だからこそ私たちにサポートさせてほしいと強く願っています！
+
+
+
+
+
+入札マップはこちら↓
+https://nyusatsu-map.com/​
+...
+              </p>
+              <div class="video-meta">
+                <span class="badge bg-danger me-2">最新</span>
+                <span class="badge bg-info me-2">ノウハウ</span>
+                <span class="text-muted small">2025年10月</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 新規追加: 【官公庁入札】入札時の失敗パターン10選！ -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/_j6PjLUpcs4" 
+                title="【官公庁入札】入札時の失敗パターン10選！" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">【官公庁入札】入札時の失敗パターン10選！</h5>
+              <p class="video-description">
+                官公庁の入札の際の気を付けてほしいことを失敗パターンに交えてお話します！
+
+わたしたちふらっと法務事務所も、たくさんの失敗を重ねてきました、、、(苦笑)
+だからこそ私たちにサポートさせてほしいと強く願っています！
+
+
+
+
+
+入札マップはこちら↓
+https://nyusatsu-map.com/​
+...
+              </p>
+              <div class="video-meta">
+                <span class="badge bg-danger me-2">最新</span>
+                <span class="badge bg-info me-2">ノウハウ</span>
+                <span class="text-muted small">2025年10月</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 新規追加: 【融資】落札した案件で融資が受けれる！！ -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/lZPLJMsXTsw" 
+                title="【融資】落札した案件で融資が受けれる！！" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">【融資】落札した案件で融資が受けれる！！</h5>
+              <p class="video-description">
+                官公庁との取引で唯一困ることと言えば、入金に時間がかかること！
+
+そんなときは、事前に金融機関に相談したほうがいい？？
+
+のんびりまったりしおざわさんと天の声さおりがお話していきます！
+
+
+
+
+入札マップはこちら↓
+https://nyusatsu-map.com/​
+
+ふらっと法務事務所のホームペ...
+              </p>
+              <div class="video-meta">
+                <span class="badge bg-danger me-2">最新</span>
+                <span class="badge bg-info me-2">資金調達</span>
+                <span class="text-muted small">2025年10月</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 新規追加: 【創業したい方必見!!】入札参加資格で日本政策金融公庫での融資を有利に!!vol.4 -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/EasoUphROpQ" 
+                title="【創業したい方必見!!】入札参加資格で日本政策金融公庫での融資を有利に!!vol.4" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">【創業したい方必見!!】入札参加資格で日本政策金融公庫での融資を有利に!!vol.4</h5>
+              <p class="video-description">
+                しおざわさんと天の声さおりのテーマトークVol.4！
+
+入札参加資格って創業時の融資にも有利に働くことをご存知でしたか？
+
+
+今回は、創業する方に向けて、入札参加資格取得することが日本政策金融公庫の融資にも有利となる！
+をテーマに、しおざわさんと天の声さおりが話をしていきます！
+
+
+
+入札マップはこ...
+              </p>
+              <div class="video-meta">
+                
+                <span class="badge bg-info me-2">資金調達</span>
+                <span class="text-muted small">2025年10月</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 新規追加: 【創業したい方必見!!】入札参加資格で日本政策金融公庫での融資を有利に!!vol.3 -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/sdfsVxBk7m0" 
+                title="【創業したい方必見!!】入札参加資格で日本政策金融公庫での融資を有利に!!vol.3" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">【創業したい方必見!!】入札参加資格で日本政策金融公庫での融資を有利に!!vol.3</h5>
+              <p class="video-description">
+                しおざわさんと天の声さおりのテーマトークVol.3！
+
+入札参加資格って創業時の融資にも有利に働くことをご存知でしたか？
+
+
+今回は、創業する方に向けて、入札参加資格取得することが日本政策金融公庫の融資にも有利となる！
+をテーマに、しおざわさんと天の声さおりが話をしていきます！
+
+
+
+入札マップはこ...
+              </p>
+              <div class="video-meta">
+                
+                <span class="badge bg-info me-2">資金調達</span>
+                <span class="text-muted small">2025年10月</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 新規追加: 【創業したい方必見!!】入札参加資格で日本政策金融公庫での融資を有利に!! -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/SlGuzbZvWlQ" 
+                title="【創業したい方必見!!】入札参加資格で日本政策金融公庫での融資を有利に!!" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">【創業したい方必見!!】入札参加資格で日本政策金融公庫での融資を有利に!!</h5>
+              <p class="video-description">
+                しおざわさんと天の声さおりのテーマトークVol.2！
+
+入札参加資格って創業時の融資にも有利に働くことをご存知でしたか？
+
+
+今回は、創業する方に向けて、入札参加資格取得することが日本政策金融公庫の融資にも有利となる！
+をテーマに、しおざわさんと天の声さおりが話をしていきます！
+
+
+
+入札マップはこ...
+              </p>
+              <div class="video-meta">
+                
+                <span class="badge bg-info me-2">資金調達</span>
+                <span class="text-muted small">2025年10月</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 新規追加: 【創業したい方必見!!】入札参加資格で日本政策金融公庫での融資を有利に!! -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/4JICZalNs78" 
+                title="【創業したい方必見!!】入札参加資格で日本政策金融公庫での融資を有利に!!" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">【創業したい方必見!!】入札参加資格で日本政策金融公庫での融資を有利に!!</h5>
+              <p class="video-description">
+                10日ほどお休みいただきました！おまたせしました！
+入札参加資格って創業時の融資にも有利に働くことをご存知でしたか？
+
+
+今回は、創業する方に向けて、入札参加資格取得することが日本政策金融公庫の融資にも有利となる！
+をテーマに、しおざわさんと天の声さおりが話をしていきます！
+
+
+
+入札マップはこちら...
+              </p>
+              <div class="video-meta">
+                
+                <span class="badge bg-info me-2">資金調達</span>
+                <span class="text-muted small">2025年10月</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 新規追加: 【入札サポート】ふらっと法務事務所がサポートを始めた理由！ラストでーす！ -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/Hrdzp-ohgWo" 
+                title="【入札サポート】ふらっと法務事務所がサポートを始めた理由！ラストでーす！" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">【入札サポート】ふらっと法務事務所がサポートを始めた理由！ラストでーす！</h5>
+              <p class="video-description">
+                ラストになります！！
+今回もふらっと法務事務所ってどんな事務所？ってことを少しでも知ってもらうべく！
+
+入札サポートを事業として行おうと思った経緯についてしおざわさんとあっくん、そしてさおりが語っていただきます☆
+
+私たちスタッフの共通点は【人が好き】。
+経営者の孤独に寄り添いたい。本気で思っていま...
+              </p>
+              <div class="video-meta">
+                
+                <span class="badge bg-info me-2">事務所紹介</span>
+                <span class="text-muted small">2025年09月</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 新規追加: 【入札サポート】ふらっと法務事務所がサポートを始めた理由vol.2 -->
+        <div class="col-md-6 mb-4">
+          <div class="video-card h-100">
+            <div class="video-thumbnail">
+              <iframe 
+                src="https://www.youtube.com/embed/roRUQ_0hAYs" 
+                title="【入札サポート】ふらっと法務事務所がサポートを始めた理由vol.2" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                allowfullscreen="true"
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-body">
+              <h5 class="video-title">【入札サポート】ふらっと法務事務所がサポートを始めた理由vol.2</h5>
+              <p class="video-description">
+                今回も、ふらっと法務事務所ってどんな事務所？ってことを少しでも知ってもらうべく！
+
+入札サポートを事業として行おうと思った経緯についてしおざわさんに語っていただきます☆
+
+
+入札マップはこちら↓
+https://nyusatsu-map.com/
+
+ふらっと法務事務所のホームページ↓
+https:/...
+              </p>
+              <div class="video-meta">
+                
+                <span class="badge bg-info me-2">事務所紹介</span>
+                <span class="text-muted small">2025年09月</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- 最新動画1: 入札サポート理由 -->
         <div class="col-md-6 mb-4">
           <div class="video-card h-100">
