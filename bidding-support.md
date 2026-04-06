@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 入札サポートサービス - 3年後の売り上げの柱を立てる
-description: 3年後の売上の種を植えよう。全省庁統一資格申請から入札参加まで完全サポート。事前診断・全額返金保証付きで安心してチャレンジできます。月額33,000円で入札参加の全工程をサポートいたします。
+description: 3年後の売上の種を植えよう。全省庁統一資格申請から入札参加まで完全サポート。事前診断・全額返金保証付きで安心してチャレンジできます。月額44,000円で入札参加の全工程をサポートいたします。
 ---
 
 <style>
@@ -452,7 +452,7 @@ description: 3年後の売上の種を植えよう。全省庁統一資格申請
     </div>
     <div class="stat-box">
       <div class="stat-label">月額</div>
-      <div class="stat-value">33,000<span class="stat-unit">円</span></div>
+      <div class="stat-value">44,000<span class="stat-unit">円</span></div>
       <div class="stat-desc">完全サポート</div>
     </div>
   </div>
@@ -563,7 +563,7 @@ description: 3年後の売上の種を植えよう。全省庁統一資格申請
     
     <div class="service-item">
       <h4 class="service-title">入札参加完全サポート</h4>
-      <p class="service-desc">申請から業務完了まで月額33,000円で全工程サポート</p>
+      <p class="service-desc">申請から業務完了まで月額44,000円で全工程サポート</p>
       <a href="tel:046-272-3357" class="btn-service btn-red">入札参加完全サポートを申し込む</a>
     </div>
     
