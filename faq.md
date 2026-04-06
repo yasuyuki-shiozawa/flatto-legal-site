@@ -55,6 +55,7 @@ faq_items:
                     <button class="filter-tab" data-category="technical">技術提案</button>
                     <button class="filter-tab" data-category="contract">契約・履行</button>
                     <button class="filter-tab" data-category="electronic">電子入札</button>
+                    <button class="filter-tab" data-category="industry">業種別</button>
                 </div>
             </div>
         </div>
@@ -544,9 +545,88 @@ faq_items:
                         </div>
                     </div>
                 </div>
-
+                
+                <!-- 業種別よくある質問 -->
+                <div class="faq-category" data-category="industry">
+                    <h2 class="category-title">
+                        <span class="category-icon">🏢</span>
+                        業種別よくある質問（IT・映像・人材派遣など）
+                    </h2>
+                    
+                    <div class="faq-item" data-keywords="IT システム開発 Web制作 入札 業種">
+                        <div class="faq-question">
+                            <h3>Web制作・ITシステム開発の会社でも入札に参加できますか？</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>はい、参加できます。IT・システム開発業やWeb制作業は、全省庁統一資格の「役務の提供等」区分で申請することで、国の各省庁・庁内外局が発注するシステム開発案件やWebサイト制作案件に応札できるようになります。</p>
+                            <p><strong>対象となる主な業務：</strong></p>
+                            <ul>
+                                <li>システム開発・ソフトウェア制作</li>
+                                <li>Webサイト・ホームページ制作</li>
+                                <li>システム保守・運用・メンテナンス</li>
+                                <li>ITコンサルティング・データ分析</li>
+                                <li>SES（システムエンジニアリングサービス）</li>
+                            </ul>
+                            <p><strong>ポイント：</strong>小規模な案件（100万円前後）から始められる案件も多く、初めて入札に参加する中小企業さまにも取り組みやすい分野です。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item" data-keywords="映像制作 動画 広告 SNS 入札">
+                        <div class="faq-question">
+                            <h3>映像制作・SNS運用・広告業でも入札に参加できますか？</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>はい、入札参加できます。映像制作・SNS運用・PR・広告業は、全省庁統一資格の「役務の提供等」区分で申請することで対象になります。</p>
+                            <p><strong>対象となる主な業務：</strong></p>
+                            <ul>
+                                <li>広報映像・プロモーション動画制作</li>
+                                <li>広報物・パンフレット・印刷物制作</li>
+                                <li>広報・プロモーションコンサルティング</li>
+                                <li>SNS運用・デジタルマーケティング</li>
+                                <li>イベント運営・企画</li>
+                            </ul>
+                            <p><strong>ポイント：</strong>地方自治体の広報業務（広報誌制作、イベント運営など）は公共入札の実績を積みやすい分野です。まず小規模案件から実績を積み、小学校・市区町村の広報業務などへの応札を目指す方法が有効です。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item" data-keywords="人材派遣 コールセンター 入札 業種">
+                        <div class="faq-question">
+                            <h3>人材派遣業・コールセンター業でも公共入札に参加できますか？</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>はい、参加できます。人材派遣業・コールセンター業は、全省庁統一資格の「役務の提供等」区分で申請することで対象になります。</p>
+                            <p><strong>対象となる主な業務：</strong></p>
+                            <ul>
+                                <li>人材派遣・スタッフィング</li>
+                                <li>コールセンター業務（問い合わせ対応・テレマーケティング）</li>
+                                <li>研修・教育サービスの提供</li>
+                                <li>人事コンサルティング</li>
+                            </ul>
+                            <p><strong>注意点：</strong>人材派遣業は「労働者派遣事業の許可」を取得していることが入札参加資格申請の前提となります。まず許可の確認から始めましょう。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item" data-keywords="入札 実績なし 初めて 新設法人">
+                        <div class="faq-question">
+                            <h3>入札実績がまだない場合でも全省庁統一資格は取得できますか？</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>はい、入札実績がなくても全省庁統一資格は取得できます。全省庁統一資格は、入札実績ではなく「財務諸表」「納税証明」などの書類を審査して資格を付与する制度です。</p>
+                            <p><strong>必要な主な要件：</strong></p>
+                            <ul>
+                                <li>法人登記または個人事業主であること</li>
+                                <li>国税・地方税の未納がないこと</li>
+                                <li>必要書類（財務諸表、納税証明書など）が整っていること</li>
+                            </ul>
+                            <p><strong>ポイント：</strong>資格取得後は実際に応札することが大切です。入札実績があれば次回更新時に格付け向上につながります。まず資格を取得し、小規模案件から応札を始めることをお勧めします。</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-
             <!-- 検索結果表示 -->
             <div class="search-results" id="searchResults" style="display: none;">
                 <h2>検索結果</h2>
