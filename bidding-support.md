@@ -526,28 +526,6 @@ description: 3年後の売上の種を植えよう。全省庁統一資格申請
   </div>
 </div>
 
-<!-- 特典セクション -->
-<section class="benefits-section">
-  <h2 class="benefits-title">今なら特別特典</h2>
-  <div class="benefits-grid">
-    <div class="benefit-item">
-      <div class="benefit-icon">🎁</div>
-      <h3 class="benefit-title">全省庁統一資格申請が無料！</h3>
-      <p class="benefit-desc">通常15万円の申請費用が完全無料。サポート申し込みと同時に資格取得をスタートできます。</p>
-      <div class="price-tag">通常15万円 → 0円</div>
-    </div>
-    <div class="benefit-item">
-      <div class="benefit-icon">🔍</div>
-      <h3 class="benefit-title">事前診断で可能性を確認</h3>
-      <p class="benefit-desc">お客様の事業内容を詳しくヒアリングし、入札参加の可能性を事前に診断。無理な営業は一切いたしません。</p>
-    </div>
-    <div class="benefit-item">
-      <div class="benefit-icon">💯</div>
-      <h3 class="benefit-title">全額返金保証</h3>
-      <p class="benefit-desc">万一、資格取得ができなかった場合には全額返金。リスクゼロで入札の世界にチャレンジできます。</p>
-    </div>
-  </div>
-</section>
 
 <!-- サービス内容 -->
 <section class="services-section">

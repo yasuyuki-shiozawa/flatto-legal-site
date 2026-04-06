@@ -576,11 +576,7 @@ disable_structured_data: true
                 <h2>全省庁統一資格について詳しく相談したい方へ</h2>
                 <p>専門の行政書士が詳しくご相談をお受けします</p>
             </div>
-            <div class="cta-banner-image">
-                <a href="/lp1/">
-                    <img src="/assets/images/banners/banner_lp1_hero_horizontal_small_600x120.png" alt="全省庁統一資格申請 専門家がサポート" loading="lazy">
-                </a>
-            </div>
+
         </div>
         
         <div class="contact-info-simple">
