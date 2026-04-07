@@ -426,33 +426,6 @@ https:/...
             </div>
           </div>
         </div>
-
-
-        <!-- 新規追加: 仕様書解説第二弾！プロモーション関連編！ -->
-        <div class="col-md-6 mb-4">
-          <div class="video-card h-100">
-            <div class="video-thumbnail">
-              <iframe 
-                src="https://www.youtube.com/embed/gyD0tGZPSms" 
-                title="仕様書解説第二弾！プロモーション関連編！VOL.らすとーーーー！" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
-                allowfullscreen="true"
-                loading="lazy">
-              </iframe>
-            </div>
-            <div class="video-card-body">
-              <h5 class="video-title">仕様書解説第二弾！プロモーション関連編！</h5>
-              <p class="video-description">
-                公式LINEアカウントを活用したプロモーション業務委託案件の仕様書を解説。参加条件が緩く見えても潜む「立て替え費用」や「データ移行コスト」など、実務で失敗しないための実践的なチェックポイントをお伝えします。
-              </p>
-              <div class="video-meta">
-                <span class="badge bg-danger me-2">最新</span>
-                <span class="badge bg-info me-2">仕様書解説</span>
-                <span class="text-muted small">2026年3月</span>
-              </div>
-            </div>
-          </div>
         </div>
 
         <!-- 新規追加: 【官公庁入札】入札時の失敗パターン10選！Vol.2 -->

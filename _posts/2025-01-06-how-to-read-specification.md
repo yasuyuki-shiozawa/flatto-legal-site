@@ -412,3 +412,25 @@ image: "/assets/images/blog/procurement-notice-guide.jpg"
 
 **この記事に関するご質問やご相談は、行政書士法人フラットまでお気軽にお問い合わせください。仕様書の読み方から提案書作成まで、入札参加の全プロセスを専門的にサポートいたします。**
 
+
+## 【動画で学ぶ】仕様書解説シリーズ
+
+実際の仕様書を見ながら具体的な読み解き方を学びたい方は、弊所のYouTubeチャンネルで公開している解説動画もぜひご覧ください。
+
+<div class="video-container mb-4 mt-3">
+  <iframe 
+    src="https://www.youtube.com/embed/gyD0tGZPSms" 
+    title="仕様書解説第二弾！プロモーション関連編！VOL.らすとーーーー！" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+    allowfullscreen="true"
+    loading="lazy">
+  </iframe>
+</div>
+
+**関連動画シリーズ：**
+- [仕様書解説第二弾！プロモーション関連編！VOL.1](https://www.youtube.com/watch?v=TBKK2_8yuWg)
+- [仕様書解説第二弾！プロモーション関連編！VOL.2](https://www.youtube.com/watch?v=dFdrvr9Mxc4)
+- [仕様書解説第二弾！プロモーション関連編！VOL.3](https://www.youtube.com/watch?v=9SA6kJoce0A)
+
+プロモーション案件など、一見参加しやすそうな案件に潜む「立て替え費用」や「データ移行コスト」といった落とし穴について、プロの目線で解説しています。
