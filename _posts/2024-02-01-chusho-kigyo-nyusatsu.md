@@ -6,7 +6,7 @@ categories: [strategy-guide, small-business]
 tags: [中小企業, 入札戦略, 競争力向上]
 author: しおさん
 excerpt: "大企業との競争に勝つには戦略が必要です。中小企業の強みを活かした入札戦略を5つのポイントで解説します。"
-description: "中小企業が入札で勝つための5つの戦略を専門家が解説。地域密着・ニッチ特化・JV活用など大企業に勝つ実践アプローチ。"
+description: "中小企業が官公庁入札で勝つための5つの戦略を行政書士が解説。地域密着・ニッチ特化・JV活用など大企業に勝つ実践アプローチを紹介。入札参加資格取得から落札まで、中小企業が実践できる具体的な戦略をわかりやすく解説します。"
 image: /assets/images/blog/default-article-image.webp
 
 ---

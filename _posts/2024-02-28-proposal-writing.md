@@ -6,7 +6,7 @@ categories: [practical-guide, proposal-writing]
 tags: [技術提案書, 書き方, 評価ポイント]
 author: あきら君
 excerpt: "総合評価方式で高得点を獲得するための技術提案書の書き方を、実例を交えて詳しく解説。評価者の視点を理解することが成功の鍵です。"
-description: "勝てる技術提案書の書き方を7つのポイントで専門家が解説。評価される構成・具体例で総合評価方式の高得点獲得を支援。"
+description: "勝てる技術提案書の書き方を7つのポイントで行政書士が解説。評価される構成・具体例で総合評価方式の高得点獲得を支援。入札で差がつく技術提案書の作成方法を、実際の採点基準をもとに実践的に紹介します。"
 image: /assets/images/blog/default-article-image.webp
 
 ---

@@ -6,7 +6,7 @@ categories: [system-explanation, contract-methods]
 tags: [随意契約, 競争入札, 地方自治法]
 author: あきら君
 excerpt: "随意契約は特定の条件下で認められる契約方式です。どのような場合に適用できるのか、メリット・デメリットと共に詳しく解説します。"
-description: "随意契約の仕組みと適用要件を専門家が解説。少額随契・緊急随契・特命随契の違いと競争入札との使い分けを説明。"
+description: "随意契約の仕組みと適用要件を行政書士が解説。少額随契・緊急随契・特命随契の違いと競争入札との使い分けを説明。官公庁との取引を検討する企業向けに、随意契約の活用方法と注意点を実務経験をもとに詳しく解説します。"
 image: /assets/images/blog/default-article-image.webp
 
 ---

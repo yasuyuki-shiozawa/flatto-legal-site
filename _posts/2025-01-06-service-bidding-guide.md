@@ -5,6 +5,7 @@ categories: [bidding-basics, service-contracts, market-analysis]
 tags: [役務, サービス, IT, コンサルティング, 調査, 設計, 特殊案件, 市場規模]
 excerpt: "入札は建設工事だけではありません。年間47.5兆円の巨大な「役務」市場の全貌を解説。IT、コンサル、清掃、警備から動物管理まで、多様なサービス案件で新たなビジネスチャンスを掴む方法を紹介します。"
 image: /assets/images/blog/default-article-image.webp
+description: "入札は建設工事だけではありません。年間47.5兆円規模の「役務」市場の全貌を解説。IT・コンサル・清掃・警備から動物管理まで、多様なサービス案件で新たなビジネスチャンスを掘む方法を行政書士が実践的に紹介。官公庁入札を目指すIT・サービス業の方必見。"
 
 ---
 
