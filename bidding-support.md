@@ -1,7 +1,11 @@
 ---
 layout: default
-title: 入札サポートサービス - 3年後の売り上げの柱を立てる
-description: "入札サポートサービス。全省庁統一資格申請から入札参加まで完全サポート。申請成功率99.8%・最短7日・全国対応。月額44,000円（税込）で入札参加の全工程を行政書士がサポートいたします。"
+title: "入札サポートサービス | 官公庁・行政書士による入札参加資格申請から落札まで完全サポート"
+description: "入札サポートサービス。官公庁・地方自治体への入札参加資格申請から落札まで行政書士が完全サポート。申請成功率99.8%・最短7日・全国対応。月額44,000円（税込）で入札の全工程をサポートします。"
+keywords: 入札サポート,入札参加資格,官公庁 入札,行政書士 入札,全省庁統一資格,入札参加資格申請代行,公共調達 サポート,神奈川県,大和市
+permalink: /bidding-support/
+breadcrumb_parent: "サービス一覧"
+breadcrumb_parent_url: "/services/"
 ---
 
 <style>
@@ -599,7 +603,7 @@ description: "入札サポートサービス。全省庁統一資格申請から
   </div>
 
   <div class="hero-buttons">
-    <a href="tel:046-272-3357" class="btn-hero btn-primary">無料相談を予約する</a>
+    <a href="/contact/" class="btn-hero btn-primary">無料相談を申し込む</a>
     <a href="#pricing" class="btn-hero btn-secondary">料金・サービス詳細を見る</a>
   </div>
 </section>
@@ -758,6 +762,16 @@ description: "入札サポートサービス。全省庁統一資格申請から
   <a href="/nyusatsu-shikaku/" class="btn-qualification">資格取得ガイドを見る →</a>
 </div>
 
+<!-- 関連ページへの内部リンク -->
+<div style="margin:1.5rem 0;padding:1.5rem;background:#f8f9fa;border-radius:8px;border-left:4px solid #1a73e8;">
+  <p style="margin:0 0 0.8rem;font-weight:bold;font-size:0.95rem;color:#1a1a2e;">関連ページ</p>
+  <ul style="margin:0;padding-left:1.5rem;line-height:2;">
+    <li><a href="/contact/">無料相談・お申し込みフォーム</a> — 入札参加資格の取得から入札戦略まで、まずはお気軽にご相談ください</li>
+    <li><a href="/qualification/">入札参加資格の取得方法</a> — 全省庁統一資格・地方自治体資格の申請手順を詳しく解説</li>
+    <li><a href="/flow/">ご利用の流れ</a> — 相談から入札参加までのステップを確認</li>
+    <li><a href="/faq/">よくある質問（FAQ）</a> — 入札参加資格に関する疑問・不安を解決</li>
+  </ul>
+</div>
 <!-- 会社情報 -->
 <div class="company-section">
   <h3>行政書士法人ふらっと法務事務所</h3>
@@ -765,7 +779,7 @@ description: "入札サポートサービス。全省庁統一資格申請から
     <div class="company-info-item">📞 電話: 046-272-3357</div>
     <div class="company-info-item">📧 メール: mail@flat-legal.com</div>
     <div class="company-info-item">🏢 〒242-0006 神奈川県大和市南林間6丁目4番26号 1F</div>
-    <div class="company-info-item">⏰ 電話受付 平日9時～17時 / メール24時間受付</div>
+    <div class="company-info-item">⏰ 電話受付 平日９時～17時 / メール24時間受付</div>
   </div>
 </div>
 
