@@ -1360,6 +1360,19 @@ function searchFAQ() {
                 </p>
                 <a href="{{ '/qualification/' | relative_url }}" class="related-link">詳しく見る →</a>
             </div>
+
+            <div class="related-card">
+                <div class="related-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <h3 class="related-title">
+                    <a href="{{ '/category/practical-guide/' | relative_url }}">実践ガイド</a>
+                </h3>
+                <p class="related-description">
+                    実際に入札に参加するための具体的な手順とポイント
+                </p>
+                <a href="{{ '/category/practical-guide/' | relative_url }}" class="related-link">詳しく見る →</a>
+            </div>
         </div>
     </div>
 </section>

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "入札サポートサービス | 官公庁・行政書士による入札参加資格申請から落札まで完全サポート"
-description: "入札サポートサービス。官公庁・地方自治体への入札参加資格申請から落札まで行政書士が完全サポート。申請成功率99.8%・最短7日・全国対応。月額44,000円（税込）で入札の全工程をサポートします。"
+description: "入札サポートサービス。官公庁・地方自治体への入札参加資格申請から落札まで行政書士が完全サポート。動画で入札の基礎を学べるコンテンツもご用意。申請成功率99.8%・最短7日・全国対応。月額44,000円（税込）で入札の全工程をサポートします。"
 keywords: 入札サポート,入札参加資格,官公庁 入札,行政書士 入札,全省庁統一資格,入札参加資格申請代行,公共調達 サポート,神奈川県,大和市
 permalink: /bidding-support/
 breadcrumb_parent: "サービス一覧"
@@ -827,6 +827,8 @@ breadcrumb_parent_url: "/services/"
 <div style="margin:1.5rem 0;padding:1.5rem;background:#f8f9fa;border-radius:8px;border-left:4px solid #1a73e8;">
   <p style="margin:0 0 0.8rem;font-weight:bold;font-size:0.95rem;color:#1a1a2e;">関連ページ</p>
   <ul style="margin:0;padding-left:1.5rem;line-height:2;">
+    <li><a href="/category/public-procurement/">公共調達に関する記事一覧</a> — 公共調達の最新動向やノウハウをチェック</li>
+    <li><a href="/category/practical-guide/">実践ガイド</a> — 実際に入札に参加するための具体的な手順とポイント</li>
     <li><a href="/contact/">無料相談・お申し込みフォーム</a> — 入札参加資格の取得から入札戦略まで、まずはお気軽にご相談ください</li>
     <li><a href="/qualification/">入札参加資格の取得方法</a> — 全省庁統一資格・地方自治体資格の申請手順を詳しく解説</li>
     <li><a href="/flow/">ご利用の流れ</a> — 相談から入札参加までのステップを確認</li>
