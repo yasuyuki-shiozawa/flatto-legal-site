@@ -623,11 +623,13 @@ breadcrumb_parent_url: "/services/"
       <div class="stat-label">申請成功率</div>
       <div class="stat-value">99.8<span class="stat-unit">%</span></div>
       <div class="stat-desc">実績に裏付けられた確実性</div>
+      <div class="stat-note" style="font-size:0.65rem;opacity:0.7;margin-top:0.3rem;">※2021年4月〜2024年3月の申請実績に基づく</div>
     </div>
     <div class="stat-box">
       <div class="stat-label">サポート企業</div>
       <div class="stat-value">2,000<span class="stat-unit">社以上</span></div>
       <div class="stat-desc">全国対応</div>
+      <div class="stat-note" style="font-size:0.65rem;opacity:0.7;margin-top:0.3rem;">※2021年4月の創業以来の累計実績</div>
     </div>
     <div class="stat-box">
       <div class="stat-label">最短</div>
@@ -747,6 +749,25 @@ breadcrumb_parent_url: "/services/"
   </div>
 </section>
 
+<!-- VideoObject構造化データ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "入札ってなに？やさしく解説するゆるっと入札講座！",
+  "description": "入札の基礎から参加資格の取得方法まで、行政書士がやさしく解説します。入札初心者の方におすすめの入門動画です。",
+  "thumbnailUrl": "https://img.youtube.com/vi/V12UxUXUbXM/maxresdefault.jpg",
+  "uploadDate": "2024-03-01",
+  "embedUrl": "https://www.youtube.com/embed/V12UxUXUbXM",
+  "url": "https://www.youtube.com/watch?v=V12UxUXUbXM",
+  "publisher": {
+    "@type": "Organization",
+    "name": "行政書士法人ふらっと法務事務所",
+    "url": "https://nyusatsu-map.com"
+  },
+  "inLanguage": "ja-JP"
+}
+</script>
 <!-- 動画セクション -->
 <section class="video-section" id="video">
   <div class="section-header">
