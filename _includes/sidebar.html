@@ -92,14 +92,45 @@
         </div>
         <div class="sidebar-card-body">
             <div class="category-list">
-                {% assign categories = site.posts | map: 'categories' | join: ',' | split: ',' | uniq | sort %}
-                {% for category in categories %}
-                {% assign category_posts = site.posts | where_exp: "post", "post.categories contains category" %}
-                <a href="/blog/#{{ category | slugify }}" class="category-item">
-                    <span class="category-name">{% if site.data.category_names[category] %}{{ site.data.category_names[category] }}{% else %}{{ category }}{% endif %}</span>
-                    <span class="category-count">{{ category_posts.size }}</span>
-                </a>
-                {% endfor %}
+                {% comment %}重要度順に並び替え（_data/sidebar_categories.yml 参照）{% endcomment %}
+                {% if site.data.sidebar_categories %}
+                    {% for cat_item in site.data.sidebar_categories.categories %}
+                        {% assign category_posts = site.posts | where_exp: "post", "post.categories contains cat_item.slug" %}
+                        {% if category_posts.size > 0 %}
+                        <a href="/blog/#{{ cat_item.slug | slugify }}" class="category-item">
+                            <span class="category-name">{{ cat_item.label }}</span>
+                            <span class="category-count">{{ category_posts.size }}</span>
+                        </a>
+                        {% endif %}
+                    {% endfor %}
+                    {% comment %}sidebar_categories.ymlに含まれないカテゴリを末尾に追加{% endcomment %}
+                    {% assign all_categories = site.posts | map: 'categories' | join: ',' | split: ',' | uniq %}
+                    {% for category in all_categories %}
+                        {% assign is_listed = false %}
+                        {% for cat_item in site.data.sidebar_categories.categories %}
+                            {% if cat_item.slug == category %}{% assign is_listed = true %}{% endif %}
+                        {% endfor %}
+                        {% unless is_listed %}
+                            {% assign category_posts = site.posts | where_exp: "post", "post.categories contains category" %}
+                            {% if category_posts.size > 0 %}
+                            <a href="/blog/#{{ category | slugify }}" class="category-item">
+                                <span class="category-name">{% if site.data.category_names[category] %}{{ site.data.category_names[category] }}{% else %}{{ category }}{% endif %}</span>
+                                <span class="category-count">{{ category_posts.size }}</span>
+                            </a>
+                            {% endif %}
+                        {% endunless %}
+                    {% endfor %}
+                {% else %}
+                    {% comment %}フォールバック：sidebar_categories.ymlがない場合はアルファベット順{% endcomment %}
+                    {% assign categories = site.posts | map: 'categories' | join: ',' | split: ',' | uniq | sort %}
+                    {% for category in categories %}
+                    {% assign category_posts = site.posts | where_exp: "post", "post.categories contains category" %}
+                    <a href="/blog/#{{ category | slugify }}" class="category-item">
+                        <span class="category-name">{% if site.data.category_names[category] %}{{ site.data.category_names[category] }}{% else %}{{ category }}{% endif %}</span>
+                        <span class="category-count">{{ category_posts.size }}</span>
+                    </a>
+                    {% endfor %}
+                {% endif %}
             </div>
         </div>
     </div>

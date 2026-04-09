@@ -503,6 +503,45 @@ breadcrumb_parent_url: "/services/"
   transform: translateY(-1px);
 }
 
+/* ===== 動画セクション ===== */
+.bidding-support .video-section {
+  margin: 0 0 2.5rem 0;
+}
+
+.bidding-support .video-embed-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  background: #000;
+}
+
+.bidding-support .video-embed-wrapper::before {
+  content: '';
+  display: block;
+  padding-top: 56.25%; /* 16:9 アスペクト比 */
+}
+
+.bidding-support .video-embed-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.bidding-support .video-caption {
+  text-align: center;
+  font-size: 0.88rem;
+  color: #666;
+  margin-top: 0.8rem;
+  line-height: 1.5;
+}
+
 /* ===== レスポンシブ ===== */
 @media (max-width: 768px) {
   .bidding-support .hero-section {
@@ -706,6 +745,28 @@ breadcrumb_parent_url: "/services/"
       <p class="service-desc">毎月の進捗レポートをご提供し、入札戦略の見直しや新規案件の発掘を継続的に支援します。</p>
     </div>
   </div>
+</section>
+
+<!-- 動画セクション -->
+<section class="video-section" id="video">
+  <div class="section-header">
+    <div class="section-label">VIDEO</div>
+    <h2 class="section-title">入札ってなに？まずは動画で学ぼう</h2>
+    <p class="section-desc">入札の基礎から参加資格の取得方法まで、行政書士がやさしく解説します。まずはこの動画で全体像を把握してください。</p>
+  </div>
+  <div class="video-embed-wrapper">
+    <iframe
+      src="https://www.youtube.com/embed/V12UxUXUbXM"
+      title="入札ってなに？やさしく解説するゆるっと入札講座！"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+      allowfullscreen="true"
+      loading="lazy">
+    </iframe>
+  </div>
+  <p class="video-caption">「入札ってなに？やさしく解説するゆるっと入札講座！」｜行政書士法人ふらっと法務事務所 YouTubeチャンネルより<br>
+    <a href="https://www.youtube.com/@flatto_legal" target="_blank" rel="noopener noreferrer">すべての動画を見る →</a>
+  </p>
 </section>
 
 <!-- お客様の声 -->
