@@ -43,7 +43,7 @@
                     {% if post.category %}
                     <span class="post-category">
                         <i class="fas fa-folder"></i>
-                        {{ post.category }}
+                        {% if site.data.category_names[post.category] %}{{ site.data.category_names[post.category] }}{% else %}{{ post.category }}{% endif %}
                     </span>
                     {% endif %}
                 </div>

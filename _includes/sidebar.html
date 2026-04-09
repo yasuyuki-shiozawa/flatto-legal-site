@@ -70,7 +70,7 @@
                     </h4>
                     <div class="latest-post-meta">
                         <time>{{ post.date | date: "%Y年%-m月%-d日" }}</time>
-                        <span class="latest-post-category">{{ post.categories | first }}</span>
+                        {% assign first_cat = post.categories | first %}<span class="latest-post-category">{% if site.data.category_names[first_cat] %}{{ site.data.category_names[first_cat] }}{% else %}{{ first_cat }}{% endif %}</span>
                     </div>
                 </article>
                 {% endfor %}
@@ -96,7 +96,7 @@
                 {% for category in categories %}
                 {% assign category_posts = site.posts | where_exp: "post", "post.categories contains category" %}
                 <a href="/blog/#{{ category | slugify }}" class="category-item">
-                    <span class="category-name">{{ category }}</span>
+                    <span class="category-name">{% if site.data.category_names[category] %}{{ site.data.category_names[category] }}{% else %}{{ category }}{% endif %}</span>
                     <span class="category-count">{{ category_posts.size }}</span>
                 </a>
                 {% endfor %}
