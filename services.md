@@ -66,11 +66,11 @@ keywords: 入札サポート,入札参加資格,官公庁,行政書士,ドロー
     </div>
     <div class="service-content">
       <h3>入札サポートサービス</h3>
-      <p>3年後の売上の種を植えよう。全省庁統一資格申請から入札参加まで完全サポート。事前診断・全額返金保証付きで安心してチャレンジできます。</p>
+      <p>3年後の売上の種を植えよう。全省庁統一資格申請から入札参加まで完全サポート。初回相談無料・全国対応で安心してチャレンジできます。</p>
       <div class="service-features">
         <span class="feature-tag">月額44,000円（税込）</span>
-        <span class="feature-tag">全額返金保証</span>
-        <span class="feature-tag">完全サポート</span>
+        <span class="feature-tag">初回相談無料</span>
+        <span class="feature-tag">全国対応</span>
       </div>
       <a href="/bidding-support/" class="service-link">詳細を見る</a>
     </div>

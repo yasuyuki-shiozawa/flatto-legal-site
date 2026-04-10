@@ -834,7 +834,7 @@ permalink: /contact/
             <div class="contact-info">
                 <h3>お急ぎの方はお電話でも</h3>
                 <a href="tel:046-272-3357" class="phone-number">046-272-3357</a>
-                <p class="business-hours">9:00～17:00</p>
+                <p class="business-hours">平日 9:00～17:00</p>
             </div>
         </div>
     </div>
