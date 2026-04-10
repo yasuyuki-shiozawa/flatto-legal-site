@@ -546,6 +546,20 @@ breadcrumb_parent_url: "/services/"
 @media (max-width: 768px) {
   .bidding-support .hero-section {
     padding: 2.5rem 1.2rem;
+    color: white !important;
+  }
+
+  /* ヒーローセクション内のテキスト色を白に保護（main.scssの強制設定を上書き） */
+  .bidding-support .hero-section *:not(.btn-hero):not(.btn-primary):not(.btn-secondary) {
+    color: inherit !important;
+  }
+
+  .bidding-support .hero-title .accent {
+    color: #FFD700 !important;
+  }
+
+  .bidding-support .stat-value {
+    color: #FFD700 !important;
   }
 
   .bidding-support .hero-title {
@@ -598,11 +612,32 @@ breadcrumb_parent_url: "/services/"
 
 @media (max-width: 480px) {
   .bidding-support .hero-title {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   .bidding-support .pricing-price {
     font-size: 2rem;
+  }
+
+  .bidding-support .stats-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+  }
+
+  .bidding-support .stat-box {
+    min-width: unset;
+    padding: 0.8rem;
+  }
+
+  .bidding-support .btn-hero {
+    padding: 0.9rem 1.5rem;
+    min-height: 44px;
+  }
+
+  .bidding-support .btn-pricing {
+    min-height: 44px;
+    padding: 0.85rem;
   }
 }
 </style>
@@ -644,8 +679,8 @@ breadcrumb_parent_url: "/services/"
   </div>
 
   <div class="hero-buttons">
-    <a href="/contact/" class="btn-hero btn-primary">無料相談を申し込む</a>
-    <a href="#pricing" class="btn-hero btn-secondary">料金・サービス詳細を見る</a>
+    <a href="/contact/" class="btn-hero btn-primary" aria-label="入札サポートの無料相談を申し込む">無料相談を申し込む</a>
+    <a href="#pricing" class="btn-hero btn-secondary" aria-label="入札サポートの料金・サービス詳細を見る">料金・サービス詳細を見る</a>
   </div>
 </section>
 
@@ -668,7 +703,7 @@ breadcrumb_parent_url: "/services/"
         <li>申請スケジュールのご説明</li>
         <li>Zoom・電話・対面に対応</li>
       </ul>
-      <a href="tel:046-272-3357" class="btn-pricing btn-pricing-outline">まず相談してみる</a>
+      <a href="/contact/" class="btn-pricing btn-pricing-outline" aria-label="入札サポートの無料相談を申し込む">まず相談してみる</a>
     </div>
 
     <div class="pricing-card featured">
@@ -684,12 +719,12 @@ breadcrumb_parent_url: "/services/"
         <li>落札後の契約手続きサポート</li>
         <li>月次レポート・進捗管理</li>
       </ul>
-      <a href="tel:046-272-3357" class="btn-pricing btn-pricing-primary">今すぐ申し込む</a>
+      <a href="/contact/" class="btn-pricing btn-pricing-primary" aria-label="入札サポートの申し込みフォームへ">今すぐ申し込む</a>
     </div>
 
     <div class="pricing-card">
       <div class="pricing-name">スポット対応</div>
-      <div class="pricing-price" style="font-size:1.8rem;"><span class="currency" style="font-size:1rem;">要</span>相談</div>
+      <div class="pricing-price" style="font-size:1.8rem;"><span style="font-size:1.1rem;font-weight:800;color:#1a73e8;">要相談</span></div>
       <div class="pricing-tax">案件ごとのご対応</div>
       <ul class="pricing-features">
         <li>入札書類の単発チェック</li>
@@ -697,7 +732,7 @@ breadcrumb_parent_url: "/services/"
         <li>入札参加の是非アドバイス</li>
         <li>他士業・コンサルとの連携案件</li>
       </ul>
-      <a href="tel:046-272-3357" class="btn-pricing btn-pricing-outline">詳細を問い合わせる</a>
+      <a href="/contact/" class="btn-pricing btn-pricing-outline" aria-label="スポット対応の詳細を問い合わせる">詳細を問い合わせる</a>
     </div>
   </div>
 </section>
@@ -713,37 +748,37 @@ breadcrumb_parent_url: "/services/"
   <div class="services-grid">
     <div class="service-item">
       <div class="service-step">STEP 1</div>
-      <h4 class="service-title">無料相談・入札可否診断</h4>
+      <h3 class="service-title">無料相談・入札可否診断</h3>
       <p class="service-desc">自社の業種・規模・実績をもとに、入札参加の可否と最適な資格種別を診断します。Zoom・電話・対面のいずれにも対応しています。</p>
     </div>
 
     <div class="service-item">
       <div class="service-step">STEP 2</div>
-      <h4 class="service-title">資格申請の代行</h4>
+      <h3 class="service-title">資格申請の代行</h3>
       <p class="service-desc">全省庁統一資格および地方自治体の入札参加資格申請を代行します。必要書類の収集から電子申請まで、すべてお任せください。</p>
     </div>
 
     <div class="service-item">
       <div class="service-step">STEP 3</div>
-      <h4 class="service-title">案件情報の提供・提案</h4>
+      <h3 class="service-title">案件情報の提供・提案</h3>
       <p class="service-desc">自社に合った入札案件を継続的にご提案します。入札マップを活用し、見逃しがちな案件も確実にキャッチします。</p>
     </div>
 
     <div class="service-item">
       <div class="service-step">STEP 4</div>
-      <h4 class="service-title">入札書類の作成・チェック</h4>
+      <h3 class="service-title">入札書類の作成・チェック</h3>
       <p class="service-desc">仕様書の読み解きから入札書類の作成・最終チェックまでサポート。失格リスクを最小化し、確実な入札参加を実現します。</p>
     </div>
 
     <div class="service-item">
       <div class="service-step">STEP 5</div>
-      <h4 class="service-title">落札後の契約手続き</h4>
+      <h3 class="service-title">落札後の契約手続き</h3>
       <p class="service-desc">落札後の契約締結・履行保証・前払金手続きなど、契約フェーズの手続きもサポートします。</p>
     </div>
 
     <div class="service-item">
       <div class="service-step">継続</div>
-      <h4 class="service-title">月次レポート・継続サポート</h4>
+      <h3 class="service-title">月次レポート・継続サポート</h3>
       <p class="service-desc">毎月の進捗レポートをご提供し、入札戦略の見直しや新規案件の発掘を継続的に支援します。</p>
     </div>
   </div>
@@ -838,10 +873,10 @@ breadcrumb_parent_url: "/services/"
 <!-- 資格取得ページへの誘導 -->
 <div class="qualification-cta">
   <div class="qualification-cta-text">
-    <h4>入札参加資格について詳しく知りたい方へ</h4>
+    <h3 style="font-size:1rem;font-weight:700;color:#1a1a2e;margin:0 0 0.3rem 0;">入札参加資格について詳しく知りたい方へ</h3>
     <p>全省庁統一資格・地方自治体の入札参加資格の種類・申請方法・必要書類などを詳しく解説しています。</p>
   </div>
-  <a href="/nyusatsu-shikaku/" class="btn-qualification">資格取得ガイドを見る →</a>
+  <a href="/nyusatsu-shikaku/" class="btn-qualification" aria-label="入札参加資格取得ガイドを見る">資格取得ガイドを見る →</a>
 </div>
 
 <!-- 関連ページへの内部リンク -->

@@ -1,5 +1,6 @@
 # サイドバーカテゴリ一覧（重要度順）
 # デザイン・UX担当が並び順を最適化（2026-04-09）
+# it-creativeカテゴリ追加（2026-04-10）
 # 入札初心者から実践者まで、学習の流れに沿った順序で配置
 
 categories:
@@ -23,6 +24,8 @@ categories:
     label: "資格取得"
   - slug: "small-business"
     label: "中小企業向け"
+  - slug: "it-creative"
+    label: "IT・クリエイティブ"
   - slug: "case-study"
     label: "事例研究"
   - slug: "latest-trends"
