@@ -2,6 +2,7 @@
 # パンくずリストや構造化データで使用
 # 英語のカテゴリスラッグ → 日本語表示名
 
+category: "カテゴリ"
 practical-guide: "実践ガイド"
 beginner-guide: "初心者ガイド"
 system-explanation: "制度解説"
