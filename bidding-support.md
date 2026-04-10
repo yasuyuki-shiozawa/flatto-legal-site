@@ -757,7 +757,7 @@ breadcrumb_parent_url: "/services/"
   "name": "入札ってなに？やさしく解説するゆるっと入札講座！",
   "description": "入札の基礎から参加資格の取得方法まで、行政書士がやさしく解説します。入札初心者の方におすすめの入門動画です。",
   "thumbnailUrl": "https://img.youtube.com/vi/V12UxUXUbXM/maxresdefault.jpg",
-  "uploadDate": "2024-03-01",
+  "uploadDate": "2025-01-15T09:00:00+09:00",
   "embedUrl": "https://www.youtube.com/embed/V12UxUXUbXM",
   "url": "https://www.youtube.com/watch?v=V12UxUXUbXM",
   "publisher": {
