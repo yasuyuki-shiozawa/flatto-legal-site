@@ -98,3 +98,11 @@ image: /assets/images/blog/default-article-image.webp
 中小企業が入札で成功するには、自社の強みを明確にし、それを活かせる分野に集中することが重要です。価格競争だけでなく、技術力、地域性、機動力などを武器に、大企業とは違う土俵で勝負しましょう。
 
 継続的な努力により、必ず道は開けます。
+
+---
+
+**関連記事**
+- [IT・Web制作会社のための公共入札入門ガイド｜入札参加資格の取得から落札まで](/blog/it-creative-nyusatsu-guide/)
+- [入札でよくある失敗パターン10選とその対策](/blog/nyusatsu-shippai/)
+- [全省庁統一資格完全ガイド](/blog/zenshochou-toitsu-shikaku-guide/)
+- [入札サポートサービスの詳細はこちら](/bidding-support/)

@@ -247,3 +247,10 @@ image: "/assets/images/service-document.webp"
 
 **申請代行サービスについてのご相談は、[無料相談フォーム](/contact/?service=application)からお気軽にお問い合わせください。**
 
+---
+
+**関連記事**
+- [IT・Web制作会社のための公共入札入門ガイド｜入札参加資格の取得から落札まで](/blog/it-creative-nyusatsu-guide/)
+- [入札でよくある失敗パターン10選とその対策](/blog/nyusatsu-shippai/)
+- [入札サポートサービスの詳細はこちら](/bidding-support/)
+
