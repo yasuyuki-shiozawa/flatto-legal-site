@@ -591,11 +591,11 @@ disable_structured_data: true
                 </div>
                 <div class="info-item">
                     <i class="fas fa-phone"></i>
-                    <span>046-204-7414</span>
+                    <span>046-272-3357</span>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-clock"></i>
-                    <span>平日9:00-18:00</span>
+                    <span>平日9時〜17時</span>
                 </div>
             </div>
         </div>
