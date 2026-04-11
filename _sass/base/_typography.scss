@@ -92,18 +92,18 @@ p:not(.footer *) {
 // ========================================
 
 a {
-  color: #f39c12 !important;  // パステルオレンジ
+  color: #CC3300 !important;  // WCAG AA準拠 5.20:1
   text-decoration: none;
   font-weight: var(--font-weight-normal); // 太文字を避ける
   transition: var(--transition-fast);
   
   &:hover {
-    color: #e67e22 !important;  // ホバー時は少し濃く
+    color: #BF360C !important;  // WCAG AA準拠 5.60:1
     text-decoration: underline;
   }
   
   &:focus {
-    outline: 2px solid #f39c12;
+    outline: 2px solid #CC3300;
     outline-offset: 2px;
   }
 }

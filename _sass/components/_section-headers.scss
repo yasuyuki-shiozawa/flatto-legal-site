@@ -101,7 +101,7 @@
 // 強調ブロック
 .highlight-block {
   background: var(--bg-light);
-  border-left: 4px solid var(--accent-primary);
+  border-left: 4px solid var(--accent-medium);
   padding: 1.25rem 1.5rem;
   margin: 1.5rem 0;
   border-radius: 0 4px 4px 0;
@@ -180,13 +180,13 @@
   
   // リンク
   a {
-    color: var(--accent-primary);
+    color: var(--accent-medium);
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: border-color 0.2s ease;
     
     &:hover {
-      border-bottom-color: var(--accent-primary);
+      border-bottom-color: var(--accent-medium);
     }
   }
 }
@@ -206,7 +206,7 @@
       content: "→";
       position: absolute;
       left: 0;
-      color: var(--accent-primary);
+      color: var(--accent-medium);
       font-weight: 600;
     }
   }

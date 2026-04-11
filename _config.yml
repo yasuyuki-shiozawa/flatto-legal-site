@@ -30,6 +30,9 @@ social:
   links:
     - "https://twitter.com/flatto_legal"
 
+# タイムゾーン設定（ISSUE No.020）
+timezone: Asia/Tokyo
+
 # URL設定
 permalink: /blog/:title/
 

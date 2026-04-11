@@ -17,7 +17,7 @@ layout: default
           <div class="card h-100 shadow-sm">
             {% if post.image %}
               <a href="{{ post.url | relative_url }}">
-                <img src="{{ post.image | relative_url }}" class="card-img-top" alt="{{ post.title }}">
+                <img src="{{ post.image | relative_url }}" class="card-img-top" alt="{{ post.title }}" loading="lazy" decoding="async">
               </a>
             {% endif %}
             <div class="card-body">

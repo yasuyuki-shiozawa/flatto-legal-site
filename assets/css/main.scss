@@ -413,10 +413,10 @@ main a:not(.btn):not(.contact-button):not(.button),
 .post-content a:not(.btn):not(.contact-button):not(.button), 
 header a:not(.btn):not(.contact-button):not(.button), 
 nav a:not(.btn):not(.contact-button):not(.button) {
-  color: #f39c12 !important;
+  color: #CC3300 !important; // WCAG AA準拠 5.20:1
   
   &:hover {
-    color: #e67e22 !important;
+    color: #BF360C !important; // WCAG AA準拠 5.60:1
   }
 }
 
@@ -440,12 +440,12 @@ input, textarea, select {
   color: #ffffff !important;
   
   &.btn-primary {
-    background-color: #f39c12 !important;
-    border-color: #f39c12 !important;
+    background-color: #CC3300 !important; // WCAG AA準拠 5.20:1
+    border-color: #CC3300 !important;
     
     &:hover {
-      background-color: #e67e22 !important;
-      border-color: #e67e22 !important;
+      background-color: #BF360C !important; // WCAG AA準拠 5.60:1
+      border-color: #BF360C !important;
     }
   }
 }
@@ -479,10 +479,10 @@ input, textarea, select {
   }
   
   a {
-    color: #f39c12 !important;
+    color: #CC3300 !important; // WCAG AA準拠 5.20:1
     
     &:hover {
-      color: #e67e22 !important;
+      color: #BF360C !important; // WCAG AA準拠 5.60:1
     }
   }
 }
