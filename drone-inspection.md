@@ -151,12 +151,12 @@ description: 2025年建築基準法改正による新たな事業機会。ドロ
   </div>
   
   <div class="article-card">
-    <h4><a href="/blog/kankoujyu-tekikaku-kumiai/">官公需適格組合とは？力を合わせて入札案件を獲得！中小企業の共同受注戦略</a></h4>
+    <h4><a href="/strategy-guide/practical-guide/2025/08/01/government-procurement-qualified-cooperative-guide/">官公需適格組合とは？力を合わせて入札案件を獲得！中小企業の共同受注戦略</a></h4>
     <p>中小企業が力を合わせて大型入札案件を獲得する方法と、ドローン組合の成功事例を紹介しています。</p>
   </div>
   
   <div class="article-card">
-    <h4><a href="/blog/sougyo-jiki-nyusatsu-senryaku/">創業時の新戦略！日本政策金融公庫の融資で入札参加資格を武器にする革新的アプローチ</a></h4>
+    <h4><a href="/strategy-guide/2025/08/01/startup-financing-bidding-strategy/">創業時の新戦略！日本政策金融公庫の融資で入札参加資格を武器にする革新的アプローチ</a></h4>
     <p>創業時から入札参加資格を戦略的に活用し、新事業を成功させるためのアプローチを解説しています。</p>
   </div>
 </div>

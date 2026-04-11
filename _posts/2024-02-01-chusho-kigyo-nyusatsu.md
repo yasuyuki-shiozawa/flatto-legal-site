@@ -102,7 +102,7 @@ image: /assets/images/blog/default-article-image.webp
 ---
 
 **関連記事**
-- [IT・Web制作会社のための公共入札入門ガイド｜入札参加資格の取得から落札まで](/blog/it-creative-nyusatsu-guide/)
-- [入札でよくある失敗パターン10選とその対策](/blog/nyusatsu-shippai/)
-- [全省庁統一資格完全ガイド](/blog/zenshochou-toitsu-shikaku-guide/)
+- [IT・Web制作会社のための公共入札入門ガイド｜入札参加資格の取得から落札まで](/practical-guide/it-creative/2026/04/10/it-creative-nyusatsu-guide/)
+- [入札でよくある失敗パターン10選とその対策](/practical-guide/failure-cases/2024/01/10/nyusatsu-shippai/)
+- [全省庁統一資格完全ガイド](/practical-guide/2025/01/15/zenshochou-toitsu-shikaku-guide/)
 - [入札サポートサービスの詳細はこちら](/bidding-support/)

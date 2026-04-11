@@ -1378,12 +1378,12 @@ function searchFAQ() {
                     <i class="fas fa-laptop-code"></i>
                 </div>
                 <h3 class="related-title">
-                    <a href="{{ '/blog/it-creative-nyusatsu-guide/' | relative_url }}">IT・Web制作会社向け入札ガイド</a>
+                    <a href="{{ '/practical-guide/it-creative/2026/04/10/it-creative-nyusatsu-guide/' | relative_url }}">IT・Web制作会社向け入札ガイド</a>
                 </h3>
                 <p class="related-description">
                     Web制作・動画制作・システム開発会社が官公庁入札に参加するための実践的な入門ガイド
                 </p>
-                <a href="{{ '/blog/it-creative-nyusatsu-guide/' | relative_url }}" class="related-link">詳しく見る →</a>
+                <a href="{{ '/practical-guide/it-creative/2026/04/10/it-creative-nyusatsu-guide/' | relative_url }}" class="related-link">詳しく見る →</a>
             </div>
         </div>
     </div>

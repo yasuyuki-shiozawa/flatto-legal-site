@@ -250,8 +250,8 @@ image: "/assets/images/service-document.webp"
 ---
 
 **関連記事**
-- [IT・Web制作会社のための公共入札入門ガイド｜入札参加資格の取得から落札まで](/blog/it-creative-nyusatsu-guide/)
-- [入札でよくある失敗パターン10選とその対策](/blog/nyusatsu-shippai/)
+- [IT・Web制作会社のための公共入札入門ガイド｜入札参加資格の取得から落札まで](/practical-guide/it-creative/2026/04/10/it-creative-nyusatsu-guide/)
+- [入札でよくある失敗パターン10選とその対策](/practical-guide/failure-cases/2024/01/10/nyusatsu-shippai/)
 - [入札実践ガイド一覧](/category/practical-guide/)
 - [入札サポートサービスの詳細はこちら](/bidding-support/)
 

@@ -218,7 +218,7 @@ breadcrumb_parent_url: "/"
     </div>
 
     <div class="articles-grid">
-      <a href="/blog/bidding-service-types/" class="article-card">
+      <a href="/bidding-basics/service-contracts/market-analysis/2025/01/06/service-bidding-guide/" class="article-card">
         <div class="article-header">
           <div class="article-icon">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -234,7 +234,7 @@ breadcrumb_parent_url: "/"
         </div>
       </a>
 
-      <a href="/blog/competitive-bidding-types/" class="article-card">
+      <a href="/system-explanation/beginner-guide/2024/07/10/shimei-ippan-kyoso-nyusatsu/" class="article-card">
         <div class="article-header">
           <div class="article-icon">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">

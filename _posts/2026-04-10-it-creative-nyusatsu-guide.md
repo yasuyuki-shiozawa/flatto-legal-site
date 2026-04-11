@@ -184,8 +184,8 @@ IT・クリエイティブ業界の皆さんが持っている技術力や企画
 ---
 
 **関連記事**
-- [全省庁統一資格完全ガイド](/blog/zenshochou-toitsu-shikaku-guide/)
-- [入札でよくある失敗パターン10選とその対策](/blog/nyusatsu-shippai/)
-- [中小企業が入札で勝つための5つの戦略](/blog/chusho-kigyo-nyusatsu/)
+- [全省庁統一資格完全ガイド](/practical-guide/2025/01/15/zenshochou-toitsu-shikaku-guide/)
+- [入札でよくある失敗パターン10選とその対策](/practical-guide/failure-cases/2024/01/10/nyusatsu-shippai/)
+- [中小企業が入札で勝つための5つの戦略](/strategy-guide/small-business/2024/02/01/chusho-kigyo-nyusatsu/)
 - [IT・クリエイティブ向け入札ガイド一覧](/category/it-creative/)
 - [入札サポートサービスの詳細はこちら](/bidding-support/)

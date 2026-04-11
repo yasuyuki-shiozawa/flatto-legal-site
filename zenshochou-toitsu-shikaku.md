@@ -72,7 +72,7 @@ permalink: /zenshochou-toitsu-shikaku/
 - 防衛用装備品類の整備
 
 <div class="readable-content">
-    <p>IT企業やWeb制作会社の方は「情報処理」「ソフトウェア開発」、広告代理店の方は「広告・宣伝」が該当します。最近はデジタル化の推進により、IT・クリエイティブ系の案件が増えています。詳しくは<a href="/blog/it-creative-nyusatsu-guide/">IT・Web制作会社のための公共入札入門ガイド</a>もご参照ください。</p>
+    <p>IT企業やWeb制作会社の方は「情報処理」「ソフトウェア開発」、広告代理店の方は「広告・宣伝」が該当します。最近はデジタル化の推進により、IT・クリエイティブ系の案件が増えています。詳しくは<a href="/practical-guide/it-creative/2026/04/10/it-creative-nyusatsu-guide/">IT・Web制作会社のための公共入札入門ガイド</a>もご参照ください。</p>
 </div>
 
 #### 4. 物品の買受
@@ -105,7 +105,7 @@ permalink: /zenshochou-toitsu-shikaku/
 | **D等級** | 小規模企業 | 小規模案件のみ |
 
 <div class="readable-content">
-    <p>C・D等級でも参加できる案件は数多くあります。むしろ、小規模案件は大手企業が参入しにくいため、中小企業にとっては狙い目です。等級の仕組みについてもっと詳しく知りたい方は、<a href="/blog/bidding-rank-strategy-cd-advantage/">C・D等級企業の入札戦略ガイド</a>もご覧ください。</p>
+    <p>C・D等級でも参加できる案件は数多くあります。むしろ、小規模案件は大手企業が参入しにくいため、中小企業にとっては狙い目です。等級の仕組みについてもっと詳しく知りたい方は、<a href="/strategy-guide/2025/08/03/bidding-rank-strategy-cd-advantage/">C・D等級企業の入札戦略ガイド</a>もご覧ください。</p>
 </div>
 
 ## 全省庁統一資格の申請方法
@@ -237,7 +237,7 @@ permalink: /zenshochou-toitsu-shikaku/
 - 仕様書のダウンロードもここから行います
 
 <div class="readable-content">
-    <p>案件の探し方のコツや、仕様書の読み方については、<a href="/blog/how-to-read-procurement-notice/">入札公告の読み方ガイド</a>や<a href="/blog/how-to-read-specifications/">仕様書の読み方ガイド</a>でも詳しく解説しています。</p>
+    <p>案件の探し方のコツや、仕様書の読み方については、<a href="/bidding/procurement-notice/service-contracts/2025/01/06/how-to-read-procurement-notice/">入札公告の読み方ガイド</a>や<a href="/2025/10/15/how-to-read-specifications/">仕様書の読み方ガイド</a>でも詳しく解説しています。</p>
 </div>
 
 ### 入札参加の流れ
@@ -301,4 +301,4 @@ TEL: 046-272-3357
 - [入札サポートサービス](/bidding-support/) — 月額44,000円（税込）で入札を総合サポート
 - [ご利用の流れ](/flow/) — 6ステップで入札参加をサポート
 - [よくある質問](/faq/) — 入札に関する疑問を解決
-- [全省庁統一資格完全ガイド（ブログ）](/blog/zenshochou-toitsu-shikaku-guide/) — さらに詳しい解説記事
+- [全省庁統一資格完全ガイド（ブログ）](/practical-guide/2025/01/15/zenshochou-toitsu-shikaku-guide/) — さらに詳しい解説記事
