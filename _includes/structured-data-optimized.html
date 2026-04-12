@@ -169,10 +169,16 @@
           "item": "{{ site.url }}{{ url_build }}"
         }
             {% else %}
+              {% assign decoded_part = part | url_decode %}
+              {% if site.data.category_names[decoded_part] %}
+                {% assign breadcrumb_label = site.data.category_names[decoded_part] %}
+              {% else %}
+                {% assign breadcrumb_label = decoded_part | replace: "-", " " | capitalize %}
+              {% endif %}
         ,{
           "@type": "ListItem", 
           "position": {{ position | plus: 1 }},
-          "name": "{{ part | capitalize }}",
+          "name": "{{ breadcrumb_label }}",
           "item": "{{ site.url }}{{ url_build }}"
         }
             {% endif %}
