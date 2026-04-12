@@ -670,6 +670,7 @@ breadcrumb_parent_url: "/services/"
       <div class="stat-label">最短</div>
       <div class="stat-value">7<span class="stat-unit">日</span></div>
       <div class="stat-desc">申請完了</div>
+      <div class="stat-note" style="font-size:0.65rem;opacity:0.7;margin-top:0.3rem;">※必要書類が準備済みの場合</div>
     </div>
     <div class="stat-box">
       <div class="stat-label">月額</div>
