@@ -128,7 +128,7 @@ body_class: blog-lp-page
         <div id="newsletter-message" class="newsletter-message" style="display: none;"></div>
         <p class="newsletter-privacy">
             <i class="fas fa-lock"></i> 個人情報は厳重に管理し、第三者に提供することはありません。
-            <a href="/privacy/">プライバシーポリシー</a>
+            <a href="/privacy-policy/">プライバシーポリシー</a>
         </p>
     </div>
 </section>

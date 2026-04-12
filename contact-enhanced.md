@@ -165,7 +165,7 @@ permalink: /contact-enhanced/
                     <label class="checkbox-label">
                         <input type="checkbox" id="privacy" name="privacy" required>
                         <span class="checkmark"></span>
-                        <a href="/privacy/" target="_blank">個人情報保護方針</a>に同意する <span class="required-mark">*</span>
+                        <a href="/privacy-policy/" target="_blank">個人情報保護方针</a>に同意する <span class="required-mark">*</span>
                     </label>
                 </div>
                 
