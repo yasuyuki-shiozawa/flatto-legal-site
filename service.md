@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "専門サポートサービス | 入札参加資格申請から落札まで行政書士が完全サポート"
-description: "入札参加資格の代行サービス。全省庁統一資格・地方自治体資格の申請代行から入札参加まで行政書士が完全サポート。月額44,000円（税込）からの定額制で、入札情報の収集から書類作成、実際の入札参加までトータルでご支援します。"
+title: "入札参加資格 代行サービス | 申請から入札参加まで行政書士がサポート - 行政書士法人ふらっと法務事務所"
+description: "入札参加資格の申請代行サービス。全省庁統一資格・地方自治体資格の取得から入札参加まで、行政書士が一貫して対応します。月額44,000円（税込）からの定額制。IT・建設・コンサルなど幅広い業種の申請実績あり。初回相談無料。"
 keywords: 入札参加資格 代行サービス,入札参加資格 申請代行,全省庁統一資格 代行,入札サポート,公共調達 代行,行政書士 代行サービス,入札支援,入札手続き代行,神奈川県,大和市
 breadcrumb_parent: "サービス一覧"
 breadcrumb_parent_url: "/"
@@ -11,7 +11,7 @@ breadcrumb_parent_url: "/"
 <section class="page-header">
     <div class="container">
         <h1 class="page-title">入札参加資格 代行サービス</h1>
-        <p class="page-subtitle">申請から落札まで、行政書士が完全サポートいたします</p>
+        <p class="page-subtitle">全省庁統一資格・地方自治体資格の申請から入札参加まで、行政書士が一貫して対応します</p>
     </div>
 </section>
 
@@ -22,7 +22,7 @@ breadcrumb_parent_url: "/"
             <h2>専門家による個別サポート</h2>
         </div>
         <div class="readable-content">
-            <p>入札マップで学習した後、より専門的なサポートが必要な場合に。複雑な案件や個別の事情に応じた対応を行います。基本的な入札の仕組みについては<a href="/knowhow/">入札の始め方ガイド</a>で詳しく解説していますので、併せてご覧ください。サポートの詳しい流れについては<a href="/flow/">ご利用の流れ</a>もご参照ください。</p>
+            <p>「入札に参加したいけれど、何から始めればいいかわからない」「申請書類の作成に自信がない」――そうした声をきっかけに、当事務所では入札参加資格の申請代行サービスを提供しています。IT企業や建設業、映像制作会社など、さまざまな業種のお客様を支援してきました。入札制度の基本については<a href="/knowhow/">入札の始め方ガイド</a>で解説していますので、併せてご覧ください。サポートの流れについては<a href="/flow/">ご利用の流れ</a>もご参照ください。</p>
             
             <!-- 動画CTA（Call to Action）ブロック -->
             <div class="video-cta-block">
@@ -163,7 +163,7 @@ breadcrumb_parent_url: "/"
         <div class="expert-comment">
             <img src="/assets/images/shiozawa_character.webp" alt="しおさん" class="comment-avatar">
             <div class="comment-bubble">
-                入札マップで基礎知識を学んだ後、個別の案件で専門的なサポートが必要な場合はお気軽にご相談ください。
+                「どの資格を取ればいい？」「うちの会社でも入札できる？」といった素朴な疑問からで大丈夫です。まずはお話を聞かせてください。
             </div>
         </div>
         
@@ -178,7 +178,7 @@ breadcrumb_parent_url: "/"
                 </div>
                 <h3 class="service-title">案件調査・分析</h3>
                 <p class="service-description">
-                    お客様の事業に適した入札案件を調査・分析し、最適な案件をご提案します。市場動向や競合状況も含めて詳細に分析いたします。案件の比較検討については<a href="/comparison/">案件比較ツール</a>を、最新の市場動向については<a href="/trends/">最新情報</a>もご参照ください。専門用語については<a href="/dictionary/">用語集</a>で詳しく解説しています。
+                    お客様の業種や得意分野を踏まえ、受注の可能性が高い入札案件を調査・分析します。過去の落札実績や競合状況も確認したうえで、「この案件なら勝負できる」という具体的な提案を行います。案件の探し方については<a href="/comparison/">案件比較ツール</a>もご参照ください。
                 </p>
                 <ul class="service-features">
                     <li>案件データベースの活用</li>
@@ -194,7 +194,7 @@ breadcrumb_parent_url: "/"
                 </div>
                 <h3 class="service-title">書類作成・申請</h3>
                 <p class="service-description">
-                    入札参加に必要な各種書類の作成から申請まで、専門家が代行いたします。複雑な手続きも安心してお任せください。申請手続きの詳細については<a href="/qualification/">入札参加資格の取得方法</a>を、手続きでお困りの場合は<a href="/troubleshooting/">トラブル解決ガイド</a>もご参照ください。電子入札システムについては<a href="/denshi-nyusatsu/">電子入札システムの活用方法</a>で詳しく解説しています。
+                    入札参加資格の申請書類は、記入項目が多く、初めての方には取っ付きにくいものです。当事務所では、必要書類の準備から申請書の作成・提出までを行政書士が代行します。申請制度の詳細は<a href="/qualification/">入札参加資格の取得方法</a>を、電子入札の環境構築については<a href="/denshi-nyusatsu/">電子入札システムの活用方法</a>をご覧ください。
                 </p>
                 <ul class="service-features">
                     <li>入札参加資格申請書</li>
@@ -210,7 +210,7 @@ breadcrumb_parent_url: "/"
                 </div>
                 <h3 class="service-title">入札戦略立案</h3>
                 <p class="service-description">
-                    お客様の強みを活かした入札戦略を立案し、落札確率を最大化します。価格戦略から技術提案まで総合的にサポートします。具体的な成功事例については<a href="/case-studies/">事例研究</a>をご覧ください。随意契約についても<a href="/zuii-keiyaku/">随意契約の活用方法</a>で詳しく解説しています。
+                    「価格で勝負するか、技術提案で差別化するか」――案件ごとに最適な戦略を一緒に考えます。お客様の強みや実績を整理し、評価項目で点数を稼ぐための提案書作成も支援します。具体的な成功事例は<a href="/case-studies/">事例研究</a>をご覧ください。
                 </p>
                 <ul class="service-features">
                     <li>価格戦略の策定</li>
@@ -226,7 +226,7 @@ breadcrumb_parent_url: "/"
                 </div>
                 <h3 class="service-title">継続サポート</h3>
                 <p class="service-description">
-                    落札後の契約手続きから業務開始後のフォローアップまで、継続的にサポートいたします。長期的な成功をお約束します。よくある質問については<a href="/faq/">FAQ</a>もご参照ください。
+                    入札は「資格を取ったら終わり」ではありません。落札後の契約手続きや、次の案件に向けた資格更新・実績追加など、継続的にフォローします。「次も受注したい」というお客様を、息の長いお付き合いで支えます。よくある質問については<a href="/faq/">FAQ</a>もご参照ください。
                 </p>
                 <ul class="service-features">
                     <li>契約手続きサポート</li>
@@ -245,7 +245,7 @@ breadcrumb_parent_url: "/"
         <div class="section-header">
             <h2 class="section-title">サポート内容について</h2>
             <p class="section-subtitle">
-                お客様のニーズに合わせて、最適なサポートプランをご提案いたします
+                業種や案件の規模に応じて、必要なサポートを組み合わせてご提案します
             </p>
         </div>
         
@@ -255,16 +255,16 @@ breadcrumb_parent_url: "/"
             </div>
             <div class="message-content">
                 <p>
-                    サポート内容や料金については、お客様の具体的なニーズや案件の内容により異なります。<br>
-                    まずは無料相談にて、お客様の状況を詳しくお聞かせください。<br>
-                    最適なサポートプランをご提案させていただきます。
+                    料金は月額44,000円（税込）からの定額制です。申請先の数や案件の規模によって内容が変わりますので、<br>
+                    まずは無料相談でお客様の状況をお聞かせください。<br>
+                    そのうえで、具体的なサポート内容とお見積りをご提示します。
                 </p>
             </div>
         </div>
 
         <div class="consultation-cta">
             <h3>まずは無料相談から</h3>
-            <p>専門の行政書士が、お客様の状況に応じた最適なアドバイスをいたします。</p>
+            <p>「うちの会社でも入札できる？」という段階からでも、行政書士が具体的にお答えします。</p>
             <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-large">
                 <i class="fas fa-comments"></i>
                 無料相談を申し込む
@@ -287,7 +287,7 @@ breadcrumb_parent_url: "/"
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    <p>はい、全く問題ございません。当事務所では初めて入札に参加される方を数多くサポートしており、基礎知識から丁寧にご説明いたします。安心してお任せください。</p>
+                    <p>はい、全く問題ありません。実際、当事務所にご相談いただく方の多くが「入札は初めて」という方です。「そもそも入札とは何か」という段階から、資格の種類や申請先の選び方まで、一つずつご説明します。</p>
                 </div>
             </div>
             
@@ -297,7 +297,7 @@ breadcrumb_parent_url: "/"
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    <p>IT・システム開発、建設・土木、清掃・メンテナンス、物流・運送、設計・コンサルティングなど、幅広い業種に対応しております。詳しくはお気軽にお問い合わせください。</p>
+                    <p>IT・システム開発、建設・土木、清掃・メンテナンス、物流・運送、設計・コンサルティング、映像制作、介護・福祉など、幅広い業種に対応しています。「うちの業種でも大丈夫？」と思ったら、まずはご相談ください。</p>
                 </div>
             </div>
             
@@ -317,7 +317,7 @@ breadcrumb_parent_url: "/"
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    <p>はい、お客様のニーズに合わせて柔軟にカスタマイズ可能です。必要な部分だけのサポートから、トータルサポートまで、お客様に最適なプランをご提案いたします。</p>
+                    <p>はい、組み合わせ自由です。たとえば「申請書類の作成だけお願いしたい」「戦略立案から入札当日まで一貫でお願いしたい」など、お客様の状況に合わせて必要な部分だけをお選びいただけます。</p>
                 </div>
             </div>
         </div>
@@ -328,10 +328,9 @@ breadcrumb_parent_url: "/"
 <section class="cta">
     <div class="container">
         <div class="cta-content">
-            <h2 class="cta-title">入札サポートのご相談はお気軽に</h2>
+            <h2 class="cta-title">入札参加について相談してみませんか？</h2>
             <p class="cta-subtitle">
-                専門家が無料でご相談をお受けします。<br>
-                まずはお気軽にお問い合わせください。
+                初回相談は無料です。電話・メールどちらでもお受けします。
             </p>
             <div class="cta-buttons">
                 <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-large">
@@ -428,9 +427,9 @@ breadcrumb_parent_url: "/"
 
 <!-- 強化されたCTAバナー -->
 {% include cta-banner-enhanced.html 
-   title="専門サポートで確実な入札参加を実現"
-   description="行政書士による個別対応で、あなたの事業成長をサポートします"
-   button_text="💼 専門サポートを申し込む"
+   title="入札参加資格の申請、まずは相談から"
+   description="行政書士がお客様の業種・状況に合わせて、具体的な進め方をご提案します"
+   button_text="💼 無料相談を申し込む"
    days_left="15"
 %}
 
