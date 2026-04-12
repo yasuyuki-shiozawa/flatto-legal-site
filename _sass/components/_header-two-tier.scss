@@ -73,7 +73,7 @@
           transition: all 0.2s ease !important;
           
           &:hover {
-            background: #d97706 !important;
+            background: #b45309 !important; /* WCAG AA準拠: 5.02:1 */
           }
         }
       }
@@ -106,7 +106,7 @@
   
   // 2段目: ナビゲーションエリア
   .header-nav {
-    background: #d97706 !important; // 濃いオレンジ
+    background: #b45309 !important; // WCAG AA準拠オレンジ（5.02:1）
     
     .container {
       max-width: 1200px;
@@ -219,7 +219,7 @@
             
             &.active {
               background-color: #fef3c7 !important;
-              color: #d97706 !important;
+              color: #b45309 !important; /* WCAG AA準拠: 5.02:1 */
             }
             
             i {

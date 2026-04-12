@@ -769,7 +769,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 .impact-badge.medium {
     background: #fef3c7;
-    color: #d97706;
+    color: #b45309; /* WCAG AA準拠: 5.02:1 */
 }
 
 /* 統計データ */

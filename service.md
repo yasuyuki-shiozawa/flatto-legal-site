@@ -93,7 +93,7 @@ breadcrumb_parent_url: "/"
             }
 
             .video-cta-description {
-              color: #6c757d;
+              color: #555555; /* WCAG AA準拠: 7.07:1 (以前#6c757dは4.45:1で不合格) */
               font-size: 1rem;
               line-height: 1.6;
               margin-bottom: 1rem;
@@ -108,11 +108,11 @@ breadcrumb_parent_url: "/"
 
             .feature-badge {
               background-color: #e3f2fd;
-              color: #1976d2;
+              color: #1565c0; /* WCAG AA準拠: 5.03:1 (以前#1976d2は4.03:1で不合格) */
               padding: 0.25rem 0.75rem;
               border-radius: 20px;
               font-size: 0.875rem;
-              font-weight: 500;
+              font-weight: 600; /* 読みやすさ向上 */
             }
 
             .video-cta-btn {
@@ -171,6 +171,89 @@ breadcrumb_parent_url: "/"
             <img src="{{ '/assets/images/service-overview.png' | relative_url }}" alt="専門サポート概要" class="service-main-img">
         </div>
         
+        <!-- サービスグリッド用CSS -->
+        <style>
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .service-card {
+            background: #ffffff;
+            border: 1px solid #e9ecef;
+            border-radius: 12px;
+            padding: 1.75rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+        }
+        .service-icon {
+            width: 52px;
+            height: 52px;
+            background: #fff3e0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            color: #b45309; /* WCAG AA準拠: 5.02:1 (以前#d97706は3.19:1で不合格) */
+            font-size: 1.4rem;
+        }
+        .service-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+        .service-description {
+            font-size: 0.95rem;
+            color: #555555;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .service-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .service-features li {
+            font-size: 0.875rem;
+            color: #555555;
+            padding: 0.3rem 0;
+            padding-left: 1.25rem;
+            position: relative;
+        }
+        .service-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #b45309; /* WCAG AA準拠: 5.02:1 */
+            font-weight: 700;
+        }
+        .service-hero-image {
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        .service-main-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        @media (max-width: 768px) {
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+            .service-card {
+                padding: 1.25rem;
+            }
+        }
+        </style>
+
         <div class="service-grid">
             <div class="service-card">
                 <div class="service-icon">
