@@ -657,7 +657,7 @@ breadcrumb_parent_url: "/services/"
     <div class="stat-box">
       <div class="stat-label">申請成功率</div>
       <div class="stat-value">99.8<span class="stat-unit">%</span></div>
-      <div class="stat-desc">実績に裏付けられた確実性</div>
+      <div class="stat-desc">実績に基づく高い成功率</div>
       <div class="stat-note" style="font-size:0.65rem;opacity:0.7;margin-top:0.3rem;">※2021年4月〜2024年3月の申請実績に基づく</div>
     </div>
     <div class="stat-box">
@@ -762,13 +762,13 @@ breadcrumb_parent_url: "/services/"
     <div class="service-item">
       <div class="service-step">STEP 3</div>
       <h3 class="service-title">案件情報の提供・提案</h3>
-      <p class="service-desc">自社に合った入札案件を継続的にご提案します。入札マップを活用し、見逃しがちな案件も確実にキャッチします。</p>
+      <p class="service-desc">自社に合った入札案件を継続的にご提案します。入札マップを活用し、見逃しがちな案件も積極的にご案内します。</p>
     </div>
 
     <div class="service-item">
       <div class="service-step">STEP 4</div>
       <h3 class="service-title">入札書類の作成・チェック</h3>
-      <p class="service-desc">仕様書の読み解きから入札書類の作成・最終チェックまでサポート。失格リスクを最小化し、確実な入札参加を実現します。</p>
+      <p class="service-desc">仕様書の読み解きから入札書類の作成・最終チェックまでサポート。失格リスクを最小化し、入札参加をしっかりサポートします。</p>
     </div>
 
     <div class="service-item">
