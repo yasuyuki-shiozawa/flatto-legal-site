@@ -9,7 +9,7 @@ permalink: /comparison/
 <div class="comparison-page">
     <div class="container">
         <div class="page-intro">
-            <h2>入札案件比較ツール</h2>
+            <h1>入札案件比較ツール</h1>
             <p>複数の入札案件を効率的に比較し、最適な案件を選定できるツールです。入札の基本的な仕組みについては<a href="/knowhow/">入札の始め方ガイド</a>で詳しく解説していますので、併せてご覧ください。</p>
         </div>
         

@@ -20,7 +20,7 @@ permalink: /dashboard/
         <!-- 初回利用者向けガイド -->
         <div class="dashboard-guide" id="dashboard-guide" style="display: none;">
             <div class="guide-content">
-                <h2>入札ダッシュボードへようこそ！</h2>
+                <h1>入札ダッシュボードへようこそ！</h1>
                 <p>ここはあなた専用のパーソナルスペースです。以下の機能をご利用いただけます：</p>
                 
                 <div class="guide-features">

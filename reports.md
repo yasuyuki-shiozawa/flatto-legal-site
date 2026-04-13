@@ -21,8 +21,9 @@ permalink: /reports/
 
 <!-- サンプルレポートテンプレート -->
 <div class="sample-templates" style="display: none;">
-    <div class="template-gallery">
-        <h2>レポートテンプレート例</h2>
+        <div class="template-gallery">
+            <h1>入札データ分析レポート</h1>
+            <h2>レポートテンプレート例</h2>
         
         <div class="template-grid">
             <div class="template-card">

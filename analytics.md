@@ -10,7 +10,7 @@ permalink: /analytics/
     <div class="container">
         <!-- ダッシュボードヘッダー -->
         <div class="analytics-header">
-            <h2>入札 分析ダッシュボード</h2>
+            <h1>入札 分析ダッシュボード</h1>
             <div class="analytics-controls">
                 <select class="form-control" id="date-range">
                     <option value="today">今日</option>

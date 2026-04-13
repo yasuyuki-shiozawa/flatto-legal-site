@@ -68,7 +68,9 @@ layout: compress
     {% include header.html %}
     
     <!-- Breadcrumb -->
+    {% unless page.disable_structured_data %}
     {% include breadcrumb.html %}
+    {% endunless %}
     
     <!-- Main Content -->
     <main class="main-container">
