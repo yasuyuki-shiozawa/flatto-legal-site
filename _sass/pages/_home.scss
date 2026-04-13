@@ -6,7 +6,7 @@
 
 // ヒーローセクション（新しい自然な色調）
 .hero-section {
-  background: linear-gradient(135deg, var(--color-forest-pale) 0%, var(--color-cream-light) 100%);
+  background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 50%, #1a365d 100%);
   padding: 5rem 0;
   position: relative;
   overflow: hidden;
@@ -43,7 +43,7 @@
   .hero-title {
     font-size: 2.5rem;
     font-weight: 600;
-    color: var(--color-text-primary); // 深い森林緑
+    color: #ffffff; // ネイビー背景上の白文字（ISSUE No.020対応）
     margin-bottom: 1.25rem;
     line-height: 1.25;
     
@@ -60,7 +60,7 @@
     display: block;
     font-size: 1.125rem;
     font-weight: 400;
-    color: var(--color-text-secondary); // 中間の森林緑
+    color: rgba(255, 255, 255, 0.9); // ネイビー背景上の白文字（ISSUE No.020対応）
     margin-bottom: 0.5rem;
     
     @media (max-width: 767px) {
@@ -70,7 +70,7 @@
   
   .hero-description {
     font-size: 1rem;
-    color: var(--color-text-secondary); // 中間の森林緑
+    color: rgba(255, 255, 255, 0.9); // ネイビー背景上の白文字（ISSUE No.020対応）
     margin-bottom: 1.75rem;
     line-height: 1.6;
   }
@@ -86,7 +86,7 @@
 // 記事コンテンツカードセクション
 .content-cards-section {
   padding: 4rem 2rem;
-  background: var(--color-bg-secondary);
+  background: var(--bg-darkest);
   
   @media (max-width: 767px) {
     padding: 3rem 1rem;
@@ -100,20 +100,20 @@
   .section-title {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--color-text-primary);
+    color: var(--text-primary);
     margin-bottom: 0.75rem;
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
     
     i {
-      color: var(--color-primary-600);
+      color: var(--navy-medium);
     }
   }
   
   .section-subtitle {
     font-size: 1.125rem;
-    color: var(--color-text-secondary);
+    color: var(--text-secondary);
     max-width: 600px;
     margin: 0 auto;
   }
@@ -154,7 +154,7 @@
     box-shadow: var(--shadow-card-hover);
     
     .content-card-link {
-      color: var(--color-primary-600);
+      color: var(--navy-medium);
       
       i {
         transform: translateX(4px);
@@ -249,20 +249,20 @@
   .content-card-title {
     font-size: 1.125rem;
     font-weight: 700;
-    color: var(--color-text-primary);
+    color: var(--text-primary);
     margin-bottom: 0.5rem;
     line-height: 1.4;
   }
   
   .content-card-excerpt {
     font-size: 0.875rem;
-    color: var(--color-text-secondary);
+    color: var(--text-secondary);
     margin-bottom: 1rem;
   }
   
   .content-card-link {
     font-size: 0.875rem;
-    color: var(--color-primary-700);
+    color: var(--navy-dark);
     font-weight: 600;
     text-decoration: none;
     display: inline-flex;
@@ -367,7 +367,7 @@
       top: -8px;
       right: -8px;
       background: rgba(255, 255, 255, 0.9);
-      color: var(--color-accent-600);
+      color: var(--gold-medium);
       padding: 0.2rem 0.6rem;
       border-radius: 16px;
       font-size: 0.7rem;
@@ -428,7 +428,7 @@
     
     .btn-white {
       background: rgba(255, 255, 255, 0.95);
-      color: var(--color-text-primary);
+      color: var(--text-primary);
       padding: 0.75rem 1.5rem;
       border-radius: 8px;
       text-decoration: none;
@@ -450,7 +450,7 @@
 // カテゴリタグクラウド
 .category-cloud-section {
   padding: 4rem 2rem;
-  background: var(--color-bg-secondary);
+  background: var(--bg-darkest);
   
   @media (max-width: 767px) {
     padding: 3rem 1rem;
@@ -514,18 +514,18 @@
   }
   
   &.primary {
-    color: var(--color-primary-700);
-    border: 2px solid var(--color-primary-600);
+    color: var(--navy-dark);
+    border: 2px solid var(--navy-medium);
   }
   
   &.secondary {
-    color: var(--color-secondary-700);
-    border: 2px solid var(--color-secondary-600);
+    color: var(--navy-medium);
+    border: 2px solid var(--navy-light);
   }
   
   &.accent {
-    color: var(--color-accent-700);
-    border: 2px solid var(--color-accent-600);
+    color: var(--gold-dark);
+    border: 2px solid var(--gold-medium);
   }
   
   &.success {
@@ -540,7 +540,7 @@
 
 // お知らせバナー
 .notice-banner {
-  background: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-primary-700) 100%);
+  background: linear-gradient(135deg, var(--navy-medium) 0%, var(--navy-dark) 100%);
   padding: 2rem;
   color: white;
   
@@ -583,7 +583,7 @@
   .notice-action {
     .btn {
       background: white;
-      color: var(--color-primary-700);
+      color: var(--navy-dark);
       font-weight: 700;
       
       &:hover {
@@ -625,14 +625,14 @@
     
     .stat-icon {
       font-size: 3rem;
-      color: var(--color-primary-600);
+      color: var(--navy-medium);
       margin-bottom: 1.5rem;
     }
     
     .stat-number {
       font-size: 3rem;
       font-weight: 700;
-      color: var(--color-text-primary);
+      color: var(--text-primary);
       margin-bottom: 0.5rem;
       
       @media (max-width: 767px) {
@@ -648,7 +648,7 @@
     
     .stat-label {
       font-size: 1.125rem;
-      color: var(--color-text-secondary);
+      color: var(--text-secondary);
       font-weight: 600;
       
       @media (max-width: 767px) {

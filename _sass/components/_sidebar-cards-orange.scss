@@ -9,12 +9,12 @@
   margin-bottom: 1.5rem;
   overflow: hidden;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
-  border: 2px solid #FFE0B2; // オレンジ系枠
+  border: 2px solid #e2e8f0; // ライトボーダー
   
   &:hover {
-    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(30, 58, 95, 0.15);
     transform: translateY(-2px);
-    border-color: #FF9800;
+    border-color: #2c5282;
   }
   
   // カードヘッダー - オレンジベース統一ルール適用（最高優先度）
@@ -32,8 +32,8 @@
   
   // CTA（Call to Action）カード特別スタイル - オレンジベース統一ルール適用
   &.sidebar-card-cta {
-    background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%); // オレンジ背景
-    border: 2px solid #E65100; // 濃いオレンジ枠
+    background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%); // ネイビー背景
+    border: 2px solid #1e3a5f; // ネイビー枠
     
     .sidebar-card-body {
       padding: 2rem 1.5rem;
@@ -81,7 +81,7 @@
 .sidebar-card-header.primary,
 .sidebar-card-header.secondary,
 .sidebar-card-header.accent {
-  background: linear-gradient(135deg, #FF9800 0%, #FFB74D 100%) !important; // オレンジ背景
+  background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%) !important; // オレンジ背景
   color: #FFFFFF !important; // 白テキスト
 }
 
@@ -355,7 +355,7 @@
     
     &:focus {
       outline: none;
-      border-color: #FF9800; // オレンジフォーカス
+      border-color: #2c5282; // オレンジフォーカス
       box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.1);
     }
     
@@ -492,7 +492,7 @@
   .sidebar-card-header,
   .card-header,
   .section-header {
-    background: linear-gradient(135deg, #FF9800 0%, #FFB74D 100%) !important;
+    background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%) !important;
     color: #FFFFFF !important;
     border-bottom: 1px solid rgba(255, 152, 0, 0.3) !important;
     
@@ -533,7 +533,7 @@
 body .sidebar-card .sidebar-card-header,
 body .card .card-header,
 body .section .section-header {
-  background: linear-gradient(135deg, #FF9800 0%, #FFB74D 100%) !important;
+  background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%) !important;
   color: #FFFFFF !important;
 }
 

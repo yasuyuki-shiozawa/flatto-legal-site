@@ -232,7 +232,7 @@
   
   // バッジタイプ
   &.badge-primary {
-    background-color: var(--color-primary-600);
+    background-color: var(--navy-medium);
     color: var(--color-white);
   }
   
@@ -267,7 +267,7 @@
     border: 1px solid currentColor;
     
     &.badge-primary {
-      color: var(--color-primary-600);
+      color: var(--navy-medium);
     }
     
     &.badge-secondary {

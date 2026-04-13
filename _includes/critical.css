@@ -1,4 +1,4 @@
-/* Critical CSS - Above the fold styles */
+/* Critical CSS - Above the fold styles - ISSUE No.020対応（ネイビー＋白＋ゴールド）更新日: 2026-04-13 */
 
 /* Reset */
 *, *::before, *::after { box-sizing: border-box; }
@@ -20,8 +20,8 @@ p { margin-top: 0; line-height: 1.6; }
   top: 0;
   left: 0;
   right: 0;
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background: #1e3a5f;
+  box-shadow: 0 2px 8px rgba(30, 58, 95, 0.3);
   z-index: 1000;
   height: 70px;
 }

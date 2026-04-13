@@ -62,7 +62,7 @@
         }
         
         .btn-primary {
-          background: #f59e0b !important;
+          background: #2c5282 !important;
           color: #ffffff !important;
           border: none !important;
           padding: 0.5rem 1rem !important;
@@ -73,7 +73,7 @@
           transition: all 0.2s ease !important;
           
           &:hover {
-            background: #b45309 !important; /* WCAG AA準拠: 5.02:1 */
+            background: #2c5282 !important; /* ネイビー（ISSUE No.020対応）*/
           }
         }
       }
@@ -106,7 +106,7 @@
   
   // 2段目: ナビゲーションエリア
   .header-nav {
-    background: #b45309 !important; // WCAG AA準拠オレンジ（5.02:1）
+    background: #1e3a5f !important; // ネイビー（ISSUE No.020対応）
     
     .container {
       max-width: 1200px;
@@ -218,8 +218,8 @@
             }
             
             &.active {
-              background-color: #fef3c7 !important;
-              color: #b45309 !important; /* WCAG AA準拠: 5.02:1 */
+              background-color: #ebf4ff !important;
+              color: #2c5282 !important; /* ネイビー（ISSUE No.020対応）*/
             }
             
             i {

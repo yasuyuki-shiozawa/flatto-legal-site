@@ -1,17 +1,18 @@
 // CSS優先度の問題を解決するための上書きスタイル
-// 「知識の森」コンセプトの新しいカラーパレット強制適用
+// ネイビー＋白＋ゴールドアクセントのカラーパレット強制適用
+// ISSUE No.020対応 - 更新日: 2026-04-13
 
 // ヒーローセクションの強制上書き
 .hero-section {
-  background: linear-gradient(135deg, var(--color-forest-pale) 0%, var(--color-cream-light) 100%) !important;
-  
+  background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 50%, #1a365d 100%) !important;
+
   .hero-title {
-    color: var(--color-forest-dark) !important;
+    color: #ffffff !important;
   }
-  
+
   .hero-subtitle,
   .hero-description {
-    color: var(--color-forest-medium) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
   }
 }
 
@@ -19,14 +20,14 @@
 .cta-button,
 .btn-primary,
 .button-primary {
-  background: linear-gradient(135deg, var(--accent-medium) 0%, var(--accent-dark) 100%) !important;
+  background: linear-gradient(135deg, #b45309 0%, #92400e 100%) !important;
   color: #FFFFFF !important;
-  border-color: var(--accent-medium) !important;
+  border-color: #b45309 !important;
   font-weight: 600 !important;
-  
+
   &:hover {
-    background: linear-gradient(135deg, var(--accent-dark) 0%, #BF360C 100%) !important;
-    border-color: var(--accent-dark) !important;
+    background: linear-gradient(135deg, #92400e 0%, #78350f 100%) !important;
+    border-color: #92400e !important;
     color: #FFFFFF !important;
   }
 }
@@ -34,38 +35,38 @@
 // セカンダリボタンの強制上書き
 .btn-secondary,
 .button-secondary {
-  background: linear-gradient(135deg, var(--color-forest-light) 0%, var(--color-beige-warm) 100%) !important;
-  color: var(--color-forest-dark) !important;
-  border-color: var(--color-forest-medium) !important;
-  
+  background: linear-gradient(135deg, #ebf4ff 0%, #bee3f8 100%) !important;
+  color: #1e3a5f !important;
+  border-color: #2c5282 !important;
+
   &:hover {
-    background: linear-gradient(135deg, var(--color-beige-warm) 0%, var(--color-cream-light) 100%) !important;
+    background: linear-gradient(135deg, #bee3f8 0%, #90cdf4 100%) !important;
   }
 }
 
 // ナビゲーションリンクの強制上書き
 .nav-link,
 .navigation a {
-  color: var(--color-forest-dark) !important;
-  
+  color: #ffffff !important;
+
   &:hover {
-    color: var(--color-orange-warm) !important;
-    background-color: var(--color-forest-light) !important;
+    color: #fef3c7 !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
   }
-  
+
   &.active {
-    color: var(--color-orange-warm) !important;
-    background-color: var(--color-forest-light) !important;
+    color: #fef3c7 !important;
+    background-color: rgba(255, 255, 255, 0.15) !important;
   }
 }
 
 // カードコンポーネントの強制上書き
 .card,
 .content-card {
-  background-color: var(--color-bg-primary) !important;
-  border-color: var(--color-border-light) !important;
+  background-color: var(--bg-medium) !important;
+  border-color: var(--border-light) !important;
   box-shadow: var(--shadow-card) !important;
-  
+
   &:hover {
     box-shadow: var(--shadow-card-hover) !important;
   }
@@ -73,19 +74,19 @@
 
 // サイドバーカードの強制上書き
 .sidebar-card {
-  background-color: var(--color-bg-tertiary) !important;
-  border-color: var(--color-border-light) !important;
-  
+  background-color: var(--bg-dark) !important;
+  border-color: var(--border-light) !important;
+
   &.card-mint {
-    background-color: var(--color-forest-light) !important;
+    background-color: var(--navy-pale) !important;
   }
-  
+
   &.card-beige {
-    background-color: var(--color-beige-warm) !important;
+    background-color: var(--gold-pale) !important;
   }
-  
+
   &.card-cream {
-    background-color: var(--color-cream-light) !important;
+    background-color: #f8fafc !important;
   }
 }
 
@@ -93,62 +94,62 @@
 .form-input,
 .form-textarea,
 .form-select {
-  border-color: var(--color-border-medium) !important;
-  
+  border-color: var(--border-medium) !important;
+
   &:focus {
-    border-color: var(--color-forest-medium) !important;
-    box-shadow: 0 0 0 3px rgba(45, 90, 61, 0.1) !important;
+    border-color: #2c5282 !important;
+    box-shadow: 0 0 0 3px rgba(44, 82, 130, 0.15) !important;
   }
 }
 
 // チェックボックス・ラジオボタンの強制上書き
 .form-check-input:checked {
-  background-color: var(--color-forest-medium) !important;
-  border-color: var(--color-forest-medium) !important;
+  background-color: #2c5282 !important;
+  border-color: #2c5282 !important;
 }
 
 // スイッチの強制上書き
 .form-switch-input:checked {
-  background-color: var(--color-forest-medium) !important;
+  background-color: #2c5282 !important;
 }
 
 // アラート・通知の強制上書き
 .alert {
   &.alert-success {
-    background-color: var(--color-forest-light) !important;
-    color: var(--color-forest-dark) !important;
-    border-color: var(--color-forest-medium) !important;
+    background-color: #ebf8ff !important;
+    color: #1e3a5f !important;
+    border-color: #2c5282 !important;
   }
-  
+
   &.alert-info {
-    background-color: var(--color-cream-light) !important;
-    color: var(--color-forest-dark) !important;
-    border-color: var(--color-beige-warm) !important;
+    background-color: var(--navy-pale) !important;
+    color: #1e3a5f !important;
+    border-color: #4a7fb5 !important;
   }
-  
+
   &.alert-warning {
-    background-color: var(--color-orange-light) !important;
-    color: var(--color-orange-dark) !important;
-    border-color: var(--color-orange-warm) !important;
+    background-color: var(--gold-pale) !important;
+    color: var(--gold-dark) !important;
+    border-color: var(--gold-medium) !important;
   }
 }
 
 // ブレッドクラムの強制上書き
 .breadcrumb {
-  background-color: var(--color-bg-secondary) !important;
-  
+  background-color: var(--bg-dark) !important;
+
   .breadcrumb-item {
-    color: var(--color-forest-medium) !important;
-    
+    color: #2c5282 !important;
+
     &.active {
-      color: var(--color-forest-dark) !important;
+      color: #1e3a5f !important;
     }
-    
+
     a {
-      color: var(--color-forest-medium) !important;
-      
+      color: #2c5282 !important;
+
       &:hover {
-        color: var(--color-orange-warm) !important;
+        color: #b45309 !important;
       }
     }
   }
@@ -156,14 +157,14 @@
 
 // フッターの強制上書き
 .footer {
-  background-color: var(--color-forest-dark) !important;
-  color: var(--color-text-inverse) !important;
-  
+  background-color: #1e3a5f !important;
+  color: #ffffff !important;
+
   a {
-    color: var(--color-forest-light) !important;
-    
+    color: rgba(255, 255, 255, 0.8) !important;
+
     &:hover {
-      color: var(--color-orange-light) !important;
+      color: #fef3c7 !important;
     }
   }
 }
@@ -171,65 +172,64 @@
 // テーブルの強制上書き
 .table {
   th {
-    background-color: var(--color-forest-light) !important;
-    color: var(--color-forest-dark) !important;
-    border-color: var(--color-border-medium) !important;
+    background-color: #ebf4ff !important;
+    color: #1e3a5f !important;
+    border-color: var(--border-medium) !important;
   }
-  
+
   td {
-    border-color: var(--color-border-light) !important;
+    border-color: var(--border-light) !important;
   }
-  
+
   &.table-striped tbody tr:nth-of-type(odd) {
-    background-color: var(--color-bg-secondary) !important;
+    background-color: var(--bg-dark) !important;
   }
 }
 
 // バッジ・ラベルの強制上書き
 .badge {
   &.badge-primary {
-    background-color: var(--color-forest-medium) !important;
-    color: var(--color-text-inverse) !important;
+    background-color: #2c5282 !important;
+    color: #ffffff !important;
   }
-  
+
   &.badge-secondary {
-    background-color: var(--color-orange-warm) !important;
-    color: var(--color-text-inverse) !important;
+    background-color: #b45309 !important;
+    color: #ffffff !important;
   }
-  
+
   &.badge-success {
-    background-color: var(--color-forest-light) !important;
-    color: var(--color-forest-dark) !important;
+    background-color: #ebf4ff !important;
+    color: #1e3a5f !important;
   }
 }
 
 // プログレスバーの強制上書き
 .progress {
-  background-color: var(--color-bg-tertiary) !important;
-  
+  background-color: var(--bg-darkest) !important;
+
   .progress-bar {
-    background-color: var(--color-forest-medium) !important;
+    background-color: #2c5282 !important;
   }
 }
 
 // ドロップダウンの強制上書き
 .dropdown-menu {
-  background-color: var(--color-bg-primary) !important;
-  border-color: var(--color-border-medium) !important;
+  background-color: var(--bg-medium) !important;
+  border-color: var(--border-medium) !important;
   box-shadow: var(--shadow-lg) !important;
-  
+
   .dropdown-item {
-    color: var(--color-forest-dark) !important;
-    
+    color: #1a202c !important;
+
     &:hover {
-      background-color: var(--color-forest-light) !important;
-      color: var(--color-forest-dark) !important;
+      background-color: var(--navy-pale) !important;
+      color: #1e3a5f !important;
     }
-    
+
     &.active {
-      background-color: var(--color-forest-medium) !important;
-      color: var(--color-text-inverse) !important;
+      background-color: #2c5282 !important;
+      color: #ffffff !important;
     }
   }
 }
-

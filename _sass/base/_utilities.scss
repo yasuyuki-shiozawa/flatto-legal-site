@@ -111,17 +111,17 @@
 .leading-loose { line-height: var(--line-height-loose) !important; }
 
 // テキストカラー
-.text-primary { color: var(--color-primary-600) !important; }
-.text-secondary { color: var(--color-secondary-600) !important; }
+.text-primary { color: var(--navy-medium) !important; }
+.text-secondary { color: var(--navy-light) !important; }
 .text-success { color: var(--color-success) !important; }
 .text-warning { color: var(--color-warning) !important; }
 .text-error { color: var(--color-error) !important; }
 .text-info { color: var(--color-info) !important; }
-.text-muted { color: var(--color-text-muted) !important; }
+.text-muted { color: var(--text-muted) !important; }
 
 // 背景色
-.bg-primary { background-color: var(--color-primary-600) !important; }
-.bg-secondary { background-color: var(--color-secondary-600) !important; }
+.bg-primary { background-color: var(--navy-medium) !important; }
+.bg-secondary { background-color: var(--navy-light) !important; }
 .bg-success { background-color: var(--color-success) !important; }
 .bg-warning { background-color: var(--color-warning) !important; }
 .bg-error { background-color: var(--color-error) !important; }

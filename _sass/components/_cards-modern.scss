@@ -5,7 +5,7 @@
 // モダンカードベース
 // ========================================
 .card-modern {
-  background: var(--color-bg-primary);
+  background: var(--bg-medium);
   border-radius: 16px;
   padding: 2rem;
   position: relative;
@@ -39,7 +39,7 @@
   // カラーバリエーション
   &.card-primary {
     background: var(--color-forest-light);
-    color: var(--color-text-primary);
+    color: var(--text-primary);
     
     &::before {
       opacity: 1;
@@ -49,7 +49,7 @@
   
   &.card-secondary {
     background: var(--color-cream-light);
-    color: var(--color-text-primary);
+    color: var(--text-primary);
     
     &::before {
       opacity: 1;
@@ -85,13 +85,13 @@
 // グラデーションカード
 // ========================================
 .card-gradient {
-  background: linear-gradient(135deg, var(--color-primary-50), var(--color-primary-100));
+  background: linear-gradient(135deg, var(--navy-pale), var(--navy-pale));
   border: none;
-  color: var(--color-primary-900);
+  color: var(--navy-darkest);
   
   &.gradient-secondary {
-    background: linear-gradient(135deg, var(--color-secondary-50), var(--color-secondary-100));
-    color: var(--color-secondary-900);
+    background: linear-gradient(135deg, var(--navy-pale), var(--navy-pale));
+    color: var(--navy-darkest);
   }
   
   &.gradient-dark {
@@ -123,8 +123,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--color-primary-100), var(--color-primary-200));
-    color: var(--color-primary-600);
+    background: linear-gradient(135deg, var(--navy-pale), var(--navy-pale));
+    color: var(--navy-medium);
     border-radius: 20px;
     font-size: 2.5rem;
     position: relative;
@@ -136,7 +136,7 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, var(--color-primary-400), var(--color-primary-600));
+      background: linear-gradient(135deg, var(--navy-light), var(--navy-medium));
       border-radius: 20px;
       opacity: 0;
       transform: scale(0.8);
@@ -185,7 +185,7 @@
       left: 50%;
       transform: translateX(-50%);
       font-size: 0.875rem;
-      color: var(--color-primary-600);
+      color: var(--navy-medium);
       font-weight: 500;
       opacity: 0;
       transition: all 0.3s ease;
@@ -200,7 +200,7 @@
       }
       
       .card-feature-title {
-        color: var(--color-primary-600);
+        color: var(--navy-medium);
       }
     }
   }
@@ -228,8 +228,8 @@ a .card-modern {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--color-primary-50);
-    color: var(--color-primary-500);
+    background: var(--navy-pale);
+    color: var(--navy-light);
     border-radius: 14px;
     font-size: 1.5rem;
     position: relative;
@@ -241,7 +241,7 @@ a .card-modern {
       position: absolute;
       width: 100%;
       height: 100%;
-      background: var(--color-primary-100);
+      background: var(--navy-pale);
       border-radius: 14px;
       animation: pulse 2s infinite;
     }
@@ -311,7 +311,7 @@ a .card-modern {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(135deg, var(--color-primary-400), var(--color-primary-600));
+    background: linear-gradient(135deg, var(--navy-light), var(--navy-medium));
     opacity: 1; // 常に表示
   }
   
@@ -323,7 +323,7 @@ a .card-modern {
     right: -50%;
     width: 200%;
     height: 200%;
-    background-image: radial-gradient(circle, var(--color-primary-100) 1px, transparent 1px);
+    background-image: radial-gradient(circle, var(--navy-pale) 1px, transparent 1px);
     background-size: 20px 20px;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -331,7 +331,7 @@ a .card-modern {
   }
   
   &:hover {
-    border-color: var(--color-primary-200);
+    border-color: var(--navy-pale);
     
     &::after {
       opacity: 0.5;
@@ -348,7 +348,7 @@ a .card-modern {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--color-primary-500);
+    background: var(--navy-light);
     color: var(--color-white);
     border-radius: 50%;
     transition: all 0.3s ease;
@@ -366,7 +366,7 @@ a .card-modern {
     bottom: 1rem;
     right: 1rem;
     font-size: 0.75rem;
-    color: var(--color-primary-600);
+    color: var(--navy-medium);
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -381,7 +381,7 @@ a .card-modern {
   
   &:hover {
     .card-arrow {
-      background: var(--color-primary-600);
+      background: var(--navy-medium);
       transform: scale(1.1);
       
       i {
@@ -397,7 +397,7 @@ a .card-modern {
   
   // フォーカス時のアクセシビリティ
   &:focus-visible {
-    outline: 2px solid var(--color-primary-500);
+    outline: 2px solid var(--navy-light);
     outline-offset: 2px;
   }
 }

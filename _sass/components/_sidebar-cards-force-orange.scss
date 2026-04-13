@@ -1,50 +1,49 @@
-// 強制的にオレンジベース統一スキームを適用
+// ネイビーベース統一スキームを適用 - ISSUE No.020対応
 // 最高優先度でキャッシュ問題を回避
-
-/* 強制更新: 2025-09-10 12:44 */
+/* 強制更新: 2026-04-13 */
 
 // 左サイドバー全体に強制適用
 .left-sidebar,
 .left-sidebar-content,
 .sidebar-left {
-  
-  // すべてのサイドバーカードヘッダーを強制的にオレンジに
+
+  // すべてのサイドバーカードヘッダーを強制的にネイビーに
   .sidebar-card-header,
   .card-header,
   .section-header {
-    background: linear-gradient(135deg, #FF9800 0%, #FFB74D 100%) !important;
+    background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%) !important;
     color: #FFFFFF !important;
-    border-bottom: 1px solid rgba(255, 152, 0, 0.3) !important;
-    
+    border-bottom: 1px solid rgba(30, 58, 95, 0.3) !important;
+
     h3, h4, h5, .title, .heading {
       color: #FFFFFF !important;
       margin: 0 !important;
     }
-    
+
     i, .icon {
       color: #FFFFFF !important;
     }
   }
-  
+
   // ナビゲーションリンク
   .sidebar-nav-link {
-    background: rgba(255, 224, 178, 0.2) !important;
-    border: 1px solid rgba(255, 152, 0, 0.5) !important;
-    color: #333333 !important;
-    
+    background: rgba(235, 244, 255, 0.4) !important;
+    border: 1px solid rgba(44, 82, 130, 0.3) !important;
+    color: #1a202c !important;
+
     &:hover {
-      background: linear-gradient(135deg, #FFE0B2 0%, #FFCC80 100%) !important;
-      color: #E65100 !important;
-      border-color: #FF9800 !important;
+      background: linear-gradient(135deg, #ebf4ff 0%, #bee3f8 100%) !important;
+      color: #1e3a5f !important;
+      border-color: #2c5282 !important;
     }
-    
+
     &.active {
-      background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%) !important;
+      background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%) !important;
       color: #FFFFFF !important;
     }
-    
+
     i {
-      color: #4CAF50 !important; // 緑のアクセント
+      color: #b45309 !important; // ゴールドアクセント
     }
   }
 }
@@ -53,19 +52,20 @@
 body .sidebar-card .sidebar-card-header,
 body .card .card-header,
 body .section .section-header {
-  background: linear-gradient(135deg, #FF9800 0%, #FFB74D 100%) !important;
+  background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%) !important;
   color: #FFFFFF !important;
 }
 
 body .sidebar-card .sidebar-card-header h3,
+body .sidebar-card .sidebar-card-header h4,
+body .sidebar-card .sidebar-card-header h5,
 body .card .card-header h3,
-body .section .section-header h3 {
+body .card .card-header h4,
+body .card .card-header h5 {
   color: #FFFFFF !important;
 }
 
 body .sidebar-card .sidebar-card-header i,
-body .card .card-header i,
-body .section .section-header i {
+body .card .card-header i {
   color: #FFFFFF !important;
 }
-

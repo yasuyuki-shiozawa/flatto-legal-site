@@ -18,7 +18,7 @@
   // プライマリCTA
   &.cta-primary {
     background: linear-gradient(135deg, var(--color-orange-warm) 0%, var(--color-orange-dark) 100%);
-    color: var(--color-text-inverse);
+    color: var(--text-inverse);
     box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
     
     &:hover {

@@ -46,7 +46,7 @@ body {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-normal);
   line-height: var(--line-height-relaxed);
-  color: var(--color-text-primary);
+  color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
-  color: var(--color-text-primary);
+  color: var(--text-primary);
 }
 
 h1 {
@@ -163,17 +163,17 @@ ul, ol {
 
 // リンク（シンプルで明確なスタイル）
 a {
-  color: var(--color-primary-600);
+  color: var(--navy-medium);
   text-decoration: underline;
   text-underline-offset: 2px;
   transition: color 0.2s;
   
   &:hover {
-    color: var(--color-primary-700);
+    color: var(--navy-dark);
   }
   
   &:visited {
-    color: var(--color-primary-800);
+    color: var(--navy-darkest);
   }
 }
 
@@ -207,9 +207,9 @@ pre {
 blockquote {
   margin: 1.5rem 0;
   padding-left: 1.25rem;
-  border-left: 4px solid var(--color-primary-500);
+  border-left: 4px solid var(--navy-light);
   font-style: italic;
-  color: var(--color-text-secondary);
+  color: var(--text-secondary);
 }
 
 // 便利なユーティリティクラス（最小限）
@@ -230,7 +230,7 @@ blockquote {
 }
 
 .text-muted {
-  color: var(--color-text-secondary);
+  color: var(--text-secondary);
 }
 
 // 印刷時の最適化

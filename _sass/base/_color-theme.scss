@@ -1,63 +1,63 @@
-// 読みやすさ重視の改善されたカラーテーマ
-// 高コントラスト・パステルアクセント
-
+// 権威性重視のネイビーカラーテーマ - ISSUE No.020対応
+// ネイビー＋白＋ゴールドアクセントの全面刷新
+// 更新日: 2026-04-13
 :root {
   // ========================================
-  // プライマリカラー（読みやすさ重視）
+  // プライマリカラー（ネイビー系）
   // ========================================
-  --primary-darkest: #1a1a1a;           // 最も濃い - 重要な見出し
-  --primary-dark: #333333;              // 濃い - メインテキスト
-  --primary-medium: #555555;            // 中間 - サブテキスト
-  --primary-light: #767676;             // 薄い - 説明文（WCAG AA準拠 4.54:1）
-  --primary-lightest: #767676;          // 最も薄い - 補助テキスト（WCAG AA準拠 4.54:1）
-  
+  --primary-darkest: #0f2340;           // 最も濃い - 重要な見出し
+  --primary-dark: #1e3a5f;              // 濃い - ナビゲーション背景
+  --primary-medium: #2c5282;            // 中間 - ボタン・リンク
+  --primary-light: #4a7fb5;             // 薄い - ホバー状態
+  --primary-lightest: #ebf4ff;          // 最も薄い - 背景ハイライト
+
   // ========================================
   // 背景色（明るく清潔感のある設計）
   // ========================================
-  --bg-darkest: #f0f2f5;               // 最も濃い - セクション区切り
-  --bg-dark: #f8f9fa;                  // 濃い - カード背景
+  --bg-darkest: #f0f4f8;               // 最も濃い - セクション区切り
+  --bg-dark: #f8fafc;                  // 濃い - カード背景
   --bg-medium: #ffffff;                // 中間 - メイン背景
   --bg-light: #fefefe;                 // 薄い - 入力フィールド
   --bg-lightest: #fdfdfd;              // 最も薄い - ホバー効果
-  
+
   // ========================================
-  // アクセントカラー（読みやすいパステル調）
+  // アクセントカラー（ゴールド/アンバー）
   // ========================================
-  --accent-dark: #BF360C;              // 濃い - アクティブ状態（WCAG AA準拠 5.60:1）
-  --accent-medium: #CC3300;            // 中間 - CTAボタン、リンク（WCAG AA準拠 5.20:1）
-  --accent-light: #FFF3E0;             // 薄い - ホバー背景
-  
+  --accent-dark: #92400e;              // 濃い - アクティブ状態（WCAG AA準拠）
+  --accent-medium: #b45309;            // 中間 - CTAボタン、強調（WCAG AA準拠 5.02:1）
+  --accent-light: #fef3c7;             // 薄い - ホバー背景
+
   // ========================================
-  // セカンダリカラー（パステルグリーン）
+  // セカンダリカラー（ライトブルー）
   // ========================================
-  --secondary-dark: #81C784;           // 濃い - 成功状態（パステル調）
-  --secondary-medium: #A8E6CF;         // 中間 - 成功メッセージ（パステル調）
-  --secondary-light: #e8f8f5;          // 薄い - 成功背景
-  
+  --secondary-dark: #2b6cb0;           // 濃い - 強調状態
+  --secondary-medium: #4299e1;         // 中間 - 情報メッセージ
+  --secondary-light: #ebf8ff;          // 薄い - 情報背景
+
   // ========================================
   // テキストカラー（高コントラスト）
   // ========================================
-  --text-primary: #333333;             // メインテキスト（高コントラスト）
-  --text-secondary: #555555;           // サブテキスト
-  --text-tertiary: #767676;            // 補助テキスト（WCAG AA準拠 4.54:1）
-  --text-muted: #767676;               // 薄いテキスト（WCAG AA準拠 4.54:1）
+  --text-primary: #1a202c;             // メインテキスト（高コントラスト）
+  --text-secondary: #2d3748;           // サブテキスト
+  --text-tertiary: #4a5568;            // 補助テキスト（WCAG AA準拠）
+  --text-muted: #718096;               // 薄いテキスト（WCAG AA準拠）
   --text-inverse: #ffffff;             // 白文字
-  
+
   // ========================================
   // ボーダーカラー（優しい印象）
   // ========================================
-  --border-light: #e9ecef;             // 薄いボーダー
-  --border-medium: #dee2e6;            // 中間ボーダー
-  --border-dark: #ced4da;              // 濃いボーダー
-  
+  --border-light: #e2e8f0;             // 薄いボーダー
+  --border-medium: #cbd5e0;            // 中間ボーダー
+  --border-dark: #a0aec0;              // 濃いボーダー
+
   // ========================================
-  // 状態カラー（パステル調整）
+  // 状態カラー
   // ========================================
-  --color-success: #A8E6CF;
-  --color-warning: #B45309;             // WCAG AA準拠 5.02:1
-  --color-error: #e74c3c;
-  --color-info: #3498db;
-  
+  --color-success: #38a169;
+  --color-warning: #d97706;             // WCAG AA準拠
+  --color-error: #e53e3e;
+  --color-info: #3182ce;
+
   // ========================================
   // シャドウ（優しい印象）
   // ========================================
@@ -66,18 +66,18 @@
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-  
+
   // カード用シャドウ
   --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
-  --shadow-card-hover: 0 8px 16px rgba(0, 0, 0, 0.12);
-  
+  --shadow-card-hover: 0 8px 16px rgba(30, 58, 95, 0.15);
+
   // ========================================
-  // グラデーション（パステル調整）
+  // グラデーション
   // ========================================
   --gradient-primary: linear-gradient(135deg, var(--primary-medium) 0%, var(--primary-dark) 100%);
   --gradient-secondary: linear-gradient(135deg, var(--accent-medium) 0%, var(--accent-dark) 100%);
   --gradient-subtle: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
-  
+
   // ========================================
   // 互換性のための旧変数（段階的移行用）
   // ========================================
@@ -86,6 +86,23 @@
   --color-forest-light: var(--bg-dark);
   --color-orange-warm: var(--accent-medium);
   --color-orange-dark: var(--accent-dark);
+
+  // ========================================
+  // ネイビーカラーシステム（新規追加）
+  // ========================================
+  --navy-darkest: #0f2340;
+  --navy-dark: #1e3a5f;
+  --navy-medium: #2c5282;
+  --navy-light: #4a7fb5;
+  --navy-pale: #ebf4ff;
+
+  // ========================================
+  // ゴールドアクセントシステム（新規追加）
+  // ========================================
+  --gold-dark: #92400e;
+  --gold-medium: #b45309;
+  --gold-light: #d97706;
+  --gold-pale: #fef3c7;
 }
 
 // ========================================
@@ -99,6 +116,7 @@
 .text-muted { color: var(--text-muted) !important; }
 .text-inverse { color: var(--text-inverse) !important; }
 .text-accent { color: var(--accent-medium) !important; }
+.text-navy { color: var(--navy-dark) !important; }
 
 // 背景色
 .bg-primary { background-color: var(--bg-medium) !important; }
@@ -106,12 +124,15 @@
 .bg-tertiary { background-color: var(--bg-darkest) !important; }
 .bg-accent { background-color: var(--accent-light) !important; }
 .bg-success { background-color: var(--secondary-light) !important; }
+.bg-navy { background-color: var(--navy-dark) !important; }
+.bg-navy-light { background-color: var(--navy-pale) !important; }
 
 // ボーダーカラー
 .border-light { border-color: var(--border-light) !important; }
 .border-medium { border-color: var(--border-medium) !important; }
 .border-dark { border-color: var(--border-dark) !important; }
 .border-accent { border-color: var(--accent-medium) !important; }
+.border-navy { border-color: var(--navy-medium) !important; }
 
 // ========================================
 // 太文字の統一（過度な使用を防ぐ）
@@ -129,7 +150,7 @@
 // 見出しの太文字統一
 h1, h2, h3, h4, h5, h6 {
   font-weight: var(--font-weight-medium) !important;
-  
+
   &.title-bold {
     font-weight: var(--font-weight-bold) !important;
   }
@@ -138,7 +159,7 @@ h1, h2, h3, h4, h5, h6 {
 // ボタンの統一
 .btn, button {
   font-weight: var(--font-weight-medium) !important;
-  
+
   &.btn-bold {
     font-weight: var(--font-weight-bold) !important;
   }
@@ -153,7 +174,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--bg-dark);
   border: 1px solid var(--border-light);
   box-shadow: var(--shadow-card);
-  
+
   &:hover {
     box-shadow: var(--shadow-card-hover);
   }
@@ -162,7 +183,7 @@ h1, h2, h3, h4, h5, h6 {
 // セクション
 .section {
   background-color: var(--bg-medium);
-  
+
   &.section-alt {
     background-color: var(--bg-darkest);
   }
@@ -171,17 +192,16 @@ h1, h2, h3, h4, h5, h6 {
 // リンク
 a {
   color: var(--primary-medium);
-  
+
   &:hover {
     color: var(--primary-dark);
   }
-  
+
   &.link-accent {
     color: var(--accent-medium);
-    
+
     &:hover {
       color: var(--accent-dark);
     }
   }
 }
-

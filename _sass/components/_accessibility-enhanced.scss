@@ -57,8 +57,8 @@ a {
 
 // テキストのコントラスト改善
 body {
-  color: var(--color-text-high-contrast);
-  background-color: var(--color-bg-high-contrast);
+  color: var(--text-primary);
+  background-color: var(--bg-medium);
 }
 
 // リンクの識別性向上
@@ -121,7 +121,7 @@ a {
     overflow: visible !important;
     clip: auto !important;
     white-space: normal !important;
-    background-color: var(--color-primary-600);
+    background-color: var(--navy-medium);
     color: white;
     text-decoration: none;
     border-radius: 4px;
@@ -134,7 +134,7 @@ label {
   display: block;
   margin-bottom: 0.25rem;
   font-weight: 600;
-  color: var(--color-text-high-contrast);
+  color: var(--text-primary);
 }
 
 input,
@@ -200,7 +200,7 @@ select {
   .modal-header {
     h2, h3, h4 {
       margin: 0;
-      color: var(--color-text-high-contrast);
+      color: var(--text-primary);
     }
   }
   
@@ -217,7 +217,7 @@ table {
     text-align: left;
     font-weight: 700;
     margin-bottom: 0.5rem;
-    color: var(--color-text-high-contrast);
+    color: var(--text-primary);
   }
   
   th {
