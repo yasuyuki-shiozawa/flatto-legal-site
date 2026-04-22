@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>入札サポート 無料診断 予約フォーム</title>
+  <style>
+    /* ===== リセット & ベース ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+      background: #f5f6f8;
+      color: #1a2340;
+      line-height: 1.7;
+    }
+
+    /* ===== カラー変数（nyusatsu-map.com に合わせた配色） ===== */
+    :root {
+      --navy: #1e3a5f;          /* サイトヘッダーと同じ濃紺 */
+      --navy-mid: #2a4a75;      /* 中間色 */
+      --navy-dark: #14283f;     /* フッター用の更に濃い紺 */
+      --orange: #ff8c2a;        /* サイトCTAオレンジ */
+      --orange-light: #ffa855;  /* 明るいオレンジ */
+      --orange-dark: #e67012;   /* hover用 */
+      --white: #ffffff;
+      --gray-bg: #f5f5fa;       /* 微紫がかった薄グレー（サイト感） */
+      --gray-border: #d8dde8;
+      --gray-text: #6b7280;
+      --green: #2e7d5e;
+      --text-primary: #333333;  /* ダークモード対応で純黒回避 */
+    }
+
+    /* ===== ヘッダーナビ ===== */
+    .site-header {
+      background: var(--navy);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .site-header .logo {
+      color: var(--white);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+      flex: 1;
+    }
+    .site-header .logo-main {
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .site-header .logo-sep {
+      color: var(--orange);
+      flex-shrink: 0;
+    }
+    .site-header .logo-sub {
+      color: var(--white);
+      font-weight: 700;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      min-width: 0;
+    }
+    .site-header .tel {
+      color: #b0bcd4;
+      font-size: 0.82rem;
+      white-space: nowrap;
+      flex-shrink: 0;
+      text-decoration: none;
+      letter-spacing: 0;
+    }
+    .site-header .tel:hover { color: var(--white); }
+
+    /* スマホ: ヘッダースタック表示 */
+    @media (max-width: 600px) {
+      .site-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        padding: 12px 16px;
+        text-align: center;
+      }
+      .site-header .logo {
+        flex-direction: column;
+        gap: 2px;
+        align-items: center;
+        line-height: 1.35;
+        flex: none;
+      }
+      .site-header .logo-sep { display: none; }
+      .site-header .logo-main { font-size: 0.92rem; }
+      .site-header .logo-sub {
+        font-size: 0.72rem;
+        font-weight: 600;
+        color: #c5d0e3;
+        letter-spacing: 0.02em;
+      }
+      .site-header .tel { font-size: 0.78rem; }
+    }
+
+    /* ===== ヒーローセクション ===== */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      padding: 56px 24px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 280px; height: 280px;
+      border-radius: 50%;
+      background: rgba(255,140,42,0.10);
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -40px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: rgba(255,140,42,0.06);
+    }
+    .hero-badge {
+      display: inline-block;
+      background: var(--orange);
+      color: var(--white);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      padding: 5px 16px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      color: var(--white);
+      font-size: clamp(1.4rem, 5vw, 2rem);
+      font-weight: 700;
+      line-height: 1.45;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 em {
+      color: var(--orange-light);
+      font-style: normal;
+    }
+    .hero-sub {
+      color: #b0bcd4;
+      font-size: 0.88rem;
+      max-width: 480px;
+      margin: 0 auto 28px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-meta {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--white);
+      font-size: 0.82rem;
+    }
+    .hero-meta-item .icon {
+      width: 20px; height: 20px;
+      background: var(--orange);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.65rem;
+      flex-shrink: 0;
+    }
+    .btn-hero {
+      display: inline-block;
+      background: var(--orange);
+      color: var(--white);
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 16px 36px;
+      border-radius: 6px;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      box-shadow: 0 4px 16px rgba(255,140,42,0.35);
+      position: relative;
+      z-index: 1;
+      transition: background 0.2s;
+    }
+    .btn-hero:hover { background: var(--orange-dark); }
+    .hero-note {
+      color: #8899bb;
+      font-size: 0.75rem;
+      margin-top: 12px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ===== セクション共通 ===== */
+    .section {
+      padding: 48px 24px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .section-label .bar {
+      width: 4px; height: 22px;
+      background: var(--orange);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .section-label h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    /* ===== 面談で得られること ===== */
+    .benefits-wrap {
+      background: var(--white);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(30,58,95,0.08);
+    }
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 22px 24px;
+      border-bottom: 1px solid var(--gray-border);
+    }
+    .benefit-item:last-child { border-bottom: none; }
+    .benefit-num {
+      width: 36px; height: 36px;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .benefit-body h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 5px;
+    }
+    .benefit-body p {
+      font-size: 0.83rem;
+      color: var(--gray-text);
+      line-height: 1.6;
+    }
+    .benefit-note {
+      background: #f0f4f8;
+      border-left: 3px solid var(--orange);
+      padding: 14px 20px;
+      margin: 0;
+      font-size: 0.8rem;
+      color: #4a5568;
+      line-height: 1.65;
+    }
+
+    /* ===== 区切り ===== */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--gray-border);
+      margin: 0 24px;
+    }
+
+    /* ===== フォームセクション ===== */
+    .form-section {
+      background: var(--white);
+      padding: 40px 24px 48px;
+    }
+    .form-section .inner {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .form-section .section-label {
+      margin-bottom: 8px;
+    }
+    .form-lead {
+      font-size: 0.85rem;
+      color: var(--gray-text);
+      margin-bottom: 32px;
+    }
+
+    /* フォームグループ */
+    .form-group-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--orange);
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--gray-border);
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      margin-top: 32px;
+    }
+    .form-group-title:first-of-type { margin-top: 0; }
+
+    .form-field {
+      margin-bottom: 20px;
+    }
+    .form-field label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 7px;
+    }
+    .badge-required {
+      background: #e53e3e;
+      color: var(--white);
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 3px;
+      letter-spacing: 0.05em;
+    }
+    .badge-optional {
+      background: #a0aec0;
+      color: var(--white);
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 3px;
+      letter-spacing: 0.05em;
+    }
+    .form-field input[type="text"],
+    .form-field input[type="tel"],
+    .form-field input[type="email"],
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1.5px solid var(--gray-border);
+      border-radius: 6px;
+      font-size: 0.9rem;
+      color: var(--navy);
+      background: #fafbfc;
+      font-family: inherit;
+      transition: border-color 0.2s;
+      appearance: none;
+    }
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      outline: none;
+      border-color: var(--orange);
+      background: var(--white);
+    }
+    .form-field textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+    .form-field .field-hint {
+      font-size: 0.76rem;
+      color: var(--gray-text);
+      margin-top: 5px;
+    }
+    .select-wrap {
+      position: relative;
+    }
+    .select-wrap::after {
+      content: '▾';
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--gray-text);
+      pointer-events: none;
+      font-size: 0.9rem;
+    }
+
+    /* 日時フィールド */
+    .datetime-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    /* 送信ボタン */
+    .form-submit {
+      margin-top: 36px;
+      text-align: center;
+    }
+    .btn-submit {
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+      background: var(--orange);
+      color: var(--white);
+      font-size: 1.05rem;
+      font-weight: 700;
+      padding: 18px 24px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      letter-spacing: 0.04em;
+      box-shadow: 0 4px 16px rgba(255,140,42,0.30);
+      transition: background 0.2s;
+    }
+    .btn-submit:hover { background: var(--orange-dark); }
+    .submit-note {
+      font-size: 0.76rem;
+      color: var(--gray-text);
+      margin-top: 10px;
+    }
+
+    /* ===== 信頼バッジ ===== */
+    .trust-bar {
+      background: #f0f4f8;
+      padding: 20px 24px;
+      text-align: center;
+    }
+    .trust-bar .inner {
+      max-width: 640px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.8rem;
+      color: #4a5568;
+    }
+    .trust-item .check {
+      width: 18px; height: 18px;
+      background: var(--green);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: white;
+      font-size: 0.6rem;
+      flex-shrink: 0;
+    }
+
+    /* ===== フッター ===== */
+    .site-footer {
+      background: var(--navy);
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .site-footer .footer-name {
+      color: var(--white);
+      font-size: 0.88rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .site-footer .footer-info {
+      color: #8899bb;
+      font-size: 0.76rem;
+      line-height: 1.8;
+    }
+    .site-footer .footer-links {
+      margin-top: 14px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .site-footer .footer-links a {
+      color: #8899bb;
+      font-size: 0.75rem;
+      text-decoration: none;
+    }
+    .site-footer .footer-links a:hover { color: var(--white); }
+
+    /* ===== レスポンシブ ===== */
+    @media (max-width: 480px) {
+      .hero { padding: 40px 20px 36px; }
+      .hero-meta { gap: 12px; }
+      .section { padding: 36px 20px; }
+      .benefit-item { padding: 18px 20px; }
+      .form-section { padding: 32px 20px 40px; }
+      .datetime-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ===== iOSズーム防止 ===== */
+    .form-field input,
+    .form-field select,
+    .form-field textarea { font-size: 16px !important; min-height: 44px; }
+    .form-field textarea { min-height: 88px; }
+
+    /* ===== 入力エラー強調 ===== */
+    .form-field.has-error input,
+    .form-field.has-error select,
+    .form-field.has-error textarea {
+      border-color: #e53e3e !important;
+      background: #fff5f5;
+    }
+
+    /* ===== honeypot ===== */
+    .hp-field {
+      position: absolute !important;
+      left: -9999px !important;
+      opacity: 0;
+      height: 0;
+      width: 0;
+      overflow: hidden;
+    }
+
+    /* ===== エラーメッセージ ===== */
+    .form-error-msg {
+      display: none;
+      background: #fdf0ef;
+      border: 1px solid #e6b0aa;
+      border-radius: 6px;
+      padding: 12px 16px;
+      color: #922b21;
+      font-size: 0.85rem;
+      margin-bottom: 20px;
+      line-height: 1.55;
+    }
+    .form-error-msg.show { display: block; }
+
+    /* ===== 送信中スピナー ===== */
+    .form-loading {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 16px;
+      color: var(--gray-text);
+      font-size: 0.85rem;
+    }
+    .form-loading.show { display: flex; }
+    .form-spinner {
+      width: 18px; height: 18px;
+      border: 2px solid #ddd;
+      border-top-color: var(--orange);
+      border-radius: 50%;
+      animation: form-spin 0.6s linear infinite;
+    }
+    @keyframes form-spin { to { transform: rotate(360deg); } }
+
+    .btn-submit:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+    .btn-submit:active { transform: scale(0.99); }
+    .btn-hero:active { transform: scale(0.98); }
+
+    /* ===== 完了画面 ===== */
+    .success-screen {
+      display: none;
+      background: var(--white);
+      padding: 60px 24px;
+    }
+    .success-screen.show { display: block; }
+    .success-screen .inner {
+      max-width: 560px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .success-icon {
+      width: 64px; height: 64px;
+      background: var(--green);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0 auto 20px;
+    }
+    .success-screen h2 {
+      font-size: 1.3rem;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .success-screen .lead {
+      font-size: 0.9rem;
+      color: var(--gray-text);
+      margin-bottom: 28px;
+      line-height: 1.7;
+    }
+    .success-detail-card {
+      background: var(--gray-bg);
+      border-radius: 8px;
+      padding: 20px 24px;
+      text-align: left;
+      margin-bottom: 24px;
+    }
+    .success-detail-row {
+      display: flex;
+      gap: 12px;
+      padding: 6px 0;
+      font-size: 0.85rem;
+    }
+    .success-detail-row .label {
+      width: 90px;
+      color: var(--gray-text);
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+    .success-detail-row .value {
+      color: var(--navy);
+      word-break: break-word;
+    }
+    .success-contact {
+      background: #f0f4f8;
+      border-radius: 6px;
+      padding: 14px 18px;
+      font-size: 0.82rem;
+      color: var(--gray-text);
+      line-height: 1.7;
+    }
+    .success-contact a {
+      color: var(--navy);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    /* ===== カレンダー: スロット読み込み ===== */
+    .slot-loading {
+      font-size: 0.78rem;
+      color: var(--gray-text);
+      padding: 4px 0;
+    }
+
+    /* ===== スロットグリッド（空き時間ボタン） ===== */
+    .slot-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(78px, 1fr));
+      gap: 8px;
+      margin-top: 4px;
+    }
+    @media (max-width: 480px) {
+      .slot-grid { grid-template-columns: repeat(4, 1fr); gap: 6px; }
+    }
+    .slot-btn {
+      padding: 11px 4px;
+      border: 1.5px solid var(--gray-border);
+      border-radius: 6px;
+      background: #fafbfc;
+      font-size: 0.92rem;
+      font-family: inherit;
+      color: var(--navy);
+      cursor: pointer;
+      text-align: center;
+      min-height: 44px;
+      font-weight: 600;
+      transition: border-color 0.15s, background 0.15s, color 0.15s, transform 0.1s;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .slot-btn:hover { border-color: var(--orange); background: #fff3e6; color: var(--orange); }
+    .slot-btn:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
+    .slot-btn.selected {
+      border-color: var(--orange);
+      background: var(--orange);
+      color: var(--white);
+    }
+    .slot-btn:active { transform: scale(0.97); }
+    .slot-empty {
+      padding: 18px;
+      text-align: center;
+      color: var(--gray-text);
+      font-size: 0.85rem;
+      background: #fafbfc;
+      border: 1px dashed var(--gray-border);
+      border-radius: 6px;
+    }
+    .slot-section {
+      margin-top: 10px;
+    }
+    .slot-section-label {
+      font-size: 0.78rem;
+      color: var(--gray-text);
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+    .slot-section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+    .slot-section-header .slot-section-label { margin-bottom: 0; }
+    .slot-clear-btn {
+      background: transparent;
+      border: 1px solid var(--gray-border);
+      border-radius: 4px;
+      color: var(--gray-text);
+      font-size: 0.72rem;
+      padding: 4px 10px;
+      cursor: pointer;
+      font-family: inherit;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .slot-clear-btn:hover { border-color: var(--orange); color: var(--orange); }
+  </style>
+</head>
+<body>
+
+  <noscript>
+    <div style="background:#fdf0ef;border:1px solid #e6b0aa;color:#922b21;padding:14px 20px;text-align:center;font-size:0.9rem;">
+      このフォームを使うには JavaScript を有効にしてください。<br>
+      または <a href="mailto:nyusatu@flat-haures.com">nyusatu@flat-haures.com</a> / TEL 046-272-3357 までご連絡ください。
+    </div>
+  </noscript>
+
+  <!-- ヘッダーナビ -->
+  <header class="site-header">
+    <div class="logo"><strong class="logo-main">入札サポート</strong><span class="logo-sep">|</span><span class="logo-sub">行政書士法人ふらっと法務事務所</span></div>
+    <a class="tel" href="tel:046-272-3357">TEL 046-272-3357</a>
+  </header>
+
+  <!-- ① ヒーローセクション -->
+  <section class="hero">
+    <div class="hero-badge">無料オンライン面談 受付フォーム</div>
+    <h1>御社のスキルで<br>官公需に参入できるか、<br><em>30分で確かめましょう。</em></h1>
+    <p class="hero-sub">
+      行政書士法人ふらっと法務事務所が、御社の事業内容をお伺いし、<br>
+      参入できる分野・必要な手続き・進め方をご説明します。
+    </p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <div class="icon">▶</div>
+        <span>Google Meet / 30分</span>
+      </div>
+      <div class="hero-meta-item">
+        <div class="icon">¥</div>
+        <span>費用ゼロ</span>
+      </div>
+      <div class="hero-meta-item">
+        <div class="icon">✓</div>
+        <span>契約義務なし</span>
+      </div>
+    </div>
+    <a href="#form" class="btn-hero">↓ 無料面談を予約する</a>
+        <p class="hero-note">確認メールとGoogle Meetリンクをメールでお送りします</p>
+  </section>
+
+  <!-- ② 面談で得られること -->
+  <div style="background: var(--gray-bg);">
+    <div class="section">
+      <div class="section-label">
+        <div class="bar"></div>
+        <h2>30分の無料面談でお伝えすること</h2>
+      </div>
+      <div class="benefits-wrap">
+        <div class="benefit-item">
+          <div class="benefit-num">1</div>
+          <div class="benefit-body">
+            <h3>御社のスキルで狙える「分野」と「市場規模」のご説明</h3>
+            <p>御社の事業内容をお伺いし、どの官公需分野に参入できるか、どのくらいの規模の案件があるかを具体的にご説明します。</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-num">2</div>
+          <div class="benefit-body">
+            <h3>参入に必要な資格と取得ステップ</h3>
+            <p>「全省庁統一資格」をはじめ、各自治体の入札参加資格など、参入に必要な手続きの種類と取得の流れをわかりやすくご説明します。</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-num">3</div>
+          <div class="benefit-body">
+            <h3>初回応札までのロードマップ</h3>
+            <p>資格取得から案件選定、書類作成、応札まで、御社の状況に合わせた具体的な進め方をご説明します。次回以降のご支援内容についてもご案内します。</p>
+          </div>
+        </div>
+        <p class="benefit-note">
+          ※ 行政書士が対応するため、申請書類の不備による指名停止リスクの回避など、法令に則った正確な手続きについてもアドバイスが可能です。「まず話だけ聞きたい」という段階でも、お気軽にご予約ください。
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ③ 予約フォーム -->
+  <section class="form-section" id="form">
+    <div class="inner">
+      <div class="section-label">
+        <div class="bar"></div>
+        <h2>ご予約フォーム</h2>
+      </div>
+      <p class="form-lead">以下の項目をご入力のうえ、「無料オンライン診断を予約する」ボタンを押してください。</p>
+
+      <form id="bookingForm" novalidate>
+
+        <div class="form-error-msg" id="formError" role="alert" aria-live="polite"></div>
+
+        <!-- honeypot (bot対策) -->
+        <div class="hp-field" aria-hidden="true">
+          <input type="text" name="website" tabindex="-1" autocomplete="off">
+        </div>
+
+        <!-- 基本情報 -->
+        <div class="form-group-title">基本情報</div>
+
+        <div class="form-field" id="ff-company">
+          <label for="f-company">会社名 <span class="badge-required">必須</span></label>
+          <input type="text" id="f-company" name="company" required placeholder="株式会社〇〇" autocomplete="organization" maxlength="100">
+        </div>
+
+        <div class="form-field" id="ff-name">
+          <label for="f-name">お名前 <span class="badge-required">必須</span></label>
+          <input type="text" id="f-name" name="name" required placeholder="山田 太郎" autocomplete="name" maxlength="50">
+        </div>
+
+        <div class="form-field" id="ff-phone">
+          <label for="f-phone">電話番号 <span class="badge-required">必須</span></label>
+          <input type="tel" id="f-phone" name="phone" required placeholder="03-1234-5678" autocomplete="tel" inputmode="tel" maxlength="20">
+        </div>
+
+        <div class="form-field" id="ff-email">
+          <label for="f-email">メールアドレス <span class="badge-required">必須</span></label>
+          <input type="email" id="f-email" name="email" required placeholder="example@company.co.jp" autocomplete="email" inputmode="email" maxlength="254">
+          <p class="field-hint">確認メールとGoogle Meetリンクをお送りします</p>
+        </div>
+
+        <!-- 御社について -->
+        <div class="form-group-title">御社について</div>
+
+        <div class="form-field" id="ff-business">
+          <label for="f-business">現在の主な事業内容 <span class="badge-optional">任意</span></label>
+          <input type="text" id="f-business" name="business" placeholder="例：Webサイト制作、社内システム保守、SNS運用代行 など" maxlength="200">
+          <p class="field-hint">記入いただくと、面談でより具体的な案件をご提案できます</p>
+        </div>
+
+        <div class="form-field" id="ff-employees">
+          <label for="f-employees">従業員数 <span class="badge-optional">任意</span></label>
+          <div class="select-wrap">
+            <select id="f-employees" name="employees">
+              <option value="">選択してください</option>
+              <option value="1〜5名">1〜5名</option>
+              <option value="6〜20名">6〜20名</option>
+              <option value="21〜50名">21〜50名</option>
+              <option value="51〜100名">51〜100名</option>
+              <option value="101名以上">101名以上</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-field" id="ff-message">
+          <label for="f-message">ご相談内容・気になっていること <span class="badge-optional">任意</span></label>
+          <textarea id="f-message" name="message" placeholder="例:入札の手続きが複雑そうで不安、自社に合う案件があるか知りたい、など" maxlength="2000"></textarea>
+        </div>
+
+        <!-- ご希望の日時 -->
+        <div class="form-group-title">ご希望の日時（日本時間 / JST）</div>
+
+        <div class="form-field" id="ff-date1">
+          <label for="f-date1">第1希望 <span class="badge-required">必須</span></label>
+          <div class="select-wrap">
+            <select id="f-date1" required aria-label="第1希望の日付">
+              <option value="">日付を読み込み中...</option>
+            </select>
+          </div>
+          <div class="slot-section" id="slot-section-1" style="display:none;">
+            <p class="slot-section-label">空き時間帯を選択してください</p>
+            <div class="slot-grid" id="slot-grid-1" role="radiogroup" aria-label="第1希望の時間帯"></div>
+          </div>
+          <p class="field-hint slot-loading" id="slot-loading-1" style="display:none;">空き時間を確認しています...</p>
+          <input type="hidden" name="datetime1" id="f-datetime1">
+        </div>
+
+        <div class="form-field" id="ff-date2">
+          <label for="f-date2">第2希望 <span class="badge-optional">任意</span></label>
+          <div class="select-wrap">
+            <select id="f-date2" aria-label="第2希望の日付">
+              <option value="">日付を選択(任意)</option>
+            </select>
+          </div>
+          <div class="slot-section" id="slot-section-2" style="display:none;">
+            <div class="slot-section-header">
+              <p class="slot-section-label">空き時間帯を選択してください</p>
+              <button type="button" class="slot-clear-btn" id="slot-clear-2" aria-label="第2希望をクリア">クリア</button>
+            </div>
+            <div class="slot-grid" id="slot-grid-2" role="radiogroup" aria-label="第2希望の時間帯"></div>
+          </div>
+          <p class="field-hint slot-loading" id="slot-loading-2" style="display:none;">空き時間を確認しています...</p>
+          <input type="hidden" name="datetime2" id="f-datetime2">
+        </div>
+
+        <!-- 送信ボタン -->
+        <div class="form-submit">
+          <button type="submit" class="btn-submit" id="submitBtn">無料オンライン面談を予約する</button>
+          <p class="submit-note">面談後の契約義務はありません</p>
+          <div class="form-loading" id="formLoading">
+            <div class="form-spinner"></div>
+            <span>送信しています...</span>
+          </div>
+        </div>
+
+      </form>
+
+      <!-- 完了画面 -->
+      <div class="success-screen" id="successScreen">
+        <div class="inner">
+          <div class="success-icon">✓</div>
+          <h2>ご予約を受け付けました</h2>
+          <p class="lead">確認メールをお送りしますので、ご確認ください。<br>日程確定後、Google Meetのリンクをお届けします。</p>
+          <div class="success-detail-card">
+            <div class="success-detail-row"><div class="label">会社名</div><div class="value" id="sd-company"></div></div>
+            <div class="success-detail-row"><div class="label">お名前</div><div class="value" id="sd-name"></div></div>
+            <div class="success-detail-row"><div class="label">第1希望</div><div class="value" id="sd-datetime1"></div></div>
+            <div class="success-detail-row" id="sd-datetime2-row" style="display:none;"><div class="label">第2希望</div><div class="value" id="sd-datetime2"></div></div>
+            <div class="success-detail-row"><div class="label">メール</div><div class="value" id="sd-email"></div></div>
+          </div>
+          <div class="success-contact">
+            ご不明点がございましたら<br>
+            <a href="mailto:nyusatu@flat-haures.com">nyusatu@flat-haures.com</a><br>
+            または <a href="tel:046-272-3357">046-272-3357</a> までご連絡ください。
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 信頼バッジ -->
+  <div class="trust-bar">
+    <div class="inner">
+      <div class="trust-item">
+        <div class="check">✓</div>
+        <span>費用ゼロ</span>
+      </div>
+      <div class="trust-item">
+        <div class="check">✓</div>
+        <span>契約義務なし</span>
+      </div>
+      <div class="trust-item">
+        <div class="check">✓</div>
+        <span>行政書士が対応</span>
+      </div>
+      <div class="trust-item">
+        <div class="check">✓</div>
+        <span>オンライン（Google Meet）</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <div class="footer-name">行政書士法人ふらっと法務事務所</div>
+    <div class="footer-info">
+      入札参入支援サービス「入札サポート」<br>
+      〒242-0006 神奈川県大和市南林間 6-4-26<br>
+      TEL 046-272-3357　nyusatu@flat-haures.com
+    </div>
+    <div class="footer-links">
+      <a href="https://nyusatsu-map.com" target="_blank" rel="noopener">公式サイト</a>
+      <a href="https://youtube.com/channel/UCh-6BdX4qvtr_gK3a4xmeUw" target="_blank" rel="noopener">YouTube</a>
+    </div>
+  </footer>
+
+<script>
+(() => {
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxnHXq-VPn-XMZn5xndY19ziN8CiqKj59u0wTQDPMupGtAj22UDvBy1hXd3VshcRIs/exec';
+
+  const $ = (s) => document.querySelector(s);
+  const errorBox = $('#formError');
+  const submitBtn = $('#submitBtn');
+  const loading = $('#formLoading');
+  const form = $('#bookingForm');
+
+  let isSubmitting = false;
+  let availableDays = [];
+
+  // ===== 定数 =====
+  const STORAGE_KEY = 'bookingFormDraft';
+  const STORAGE_TTL = 24 * 60 * 60 * 1000; // 24時間
+  const TAB_ID = Math.random().toString(36).slice(2, 10);
+
+  // よくあるメールドメインtypo
+  const EMAIL_TYPOS = {
+    'gmial.com': 'gmail.com', 'gmai.com': 'gmail.com', 'gmal.com': 'gmail.com',
+    'gmil.com': 'gmail.com', 'gmaill.com': 'gmail.com',
+    'yahho.co.jp': 'yahoo.co.jp', 'yaho.co.jp': 'yahoo.co.jp',
+    'yhaoo.co.jp': 'yahoo.co.jp', 'yahoo.jp': 'yahoo.co.jp',
+    'hotmial.com': 'hotmail.com', 'hotmal.com': 'hotmail.com',
+    'outlok.com': 'outlook.com', 'outook.com': 'outlook.com',
+    'icoud.com': 'icloud.com', 'icould.com': 'icloud.com',
+  };
+
+  // ===== ヘルパー =====
+  function showError(msg) {
+    errorBox.textContent = msg;
+    errorBox.classList.add('show');
+    errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+  function clearError() { errorBox.classList.remove('show'); }
+  function clearFieldErrors() {
+    document.querySelectorAll('.form-field.has-error').forEach(el => el.classList.remove('has-error'));
+  }
+  function markFieldError(id) {
+    const el = document.getElementById(id);
+    if (el) el.classList.add('has-error');
+  }
+  function fmtDateLabel(dateStr, dow) {
+    const m = dateStr.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    if (!m) return dateStr;
+    return `${m[1]}年${parseInt(m[2])}月${parseInt(m[3])}日(${dow})`;
+  }
+  function fmtDateTime(iso) {
+    if (!iso) return '';
+    const d = new Date(iso);
+    const dow = ['日','月','火','水','木','金','土'][d.getDay()];
+    return `${d.getFullYear()}年${d.getMonth()+1}月${d.getDate()}日(${dow}) ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`;
+  }
+
+  // ===== 利用可能日読み込み =====
+  async function loadDays() {
+    window._lastDaysFetch = Date.now();
+    try {
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 15000); // 15秒タイムアウト
+      const resp = await fetch(`${SCRIPT_URL}?action=days`, { signal: ctrl.signal });
+      clearTimeout(timer);
+      const data = await resp.json();
+      availableDays = data.days || [];
+      populateDateSelect('f-date1', '日付を選択');
+      populateDateSelect('f-date2', '日付を選択(任意)');
+    } catch (e) {
+      const opt = '<option value="">日付の読み込みに失敗しました</option>';
+      $('#f-date1').innerHTML = opt;
+      $('#f-date2').innerHTML = opt;
+    }
+  }
+  function populateDateSelect(id, placeholder) {
+    const sel = document.getElementById(id);
+    sel.innerHTML = `<option value="">${placeholder}</option>`;
+    if (!availableDays.length) {
+      sel.innerHTML = '<option value="">現在予約可能な日がありません</option>';
+      return;
+    }
+    availableDays.forEach(d => {
+      const o = document.createElement('option');
+      o.value = d.date;
+      o.textContent = fmtDateLabel(d.date, d.dayOfWeek);
+      sel.appendChild(o);
+    });
+  }
+
+  // ===== スロット読み込み（グリッド方式） =====
+  async function loadSlots(dateId, gridId, sectionId, hiddenId, loadingId) {
+    const dateSel = document.getElementById(dateId);
+    const grid = document.getElementById(gridId);
+    const section = document.getElementById(sectionId);
+    const hidden = document.getElementById(hiddenId);
+    const loadEl = document.getElementById(loadingId);
+    const dateStr = dateSel.value;
+    hidden.value = '';
+    grid.innerHTML = '';
+    if (!dateStr) {
+      section.style.display = 'none';
+      return;
+    }
+    section.style.display = 'block';
+    loadEl.style.display = 'block';
+    grid.innerHTML = '<div class="slot-empty">空き時間を確認しています...</div>';
+    try {
+      const resp = await fetch(`${SCRIPT_URL}?action=slots&date=${encodeURIComponent(dateStr)}`);
+      const data = await resp.json();
+      const slots = data.slots || [];
+      grid.innerHTML = '';
+      if (!slots.length) {
+        grid.innerHTML = '<div class="slot-empty">この日は空きがありません。別の日をお選びください。</div>';
+        return;
+      }
+      slots.forEach((s, idx) => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'slot-btn';
+        b.textContent = s.time;
+        b.dataset.iso = s.iso;
+        b.setAttribute('role', 'radio');
+        b.setAttribute('aria-checked', 'false');
+        b.setAttribute('aria-label', s.time + 'から30分');
+        b.setAttribute('tabindex', idx === 0 ? '0' : '-1');
+        b.addEventListener('click', () => selectSlot(b, s.iso, gridId, hiddenId));
+        b.addEventListener('keydown', (ev) => handleSlotKeydown(ev, b, gridId));
+        grid.appendChild(b);
+      });
+      // スクロールしてグリッドを視野内に
+      setTimeout(() => section.scrollIntoView({ behavior: 'smooth', block: 'center' }), 100);
+    } catch (e) {
+      grid.innerHTML = '<div class="slot-empty">空き時間の読み込みに失敗しました</div>';
+    } finally {
+      loadEl.style.display = 'none';
+    }
+  }
+
+  function selectSlot(btn, iso, gridId, hiddenId) {
+    document.querySelectorAll(`#${gridId} .slot-btn`).forEach(x => {
+      x.classList.remove('selected');
+      x.setAttribute('aria-checked', 'false');
+      x.setAttribute('tabindex', '-1');
+    });
+    btn.classList.add('selected');
+    btn.setAttribute('aria-checked', 'true');
+    btn.setAttribute('tabindex', '0');
+    document.getElementById(hiddenId).value = iso;
+    // バリデーションエラー解除
+    btn.closest('.form-field')?.classList.remove('has-error');
+    if (errorBox.classList.contains('show')) clearError();
+  }
+
+  function handleSlotKeydown(ev, btn, gridId) {
+    const keys = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 };
+    if (!(ev.key in keys)) return;
+    ev.preventDefault();
+    const all = Array.from(document.querySelectorAll(`#${gridId} .slot-btn`));
+    const idx = all.indexOf(btn);
+    const next = all[(idx + keys[ev.key] + all.length) % all.length];
+    if (next) next.focus();
+  }
+
+  // ===== イベント =====
+  $('#f-date1').addEventListener('change', () => {
+    loadSlots('f-date1', 'slot-grid-1', 'slot-section-1', 'f-datetime1', 'slot-loading-1');
+  });
+  $('#f-date2').addEventListener('change', () => {
+    loadSlots('f-date2', 'slot-grid-2', 'slot-section-2', 'f-datetime2', 'slot-loading-2');
+  });
+
+  // 入力時にエラー解除
+  document.querySelectorAll('#bookingForm input, #bookingForm select, #bookingForm textarea').forEach(el => {
+    const handler = () => {
+      el.closest('.form-field')?.classList.remove('has-error');
+      if (errorBox.classList.contains('show')) clearError();
+    };
+    el.addEventListener('input', handler);
+    el.addEventListener('change', handler);
+  });
+
+  // ===== タブ復帰時に予約可能日を再取得 =====
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible' && availableDays.length > 0) {
+      // 30秒以上経過してたら再ロード
+      const now = Date.now();
+      if (now - (window._lastDaysFetch || 0) > 30000) loadDays();
+    }
+  });
+
+  // ===== 送信 =====
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (isSubmitting) return;
+    clearError();
+    clearFieldErrors();
+
+    if (form.querySelector('[name="website"]').value) return; // bot
+
+    const data = {
+      company: $('#f-company').value.trim(),
+      name: $('#f-name').value.trim(),
+      phone: $('#f-phone').value.trim(),
+      email: $('#f-email').value.trim(),
+      business: $('#f-business').value.trim(),
+      employees: $('#f-employees').value,
+      message: $('#f-message').value.trim(),
+      datetime1: $('#f-datetime1').value,
+      datetime2: $('#f-datetime2').value,
+      // industryはGAS側でbusinessにフォールバックされる
+    };
+
+    // 必須チェック
+    const required = [
+      ['company', 'ff-company', '会社名', 'f-company'],
+      ['name', 'ff-name', 'お名前', 'f-name'],
+      ['phone', 'ff-phone', '電話番号', 'f-phone'],
+      ['email', 'ff-email', 'メールアドレス', 'f-email'],
+      ['datetime1', 'ff-date1', '第1希望の日時', 'f-date1'],
+    ];
+    for (const [key, fieldId, label, focusId] of required) {
+      if (!data[key]) {
+        markFieldError(fieldId);
+        document.getElementById(focusId)?.focus();
+        showError(`${label}を入力してください`);
+        return;
+      }
+    }
+    // メール形式
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+      markFieldError('ff-email');
+      $('#f-email').focus();
+      showError('有効なメールアドレスを入力してください');
+      return;
+    }
+    // 電話形式（数字3桁以上 + 記号許可）
+    const phoneDigits = data.phone.replace(/\D/g, '');
+    if (phoneDigits.length < 9 || phoneDigits.length > 14 || !/^[\d\-+()\s]+$/.test(data.phone)) {
+      markFieldError('ff-phone');
+      $('#f-phone').focus();
+      showError('有効な電話番号を入力してください（数字9〜14桁）');
+      return;
+    }
+    // 第2希望整合性: 日付選んでるのに時間未選択
+    if ($('#f-date2').value && !data.datetime2) {
+      markFieldError('ff-date2');
+      document.getElementById('slot-grid-2')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      showError('第2希望の時間帯を選択してください（不要な場合は日付選択を解除してください）');
+      return;
+    }
+    // 過去日時チェック
+    const dt1 = new Date(data.datetime1);
+    if (dt1.getTime() < Date.now()) {
+      markFieldError('ff-date1');
+      showError('第1希望の日時が過去になっています。再度選択してください。');
+      return;
+    }
+
+    // マルチタブロック（他タブで送信中なら中断）
+    try {
+      const existing = localStorage.getItem('bookingFormSubmitting');
+      if (existing) {
+        const [owner, lockedAt] = existing.split(':');
+        if (owner !== TAB_ID && Date.now() - parseInt(lockedAt) < 60000) {
+          showError('別のタブで送信処理中です。完了までお待ちください。');
+          return;
+        }
+      }
+      localStorage.setItem('bookingFormSubmitting', TAB_ID + ':' + Date.now());
+    } catch (_) {}
+
+    isSubmitting = true;
+    submitBtn.disabled = true;
+    submitBtn.textContent = '送信中...';
+    loading.classList.add('show');
+    window.onbeforeunload = () => '送信中です。ページを閉じますか？';
+
+    try {
+      // CORS有効: GASがJSONレスポンスを返すので結果を読める
+      // Content-Type: text/plainでpreflight回避
+      const resp = await fetch(SCRIPT_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(data),
+        redirect: 'follow',
+      });
+      // レスポンスがHTMLならApps Scriptの権限設定エラー
+      const contentType = (resp.headers.get('content-type') || '').toLowerCase();
+      if (contentType.includes('text/html')) {
+        throw new Error('サーバー設定エラー: フォームの送信先に問題があります。お手数ですが nyusatu@flat-haures.com までご連絡ください。');
+      }
+      let result = {};
+      try { result = await resp.json(); } catch (_) { result = { success: true }; }
+
+      if (result.success === false) {
+        throw new Error(result.error || '予約処理でエラーが発生しました');
+      }
+
+      // 成功したので下書きクリア・タブロック解除
+      clearDraft();
+      try { localStorage.removeItem('bookingFormSubmitting'); } catch (_) {}
+
+      // 成功画面表示
+      $('#sd-company').textContent = data.company;
+      $('#sd-name').textContent = data.name;
+      $('#sd-datetime1').textContent = fmtDateTime(data.datetime1);
+      if (data.datetime2) {
+        $('#sd-datetime2').textContent = fmtDateTime(data.datetime2);
+        $('#sd-datetime2-row').style.display = 'flex';
+      }
+      $('#sd-email').textContent = data.email;
+      form.style.display = 'none';
+      $('#successScreen').classList.add('show');
+      document.title = 'ご予約を受け付けました | 入札サポート';
+      window.onbeforeunload = null;
+
+      // ブラウザ戻るで再送信されないように履歴を置換
+      try { history.replaceState(null, '', location.pathname + '?completed=1'); } catch (_) {}
+      // 成功見出しにフォーカス（アクセシビリティ）
+      const sh = $('#successScreen h2');
+      if (sh) { sh.setAttribute('tabindex', '-1'); sh.focus(); }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } catch (err) {
+      window.onbeforeunload = null;
+      try { localStorage.removeItem('bookingFormSubmitting'); } catch (_) {}
+      const msg = (err && err.message) ? err.message : '送信に失敗しました';
+      showError(msg + '。お困りの場合は nyusatu@flat-haures.com までご連絡ください。');
+      submitBtn.disabled = false;
+      submitBtn.textContent = '無料オンライン面談を予約する';
+      loading.classList.remove('show');
+      isSubmitting = false;
+    }
+  });
+
+  // ===== localStorage 下書き保存/復元 =====
+  const TEXT_FIELDS = ['f-company', 'f-name', 'f-phone', 'f-email', 'f-business', 'f-employees', 'f-message'];
+
+  function saveDraft() {
+    try {
+      const draft = { savedAt: Date.now() };
+      TEXT_FIELDS.forEach(id => { draft[id] = document.getElementById(id).value; });
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(draft));
+    } catch (_) {}
+  }
+  function restoreDraft() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return;
+      const draft = JSON.parse(raw);
+      if (!draft || !draft.savedAt || Date.now() - draft.savedAt > STORAGE_TTL) {
+        localStorage.removeItem(STORAGE_KEY);
+        return;
+      }
+      TEXT_FIELDS.forEach(id => {
+        const el = document.getElementById(id);
+        if (el && draft[id]) el.value = draft[id];
+      });
+    } catch (_) {}
+  }
+  function clearDraft() {
+    try { localStorage.removeItem(STORAGE_KEY); } catch (_) {}
+  }
+
+  // 入力イベントで自動保存（1秒デバウンス）
+  let saveTimer = null;
+  TEXT_FIELDS.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('input', () => {
+      clearTimeout(saveTimer);
+      saveTimer = setTimeout(saveDraft, 1000);
+    });
+  });
+
+  restoreDraft();
+
+  // ===== メールアドレスのtypo警告 =====
+  $('#f-email').addEventListener('blur', (e) => {
+    const email = e.target.value.trim().toLowerCase();
+    if (!email || !email.includes('@')) return;
+    const domain = email.split('@')[1];
+    if (EMAIL_TYPOS[domain]) {
+      const suggested = email.replace(domain, EMAIL_TYPOS[domain]);
+      showError(`メールアドレスに誤りがある可能性があります: もしかして ${suggested} ですか?`);
+    }
+  });
+
+  // ===== 第2希望クリアボタン =====
+  const clearBtn2 = document.getElementById('slot-clear-2');
+  if (clearBtn2) {
+    clearBtn2.addEventListener('click', () => {
+      $('#f-date2').value = '';
+      $('#f-datetime2').value = '';
+      document.getElementById('slot-section-2').style.display = 'none';
+      document.getElementById('slot-grid-2').innerHTML = '';
+      $('#ff-date2').classList.remove('has-error');
+    });
+  }
+
+  // ===== マルチタブ対策（同一ユーザーが複数タブで送信するのを防ぐ） =====
+  window.addEventListener('storage', (e) => {
+    if (e.key === 'bookingFormSubmitting' && e.newValue === 'locked') {
+      showError('別のタブで送信処理中です。完了までお待ちください。');
+      submitBtn.disabled = true;
+    }
+  });
+
+  loadDays();
+})();
+</script>
+
+</body>
+</html>
