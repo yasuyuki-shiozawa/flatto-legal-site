@@ -864,40 +864,22 @@
           <textarea id="f-message" name="message" placeholder="例:入札の手続きが複雑そうで不安、自社に合う案件があるか知りたい、など" maxlength="2000"></textarea>
         </div>
 
-        <!-- ご希望の日時 -->
-        <div class="form-group-title">ご希望の日時（日本時間 / JST）</div>
+        <!-- 希望日程 -->
+        <div class="form-group-title">希望日程</div>
 
         <div class="form-field" id="ff-date1">
-          <label for="f-date1">第1希望 <span class="badge-required">必須</span></label>
+          <label for="f-date1">希望日程 <span class="badge-required">必須</span></label>
           <div class="select-wrap">
-            <select id="f-date1" required aria-label="第1希望の日付">
+            <select id="f-date1" required aria-label="希望日程の日付">
               <option value="">日付を読み込み中...</option>
             </select>
           </div>
           <div class="slot-section" id="slot-section-1" style="display:none;">
             <p class="slot-section-label">空き時間帯を選択してください</p>
-            <div class="slot-grid" id="slot-grid-1" role="radiogroup" aria-label="第1希望の時間帯"></div>
+            <div class="slot-grid" id="slot-grid-1" role="radiogroup" aria-label="希望日程の時間帯"></div>
           </div>
           <p class="field-hint slot-loading" id="slot-loading-1" style="display:none;">空き時間を確認しています...</p>
           <input type="hidden" name="datetime1" id="f-datetime1">
-        </div>
-
-        <div class="form-field" id="ff-date2">
-          <label for="f-date2">第2希望 <span class="badge-optional">任意</span></label>
-          <div class="select-wrap">
-            <select id="f-date2" aria-label="第2希望の日付">
-              <option value="">日付を選択(任意)</option>
-            </select>
-          </div>
-          <div class="slot-section" id="slot-section-2" style="display:none;">
-            <div class="slot-section-header">
-              <p class="slot-section-label">空き時間帯を選択してください</p>
-              <button type="button" class="slot-clear-btn" id="slot-clear-2" aria-label="第2希望をクリア">クリア</button>
-            </div>
-            <div class="slot-grid" id="slot-grid-2" role="radiogroup" aria-label="第2希望の時間帯"></div>
-          </div>
-          <p class="field-hint slot-loading" id="slot-loading-2" style="display:none;">空き時間を確認しています...</p>
-          <input type="hidden" name="datetime2" id="f-datetime2">
         </div>
 
         <!-- 送信ボタン -->
@@ -921,8 +903,7 @@
           <div class="success-detail-card">
             <div class="success-detail-row"><div class="label">会社名</div><div class="value" id="sd-company"></div></div>
             <div class="success-detail-row"><div class="label">お名前</div><div class="value" id="sd-name"></div></div>
-            <div class="success-detail-row"><div class="label">第1希望</div><div class="value" id="sd-datetime1"></div></div>
-            <div class="success-detail-row" id="sd-datetime2-row" style="display:none;"><div class="label">第2希望</div><div class="value" id="sd-datetime2"></div></div>
+            <div class="success-detail-row"><div class="label">希望日時</div><div class="value" id="sd-datetime1"></div></div>
             <div class="success-detail-row"><div class="label">メール</div><div class="value" id="sd-email"></div></div>
           </div>
           <div class="success-contact">
@@ -1037,11 +1018,9 @@
       const data = await resp.json();
       availableDays = data.days || [];
       populateDateSelect('f-date1', '日付を選択');
-      populateDateSelect('f-date2', '日付を選択(任意)');
     } catch (e) {
       const opt = '<option value="">日付の読み込みに失敗しました</option>';
       $('#f-date1').innerHTML = opt;
-      $('#f-date2').innerHTML = opt;
     }
   }
   function populateDateSelect(id, placeholder) {
@@ -1137,9 +1116,6 @@
   $('#f-date1').addEventListener('change', () => {
     loadSlots('f-date1', 'slot-grid-1', 'slot-section-1', 'f-datetime1', 'slot-loading-1');
   });
-  $('#f-date2').addEventListener('change', () => {
-    loadSlots('f-date2', 'slot-grid-2', 'slot-section-2', 'f-datetime2', 'slot-loading-2');
-  });
 
   // 入力時にエラー解除
   document.querySelectorAll('#bookingForm input, #bookingForm select, #bookingForm textarea').forEach(el => {
@@ -1178,7 +1154,6 @@
       employees: $('#f-employees').value,
       message: $('#f-message').value.trim(),
       datetime1: $('#f-datetime1').value,
-      datetime2: $('#f-datetime2').value,
       // industryはGAS側でbusinessにフォールバックされる
     };
 
@@ -1188,7 +1163,7 @@
       ['name', 'ff-name', 'お名前', 'f-name'],
       ['phone', 'ff-phone', '電話番号', 'f-phone'],
       ['email', 'ff-email', 'メールアドレス', 'f-email'],
-      ['datetime1', 'ff-date1', '第1希望の日時', 'f-date1'],
+      ['datetime1', 'ff-date1', '希望日時', 'f-date1'],
     ];
     for (const [key, fieldId, label, focusId] of required) {
       if (!data[key]) {
@@ -1213,18 +1188,11 @@
       showError('有効な電話番号を入力してください（数字9〜14桁）');
       return;
     }
-    // 第2希望整合性: 日付選んでるのに時間未選択
-    if ($('#f-date2').value && !data.datetime2) {
-      markFieldError('ff-date2');
-      document.getElementById('slot-grid-2')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      showError('第2希望の時間帯を選択してください（不要な場合は日付選択を解除してください）');
-      return;
-    }
     // 過去日時チェック
     const dt1 = new Date(data.datetime1);
     if (dt1.getTime() < Date.now()) {
       markFieldError('ff-date1');
-      showError('第1希望の日時が過去になっています。再度選択してください。');
+      showError('希望日時が過去になっています。再度選択してください。');
       return;
     }
 
@@ -1276,10 +1244,6 @@
       $('#sd-company').textContent = data.company;
       $('#sd-name').textContent = data.name;
       $('#sd-datetime1').textContent = fmtDateTime(data.datetime1);
-      if (data.datetime2) {
-        $('#sd-datetime2').textContent = fmtDateTime(data.datetime2);
-        $('#sd-datetime2-row').style.display = 'flex';
-      }
       $('#sd-email').textContent = data.email;
       form.style.display = 'none';
       $('#successScreen').classList.add('show');
@@ -1356,18 +1320,6 @@
       showError(`メールアドレスに誤りがある可能性があります: もしかして ${suggested} ですか?`);
     }
   });
-
-  // ===== 第2希望クリアボタン =====
-  const clearBtn2 = document.getElementById('slot-clear-2');
-  if (clearBtn2) {
-    clearBtn2.addEventListener('click', () => {
-      $('#f-date2').value = '';
-      $('#f-datetime2').value = '';
-      document.getElementById('slot-section-2').style.display = 'none';
-      document.getElementById('slot-grid-2').innerHTML = '';
-      $('#ff-date2').classList.remove('has-error');
-    });
-  }
 
   // ===== マルチタブ対策（同一ユーザーが複数タブで送信するのを防ぐ） =====
   window.addEventListener('storage', (e) => {
