@@ -432,7 +432,7 @@ body_class: trends-page
                 <h2>最新動向を活かした入札戦略を立てませんか？</h2>
                 <p>変化する入札環境に対応するため、専門家と一緒に戦略を検討しましょう。</p>
                 <div class="cta-buttons">
-                    <a href="/contact/?service=trend-analysis" class="primary">
+                    <a href="/booking/" class="primary">
                         <i class="fas fa-comments"></i>
                                  <div class="cta-buttons">
                     <a href="/flow/" class="primary">

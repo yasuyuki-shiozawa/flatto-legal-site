@@ -641,7 +641,7 @@ faq_items:
                     <h3>該当する質問が見つかりませんでした</h3>
                     <p>
                         検索キーワードを変更してお試しください。<br>
-                        または、<a href="{{ '/contact/' | relative_url }}">お問い合わせフォーム</a>からご質問ください。
+                        または、<a href="{{ '/booking/' | relative_url }}">お問い合わせフォーム</a>からご質問ください。
                     </p>
                 </div>
             </div>
@@ -658,7 +658,7 @@ faq_items:
                         FAQで解決しない疑問や、より詳細な相談については<br>
                         お気軽にお問い合わせください。専門家が丁寧にお答えします。
                     </p>
-                    <a href="{{ '/contact/' | relative_url }}" class="cta-btn">
+                    <a href="{{ '/booking/' | relative_url }}" class="cta-btn">
                         📞 専門家に相談する
                     </a>
                 </div>

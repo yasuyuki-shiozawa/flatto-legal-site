@@ -82,7 +82,7 @@ keywords: 入札サポート,入札参加資格,官公庁,行政書士,ドロー
 各サービスについてのご相談は、お気軽にお問い合わせください。専門スタッフが丁寧にご対応いたします。
 
 <div class="contact-section">
-  <a href="/contact/" class="contact-button">無料相談のお申し込み</a>
+  <a href="/booking/" class="contact-button">無料相談のお申し込み</a>
   <p class="contact-note">初回相談は無料です。お気軽にご相談ください。</p>
 </div>
 

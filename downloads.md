@@ -357,7 +357,7 @@ keywords: 入札 資料ダウンロード,入札ガイド PDF,入札チェック
                     </div>
                     <div class="terms-item">
                         <h3>📞 お問い合わせ</h3>
-                        <p>資料に関するご質問は<a href="{{ '/contact/' | relative_url }}">お問い合わせフォーム</a>からご連絡ください。</p>
+                        <p>資料に関するご質問は<a href="{{ '/booking/' | relative_url }}">お問い合わせフォーム</a>からご連絡ください。</p>
                     </div>
                 </div>
             </div>

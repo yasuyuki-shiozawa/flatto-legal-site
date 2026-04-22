@@ -247,7 +247,7 @@ seo:
     <div class="cta-card">
       <h3>📋 無料診断</h3>
       <p>取得可能性を事前チェック</p>
-      <a href="/contact/" class="btn btn-primary">診断を受ける</a>
+      <a href="/booking/" class="btn btn-primary">診断を受ける</a>
     </div>
     <div class="cta-card">
       <h3>📞 電話相談</h3>

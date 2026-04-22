@@ -766,7 +766,7 @@ permalink: /links/
                 <p class="service-description">入札成功のための実践的テクニック</p>
             </a>
             
-            <a href="{{ '/contact/' | relative_url }}" class="service-card">
+            <a href="{{ '/booking/' | relative_url }}" class="service-card">
                 <div class="service-icon">
                     <i class="fas fa-question-circle"></i>
                 </div>
@@ -787,7 +787,7 @@ permalink: /links/
                 専門家がトータルサポートいたします。
             </p>
             <div class="cta-buttons">
-                <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-large">
+                <a href="{{ '/booking/' | relative_url }}" class="btn btn-primary btn-large">
                     <i class="fas fa-phone"></i>
                     無料相談を申し込む
                 </a>

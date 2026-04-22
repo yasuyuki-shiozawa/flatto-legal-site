@@ -104,7 +104,7 @@ body_class: blog-lp-page
             <strong>📊 無料診断実施中！</strong>
             <span>あなたの会社が入札に参加できるか、3分で診断します</span>
         </div>
-        <a href="/contact/?service=diagnosis" class="cta-button cta-primary inline-cta-button">
+        <a href="/booking/" class="cta-button cta-primary inline-cta-button">
             <i class="fas fa-clipboard-check"></i>
             無料診断を受ける
         </a>
@@ -183,7 +183,7 @@ body_class: blog-lp-page
         <h2>実践的な入札ノウハウで競争力を高めませんか？</h2>
         <p>今なら初回相談無料。専門家があなたの疑問にお答えします。</p>
         <div class="cta-buttons">
-            <a href="/contact/" class="primary">
+            <a href="/booking/" class="primary">
                 <i class="fas fa-comments"></i>
                 無料相談を申し込む
             </a>

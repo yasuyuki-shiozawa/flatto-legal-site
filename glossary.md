@@ -218,7 +218,7 @@ body_class: glossary-page
                 <h2>入札参加でお困りのことはありませんか？</h2>
                 <p>専門用語が分からない、手続きが複雑で不安など、どんなことでもお気軽にご相談ください。</p>
                 <div class="cta-buttons">
-                    <a href="/contact/?service=consultation" class="primary">
+                    <a href="/booking/" class="primary">
                         <i class="fas fa-comments"></i>
                         無料相談を申し込む
                     </a>

@@ -348,7 +348,7 @@ breadcrumb_parent_url: "/"
         <div class="consultation-cta">
             <h3>まずは無料相談から</h3>
             <p>「うちの会社でも入札できる？」という段階からでも、行政書士が具体的にお答えします。</p>
-            <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-large">
+            <a href="{{ '/booking/' | relative_url }}" class="btn btn-primary btn-large">
                 <i class="fas fa-comments"></i>
                 無料相談を申し込む
             </a>
@@ -416,7 +416,7 @@ breadcrumb_parent_url: "/"
                 初回相談は無料です。電話・メールどちらでもお受けします。
             </p>
             <div class="cta-buttons">
-                <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-large">
+                <a href="{{ '/booking/' | relative_url }}" class="btn btn-primary btn-large">
                     <i class="fas fa-phone"></i>
                     無料相談のお申し込み
                 </a>

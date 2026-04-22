@@ -113,7 +113,7 @@ if (document.body.classList.contains('resources-page')) {
 }
 
 // 問い合わせページ専用のイベントトラッキング
-if (document.body.classList.contains('contact-page') || window.location.pathname.includes('/contact/')) {
+if (document.body.classList.contains('contact-page') || window.location.pathname.includes('/booking/')) {
     
     // 問い合わせページビュートラッキング
     document.addEventListener('DOMContentLoaded', function() {
@@ -272,7 +272,7 @@ if (document.body.classList.contains('home-page')) pageType = 'home';
 else if (document.body.classList.contains('diagnosis-page')) pageType = 'diagnosis';
 else if (document.body.classList.contains('resources-page')) pageType = 'resources';
 else if (document.body.classList.contains('contact-page')) pageType = 'contact';
-else if (window.location.pathname.includes('/contact/')) pageType = 'contact';
+else if (window.location.pathname.includes('/booking/')) pageType = 'contact';
 
 gtag('event', 'page_view', {
     page_type: pageType,

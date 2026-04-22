@@ -289,7 +289,7 @@ permalink: /zenshochou-toitsu-shikaku/
 
 全省庁統一資格の申請や入札参加について、分からないこと・不安なことがあれば、いつでもご相談ください。経験豊富な行政書士が、お客様の状況に合わせて丁寧にご説明します。
 
-[無料相談を申し込む](/contact/?utm_source=page&utm_medium=cta&utm_campaign=conversion)
+[無料相談を申し込む](/booking/
 
 **行政書士法人ふらっと法務事務所**  
 〒242-0006 神奈川県大和市南林間6丁目4番26号 1F  

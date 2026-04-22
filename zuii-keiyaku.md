@@ -333,7 +333,7 @@ permalink: /zuii-keiyaku/
   <div class="cta-card">
     <h3>随意契約でお困りの方へ</h3>
     <p>要件確認から手続きまで、専門家がしっかりサポートします</p>
-    <a href="/contact/" class="btn btn-primary">相談してみる</a>
+    <a href="/booking/" class="btn btn-primary">相談してみる</a>
   </div>
 </div>
 

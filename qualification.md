@@ -207,12 +207,12 @@ breadcrumb_parent_url: "/"
                 <p>経験豊富な行政書士が、お客様の事業に最適な資格取得をサポートします。<br>まずは無料相談で、必要な資格と取得方法をご確認ください。</p>
                 
                 <div class="cta-buttons">
-                    <a href="/contact/?service=qualification" class="btn btn-primary">無料相談を申し込む</a>
+                    <a href="/booking/" class="btn btn-primary">無料相談を申し込む</a>
                     <a href="tel:046-272-3357" class="btn btn-secondary">📞 046-272-3357</a>
                 </div>
                 
                 <div class="contact-info">
-                    <p>📧 メール相談：<a href="/contact/?utm_source=page&utm_medium=cta&utm_campaign=conversion">お問い合わせフォーム</a></p>
+                    <p>📧 メール相談：<a href="/booking/">お問い合わせフォーム</a></p>
                     <p>⏰ 受付時間：平日9時〜17時（メールは24時間受付）</p>
                 </div>
             </div>

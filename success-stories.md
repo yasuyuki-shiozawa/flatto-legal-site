@@ -23,7 +23,7 @@ body_class: success-stories-page
       </a>
     </div>
     <div class="related-article-item">
-      <a href="/contact/?utm_source=page&utm_medium=cta&utm_campaign=conversion" class="related-article-link">
+      <a href="/booking/" class="related-article-link">
         <i class="fas fa-comments"></i>
         無料相談で成功への道筋を確認
       </a>
@@ -495,7 +495,7 @@ body_class: success-stories-page
 
 **メールでのご相談**
 - 24時間受付
-- [お問い合わせフォーム](/contact/)からお送りください
+- [お問い合わせフォーム](/booking/)からお送りください
 
 **対面でのご相談**
 - 神奈川県大和市の事務所にて
@@ -509,7 +509,7 @@ body_class: success-stories-page
 - [申請の流れ](/flow/)
 - [申請でお困りの方へ](/troubleshooting/)
 - [よくあるご質問](/faq/)
-- [お問い合わせ](/contact/)
+- [お問い合わせ](/booking/)
 
 ---
 

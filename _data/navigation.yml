@@ -104,7 +104,7 @@ footer_only_nav:
 cta:
   primary:
     text: "お問い合わせ"
-    url: "/contact/?utm_source=footer&utm_medium=cta&utm_campaign=conversion"
+    url: "/booking/"
     icon: "fas fa-envelope"
     description: "ご質問・お問い合わせはこちら"
 

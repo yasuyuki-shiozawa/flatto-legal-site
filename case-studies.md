@@ -315,7 +315,7 @@ body_class: case-studies-page
                 <h2>あなたの会社も入札で成功しませんか？</h2>
                 <p>これらの成功事例のノウハウを活用して、入札での勝率を高めましょう。専門家がサポートいたします。</p>
                 <div class="cta-buttons">
-                    <a href="/contact/?service=strategy" class="primary">
+                    <a href="/booking/" class="primary">
                         <i class="fas fa-comments"></i>
                         戦略相談を申し込む
                     </a>

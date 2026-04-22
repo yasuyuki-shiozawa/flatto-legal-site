@@ -358,6 +358,6 @@ permalink: /license-certification/
 <div style="background: #2E86AB; color: white; padding: 3rem 2rem; border-radius: 10px; text-align: center; margin: 3rem 0;">
   <h3 style="margin-bottom: 1rem; color: white;">許認可・資格取得支援のご相談</h3>
   <p style="margin-bottom: 2rem; opacity: 0.9;">初回相談は無料です。事業戦略から認証取得まで、専門スタッフが丁寧にご相談に応じます。</p>
-  <a href="/contact/" style="display: inline-block; background: #F5A623; color: white !important; padding: 1rem 2rem; border-radius: 5px; text-decoration: none !important; font-weight: bold; font-size: 1.1rem; text-align: center; min-width: 200px;">無料相談のお申し込み</a>
+  <a href="/booking/" style="display: inline-block; background: #F5A623; color: white !important; padding: 1rem 2rem; border-radius: 5px; text-decoration: none !important; font-weight: bold; font-size: 1.1rem; text-align: center; min-width: 200px;">無料相談のお申し込み</a>
 </div>
 

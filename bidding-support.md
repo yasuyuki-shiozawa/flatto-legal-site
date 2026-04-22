@@ -680,7 +680,7 @@ breadcrumb_parent_url: "/services/"
   </div>
 
   <div class="hero-buttons">
-    <a href="/contact/" class="btn-hero btn-primary" aria-label="入札サポートの無料相談を申し込む">無料相談を申し込む</a>
+    <a href="/booking/" class="btn-hero btn-primary" aria-label="入札サポートの無料相談を申し込む">無料相談を申し込む</a>
     <a href="#pricing" class="btn-hero btn-secondary" aria-label="入札サポートの料金・サービス詳細を見る">料金・サービス詳細を見る</a>
   </div>
 </section>
@@ -704,7 +704,7 @@ breadcrumb_parent_url: "/services/"
         <li>申請スケジュールのご説明</li>
         <li>Zoom・電話・対面に対応</li>
       </ul>
-      <a href="/contact/" class="btn-pricing btn-pricing-outline" aria-label="入札サポートの無料相談を申し込む">まず相談してみる</a>
+      <a href="/booking/" class="btn-pricing btn-pricing-outline" aria-label="入札サポートの無料相談を申し込む">まず相談してみる</a>
     </div>
 
     <div class="pricing-card featured">
@@ -720,7 +720,7 @@ breadcrumb_parent_url: "/services/"
         <li>落札後の契約手続きサポート</li>
         <li>月次レポート・進捗管理</li>
       </ul>
-      <a href="/contact/" class="btn-pricing btn-pricing-primary" aria-label="入札サポートの申し込みフォームへ">今すぐ申し込む</a>
+      <a href="/booking/" class="btn-pricing btn-pricing-primary" aria-label="入札サポートの申し込みフォームへ">今すぐ申し込む</a>
     </div>
 
     <div class="pricing-card">
@@ -733,7 +733,7 @@ breadcrumb_parent_url: "/services/"
         <li>入札参加の是非アドバイス</li>
         <li>他士業・コンサルとの連携案件</li>
       </ul>
-      <a href="/contact/" class="btn-pricing btn-pricing-outline" aria-label="スポット対応の詳細を問い合わせる">詳細を問い合わせる</a>
+      <a href="/booking/" class="btn-pricing btn-pricing-outline" aria-label="スポット対応の詳細を問い合わせる">詳細を問い合わせる</a>
     </div>
   </div>
 </section>
@@ -886,7 +886,7 @@ breadcrumb_parent_url: "/services/"
   <ul style="margin:0;padding-left:1.5rem;line-height:2;">
     <li><a href="/category/public-procurement/">公共調達に関する記事一覧</a> — 公共調達の最新動向やノウハウをチェック</li>
     <li><a href="/category/practical-guide/">実践ガイド</a> — 実際に入札に参加するための具体的な手順とポイント</li>
-    <li><a href="/contact/">無料相談・お申し込みフォーム</a> — 入札参加資格の取得から入札戦略まで、まずはお気軽にご相談ください</li>
+    <li><a href="/booking/">無料相談・お申し込みフォーム</a> — 入札参加資格の取得から入札戦略まで、まずはお気軽にご相談ください</li>
     <li><a href="/qualification/">入札参加資格の取得方法</a> — 全省庁統一資格・地方自治体資格の申請手順を詳しく解説</li>
     <li><a href="/flow/">ご利用の流れ</a> — 相談から入札参加までのステップを確認</li>
     <li><a href="/faq/">よくある質問（FAQ）</a> — 入札参加資格に関する疑問・不安を解決</li>

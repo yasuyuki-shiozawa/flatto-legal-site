@@ -193,7 +193,7 @@ permalink: /newsletter-thanks/
 
             <div style="margin-bottom: 30px;">
                 <a href="/blog/" class="back-button">ブログに戻る</a>
-                <a href="/contact/" class="contact-button">無料相談を申し込む</a>
+                <a href="/booking/" class="contact-button">無料相談を申し込む</a>
             </div>
 
             <p style="font-size: 0.9rem; color: #666;">

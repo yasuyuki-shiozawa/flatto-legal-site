@@ -236,7 +236,7 @@ permalink: /flow/
                 専門家が無料でアドバイスいたします。
             </p>
             <div class="cta-buttons">
-                <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-large">
+                <a href="{{ '/booking/' | relative_url }}" class="btn btn-primary btn-large">
                     <i class="fas fa-calendar-alt"></i>
                     無料相談の予約
                 </a>

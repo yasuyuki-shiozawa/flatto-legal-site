@@ -245,7 +245,7 @@ image: "/assets/images/service-document.webp"
 
 **全省庁統一資格について詳しく知りたい方は、[こちらの完全ガイド](/flow/)をご覧ください。**
 
-**申請代行サービスについてのご相談は、[無料相談フォーム](/contact/?service=application)からお気軽にお問い合わせください。**
+**申請代行サービスについてのご相談は、[無料相談フォーム](/booking/
 
 ---
 

@@ -23,7 +23,7 @@ body_class: troubleshooting-page
       </a>
     </div>
     <div class="related-article-item">
-      <a href="/contact/?utm_source=page&utm_medium=cta&utm_campaign=conversion" class="related-article-link">
+      <a href="/booking/" class="related-article-link">
         <i class="fas fa-phone"></i>
         無料相談で解決方法を確認する
       </a>
@@ -414,7 +414,7 @@ body_class: troubleshooting-page
 
 1. **お問い合わせ**
    - 電話：046-272-3357（平日9時〜17時）
-   - メール：[お問い合わせフォーム](/contact/)
+   - メール：[お問い合わせフォーム](/booking/)
 
 2. **現状のヒアリング**
    - 困っている内容の確認
@@ -455,7 +455,7 @@ body_class: troubleshooting-page
 - [全省庁統一資格申請サービス](/service/)
 - [申請の流れ](/flow/)
 - [よくあるご質問](/faq/)
-- [お問い合わせ](/contact/)
+- [お問い合わせ](/booking/)
 
 ---
 
