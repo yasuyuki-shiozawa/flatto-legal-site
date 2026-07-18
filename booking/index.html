@@ -568,6 +568,57 @@
     .btn-submit:active { transform: scale(0.99); }
     .btn-hero:active { transform: scale(0.98); }
 
+    /* ===== 同意チェックボックス ===== */
+    .consent-field {
+      background: #f8f9fa;
+      border: 1.5px solid var(--gray-border);
+      border-radius: 8px;
+      padding: 16px 18px;
+      margin-top: 24px;
+    }
+    .consent-field.has-error {
+      border-color: #e53e3e;
+      background: #fff5f5;
+    }
+    .consent-label {
+      display: flex !important;
+      align-items: flex-start;
+      gap: 10px;
+      cursor: pointer;
+      margin-bottom: 0 !important;
+      font-weight: normal !important;
+    }
+    .consent-label input[type="checkbox"] {
+      width: 18px !important;
+      height: 18px !important;
+      min-height: 18px !important;
+      margin-top: 3px;
+      flex-shrink: 0;
+      accent-color: var(--orange);
+      cursor: pointer;
+    }
+    .consent-text {
+      font-size: 0.88rem;
+      color: var(--navy);
+      line-height: 1.6;
+    }
+    .consent-text a {
+      color: #1e6fbf;
+      text-decoration: underline;
+    }
+    .consent-detail {
+      display: block;
+      font-size: 0.78rem;
+      color: var(--gray-text);
+      margin-top: 6px;
+      line-height: 1.55;
+    }
+    .field-error {
+      font-size: 0.78rem;
+      color: #e53e3e;
+      margin-top: 6px;
+    }
+
     /* ===== 完了画面 ===== */
     .success-screen {
       display: none;
@@ -882,6 +933,20 @@
           <input type="hidden" name="datetime1" id="f-datetime1">
         </div>
 
+        <!-- 個人情報の取扱いに関する同意 -->
+        <div class="form-field consent-field" id="ff-consent">
+          <label class="consent-label">
+            <input type="checkbox" id="f-consent" name="consent">
+            <span class="consent-text">
+              当社の<a href="/privacy-policy/" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>に同意の上、以下の内容で個人情報を取得することに同意します。（必須）
+              <span class="consent-detail">
+                「会社名」「お名前」「電話番号」「メールアドレス」「事業内容」「従業員数」「メッセージ」「希望日時」を取得します。利用目的：無料面談の実施および入札サポートサービスの提供のため。管理者：行政書士法人ふらっと法務事務所（nyusatu@flat-haures.com）。第三者提供：なし。
+              </span>
+            </span>
+          </label>
+          <p class="field-error" id="err-consent" style="display:none;">個人情報の取扱いへの同意が必要です</p>
+        </div>
+
         <!-- 送信ボタン -->
         <div class="form-submit">
           <button type="submit" class="btn-submit" id="submitBtn">無料オンライン面談を予約する</button>
@@ -990,6 +1055,8 @@
   function clearError() { errorBox.classList.remove('show'); }
   function clearFieldErrors() {
     document.querySelectorAll('.form-field.has-error').forEach(el => el.classList.remove('has-error'));
+    const errConsent = document.getElementById('err-consent');
+    if (errConsent) errConsent.style.display = 'none';
   }
   function markFieldError(id) {
     const el = document.getElementById(id);
@@ -1172,6 +1239,16 @@
         showError(`${label}を入力してください`);
         return;
       }
+    }
+    // 同意チェック
+    const consentChecked = document.getElementById('f-consent').checked;
+    if (!consentChecked) {
+      const consentField = document.getElementById('ff-consent');
+      consentField.classList.add('has-error');
+      document.getElementById('err-consent').style.display = 'block';
+      consentField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      showError('個人情報の取扱いへの同意が必要です');
+      return;
     }
     // メール形式
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
