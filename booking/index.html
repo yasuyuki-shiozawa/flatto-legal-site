@@ -773,7 +773,7 @@
   <noscript>
     <div style="background:#fdf0ef;border:1px solid #e6b0aa;color:#922b21;padding:14px 20px;text-align:center;font-size:0.9rem;">
       このフォームを使うには JavaScript を有効にしてください。<br>
-      または <a href="mailto:nyusatu@flat-haures.com">nyusatu@flat-haures.com</a> / TEL 046-272-3357 までご連絡ください。
+      または <a href="mailto:hamasaki@flat-legal.com">hamasaki@flat-legal.com</a> / TEL 046-272-3357 までご連絡ください。
     </div>
   </noscript>
 
@@ -940,7 +940,7 @@
             <span class="consent-text">
               当社の<a href="/privacy-policy/" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>に同意の上、以下の内容で個人情報を取得することに同意します。（必須）
               <span class="consent-detail">
-                「会社名」「お名前」「電話番号」「メールアドレス」「事業内容」「従業員数」「メッセージ」「希望日時」を取得します。利用目的：無料面談の実施および入札サポートサービスの提供のため。管理者：行政書士法人ふらっと法務事務所（nyusatu@flat-haures.com）。第三者提供：なし。
+                「会社名」「お名前」「電話番号」「メールアドレス」「事業内容」「従業員数」「メッセージ」「希望日時」を取得します。利用目的：無料面談の実施および入札サポートサービスの提供のため。管理者：行政書士法人ふらっと法務事務所（hamasaki@flat-legal.com）。第三者提供：なし。
               </span>
             </span>
           </label>
@@ -973,7 +973,7 @@
           </div>
           <div class="success-contact">
             ご不明点がございましたら<br>
-            <a href="mailto:nyusatu@flat-haures.com">nyusatu@flat-haures.com</a><br>
+            <a href="mailto:hamasaki@flat-legal.com">hamasaki@flat-legal.com</a><br>
             または <a href="tel:046-272-3357">046-272-3357</a> までご連絡ください。
           </div>
         </div>
@@ -1009,7 +1009,7 @@
     <div class="footer-info">
       入札参入支援サービス「入札サポート」<br>
       〒242-0006 神奈川県大和市南林間 6-4-26<br>
-      TEL 046-272-3357　nyusatu@flat-haures.com
+      TEL 046-272-3357　hamasaki@flat-legal.com
     </div>
     <div class="footer-links">
       <a href="https://nyusatsu-map.com" target="_blank" rel="noopener">公式サイト</a>
@@ -1304,7 +1304,7 @@
       // レスポンスがHTMLならApps Scriptの権限設定エラー
       const contentType = (resp.headers.get('content-type') || '').toLowerCase();
       if (contentType.includes('text/html')) {
-        throw new Error('サーバー設定エラー: フォームの送信先に問題があります。お手数ですが nyusatu@flat-haures.com までご連絡ください。');
+        throw new Error('サーバー設定エラー: フォームの送信先に問題があります。お手数ですが hamasaki@flat-legal.com までご連絡ください。');
       }
       let result = {};
       try { result = await resp.json(); } catch (_) { result = { success: true }; }
@@ -1338,7 +1338,7 @@
       window.onbeforeunload = null;
       try { localStorage.removeItem('bookingFormSubmitting'); } catch (_) {}
       const msg = (err && err.message) ? err.message : '送信に失敗しました';
-      showError(msg + '。お困りの場合は nyusatu@flat-haures.com までご連絡ください。');
+      showError(msg + '。お困りの場合は hamasaki@flat-legal.com までご連絡ください。');
       submitBtn.disabled = false;
       submitBtn.textContent = '無料オンライン面談を予約する';
       loading.classList.remove('show');
