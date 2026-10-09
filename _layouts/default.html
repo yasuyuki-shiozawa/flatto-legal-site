@@ -41,28 +41,75 @@ layout: compress
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
     
-    <!-- Google Analytics 4 (GA4) -->
+    <!-- Google Analytics 4 (GA4): 利用者が解析Cookieに同意した場合だけ読み込む -->
     {% if site.google_analytics %}
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '{{ site.google_analytics }}');
+      (function () {
+        const preferenceKey = 'nyusatsuAnalyticsConsent';
+        let analyticsEnabled = false;
+        window.dataLayer = window.dataLayer || [];
+        // 同意前はイベントを送らず、入力値や行動データをキューにも残さない。
+        window.gtag = function () {
+          if (analyticsEnabled) window.dataLayer.push(arguments);
+        };
+        window.enableNyusatsuAnalytics = function () {
+          if (analyticsEnabled) return;
+          analyticsEnabled = true;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}';
+          document.head.appendChild(script);
+          window.gtag('js', new Date());
+          window.gtag('config', '{{ site.google_analytics }}', { anonymize_ip: true });
+        };
+        try {
+          if (localStorage.getItem(preferenceKey) === 'accepted') {
+            window.enableNyusatsuAnalytics();
+          }
+        } catch (_) {}
+      }());
     </script>
     {% endif %}
-    
-    <!-- パフォーマンス最適化 -->
+
+    <!-- パフォーマンス最適化（解析同意前はgtagが送信を抑止） -->
     {% include performance-optimization.html %}
-    
-    <!-- A/Bテスト管理システム -->
-    {% include ab-test-manager.html %}
-    
-    <!-- 分析ダッシュボード -->
-    {% include analytics-dashboard.html %}
 </head>
 
 <body class="{% if page.layout %}{{ page.layout }}{% endif %} {% if page.url %}{{ page.url | replace: '/', ' ' | strip }}{% endif %}">
+    <div id="analytics-consent" class="analytics-consent" role="dialog" aria-label="アクセス解析Cookieの利用確認" hidden>
+      <div class="analytics-consent__inner">
+        <p>当サイトでは、サイト改善のためGoogle Analytics 4を利用します。<a href="/privacy-policy/">プライバシーポリシー</a>をご確認のうえ、利用可否を選択してください。</p>
+        <div class="analytics-consent__actions">
+          <button type="button" id="analytics-consent-accept">同意する</button>
+          <button type="button" id="analytics-consent-decline">同意しない</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      (function () {
+        const key = 'nyusatsuAnalyticsConsent';
+        const banner = document.getElementById('analytics-consent');
+        const accept = document.getElementById('analytics-consent-accept');
+        const decline = document.getElementById('analytics-consent-decline');
+        let saved = null;
+        try { saved = localStorage.getItem(key); } catch (_) {}
+        if (!saved && banner) banner.hidden = false;
+        function setPreference(value) {
+          try { localStorage.setItem(key, value); } catch (_) {}
+          if (banner) banner.hidden = true;
+          if (value === 'accepted' && window.enableNyusatsuAnalytics) window.enableNyusatsuAnalytics();
+        }
+        if (accept) accept.addEventListener('click', function () { setPreference('accepted'); });
+        if (decline) decline.addEventListener('click', function () { setPreference('declined'); });
+      }());
+    </script>
+    <style>
+      .analytics-consent{position:fixed;z-index:10000;left:0;right:0;bottom:0;background:#132c46;color:#fff;padding:16px;box-shadow:0 -2px 12px rgba(0,0,0,.25)}
+      .analytics-consent__inner{max-width:1080px;margin:0 auto;display:flex;align-items:center;gap:20px;justify-content:space-between;flex-wrap:wrap}
+      .analytics-consent p{margin:0;line-height:1.6;font-size:.92rem}.analytics-consent a{color:#fff;text-decoration:underline}
+      .analytics-consent__actions{display:flex;gap:10px;white-space:nowrap}.analytics-consent button{border-radius:5px;padding:9px 14px;border:1px solid #fff;cursor:pointer;font-weight:700}
+      #analytics-consent-accept{background:#fff;color:#132c46}#analytics-consent-decline{background:transparent;color:#fff}
+    </style>
     
     <!-- Header -->
     {% include header.html %}

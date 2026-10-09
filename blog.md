@@ -112,24 +112,13 @@ body_class: blog-lp-page
 </div>
 
 
-<!-- ニュースレター購読セクション -->
+<!-- 相談受付はプライバシー表示・必須同意を備えた予約フォームに集約 -->
 <section class="blog-newsletter">
     <div class="newsletter-content">
-        <h2>入札成功のヒントを毎週お届け</h2>
-        <p>最新の入札情報、法改正、成功事例など、実務に役立つ情報を無料でお送りします</p>
-        <form id="newsletter-form" class="newsletter-form" name="newsletter-subscription" method="POST" action="/newsletter-thanks/" data-netlify="true" data-netlify-honeypot="bot-field">
-            <!-- スパム対策用の隠しフィールド -->
-            <input type="hidden" name="bot-field" />
-            <input type="hidden" name="form-name" value="newsletter-subscription" />
-            
-            <input type="email" id="newsletter-email" name="email" placeholder="メールアドレスを入力" required>
-            <button type="submit" id="newsletter-submit">無料購読する</button>
-        </form>
-        <div id="newsletter-message" class="newsletter-message" style="display: none;"></div>
-        <p class="newsletter-privacy">
-            <i class="fas fa-lock"></i> 個人情報は厳重に管理し、第三者に提供することはありません。
-            <a href="/privacy-policy/">プライバシーポリシー</a>
-        </p>
+        <h2>入札に関する無料オンライン相談</h2>
+        <p>入札情報や申請手続についてのご相談は、個人情報の取扱いを明示した予約フォームから受け付けています。</p>
+        <a href="/booking/" class="cta-button cta-primary inline-cta-button">無料オンライン面談を予約する</a>
+        <p class="newsletter-privacy"><a href="/privacy-policy/">プライバシーポリシー</a></p>
     </div>
 </section>
 

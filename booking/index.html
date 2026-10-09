@@ -936,7 +936,7 @@
         <!-- 個人情報の取扱いに関する同意 -->
         <div class="form-field consent-field" id="ff-consent">
           <label class="consent-label">
-            <input type="checkbox" id="f-consent" name="consent">
+            <input type="checkbox" id="f-consent" name="consent" required aria-required="true">
             <span class="consent-text">
               当社の<a href="/privacy-policy/" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>に同意の上、以下の内容で個人情報を取得することに同意します。（必須）
               <span class="consent-detail">
@@ -1019,7 +1019,8 @@
 
 <script>
 (() => {
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxnHXq-VPn-XMZn5xndY19ziN8CiqKj59u0wTQDPMupGtAj22UDvBy1hXd3VshcRIs/exec';
+  const BOOKING_API_URL = '/api/booking';
+  const CONSENT_VERSION = '2026-10-03';
 
   const $ = (s) => document.querySelector(s);
   const errorBox = $('#formError');
@@ -1030,10 +1031,6 @@
   let isSubmitting = false;
   let availableDays = [];
 
-  // ===== 定数 =====
-  const STORAGE_KEY = 'bookingFormDraft';
-  const STORAGE_TTL = 24 * 60 * 60 * 1000; // 24時間
-  const TAB_ID = Math.random().toString(36).slice(2, 10);
 
   // よくあるメールドメインtypo
   const EMAIL_TYPOS = {
@@ -1080,7 +1077,7 @@
     try {
       const ctrl = new AbortController();
       const timer = setTimeout(() => ctrl.abort(), 15000); // 15秒タイムアウト
-      const resp = await fetch(`${SCRIPT_URL}?action=days`, { signal: ctrl.signal });
+      const resp = await fetch('https://script.google.com/macros/s/AKfycbxnHXq-VPn-XMZn5xndY19ziN8CiqKj59u0wTQDPMupGtAj22UDvBy1hXd3VshcRIs/exec?action=days', { signal: ctrl.signal });
       clearTimeout(timer);
       const data = await resp.json();
       availableDays = data.days || [];
@@ -1123,7 +1120,7 @@
     loadEl.style.display = 'block';
     grid.innerHTML = '<div class="slot-empty">空き時間を確認しています...</div>';
     try {
-      const resp = await fetch(`${SCRIPT_URL}?action=slots&date=${encodeURIComponent(dateStr)}`);
+      const resp = await fetch(`https://script.google.com/macros/s/AKfycbxnHXq-VPn-XMZn5xndY19ziN8CiqKj59u0wTQDPMupGtAj22UDvBy1hXd3VshcRIs/exec?action=slots&date=${encodeURIComponent(dateStr)}`);
       const data = await resp.json();
       const slots = data.slots || [];
       grid.innerHTML = '';
@@ -1221,6 +1218,9 @@
       employees: $('#f-employees').value,
       message: $('#f-message').value.trim(),
       datetime1: $('#f-datetime1').value,
+      website: form.querySelector('[name="website"]').value,
+      consent: document.getElementById('f-consent').checked,
+      consent_version: CONSENT_VERSION,
       // industryはGAS側でbusinessにフォールバックされる
     };
 
@@ -1273,19 +1273,6 @@
       return;
     }
 
-    // マルチタブロック（他タブで送信中なら中断）
-    try {
-      const existing = localStorage.getItem('bookingFormSubmitting');
-      if (existing) {
-        const [owner, lockedAt] = existing.split(':');
-        if (owner !== TAB_ID && Date.now() - parseInt(lockedAt) < 60000) {
-          showError('別のタブで送信処理中です。完了までお待ちください。');
-          return;
-        }
-      }
-      localStorage.setItem('bookingFormSubmitting', TAB_ID + ':' + Date.now());
-    } catch (_) {}
-
     isSubmitting = true;
     submitBtn.disabled = true;
     submitBtn.textContent = '送信中...';
@@ -1293,15 +1280,12 @@
     window.onbeforeunload = () => '送信中です。ページを閉じますか？';
 
     try {
-      // CORS有効: GASがJSONレスポンスを返すので結果を読める
-      // Content-Type: text/plainでpreflight回避
-      const resp = await fetch(SCRIPT_URL, {
+      const resp = await fetch(BOOKING_API_URL, {
         method: 'POST',
-        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
-        redirect: 'follow',
       });
-      // レスポンスがHTMLならApps Scriptの権限設定エラー
+      // プロキシが返したエラーは利用者に明確に表示する
       const contentType = (resp.headers.get('content-type') || '').toLowerCase();
       if (contentType.includes('text/html')) {
         throw new Error('サーバー設定エラー: フォームの送信先に問題があります。お手数ですが hamasaki@flat-legal.com までご連絡ください。');
@@ -1313,9 +1297,6 @@
         throw new Error(result.error || '予約処理でエラーが発生しました');
       }
 
-      // 成功したので下書きクリア・タブロック解除
-      clearDraft();
-      try { localStorage.removeItem('bookingFormSubmitting'); } catch (_) {}
 
       // 成功画面表示
       $('#sd-company').textContent = data.company;
@@ -1336,7 +1317,6 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } catch (err) {
       window.onbeforeunload = null;
-      try { localStorage.removeItem('bookingFormSubmitting'); } catch (_) {}
       const msg = (err && err.message) ? err.message : '送信に失敗しました';
       showError(msg + '。お困りの場合は hamasaki@flat-legal.com までご連絡ください。');
       submitBtn.disabled = false;
@@ -1346,46 +1326,7 @@
     }
   });
 
-  // ===== localStorage 下書き保存/復元 =====
-  const TEXT_FIELDS = ['f-company', 'f-name', 'f-phone', 'f-email', 'f-business', 'f-employees', 'f-message'];
-
-  function saveDraft() {
-    try {
-      const draft = { savedAt: Date.now() };
-      TEXT_FIELDS.forEach(id => { draft[id] = document.getElementById(id).value; });
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(draft));
-    } catch (_) {}
-  }
-  function restoreDraft() {
-    try {
-      const raw = localStorage.getItem(STORAGE_KEY);
-      if (!raw) return;
-      const draft = JSON.parse(raw);
-      if (!draft || !draft.savedAt || Date.now() - draft.savedAt > STORAGE_TTL) {
-        localStorage.removeItem(STORAGE_KEY);
-        return;
-      }
-      TEXT_FIELDS.forEach(id => {
-        const el = document.getElementById(id);
-        if (el && draft[id]) el.value = draft[id];
-      });
-    } catch (_) {}
-  }
-  function clearDraft() {
-    try { localStorage.removeItem(STORAGE_KEY); } catch (_) {}
-  }
-
-  // 入力イベントで自動保存（1秒デバウンス）
-  let saveTimer = null;
-  TEXT_FIELDS.forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.addEventListener('input', () => {
-      clearTimeout(saveTimer);
-      saveTimer = setTimeout(saveDraft, 1000);
-    });
-  });
-
-  restoreDraft();
+  // 個人情報をブラウザへ自動保存しない。
 
   // ===== メールアドレスのtypo警告 =====
   $('#f-email').addEventListener('blur', (e) => {
@@ -1395,14 +1336,6 @@
     if (EMAIL_TYPOS[domain]) {
       const suggested = email.replace(domain, EMAIL_TYPOS[domain]);
       showError(`メールアドレスに誤りがある可能性があります: もしかして ${suggested} ですか?`);
-    }
-  });
-
-  // ===== マルチタブ対策（同一ユーザーが複数タブで送信するのを防ぐ） =====
-  window.addEventListener('storage', (e) => {
-    if (e.key === 'bookingFormSubmitting' && e.newValue === 'locked') {
-      showError('別のタブで送信処理中です。完了までお待ちください。');
-      submitBtn.disabled = true;
     }
   });
 
