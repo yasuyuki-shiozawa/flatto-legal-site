@@ -4,17 +4,17 @@
 /kojin-joho-hogo-hoshin/ /privacy-policy/ 301
 /kojin-joho-hogo-hoshin /privacy-policy/ 301
 # lp-form から contact へのリダイレクト
-/lp-form/ /booking/ 301
-/lp-form /booking/ 301
+/lp-form/ /booking/ 301!
+/lp-form /booking/ 301!
 # Pマーク対応：未整備の個人情報入力フォームは予約フォームへ集約
-/contact-enhanced/ /booking/ 301
-/contact-enhanced /booking/ 301
-/resources/ /booking/ 301
-/resources /booking/ 301
-/newsletter/ /booking/ 301
-/newsletter /booking/ 301
-/contact/ /booking/ 301
-/contact /booking/ 301
+/contact-enhanced/ /booking/ 301!
+/contact-enhanced /booking/ 301!
+/resources/ /booking/ 301!
+/resources /booking/ 301!
+/newsletter/ /booking/ 301!
+/newsletter /booking/ 301!
+/contact/ /booking/ 301!
+/contact /booking/ 301!
 
 # 404エラーページの処理（個別ルールより後に配置）
 /* /404.html 404
